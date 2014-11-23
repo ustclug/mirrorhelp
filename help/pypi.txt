@@ -1,0 +1,18 @@
+====== PyPI 镜像使用帮助 ======
+
+如何使用科大 mirrors 加速 pip？
+
+编辑 ~/.pip/pip.conf 文件（如果没有则创建之），将 index-url 开头的一行修改为下面一行：
+
+<code>
+index-url = http://pypi.mirrors.ustc.edu.cn/simple
+</code>
+===== 同步方式 =====
+
+使用 bandersnatch，每5分钟从 pypi.python.org 官方同步。
+
+===== 相关链接 =====
+
+  * PyPI Official Mirrors: https://pypi.python.org/mirrors
+  * PEP-381 Mirroring Protocol: http://www.python.org/dev/peps/pep-0381/
+  * bandersnatch: https://pypi.python.org/pypi/bandersnatch

@@ -1,0 +1,25 @@
+======Debian镜像使用帮助======
+=====收录架构=====
+  * i386
+  * x86_64
+  * source
+=====收录版本=====
+  * stable
+  * unstable
+  * testing
+  * experimental
+=====使用说明=====
+以 Wheezy 为例, 编辑 /etc/apt/sources.list 文件, 在文件最前面添加以下条目
+
+  deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free
+  deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free
+  deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
+  deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
+  
+如果您使用的是 wheezy 以外的版本，或者希望选择IPv4/IPv6、HTTP/FTP，请使用我们的 **[[https://lug.ustc.edu.cn/repogen/|配置生成器]]** 
+=====相关链接=====
+  * 官方主页: http://www.debian.org/ \\
+  * 邮件列表: http://www.debian.org/support#mail_lists \\
+  * Wiki: http://wiki.debian.org/ \\
+  * 文档: http://www.debian.org/doc/ \\ 
+  * 镜像列表: http://www.debian.org/mirror/list \\

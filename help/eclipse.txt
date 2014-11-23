@@ -1,0 +1,14 @@
+====== Eclipse 镜像使用帮助 ======
+===== 从mirrors下载 =====
+在[[http://mirrors.ustc.edu.cn/eclipse/eclipse/downloads/|这个页面]]寻找您需要的版本，点击进入文件目录后，搜索win即可找到你需要的Eclipse的Windows版。特别地，下面是常用下载链接：
+  * [[http://mirrors.ustc.edu.cn/eclipse/eclipse/downloads/drops4/R-4.2.2-201302041200/eclipse-SDK-4.2.2-win32-x86_64.zip|Eclipse4.2.2 64位]]
+  * [[http://mirrors.ustc.edu.cn/eclipse/eclipse/downloads/drops4/R-4.2.2-201302041200/eclipse-SDK-4.2.2-win32.zip|Eclipse4.2.2 32位]]
+
+===== 从mirrors更新 =====
+假定你使用的是Juno,按照如下步骤即可更新：
+  - 点击菜单项 Help->Install New Softwares..
+  - 在Work with后输入: http://mirrors.ustc.edu.cn/eclipse/releases/juno/
+  - 略等片刻，即可安装插件或者更新插件
+
+===== 参考资料 =====
+[[http://www.cnblogs.com/smartdog/archive/2012/11/06/2757372.html]]

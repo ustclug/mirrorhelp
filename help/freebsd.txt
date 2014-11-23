@@ -1,0 +1,38 @@
+=====FreeBSD 镜像使用方法=====
+
+<note important>
+FreeBSD 项目[[https://www.freebsd.org/doc/en/articles/hubs/mirror-official.html#mirror-official-become|暂时不再接受第三方镜像源]]。
+故，我们建议您使用官方镜像源，如[[http://ftp.cn.freebsd.org/pub/FreeBSD/]]。
+
+我们并非 FreeBSD 的官方源，所同步的文件受到上游的限制，使用请自行承担风险。
+</note>
+
+====使用说明====
+
+  * 以下使用说明可能过期，请自行鉴别。
+
+===Packages使用方法===
+
+以FreeBSD 8.1 i386为例, 在终端下执行以下命令(操作前请做好相应备份)
+<code>
+setenv PACKAGESITE http://mirrors.ustc.edu.cn/freebsd/releases/i386/8.1-RELEASE/packages/Latest/
+pkg_add -r package #package为要安装的软件名
+</code>
+===Ports使用方法===
+以安装firefox为例, 编辑/etc/make.conf文件, 修改MASTER_SITE_BACKUP字段(操作前请做好相应备份)
+<code>
+MASTER_SITE_BACKUP?=http://mirrors.ustc.edu.cn/freebsd/distfiles/${DIST_SUBDIR}/
+MASTER_SITE_OVERRIDE?=${MASTER_SITE_BACKUP}
+</code>
+然后在/usr/ports/www/firefox目录下执行以下命令(要先安装ports)
+<code>
+make
+make install
+</code>
+
+====相关链接====
+
+  * 官方主页: http://www.freebsd.org/
+  * 邮件列表: http://www.freebsd.org/community/mailinglists.html
+  * 论坛: http://forums.freebsd.org/
+  * 手册: http://www.freebsd.org/doc/zh_CN/books/handbook/

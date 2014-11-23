@@ -1,0 +1,119 @@
+======Fedora镜像使用帮助======
+
+=====收录架构=====
+
+  * i686
+  * x86_64
+
+
+=====收录版本=====
+
+  * 所有仍在支持的版本
+  * 最新测试版本
+
+
+=====使用说明=====
+
+将以下保存为 fedora-ustc.repo
+<file text fedora-ustc.repo> 
+[fedora] 
+name=Fedora $releasever - $basearch - ustc
+failovermethod=priority 
+baseurl=http://mirrors.ustc.edu.cn/fedora/linux/releases/$releasever/Everything/$basearch/os/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch 
+enabled=1 
+metadata_expire=7d 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+
+[fedora-debuginfo] 
+name=Fedora $releasever - $basearch - Debug - ustc
+failovermethod=priority 
+baseurl=http://mirrors.ustc.edu.cn/fedora/linux/releases/$releasever/Everything/$basearch/debug/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&arch=$basearch 
+enabled=0 
+metadata_expire=7d 
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+ 
+[fedora-source] 
+name=Fedora $releasever - Source - ustc
+failovermethod=priority 
+baseurl=http://mirrors.ustc.edu.cn/fedora/linux/releases/$releasever/Everything/source/SRPMS/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&arch=$basearch 
+enabled=0 
+metadata_expire=7d 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+</file>
+
+将以下保存为 fedora-updates-ustc.repo
+<file text fedora-updates-ustc.repo>
+[updates]
+name=Fedora $releasever - $basearch - Updates - ustc
+failovermethod=priority 
+baseurl=http://mirrors.ustc.edu.cn/fedora/linux/updates/$releasever/$basearch/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch 
+enabled=1 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+ 
+[updates-debuginfo] 
+name=Fedora $releasever - $basearch - Updates - Debug -ustc
+failovermethod=priority 
+baseurl=http://mirrors.ustc.edu.cn/fedora/linux/updates/$releasever/$basearch/debug/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f$releasever&arch=$basearch 
+enabled=0 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+ 
+[updates-source] 
+name=Fedora $releasever - Updates Source - ustc
+failovermethod=priority 
+baseurl=http://mirrors.ustc.edu.cn/fedora/linux/updates/$releasever/SRPMS/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&arch=$basearch 
+enabled=0 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+</file>
+
+先备份/etc/yum.repos.d/fedora.repo和/etc/yum.repos.d/fedora-updates.repo
+
+将 fedora-ustc.repo和 fedora-updates-ustc.repo放入/etc/yum.repos.d/中 
+
+运行：
+
+  sudo yum makecache 
+  
+更新缓存即可。
+
+
+=====RPMFusion使用说明=====
+
+rpmfusion是为Fedora/RHEL提供额外rpm软件包的第三方软件源，使用方法如下：
+
+  su -c 'yum localinstall --nogpgcheck http://mirrors.ustc.edu.cn/fedora/rpmfusion/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://mirrors.ustc.edu.cn/fedora/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm'
+
+针对fedora18(rawhide):
+
+  su -c 'yum localinstall --nogpgcheck http://mirrors.ustc.edu.cn/fedora/rpmfusion/free/fedora/rpmfusion-free-release-rawhide.noarch.rpm http://mirrors.ustc.edu.cn/fedora/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-rawhide.noarch.rpm'
+
+针对development:
+
+  su -c 'yum localinstall --nogpgcheck http://mirrors.ustc.edu.cn/fedora/rpmfusion/free/fedora/rpmfusion-free-release-branched.noarch.rpm http://mirrors.ustc.edu.cn/fedora/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-branched.noarch.rpm'
+
+安装好以上rpm（主要包括rpmfusion相应的repo文件）后，再运行：
+
+  sudo yum makecache 
+  
+更新缓存即可。
+
+
+=====相关链接=====
+
+官方主页: http://fedoraproject.org/ \\
+邮件列表: http://fedoraproject.org/wiki/Communicate \\
+论坛: http://forums.fedoraforum.org/ \\
+文档: http://docs.fedoraproject.org/ \\
+Wiki: http://fedoraproject.org/wiki/ \\ 
+镜像列表: http://mirrors.fedoraproject.org/publiclist \\

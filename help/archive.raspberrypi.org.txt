@@ -1,0 +1,5 @@
+====== 替换默认源 ======
+修改/etc/apt/sources.list.d/raspi.list为以下内容
+<code>
+deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ wheezy main
+</code>

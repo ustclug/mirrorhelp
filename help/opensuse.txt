@@ -1,0 +1,30 @@
+======OpenSUSE镜像使用帮助======
+=====收录架构=====
+i586 \\
+x86_64
+=====收录版本=====
+11.1\\
+11.2\\
+11.3\\
+11.4\\
+12.1\\
+12.2 Milestone3\\
+=====使用说明=====
+此处以openSUSE 12.1为例
+
+  - 打开YaST
+  - 点击Software分组中的Software Repositories
+  - 在打开的窗口上方的列表中点击openSUSE-12.1-Non-Oss，点击Edit
+  - 将download.opensuse.org替换为mirrors.ustc.edu.cn/opensuse，点OK
+  - 再用同样的方法编辑openSUSE-12.1-Oss和openSUSE-12.1-Update
+=====注意=====
+  -  我们不提供source和debug源
+  -  上述方法不适用于beta
+=====相关链接=====
+官方主页: http://www.opensuse.org/zh-cn/ \\
+邮件列表: http://en.opensuse.org/Communicate/Mailinglists \\
+论坛: http://forums.opensuse.org/ \\
+中文论坛： http://forum.suse.org.cn/ \\
+Wiki: http://en.opensuse.org/ \\
+文档: http://en.opensuse.org/Documentation \\
+opensuse-guide: http://lug.ustc.edu.cn/sites/opensuse-guide/ \\

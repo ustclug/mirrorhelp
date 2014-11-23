@@ -1,0 +1,51 @@
+====== Ubuntu镜像使用帮助 ======
+
+===== 收录架构 =====
+
+ALL
+
+===== 收录版本 =====
+
+Hardy(8.04) \\
+Intrepid(8.10) \\
+Jaunty(9.04) \\
+Karmic(9.10) \\
+Lucid(10.04) \\
+Maverick(10.10) \\
+Natty(11.04) \\
+Oneiric(11.10) \\
+Precise(12.04) \\
+Quantal(12.10) \\
+Raring Ringtail(13.04) \\
+Saucy Salamander(13.10) \\
+Trusty Tahr(14.04)
+===== 使用说明 =====
+
+==== 软件包管理中心（推荐）====
+
+在软件包管理中心“软件源”中选择“中国的服务器”下mirrors.ustc.edu.cn即可自动使用。
+
+==== 手动更改配置文件 ====
+
+以 Trusty Tahr (14.04)为例, 编辑 /etc/apt/sources.list 文件 (需要使用 sudo), 在文件最前面添加以下条目(操作前请做好相应备份)
+
+  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse
+  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse
+  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse
+  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse
+  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse
+  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse
+  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse
+  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse
+  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse
+  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse
+
+如果您使用的是 Trusty(14.04) 以外的版本，或者希望选择 IPv4/IPv6、HTTP/FTP，请使用我们的 **[[https://lug.ustc.edu.cn/repogen/|配置生成器]]** 
+===== 相关链接 =====
+
+官方主页: http://www.ubuntu.com/ \\
+邮件列表: http://www.ubuntu.com/support/community/mailinglists \\
+论坛: http://ubuntuforums.org/ \\
+中文论坛: http://forum.ubuntu.org.cn/ \\
+Wiki: https://wiki.ubuntu.com/ \\
+文档: https://help.ubuntu.com/ \\
