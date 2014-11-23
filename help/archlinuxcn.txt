@@ -1,0 +1,17 @@
+
+简介
+----------
+
+Archlinuxcn 镜像为 Arch Linux 中文社区仓库，是由 Archlinuxcn
+社区维护的非官方用户仓库，包含一些中文用户常用的软件、字体等。
+
+使用方法
+----------
+
+在 /etc/pacman.conf 文件末尾添加两行：
+
+        [archlinuxcn]
+        SigLevel = Optional TrustAll
+        Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+
+然后请安装 archlinuxcn-keyring 包以导入 GPG key。
