@@ -11,7 +11,7 @@ cat /etc/apt/sources.list | egrep 'mirror|repo' |
 sed -r -e 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@g' >> /etc/apt/sources.list
 ```
 
-如果你只想用 USTC 镜像的话，勇敢地把 `>>` 改成 `>` 吧。由于 AOSC OS3 yum  暂时没有 fastestmirror，你需要做一些砍手的工作：
+如果你只想用 USTC 镜像的话，勇敢地把 `>>` 改成 `>` 吧。由于 AOSC OS3 yum 暂时没有 fastestmirror，你需要做一些砍手的工作：
 
 ```
 # AOSC OS3, yum-rpm
