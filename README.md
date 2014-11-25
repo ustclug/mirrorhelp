@@ -4,7 +4,7 @@ mirrorhelp
 This is the guide on using the mirrored repositories provided by mirrors.ustc.edu.cn.
 Generally these are DokuWiki format text placed on https://lug.ustc.edu.cn/wiki/mirrors/help/.
 
-Contributions are always welcome. You may write text in [DokuWiki](https://www.dokuwiki.org/wiki:syntax) [style](https://www.dokuwiki.org/wiki:syntax)
+Contributions are always welcome. You may write text in [DokuWiki](https://www.dokuwiki.org/zh:syntax) [style](https://www.dokuwiki.org/wiki:syntax)
 or Markdown style because we have installed the markdown plugin, and the engine matches both. All text files should be txts. You can
 combine those two types of syntax. Since Markdown is being parsed here, you should
 escape keywords like literal `_` and ` *` with a backslash `\`, so it looks like `\_` in the source text.
