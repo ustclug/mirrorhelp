@@ -17,6 +17,7 @@ LUG@USTC
 Rules
 -----
 
+- A valid mirror help page should **at least** contain basic description of the mirror and configuration files so readers can use it.
 - All page titles should be `h1` in the resulting HTML. So the title should be something like `====== Distro 镜像源使用帮助 ======` in DokuWiki syntax.
 - Configuration files and other attachments should be wrapped inside a `<file>` tag with a corresponding syntax, like `ini` for `.repo` files. Code blocks should be highlighted, too.
 - Paths should be wrapped in a `<code>` tag in the resulting HTML. Use `\`/path/to/file\`` for this. Inline code, like commands, should be treated in the same way.
