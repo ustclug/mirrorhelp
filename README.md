@@ -18,6 +18,7 @@ mirrorhelp
 
 -  每一篇文档的文件名都应当以`.txt`结尾。
 -  对一些特殊字符，如`_`和` *`，应当在其前面加上`\`进行转义。
+-  每篇文档**至少**应当包括软件源的基本介绍和使用软件源的基本配置。
 -  请为每篇文档添加一个与 HTML 中`h1`标签相对等的标题。例如，在文档第一行写下`====== Distro 镜像源使用帮助 ======`(DokuWiki 语法)，或者写下`# Distro 镜像源使用帮助 #`(Markdown 语法)。
 -  配置文件、脚本等文本文件可以使用`<file>`标签，并配以适当的属性说明，如`.ini`, `.sh`或`.repo`，以实现自动语法高亮。作为例子，你可以参考 Anthon 镜像源使用帮助文档源文件的写作样式。
 -  对于一段较长的代码，请适当地使用`<code>`标签并另起一段。如果要使用行间代码，请使用<code>\`somecode\`</code>的写作方式。**写作示例**可以在 [LUG Wiki Playground](https://lug.ustc.edu.cn/wiki/playground/playground) 找到，供参考。
@@ -41,6 +42,7 @@ Writing Rules
 
 - All files should have a filename ended with .txt.
 - Some special characters, such as `_` and ` *`, should be escaped with a backslash `\`, so it looks like `\_` and `\*` in the source text, since we have a mixed parsing engine of DokuWiki and Markdown.
+- A valid mirror help page should **at least** contain basic description of the mirror and configuration files so readers can use it.
 - All page titles should be `h1` in the resulting HTML. So the title should be something like `====== Distro 镜像源使用帮助 ======` in DokuWiki syntax.
 - Configuration files and other attachments should be wrapped inside a `<file>` tag with a corresponding syntax, like `ini` for `.repo` files. Code blocks should be highlighted, too.
 - Paths should be wrapped in a `<code>` tag in the resulting HTML. Use <code>\`/path/to/file\`</code> for this. Inline code, like commands, should be treated in the same way. For a quick example, check [LUG Wiki Playground](https://lug.ustc.edu.cn/wiki/playground/playground).
