@@ -22,7 +22,9 @@
 [[mirrors:help:gentoo-portage|gentoo-portage 镜像使用帮助]] \\
 [[mirrors:help:kdemod|kdemod 镜像使用帮助]] \\
 [[mirrors:help:linuxmint|Linux Mint 镜像使用帮助]] \\
+[[mirrors:help:npm|npm 镜像使用帮助]] \\
 [[mirrors:help:opensuse|OpenSUSE 镜像使用帮助]] \\
+[[mirrors:help:openwrt|OpenWrt 镜像存档使用帮助]] \\
 [[mirrors:help:raspbian|Raspbian 镜像使用帮助]] \\
 [[mirrors:help:scientificlinux|Scientific Linux 镜像使用帮助]] \\
 [[mirrors:help:trisquel|Trisquel 镜像使用帮助]] \\
