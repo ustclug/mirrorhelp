@@ -1,6 +1,6 @@
 ======开源镜像使用帮助列表======
 
-[[mirrors:help:anthon|AOSC OS 镜像使用帮助]] \\
+[[mirrors:help:anthon|Anthon 镜像使用帮助]] \\
 [[mirrors:help:archlinux|Archlinux 镜像使用帮助]] \\
 [[mirrors:help:archlinuxcn|Archlinuxcn 源使用帮助]] \\
 [[mirrors:help:backtrack|Backtrack 镜像使用帮助]] \\
@@ -29,3 +29,9 @@
 [[mirrors:help:slackware|Slackware 镜像使用帮助]] \\
 [[mirrors:help:ubuntu|Ubuntu 镜像使用帮助]] \\
 [[mirrors:help:uksm-kernel|UKSM Kernel 镜像使用帮助]] \\
+
+------------------------------------------------------
+
+科大镜像源使用帮助由科大 LUG 成员与许多热心的朋友们共同编写。
+
+本页面及各镜像源帮助页面源代码现托管在 [[https://github.com/ustclug/mirrorhelp|GitHub]] 上，欢迎各位协助完善。
