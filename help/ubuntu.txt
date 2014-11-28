@@ -18,7 +18,8 @@ Precise(12.04) \\
 Quantal(12.10) \\
 Raring Ringtail(13.04) \\
 Saucy Salamander(13.10) \\
-Trusty Tahr(14.04)
+Trusty Tahr(14.04) \\
+Utopic Unicorn(14.10)
 ===== 使用说明 =====
 
 ==== 软件包管理中心（推荐）====
@@ -27,20 +28,20 @@ Trusty Tahr(14.04)
 
 ==== 手动更改配置文件 ====
 
-以 Trusty Tahr (14.04)为例, 编辑 /etc/apt/sources.list 文件 (需要使用 sudo), 在文件最前面添加以下条目(操作前请做好相应备份)
+以 Utopic Unicorn (14.10) 为例, 编辑 /etc/apt/sources.list 文件 (需要使用 sudo), 在文件最前面添加以下条目(操作前请做好相应备份)
 
-  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse
-  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse
-  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse
-  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse
-  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse
-  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse
-  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse
-  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse
-  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse
-  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse
+  deb http://mirrors.ustc.edu.cn/ubuntu/ utopic main restricted universe multiverse
+  deb http://mirrors.ustc.edu.cn/ubuntu/ utopic-security main restricted universe multiverse
+  deb http://mirrors.ustc.edu.cn/ubuntu/ utopic-updates main restricted universe multiverse
+  deb http://mirrors.ustc.edu.cn/ubuntu/ utopic-proposed main restricted universe multiverse
+  deb http://mirrors.ustc.edu.cn/ubuntu/ utopic-backports main restricted universe multiverse
+  deb-src http://mirrors.ustc.edu.cn/ubuntu/ utopic main restricted universe multiverse
+  deb-src http://mirrors.ustc.edu.cn/ubuntu/ utopic-security main restricted universe multiverse
+  deb-src http://mirrors.ustc.edu.cn/ubuntu/ utopic-updates main restricted universe multiverse
+  deb-src http://mirrors.ustc.edu.cn/ubuntu/ utopic-proposed main restricted universe multiverse
+  deb-src http://mirrors.ustc.edu.cn/ubuntu/ utopic-backports main restricted universe multiverse
 
-如果您使用的是 Trusty(14.04) 以外的版本，或者希望选择 IPv4/IPv6、HTTP/FTP，请使用我们的 **[[https://lug.ustc.edu.cn/repogen/|配置生成器]]** 
+如果您使用的是 Utopic (14.10) 以外的版本，或者希望选择 IPv4/IPv6、HTTP/FTP，请使用 snullp 大叔开发的 **[[https://lug.ustc.edu.cn/repogen/|配置生成器]]**
 ===== 相关链接 =====
 
 官方主页: http://www.ubuntu.com/ \\
