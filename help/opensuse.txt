@@ -1,30 +1,72 @@
-======OpenSUSE镜像使用帮助======
-=====收录架构=====
-i586 \\
-x86_64
-=====收录版本=====
-11.1\\
-11.2\\
-11.3\\
-11.4\\
-12.1\\
-12.2 Milestone3\\
-=====使用说明=====
-此处以openSUSE 12.1为例
+====== openSUSE 镜像使用帮助 ======
 
-  - 打开YaST
-  - 点击Software分组中的Software Repositories
-  - 在打开的窗口上方的列表中点击openSUSE-12.1-Non-Oss，点击Edit
-  - 将download.opensuse.org替换为mirrors.ustc.edu.cn/opensuse，点OK
-  - 再用同样的方法编辑openSUSE-12.1-Oss和openSUSE-12.1-Update
-=====注意=====
-  -  我们不提供source和debug源
-  -  上述方法不适用于beta
-=====相关链接=====
+===== 收录架构 =====
+
+  - i586
+  - x86_64
+
+===== 收录版本 =====
+
+  - 11.4 （不含 Update）
+  - 12.1 （不含 Update）
+  - 12.2
+  - 12.3
+  - 13.1
+  - 13.2
+  - Factory (Tumbleweed)
+
+===== 使用说明 =====
+
+**注意**：由于使用了[[https://zh.opensuse.org/MirrorBrain|MirrorBrain]]技术，
+中央服务器(download.opensuse.org)会按照 IP 地理位置中转下载请求到附近的
+镜像服务器，所以通常**不鼓励** openSUSE 用户更换软件源。
+参见[[https://forum.suse.org.cn/viewtopic.php?f=10&t=1826|openSUSE 中文论坛]]。
+
+手动配置软件源的方法：
+
+（以下配置方法适用于从未自行配置软件源的用户。其他用户请根据具体情况自行配置
+，以下仅供参考。）
+
+==== 终端下配置方法 ====
+
+  - 禁用原有软件源
+
+	sudo zypper mr -da
+
+  - 添加科大镜像源（以 openSUSE 13.2 为例）
+
+	sudo zypper ar -fc http://mirrors.ustc.edu.cn/opensuse/distribution/13.2/repo/oss USTCmirror:13.2:OSS
+	sudo zypper ar -fc http://mirrors.ustc.edu.cn/opensuse/distribution/13.2/repo/non-oss USTCmirror:13.2:NON-OSS
+	sudo zypper ar -fc http://mirrors.ustc.edu.cn/opensuse/update/13.2 USTCmirror:13.2:UPDATE-OSS
+	sudo zypper ar -fc http://mirrors.ustc.edu.cn/opensuse/update/13.2-non-oss USTCmirror:13.2:UPDATE-NON-OSS
+
+  命令中最后一个参数为每一个源指定了一个 alias （别称），可以根据个人喜好更改。
+
+  - 手动刷新软件源
+
+	sudo zypper ref
+
+==== 图形界面下配置方法 ====
+
+  - 打开 YaST
+  - 点击 Software 分组中的 Software Repositories
+  - 在打开的窗口上方的列表中点击 openSUSE-13.2-Oss ，点击 Edit
+  - 将 download.opensuse.org 替换为 mirrors.ustc.edu.cn/opensuse，点OK
+  - 再用同样的方法编辑 openSUSE-13.2-Non-Oss 和 openSUSE-13.2-Update
+
+===== 注意 =====
+
+  -  我们不提供 source 和 debug 源
+  -  上述方法不适用于 Factory (Tumbleweed) 滚动发行版。
+     使用滚动发行版的用户建议使用中央服务器地址。
+
+===== 相关链接 =====
+
 官方主页: http://www.opensuse.org/zh-cn/ \\
 邮件列表: http://en.opensuse.org/Communicate/Mailinglists \\
 论坛: http://forums.opensuse.org/ \\
 中文论坛： http://forum.suse.org.cn/ \\
 Wiki: http://en.opensuse.org/ \\
+中文 Wiki: http://zh.opensuse.org/ \\
 文档: http://en.opensuse.org/Documentation \\
 opensuse-guide: http://lug.ustc.edu.cn/sites/opensuse-guide/ \\
