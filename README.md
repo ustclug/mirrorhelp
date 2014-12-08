@@ -11,15 +11,16 @@ escape keywords like literal `_` and ` *` with a backslash `\`, so it looks like
 
 Any question, please contact us at lug@ustc.edu.cn or submit an issue.
 
-* * *
-LUG@USTC
-
-Rules
+Writing Rules
 -----
 
 - All page titles should be `h1` in the resulting HTML. So the title should be something like `====== Distro 镜像源使用帮助 ======` in DokuWiki syntax.
 - Configuration files and other attachments should be wrapped inside a `<file>` tag with a corresponding syntax, like `ini` for `.repo` files. Code blocks should be highlighted, too.
-- Paths should be wrapped in a `<code>` tag in the resulting HTML. Use <code>\`/path/to/file\`</code> for this. Inline code, like commands, should be treated in the same way.
+- Paths should be wrapped in a `<code>` tag in the resulting HTML. Use <code>\`/path/to/file\`</code> for this. Inline code, like commands, should be treated in the same way. For a quick example, check [LUG Wiki Playground](https://lug.ustc.edu.cn/wiki/playground/playground).
 - There should be a space between CJK and English or other western text.
 - Lists should be using the corresponding tags in the resulting HTML. 
 - **Always** add new help entries to `help.txt`.
+
+* * *
+LUG@USTC
+
