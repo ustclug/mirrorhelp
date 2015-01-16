@@ -1,5 +1,7 @@
 ======NPM镜像使用帮助======
 
+**中科大镜像站暂时不提供 npm 镜像，请注意。**
+
 中科大镜像站的 npm 镜像是从 http://isaacs.iriscouch.com/registry/ 利用 couchdb 的 replicate 机制自动同步的。
 
 =====使用说明=====
