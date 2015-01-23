@@ -36,9 +36,6 @@ deb http://mirrors.ustc.edu.cn/anthon/os2-repo/os2-apps/ # OS2 Apps 半实验源
 ## 不常见的
 # deb http://mirrors.ustc.edu.cn/anthon/os2-repo/os2-centralpoint/ # OS2 CentralPoint 服务器源
 # deb http://mirrors.ustc.edu.cn/anthon/os2-repo/os2-studio/ # OS2 Studio 源
-## 上游基本停滞的
-# deb http://mirrors.ustc.edu.cn/anthon/os2-repo/os2-experimental/dde-port/ # OS2 DDE 实验
-# deb http://mirrors.ustc.edu.cn/anthon/os2-repo/os2-experimental/kf5-experimental/ # OS2 KDE5 实验
 </file>
 
 AOSC OS3
@@ -51,6 +48,10 @@ AOSC OS3 的 deb 和 rpm 仓库在试验阶段存于 [/anthon/os3-next](http://m
 deb http://mirrors.ustc.edu.cn/anthon/os3-next/os3-dpkg/ # 主源
 </file>
 
+# Zypper 用户
+zypper ar http://repo.anthonos.org/os3-next/os3-rpm "AOSC OS3"
+zypper refresh
+
 <file ini aosc.repo>
 # /etc/yum/repos.d/aosc.repo
 [Official]
@@ -58,3 +59,4 @@ name=AOSC OS3
 baseurl=http://mirrors.ustc.edu.cn/anthon/os3-next/os3-rpm/
 enabled=1
 </file>
+
