@@ -1,7 +1,7 @@
 AOSC OS 镜像源使用帮助
 =======
 
-anthon 为 [AnthonOS](https://anthonos.org) 项目的官方源 https://repo.anthonos.org 的镜像。
+anthon 为 [AnthonOS](https://anthonos.org) 项目的官方源 http://repo.anthonos.org 的镜像。
 
 快速设置
 -----
@@ -26,7 +26,7 @@ sudo sed -r -e -i.orig 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@
 AOSC OS2
 ----
 
-AOSC OS2 具有多个仓库，均位于 [/anthon/os2-repo](https://mirrors.ustc.edu.cn/os2-repo) 下。
+AOSC OS2 具有多个仓库，均位于 [/anthon/os2-repo](https://mirrors.ustc.edu.cn/anthon/os2-repo) 下。
 
 <file - sources-os2.list>
 # /etc/apt/sources.list
@@ -43,7 +43,7 @@ deb http://mirrors.ustc.edu.cn/anthon/os2-repo/os2-apps/ # OS2 Apps 半实验源
 AOSC OS3
 ----
 
-AOSC OS3 的 deb 和 rpm 仓库在试验阶段存于 [/anthon/os3-next](http://mirrors.ustc.edu.cn/anthon/os3-next/)。
+AOSC OS3 的 deb 和 rpm 仓库在试验阶段存于 [/anthon/os3-next](https://mirrors.ustc.edu.cn/anthon/os3-next/)。
 
 #### deb 仓库配置
 
@@ -64,6 +64,6 @@ enabled=1
 
 #### Zypper 用户
 <file>
-zypper ar http://repo.anthonos.org/os3-next/os3-rpm "AOSC OS3"
+zypper ar http://mirrors.ustc.edu.cn/anthon/os3-next/os3-rpm "AOSC OS3"
 zypper refresh
 </file>
