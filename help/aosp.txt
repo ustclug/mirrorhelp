@@ -2,7 +2,7 @@
 
 按照 Google 官方教程 https://source.android.com/source/downloading.html
 
-将 ```https://android.googlesource.com/platform/manifest``` 使用 ```http://mirrors.ustc.edu.cn/aosp/platform/manifest.git``` 替换。
+将 ```https://android.googlesource.com/platform/manifest``` 替换为 ```http://mirrors.ustc.edu.cn/aosp/platform/manifest```。
 
 具体做法摘录如下（以防墙抽风）：
 
