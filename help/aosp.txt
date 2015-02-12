@@ -2,7 +2,7 @@
 
 按照 Google 官方教程 https://source.android.com/source/downloading.html
 
-将 ```https://android.googlesource.com/``` 使用 ```http://mirrors.ustc.edu.cn/aosp/``` 替换。
+将 ```https://android.googlesource.com/platform/manifest``` 使用 ```http://mirrors.ustc.edu.cn/aosp/platform/manifest.git``` 替换。
 
 具体做法摘录如下（以防墙抽风）：
 
@@ -22,12 +22,12 @@ cd WORKING_DIRECTORY
 
 初始化仓库：
 <code>
-repo init -u http://mirrors.ustc.edu.cn/aosp/platform/manifest
+repo init -u http://mirrors.ustc.edu.cn/aosp/platform/manifest.git
 </code>
 
 如果需要某个特定的 Android 版本（[[https://source.android.com/source/build-numbers.html#source-code-tags-and-builds|Android 版本列表]]）：
 <code>
-repo init -u http://mirrors.ustc.edu.cn/aosp/platform/manifest -b android-4.0.1_r1
+repo init -u http://mirrors.ustc.edu.cn/aosp/platform/manifest.git -b android-4.0.1_r1
 </code>
 
 同步源码树（以后只需执行这条命令来同步）：
