@@ -43,7 +43,7 @@ repo sync
 
 修改成
 
-<code>url = http://mirrors.ustc.edu.cn/aosp/platform/manifest</code>
+<code>url = http://mirrors.ustc.edu.cn/aosp/platform/manifest.git</code>
 
 即可。
 
