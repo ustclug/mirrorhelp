@@ -1,0 +1,52 @@
+===== Android 镜像使用帮助 =====
+
+按照 Google 官方教程 https://source.android.com/source/downloading.html
+
+将 ```https://android.googlesource.com/``` 使用 ```http://mirrors.ustc.edu.cn/aosp/``` 替换。
+
+具体做法摘录如下（以防墙抽风）：
+
+首先下载 repo 工具。
+<code>
+mkdir ~/bin
+PATH=~/bin:$PATH
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+</code>
+
+然后建立一个工作目录（名字任意）
+<code>
+mkdir WORKING_DIRECTORY
+cd WORKING_DIRECTORY
+</code>
+
+初始化仓库：
+<code>
+repo init -u http://mirrors.ustc.edu.cn/aosp/platform/manifest
+</code>
+
+如果需要某个特定的 Android 版本（[[https://source.android.com/source/build-numbers.html#source-code-tags-and-builds|Android 版本列表]]）：
+<code>
+repo init -u http://mirrors.ustc.edu.cn/aosp/platform/manifest -b android-4.0.1_r1
+</code>
+
+同步源码树（以后只需执行这条命令来同步）：
+<code>
+repo sync
+</code>
+
+==== 已有仓库如何改用科大源 ====
+
+如果您已经从官方同步了 AOSP 仓库，现在希望使用科大的 AOSP 仓库，请修改 ```.repo/manifests.git/config```，将
+
+<code>url = https://android.googlesource.com/platform/manifest</code>
+
+修改成
+
+<code>url = http://mirrors.ustc.edu.cn/aosp/platform/manifest</code>
+
+即可。
+
+==== 说明 ====
+
+本镜像每天凌晨同步一次。
