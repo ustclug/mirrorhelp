@@ -1,5 +1,6 @@
 ======开源镜像使用帮助列表======
 
+[[mirrors:help:aosp|Android (AOSP) 镜像使用帮助]] \\
 [[mirrors:help:anthon|Anthon 镜像使用帮助]] \\
 [[mirrors:help:archlinux|Archlinux 镜像使用帮助]] \\
 [[mirrors:help:archlinuxcn|Archlinuxcn 源使用帮助]] \\
