@@ -51,6 +51,19 @@ repo sync
 
 即可。
 
+==== 通过 HTTP 协议同步（不推荐） ====
+
+如果由于某种原因不能通过 git 协议同步，请修改 ```.repo/manifests.git/config```，将
+
+<code>url = git://mirrors.ustc.edu.cn/aosp/platform/manifest</code>
+
+修改成
+
+<code>url = http://mirrors.ustc.edu.cn/aosp/platform/manifest</code>
+
+不推荐使用 HTTP 协议同步，因为 HTTP 服务器不支持 ```repo sync``` 的 ```--depth``` 选项，可能导致部分仓库同步失败。
+
+通过 HTTP 同步过程中可能提示 clone.bundle 404 错误，这是正常现象，可以忽略。
 ==== 说明 ====
 
 1. 本镜像每天凌晨 04:30 同步一次。同步可能需要较长时间，因此使用本镜像时建议避开凌晨 04:30～06:00 这段时间。
