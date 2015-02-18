@@ -11,6 +11,8 @@
 mkdir ~/bin
 PATH=~/bin:$PATH
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+## 如果上述 URL 不可访问，可以用下面的：
+## curl https://storage-googleapis.lug.ustc.edu.cn/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 </code>
 
