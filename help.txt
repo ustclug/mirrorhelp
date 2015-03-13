@@ -1,21 +1,21 @@
 ======开源镜像使用帮助列表======
 
+===== Git 仓库镜像 =====
 [[mirrors:help:aosp|Android (AOSP) 镜像使用帮助]] \\
+[[mirrors:help:linux.git|Linux 内核镜像使用帮助]] \\
+
+===== 发行版镜像 =====
 [[mirrors:help:anthon|Anthon 镜像使用帮助]] \\
 [[mirrors:help:archlinux|Archlinux 镜像使用帮助]] \\
 [[mirrors:help:archlinuxcn|Archlinuxcn 源使用帮助]] \\
 [[mirrors:help:backtrack|Backtrack 镜像使用帮助]] \\
 [[mirrors:help:centos|CentOS 镜像使用帮助]] \\
 [[mirrors:help:chakra|Chakra Linux 镜像使用帮助]] \\
-[[mirrors:help:CPAN|CPAN 镜像使用帮助]] \\
-[[mirrors:help:CRAN|CRAN 镜像使用帮助]] \\
-[[mirrors:help:CTAN|CTAN 镜像使用帮助]] \\
 [[mirrors:help:debian|Debian 镜像使用帮助]] \\
 [[mirrors:help:debian-backports|Debian Backports 镜像使用帮助]] \\
 [[mirrors:help:debian-security|Debian Security 镜像使用帮助]] \\
 [[mirrors:help:debian-multimedia|Debian Multimedia 镜像使用帮助]] \\
 [[mirrors:help:dotdeb|Dotdeb 镜像使用帮助]] \\
-[[mirrors:help:eclipse|Eclipse 镜像使用帮助]] \\
 [[mirrors:help:epel|EPEL 镜像使用帮助]] \\
 [[mirrors:help:fedora|Fedora 镜像使用帮助]] \\
 [[mirrors:help:freebsd|FreeBSD 镜像使用帮助]] \\
@@ -23,7 +23,6 @@
 [[mirrors:help:gentoo-portage|gentoo-portage 镜像使用帮助]] \\
 [[mirrors:help:kdemod|kdemod 镜像使用帮助]] \\
 [[mirrors:help:linuxmint|Linux Mint 镜像使用帮助]] \\
-[[mirrors:help:npm|npm 镜像使用帮助]] \\
 [[mirrors:help:opensuse|OpenSUSE 镜像使用帮助]] \\
 [[mirrors:help:openwrt|OpenWrt 镜像存档使用帮助]] \\
 [[mirrors:help:raspbian|Raspbian 镜像使用帮助]] \\
@@ -32,6 +31,15 @@
 [[mirrors:help:slackware|Slackware 镜像使用帮助]] \\
 [[mirrors:help:ubuntu|Ubuntu 镜像使用帮助]] \\
 [[mirrors:help:uksm-kernel|UKSM Kernel 镜像使用帮助]] \\
+
+===== 语言镜像 =====
+[[mirrors:help:CPAN|CPAN 镜像使用帮助]] \\
+[[mirrors:help:CRAN|CRAN 镜像使用帮助]] \\
+[[mirrors:help:CTAN|CTAN 镜像使用帮助]] \\
+[[mirrors:help:npm|npm 镜像使用帮助]] \\
+
+===== 软件镜像 ======
+[[mirrors:help:eclipse|Eclipse 镜像使用帮助]]
 
 ------------------------------------------------------
 
