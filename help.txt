@@ -15,7 +15,6 @@
 [[mirrors:help:debian-backports|Debian Backports 镜像使用帮助]] \\
 [[mirrors:help:debian-security|Debian Security 镜像使用帮助]] \\
 [[mirrors:help:debian-multimedia|Debian Multimedia 镜像使用帮助]] \\
-[[mirrors:help:docker|Docker 镜像使用帮助]] \\
 [[mirrors:help:dotdeb|Dotdeb 镜像使用帮助]] \\
 [[mirrors:help:epel|EPEL 镜像使用帮助]] \\
 [[mirrors:help:fedora|Fedora 镜像使用帮助]] \\
@@ -40,7 +39,8 @@
 [[mirrors:help:npm|npm 镜像使用帮助]] \\
 
 ===== 软件镜像 ======
-[[mirrors:help:eclipse|Eclipse 镜像使用帮助]]
+[[mirrors:help:docker|Docker 镜像使用帮助]] \\
+[[mirrors:help:eclipse|Eclipse 镜像使用帮助]] \\
 
 ------------------------------------------------------
 
