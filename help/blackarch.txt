@@ -17,9 +17,9 @@ x86_64
 
 在 /etc/pacman.conf 文件末尾添加两行：
 
-        [blackarch]
-        SigLevel = Optional TrustAll
-        Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch
+  [blackarch]
+  SigLevel = Optional TrustAll
+  Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch
 
 然后请执行```# pacman-key -r 4EB7BB3C```导入 GPG key(维护者为 Evan Teitelman - BlackArch Developer)。
 
