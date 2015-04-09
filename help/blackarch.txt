@@ -22,7 +22,10 @@ ARMv6/7
   SigLevel = Optional TrustAll
   Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch
 
-然后请执行```# pacman-key -r 4EB7BB3C```导入 GPG key(维护者为 Evan Teitelman - BlackArch Developer)。
+然后请执行以下命令导入 GPG key(维护者为 Evan Teitelman - BlackArch Developer)。
+
+  $ sudo pacman-key -r 4345771566D76038C7FEB43863EC0ADBEA87E4E3
+  $ sudo pacman-key --lsign-key 4345771566D76038C7FEB43863EC0ADBEA87E4E3
 
 相关链接
 ----------
