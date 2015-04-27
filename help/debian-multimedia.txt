@@ -15,6 +15,6 @@
     deb http://mirrors.ustc.edu.cn/debian-multimedia/ squeeze-backports main contrib non-free
     deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ squeeze-backports main contrib non-free
 ====相关链接====
-  * 官方主页: http://debian-multimedia.org/
-  * 邮件列表: http://debian-multimedia.org/mailinglist
-  * 镜像列表: http://debian-multimedia.org/debian-m
+  * 官方主页: http://deb-multimedia.org/
+  * 邮件列表: http://deb-multimedia.org/mailinglist
+  * 镜像列表: http://deb-multimedia.org/debian-m
