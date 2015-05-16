@@ -1,4 +1,4 @@
-======开源镜像使用帮助列表======
+﻿======开源镜像使用帮助列表======
 
 ===== Git 仓库镜像 =====
 [[mirrors:help:aosp|Android (AOSP) 镜像使用帮助]] \\
@@ -8,7 +8,6 @@
 [[mirrors:help:anthon|AOSC OS 镜像使用帮助]] \\
 [[mirrors:help:archlinux|Archlinux 镜像使用帮助]] \\
 [[mirrors:help:archlinuxcn|Archlinuxcn 源使用帮助]] \\
-[[mirrors:help:backtrack|Backtrack 镜像使用帮助]] \\
 [[mirrors:help:centos|CentOS 镜像使用帮助]] \\
 [[mirrors:help:chakra|Chakra Linux 镜像使用帮助]] \\
 [[mirrors:help:debian|Debian 镜像使用帮助]] \\
@@ -21,6 +20,7 @@
 [[mirrors:help:freebsd|FreeBSD 镜像使用帮助]] \\
 [[mirrors:help:gentoo|Gentoo 镜像使用帮助]] \\
 [[mirrors:help:gentoo-portage|gentoo-portage 镜像使用帮助]] \\
+[[mirrors:help:kali|kali镜像使用帮助]] \\
 [[mirrors:help:kdemod|kdemod 镜像使用帮助]] \\
 [[mirrors:help:linuxmint|Linux Mint 镜像使用帮助]] \\
 [[mirrors:help:opensuse|OpenSUSE 镜像使用帮助]] \\
