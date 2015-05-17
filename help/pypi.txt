@@ -5,8 +5,12 @@
 编辑 ~/.pip/pip.conf 文件（如果没有则创建之），将 index-url 开头的一行修改为下面一行：
 
 <code>
-index-url = http://pypi.mirrors.ustc.edu.cn/simple
+index-url = https://pypi.mirrors.ustc.edu.cn/simple
 </code>
+
+如果运行 pip 时, 提示如下错误
+  configparser.MissingSectionHeaderError: File contains no section headers.
+请在 ~/.pip/pip.conf 最上方加上 [global] 这一 section header
 ===== 同步方式 =====
 
 使用 bandersnatch，每5分钟从 pypi.python.org 官方同步。

@@ -1,5 +1,18 @@
 ======开源镜像使用帮助列表======
 
+===== 桌面环境镜像 =====
+[[mirrors:help:KDE|KDE 镜像使用帮助]] \\
+
+===== 语言镜像 =====
+[[mirrors:help:CPAN|CPAN 镜像使用帮助]] \\
+[[mirrors:help:CRAN|CRAN 镜像使用帮助]] \\
+[[mirrors:help:CTAN|CTAN 镜像使用帮助]] \\
+[[mirrors:help:npm|npm 镜像使用帮助]] \\
+
+===== 软件镜像 ======
+[[mirrors:help:docker|Docker 镜像使用帮助]] \\
+[[mirrors:help:eclipse|Eclipse 镜像使用帮助]] \\
+
 ===== Git 仓库镜像 =====
 [[mirrors:help:aosp|Android (AOSP) 镜像使用帮助]] \\
 [[mirrors:help:linux.git|Linux 内核镜像使用帮助]] \\
@@ -31,16 +44,6 @@
 [[mirrors:help:slackware|Slackware 镜像使用帮助]] \\
 [[mirrors:help:ubuntu|Ubuntu 镜像使用帮助]] \\
 [[mirrors:help:uksm-kernel|UKSM Kernel 镜像使用帮助]] \\
-
-===== 语言镜像 =====
-[[mirrors:help:CPAN|CPAN 镜像使用帮助]] \\
-[[mirrors:help:CRAN|CRAN 镜像使用帮助]] \\
-[[mirrors:help:CTAN|CTAN 镜像使用帮助]] \\
-[[mirrors:help:npm|npm 镜像使用帮助]] \\
-
-===== 软件镜像 ======
-[[mirrors:help:docker|Docker 镜像使用帮助]] \\
-[[mirrors:help:eclipse|Eclipse 镜像使用帮助]] \\
 
 ------------------------------------------------------
 
