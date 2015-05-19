@@ -10,8 +10,11 @@ FreeBSD 项目[[https://www.freebsd.org/doc/en/articles/hubs/mirror-official.htm
 </note>
 
 ====使用说明====
+<note important>
+以下使用说明已过期，请自行鉴别。
 
-  * 以下使用说明可能过期，请自行鉴别。
+最新版的 FreeBSD 使用 pkgng 管理软件包，请查阅相关资料了解详情。
+</note>
 
 ===Packages使用方法===
 
