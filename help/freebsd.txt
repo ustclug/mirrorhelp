@@ -5,6 +5,8 @@ FreeBSD 项目[[https://www.freebsd.org/doc/en/articles/hubs/mirror-official.htm
 故，我们建议您使用官方镜像源，如[[http://ftp.cn.freebsd.org/pub/FreeBSD/]]。
 
 我们并非 FreeBSD 的官方源，所同步的文件受到上游的限制，使用请自行承担风险。
+
+本站暂不提供 pkgng 软件源。
 </note>
 
 ====使用说明====
