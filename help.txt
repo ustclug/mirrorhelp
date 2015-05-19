@@ -33,7 +33,7 @@
 [[mirrors:help:freebsd|FreeBSD 镜像使用帮助]] \\
 [[mirrors:help:gentoo|Gentoo 镜像使用帮助]] \\
 [[mirrors:help:gentoo-portage|gentoo-portage 镜像使用帮助]] \\
-[[mirrors:help:kali|kali镜像使用帮助]] \\
+[[mirrors:help:kali|kali 镜像使用帮助]] \\
 [[mirrors:help:kdemod|kdemod 镜像使用帮助]] \\
 [[mirrors:help:linuxmint|Linux Mint 镜像使用帮助]] \\
 [[mirrors:help:opensuse|OpenSUSE 镜像使用帮助]] \\
@@ -50,8 +50,6 @@
 科大镜像源使用帮助由科大 LUG 成员与许多热心的朋友们共同编写。
 
 本页面及各镜像源帮助页面源代码现托管在 [[https://github.com/ustclug/mirrorhelp|GitHub]] 上，欢迎各位协助完善。
-
-
 如果您有添加新镜像的建议与需求，请在 [[https://github.com/ustclug/mirrorrequest|GitHub]] 上提交 issue.
 
 ----------------------------------------------
