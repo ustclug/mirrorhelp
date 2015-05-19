@@ -1,14 +1,13 @@
-====== Eclipse 镜像使用帮助 ======
-===== 从mirrors下载 =====
-在[[http://mirrors.ustc.edu.cn/eclipse/eclipse/downloads/|这个页面]]寻找您需要的版本，点击进入文件目录后，搜索win即可找到你需要的Eclipse的Windows版。特别地，下面是常用下载链接：
-  * [[http://mirrors.ustc.edu.cn/eclipse/eclipse/downloads/drops4/R-4.2.2-201302041200/eclipse-SDK-4.2.2-win32-x86_64.zip|Eclipse4.2.2 64位]]
-  * [[http://mirrors.ustc.edu.cn/eclipse/eclipse/downloads/drops4/R-4.2.2-201302041200/eclipse-SDK-4.2.2-win32.zip|Eclipse4.2.2 32位]]
+# Eclipse 镜像使用帮助 #
+## 使用科大镜像更新插件 ##
+以 Luna 为例，点击 `Help`->`Install New Software...`->`Available Software Sites` 可以看到所有的更新源，将其中的`download.eclipse.org`全部替换成`mirrors.ustc.edu.cn/eclipse`即可。
 
-===== 从mirrors更新 =====
-假定你使用的是Juno,按照如下步骤即可更新：
-  - 点击菜单项 Help->Install New Softwares..
-  - 在Work with后输入: http://mirrors.ustc.edu.cn/eclipse/releases/juno/
-  - 略等片刻，即可安装插件或者更新插件
+## 基本配置 ##
+### Vim-like 快捷键绑定 ###
+See [[http://vrapper.sourceforge.net/home/]]
 
-===== 参考资料 =====
-[[http://www.cnblogs.com/smartdog/archive/2012/11/06/2757372.html]]
+### 离线 Java API ###
+See [[http://stackoverflow.com/questions/4664007/off-line-java-api-documentation-in-eclipse]]
+
+## 参考资料 ##
+[[http://www.webupd8.org/2014/03/how-to-install-oracle-java-8-in-debian.html]]
