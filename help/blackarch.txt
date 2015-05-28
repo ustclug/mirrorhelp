@@ -24,8 +24,8 @@ ARMv6/7
 
 然后请执行以下命令导入 GPG key(维护者为 Evan Teitelman - BlackArch Developer)。
 
-  $ sudo pacman-key -r 4345771566D76038C7FEB43863EC0ADBEA87E4E3
-  $ sudo pacman-key --lsign-key 4345771566D76038C7FEB43863EC0ADBEA87E4E3
+  $ sudo pacman-key -r "4096R/F9A6E68A711354D84A9B91637533BAFE69A25079"
+  $ sudo pacman-key --lsign-key "4096R/F9A6E68A711354D84A9B91637533BAFE69A25079"
 
 相关链接
 ----------
