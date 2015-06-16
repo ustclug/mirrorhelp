@@ -20,6 +20,7 @@
 ===== 发行版镜像 =====
 [[mirrors:help:anthon|AOSC OS 镜像使用帮助]] \\
 [[mirrors:help:archlinux|Archlinux 镜像使用帮助]] \\
+[[mirrors:help:archlinuxarm|Arch Linux ARM 镜像使用帮助]] \\
 [[mirrors:help:archlinuxcn|Archlinuxcn 源使用帮助]] \\
 [[mirrors:help:centos|CentOS 镜像使用帮助]] \\
 [[mirrors:help:chakra|Chakra Linux 镜像使用帮助]] \\
