@@ -13,7 +13,7 @@ index-url = https://pypi.mirrors.ustc.edu.cn/simple
 请在 ~/.pip/pip.conf 最上方加上 [global] 这一 section header
 ===== 同步方式 =====
 
-使用 bandersnatch，每5分钟从 pypi.python.org 官方同步。
+使用 bandersnatch，每4小时从 pypi.python.org 官方同步。
 
 ===== 相关链接 =====
 
