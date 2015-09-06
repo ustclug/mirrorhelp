@@ -8,7 +8,7 @@
 [[mirrors:help:CRAN|CRAN 镜像使用帮助]] \\
 [[mirrors:help:CTAN|CTAN 镜像使用帮助]] \\
 [[mirrors:help:npm|npm 镜像使用帮助]] \\
-
+[[mirrors:help:pypi|PyPI 镜像使用帮助]] \\
 ===== 软件镜像 ======
 [[mirrors:help:docker|Docker 镜像使用帮助]] \\
 [[mirrors:help:eclipse|Eclipse 镜像使用帮助]] \\
