@@ -13,6 +13,7 @@
 [[mirrors:help:docker|Docker 镜像使用帮助]] \\
 [[mirrors:help:eclipse|Eclipse 镜像使用帮助]] \\
 [[mirrors:help:kodi|Kodi(XBMC) 镜像使用帮助]] \\
+[[mirrors:help:infinality-bundle|Infinality  镜像使用帮助]] \\
 
 ===== Git 仓库镜像 =====
 [[mirrors:help:aosp|Android (AOSP) 镜像使用帮助]] \\
