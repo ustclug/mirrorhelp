@@ -2,7 +2,7 @@
 
 ===== 使用方法 =====
 
-请在 /etc/pacman.conf 里根据需要添加(PS: multilib 只支持 x86_64)：
+请在 /etc/pacman.conf 里根据需要添加：
 
   [infinality-bundle]
   Server = http://mirrors.ustc.edu.cn/infinality-bundle/$arch
@@ -21,4 +21,4 @@
 =====相关链接=====
 官方主页: http://bohoomil.com/
 
-ArchWiki: https://wiki.archlinux.org/index.php/Infinality/
+ArchWiki: https://wiki.archlinux.org/index.php/Infinality
