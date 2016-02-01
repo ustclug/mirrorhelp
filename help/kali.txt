@@ -26,7 +26,13 @@ Kali，是Backtrack 5后续更新版本，它的作用大家都懂。
     deb http://mirrors.ustc.edu.cn/kali kali main non-free contrib
     deb-src http://mirrors.ustc.edu.cn/kali kali main non-free contrib
     deb http://mirrors.ustc.edu.cn/kali-security kali/updates main contrib non-free
+    
+> for Kali 2.0，使用ipv4网络添加如下内容
 
+    deb http://mirrors.ustc.edu.cn/kali sana main non-free contrib
+    deb-src http://mirrors.ustc.edu.cn/kali sana main non-free contrib
+    deb http://mirrors.ustc.edu.cn/kali-security sana/updates main contrib non-free
+    
 >注：建议注释掉原来系统自带的源，依据个人喜好。
 
 ----
