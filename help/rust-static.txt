@@ -1,0 +1,4 @@
+====== 增加环境变量 ======
+<code>
+export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+</code>

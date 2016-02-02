@@ -1,0 +1,12 @@
+====== Rust Crates 镜像使用帮助 ======
+
+
+=====使用说明=====
+在 $HOME/.cargo/config 中添加如下内容 \\
+  [registry]
+  index = "git://crates.mirrors.ustc.edu.cn/index"
+
+同步频率为每两个小时更新一次.
+
+=====相关链接=====
+官方主页: https://crates.io/ \\
