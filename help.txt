@@ -9,15 +9,20 @@
 [[mirrors:help:CTAN|CTAN 镜像使用帮助]] \\
 [[mirrors:help:npm|npm 镜像使用帮助]] \\
 [[mirrors:help:pypi|PyPI 镜像使用帮助]] \\
+[[mirrors:help:crates|Rust Crates 镜像使用帮助]] \\
+[[mirrors:help:rust-static|Rust 静态文件镜像使用帮助]] \\
+
 ===== 软件镜像 ======
 [[mirrors:help:docker|Docker 镜像使用帮助]] \\
 [[mirrors:help:eclipse|Eclipse 镜像使用帮助]] \\
 [[mirrors:help:kodi|Kodi(XBMC) 镜像使用帮助]] \\
-[[mirrors:help:infinality-bundle|Infinality  镜像使用帮助]] \\
+[[mirrors:help:infinality-bundle|Infinality 镜像使用帮助]] \\
+[[mirrors:help:homebrew-bottles|Homebrew Bottles 镜像使用帮助]] \\
 
 ===== Git 仓库镜像 =====
 [[mirrors:help:aosp|Android (AOSP) 镜像使用帮助]] \\
 [[mirrors:help:linux.git|Linux 内核镜像使用帮助]] \\
+[[mirrors:help:homebrew.git|Homebrew Git仓库镜像使用帮助]] \\
 
 ===== 发行版镜像 =====
 [[mirrors:help:anthon|AOSC OS 镜像使用帮助]] \\
@@ -32,6 +37,7 @@
 [[mirrors:help:debian-multimedia|Debian Multimedia 镜像使用帮助]] \\
 [[mirrors:help:dotdeb|Dotdeb 镜像使用帮助]] \\
 [[mirrors:help:epel|EPEL 镜像使用帮助]] \\
+[[mirrors:help:rpmfusion|rpmfusion 镜像使用帮助]] \\
 [[mirrors:help:fedora|Fedora 镜像使用帮助]] \\
 [[mirrors:help:freebsd|FreeBSD 镜像使用帮助]] \\
 [[mirrors:help:gentoo|Gentoo 镜像使用帮助]] \\
