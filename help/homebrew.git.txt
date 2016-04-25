@@ -1,3 +1,4 @@
+<note warning>该镜像已过期，新镜像在[[mirrors:help:brew.git|这里]]。请不要使用这个镜像，除非你完全清楚你在做什么。</note>
 ====== 替换homebrew默认源 ======
 <code>
 cd /usr/local

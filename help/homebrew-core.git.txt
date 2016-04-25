@@ -1,0 +1,5 @@
+====== 替换homebrew-core默认源 ======
+<code>
+cd /usr/local/Library/Taps/homebrew/homebrew-core
+git remote set-url origin git://mirrors.ustc.edu.cn/homebrew-core.git
+</code>

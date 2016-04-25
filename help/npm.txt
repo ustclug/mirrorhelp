@@ -1,17 +1,17 @@
 ======NPM镜像使用帮助======
 
-**中科大镜像站暂时不提供 npm 镜像，请注意。**
 
-中科大镜像站的 npm 镜像是从 http://isaacs.iriscouch.com/registry/ 利用 couchdb 的 replicate 机制自动同步的。
+
+中科大镜像站的 npm 镜像是 https://registry.npmjs.org/ 的反代。
 
 =====使用说明=====
 编辑 ''~/.npmrc''，添加
 
-  registry=http://npm.mirrors.ustc.edu.cn/registry
+  registry=http://npmreg.mirrors.ustc.edu.cn/
 
 若不想将本源设置为默认源，只想使用本源安装某个软件包，可在安装包时采用以下用法：
 
-  npm --registry http://npm.mirrors.ustc.edu.cn/registry install <packagename>
+  npm --registry http://npmreg.mirrors.ustc.edu.cn install <packagename>
 
 中科大 npm 镜像支持 https 安全连接，如果您的网络运营商部署了缓存设备，或您对所处的网络环境不信任，请使用 ''https'' 替换上述 URL 中的 ''http''。
 

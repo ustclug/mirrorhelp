@@ -1,0 +1,5 @@
+====== 替换homebrew默认源 ======
+<code>
+cd /usr/local
+git remote set-url origin git://mirrors.ustc.edu.cn/brew.git
+</code>

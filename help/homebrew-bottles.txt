@@ -2,3 +2,5 @@
 <code>
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bashrc
 </code>
+
+[[https://servers.ustclug.org/2016/01/mirrors-add-homebrew-bottles-source/|更多说明]]

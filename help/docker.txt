@@ -1,0 +1,16 @@
+# Docker 镜像使用帮助
+
+## 使用说明
+
+在 Docker 的启动参数中加入:
+
+<code>--registry-mirror=https://docker.mirrors.ustc.edu.cn</code>
+
+Ubuntu 用户（包括使用 systemd 的 Ubuntu 15.04）可以修改 /etc/default/docker 文件，加入如下参数：
+
+  DOCKER_OPTS="--registry-mirror=https://docker.mirrors.ustc.edu.cn"
+
+其他 systemd 用户可以通过执行 sudo systemctl edit docker.service 来修改设置, 覆盖默认的启动参数:
+  [Service]
+  ExecStart=
+  ExecStart=/usr/bin/docker -d -H fd:// --registry-mirror=https://docker.mirrors.ustc.edu.cn
