@@ -10,6 +10,7 @@
 [[mirrors:help:CPAN|CPAN 镜像使用帮助]] \\
 [[mirrors:help:CRAN|CRAN 镜像使用帮助]] \\
 [[mirrors:help:CTAN|CTAN 镜像使用帮助]] \\
+[[mirrors:help:ctex|CTeX 套装使用帮助]] \\
 [[mirrors:help:npm|npm 镜像使用帮助]] \\
 [[mirrors:help:pypi|PyPI 镜像使用帮助]] \\
 [[mirrors:help:crates|Rust Crates 镜像使用帮助]] \\
