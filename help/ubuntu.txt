@@ -17,20 +17,33 @@ ALL
 
 ==== 手动更改配置文件 ====
 
-以 Utopic Unicorn (14.10) 为例, 编辑 /etc/apt/sources.list 文件 (需要使用 sudo), 在文件最前面添加以下条目(操作前请做好相应备份)
+<note important>操作前请做好相应备份</note>
 
-  deb http://mirrors.ustc.edu.cn/ubuntu/ utopic main restricted universe multiverse
-  deb http://mirrors.ustc.edu.cn/ubuntu/ utopic-security main restricted universe multiverse
-  deb http://mirrors.ustc.edu.cn/ubuntu/ utopic-updates main restricted universe multiverse
-  deb http://mirrors.ustc.edu.cn/ubuntu/ utopic-proposed main restricted universe multiverse
-  deb http://mirrors.ustc.edu.cn/ubuntu/ utopic-backports main restricted universe multiverse
-  deb-src http://mirrors.ustc.edu.cn/ubuntu/ utopic main restricted universe multiverse
-  deb-src http://mirrors.ustc.edu.cn/ubuntu/ utopic-security main restricted universe multiverse
-  deb-src http://mirrors.ustc.edu.cn/ubuntu/ utopic-updates main restricted universe multiverse
-  deb-src http://mirrors.ustc.edu.cn/ubuntu/ utopic-proposed main restricted universe multiverse
-  deb-src http://mirrors.ustc.edu.cn/ubuntu/ utopic-backports main restricted universe multiverse
+一般情况下，更改 /etc/apt/sources.list 文件中 Ubuntu 默认的源地址 http://archive.ubuntu.com/ 为 http://mirrors.ustc.edu.cn
+即可。
 
-如果您使用的是 Utopic (14.10) 以外的版本，或者希望选择 IPv4/IPv6、HTTP/FTP，请使用 snullp 大叔开发的 **[[https://lug.ustc.edu.cn/repogen/|配置生成器]]**
+可以使用如下命令：
+
+  sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+  
+
+当然直接编辑 /etc/apt/sources.list 文件（需要使用 sudo）也可以，以 Ubuntu 16.04 为例，在文件最前面添加以下条目：
+
+<file list sources.list>
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+</file>
+
+另外，也可以 snullp 大叔开发的 **[[https://mirrors.ustc.edu.cn/repogen/|配置生成器]]**
+
 ===== 相关链接 =====
 
 官方主页: http://www.ubuntu.com/ \\

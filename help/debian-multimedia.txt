@@ -12,10 +12,12 @@
 ====使用说明====
 以 Debian 8 "Jessie" 为例, 编辑/etc/apt/sources.list文件, 在文件最前面添加以下条目(操作前请做好相应备份)
 
-    deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free
-    deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free
-    deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main
-    deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main
+<file list sources.list>
+deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free
+deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free
+deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main
+deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main
+</file>
 
 如果遇到 GPG error，你可能需要手动更新 deb-multimedia-keyring，以下摘自 debian multimedia 首页：
 
