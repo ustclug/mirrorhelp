@@ -1,15 +1,7 @@
 ====== 使用说明 ======
 
-如果是使用 Rust 版的 rustup, 增加环境变量 `RUSTUP_DIST_ROOT`
+设置环境变量 `RUSTUP_DIST_SERVER`
 
 <code>
-export RUSTUP_DIST_ROOT=https://mirrors.ustc.edu.cn/rust-static/dist
-</code>
-
-注: 由于 Rust 版的 rustup 是通过读 manifest 文件里的 url 来获得其他资源的下载地址, 而这些 url 还是指向原来的 static.rust-lang.org, 所以目前无法通过设置环境变量来起到加速的效果.
-
-如果是使用 Bash 版的 rustup, 增加环境变量 `RUSTUP_DIST_SERVER`
-
-<code>
-export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static/dist
+export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 </code>
