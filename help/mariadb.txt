@@ -2,21 +2,11 @@
 
 ## 支持发行版
 
-* Fedora
-* CentOS
-* Red Hat
-* Mint
-* Ubuntu
-* Debian
-* OpenSUSE
-* SUSE Linux Enterprise Server
+所有官方支持的发行版
 
 ## 收录版本
 
-* 5.5
-* 10.0
-* 10.1
-* 10.2
+所有官方支持的版本
 
 ## 使用说明
 
