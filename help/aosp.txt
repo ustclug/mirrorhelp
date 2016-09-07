@@ -1,5 +1,24 @@
 ===== Android 镜像使用帮助 =====
 
+==== 初始同步方法1 ====
+
+第一次同步数据量特别大，如果网络不稳定，中间失败就要从头再来了。所以我们提供了打包的
+AOSP 镜像，为一个 tar 包，大约 16G（单文件 16G，注意你的磁盘格式要支持）。这样你
+就可以通过 HTTP 的方式下载，该方法支持断点续传。
+
+下载地址 http://mirrors.ustc.edu.cn/aosp-monthly/
+
+请注意对比 checksum。
+
+然后根据下文 [[#已有仓库如何改用科大源|已有仓库如何改用科大源]] 的方法更改同步地址。
+
+解压后用命令 repo sync 就可以把代码都 checkout 出来。
+
+Note: tar包为定时人工从 https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/
+下载。
+
+==== 初始同步方法2 ====
+
 按照 Google 官方教程 https://source.android.com/source/downloading.html
 
 将 ```https://android.googlesource.com/platform/manifest``` 替换为 ```git://mirrors.ustc.edu.cn/aosp/platform/manifest```。
