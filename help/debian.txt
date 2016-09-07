@@ -1,13 +1,8 @@
 ======Debian镜像使用帮助======
 =====收录架构=====
-  * i386
-  * x86_64
-  * source
+  * 作为官方源之一，与 Debian 上游保持相同
 =====收录版本=====
-  * stable
-  * unstable
-  * testing
-  * experimental
+  * 与 Debian 上游保持相同
 =====使用说明=====
 <note important>操作前请做好相应备份</note>
 
