@@ -1,6 +1,22 @@
 # Docker 镜像使用帮助
 
 ## 使用说明
+新版的 Docker 使用 /etc/docker/daemon.json（Linux） 或者 %programdata%\docker\config\daemon.json（Windows）
+来配置 Daemon。
+
+请在该配置文件中加入（没有该文件的话，请先建一个）：
+
+  {
+    "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]
+  }
+
+Docker Daemon configuration file 文档： https://docs.docker.com/engine/reference/commandline/dockerd/#/daemon-configuration-file
+
+Docker for Windows 文档: https://docs.docker.com/docker-for-windows/#/docker-daemon
+
+----
+
+<note warning>以下是一些过时的配置方法</note>
 
 在 Docker 的启动参数中加入:
 
