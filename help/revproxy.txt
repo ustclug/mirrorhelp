@@ -2,10 +2,10 @@
 
 各资源的对应关系如下
 
-    fonts.gstatic.com             fonts-gstatic.lug.ustc.edu.cn
-    fonts.googleapis.com          fonts.lug.ustc.edu.cn
-    ajax.googleapis.com           ajax.lug.ustc.edu.cn
-    storage.googleapis.com        storage-googleapis.lug.ustc.edu.cn
-    themes.googleusercontent.com  google-themes.lug.ustc.edu.cn
-    gerrit.googlesource.com       gerrit-googlesource.lug.ustc.edu.cn
-    secure.gravatar.com           gravatar.lug.ustc.edu.cn
+    fonts.gstatic.com             fonts-gstatic.proxy.ustclug.org
+    fonts.googleapis.com          fonts.proxy.ustclug.org
+    ajax.googleapis.com           ajax.proxy.ustclug.org
+    storage.googleapis.com        storage-googleapis.proxy.ustclug.org
+    themes.googleusercontent.com  google-themes.proxy.ustclug.org
+    gerrit.googlesource.com       gerrit-googlesource.proxy.ustclug.org
+    secure.gravatar.com           gravatar.proxy.ustclug.org
