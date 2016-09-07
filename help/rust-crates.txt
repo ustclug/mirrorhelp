@@ -11,5 +11,13 @@
 
 同步频率为每两个小时更新一次.
 
+如果 cargo 版本为 0.13.0 或以上, 需要更改 $HOME/.cargo/config 为以下内容:
+  [source.crates-io]
+  registry = "https://github.com/rust-lang/crates.io-index"
+  replace-with = 'ustc'
+  [source.ustc]
+  registry = "git://crates.mirrors.ustc.edu.cn/index"
+
+
 =====相关链接=====
 官方主页: https://crates.io/ \\
