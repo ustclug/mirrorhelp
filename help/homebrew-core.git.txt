@@ -1,4 +1,10 @@
-====== 替换homebrew-core默认源 ======
+# homebrew-core源
+homebrew-core是Homebrew的核心软件仓库，收录了大部分的常用软件。
+
+## 使用方法
+
+在终端中执行以下命令：
+
 <code>
 cd /usr/local/Library/Taps/homebrew/homebrew-core
 git remote set-url origin git://mirrors.ustc.edu.cn/homebrew-core.git
