@@ -1,0 +1,25 @@
+====== ustclug 自建软件源使用帮助 ======
+
+===== 收录架构 =====
+
+i386, amd64, armhf
+
+===== 收录版本 =====
+
+针对Debian Jessie挑选的部分软件，版本按需确定。
+
+===== 使用说明 =====
+
+* 编辑`sources.list`文件：
+
+```bash
+su -c 'echo deb\ http\://mirrors.ustc.edu.cn/ustclug\ ustclug\ main > /etc/apt/sources.list.d/ustclug.list'
+```
+
+* 使用`apt-key add`添加缺失的公钥，公钥请上网查找，此处不详述。
+
+* 在`apt update`后即可正常使用。
+
+===== 相关链接 =====
+
+无
