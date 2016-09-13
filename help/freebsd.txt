@@ -1,12 +1,13 @@
 =====FreeBSD 镜像使用方法=====
 
 <note important>
-FreeBSD 项目[[https://www.freebsd.org/doc/en/articles/hubs/mirror-official.html#mirror-official-become|暂时不再接受第三方镜像源]]。
-故，我们建议您使用官方镜像源，如[[http://ftp.cn.freebsd.org/pub/FreeBSD/]]。
+FreeBSD 项目[[https://www.freebsd.org/doc/en/articles/hubs/mirror-official.html#mirror-official-become|暂时不再接受新站点成为官方镜像源]]，且不向第三方镜像站点提供pkgng  rsync同步接口。因此，我们无法及时可靠地从官方站点同步数据，并暂时使用不包含pkgng的非官方站点作为同步上游。
+鉴于以上原因，我们不建议您使用科大镜像站提供的内容。建议您使用官方支持的镜像源。您可以在 
+https://www.freebsd.org/doc/handbook/eresources-web.html 找到官方镜像站的列表。
 
-我们并非 FreeBSD 的官方源，所同步的文件受到上游的限制，使用请自行承担风险。
+我们并非 FreeBSD 的官方源，所同步的文件受到非官方上游的限制。使用请自行承担风险。
 
-本站暂不提供 pkgng 软件源。
+受上游所提供文件限制，本站无法提供 pkgng 软件源。
 </note>
 
 ====使用说明====
