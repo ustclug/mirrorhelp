@@ -6,6 +6,6 @@ homebrew-core是Homebrew的核心软件仓库，收录了大部分的常用软�
 在终端中执行以下命令：
 
 <code>
-cd /usr/local/Library/Taps/homebrew/homebrew-core
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
 git remote set-url origin git://mirrors.ustc.edu.cn/homebrew-core.git
 </code>
