@@ -16,9 +16,15 @@ i386, amd64, armhf
 su -c 'echo deb\ http\://mirrors.ustc.edu.cn/ustclug\ ustclug\ main > /etc/apt/sources.list.d/ustclug.list'
 ```
 
-* 使用`apt-key add`添加缺失的公钥，公钥请上网查找，此处不详述。
+* 使用`apt-key add`添加缺失的公钥：
+
+```bash
+wget -q https://mirrors.ustc.edu.cn/ustclug/ustclug.asc -O - | sudo apt-key add -
+```
 
 * 在`apt update`后即可正常使用。
+
+**注意**：LUG@USTC对其中的软件包的来源不做任何保证，请谨慎使用。
 
 ===== 相关链接 =====
 
