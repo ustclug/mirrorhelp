@@ -12,7 +12,9 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
 替换Homebrew Bottles源:
 参考:[[https://lug.ustc.edu.cn/wiki/mirrors/help/homebrew-bottles|替换Homebrew Bottles源]]
 
-在科大mirror失效或宕机时切回官方源：
+在中科大源失效或宕机时可以：
+1. 使用[[https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/|清华源设置参考]]。
+2. 切换回官方源：
 <code>
 重置brew.git:
 cd "$(brew --repo)"
