@@ -1,5 +1,27 @@
-====== 替换homebrew默认源 ======
+====== 替换及重置Homebrew默认源 ======
 <code>
+替换brew.git:
 cd "$(brew --repo)"
-git remote set-url origin git://mirrors.ustc.edu.cn/brew.git
+git remote set-url origin https:://mirrors.ustc.edu.cn/brew.git
+
+替换homebrew-core.git:
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
 </code>
+
+替换Homebrew Bottles源:
+参考:[[https://lug.ustc.edu.cn/wiki/mirrors/help/homebrew-bottles|替换Homebrew Bottles源]]
+
+在科大mirror失效或宕机时切回官方源：
+<code>
+重置brew.git:
+cd "$(brew --repo)"
+git remote set-url origin https://github.com/Homebrew/brew.git
+
+重置homebrew-core.git:
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+git remote set-url origin https://github.com/Homebrew/homebrew-core.git
+</code>
+
+注释掉bash配置文件里的有关Homebrew Bottles即可恢复官方源。
+重启bash或让bash重读配置文件。
