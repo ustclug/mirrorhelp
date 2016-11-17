@@ -16,7 +16,6 @@ Arch Linux 中文社区仓库是由 Arch Linux 中文社区驱动的非官方用
 
 ```
 [archlinuxcn]
-SigLevel = Optional TrustedOnly
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 ```
 
