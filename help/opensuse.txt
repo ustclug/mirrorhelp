@@ -14,6 +14,7 @@
   - 13.1
   - 13.2
   - Leap 42.1
+  - Leap 42.2
   - Tumbleweed (Factory)
 
 ===== 使用说明 =====
@@ -31,13 +32,13 @@
 sudo zypper mr -da
 </code>
 
-  - 添加科大镜像源（以 openSUSE Leap 42.1 为例）
+  - 添加科大镜像源（以 openSUSE Leap 42.2 为例）
 
 <code>
-sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.1/repo/oss USTC:42.1:OSS
-sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.1/repo/non-oss USTC:42.1:NON-OSS
-sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.1/oss USTC:42.1:UPDATE-OSS
-sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.1/non-oss USTC:42.1:UPDATE-NON-OSS
+sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.2/repo/oss USTC:42.2:OSS
+sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.2/repo/non-oss USTC:42.2:NON-OSS
+sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.2/oss USTC:42.2:UPDATE-OSS
+sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.2/non-oss USTC:42.2:UPDATE-NON-OSS
 </code>
 
 命令中最后一个参数为每一个源指定了一个 alias （别称），可以根据个人喜好更改。
