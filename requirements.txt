@@ -1,0 +1,2 @@
+Sphinx
+sphinx-rtd-theme>=0.1.10a0
