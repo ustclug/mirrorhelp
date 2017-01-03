@@ -54,8 +54,12 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
     # deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
     # deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
 
+同时你也可能需要更改 Debian Security 源，请参考 :doc:`debian-security`
+
+更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
+
 .. tip::
-    使用 HTTPS 则可以有效避免国内运营商的缓存劫持，但需要事先安装 ``apt-transport-https``
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装 ``apt-transport-https``
 
 另外，也可以使用 snullp 大叔开发的 `配置生成器 <https://mirrors.ustc.edu.cn/repogen>`_ 。
 

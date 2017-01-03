@@ -48,8 +48,10 @@ Debian Old Old Stable, Old Stable, Stable
     deb http://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib
     # deb-src http://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib
 
+更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
+
 .. tip::
-    使用 HTTPS 则可以有效避免国内运营商的缓存劫持，但需要事先安装 ``apt-transport-https``
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装 ``apt-transport-https``
 
 另外，也可以使用 snullp 大叔开发的 `配置生成器 <https://mirrors.ustc.edu.cn/repogen>`_ 。
 

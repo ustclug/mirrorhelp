@@ -53,8 +53,10 @@ arm64, armhf, PowerPC, ppc64el, s390x
     # deb https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-proposed main restricted universe multiverse
     # deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-proposed main restricted universe multiverse
 
+更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
+
 .. tip::
-    使用 HTTPS 则可以有效避免国内运营商的缓存劫持，但需要事先安装 ``apt-transport-https``
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装 ``apt-transport-https``
 
 镜像下载
 --------
