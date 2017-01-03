@@ -1,2 +1,2 @@
 Sphinx
-sphinx-rtd-theme>=0.1.10a0
+git+https://github.com/snide/sphinx_rtd_theme.git
