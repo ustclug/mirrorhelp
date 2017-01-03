@@ -30,7 +30,8 @@ AMD64 (x86_64), Intel x86
 手动更改配置文件
 ----------------
 
-**操作前请做好相应备份**
+.. warning::
+    操作前请做好相应备份
 
 一般情况下，更改 ``/etc/apt/sources.list`` 文件中 Ubuntu 默认的源地址 ``http://archive.ubuntu.com/``
 为 ``http://mirrors.ustc.edu.cn`` 即可。
