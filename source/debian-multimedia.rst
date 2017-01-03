@@ -29,7 +29,8 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 ========
 
 .. important::
-    Debian Multimedia 不是官方 Debian 项目，见 https://wiki.debian.org/DebianMultimedia/FAQ
+    该 Debian Multimedia 不是官方 Debian 项目，是为 deb-multimedia.org 的镜像，两者区别
+    见 https://wiki.debian.org/DebianMultimedia/FAQ
 
 以 Jessie 为例，在 :file:`/etc/apt/sources.list` 中加入
 
