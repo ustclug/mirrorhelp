@@ -32,7 +32,8 @@ Ubuntu 曾经发布过的所有版本
 
 在 :file:`/etc/apt/sources.list` 文件中，将软件源的地址改为 ``http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu``
 
-使用 HTTPS 则可以有效避免国内运营商的缓存劫持，但需要事先安装 `apt-transport-https`
+.. tip::
+    使用 HTTPS 则可以有效避免国内运营商的缓存劫持，但需要事先安装 ``apt-transport-https``
 
 镜像
 ----

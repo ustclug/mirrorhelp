@@ -67,7 +67,8 @@ AMD64 (x86_64), Intel x86
     # deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
     # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
 
-使用 HTTPS 则可以有效避免国内运营商的缓存劫持。
+.. tip::
+    使用 HTTPS 则可以有效避免国内运营商的缓存劫持。
 
 另外，也可以使用 snullp 大叔开发的 `配置生成器 <https://mirrors.ustc.edu.cn/repogen>`_ 。
 

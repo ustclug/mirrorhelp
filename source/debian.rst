@@ -1,0 +1,68 @@
+=================
+Debian 源使用帮助
+=================
+
+地址
+====
+
+https://mirrors.ustc.edu.cn/debian/
+
+说明
+====
+
+Debian 软件源
+
+收录架构
+========
+
+Debian 支持的所有架构，如 AMD64 (x86_64), Intel x86, ARM, MIPS, ppc64el, s390x 等
+
+
+收录版本
+========
+
+Debian Old Stable, Stable, Testing, Unstable(sid)
+
+当前 Stable 为 Debian 8，代号为 Jessie
+
+使用说明
+========
+
+
+.. warning::
+    操作前请做好相应备份
+
+一般情况下，将 :file:`/etc/apt/sources.list` 文件中 Debian 默认的源地址 ``http://httpredir.debian.org/``
+替换为 ``http://mirrors.ustc.edu.cn`` 即可。
+
+可以使用如下命令：
+
+::
+
+  sudo sed -i 's/httpredir.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+
+当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
+
+::
+
+    deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free
+    deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
+
+    # deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
+
+.. tip::
+    使用 HTTPS 则可以有效避免国内运营商的缓存劫持，但需要事先安装 ``apt-transport-https``
+
+另外，也可以使用 snullp 大叔开发的 `配置生成器 <https://mirrors.ustc.edu.cn/repogen>`_ 。
+
+相关链接
+========
+
+:官方主页: https://www.debian.org/
+:邮件列表: https://www.debian.org/MailingLists/
+:Wiki: https://wiki.debian.org/
+:文档: https://www.debian.org/doc/
+:镜像列表: https://www.debian.org/mirror/list

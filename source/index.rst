@@ -13,3 +13,4 @@ USTC Mirror Help
    ubuntu-releases
    ubuntu-cdimage
    ubuntu-cloud-images
+   debian
