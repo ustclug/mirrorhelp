@@ -1,11 +1,16 @@
 ============================
-Ubuntu CD Image 镜像使用帮助
+Ubuntu CD Image 源使用帮助
 ============================
 
-镜像地址
-========
+地址
+====
 
 https://mirrors.ustc.edu.cn/ubuntu-cdimage/
+
+说明
+====
+
+Ubuntu 镜像
 
 收录架构
 ========

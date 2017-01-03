@@ -1,11 +1,16 @@
 ================================
-Ubuntu Old Releases 镜像使用帮助
+Ubuntu Old Releases 源使用帮助
 ================================
 
-镜像地址
-========
+地址
+====
 
 https://mirrors.ustc.edu.cn/ubuntu-old-releases/
+
+说明
+====
+
+Ubuntu 旧版本的软件源、镜像
 
 收录架构
 ========

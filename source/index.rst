@@ -12,3 +12,4 @@ USTC Mirror Help
    ubuntu-old-releases
    ubuntu-releases
    ubuntu-cdimage
+   ubuntu-cloud-images
