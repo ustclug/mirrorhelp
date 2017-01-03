@@ -14,3 +14,5 @@ USTC Mirror Help
    ubuntu-cdimage
    ubuntu-cloud-images
    debian
+   debian-security
+   debian-cd

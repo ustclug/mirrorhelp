@@ -5,7 +5,8 @@ Debian 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/debian/
+* https://mirrors.ustc.edu.cn/debian/
+* https://ftp.cn.debian.org/debian/
 
 说明
 ====
