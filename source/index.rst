@@ -8,4 +8,7 @@ USTC Mirror Help
    :maxdepth: 1
 
    ubuntu
-
+   ubuntu-ports
+   ubuntu-old-releases
+   ubuntu-releases
+   ubuntu-cdimage
