@@ -1,6 +1,6 @@
-==============================
+===========================
 Homebrew Bottles 源使用帮助
-==============================
+===========================
 
 地址
 ====
@@ -12,9 +12,9 @@ https://mirrors.ustc.edu.cn/homebrew-bottles/
 
 Homebrew 预编译二进制软件包
 
-
 收录仓库
 ========
+
 * homebrew/homebrew-core
 * homebrew/homebrew-dupes
 * homebrew/homebrew-games
@@ -25,22 +25,28 @@ Homebrew 预编译二进制软件包
 * homebrew/homebrew-versions
 * homebrew/homebrew-x11
 
-
 使用说明
 ========
 
-请在运行brew前设置环境变量``HOMEBREW_BOTTLE_DOMAIN``，值为 ``https://mirrors.ustc.edu.cn/homebrew-bottles``.
+请在运行 brew 前设置环境变量 ``HOMEBREW_BOTTLE_DOMAIN`` ，值为 ``https://mirrors.ustc.edu.cn/homebrew-bottles`` 。
 
-对于bash用户：
+对于 bash 用户：
 
 ::
 
     echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
     source ~/.bash_profile
 
-对于zsh用户
+对于 zsh 用户：
 
 ::
 
     echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
     source ~/.zshrc
+
+相关链接
+========
+
+:官方主页: http://brew.sh/
+:brew 帮助手册: http://docs.brew.sh/brew.1.html
+:Bottles 介绍: http://docs.brew.sh/Bottles.html
