@@ -5,7 +5,7 @@ Alpine Linux 源使用帮助
 地址
 ====
 
-* https://mirrors.ustc.edu.cn/alpine/
+* http://mirrors.ustc.edu.cn/alpine/
 
 说明
 ====
