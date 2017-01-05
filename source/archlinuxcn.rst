@@ -1,6 +1,6 @@
-==========================
+========================
 Arch Linux CN 源使用帮助
-==========================
+========================
 
 地址
 ====
@@ -19,8 +19,6 @@ Arch Linux 中文社区仓库是由 Arch Linux 中文社区驱动的非官方用
 
 仓库地址：http://repo.archlinuxcn.org
 
-该仓库地址可能会根据你所在的网络环境自动选择镜像源地址。
-
 使用说明
 ========
 
@@ -38,4 +36,3 @@ Arch Linux 中文社区仓库是由 Arch Linux 中文社区驱动的非官方用
 
 :Arch Linux 中文社区主页: https://www.archlinuxcn.org
 :Arch Linux 中文社区仓库 / 镜像加速源介绍: https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/
-
