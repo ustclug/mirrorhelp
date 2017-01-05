@@ -9,4 +9,4 @@ script:
     - make html
 
 after_success:
-    - '[[ "$TRAVIS_PULL_REQUEST" = "false" ]] && rsync -av build/html/ travis@202.141.176.110::help/'
+    - '[[ "$TRAVIS_PULL_REQUEST" = "false" ]] && [[ "$TRAVIS_BRANCH" = "sphinx" ]] && rsync -av build/html/ travis@202.141.176.110::help/'
