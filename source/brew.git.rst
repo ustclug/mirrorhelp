@@ -33,6 +33,7 @@ Homebrew 源代码仓库
 ========
 - :doc:`homebrew-bottles`
 - :doc:`homebrew-core.git`
+- :doc:`homebrew-cask.git`
 
 相关链接
 ========
