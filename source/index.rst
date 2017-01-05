@@ -38,6 +38,7 @@ USTC Mirror Help
 .. toctree::
    :maxdepth: 1
 
+   brew.git
    homebrew-bottles
    infinality-bundle
 
