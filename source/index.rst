@@ -40,6 +40,7 @@ USTC Mirror Help
 
    brew.git
    homebrew-bottles
+   homebrew-core.git
    infinality-bundle
 
 其他

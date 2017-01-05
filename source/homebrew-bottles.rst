@@ -47,6 +47,7 @@ Homebrew 预编译二进制软件包
 相关镜像
 ========
 - :doc:`brew.git`
+- :doc:`homebrew-core.git`
 
 相关链接
 ========
