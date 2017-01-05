@@ -1,5 +1,5 @@
 ==============================
-Infinality-bundle 镜像使用帮助
+Infinality-bundle 源使用帮助
 ==============================
 
 地址
@@ -10,7 +10,7 @@ https://mirrors.ustc.edu.cn/infinality-bundle/
 说明
 ====
 
-Infinality-bundle 镜像
+Infinality-bundle 源
 
 使用说明
 ========
@@ -41,5 +41,3 @@ Infinality-bundle 镜像
 
 :官方主页: http://bohoomil.com/
 :ArchWiki: https://wiki.archlinux.org/index.php/Infinality
-
-

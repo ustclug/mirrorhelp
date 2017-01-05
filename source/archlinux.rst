@@ -1,5 +1,5 @@
 =======================
-Arch Linux 镜像使用帮助
+Arch Linux 源使用帮助
 =======================
 
 地址
@@ -19,19 +19,14 @@ i686
 
 x86_64
 
-收录版本
-========
-
-ALL
-
 使用说明
 ========
 
-编辑 :file:`/etc/pacman.d/mirrorlist`, 先注释掉里面的所有行, 然后在文件的最顶端添加
+编辑 :file:`/etc/pacman.d/mirrorlist`, 在文件的最顶端添加
 
 ::
 
-    Server = http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
+    Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 
 相关链接
 ========

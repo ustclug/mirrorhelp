@@ -25,3 +25,5 @@ rustup 安装方法可参考官方的 `README <https://github.com/rust-lang-nurs
 ::
 
     export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+
+.. attention:: 截止到该页面编写的时候(2017-01-05), cargo 的软件包依然托管在 AWS 上, 因此无法对下载地址做替换, 下载速度可能较慢. 但该软件包只有大概 10 MB 左右, 影响不会很大.

@@ -1,5 +1,5 @@
 =======================
-Black Arch 镜像使用帮助
+Black Arch 源使用帮助
 =======================
 
 地址
@@ -17,7 +17,7 @@ Black Arch 软件源
 
 BlackArch 是一款基于 ArchLinux 的为渗透测试及安全研究人员开发的发行版, 相当于 Arch 版的 BackTrack/Kali。
 
-仓库地址：`<http://blackarch.org/blackarch/>`_
+仓库地址：http://blackarch.org/blackarch/
 
 收录架构
 ========

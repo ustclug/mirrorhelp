@@ -1,5 +1,5 @@
 ==========================
-Arch Linux CN 镜像使用帮助
+Arch Linux CN 源使用帮助
 ==========================
 
 地址
@@ -17,7 +17,7 @@ Arch Linux CN 软件源
 
 Arch Linux 中文社区仓库是由 Arch Linux 中文社区驱动的非官方用户仓库。包含中文用户常用软件、工具、字体/美化包等。
 
-仓库地址：`<http://repo.archlinuxcn.org>`_
+仓库地址：http://repo.archlinuxcn.org
 
 该仓库地址可能会根据你所在的网络环境自动选择镜像源地址。
 

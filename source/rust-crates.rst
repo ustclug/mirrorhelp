@@ -1,5 +1,5 @@
 ========================
-Rust Crates 镜像使用帮助
+Rust Crates 源使用帮助
 ========================
 
 地址
@@ -10,7 +10,7 @@ https://mirrors.ustc.edu.cn/crates.io-index/
 说明
 ====
 
-Rust Crates Registry 镜像
+Rust Crates Registry 源
 
 使用说明
 ========
@@ -29,7 +29,7 @@ Rust Crates Registry 镜像
 
 ::
 
-    registry = "http://mirrors.ustc.edu.cn/crates.io-index"
+    registry = "https://mirrors.ustc.edu.cn/crates.io-index"
 
 同步频率为每两个小时更新一次
 
