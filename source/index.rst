@@ -7,6 +7,7 @@ USTC Mirror Help
 .. toctree::
    :maxdepth: 1
 
+   alpine
    archlinux
    archlinuxcn
    blackarch
