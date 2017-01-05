@@ -15,8 +15,6 @@ Rubygems 仓库镜像
 使用说明
 ========
 
-参考： `Gem Source Mirrors @ Bundle Docs <http://bundler.io/v1.5/bundle_config.html#gem-source-mirrors-1>`_
-
 修改 Rubygems 默认源
 --------------------
 
@@ -28,6 +26,8 @@ Rubygems 仓库镜像
 
 针对使用使用 Gemfile 和 Bundle 的项目
 -------------------------------------
+
+参考： `Gem Source Mirrors @ Bundle Docs <http://bundler.io/v1.5/bundle_config.html#gem-source-mirrors-1>`_
 
 ::
 
