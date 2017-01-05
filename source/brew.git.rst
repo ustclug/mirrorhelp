@@ -32,6 +32,7 @@ Homebrew 源代码仓库
 相关镜像
 ========
 - :doc:`homebrew-bottles`
+- :doc:`homebrew-core.git`
 
 相关链接
 ========
