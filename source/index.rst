@@ -15,17 +15,31 @@ USTC Mirror Help
    debian-security
    debian-cd
    debian-multimedia
-   homebrew-bottles
-   infinality-bundle
-   rubygems
-   rust-crates
-   rust-static
    ubuntu
    ubuntu-ports
    ubuntu-old-releases
    ubuntu-releases
    ubuntu-cdimage
    ubuntu-cloud-images
+
+语言镜像
+--------
+
+.. toctree::
+   :maxdepth: 1
+
+   rubygems
+   rust-crates
+   rust-static
+
+软件镜像
+--------
+
+.. toctree::
+   :maxdepth: 1
+
+   homebrew-bottles
+   infinality-bundle
 
 其他
 ----
