@@ -16,6 +16,7 @@ USTC Mirror Help
    debian-multimedia
    homebrew-bottles
    infinality-bundle
+   rubygems
    rust-crates
    rust-static
    ubuntu
