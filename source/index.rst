@@ -14,6 +14,7 @@ USTC Mirror Help
    debian-security
    debian-cd
    debian-multimedia
+   homebrew-bottles
    infinality-bundle
    rust-crates
    rust-static
