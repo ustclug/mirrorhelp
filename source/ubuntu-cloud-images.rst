@@ -22,6 +22,13 @@ AMD64(x86_64), Intel x86, arm64, armhf, PowerPC, ppc64el, s390x
 收录版本
 ========
 
+.. todo:: ubuntu-cloud-images 收录的版本
+
+使用说明
+========
+
+.. todo:: ubuntu-cloud-images 使用的方法
+
 相关链接
 ========
 
