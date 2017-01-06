@@ -14,3 +14,4 @@ deploy:
     on:
         branch: sphinx
         condition: '-n "$RSYNC_PASSWORD"'
+    skip_cleanup: true
