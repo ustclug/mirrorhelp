@@ -8,5 +8,9 @@ install:
 script:
     - make html
 
-after_success:
-    - '[[ "$TRAVIS_PULL_REQUEST" = "false" ]] && rsync -av build/html/ travis@202.141.176.110::help/'
+deploy:
+    provider: script
+    script: rsync -av build/html/ travis@202.141.176.110::help/
+    on:
+        branch: sphinx
+        condition: '-n "$RSYNC_PASSWORD"'
