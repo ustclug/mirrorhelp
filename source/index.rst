@@ -39,6 +39,7 @@ USTC Mirror Help
    :maxdepth: 1
 
    brew.git
+   dockerhub
    homebrew-bottles
    homebrew-core.git
    homebrew-cask.git
