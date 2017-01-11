@@ -12,6 +12,6 @@ deploy:
     provider: script
     script: rsync -av build/html/ travis@202.141.176.110::help/
     on:
-        branch: sphinx
+        branch: master
         condition: '-n "$RSYNC_PASSWORD"'
     skip_cleanup: true
