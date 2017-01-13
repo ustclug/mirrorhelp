@@ -105,7 +105,7 @@ html_context = {
     'display_github': True,
     'github_user': 'ustclug',
     'github_repo': 'mirrorhelp',
-    'github_version': 'sphinx/source/'
+    'github_version': 'master/source/'
 }
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
