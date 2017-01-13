@@ -11,10 +11,19 @@ USTC Mirror Help
    archlinux
    archlinuxcn
    blackarch
+   centos
+   chakra
    debian
    debian-security
    debian-cd
    debian-multimedia
+   fedora
+   gentoo
+   gentoo-portage
+   kali
+   linuxmint
+   opensuse
+   trisquel
    ubuntu
    ubuntu-ports
    ubuntu-old-releases
