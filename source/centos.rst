@@ -209,9 +209,9 @@ x86_64, i386
 相关链接
 ========
 
-:官方主页: http://www.centos.org/
-:邮件列表: http://www.centos.org/modules/tinycontent/index.php?id=16
-:论坛: http://www.centos.org/modules/newbb/
-:文档: http://www.centos.org/docs/
-:Wiki: http://wiki.centos.org/
-:镜像列表: http://www.centos.org/modules/tinycontent/index.php?id=32
+:官方主页: https://www.centos.org/
+:邮件列表: https://www.centos.org/modules/tinycontent/index.php?id=16
+:论坛: https://www.centos.org/modules/newbb/
+:文档: https://www.centos.org/docs/
+:Wiki: https://wiki.centos.org/
+:镜像列表: https://www.centos.org/modules/tinycontent/index.php?id=32
