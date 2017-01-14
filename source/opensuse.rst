@@ -15,8 +15,7 @@ openSUSE 软件源
 收录架构
 ========
 
-* i586
-* x86_64
+i586, x86_64
 
 使用说明
 ========
@@ -66,7 +65,7 @@ openSUSE 软件源
 注意事项
 ========
 
-* 由于使用了MirrorBrain 技术， 中央服务器 (download.opensuse.org) 会按照 IP 地理位置中转下载请求到附近的 镜像服务器（但刷新软件源时仍从中央服务器获取元数据），所以更改软件源通常 只会加快刷新软件源的速度，而对下载速度影响不大。参见 openSUSE 中文论坛。
+* 由于使用了 MirrorBrain 技术， 中央服务器 (download.opensuse.org) 会按照 IP 地理位置中转下载请求到附近的 镜像服务器（但刷新软件源时仍从中央服务器获取元数据），所以更改软件源通常 只会加快刷新软件源的速度，而对下载速度影响不大。参见 openSUSE 中文论坛。
 * 我们不提供 source 和 debug 源。
 * Tumbleweed 滚动发行版软件源的地址与上述例子稍有不同。
 
@@ -75,11 +74,11 @@ openSUSE 软件源
 相关链接
 ========
 
-:官方主页: http://www.opensuse.org/zh-cn/
-:邮件列表: http://en.opensuse.org/Communicate/Mailinglists
-:论坛: http://forums.opensuse.org/
-:中文论坛: http://forum.suse.org.cn/
-:Wiki: http://en.opensuse.org/
-:中文 Wiki: http://zh.opensuse.org/
-:文档: http://en.opensuse.org/Documentation
-:opensuse-guide: http://lug.ustc.edu.cn/sites/opensuse-guide/
+:官方主页: https://www.opensuse.org/
+:邮件列表: https://en.opensuse.org/Communicate/Mailinglists
+:论坛: https://forums.opensuse.org/
+:中文论坛: https://forum.suse.org.cn/
+:Wiki: https://en.opensuse.org/
+:中文 Wiki: https://zh.opensuse.org/
+:文档: https://en.opensuse.org/Documentation
+:opensuse-guide: https://lug.ustc.edu.cn/sites/opensuse-guide/
