@@ -22,7 +22,8 @@ USTC Mirror Help
    gentoo-portage
    kali
    linuxmint
-   opensuse
+   manjaro
+   opensuse
    trisquel
    ubuntu
    ubuntu-ports
