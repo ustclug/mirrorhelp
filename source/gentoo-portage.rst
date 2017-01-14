@@ -20,14 +20,14 @@ ALL
 使用说明
 ========
 
-旧的 SYNC 方式已不推荐使用，建议使用新的 repos.conf
+旧的 SYNC 方式已不推荐使用，建议使用新的 :file:`repos.conf` .
 
 官网wiki：https://wiki.gentoo.org/wiki//etc/portage/repos.conf
 
 单文件方式
 ========
 
-新建或修改 /etc/portage/repos.conf ： 
+新建或修改 :file:`/etc/portage/repos.conf` ： 
 
 ::
 
@@ -43,9 +43,9 @@ ALL
 相关链接
 ========
 
-:官方主页: http://www.gentoo.org/
-:邮件列表: http://www.gentoo.org/main/en/lists.xml
-:论坛: http://forums.gentoo.org/
-:文档: http://www.gentoo.org/doc/en/
-:Wiki: http://wiki.gentoo.org/
-:镜像列表: http://www.gentoo.org/main/en/mirrors-rsync.xml
+:官方主页: https://www.gentoo.org/
+:邮件列表: https://www.gentoo.org/main/en/lists.xml
+:论坛: https://forums.gentoo.org/
+:文档: https://www.gentoo.org/doc/en/
+:Wiki: https://wiki.gentoo.org/
+:镜像列表: https://www.gentoo.org/main/en/mirrors-rsync.xml
