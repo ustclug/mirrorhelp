@@ -59,7 +59,7 @@ x86_64, i386
   gpgcheck=1 
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
   
-将以下保存为 fedora-updates-ustc.repo :
+将以下保存为 :file:`fedora-updates-ustc.repo` :
 
 ::
 
