@@ -5,7 +5,7 @@ CentOS 源使用帮助
 地址
 ====
 
-* https://mirrors.ustc.edu.cn/centos/
+https://mirrors.ustc.edu.cn/centos/
 
 说明
 ====
@@ -26,15 +26,15 @@ x86_64, i386
 ========
 
 
-首先备份CentOS-Base.repo 
+首先备份 :file:`CentOS-Base.repo` 
 
 ::
 
   mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
   
-下载对应版本的CentOS-Base.repo, 放入/etc/yum.repos.d/
+下载对应版本的 :file:`CentOS-Base.repo` , 放入 :file:`/etc/yum.repos.d/`
 
-这是CentOS 5的: 
+这是 CentOS 5 的: 
 
 ::
 
@@ -99,7 +99,7 @@ x86_64, i386
   enabled=0
   gpgkey=http://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-5
 
-这是CentOS 6的: 
+这是 CentOS 6 的: 
 
 ::
 
@@ -156,7 +156,7 @@ x86_64, i386
   enabled=0
   gpgkey=http://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-6
   
-这是CentOS 7的: 
+这是 CentOS 7 的: 
 
 ::
 
@@ -204,7 +204,7 @@ x86_64, i386
   enabled=0
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
   
-运行yum makecache生成缓存.
+运行 ``sudo yum makecache`` 生成缓存.
 
 相关链接
 ========
