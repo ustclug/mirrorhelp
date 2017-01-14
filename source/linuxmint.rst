@@ -45,7 +45,7 @@ i386，amd64
 使用方法
 ====
 
-打开 Software Manager ，点击 Edit⇒Software Sources ；
+打开 Software Manager ，点击 Edit ⇒ Software Sources ；
 
 在 Download from 中选择 Other ；
 
