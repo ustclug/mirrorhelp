@@ -20,15 +20,15 @@ x86_64
 使用说明
 ========
 
-编辑 /etc/pacman.d/mirrorlist，先注释掉里面的所有行，然后在文件的最顶端添加 
+编辑 :file:`/etc/pacman.d/mirrorlist` ，先注释掉里面的所有行，然后在文件的最顶端添加 
 
 ::
 
-    Server = http://mirrors.ustc.edu.cn/chakra/$repo/$arch
+    Server = https://mirrors.ustc.edu.cn/chakra/$repo/$arch
 
 相关链接
 ========
 
-:官方主页: http://chakraos.org/home/
-:论坛: http://chakraos.org/forum/
-:Wiki: http://chakraos.org/wiki/
+:官方主页: https://chakralinux.org/home/
+:论坛: https://chakralinux.org/forum/
+:Wiki: https://chakralinux.org/wiki/
