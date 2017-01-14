@@ -10,12 +10,12 @@ https://mirrors.ustc.edu.cn/homebrew-cask.git/
 说明
 ====
 
-Homebrew cask软件仓库，提供macOS应用和大型二进制文件
+Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件
 
 使用说明
 ========
 
-替换为USTC镜像：
+替换为 USTC 镜像：
 
 ::
 
