@@ -45,15 +45,15 @@ i386，amd64
 使用方法
 ====
 
-打开Software Manager，点击Edit⇒Software Sources；
+打开 Software Manager ，点击 Edit⇒Software Sources ；
 
-在Download from中选择Other；
+在 Download from 中选择 Other ；
 
-选择China⇒mirrors.ustc.edu.cn；
+选择 China ⇒ mirrors.ustc.edu.cn ；
 
-点击Choose Server；
+点击 Choose Server ；
 
 相关链接
 ========
 
-:官方主页: http://www.linuxmint.com/
+:官方主页: https://www.linuxmint.com/
