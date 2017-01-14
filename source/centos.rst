@@ -53,7 +53,7 @@ x86_64, i386
   [base]
   name=CentOS-$releasever - Base - mirrors.ustc.edu.cn
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/os/$basearch/
-  #mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
+  #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
   gpgcheck=1
   gpgkey=https://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-5
 
@@ -61,7 +61,7 @@ x86_64, i386
   [updates]
   name=CentOS-$releasever - Updates - mirrors.ustc.edu.cn
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/updates/$basearch/
-  #mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=updates
+  #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=updates
   gpgcheck=
   gpgkey=https://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-5
 
@@ -69,7 +69,7 @@ x86_64, i386
   [extras]
   name=CentOS-$releasever - Extras - mirrors.ustc.edu.cn
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/extras/$basearch/
-  #mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras
+  #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras
   gpgcheck=1
   gpgkey=https://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-5
 
@@ -77,7 +77,7 @@ x86_64, i386
   [addons]
   name=CentOS-$releasever - Addons - mirrors.ustc.edu.cn
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/addons/$basearch/
-  #mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=addons
+  #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=addons
   gpgcheck=1
   gpgkey=https://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-5
 
@@ -85,7 +85,7 @@ x86_64, i386
   [centosplus]
   name=CentOS-$releasever - Plus - mirrors.ustc.edu.cn
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/centosplus/$basearch/
-  #mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus
+  #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus
   gpgcheck=1
   enabled=0
   gpgkey=https://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-5
@@ -94,7 +94,7 @@ x86_64, i386
   [contrib]
   name=CentOS-$releasever - Contrib - mirrors.ustc.edu.cn
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/contrib/$basearch/
-  #mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=contrib
+  #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=contrib
   gpgcheck=1
   enabled=0
   gpgkey=https://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-5
@@ -118,7 +118,7 @@ x86_64, i386
   [base]
   name=CentOS-$releasever - Base - mirrors.ustc.edu.cn
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/os/$basearch/
-  #mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
+  #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
   gpgcheck=1
   gpgkey=https://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-6
 
@@ -126,7 +126,7 @@ x86_64, i386
   [updates]
   name=CentOS-$releasever - Updates - mirrors.ustc.edu.cn
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/updates/$basearch/
-  #mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=updates
+  #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=updates
   gpgcheck=1
   gpgkey=https://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-6
 
@@ -134,7 +134,7 @@ x86_64, i386
   [extras]
   name=CentOS-$releasever - Extras - mirrors.ustc.edu.cn
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/extras/$basearch/
-  #mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras
+  #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras
   gpgcheck=1
   gpgkey=https://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-6
 
@@ -142,7 +142,7 @@ x86_64, i386
   [centosplus]
   name=CentOS-$releasever - Plus - mirrors.ustc.edu.cn
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/centosplus/$basearch/
-  #mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus
+  #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus
   gpgcheck=1
   enabled=0
   gpgkey=https://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-6
@@ -151,7 +151,7 @@ x86_64, i386
   [contrib]
   name=CentOS-$releasever - Contrib - mirrors.ustc.edu.cn
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/contrib/$basearch/
-  #mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=contrib
+  #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=contrib
   gpgcheck=1
   enabled=0
   gpgkey=https://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-6
@@ -174,7 +174,7 @@ x86_64, i386
 
   [base]
   name=CentOS-$releasever - Base
-  #mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
+  #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/os/$basearch/
   gpgcheck=1
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
@@ -182,7 +182,7 @@ x86_64, i386
   #released updates
   [updates]
   name=CentOS-$releasever - Updates
-  # mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=updates
+  # mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=updates
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/updates/$basearch/
   gpgcheck=1
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
@@ -190,7 +190,7 @@ x86_64, i386
   #additional packages that may be useful
   [extras]
   name=CentOS-$releasever - Extras
-  # mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras
+  # mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/extras/$basearch/
   gpgcheck=1
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
@@ -198,7 +198,7 @@ x86_64, i386
   #additional packages that extend functionality of existing packages
   [centosplus]
   name=CentOS-$releasever - Plus
-  # mirrorlist=https://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus
+  # mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/centosplus/$basearch/
   gpgcheck=1
   enabled=0
