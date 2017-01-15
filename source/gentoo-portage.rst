@@ -20,13 +20,6 @@ ALL
 使用说明
 ========
 
-旧的 SYNC 方式已不推荐使用，建议使用新的 :file:`repos.conf` .
-
-官网wiki：https://wiki.gentoo.org/wiki//etc/portage/repos.conf
-
-单文件方式
-========
-
 新建或修改 :file:`/etc/portage/repos.conf` ： 
 
 ::
