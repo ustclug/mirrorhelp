@@ -20,18 +20,19 @@ i586, x86_64
 使用说明
 ========
 
-(1) 手动配置软件源
+手动配置软件源
+-------------
 
-（以下配置方法适用于从未自行配置软件源的用户。其他用户请根据具体情况自行配置 ，以下仅供参考。）
-终端下配置方法
+.. warning::
+以下配置方法适用于从未自行配置软件源的用户，其他用户请根据具体情况自行配置 ，以下仅供参考。
 
-禁用原有软件源
+禁用原有软件源；
 
 ::
 
   sudo zypper mr -da
 
-添加科大镜像源（以 openSUSE Leap 42.2 为例）
+添加科大镜像源，以 openSUSE Leap 42.2 为例；
 
 ::
 
@@ -50,17 +51,13 @@ i586, x86_64
 
 (2)图形界面下配置方法
 
-（以 openSUSE 13.2 为例）
+以 openSUSE 13.2 为例：
 
-打开 YaST
-
-点击 Software 分组中的 Software Repositories
-
-在打开的窗口上方的列表中点击 openSUSE-13.2-Oss ，点击 Edit
-
-将 download.opensuse.org 替换为 mirrors.ustc.edu.cn/opensuse，点OK
-
-再用同样的方法编辑 openSUSE-13.2-Non-Oss 和 openSUSE-13.2-Update
+#. 打开 YaST；
+#. 点击 Software 分组中的 Software Repositories；
+#. 在打开的窗口上方的列表中点击 openSUSE-13.2-Oss ，点击 Edit；
+#. 将 download.opensuse.org 替换为 mirrors.ustc.edu.cn/opensuse，点OK；
+#. 再用同样的方法编辑 openSUSE-13.2-Non-Oss 和 openSUSE-13.2-Update。
 
 注意事项
 ========
@@ -68,8 +65,6 @@ i586, x86_64
 * 由于使用了 MirrorBrain 技术， 中央服务器 (download.opensuse.org) 会按照 IP 地理位置中转下载请求到附近的 镜像服务器（但刷新软件源时仍从中央服务器获取元数据），所以更改软件源通常 只会加快刷新软件源的速度，而对下载速度影响不大。参见 openSUSE 中文论坛。
 * 我们不提供 source 和 debug 源。
 * Tumbleweed 滚动发行版软件源的地址与上述例子稍有不同。
-
-
 
 相关链接
 ========
@@ -81,4 +76,4 @@ i586, x86_64
 :Wiki: https://en.opensuse.org/
 :中文 Wiki: https://zh.opensuse.org/
 :文档: https://en.opensuse.org/Documentation
-:opensuse-guide: https://lug.ustc.edu.cn/sites/opensuse-guide/
+:openSUSE Guide: https://lug.ustc.edu.cn/sites/opensuse-guide/
