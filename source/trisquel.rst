@@ -17,7 +17,6 @@ Trisquel GNU/Linux 软件源.
 
 Trisquel 支持的所有架构.
 
-
 收录版本
 ========
 
@@ -34,7 +33,6 @@ Trisquel 支持的所有架构.
 
 使用说明
 ========
-
 
 .. warning::
     操作前请做好相应备份.
@@ -53,7 +51,6 @@ Trisquel 使用 APT 软件包管理系统，故其软件源使用方法与 Ubunt
   deb-src https://mirrors.ustc.edu.cn/trisquel/ flidas-updates main
   deb https://mirrors.ustc.edu.cn/trisquel/ flidas-backports main
   deb-src https://mirrors.ustc.edu.cn/trisquel/ flidas-backports main
-
 
 相关链接
 ========
