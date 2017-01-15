@@ -31,4 +31,3 @@ amd64, armel, armhf, i386
 ========
 
 :Kali Linux 主页: https://www.kali.org/
-
