@@ -12,6 +12,7 @@ USTC Mirror Help
    archlinuxcn
    blackarch
    centos
+   epel
    chakra
    debian
    debian-security
@@ -54,6 +55,7 @@ USTC Mirror Help
    homebrew-core.git
    homebrew-cask.git
    infinality-bundle
+   mariadb
 
 其他
 ----
