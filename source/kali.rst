@@ -13,7 +13,7 @@ https://mirrors.ustc.edu.cn/kali/
 Kali Linux 软件源
 
 支持的系统架构
-====
+==============
 
 amd64, armel, armhf, i386
 

@@ -1,6 +1,6 @@
-========================
+=========================
 Gentoo Portage 源使用帮助
-========================
+=========================
 
 地址
 ====
@@ -13,14 +13,14 @@ https://mirrors.ustc.edu.cn/gentoo-portage/
 Gentoo Portage 软件源
 
 收录架构
-====
+========
 
 ALL
 
 使用说明
 ========
 
-新建或修改 :file:`/etc/portage/repos.conf` ： 
+新建或修改 :file:`/etc/portage/repos.conf` ：
 
 ::
 
