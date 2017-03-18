@@ -23,6 +23,7 @@ USTC Mirror Help
    gentoo-portage
    kali
    linuxmint
+   mageia
    manjaro
    opensuse
    trisquel
