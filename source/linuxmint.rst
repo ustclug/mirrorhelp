@@ -13,7 +13,7 @@ https://mirrors.ustc.edu.cn/linuxmint/
 Linux Mint 软件源
 
 收录架构
-====
+========
 
 i386，amd64
 
@@ -43,7 +43,7 @@ i386，amd64
 * betsy (LMDE 2)
 
 使用方法
-====
+========
 
 #. 打开 Software Manager ，点击 Edit ⇒ Software Sources ；
 #. 在 Download from 中选择 Other ；

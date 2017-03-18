@@ -13,14 +13,14 @@ https://mirrors.ustc.edu.cn/gentoo/
 Gentoo 软件源
 
 收录架构
-====
+========
 
 ALL
 
 使用说明
 ========
 
-在 :file:`/etc/portage/make.conf` 中添加或修改： 
+在 :file:`/etc/portage/make.conf` 中添加或修改：
 
 ::
 
