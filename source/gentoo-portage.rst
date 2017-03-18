@@ -1,5 +1,5 @@
 ========================
-Gentoo-Portage 源使用帮助
+Gentoo Portage 源使用帮助
 ========================
 
 地址
@@ -10,7 +10,7 @@ https://mirrors.ustc.edu.cn/gentoo-portage/
 说明
 ====
 
-Gentoo-Portage 软件源
+Gentoo Portage 软件源
 
 收录架构
 ====
