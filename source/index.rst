@@ -55,7 +55,6 @@ USTC Mirror Help
    homebrew-bottles
    homebrew-core.git
    homebrew-cask.git
-   infinality-bundle
    mariadb
 
 其他
