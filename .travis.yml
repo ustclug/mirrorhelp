@@ -8,9 +8,14 @@ install:
 script:
     - make SPHINXOPTS=-W html
 
+after_success:
+    - if [[ $TRAVIS_PULL_REQUEST != 'false' ]]; then
+      rsync -av build/html/ travis@202.141.176.110::help/preview/;
+      fi
+
 deploy:
     provider: script
-    script: rsync -av build/html/ travis@202.141.176.110::help/
+    script: rsync -av --filter=P_preview/ build/html/ travis@202.141.176.110::help/
     on:
         branch: master
         condition: '-n "$RSYNC_PASSWORD"'
