@@ -8,14 +8,9 @@ install:
 script:
     - make html
 
-after_success:
-    - if [[ $TRAVIS_PULL_REQUEST != 'false' ]]; then
-      rsync -av --del build/html/ travis@202.141.176.110::help/preview/;
-      fi
-
 deploy:
     provider: script
-    script: rsync -av --del --filter=P_preview/ build/html/ travis@202.141.176.110::help/
+    script: rsync -av --del build/html/ travis@202.141.176.110::help/
     on:
         branch: master
         condition: '-n "$RSYNC_PASSWORD"'
