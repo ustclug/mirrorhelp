@@ -62,4 +62,10 @@ USTC Mirror Help
 
 .. toctree::
 
-    todo
+   todo
+
+贡献者
+
+.. toctree::
+
+   contributor
