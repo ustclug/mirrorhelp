@@ -1,45 +1,47 @@
 =====================
-Docker Hub 源使用帮助
+Docker CE 源使用帮助
 =====================
 
 地址
 ====
 
-https://mirrors.ustc.edu.cn/dockerhub/
+https://mirrors.ustc.edu.cn/docke-ce/
 
 说明
 ====
 
-Docker Hub 镜像缓存
+Docker CE 仓库镜像
 
 使用说明
 ========
 
-Linux
+Ubuntu
 -----
 
-在配置文件 ``/etc/docker/daemon.json`` 中加入：
+添加镜像仓库
+
+:: 
+    sudo apt-get -y install \
+    apt-transport-https \
+    ca-certificates \
+    curl
+
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+    sudo add-apt-repository \
+       "deb [arch=amd64] http://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu \
+       $(lsb_release -cs) \
+       stable"
+      
+安装Docker-CE
 
 ::
-
-    {
-      "registry-mirrors": ["https://mirrors.ustc.edu.cn/dockerhub/"]
-    }
-
-重新启动dockerd：
-
-::
-
-  sudo service docker restart
+    sudo apt-get -y install docker-ce
 
 macOS
 -----
 
-1. 打开 "Docker.app"
-2. 进入偏好设置页面(快捷键 ``⌘,`` )
-3. 打开 "Advanced" 选项卡
-4. 在 "Registry mirrors" 中添加 ``https://mirrors.ustc.edu.cn/dockerhub/``
-5. 点击下方的 "Restart" 按钮
+.. todo: macOS平台的使用方法
 
 Windows
 -------
