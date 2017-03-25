@@ -12,12 +12,8 @@ https://mirrors.ustc.edu.cn/docke-ce/
 
 Docker CE 仓库镜像
 
-使用说明
-========
-
-
-Ubuntu
------
+Ubuntu 使用说明
+==============
 
 添加镜像仓库
 
@@ -39,13 +35,10 @@ Ubuntu
 ::
     sudo apt-get -y install docker-ce
 
-macOS
------
+TODO 
+=====
 
 .. todo: macOS平台的使用方法
-
-Windows
--------
 
 .. todo: windows平台的使用方法
 
