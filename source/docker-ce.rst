@@ -46,7 +46,7 @@ macOS
 Windows
 -------
 
-.. todo:: windows平台的使用方法
+.. todo: windows平台的使用方法
 
 相关链接
 ========
