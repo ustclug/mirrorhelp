@@ -18,6 +18,7 @@ USTC Mirror Help
    debian-security
    debian-cd
    debian-multimedia
+   docker-ce
    fedora
    gentoo
    gentoo-portage
