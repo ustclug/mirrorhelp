@@ -17,13 +17,11 @@ Homebrew 预编译二进制软件包
 
 * homebrew/homebrew-core
 * homebrew/homebrew-dupes
-* homebrew/homebrew-games
-* homebrew/homebrew-gui
-* homebrew/homebrew-python
 * homebrew/homebrew-php
 * homebrew/homebrew-science
-* homebrew/homebrew-versions
-* homebrew/homebrew-x11
+* homebrew/homebrew-nginx
+* homebrew/homebrew-apache
+* homebrew/homebrew-portable
 
 使用说明
 ========
