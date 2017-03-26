@@ -30,7 +30,8 @@
 
 ## Credit
 
-For those improved the documnets, the Github username will be mentioned in the document.
+For those improved the documnets, the Github username will be mentioned in the
+[document](http://mirrors.ustc.edu.cn/help/contributor.html).
 
 
 # 如何贡献
@@ -63,4 +64,4 @@ For those improved the documnets, the Github username will be mentioned in the d
 
 ## 署名
 
-参与任何形式的贡献，相关的 Github 用户名会在文档中提交。
+参与任何形式的贡献，相关的 Github 用户名会在[文档](http://mirrors.ustc.edu.cn/help/contributor.html)中提及。
