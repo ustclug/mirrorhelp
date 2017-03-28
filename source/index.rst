@@ -8,6 +8,7 @@ USTC Mirror Help
    :maxdepth: 1
 
    alpine
+   aosc
    archlinux
    archlinuxcn
    blackarch
