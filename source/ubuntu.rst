@@ -60,7 +60,7 @@ AMD64 (x86_64), Intel x86
 
     # 默认注释了源码仓库，如有需要可自行取消注释
     deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main main restricted universe multiverse
+    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
     deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
     # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
     deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
