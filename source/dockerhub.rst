@@ -5,7 +5,7 @@ Docker Hub 源使用帮助
 地址
 ====
 
-http://docker.mirrors.ustc.edu.cn/
+https://docker.mirrors.ustc.edu.cn/
 
 说明
 ====
@@ -23,7 +23,7 @@ Linux
 ::
 
     {
-      "registry-mirrors": ["http://docker.mirrors.ustc.edu.cn/"]
+      "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn/"]
     }
 
 重新启动dockerd：
@@ -38,7 +38,7 @@ macOS
 1. 打开 "Docker.app"
 2. 进入偏好设置页面(快捷键 ``⌘,`` )
 3. 打开 "Advanced" 选项卡
-4. 在 "Registry mirrors" 中添加 ``http://docker.mirrors.ustc.edu.cn/``
+4. 在 "Registry mirrors" 中添加 ``https://docker.mirrors.ustc.edu.cn/``
 5. 点击下方的 "Restart" 按钮
 
 Windows
