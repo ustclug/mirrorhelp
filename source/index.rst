@@ -15,10 +15,10 @@ USTC Mirror Help
    centos
    epel
    chakra
+   deb-multimedia
    debian
    debian-security
    debian-cd
-   debian-multimedia
    fedora
    gentoo
    gentoo-portage

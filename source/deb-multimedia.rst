@@ -1,11 +1,11 @@
 ============================
-Debian Multimedia 源使用帮助
+Deb Multimedia 源使用帮助
 ============================
 
 地址
 ====
 
-https://mirrors.ustc.edu.cn/debian-multimedia/
+https://mirrors.ustc.edu.cn/deb-multimedia/
 
 说明
 ====
@@ -15,31 +15,29 @@ Debian 第三方多媒体软件源
 收录架构
 ========
 
-Debian Multimedia 支持的所有架构，如 AMD64 (x86_64), Intel x86, ARM, MIPS 等
+Deb Multimedia 支持的所有架构，包括 AMD64 (x86_64), Intel x86, ARM, MIPS 等
 
 
 收录版本
 ========
 
-Debian Old Stable, Stable, Testing, Unstable(sid)
-
-当前 Stable 为 Debian 8，代号为 Jessie
+Debian Oldstable, Stable, Testing, Unstable
 
 使用说明
 ========
 
 .. important::
-    该 Debian Multimedia 不是官方 Debian 项目，是为 deb-multimedia.org 的镜像，两者区别
+    该 Deb Multimedia 不是官方 Debian 项目，是为 deb-multimedia.org 的镜像，两者区别
     见 https://wiki.debian.org/DebianMultimedia/FAQ
 
 以 Jessie 为例，在 :file:`/etc/apt/sources.list` 中加入
 
 ::
 
-    deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free
-    deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main
-    # deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main
+    deb http://mirrors.ustc.edu.cn/deb-multimedia/ jessie main non-free
+    # deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ jessie main non-free
+    deb http://mirrors.ustc.edu.cn/deb-multimedia/ jessie-backports main
+    # deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ jessie-backports main
 
 更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
 
