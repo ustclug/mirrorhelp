@@ -10,7 +10,7 @@
 
 * Send a pull request
 
-  This way is for those who are familar with
+  This way is for those who are familiar with
   [Git workflow](https://guides.github.com/introduction/flow/) and the
   [reStructureText](http://www.sphinx-doc.org/en/stable/rest.html).
   A PR needs to be reviewed by at least one person before merging.
