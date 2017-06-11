@@ -42,8 +42,12 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
     # deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main
 
 更改完 :file:`sources.list` 文件后请导入deb-multimedia-keyring
+
+::
+
     wget https://mirrors.ustc.edu.cn/deb-multimedia/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
     sudo dpkg -i deb-multimedia-keyring_2016.8.1_all.deb
+    
 然后请运行 ``sudo apt-get update`` 更新索引以生效。
 
 .. tip::
