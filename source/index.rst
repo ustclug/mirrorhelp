@@ -18,7 +18,7 @@ USTC Mirror Help
    debian
    debian-security
    debian-cd
-   debian-multimedia
+   deb-multimedia
    fedora
    gentoo
    gentoo-portage
