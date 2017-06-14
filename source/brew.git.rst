@@ -39,4 +39,4 @@ Homebrew 源代码仓库
 ========
 
 :官方主页: http://brew.sh/
-:brew 帮助手册: http://docs.brew.sh/brew.1.html
+:brew 文档: http://docs.brew.sh/
