@@ -51,5 +51,4 @@ Homebrew 预编译二进制软件包
 ========
 
 :官方主页: http://brew.sh/
-:brew 帮助手册: http://docs.brew.sh/brew.1.html
 :Bottles 介绍: http://docs.brew.sh/Bottles.html
