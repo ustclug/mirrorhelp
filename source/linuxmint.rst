@@ -52,7 +52,6 @@ i386，amd64
 	deb https://mirrors.ustc.edu.cn/debian jessie-backports main contrib non-free
 	deb https://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib
 	deb https://mirrors.ustc.edu.cn/deb-multimedia/ jessie main non-free
-
  
 然后运行 ``sudo apt-get update`` 更新索引以生效。 
 
