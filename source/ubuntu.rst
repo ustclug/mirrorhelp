@@ -45,14 +45,13 @@ AMD64 (x86_64), Intel x86
 .. warning::
     操作前请做好相应备份
 
-一般情况下，将 :file:`/etc/apt/sources.list` 文件中 Ubuntu 默认的源地址 ``http://archive.ubuntu.com/``
-替换为 ``http://mirrors.ustc.edu.cn`` 即可。
+假设你在安装时已经将语言设定为中文，一般情况下，将 :file:`/etc/apt/sources.list` 文件中 Ubuntu 默认的源地址 ``http://cn.archive.ubuntu.com/`` 替换为 ``http://mirrors.ustc.edu.cn`` 即可。
 
 可以使用如下命令：
 
 ::
 
-  sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+  sudo sed -i 's/cn.archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 
 当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Ubuntu 16.04 参考配置内容：
 
