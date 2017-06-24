@@ -19,6 +19,7 @@ PyPI(pip) 软件源.
 编辑 ~/.pip/pip.conf 文件（如果没有则创建之），将 index-url 开头的一行修改为下面一行：
 
 ::
+
     index-url = https://mirrors.ustc.edu.cn/pypi/web/simple
   
 如果运行 pip 时, 提示如下错误:
@@ -31,6 +32,7 @@ PyPI(pip) 软件源.
 如：
 
 ::
+
     [global]
     index-url = https://mirrors.ustc.edu.cn/pypi/web/simple
     format = columns
