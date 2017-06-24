@@ -44,6 +44,7 @@ USTC Mirror Help
    rubygems
    rust-crates
    rust-static
+   PyPI
 
 软件镜像
 --------
