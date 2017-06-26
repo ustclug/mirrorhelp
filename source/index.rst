@@ -40,7 +40,8 @@ USTC Mirror Help
 
 .. toctree::
    :maxdepth: 1
-
+   
+   pypi
    rubygems
    rust-crates
    rust-static
