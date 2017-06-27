@@ -52,6 +52,8 @@ USTC Mirror Help
 .. toctree::
    :maxdepth: 1
 
+
+   anaconda
    brew.git
    dockerhub
    homebrew-bottles
