@@ -30,7 +30,7 @@ Docker CE 官方支持的 Linux 发行版, 具体请查看 `官方文档 <https:
 使用说明
 =========
 
-配置说明请阅读 `官方文档 <https://docs.docker.com/get-started/>`_ ，配置时修改对应地址。以 Ubuntu 为例： ``https://mirrors.ustc.edu.cn/docke-ce/linux/ubuntu `` 
+配置说明请阅读 `官方文档 <https://docs.docker.com/get-started/>`_ ，配置时修改对应地址。以 Ubuntu 为例： ``https://mirrors.ustc.edu.cn/docke-ce/linux/ubuntu`` 
 
 相关链接
 ========
