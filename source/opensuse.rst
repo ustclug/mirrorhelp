@@ -32,14 +32,14 @@ i586, x86_64
 
   sudo zypper mr -da
 
-添加科大镜像源，以 openSUSE Leap 42.2 为例；
+添加科大镜像源，以 openSUSE Leap 42.3 为例；
 
 ::
 
-  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.2/repo/oss USTC:42.2:OSS
-  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.2/repo/non-oss USTC:42.2:NON-OSS
-  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.2/oss USTC:42.2:UPDATE-OSS
-  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.2/non-oss USTC:42.2:UPDATE-NON-OSS
+  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.3/repo/oss USTC:42.3:OSS
+  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.3/repo/non-oss USTC:42.3:NON-OSS
+  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.3/oss USTC:42.3:UPDATE-OSS
+  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.3/non-oss USTC:42.3:UPDATE-NON-OSS
 
 命令中最后一个参数为每一个源指定了一个 alias （别称），可以根据个人喜好更改。
 
@@ -52,13 +52,13 @@ i586, x86_64
 图形界面下配置方法
 -------------------
 
-以 openSUSE 13.2 为例：
+以 openSUSE Leap 42.3 为例：
 
 #. 打开 YaST；
 #. 点击 Software 分组中的 Software Repositories；
-#. 在打开的窗口上方的列表中点击 openSUSE-13.2-Oss ，点击 Edit；
+#. 在打开的窗口上方的列表中点击 openSUSE-Leap-42.3-Oss ，点击 Edit；
 #. 将 download.opensuse.org 替换为 mirrors.ustc.edu.cn/opensuse，点OK；
-#. 再用同样的方法编辑 openSUSE-13.2-Non-Oss 和 openSUSE-13.2-Update。
+#. 再用同样的方法编辑 openSUSE-Leap-42.3-Oss 和 openSUSE-Leap-42.3-Oss。
 
 注意事项
 ========
