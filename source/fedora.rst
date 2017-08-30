@@ -10,7 +10,7 @@ https://mirrors.ustc.edu.cn/fedora/
 说明
 ====
 
-Fedora 软件源.
+Fedora 软件源
 
 收录架构
 ========
@@ -20,12 +20,12 @@ x86_64, i386
 收录版本
 ========
 
-所有仍在支持的版本和最新测试版本.
+所有仍在支持的版本和最新测试版本
 
 使用说明
 ========
 
-将以下保存为 :file:`fedora-ustc.repo` :
+将以下保存为 :file:`fedora-ustc.repo` ：
 
 ::
 
@@ -59,7 +59,7 @@ x86_64, i386
   gpgcheck=1 
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
   
-将以下保存为 :file:`fedora-updates-ustc.repo` :
+将以下保存为 :file:`fedora-updates-ustc.repo` ：
 
 ::
 
@@ -92,13 +92,9 @@ x86_64, i386
   
 先备份 :file:`/etc/yum.repos.d/fedora.repo` 和 :file:`/etc/yum.repos.d/fedora-updates.repo`
 
-将 :file:`fedora-ustc.repo` 和 :file:`fedora-updates-ustc.repo` 放入 :file:`/etc/yum.repos.d/` 中.
+将 :file:`fedora-ustc.repo` 和 :file:`fedora-updates-ustc.repo` 放入 :file:`/etc/yum.repos.d/` 中。
 
-运行：
-
-::
-
-  sudo dnf makecache 
+运行 ``sudo dnf makecache`` 生成缓存。
 
 相关链接
 ========
