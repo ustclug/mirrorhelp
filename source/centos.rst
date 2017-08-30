@@ -33,7 +33,7 @@ x86_64, i386
   
 下载对应版本的 :file:`CentOS-Base.repo` , 放入 :file:`/etc/yum.repos.d/`
 
-这是 CentOS 5 的: 
+这是 CentOS 5 的： 
 
 ::
 
@@ -98,7 +98,7 @@ x86_64, i386
   enabled=0
   gpgkey=https://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-5
 
-这是 CentOS 6 的: 
+这是 CentOS 6 的： 
 
 ::
 
@@ -155,7 +155,7 @@ x86_64, i386
   enabled=0
   gpgkey=https://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-6
   
-这是 CentOS 7 的: 
+这是 CentOS 7 的： 
 
 ::
 
@@ -203,7 +203,7 @@ x86_64, i386
   enabled=0
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
   
-运行 ``sudo yum makecache`` 生成缓存.
+运行 ``sudo yum makecache`` 生成缓存。
 
 相关链接
 ========
