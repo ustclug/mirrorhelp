@@ -20,16 +20,7 @@ Trisquel 支持的所有架构.
 收录版本
 ========
 
-* Flidas (8.0)
-* Belenos (7.0)
-* Toutatis (6.0)
-* Brigantia (5.5)
-* Dagda (5.0)
-* Slaine (4.5)
-* Taranis (4.0)
-* Awen (3.5)
-* Dwyn (3.0)
-* Robur (2.0) 
+所有 Trisquel 当前支持的版本
 
 使用说明
 ========
