@@ -20,6 +20,7 @@ USTC Mirror Help
    debian-cd
    deb-multimedia
    fedora
+   rpmfusion
    gentoo
    gentoo-portage
    kali
