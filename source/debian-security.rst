@@ -6,7 +6,7 @@ Debian Security 源使用帮助
 ====
 
 * https://mirrors.ustc.edu.cn/debian-security/
-* https://ftp.cn.debian.org/debian-security/
+* http://ftp.cn.debian.org/debian-security/ (这个域名没有 HTTPS，请不要使用）
 
 说明
 ====
