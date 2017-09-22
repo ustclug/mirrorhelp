@@ -5,7 +5,7 @@ Docker CE 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/docke-ce/
+https://mirrors.ustc.edu.cn/docker-ce/
 
 说明
 ====
@@ -30,7 +30,7 @@ Docker CE 官方支持的 Linux 发行版, 具体请查看 `官方文档 <https:
 使用说明
 =========
 
-配置说明请阅读 `官方文档 <https://docs.docker.com/get-started/>`__ ，配置时修改对应地址。以 Ubuntu 为例： ``https://mirrors.ustc.edu.cn/docke-ce/linux/ubuntu`` 
+配置说明请阅读 `官方文档 <https://docs.docker.com/get-started/>`__ ，配置时修改对应地址。以 Ubuntu 为例： ``https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu`` 
 
 相关链接
 ========
