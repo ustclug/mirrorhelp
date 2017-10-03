@@ -37,7 +37,7 @@ x86_64, i386
   enabled=1 
   metadata_expire=7d 
   gpgcheck=1 
-  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
   [fedora-debuginfo] 
   name=Fedora $releasever - $basearch - Debug - ustc
@@ -47,7 +47,7 @@ x86_64, i386
   enabled=0 
   metadata_expire=7d 
   gpgcheck=1
-  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
   [fedora-source] 
   name=Fedora $releasever - Source - ustc
@@ -57,7 +57,7 @@ x86_64, i386
   enabled=0 
   metadata_expire=7d 
   gpgcheck=1 
-  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
   
 将以下保存为 :file:`fedora-updates-ustc.repo` ：
 
@@ -70,7 +70,7 @@ x86_64, i386
   #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch 
   enabled=1 
   gpgcheck=1 
-  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
   [updates-debuginfo] 
   name=Fedora $releasever - $basearch - Updates - Debug -ustc
@@ -79,7 +79,7 @@ x86_64, i386
   #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f$releasever&arch=$basearch 
   enabled=0 
   gpgcheck=1 
-  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
   [updates-source] 
   name=Fedora $releasever - Updates Source - ustc
@@ -88,7 +88,7 @@ x86_64, i386
   #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&arch=$basearch 
   enabled=0 
   gpgcheck=1 
-  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch 
   
 先备份 :file:`/etc/yum.repos.d/fedora.repo` 和 :file:`/etc/yum.repos.d/fedora-updates.repo`
 
