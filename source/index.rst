@@ -18,6 +18,7 @@ USTC Mirror Help
    debian
    debian-security
    debian-cd
+   debiancn
    deb-multimedia
    fedora
    rpmfusion
