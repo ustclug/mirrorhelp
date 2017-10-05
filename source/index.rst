@@ -43,7 +43,6 @@ USTC Mirror Help
 .. toctree::
    :maxdepth: 1
    
-   hackage
    pypi
    rubygems
    rust-crates
