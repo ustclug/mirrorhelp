@@ -20,8 +20,8 @@ stack使用说明
 ::
     package-indices:
       - name: USTC
-        download-prefix: http://mirrors.ustc.edu.cn/hackage/package/
-        http: http://mirrors.ustc.edu.cn/hackage/00-index.tar.gz
+        download-prefix: https://mirrors.ustc.edu.cn/hackage/package/
+        http: https://mirrors.ustc.edu.cn/hackage/00-index.tar.gz
 
 
 
