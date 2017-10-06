@@ -18,6 +18,7 @@ USTC Mirror Help
    debian
    debian-security
    debian-cd
+   debiancn
    deb-multimedia
    fedora
    rpmfusion
@@ -42,6 +43,7 @@ USTC Mirror Help
 .. toctree::
    :maxdepth: 1
    
+   hackage
    pypi
    rubygems
    rust-crates
