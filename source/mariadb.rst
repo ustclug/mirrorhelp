@@ -33,7 +33,7 @@ Fedora, CentOS, Red Hat
   # 建议使用 HTTPS
   sudo sed -i 's#http://mirrors\.ustc\.edu\.cn#https://mirrors.ustc.edu.cn#g' /etc/yum.repos.d/mariadb
 
-若安装时遇到错误 “Failed to connect to 2001:da8:d800:95::110: Network is unreachable”，将源地址中的 ``mirrors.ustc.edu.cn`` 替换为 ``ipv4.mirrors.edu.cn`` 以强制使用 IPv4：
+若安装时遇到错误 “Failed to connect to 2001:da8:d800:95::110: Network is unreachable”，将源地址中的 ``mirrors.ustc.edu.cn`` 替换为 ``ipv4.mirrors.ustc.edu.cn`` 以强制使用 IPv4：
 
 ::
 
