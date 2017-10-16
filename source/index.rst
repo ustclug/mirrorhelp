@@ -48,6 +48,7 @@ USTC Mirror Help
    rubygems
    rust-crates
    rust-static
+   stackage
 
 软件镜像
 --------
