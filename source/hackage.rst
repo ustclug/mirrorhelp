@@ -15,7 +15,7 @@ Hackage 镜像
 stack使用说明
 =============
 
-编辑~/.stack/config.yaml, 增加下列参数
+编辑 ``~/.stack/config.yaml``, 增加下列参数
 
 ::
 
