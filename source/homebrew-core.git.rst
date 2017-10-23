@@ -27,7 +27,7 @@ Homebrew 核心软件仓库
 ::
 
     cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
-    git remote set-url origin https://github.com/Homebrew/homebrew-core.git
+    git remote set-url origin https://github.com/Homebrew/homebrew-core
 
 相关镜像
 ========
