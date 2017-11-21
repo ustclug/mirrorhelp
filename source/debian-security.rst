@@ -5,7 +5,7 @@ Debian Security 源使用帮助
 地址
 ====
 
-* https://mirrors.ustc.edu.cn/debian-security/
+https://mirrors.ustc.edu.cn/debian-security/
 
 说明
 ====
