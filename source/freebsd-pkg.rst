@@ -37,7 +37,7 @@ FreeBSD 8, FreeBSD 9, FreeBSD 10, FreeBSD 11, FreeBSD 12
 ::
 
 		ustc: {
-		  url: "pkg+https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest",
+		  url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest",
 		  mirror_type: "srv",
 		  signature_type: "none",
 		  fingerprints: "/usr/share/keys/pkg",
