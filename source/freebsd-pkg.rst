@@ -31,9 +31,9 @@ FreeBSD 8, FreeBSD 9, FreeBSD 10, FreeBSD 11, FreeBSD 12
 
 ::
 
-					``mkdir -p /usr/local/etc/pkg/repos`` 
-					``cd /usr/local/etc/pkg/repos``
-					``ee 1.ustc.conf`` 或 ``vi 1.ustc.conf`` 
+					mkdir -p /usr/local/etc/pkg/repos
+					cd /usr/local/etc/pkg/repos
+					ee 1.ustc.conf 或 vi 1.ustc.conf
 
 * 添加以下内容以使用USTC源：
 
