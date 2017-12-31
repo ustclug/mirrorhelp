@@ -26,15 +26,15 @@ FreeBSD 10,FreeBSD 11,FreeBSD 12
 使用方法
 ========
  
- 
-创建用户级pkg源文件 :
+创建用户级pkg源目录
+    
+    file:`/usr/local/etc/pkg/repos`
 
-    创建用户级pkg源目录
-    file:`/usr/local/etc/pkg/repos`
-    新建源文件
-    file:`/usr/local/etc/pkg/repos/1.ustc.conf`
+*新建源文件
+    
+    file:`/usr/local/etc/pkg/repos/1.ustc.conf`
 
-* 在源文件中添加以下内容，以使用USTC源：
+ 在源文件中添加以下内容，以使用USTC源：
 
 ::
 
