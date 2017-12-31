@@ -22,7 +22,8 @@ USTC Mirror Help
    debiancn
    deb-multimedia
    fedora
-   rpmfusion
+   freebsd-pkg
+   rpmfusion
    gentoo
    gentoo-portage
    kali
