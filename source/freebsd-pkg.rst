@@ -47,7 +47,7 @@ FreeBSD 10,FreeBSD 11,FreeBSD 12
 		}
 	
 
-* （建议）禁用系统级pkg 源
+禁用系统级pkg 源（推荐）
 
 ::
 	
