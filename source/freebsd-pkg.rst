@@ -30,7 +30,7 @@ FreeBSD 10,FreeBSD 11,FreeBSD 12
     
     file:`/usr/local/etc/pkg/repos`
 
-*新建源文件
+* 新建源文件
     
     file:`/usr/local/etc/pkg/repos/1.ustc.conf`
 
