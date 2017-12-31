@@ -30,14 +30,11 @@ FreeBSD 8,FreeBSD 9,FreeBSD 10,FreeBSD 11,FreeBSD 12
 创建用户级pkg源文件 :
 
     创建用户级pkg源目录
-    file:`mkdir -p /usr/local/etc/pkg/repos`:
-    file:`cd /usr/local/etc/pkg/repos`:
-    新建文件
-    file:`/usr/local/etc/pkg/repos/1.ustc.conf`：
-    编辑文件
-    使用ee编辑器file:`ee 1.ustc.conf`: 或使用vi编辑器file:`vi 1.ustc.conf`:
+    file:`/usr/local/etc/pkg/repos`
+    新建源文件
+    file:`/usr/local/etc/pkg/repos/1.ustc.conf`
 
-* 添加以下内容以使用USTC源：
+* 在源文件中添加以下内容，以使用USTC源：
 
 ::
 
