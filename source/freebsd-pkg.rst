@@ -34,7 +34,7 @@ FreeBSD 10,FreeBSD 11,FreeBSD 12
     
     file:`/usr/local/etc/pkg/repos/1.ustc.conf`
 
- 在源文件中添加以下内容，以使用USTC源：
+ 在``1.ustc.conf``中添加以下内容，以使用USTC源：
 
 ::
 
