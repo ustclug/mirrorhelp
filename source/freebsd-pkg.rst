@@ -15,18 +15,18 @@ FreeBSD pkg 软件源
 收录架构
 ========
 
-i386,amd64,aarch64,armv6,mips,mips64
+i386, amd64, aarch64, armv6, mips, mips64
 
 
 收录版本
 ========
 
-FreeBSD 10,FreeBSD 11,FreeBSD 12
+10, 11, 12
 
 使用方法
 ========
  
-创建用户级pkg 源目录
+创建用户级 pkg 源目录
     
     :file:`/usr/local/etc/pkg/repos`
 
@@ -34,7 +34,7 @@ FreeBSD 10,FreeBSD 11,FreeBSD 12
 
     :file:`/usr/local/etc/pkg/repos/1.ustc.conf`
 
-在 :file:`1.ustc.conf` 中添加以下内容，以使用USTC源：
+在 :file:`1.ustc.conf` 中添加以下内容：
 
 ::
 
@@ -47,7 +47,7 @@ FreeBSD 10,FreeBSD 11,FreeBSD 12
 		}
 	
 
-禁用系统级pkg 源（推荐）
+禁用系统级 pkg 源（推荐）
 
 ::
 	
