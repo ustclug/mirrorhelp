@@ -21,7 +21,7 @@ i386,amd64,aarch64,armv6,mips,mips64
 收录版本
 ========
 
-FreeBSD 8,FreeBSD 9,FreeBSD 10,FreeBSD 11,FreeBSD 12
+FreeBSD 10,FreeBSD 11,FreeBSD 12
 
 使用方法
 ========
