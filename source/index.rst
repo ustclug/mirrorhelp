@@ -23,6 +23,7 @@ USTC Mirror Help
    deb-multimedia
    fedora
    freebsd-pkg
+   freebsd-ports
    rpmfusion
    gentoo
    gentoo-portage
