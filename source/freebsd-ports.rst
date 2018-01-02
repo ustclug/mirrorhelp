@@ -15,7 +15,7 @@ FreeBSD ports 软件源
 使用方法
 ========
  
-在 :file:`/etc/make.conf` 中添加以下内容（如果文件不存在，则新建之）:
+在 :file:`/etc/make.conf` 中添加以下内容（如果文件不存在，则新建之）：
 
 ::
 
