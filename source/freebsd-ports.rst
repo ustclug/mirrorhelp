@@ -27,4 +27,4 @@ FreeBSD ports 软件源
 :官方主页: https://www.freebsd.org
 :论坛: https://forums.freebsd.org
 :文档: https://www.freebsd.org/doc
-:官方源地址：https://www.freebsd.org/ports
+:官方介绍：https://www.freebsd.org/ports
