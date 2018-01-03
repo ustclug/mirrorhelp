@@ -30,7 +30,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'USTC Mirror Help'
-copyright = '%s, LUG@USTC' % datetime.datetime.now().year
+copyright = '2017 - %s, LUG@USTC' % datetime.datetime.now().year
 author = 'LUG@USTC'
 
 # The version info for the project you're documenting, acts as replacement for
