@@ -22,6 +22,7 @@ USTC Mirror Help
    debiancn
    deb-multimedia
    fedora
+   freebsd
    freebsd-pkg
    freebsd-ports
    rpmfusion
