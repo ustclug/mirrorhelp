@@ -67,7 +67,7 @@ USTC Mirror Help
    homebrew-core.git
    homebrew-cask.git
    mariadb
-   raspi_list
+   archive.raspberrypi.org
 
 其他
 ----
