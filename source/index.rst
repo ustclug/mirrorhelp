@@ -30,6 +30,7 @@ USTC Mirror Help
    mageia
    manjaro
    opensuse
+   raspbian
    trisquel
    ubuntu
    ubuntu-ports
@@ -66,6 +67,7 @@ USTC Mirror Help
    homebrew-core.git
    homebrew-cask.git
    mariadb
+   raspi_list
 
 其他
 ----
