@@ -60,7 +60,7 @@ armhf
 
 编辑此文件后，请使用 ``sudo apt-get update`` 命令，更新软件列表。
 
-同时可能也需要更改 archive.raspberrypi.org 源，请参考 :doc:`raspi_list`
+同时可能也需要更改 archive.raspberrypi.org 源，请参考 :doc:`archive.raspberrypi.org`
 
 更新频率
 =============
