@@ -10,6 +10,8 @@ http://mirrors.ustc.edu.cn/raspbian/raspbian/
 说明
 ====
 
+Raspbian 软件源
+
 系统架构
 ============
 
