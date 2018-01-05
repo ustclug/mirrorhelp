@@ -8,7 +8,7 @@ Raspbian 源使用帮助
 http://mirrors.ustc.edu.cn/raspbian/raspbian/
 
 Raspbian 简介 
-============
+=========================
 
 Raspbian 是专门用于 ARM 卡片式计算机 Raspberry Pi® “树莓派”的操作系统。
 
@@ -24,12 +24,12 @@ Raspbian 是树莓派的开发与维护机构 The Raspbeery Pi Foundation “树
   * 树莓派用户倾向于探索、尝试最新的软件。这与 Debian 软件源的策略完全不同。
 
 系统架构
-========
+============
 
 armhf
 
 收录版本
-========
+============
 
 * wheezy
 * jessiels 
@@ -39,7 +39,7 @@ armhf
 (即，oldoldstable, oldstable, stable, testing)
 
 使用说明
-========
+============
 
 将 :file:`/etc/apt/sources.list.d/raspi.list` 文件中 Debian 默认的源地址 ``http://archive.raspbian.org/``
 替换为 ``http://mirrors.ustc.edu.cn/raspbian/`` 即可。
@@ -63,17 +63,17 @@ armhf
 同时可能也需要更改 archive.raspberrypi.org 源，请参考 :doc:`raspi_list`
 
 更新频率
-========
+=============
 
 每日更新 1 次。
 
 声明
-====
+==========
 
 Raspbian 是由独立开发者维护的，与树莓派基金会并无直接联系。
 
 相关链接
-========
+=============
 
 Raspbian 链接
   :Raspbian 主页: http://www.raspbian.org/
@@ -87,7 +87,7 @@ Raspbian 链接
   :树莓派基金会论坛 Raspbian 版块: https://www.raspberrypi.org/forums/viewforum.php?f=66
 
 关于本文档
-==========
+=============
 
 本文档内容由 Raspberry Pi 中文社区“树莓爱好者论坛”提供，并经 科大LUG 改编。
 
