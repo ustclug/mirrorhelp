@@ -41,7 +41,7 @@ armhf
 使用说明
 ============
 
-将 :file:`/etc/apt/sources.list.d/raspi.list` 文件中 Debian 默认的源地址 ``http://archive.raspbian.org/``
+将 :file:`/etc/apt/sources.list` 文件中默认的源地址 ``http://mirrordirector.raspbian.org/`` 及 ``http://archive.raspbian.org/``
 替换为 ``http://mirrors.ustc.edu.cn/raspbian/`` 即可。
 
 可以用以下命令替换：
@@ -61,11 +61,6 @@ armhf
 编辑此文件后，请使用 ``sudo apt-get update`` 命令，更新软件列表。
 
 同时可能也需要更改 archive.raspberrypi.org 源，请参考 :doc:`archive.raspberrypi.org`
-
-更新频率
-=============
-
-每日更新 1 次。
 
 声明
 ==========
