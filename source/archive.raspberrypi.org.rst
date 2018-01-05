@@ -1,18 +1,19 @@
-=====================================
+==================================
 archive.raspberrypi.org 源使用帮助
-=====================================
+==================================
 
 地址
 ====
 
-http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/
+https://mirrors.ustc.edu.cn/archive.raspberrypi.org/
 
 说明
 ====
 
 树莓派的 archive.raspberrypi.org 软件源，也即 :file:`/etc/apt/sources.list.d/raspi.list` ，
 
-是由树莓派基金会提供的软件源，包括 ui 相关程序 ( 如 Raspbian 的桌面环境 PIXEL DE) 及部分由树莓派基金会为树莓派编写的软件，通常与 archive.raspbian.org ( 参考 :doc:`raspbian` ) 一起使用
+是由树莓派基金会提供的软件源，包括 ui 相关程序 ( 如 Raspbian 的桌面环境 PIXEL DE) 及部分由树莓派基金会为
+树莓派编写的软件，通常与 archive.raspbian.org ( 参考 :doc:`raspbian` ) 一起使用。
 
 收录架构
 ========
@@ -28,24 +29,22 @@ http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/
 * jessie
 * stretch
 
-当前 Stable 为 Debian 9，代号为 Stretch
-
 使用说明
 ========
 
 .. warning::
     操作前请做好相应备份
 
-一般情况下，将 :file:`/etc/apt/sources.list.d/raspi.list` 文件中 Debian 默认的源地址 ``http://archive.raspberrypi.org/``
+一般情况下，将 :file:`/etc/apt/sources.list.d/raspi.list` 文件中默认的源地址 ``http://archive.raspberrypi.org/``
 替换为 ``http://mirrors.ustc.edu.cn/archive.raspberrypi.org/`` 即可。
 
 可以使用如下命令：
 
 ::
 
-  sudo sed -i 's|archive.raspberrypi.org|mirrors.ustc.edu.cn/archive.raspberrypi.org|g' /etc/apt/sources.list.d/raspi.list
+  sudo sed -i 's|//archive.raspberrypi.org|//mirrors.ustc.edu.cn/archive.raspberrypi.org|g' /etc/apt/sources.list.d/raspi.list
 
-当然也可以直接编辑 :file:`/etc/apt/sources.list.d/raspi.list` 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
+当然也可以直接编辑 :file:`/etc/apt/sources.list.d/raspi.list` 文件（需要使用 sudo）。以下是 Stretch 的参考配置内容：
 
 ::
 
