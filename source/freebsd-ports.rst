@@ -19,7 +19,7 @@ FreeBSD ports 软件源
 
 ::
 
-    MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/
+    MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
 
 相关链接
 ========
