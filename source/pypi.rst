@@ -20,6 +20,7 @@ PyPI(pip) 软件源
 ``pip`` 的配置文件一般位于（如果没有，请直接创建）：
 
 * Unix 环境: :file:`$HOME/.config/pip/pip.conf`
+* Linux 环境: :file:`$HOME/.pip/pip.conf`
 * macOS: :file:`$HOME/Library/Application Support/pip/pip.conf`
 * Windows: :file:`%APPDATA%\\pip\\pip.ini`
 
