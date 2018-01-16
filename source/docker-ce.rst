@@ -35,11 +35,15 @@ Docker CE 仓库镜像
 以 Ubuntu 为例，参考 `官方 Ubuntu 安装 Docker CE 手册 <https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/>`_ 进行安装。
 在阅读官方安装手册时，只要把 ``download.docker.com`` 地址换成 ``mirrors.ustc.edu.cn/docker-ce`` 即可。
 
+`CentOS <https://docs.docker.com/engine/installation/linux/docker-ce/centos/>`_、
+`Fedora <https://docs.docker.com/engine/installation/linux/docker-ce/fedora/>`_ 等用户在下载 :file:`docker-ce.repo` 文件后，
+还需要将该文件中的 ``download.docker.com`` 地址换成 ``mirrors.ustc.edu.cn/docker-ce``。
+
 .. tip::
     以上 Docker CE 的官方文档有中文版，但更新可能不如英文版及时，请移步 https://docs.docker-cn.com/engine/installation/ 。
 
 .. tip::
-    安装完 Docker CE 之后，替换掉官方的 Docker Registry 服务，可加快拉取 Docker 镜像的速度，请参考 :doc:`dockerhub` 。
+    安装完 Docker CE 之后，替换掉官方的 Docker Registry 服务，可加快拉取 Docker 镜像的速度，请参考 :doc:`dockerhub`。
 
 相关链接
 ========
