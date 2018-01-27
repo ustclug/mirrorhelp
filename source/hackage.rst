@@ -22,7 +22,7 @@ stack使用说明
     package-indices:
       - name: USTC
         download-prefix: https://mirrors.ustc.edu.cn/hackage/package/
-        http: https://mirrors.ustc.edu.cn/hackage/00-index.tar.gz
+        http: https://mirrors.ustc.edu.cn/hackage/01-index.tar.gz
 
 
 cabal使用说明
