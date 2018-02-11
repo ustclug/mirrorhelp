@@ -5,7 +5,7 @@ Gentoo 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/gentoo/
+https://mirrors.nju.edu.cn/gentoo/
 
 说明
 ====
@@ -24,7 +24,7 @@ ALL
 
 ::
 
-  GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo/"
+  GENTOO_MIRRORS="https://mirrors.nju.edu.cn/gentoo/"
 
 相关链接
 ========

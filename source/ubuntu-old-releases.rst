@@ -5,7 +5,7 @@ Ubuntu Old Releases 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/ubuntu-old-releases/
+https://mirrors.nju.edu.cn/ubuntu-old-releases/
 
 说明
 ====
@@ -30,7 +30,7 @@ Ubuntu 曾经发布过的所有版本
 软件源
 ------
 
-在 :file:`/etc/apt/sources.list` 文件中，将软件源的地址改为 ``http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu``
+在 :file:`/etc/apt/sources.list` 文件中，将软件源的地址改为 ``http://mirrors.nju.edu.cn/ubuntu-old-releases/ubuntu``
 
 更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
 
@@ -40,6 +40,6 @@ Ubuntu 曾经发布过的所有版本
 镜像
 ----
 
-请前往 https://mirrors.ustc.edu.cn/ubuntu-old-releases/releases/ 下载。
+请前往 https://mirrors.nju.edu.cn/ubuntu-old-releases/releases/ 下载。
 
-非 AMD64(x86_64), Intel x86 架构的镜像请前往 https://mirrors.ustc.edu.cn/ubuntu-old-releases/releases/ports/releases/ 下载。
+非 AMD64(x86_64), Intel x86 架构的镜像请前往 https://mirrors.nju.edu.cn/ubuntu-old-releases/releases/ports/releases/ 下载。

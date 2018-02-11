@@ -5,7 +5,7 @@ Gentoo Portage 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/gentoo-portage/
+https://mirrors.nju.edu.cn/gentoo-portage/
 
 说明
 ====
@@ -30,7 +30,7 @@ ALL
   [gentoo]
   location = /usr/portage
   sync-type = rsync
-  sync-uri = rsync://rsync.mirrors.ustc.edu.cn/gentoo-portage/
+  sync-uri = rsync://rsync.mirrors.nju.edu.cn/gentoo-portage/
   auto-sync = yes
 
 相关链接

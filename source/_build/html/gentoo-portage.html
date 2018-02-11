@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Gentoo Portage 源使用帮助 &mdash; NJU Mirror Help  文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="NJU Mirror Help  文档" href="index.html"/>
+        <link rel="next" title="Kali Linux 源使用帮助" href="kali.html"/>
+        <link rel="prev" title="Gentoo 源使用帮助" href="gentoo.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NJU Mirror Help
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="alpine.html">Alpine Linux 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="anthon.html">AOSC OS 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="archlinux.html">Arch Linux 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="archlinuxcn.html">Arch Linux CN 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blackarch.html">Black Arch 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centos.html">CentOS 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="epel.html">EPEL 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chakra.html">Chakra 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debian.html">Debian 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debian-security.html">Debian Security 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debian-cd.html">Debian CD 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debian-cdimage.html">Debian-cdimage 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debiancn.html">Debiancn 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deb-multimedia.html">Deb Multimedia 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fedora.html">Fedora 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freebsd.html">FreeBSD 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freebsd-pkg.html">FreeBSD pkg 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freebsd-ports.html">FreeBSD ports 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rpmfusion.html">RPM Fusion 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gentoo.html">Gentoo 源使用帮助</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Gentoo Portage 源使用帮助</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">收录架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">使用说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">相关链接</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kali.html">Kali Linux 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linuxmint.html">Linux Mint 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mageia.html">Mageia 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manjaro.html">Manjaro Linux 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opensuse.html">openSUSE 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspbian.html">Raspbian 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trisquel.html">Trisquel 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntu.html">Ubuntu 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntu-ports.html">Ubuntu Ports 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntu-old-releases.html">Ubuntu Old Releases 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntu-releases.html">Ubuntu Releases 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntu-cdimage.html">Ubuntu CD Image 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntu-cloud-images.html">Ubuntu Cloud Images 源使用帮助</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hackage.html">Hackage 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pypi.html">PyPI 镜像源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rubygems.html">Rubygems 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rust-crates.html">Rust Crates 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rust-static.html">Rust Toolchain 反向代理使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stackage.html">Stackage 源使用帮助</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dockerhub.html">Docker Hub 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="homebrew-bottles.html">Homebrew Bottles 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="homebrew-core.git.html">Homebrew Core 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="homebrew-cask.git.html">Homebrew Cask 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mariadb.html">MariaDB 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="archive.raspberrypi.org.html">Raspberrypi 源使用帮助</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">TODO List</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributor.html">文档贡献者名单</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NJU Mirror Help</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Gentoo Portage 源使用帮助</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/njulug/mirrorhelp/blob/master/source/gentoo-portage.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gentoo-portage">
+<h1>Gentoo Portage 源使用帮助<a class="headerlink" href="#gentoo-portage" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>地址<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://mirrors.nju.edu.cn/gentoo-portage/">https://mirrors.nju.edu.cn/gentoo-portage/</a></p>
+</div>
+<div class="section" id="id2">
+<h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>Gentoo Portage 软件源</p>
+</div>
+<div class="section" id="id3">
+<h2>收录架构<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>ALL</p>
+</div>
+<div class="section" id="id4">
+<h2>使用说明<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>新建或修改 <code class="file docutils literal"><span class="pre">/etc/portage/repos.conf</span></code> ：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">DEFAULT</span><span class="p">]</span>
+<span class="n">main</span><span class="o">-</span><span class="n">repo</span> <span class="o">=</span> <span class="n">gentoo</span>
+
+<span class="p">[</span><span class="n">gentoo</span><span class="p">]</span>
+<span class="n">location</span> <span class="o">=</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">portage</span>
+<span class="n">sync</span><span class="o">-</span><span class="nb">type</span> <span class="o">=</span> <span class="n">rsync</span>
+<span class="n">sync</span><span class="o">-</span><span class="n">uri</span> <span class="o">=</span> <span class="n">rsync</span><span class="p">:</span><span class="o">//</span><span class="n">rsync</span><span class="o">.</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">gentoo</span><span class="o">-</span><span class="n">portage</span><span class="o">/</span>
+<span class="n">auto</span><span class="o">-</span><span class="n">sync</span> <span class="o">=</span> <span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>相关链接<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">官方主页:</th><td class="field-body"><a class="reference external" href="https://www.gentoo.org/">https://www.gentoo.org/</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">邮件列表:</th><td class="field-body"><a class="reference external" href="https://www.gentoo.org/main/en/lists.xml">https://www.gentoo.org/main/en/lists.xml</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">论坛:</th><td class="field-body"><a class="reference external" href="https://forums.gentoo.org/">https://forums.gentoo.org/</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">文档:</th><td class="field-body"><a class="reference external" href="https://www.gentoo.org/doc/en/">https://www.gentoo.org/doc/en/</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Wiki:</th><td class="field-body"><a class="reference external" href="https://wiki.gentoo.org/">https://wiki.gentoo.org/</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">镜像列表:</th><td class="field-body"><a class="reference external" href="https://www.gentoo.org/main/en/mirrors-rsync.xml">https://www.gentoo.org/main/en/mirrors-rsync.xml</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="kali.html" class="btn btn-neutral float-right" title="Kali Linux 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gentoo.html" class="btn btn-neutral" title="Gentoo 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 - 2018, LUG@NJU.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+<p>除额外注明的地方外，本文档按 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议发布。</p>
+ 
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

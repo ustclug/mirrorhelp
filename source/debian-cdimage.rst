@@ -5,7 +5,7 @@ Debian-cdimage 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/debian-cdimage/
+https://mirrors.nju.edu.cn/debian-cdimage/
 
 说明
 ====

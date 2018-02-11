@@ -5,7 +5,7 @@ PyPI 镜像源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/pypi/
+https://mirrors.nju.edu.cn/pypi/
 
 说明
 ====
@@ -15,7 +15,7 @@ PyPI(pip) 软件源
 使用说明
 ========
 
-编辑 ``pip`` 配置文件，将 ``index-url`` 修改为 ``https://mirrors.ustc.edu.cn/pypi/web/simple`` 。
+编辑 ``pip`` 配置文件，将 ``index-url`` 修改为 ``https://mirrors.nju.edu.cn/pypi/web/simple`` 。
 
 ``pip`` 的配置文件一般位于（如果没有，请直接创建）：
 
@@ -30,7 +30,7 @@ PyPI(pip) 软件源
 ::
 
     [global]
-    index-url = https://mirrors.ustc.edu.cn/pypi/web/simple
+    index-url = https://mirrors.nju.edu.cn/pypi/web/simple
     format = columns
 
 使用 ``pip`` 时如果出现 ``configparser.MissingSectionHeaderError: File contains no section headers.``,

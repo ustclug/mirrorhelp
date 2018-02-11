@@ -5,7 +5,7 @@ Hackage 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/hackage/
+https://mirrors.nju.edu.cn/hackage/
 
 说明
 ====
@@ -20,9 +20,9 @@ stack使用说明
 ::
 
     package-indices:
-      - name: USTC
-        download-prefix: https://mirrors.ustc.edu.cn/hackage/package/
-        http: https://mirrors.ustc.edu.cn/hackage/01-index.tar.gz
+      - name: NJU
+        download-prefix: https://mirrors.nju.edu.cn/hackage/package/
+        http: https://mirrors.nju.edu.cn/hackage/01-index.tar.gz
 
 
 cabal使用说明
@@ -42,11 +42,11 @@ Cabal ≥ 1.24 (GHC 8.0)
       -- root-keys:
       -- keys-threshold: 3
 
-改为科大源:
+改为南大源:
 ::
 
-    repository mirrors.ustc.edu.cn
-      url: https://mirrors.ustc.edu.cn/hackage/
+    repository mirrors.nju.edu.cn
+      url: https://mirrors.nju.edu.cn/hackage/
 
 Cabal < 1.24
 ------------
@@ -55,10 +55,10 @@ Cabal < 1.24
 
     remote-repo: hackage.haskell.org:http://hackage.haskell.org/packages/archive
 
-改为科大源:
+改为南大源:
 ::
 
-    remote-repo: mirrors.ustc.edu.cn:http://mirrors.ustc.edu.cn/hackage/
+    remote-repo: mirrors.nju.edu.cn:http://mirrors.nju.edu.cn/hackage/
 
 3. 执行 ``cabal update``
 

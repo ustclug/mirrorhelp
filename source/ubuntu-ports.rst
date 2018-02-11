@@ -5,7 +5,7 @@ Ubuntu Ports 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/ubuntu-ports/
+https://mirrors.nju.edu.cn/ubuntu-ports/
 
 说明
 ====
@@ -33,25 +33,25 @@ arm64, armhf, PowerPC, ppc64el, s390x
 .. warning::
     操作前请做好相应备份
 
-在 :file:`/etc/apt/sources.list` 文件中，将软件源的地址改为 ``http://mirrors.ustc.edu.cn/ubuntu-ports``
+在 :file:`/etc/apt/sources.list` 文件中，将软件源的地址改为 ``http://mirrors.nju.edu.cn/ubuntu-ports``
 
 以下是 Ubuntu 16.04 /etc/apt/sources.list 文件的参考配置内容：
 
 ::
 
     # 默认注释了源码仓库，如有需要可自行取消注释
-    deb https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial main main restricted universe multiverse
-    deb https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-updates main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-updates main restricted universe multiverse
-    deb https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-backports main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-backports main restricted universe multiverse
-    deb https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-security main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-security main restricted universe multiverse
+    deb https://mirrors.nju.edu.cn/ubuntu-ports/ xenial main restricted universe multiverse
+    # deb-src https://mirrors.nju.edu.cn/ubuntu-ports/ xenial main main restricted universe multiverse
+    deb https://mirrors.nju.edu.cn/ubuntu-ports/ xenial-updates main restricted universe multiverse
+    # deb-src https://mirrors.nju.edu.cn/ubuntu-ports/ xenial-updates main restricted universe multiverse
+    deb https://mirrors.nju.edu.cn/ubuntu-ports/ xenial-backports main restricted universe multiverse
+    # deb-src https://mirrors.nju.edu.cn/ubuntu-ports/ xenial-backports main restricted universe multiverse
+    deb https://mirrors.nju.edu.cn/ubuntu-ports/ xenial-security main restricted universe multiverse
+    # deb-src https://mirrors.nju.edu.cn/ubuntu-ports/ xenial-security main restricted universe multiverse
 
     # 预发布软件源，不建议启用
-    # deb https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-proposed main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-proposed main restricted universe multiverse
+    # deb https://mirrors.nju.edu.cn/ubuntu-ports/ xenial-proposed main restricted universe multiverse
+    # deb-src https://mirrors.nju.edu.cn/ubuntu-ports/ xenial-proposed main restricted universe multiverse
 
 更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
 

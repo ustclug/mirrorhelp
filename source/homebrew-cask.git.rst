@@ -5,7 +5,7 @@ Homebrew Cask 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/homebrew-cask.git/
+https://mirrors.nju.edu.cn/homebrew-cask.git/
 
 说明
 ====
@@ -15,12 +15,12 @@ Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件
 使用说明
 ========
 
-替换为 USTC 镜像：
+替换为 NJU 镜像：
 
 ::
 
     cd "$(brew --repo)"/Library/Taps/caskroom/homebrew-cask
-    git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
+    git remote set-url origin https://mirrors.nju.edu.cn/homebrew-cask.git
 
 重置为官方地址：
 

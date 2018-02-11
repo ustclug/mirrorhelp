@@ -1,4 +1,4 @@
-USTC Mirror Help
+NJU Mirror Help
 ================
 
 发行版镜像

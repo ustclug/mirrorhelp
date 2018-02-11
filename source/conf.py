@@ -29,9 +29,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'USTC Mirror Help'
-copyright = '2017 - %s, LUG@USTC' % datetime.datetime.now().year
-author = 'LUG@USTC'
+project = 'NJU Mirror Help'
+copyright = '2017 - %s, LUG@NJU' % datetime.datetime.now().year
+author = 'LUG@NJU'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -103,7 +103,7 @@ todo_link_only = True
 html_copy_source = False
 html_context = {
     'display_github': True,
-    'github_user': 'ustclug',
+    'github_user': 'njulug',
     'github_repo': 'mirrorhelp',
     'github_version': 'master/source/'
 }
@@ -125,7 +125,7 @@ html_theme_options = {"display_version": False}
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-# html_title = 'USTC Mirror Help'
+# html_title = 'NJU Mirror Help'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
@@ -225,7 +225,7 @@ html_search_language = 'zh'
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'USTCMirrorHelp'
+htmlhelp_basename = 'NJUMirrorHelp'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -251,7 +251,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'USTCMirror.tex', 'USTC Mirror Help',
+    (master_doc, 'NJUMirror.tex', 'NJU Mirror Help',
      author, 'manual'),
 ]
 
@@ -293,7 +293,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'ustcmirror', 'USTC Mirror Help',
+    (master_doc, 'ustcmirror', 'NJU Mirror Help',
      [author], 1)
 ]
 
@@ -308,8 +308,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'USTC Mirror', 'USTC Mirror Help',
-     author, 'USTC Mirror', 'USTC Mirror Help',
+    (master_doc, 'NJU Mirror', 'NJU Mirror Help',
+     author, 'NJU Mirror', 'NJU Mirror Help',
      'Miscellaneous'),
 ]
 

@@ -5,7 +5,7 @@ Chakra 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/chakra/
+https://mirrors.nju.edu.cn/chakra/
 
 说明
 ====
@@ -24,7 +24,7 @@ x86_64
 
 ::
 
-    Server = https://mirrors.ustc.edu.cn/chakra/$repo/$arch
+    Server = https://mirrors.nju.edu.cn/chakra/$repo/$arch
 
 相关链接
 ========

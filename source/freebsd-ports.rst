@@ -5,7 +5,7 @@ FreeBSD ports 源使用帮助
 地址
 ====
 
-http://mirrors.ustc.edu.cn/freebsd-ports/
+http://mirrors.nju.edu.cn/freebsd-ports/
 
 说明
 ====
@@ -19,7 +19,7 @@ FreeBSD ports 软件源
 
 ::
 
-    MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
+    MASTER_SITE_OVERRIDE?=http://mirrors.nju.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
 
 相关链接
 ========

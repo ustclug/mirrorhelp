@@ -5,7 +5,7 @@ FreeBSD pkg 源使用帮助
 地址
 ====
 
-http://mirrors.ustc.edu.cn/freebsd-pkg/
+http://mirrors.nju.edu.cn/freebsd-pkg/
 
 说明
 ====
@@ -32,14 +32,14 @@ i386, amd64, aarch64, armv6, mips, mips64
 
 新建源文件 
 
-    :file:`/usr/local/etc/pkg/repos/1.ustc.conf`
+    :file:`/usr/local/etc/pkg/repos/1.nju.conf`
 
-在 :file:`1.ustc.conf` 中添加以下内容：
+在 :file:`1.nju.conf` 中添加以下内容：
 
 ::
 
-		ustc: {
-		  url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest",
+		nju: {
+		  url: "pkg+http://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/latest",
 		  mirror_type: "srv",
 		  signature_type: "none",
 		  fingerprints: "/usr/share/keys/pkg",

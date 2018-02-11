@@ -5,7 +5,7 @@ RPM Fusion 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/rpmfusion/
+https://mirrors.nju.edu.cn/rpmfusion/
 
 说明
 ====
@@ -19,15 +19,15 @@ RPM Fusion 是为 Fedora/RHEL 提供额外 RPM 软件包的第三方软件源。
 
 - Fedora 22 及更高版本::
 
-    sudo dnf install https://mirrors.ustc.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.ustc.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+    sudo dnf install https://mirrors.nju.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.nju.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 - RHEL 6 或兼容系统（如 CentOS ）::
 
-    sudo yum localinstall --nogpgcheck https://mirrors.ustc.edu.cn/rpmfusion/free/el/rpmfusion-free-release-6.noarch.rpm https://mirrors.ustc.edu.cn/rpmfusion/nonfree/el/rpmfusion-nonfree-release-6.noarch.rpm
+    sudo yum localinstall --nogpgcheck https://mirrors.nju.edu.cn/rpmfusion/free/el/rpmfusion-free-release-6.noarch.rpm https://mirrors.nju.edu.cn/rpmfusion/nonfree/el/rpmfusion-nonfree-release-6.noarch.rpm
 
 - RHEL ７ 或兼容系统（如 CentOS ）::
 
-    sudo yum localinstall --nogpgcheck https://mirrors.ustc.edu.cn/rpmfusion/free/el/rpmfusion-free-release-7.noarch.rpm https://mirrors.ustc.edu.cn/rpmfusion/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
+    sudo yum localinstall --nogpgcheck https://mirrors.nju.edu.cn/rpmfusion/free/el/rpmfusion-free-release-7.noarch.rpm https://mirrors.nju.edu.cn/rpmfusion/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
 
 如果 ``sudo`` 不可用，你可以把以上命令中的 ``sudo`` 替换成 ``su -c`` 。
 

@@ -5,7 +5,7 @@ Stackage 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/stackage/
+https://mirrors.nju.edu.cn/stackage/
 
 说明
 ====
@@ -19,13 +19,13 @@ Stackage 镜像
 
 ::
     
-    setup-info: "http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml"
+    setup-info: "http://mirrors.nju.edu.cn/stackage/stack-setup.yaml"
     urls:
-      latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
-      lts-build-plans: http://mirrors.ustc.edu.cn/stackage/lts-haskell/
-      nightly-build-plans: http://mirrors.ustc.edu.cn/stackage/stackage-nightly/
+      latest-snapshot: http://mirrors.nju.edu.cn/stackage/snapshots.json
+      lts-build-plans: http://mirrors.nju.edu.cn/stackage/lts-haskell/
+      nightly-build-plans: http://mirrors.nju.edu.cn/stackage/stackage-nightly/
 
-推荐搭配USTC Hackage源使用: :doc:`hackage`
+推荐搭配NJU Hackage源使用: :doc:`hackage`
 
 相关链接
 ========

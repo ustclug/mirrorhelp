@@ -5,7 +5,7 @@ Deb Multimedia 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/deb-multimedia/
+https://mirrors.nju.edu.cn/deb-multimedia/
 
 说明
 ====
@@ -37,16 +37,16 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
 ::
 
-    deb http://mirrors.ustc.edu.cn/deb-multimedia/ jessie main non-free
-    # deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ jessie main non-free
-    deb http://mirrors.ustc.edu.cn/deb-multimedia/ jessie-backports main
-    # deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ jessie-backports main
+    deb http://mirrors.nju.edu.cn/deb-multimedia/ jessie main non-free
+    # deb-src http://mirrors.nju.edu.cn/deb-multimedia/ jessie main non-free
+    deb http://mirrors.nju.edu.cn/deb-multimedia/ jessie-backports main
+    # deb-src http://mirrors.nju.edu.cn/deb-multimedia/ jessie-backports main
 
 更改完 :file:`sources.list` 文件后请导入 deb-multimedia-keyring
 
 ::
 
-    wget https://mirrors.ustc.edu.cn/deb-multimedia/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
+    wget https://mirrors.nju.edu.cn/deb-multimedia/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
     sudo dpkg -i deb-multimedia-keyring_2016.8.1_all.deb
     
 然后请运行 ``sudo apt-get update`` 更新索引以生效。

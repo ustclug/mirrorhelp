@@ -18,13 +18,13 @@ rustup 安装方法可参考官方的 `文档 <https://github.com/rust-lang-nurs
 
 ::
 
-    export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+    export RUSTUP_DIST_SERVER=https://mirrors.nju.edu.cn/rust-static
 
 以及 ``RUSTUP_UPDATE_ROOT`` （用于更新 rustup）：
 
 ::
 
-    export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+    export RUSTUP_UPDATE_ROOT=https://mirrors.nju.edu.cn/rust-static/rustup
 
 .. attention::
     截止到该页面编写的时候（2017-01-05）， cargo 的软件包依然托管在 AWS 上， 因此无法对下载地址做替换，

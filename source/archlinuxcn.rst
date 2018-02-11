@@ -5,7 +5,7 @@ Arch Linux CN 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/archlinuxcn/
+https://mirrors.nju.edu.cn/archlinuxcn/
 
 说明
 ====
@@ -27,7 +27,7 @@ Arch Linux 中文社区仓库是由 Arch Linux 中文社区驱动的非官方用
 ::
 
     [archlinuxcn]
-    Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+    Server = https://mirrors.nju.edu.cn/archlinuxcn/$arch
 
 然后请安装 ``archlinuxcn-keyring`` 包以导入 GPG key。
 

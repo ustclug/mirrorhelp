@@ -5,7 +5,7 @@ AOSC OS 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/anthon
+https://mirrors.nju.edu.cn/anthon
 
 说明
 ====
@@ -36,11 +36,11 @@ AOSC OS 支持的所有架构，包括：
 使用说明
 ========
 
-AOSC OS 内置 ``apt-gen-list`` 工具来开关镜像源。要使用 USTC 源，执行：
+AOSC OS 内置 ``apt-gen-list`` 工具来开关镜像源。要使用 NJU 源，执行：
 
 ::
 
-  sudo apt-gen-list -e 10-ustc
+  sudo apt-gen-list -e 10-nju
 
 注意目前这将关闭其它镜像源。详细用法请执行 ``apt-gen-list -h`` 获取。
 
@@ -48,8 +48,8 @@ AOSC OS 内置 ``apt-gen-list`` 工具来开关镜像源。要使用 USTC 源，
 
 ::
 
-  deb https://mirrors.ustc.edu.cn/anthon/os-${ARCH}/os3-dpkg/ /
-  deb https://mirrors.ustc.edu.cn/anthon/os-noarch/os3-dpkg/ /
+  deb https://mirrors.nju.edu.cn/anthon/os-${ARCH}/os3-dpkg/ /
+  deb https://mirrors.nju.edu.cn/anthon/os-noarch/os3-dpkg/ /
 
 其中 ``${ARCH}`` 可以是：
 

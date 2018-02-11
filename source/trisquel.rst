@@ -5,7 +5,7 @@ Trisquel 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/trisquel/
+https://mirrors.nju.edu.cn/trisquel/
 
 说明
 ====
@@ -34,14 +34,14 @@ Trisquel 使用 APT 软件包管理系统，故其软件源使用方法与 Ubunt
 
 ::
 
-  deb https://mirrors.ustc.edu.cn/trisquel/ flidas main
-  deb-src https://mirrors.ustc.edu.cn/trisquel/ flidas main
-  deb https://mirrors.ustc.edu.cn/trisquel/ flidas-security main
-  deb-src https://mirrors.ustc.edu.cn/trisquel/ flidas-security main
-  deb https://mirrors.ustc.edu.cn/trisquel/ flidas-updates main
-  deb-src https://mirrors.ustc.edu.cn/trisquel/ flidas-updates main
-  deb https://mirrors.ustc.edu.cn/trisquel/ flidas-backports main
-  deb-src https://mirrors.ustc.edu.cn/trisquel/ flidas-backports main
+  deb https://mirrors.nju.edu.cn/trisquel/ flidas main
+  deb-src https://mirrors.nju.edu.cn/trisquel/ flidas main
+  deb https://mirrors.nju.edu.cn/trisquel/ flidas-security main
+  deb-src https://mirrors.nju.edu.cn/trisquel/ flidas-security main
+  deb https://mirrors.nju.edu.cn/trisquel/ flidas-updates main
+  deb-src https://mirrors.nju.edu.cn/trisquel/ flidas-updates main
+  deb https://mirrors.nju.edu.cn/trisquel/ flidas-backports main
+  deb-src https://mirrors.nju.edu.cn/trisquel/ flidas-backports main
 
 相关链接
 ========

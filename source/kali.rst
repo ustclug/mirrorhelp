@@ -5,7 +5,7 @@ Kali Linux 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/kali/
+https://mirrors.nju.edu.cn/kali/
 
 说明
 ====
@@ -24,8 +24,8 @@ amd64, armel, armhf, i386
 
 ::
 
-  deb https://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
-  deb-src https://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
+  deb https://mirrors.nju.edu.cn/kali kali-rolling main non-free contrib
+  deb-src https://mirrors.nju.edu.cn/kali kali-rolling main non-free contrib
   
 更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
 

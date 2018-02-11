@@ -5,7 +5,7 @@ Black Arch 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/blackarch/
+https://mirrors.nju.edu.cn/blackarch/
 
 说明
 ====
@@ -32,7 +32,7 @@ i686, x86_64, ARM 相关（目前包含 armv6h/armv7h/aarch64）
 ::
 
     [blackarch]
-    Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch
+    Server = https://mirrors.nju.edu.cn/blackarch/$repo/os/$arch
 
 然后请安装 ``blackarch-keyring`` 包以导入 GPG key。
 

@@ -5,7 +5,7 @@ openSUSE 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/opensuse/
+https://mirrors.nju.edu.cn/opensuse/
 
 说明
 ====
@@ -32,14 +32,14 @@ i586, x86_64
 
   sudo zypper mr -da
 
-添加科大镜像源，以 openSUSE Leap 42.3 为例；
+添加南大镜像源，以 openSUSE Leap 42.3 为例；
 
 ::
 
-  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.3/repo/oss USTC:42.3:OSS
-  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.3/repo/non-oss USTC:42.3:NON-OSS
-  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.3/oss USTC:42.3:UPDATE-OSS
-  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.3/non-oss USTC:42.3:UPDATE-NON-OSS
+  sudo zypper ar -fc https://mirrors.nju.edu.cn/opensuse/distribution/leap/42.3/repo/oss NJU:42.3:OSS
+  sudo zypper ar -fc https://mirrors.nju.edu.cn/opensuse/distribution/leap/42.3/repo/non-oss NJU:42.3:NON-OSS
+  sudo zypper ar -fc https://mirrors.nju.edu.cn/opensuse/update/leap/42.3/oss NJU:42.3:UPDATE-OSS
+  sudo zypper ar -fc https://mirrors.nju.edu.cn/opensuse/update/leap/42.3/non-oss NJU:42.3:UPDATE-NON-OSS
 
 命令中最后一个参数为每一个源指定了一个 alias （别称），可以根据个人喜好更改。
 
@@ -57,7 +57,7 @@ i586, x86_64
 #. 打开 YaST；
 #. 点击 Software 分组中的 Software Repositories；
 #. 在打开的窗口上方的列表中点击 openSUSE-Leap-42.3-Oss ，点击 Edit；
-#. 将 download.opensuse.org 替换为 mirrors.ustc.edu.cn/opensuse，点OK；
+#. 将 download.opensuse.org 替换为 mirrors.nju.edu.cn/opensuse，点OK；
 #. 再用同样的方法编辑 openSUSE-Leap-42.3-Oss 和 openSUSE-Leap-42.3-Oss。
 
 注意事项
@@ -77,4 +77,4 @@ i586, x86_64
 :Wiki: https://en.opensuse.org/
 :中文 Wiki: https://zh.opensuse.org/
 :文档: https://en.opensuse.org/Documentation
-:openSUSE Guide: https://lug.ustc.edu.cn/sites/opensuse-guide/
+:openSUSE Guide: https://lug.nju.edu.cn/sites/opensuse-guide/

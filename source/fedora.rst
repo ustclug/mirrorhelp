@@ -5,7 +5,7 @@ Fedora 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/fedora/
+https://mirrors.nju.edu.cn/fedora/
 
 说明
 ====
@@ -25,14 +25,14 @@ x86_64, i386
 使用说明
 ========
 
-将以下保存为 :file:`fedora-ustc.repo` ：
+将以下保存为 :file:`fedora-nju.repo` ：
 
 ::
 
   [fedora] 
-  name=Fedora $releasever - $basearch - ustc
+  name=Fedora $releasever - $basearch - nju
   failovermethod=priority 
-  baseurl=https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/ 
+  baseurl=https://mirrors.nju.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/ 
   #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch 
   enabled=1 
   metadata_expire=7d 
@@ -40,9 +40,9 @@ x86_64, i386
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
   [fedora-debuginfo] 
-  name=Fedora $releasever - $basearch - Debug - ustc
+  name=Fedora $releasever - $basearch - Debug - nju
   failovermethod=priority 
-  baseurl=https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/debug/ 
+  baseurl=https://mirrors.nju.edu.cn/fedora/releases/$releasever/Everything/$basearch/debug/ 
   #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&arch=$basearch 
   enabled=0 
   metadata_expire=7d 
@@ -50,41 +50,41 @@ x86_64, i386
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
   [fedora-source] 
-  name=Fedora $releasever - Source - ustc
+  name=Fedora $releasever - Source - nju
   failovermethod=priority 
-  baseurl=https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/source/SRPMS/ 
+  baseurl=https://mirrors.nju.edu.cn/fedora/releases/$releasever/Everything/source/SRPMS/ 
   #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&arch=$basearch 
   enabled=0 
   metadata_expire=7d 
   gpgcheck=1 
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
   
-将以下保存为 :file:`fedora-updates-ustc.repo` ：
+将以下保存为 :file:`fedora-updates-nju.repo` ：
 
 ::
 
   [updates]
-  name=Fedora $releasever - $basearch - Updates - ustc
+  name=Fedora $releasever - $basearch - Updates - nju
   failovermethod=priority 
-  baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/$basearch/ 
+  baseurl=https://mirrors.nju.edu.cn/fedora/updates/$releasever/$basearch/ 
   #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch 
   enabled=1 
   gpgcheck=1 
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
   [updates-debuginfo] 
-  name=Fedora $releasever - $basearch - Updates - Debug -ustc
+  name=Fedora $releasever - $basearch - Updates - Debug -nju
   failovermethod=priority 
-  baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/$basearch/debug/ 
+  baseurl=https://mirrors.nju.edu.cn/fedora/updates/$releasever/$basearch/debug/ 
   #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f$releasever&arch=$basearch 
   enabled=0 
   gpgcheck=1 
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
   [updates-source] 
-  name=Fedora $releasever - Updates Source - ustc
+  name=Fedora $releasever - Updates Source - nju
   failovermethod=priority 
-  baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/SRPMS/ 
+  baseurl=https://mirrors.nju.edu.cn/fedora/updates/$releasever/SRPMS/ 
   #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&arch=$basearch 
   enabled=0 
   gpgcheck=1 
@@ -92,7 +92,7 @@ x86_64, i386
   
 先备份 :file:`/etc/yum.repos.d/fedora.repo` 和 :file:`/etc/yum.repos.d/fedora-updates.repo`
 
-将 :file:`fedora-ustc.repo` 和 :file:`fedora-updates-ustc.repo` 放入 :file:`/etc/yum.repos.d/` 中。
+将 :file:`fedora-nju.repo` 和 :file:`fedora-updates-nju.repo` 放入 :file:`/etc/yum.repos.d/` 中。
 
 运行 ``sudo dnf makecache`` 生成缓存。
 
