@@ -77,4 +77,3 @@ i586, x86_64
 :Wiki: https://en.opensuse.org/
 :中文 Wiki: https://zh.opensuse.org/
 :文档: https://en.opensuse.org/Documentation
-:openSUSE Guide: https://lug.nju.edu.cn/sites/opensuse-guide/
