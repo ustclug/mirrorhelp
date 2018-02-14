@@ -1,12 +1,12 @@
-README
-=======
+README 
+======
 [^_^]:
+=======
 
-# 南大开源镜像站的帮助文档
-
-# 帮助文档校园网地址: http://mirror.njuer.org/help/
-
-# 镜像地址：https://mirrors.nju.edu.cn
+# 南大开源镜像
+* 帮助文档校园网地址: http://mirror.njuer.org/help/
+* 帮助文档公网地址: http://nju-mirror-help.njuer.org   http://njumirrorhelp.njuer.org
+* 南大开源镜像地址：https://mirrors.nju.edu.cn
 
 # 欢迎找bug发 Pull Request. 地址： https://github.com/njulug/mirrorhelp  修改source目录下rst文件即可。
 
