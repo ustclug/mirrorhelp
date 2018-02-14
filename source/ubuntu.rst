@@ -26,18 +26,83 @@ AMD64 (x86_64), Intel x86
 
 对于 Ubuntu 不再支持的版本，请参考 :doc:`ubuntu-old-releases`
 
+::
+
+    List of releases                
+                    
+    Current             
+                    
+    Version Code name   Docs    Release date    End of Life date
+    Ubuntu 17.10    Artful Aardvark Rel 19-Oct-17   Jul-18
+    Ubuntu 16.04.3 LTS  Xenial Xerus    Changes 3-Aug-17    Apr-21
+    Ubuntu 16.04.2 LTS  Xenial Xerus    Changes 16-Feb-17   Apr-21
+    Ubuntu 16.04.1 LTS  Xenial Xerus    Changes 21-Jul-16   Apr-21
+    Ubuntu 16.04 LTS    Xenial Xerus    Rel 21-Apr-16   Apr-21
+    Ubuntu 14.04.5 LTS  Trusty Tahr Changes 4-Aug-16    Apr-19
+    Ubuntu 14.04.4 LTS  Trusty Tahr Changes 18-Feb-16   HWE August 2016
+    Ubuntu 14.04.3 LTS  Trusty Tahr Changes 6-Aug-15    HWE August 2016
+    Ubuntu 14.04.2 LTS  Trusty Tahr Changes 20-Feb-15   HWE August 2016
+    Ubuntu 14.04.1 LTS  Trusty Tahr Changes 24-Jul-14   Apr-19
+    Ubuntu 14.04 LTS    Trusty Tahr Rel 17-Apr-14   Apr-19
+                    
+    Release announcements are posted on the ubuntu-announce mailing list.               
+                    
+    Future              
+                    
+    Version Code name   Docs    Release date    End of Life date
+    Ubuntu 18.04 LTS    Bionic Beaver       Apr-18  
+                    
+    End of Life             
+                    
+    Version Code name   Docs    Release date    End of Life date
+    Ubuntu 17.04    Zesty Zapus Rel 13-Apr-17   13-Jan-18
+    Ubuntu 16.10    Yakkety Yak Rel 13-Oct-16   20-Jul-17
+    Ubuntu 15.10    Wily Werewolf   Rel 22-Oct-15   28-Jul-16
+    Ubuntu 15.04    Vivid Vervet    Rel 23-Apr-15   4-Feb-16
+    Ubuntu 14.10    Utopic Unicorn  Rel 23-Oct-14   23-Jul-15
+    Ubuntu 13.10    Saucy Salamander    Rel 17-Oct-13   17-Jul-14
+    Ubuntu 13.04    Raring Ringtail Rel 25-Apr-13   27-Jan-14
+    Ubuntu 12.10    Quantal Quetzal Tech / Rel  18-Oct-12   16-May-14
+    Ubuntu 12.04.5 LTS  Precise Pangolin    Rel 7-Aug-14    28-Apr-17
+    Ubuntu 12.04.4 LTS  Precise Pangolin    Changes 6-Feb-14    HWE August 8, 2014
+    Ubuntu 12.04.3 LTS  Precise Pangolin    Changes 23-Aug-13   HWE August 8, 2014
+    Ubuntu 12.04.2 LTS  Precise Pangolin    Changes 14-Feb-13   HWE August 8, 2014
+    Ubuntu 12.04.1 LTS  Precise Pangolin    Changes 24-Aug-12   28-Apr-17
+    Ubuntu 12.04 LTS    Precise Pangolin    Tech / Rel  26-Apr-12   28-Apr-17
+    Ubuntu 11.10    Oneiric Ocelot  Tech / Rel  13-Oct-11   9-May-13
+    Ubuntu 11.04    Natty Narwhal   Tech / Rel  28-Apr-11   28-Oct-12
+    Ubuntu 10.10    Maverick Meerkat    Tech / Rel  10-Oct-10   10-Apr-12
+    Ubuntu 10.04.4 LTS  Lucid Lynx  Changes 16-Feb-12   May 9, 2013 (Desktop)
+                    April 30, 2015 (Server)
+    Ubuntu 10.04.3 LTS  Lucid Lynx  Changes 21-Jul-11   
+    Ubuntu 10.04.2 LTS  Lucid Lynx  Changes 18-Feb-11   
+    Ubuntu 10.04.1 LTS  Lucid Lynx  Changes 17-Aug-10   
+    Ubuntu 10.04 LTS    Lucid Lynx  Tech / Rel  29-Apr-10   
+    Ubuntu 10.04    Lucid Lynx (Desktop)    Changes 16-Feb-12   9-May-13
+    Ubuntu 9.10 Karmic Koala    Tech / Rel  29-Oct-09   30-Apr-11
+    Ubuntu 9.04 Jaunty Jackalope    Tech / Rel  23-Apr-09   23-Oct-10
+    Ubuntu 8.10 Intrepid Ibex   Rel 30-Oct-08   30-Apr-10
+    Ubuntu 8.04.4 LTS   Hardy Heron (Server)    Changes 28-Jan-10   9-May-13
+    Ubuntu 8.04.3 LTS   Hardy Heron Changes 16-Jul-09   
+    Ubuntu 8.04.2 LTS   Hardy Heron Changes 22-Jan-09   
+    Ubuntu 8.04.1 LTS   Hardy Heron Hardy Heron 3-Jul-08    
+    Ubuntu 8.04 LTS Hardy Heron Hardy Heron/Rel 24-Apr-08   
+    Ubuntu 8.04 Hardy Heron (Desktop)   Rel 24-Apr-08   12-May-11
+    Ubuntu 7.10 Gutsy Gibbon    Rel 18-Oct-07   April 18th, 2009
+    Ubuntu 7.04 Feisty Fawn Rel 19-Apr-07   19-Oct-08
+    Ubuntu 6.10 Edgy Eft        26-Oct-06   26-Apr-08
+    Ubuntu 6.06.2 LTS   Dapper Drake (Server)       21-Jan-08   1-Jun-11
+    Ubuntu 6.06.1 LTS   Dapper Drake        10-Aug-06   
+    Ubuntu 6.06 LTS Dapper Drake    Rel 1-Jun-06    
+    Ubuntu 6.06 Dapper Drake (Desktop)  Rel 1-Jun-06    14-Jul-09
+    Ubuntu 5.10 Breezy Badger   Rel 12-Oct-05   13-Apr-07
+    Ubuntu 5.04 Hoary Hedgehog      8-Apr-05    31-Oct-06
+    Ubuntu 4.10 Warty Warthog       26-Oct-04   30-Apr-06
+
+
 使用说明
 ========
 
-图形界面配置（新手推荐）
-------------------------
-
-依次打开：系统设置，软件和更新。在 ``下载自`` 中选择 ``其他站点`` ，然后在中国的条目
-下选择 ``mirrors.nju.educ.cn`` 。
-
-下面是 Ubuntu 16.04 的操作示意图：
-
-.. image:: images/ubuntu-setting.png
 
 手动更改配置文件
 ----------------
@@ -83,7 +148,6 @@ AMD64 (x86_64), Intel x86
 .. tip::
     使用 HTTPS 可以有效避免国内运营商的缓存劫持。
 
-另外，也可以使用 snullp 大叔开发的 `配置生成器 <https://mirrors.nju.edu.cn/repogen>`_ 。
 
 镜像下载
 --------
