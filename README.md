@@ -3,7 +3,7 @@ README
 [^_^]:
 =======
 
-# 南大开源镜像
+# 南大开源镜像帮助文档
 * 帮助文档校园网地址: http://mirror.njuer.org/help/
 * 帮助文档公网地址: http://nju-mirror-help.njuer.org   http://njumirrorhelp.njuer.org
 * 南大开源镜像地址：https://mirrors.nju.edu.cn
