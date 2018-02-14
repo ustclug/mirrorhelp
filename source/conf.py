@@ -30,7 +30,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'NJU Mirror Help'
-copyright = ' 2017 - %s. \t  https://github.com/njulug/mirrorhelp \t  南大计算机系党支部 ' % datetime.datetime.now().year
+copyright = ' 2017 - %s. \t  https://github.com/njulug/mirrorhelp \t   ' % datetime.datetime.now().year
 author = 'LUG@NJU'
 
 # The version info for the project you're documenting, acts as replacement for
