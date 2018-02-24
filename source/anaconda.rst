@@ -22,6 +22,7 @@ Anaconda 安装包可以在 https://mirrors.ustc.edu.cn/anaconda/archive/ 下载
 ::
 
     conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
     conda config --set show_channel_urls yes
 
 相关链接
