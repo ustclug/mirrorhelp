@@ -53,7 +53,6 @@ Debian Old Old Stable, Old Stable, Stable
     使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装 ``apt-transport-https`` (Debian Buster
     及以上版本不需要)。
 
-另外，也可以使用 snullp 大叔开发的 `配置生成器 <https://mirrors.nju.edu.cn/repogen>`_ 。
 
 相关链接
 ========
