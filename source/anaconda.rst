@@ -17,6 +17,8 @@ Anaconda 仓库镜像
 
 Anaconda 安装包可以在 https://mirrors.ustc.edu.cn/anaconda/archive/ 下载。
 
+Miniconda 安装包可以在 https://mirrors.ustc.edu.cn/anaconda/miniconda/ 下载。
+
 添加USTC仓库镜像：
 
 ::
@@ -25,9 +27,9 @@ Anaconda 安装包可以在 https://mirrors.ustc.edu.cn/anaconda/archive/ 下载
     conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
     conda config --set show_channel_urls yes
 
-Miniconda 安装包可以在 https://mirrors.ustc.edu.cn/anaconda/miniconda/ 下载。
 
-Conda 三方源:
+
+Conda 附加库:
 
 - Conda Forge ::
     
