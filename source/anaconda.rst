@@ -25,6 +25,27 @@ Anaconda 安装包可以在 https://mirrors.ustc.edu.cn/anaconda/archive/ 下载
     conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
     conda config --set show_channel_urls yes
 
+Miniconda 安装包可以在 https://mirrors.ustc.edu.cn/anaconda/miniconda/ 下载。
+
+Conda 三方源:
+
+- Conda Forge ::
+    
+    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/ 
+
+- msys2 ::
+    
+    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/ 
+ 
+- bioconda :: 
+    
+    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/ 
+ 
+- menpo :: 
+
+    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/  
+
+
 相关链接
 ========
 
