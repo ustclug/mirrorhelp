@@ -33,6 +33,7 @@ USTC Mirror Help
    mageia
    manjaro
    opensuse
+   packman
    raspbian
    trisquel
    ubuntu

@@ -23,7 +23,7 @@ i586, x86_64
 手动配置软件源
 --------------
 
-.. warning::
+.. attention::
     以下配置方法适用于从未自行配置软件源的用户，其他用户请根据具体情况自行配置 ，以下仅供参考。
 
 禁用原有软件源；
@@ -32,14 +32,14 @@ i586, x86_64
 
   sudo zypper mr -da
 
-添加科大镜像源，以 openSUSE Leap 42.3 为例；
+添加科大镜像源，以 openSUSE Leap 42.3 为例：
 
 ::
 
-  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.3/repo/oss USTC:42.3:OSS
-  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.3/repo/non-oss USTC:42.3:NON-OSS
-  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.3/oss USTC:42.3:UPDATE-OSS
-  sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.3/non-oss USTC:42.3:UPDATE-NON-OSS
+  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.3/repo/oss USTC:42.3:OSS
+  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.3/repo/non-oss USTC:42.3:NON-OSS
+  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/42.3/oss USTC:42.3:UPDATE-OSS
+  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/42.3/non-oss USTC:42.3:UPDATE-NON-OSS
 
 命令中最后一个参数为每一个源指定了一个 alias （别称），可以根据个人喜好更改。
 
@@ -63,7 +63,10 @@ i586, x86_64
 注意事项
 ========
 
-* 由于使用了 MirrorBrain 技术， 中央服务器 (download.opensuse.org) 会按照 IP 地理位置中转下载请求到附近的 镜像服务器（但刷新软件源时仍从中央服务器获取元数据），所以更改软件源通常 只会加快刷新软件源的速度，而对下载速度影响不大。参见 openSUSE 中文论坛。
+* 由于使用了 MirrorBrain 技术， 中央服务器 (download.opensuse.org) 会按照 IP
+  地理位置中转下载请求到附近的镜像服务器（但刷新软件源时仍从中央服务器获取
+  元数据），所以更改软件源通常只会加快刷新软件源的速度，而对下载速度影响不大。
+  参见 `openSUSE 中文论坛 <https://forum.suse.org.cn/t/opensuse/1759>`_ 。
 * 我们不提供 source 和 debug 源。
 * Tumbleweed 滚动发行版软件源的地址与上述例子稍有不同。
 
