@@ -65,7 +65,6 @@ NJU Mirror Help
    anaconda
    brew.git
    docker-ce
-   dockerhub
    homebrew-bottles
    homebrew-core.git
    homebrew-cask.git

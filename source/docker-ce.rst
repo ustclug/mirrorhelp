@@ -42,8 +42,6 @@ Docker CE 仓库镜像
 .. tip::
     以上 Docker CE 的官方文档有中文版，但更新可能不如英文版及时，请移步 https://docs.docker-cn.com/engine/installation/ 。
 
-.. tip::
-    安装完 Docker CE 之后，替换掉官方的 Docker Registry 服务，可加快拉取 Docker 镜像的速度，请参考 :doc:`dockerhub`。
 
 相关链接
 ========
