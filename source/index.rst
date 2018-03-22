@@ -29,6 +29,7 @@ USTC Mirror Help
    gentoo
    gentoo-portage
    kali
+   lede
    linuxmint
    mageia
    manjaro
