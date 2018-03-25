@@ -31,14 +31,18 @@ Debian Old Old Stable, Old Stable, Stable
 .. warning::
     操作前请做好相应备份
 
-一般情况下，将 :file:`/etc/apt/sources.list` 文件中 Debian 默认的源地址 ``http://security.debian.org/``
+一般情况下，将 :file:`/etc/apt/sources.list` 文件中 Debian 默认的源地址 ``http://security.debian.org/debian-security/``
 替换为 ``http://mirrors.ustc.edu.cn/debian-security/`` 即可。
 
-可以使用如下命令：
+.. attention::
+    如果你在使用 Debian 8 "Jessie" 或更早的版本，则默认的 debian-security 源地址为 ``http://security.debian.org/`` （和新版不同最后没有子目录）。下面的指南主要针对最新稳定版（Debian 9 "Stretch"），请旧版本用户注意。
+
+
+可以直接使用如下命令完成上述修改：
 
 ::
 
-  sudo sed -i 's|security.debian.org|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
+  sudo sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
 
 当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
 
