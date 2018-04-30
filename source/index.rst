@@ -33,6 +33,7 @@ USTC Mirror Help
    linuxmint
    mageia
    manjaro
+   msys2
    opensuse
    packman
    raspbian
