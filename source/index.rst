@@ -80,7 +80,9 @@ USTC Mirror Help
 ----
 
 .. toctree::
+   :maxdepth: 2
 
+   rsync-guide
    todo
 
 贡献者
