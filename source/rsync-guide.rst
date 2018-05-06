@@ -36,6 +36,15 @@ rsync 同步方式
     例如，用户可以使用如下命令列出 ``ubuntu`` 仓库根目录的具体内容：
     ``rsync rsync://rsync.mirrors.ustc.edu.cn/repo/ubuntu/`` 。
 
+可同步内容
+------------
+
+您可以使用 rsync 协议访问站点上绝大部分非反向代理的仓库中的文件内容。
+
+.. tip::
+   如需获取完整的可同步仓库列表，请使用 rsync 列出 ``/repo/`` 路径下
+   的目录列表： ``rsync rsync://rsync.mirrors.ustc.edu.cn/repo/`` 。
+
 注意事项
 ----------
 
