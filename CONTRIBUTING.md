@@ -2,16 +2,16 @@
 
 ## Ways to improve the documents
 
-* Submit a issue
+* Submit an issue
 
   If you find errors in documents or want to improve, this is the easiest way to help.
   You can put your document in any format in the issue comments, then a core developer
-  will format it with reStructureText syntax and commit it into the repo.
+  will format it into reStructureText syntax and commit it to the repo.
 
 * Send a pull request
 
   This way is for those who are familiar with
-  [Git workflow](https://guides.github.com/introduction/flow/) and the
+  [Git workflow](https://guides.github.com/introduction/flow/) and
   [reStructureText](http://www.sphinx-doc.org/en/stable/rest.html).
   A PR needs to be reviewed by at least one person before merging.
 
@@ -19,19 +19,19 @@
 
 * Chinese writing guideline
 
-  Follow section 3 in https://mirrors.ustc.edu.cn/anthon/aosc-l10n/zh_CN_l10n.pdf
+  Please follow section 3 of https://mirrors.ustc.edu.cn/anthon/aosc-l10n/zh_CN_l10n.pdf
 
 * reStructureText syntax
 
-  Make sure `make html` run without errors.
+  Make sure `make html` runs without errors.
 
   Please include a single rst file in a [TOC tree](http://www.sphinx-doc.org/en/stable/markup/toctree.html).
   For example, add a reference in `index.rst`.
 
 ## Credit
 
-For those improved the documnets, the Github username will be mentioned in the
-[document](http://mirrors.ustc.edu.cn/help/contributor.html).
+For those who improved the documents, the GitHub username will be mentioned in the
+[document](https://mirrors.ustc.edu.cn/help/contributor.html).
 
 
 # 如何贡献
@@ -64,4 +64,4 @@ For those improved the documnets, the Github username will be mentioned in the
 
 ## 署名
 
-参与任何形式的贡献，相关的 Github 用户名会在[文档](http://mirrors.ustc.edu.cn/help/contributor.html)中提及。
+参与任何形式的贡献，相关的 GitHub 用户名会在[文档](https://mirrors.ustc.edu.cn/help/contributor.html)中提及。
