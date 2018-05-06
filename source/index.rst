@@ -37,6 +37,7 @@ USTC Mirror Help
    opensuse
    packman
    raspbian
+   termux
    trisquel
    ubuntu
    ubuntu-ports
