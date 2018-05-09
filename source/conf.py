@@ -107,13 +107,13 @@ html_static_path = []
 #
 # html_sidebars = {}
 
+html_search_language = 'zh'
+
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'USTCMirrorHelpdoc'
-
-html_search_language = 'zh'
 
 
 # -- Options for LaTeX output ------------------------------------------------
