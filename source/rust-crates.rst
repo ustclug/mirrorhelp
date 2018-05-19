@@ -19,17 +19,15 @@ Rust Crates Registry 源
 
 ::
 
-    [source.crates-io]
-    replace-with = 'ustc'
+    [registry]
+    index = "git://mirrors.ustc.edu.cn/crates.io-index"
 
-    [source.ustc]
-    registry = "git://mirrors.ustc.edu.cn/crates.io-index"
 
 如果所处的环境中不允许使用 git 协议，可以把上述地址改为：
 
 ::
 
-    registry = "https://mirrors.ustc.edu.cn/crates.io-index"
+    index = "git://mirrors.ustc.edu.cn/crates.io-index"
 
 相关链接
 ========
