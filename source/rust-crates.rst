@@ -32,7 +32,7 @@ Rust Crates Registry 源
     registry = "https://mirrors.ustc.edu.cn/crates.io-index"
 
 .. warning::
-    `` cargo search`` 无法使用镜像。
+    ``cargo search`` 无法使用镜像。
 
 相关链接
 ========
