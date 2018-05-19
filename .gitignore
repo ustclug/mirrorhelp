@@ -1,2 +1,3 @@
-build
 .env
+__pycache__
+build
