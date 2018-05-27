@@ -12,10 +12,11 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
 import datetime
+
+sys.path.insert(0, os.path.abspath('../exts'))
 
 
 # -- Project information -----------------------------------------------------
@@ -41,6 +42,7 @@ release = ''
 # ones.
 extensions = [
     'sphinx.ext.todo',
+    'mirrors',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -174,3 +176,6 @@ texinfo_documents = [
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 todo_link_only = True
+
+# -- Options for mirrors extension -------------------------------------------
+mirrors_domain = 'mirrors.ustc.edu.cn'

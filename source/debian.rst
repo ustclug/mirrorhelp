@@ -5,7 +5,7 @@ Debian 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/debian/
+:mirrors:`/debian,https`
 
 说明
 ====
@@ -33,25 +33,25 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
     操作前请做好相应备份
 
 一般情况下，将 :file:`/etc/apt/sources.list` 文件中 Debian 默认的源地址 ``http://deb.debian.org/``
-替换为 ``http://mirrors.ustc.edu.cn`` 即可。
+替换为 :mirrors:`/,http,literal`  即可。
 
 可以使用如下命令：
 
-::
+.. parsed-literal::
 
-  sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+  sudo sed -i 's/deb.debian.org/:mirrors:`,`/g' /etc/apt/sources.list
 
 当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
 
-::
+.. parsed-literal::
 
-    deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free
-    deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
+    deb :mirrors:`/debian,http` stable main contrib non-free
+    # deb-src :mirrors:`/debian,http` stable main contrib non-free
+    deb :mirrors:`/debian,http` stable-updates main contrib non-free
+    # deb-src :mirrors:`/debian,http` stable-updates main contrib non-free
 
-    # deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
+    # deb :mirrors:`/debian,http` stable-proposed-updates main contrib non-free
+    # deb-src :mirrors:`/debian,http` stable-proposed-updates main contrib non-free
 
 同时你也可能需要更改 Debian Security 源，请参考 :doc:`debian-security`
 
