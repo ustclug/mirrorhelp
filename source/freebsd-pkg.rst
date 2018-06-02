@@ -20,9 +20,9 @@ FreeBSD 预编译软件包镜像
 收录版本
 ========
 
-自 FreeBSD 10 以后的版本，包括 quarterly 和滚动更新的 latest 仓库
+自 FreeBSD 10 以后的版本，包括 quarterly 和滚动更新的 latest 仓库。
 
-9 以前的版本不支持新的 pkg 包管理器（pkgng），请升级到新版
+FreeBSD 9 以前的版本不支持新的 pkg 包管理器（pkgng），请升级到新版。
 
 使用方法
 ========
