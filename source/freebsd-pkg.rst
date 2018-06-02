@@ -5,58 +5,41 @@ FreeBSD pkg 源使用帮助
 地址
 ====
 
-http://mirrors.ustc.edu.cn/freebsd-pkg/
+https://mirrors.ustc.edu.cn/freebsd-pkg/
 
 说明
 ====
 
-FreeBSD pkg 软件源
+FreeBSD 预编译软件包镜像
 
 收录架构
 ========
 
-i386, amd64, aarch64, armv6, mips, mips64
-
+所有受官方支持的架构，当前稳定版 FreeBSD 11 支持的架构包括 amd64, i386, armv6, aarch64, mips, mips64。
 
 收录版本
 ========
 
-10, 11, 12
+自 FreeBSD 10 以后的版本，包括 quarterly 和滚动更新的 latest 仓库
+
+9 以前的版本不支持新的 pkg 包管理器（pkgng），请升级到新版
 
 使用方法
 ========
- 
-创建用户级 pkg 源目录
-    
-    :file:`/usr/local/etc/pkg/repos`
 
-新建源文件 
+FreeBSD pkg 包管理器的官方源配置是 :file:`/etc/pkg/FreeBSD.conf` ，请先检查该文件内容。注意其中的 ``url`` 参数配置了官方仓库的地址，我们需要把它替换为镜像站的地址。
 
-    :file:`/usr/local/etc/pkg/repos/1.ustc.conf`
-
-在 :file:`1.ustc.conf` 中添加以下内容：
+该配置文件是 FreeBSD 基本系统的一部分，会随着 ``freebsd-update`` 更新，请不要直接修改，而是创建 :file:`/usr/local/etc/pkg/repos/FreeBSD.conf` 覆盖配置，文件内容如下：
 
 ::
 
-		ustc: {
-		  url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest",
-		  mirror_type: "srv",
-		  signature_type: "none",
-		  fingerprints: "/usr/share/keys/pkg",
-		  enabled: yes
-		}
-	
+  FreeBSD: {
+    url: "pkg+https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+  }
 
-禁用系统级 pkg 源（推荐）
+如果要使用滚动更新的 latest 仓库，把 ``url`` 配置最后的 ``quarterly`` 换成 ``latest`` 即可。
 
-::
-	
-    mv /etc/pkg/FreeBSD.conf /etc/pkg/FreeBSD.conf.back
-
- 
-然后运行 ``pkg update -f`` 更新索引以生效。 
-
-
+修改配置后，运行 ``pkg update -f`` 更新索引。
 
 相关链接
 ========
