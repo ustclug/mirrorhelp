@@ -21,7 +21,7 @@ PyPI(pip) 软件源
 
 * Unix 环境: :file:`$HOME/.config/pip/pip.conf`
 * macOS: :file:`$HOME/Library/Application Support/pip/pip.conf`
-* Windows: :file:`%APPDATA%\\pip\\pip.ini` （通常是 :file:`C:\Users\YOUR_USERNAME\AppData\Roaming`）
+* Windows: :file:`%APPDATA%\\pip\\pip.ini` （:file:`%APPDATA%` 通常是 :file:`C:\\Users\\YOUR_USERNAME\\AppData\\Roaming\\`）
 
 全局或者 ``virtualenv`` 等的 ``pip`` 配置文件位置，请参考 https://pip.pypa.io/en/stable/user_guide/#configuration
 
