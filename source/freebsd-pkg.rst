@@ -34,12 +34,15 @@ FreeBSD pkg 包管理器的官方源配置是 :file:`/etc/pkg/FreeBSD.conf` ，�
 ::
 
   FreeBSD: {
-    url: "pkg+https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+    url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
   }
 
 如果要使用滚动更新的 latest 仓库，把 ``url`` 配置最后的 ``quarterly`` 换成 ``latest`` 即可。
 
 修改配置后，运行 ``pkg update -f`` 更新索引。
+
+.. tip::
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装 ``security/ca_root_nss`` 软件包。
 
 相关链接
 ========
