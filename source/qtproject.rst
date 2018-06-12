@@ -16,5 +16,4 @@ https://mirrors.ustc.edu.cn/qtproject/
 
 :官方主页: https://qt.io/
 :文档: http://doc.qt.io/
-:Wiki: https://wiki.ubuntu.com/
 :论坛: http://forum.qt.io/
