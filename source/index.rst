@@ -53,6 +53,7 @@ USTC Mirror Help
    :maxdepth: 1
    
    hackage
+   nodesource
    pypi
    rubygems
    rust-crates
