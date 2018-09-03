@@ -34,6 +34,7 @@ https://mirrors.ustc.edu.cn/archive.raspberrypi.org/
 
 .. warning::
     操作前请做好相应备份
+    
     老的地址 ``http://mirrors.ustc.edu.cn/archive.raspberrypi.org`` 已经不可用，请切换至     ``http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian`` 后更新
 
 一般情况下，将 :file:`/etc/apt/sources.list.d/raspi.list` 文件中默认的源地址 ``http://archive.raspberrypi.org/``
