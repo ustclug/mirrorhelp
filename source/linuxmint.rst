@@ -31,16 +31,16 @@ i386，amd64
  
 编辑 :file:`/etc/apt/sources.list.d/official-package-repositories.list` ：
 
-* 对于基于 Ubuntu 的原版，以 Linuxmint 18.2 为例：
+* 对于基于 Ubuntu 的原版，以 Linuxmint 19 为例：
 
 ::
 
-	deb https://mirrors.ustc.edu.cn/linuxmint/ sonya main upstream import backport 
-	deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
-	deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
-	deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
-	deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-	deb http://archive.canonical.com/ubuntu/ xenial partner
+	deb https://mirrors.ustc.edu.cn/linuxmint/ tara main upstream import backport 
+	deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
+	deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+	deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+	deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+	deb http://archive.canonical.com/ubuntu/ bionic partner
 	
 * 对于基于 Debian 的 LMDE，以 LMDE 2 为例：
 

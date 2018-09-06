@@ -29,11 +29,15 @@ USTC Mirror Help
    gentoo
    gentoo-portage
    kali
+   lede
    linuxmint
    mageia
    manjaro
+   msys2
    opensuse
+   packman
    raspbian
+   termux
    trisquel
    ubuntu
    ubuntu-ports
@@ -49,6 +53,7 @@ USTC Mirror Help
    :maxdepth: 1
    
    hackage
+   nodesource
    pypi
    rubygems
    rust-crates
@@ -76,7 +81,9 @@ USTC Mirror Help
 ----
 
 .. toctree::
+   :maxdepth: 2
 
+   rsync-guide
    todo
 
 贡献者

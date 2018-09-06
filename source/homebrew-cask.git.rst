@@ -19,15 +19,19 @@ Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件
 
 ::
 
-    cd "$(brew --repo)"/Library/Taps/caskroom/homebrew-cask
+    cd "$(brew --repo)"/Library/Taps/homebrew/homebrew-cask
     git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
 
 重置为官方地址：
 
 ::
 
-    cd "$(brew --repo)"/Library/Taps/caskroom/homebrew-cask
-    git remote set-url origin https://github.com/caskroom/homebrew-cask
+    cd "$(brew --repo)"/Library/Taps/homebrew/homebrew-cask
+    git remote set-url origin https://github.com/Homebrew/homebrew-cask
+    
+.. note::
+    Caskroom 的 Git 地址在 2018 年 5 月 25 日从 https://github.com/caskroom/homebrew-cask 迁移到了
+    https://github.com/Homebrew/homebrew-cask 。
 
 相关镜像
 ========
@@ -39,4 +43,4 @@ Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件
 ========
 
 :官方主页: https://caskroom.github.io
-:Homrbew: http://brew.sh/
+:Homrbew: https://brew.sh/
