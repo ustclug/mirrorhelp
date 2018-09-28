@@ -10,58 +10,24 @@ https://mirrors.ustc.edu.cn/anthon
 说明
 ====
 
-AOSC OS（安同 OS）软件源
-
-收录架构
-========
-
-AOSC OS 支持的所有架构，包括：
-
-* AMD64（x86_64）
-* ARM
-
-  * ARMv7（armel）
-  * ARMv8（arm64, aarch64）
-
-* MIPS
-
-  * mipsel
-  * mips64el
-
-* PowerPC
-
-  * powerpc（ppc32）
-  * ppc64
+AOSC OS（安同 OS）软件源。AOSC OS 是一个由安同开源社区（https://aosc.io）开发的半滚动 Linux 发行版，支持多种处理器架构。
 
 使用说明
 ========
 
-AOSC OS 内置 ``apt-gen-list`` 工具来开关镜像源。要使用 USTC 源，执行：
+AOSC OS 内置 ``apt-gen-list`` 工具来开关社区提供的可用镜像源。要启用 USTC 源，执行：
 
 ::
 
-  sudo apt-gen-list -e 10-ustc
+  sudo apt-gen-list m +ustc
 
-注意目前这将关闭其它镜像源。详细用法请执行 ``apt-gen-list -h`` 获取。
-
-当然，也可以直接编辑 :file:`/etc/apt/sources.list` 文件。对于任一架构 ``${ARCH}``，需要在 :file:`/etc/apt/sources.list` 中同时写入：
+要仅启用 USTC 源，执行：
 
 ::
 
-  deb https://mirrors.ustc.edu.cn/anthon/os-${ARCH}/os3-dpkg/ /
-  deb https://mirrors.ustc.edu.cn/anthon/os-noarch/os3-dpkg/ /
+  sudo apt-gen-list m ustc
 
-其中 ``${ARCH}`` 可以是：
-
-* ``amd64`` （x86_64）
-* ``armel`` （ARMv7）
-* ``arm64`` （ARMv8）
-* ``mipsel``
-* ``mips64el``
-* ``powerpc``
-* ``ppc64``
-
-执行完上面任一步骤后，请运行 ``sudo apt-get update`` 更新索引以生效。
+关于 ``apt-gen-list`` 的语义和详细用法，请执行 ``apt-gen-list help`` 查看帮助。
 
 相关链接
 ========
