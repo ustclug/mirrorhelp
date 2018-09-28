@@ -1,5 +1,5 @@
 ======================
-Rust Crates 源 (crates.io-index) 使用帮助
+Rust Crates 源使用帮助
 ======================
 
 地址
