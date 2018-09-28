@@ -56,7 +56,7 @@ USTC Mirror Help
    nodesource
    pypi
    rubygems
-   rust-crates
+   crates.io-index
    rust-static
    stackage
 
