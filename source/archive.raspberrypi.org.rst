@@ -5,7 +5,7 @@ Raspberrypi 源使用帮助
 地址
 ====
 
-https://mirrors.nju.edu.cn/archive.raspberrypi.org/
+https://mirrors.nju.edu.cn/raspberrypi/
 
 说明
 ====
@@ -36,20 +36,20 @@ https://mirrors.nju.edu.cn/archive.raspberrypi.org/
     操作前请做好相应备份
 
 一般情况下，将 :file:`/etc/apt/sources.list.d/raspi.list` 文件中默认的源地址 ``http://archive.raspberrypi.org/``
-替换为 ``http://mirrors.nju.edu.cn/archive.raspberrypi.org/`` 即可。
+替换为 ``http://mirrors.nju.edu.cn/raspberrypi/`` 即可。
 
 可以使用如下命令：
 
 ::
 
-  sudo sed -i 's|//archive.raspberrypi.org|//mirrors.nju.edu.cn/archive.raspberrypi.org|g' /etc/apt/sources.list.d/raspi.list
+  sudo sed -i 's|//archive.raspberrypi.org|//mirrors.nju.edu.cn/raspberrypi|g' /etc/apt/sources.list.d/raspi.list
 
 当然也可以直接编辑 :file:`/etc/apt/sources.list.d/raspi.list` 文件（需要使用 sudo）。以下是 Stretch 的参考配置内容：
 
 ::
 
-    deb http://mirrors.nju.edu.cn/archive.raspberrypi.org/debian/ stretch main ui
-    #deb-src http://mirrors.nju.edu.cn/archive.raspberrypi.org/debian/ stretch main ui
+    deb http://mirrors.nju.edu.cn/raspberrypi/debian/ stretch main ui
+    #deb-src http://mirrors.nju.edu.cn/raspberrypi/debian/ stretch main ui
 
 更改完 :file:`raspi.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
 

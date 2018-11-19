@@ -219,7 +219,7 @@
 <h1>Raspberrypi 源使用帮助<a class="headerlink" href="#raspberrypi" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
 <h2>地址<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://mirrors.nju.edu.cn/archive.raspberrypi.org/">https://mirrors.nju.edu.cn/archive.raspberrypi.org/</a></p>
+<p><a class="reference external" href="https://mirrors.nju.edu.cn/raspberrypi/">https://mirrors.nju.edu.cn/raspberrypi/</a></p>
 </div>
 <div class="section" id="id2">
 <h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
@@ -250,14 +250,14 @@
 <p class="last">操作前请做好相应备份</p>
 </div>
 <p>一般情况下，将 <code class="file docutils literal"><span class="pre">/etc/apt/sources.list.d/raspi.list</span></code> 文件中默认的源地址 <code class="docutils literal"><span class="pre">http://archive.raspberrypi.org/</span></code>
-替换为 <code class="docutils literal"><span class="pre">http://mirrors.nju.edu.cn/archive.raspberrypi.org/</span></code> 即可。</p>
+替换为 <code class="docutils literal"><span class="pre">http://mirrors.nju.edu.cn/raspberrypi/</span></code> 即可。</p>
 <p>可以使用如下命令：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s|//archive.raspberrypi.org|//mirrors.nju.edu.cn/archive.raspberrypi.org|g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">raspi</span><span class="o">.</span><span class="n">list</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s|//archive.raspberrypi.org|//mirrors.nju.edu.cn/raspberrypi|g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">raspi</span><span class="o">.</span><span class="n">list</span>
 </pre></div>
 </div>
 <p>当然也可以直接编辑 <code class="file docutils literal"><span class="pre">/etc/apt/sources.list.d/raspi.list</span></code> 文件（需要使用 sudo）。以下是 Stretch 的参考配置内容：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">archive</span><span class="o">.</span><span class="n">raspberrypi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">debian</span><span class="o">/</span> <span class="n">stretch</span> <span class="n">main</span> <span class="n">ui</span>
-<span class="c1">#deb-src http://mirrors.nju.edu.cn/archive.raspberrypi.org/debian/ stretch main ui</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">nju</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">raspberrypi</span><span class="o">/</span><span class="n">debian</span><span class="o">/</span> <span class="n">stretch</span> <span class="n">main</span> <span class="n">ui</span>
+<span class="c1">#deb-src http://mirrors.nju.edu.cn/raspberrypi/debian/ stretch main ui</span>
 </pre></div>
 </div>
 <p>更改完 <code class="file docutils literal"><span class="pre">raspi.list</span></code> 文件后请运行 <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code> 更新索引以生效。</p>
