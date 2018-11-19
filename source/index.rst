@@ -11,6 +11,7 @@ USTC Mirror Help
    anthon
    archlinux
    archlinuxcn
+   archlinuxarm
    blackarch
    centos
    epel
@@ -51,7 +52,7 @@ USTC Mirror Help
 
 .. toctree::
    :maxdepth: 1
-   
+
    hackage
    nodesource
    pypi
