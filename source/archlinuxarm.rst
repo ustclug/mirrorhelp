@@ -24,7 +24,7 @@ ARMv5, ARMv6, ARMv7, AArch64
 
 ::
 
-    Server = https://mirrors.ustc.edu.cn/archlinuxarm/$repo/os/$arch
+    Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
 
 相关链接
 ========
