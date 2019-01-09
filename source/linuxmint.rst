@@ -36,11 +36,11 @@ i386，amd64
 ::
 
 	deb https://mirrors.nju.edu.cn/linuxmint/ tessa main upstream import backport
-	deb https://mirrors.nju.edu.cn/ubuntu/ xenial main restricted universe multiverse
-	deb https://mirrors.nju.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
-	deb https://mirrors.nju.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
-	deb https://mirrors.nju.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-	deb http://archive.canonical.com/ubuntu/ xenial partner
+	deb https://mirrors.nju.edu.cn/ubuntu/ bionic main restricted universe multiverse
+	deb https://mirrors.nju.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+	deb https://mirrors.nju.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+	deb https://mirrors.nju.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+	deb http://archive.canonical.com/ubuntu/ bionic partner
 	
 * 对于基于 Debian 的 LMDE，以 LMDE 2 为例：
 
