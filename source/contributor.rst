@@ -5,7 +5,7 @@
 当前版本贡献者 
 ===============
 * https://github.com/njulug/mirrorhelp 
-* 南大计算机系党支部: njulug, 其它GITHUB网友：Mygod
+* 南大计算机系党支部: njulug, GITHUB网友：Mygod
 
 
 原始版本贡献者
