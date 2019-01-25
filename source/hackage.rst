@@ -47,6 +47,7 @@ Cabal ≥ 1.24 (GHC 8.0)
 
     repository mirrors.ustc.edu.cn
       url: https://mirrors.ustc.edu.cn/hackage/
+      secure: False
 
 Cabal < 1.24
 ------------
