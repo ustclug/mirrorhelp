@@ -12,18 +12,7 @@ https://mirrors.ustc.edu.cn/hackage/
 
 Hackage 镜像
 
-stack使用说明
-=============
-
-编辑 ``~/.stack/config.yaml``, 增加下列参数
-
-::
-
-    package-indices:
-      - name: USTC
-        download-prefix: https://mirrors.ustc.edu.cn/hackage/package/
-        http: https://mirrors.ustc.edu.cn/hackage/01-index.tar.gz
-
+搭建USTC Stackage源: :doc:`stackage`。
 
 cabal使用说明
 =============

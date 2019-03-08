@@ -18,12 +18,17 @@ Stackage 镜像
 编辑 ``~/.stack/config.yaml``, 增加下列配置
 
 ::
-    
-    setup-info: "http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml"
-    urls:
-      latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
-      lts-build-plans: http://mirrors.ustc.edu.cn/stackage/lts-haskell/
-      nightly-build-plans: http://mirrors.ustc.edu.cn/stackage/stackage-nightly/
+
+   package-indices:
+   - name: USTC
+     download-prefix: https://mirrors.ustc.edu.cn/hackage/package/
+     http: https://mirrors.ustc.edu.cn/hackage/01-index.tar.gz
+
+   setup-info: "http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml"
+   urls:
+     latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
+     lts-build-plans: http://mirrors.ustc.edu.cn/stackage/lts-haskell/
+     nightly-build-plans: http://mirrors.ustc.edu.cn/stackage/stackage-nightly/
 
 推荐搭配USTC Hackage源使用: :doc:`hackage`
 
