@@ -35,13 +35,14 @@ Linux
 ::
 
     {
-      "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn/"]
+      "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn/"],
+      "insecure-registries": []
     }
 
 重新启动 dockerd：
 
 ::
-
+  sudo systemctl daemon-reload
   sudo systemctl restart docker
 
 macOS
