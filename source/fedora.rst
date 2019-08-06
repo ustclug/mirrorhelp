@@ -25,6 +25,11 @@ x86_64
 使用说明
 ========
 
+
+以root运行以下脚本或者手动操作
+
+.. literalinclude:: includes/fedora.ustcfy.sh
+
 .. warning::
     操作前请做好相应备份。
 
