@@ -20,13 +20,18 @@ Termux APT 源镜像
 使用说明
 ==============
 
-用文本编辑器（如 ``vim`` ）打开 :file:`/data/data/com.termux/files/usr/etc/apt/sources.list`，将 ``https://termux.net`` 替换成 ``https://mirrors.ustc.edu.cn/termux``，保存退出即可。
+编辑 :file:`/data/data/com.termux/files/usr/etc/apt/sources.list` 为如下内容
+
+::
+
+    deb https://mirrors.ustc.edu.cn/termux stable main
 
 你也可以使用 ``sed`` 命令进行文本替换：
 
 ::
 
-    sed -i 's,https://termux.net,https://mirrors.ustc.edu.cn/termux,' $PREFIX/etc/apt/sources.list
+    sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.ustc.edu.cn/termux stable main@' $PREFIX/etc/apt/sources.list
+    pkg up
 
 注：Termux 会自动将环境变量 ``$PREFIX`` 设定为 :file:`/data/data/com.termux/files/usr`
 
@@ -34,4 +39,5 @@ Termux APT 源镜像
 ========
 
 :Termux 官网: https://termux.com/
+:FDroid: https://f-droid.org/zh_Hant/packages/com.termux
 :Google Play: https://play.google.com/store/apps/details?id=com.termux
