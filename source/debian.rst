@@ -23,7 +23,7 @@ Debian 支持的所有架构，如 AMD64 (x86_64), Intel x86, ARM, MIPS, ppc64el
 
 Debian Old Stable, Stable, Testing, Unstable(sid)
 
-当前 Stable 为 Debian 9，代号为 Stretch
+当前 Stable 为 Debian 10，代号为 Buster
 
 使用说明
 ========
