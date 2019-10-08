@@ -20,10 +20,10 @@ armhf
 收录版本
 ========
 
-* wheezy(oldoldstable)
-* jessiels(oldstable)
-* stretch(stable)
-* buster(tesing)
+* jessie (oldoldstable)
+* stretch (oldstable)
+* buster (stable)
+* bullseye (testing)
 
 使用说明
 ========
@@ -47,12 +47,12 @@ raspbian 2018-04-19 之后的镜像默认源已经更改，用如下命令替换
   sudo sed -i 's|archive.raspbian.org|mirrors.ustc.edu.cn/raspbian|g' /etc/apt/sources.list
 
 
-当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。删除原文件所有内容，用以下内容取代（以 Stretch 示例）：
+当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。删除原文件所有内容，用以下内容取代（以 Buster 示例）：
 
 ::
 
-    deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ stretch main contrib non-free rpi
-    #deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ stretch main contrib non-free rpi
+    deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
+    #deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
 
 编辑此文件后，请使用 ``sudo apt-get update`` 命令，更新软件索引。
 
