@@ -28,19 +28,33 @@ x86_64
 .. warning::
     操作前请做好相应备份。
 
-将以下内容保存到 :file:`/etc/yum.repos.d/fedora.repo` 文件：
+用以下命令替换 :file:`/etc/yum.repos.d` 下的文件
+
+::
+
+  sudo sed -e 's|^metalink=|#metalink=|g' \
+           -e 's|^#baseurl=http://download.fedoraproject.org/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g' \
+           -i.bak \
+           /etc/yum.repos.d/fedora.repo \
+           /etc/yum.repos.d/fedora-modular.repo \
+           /etc/yum.repos.d/fedora-updates.repo \
+           /etc/yum.repos.d/fedora-updates-modular.repo
+
+或者直接复制以下文件：
+
+:file:`/etc/yum.repos.d/fedora.repo` 文件：
 
 .. literalinclude:: includes/fedora.repo
 
-将以下内容保存到 :file:`/etc/yum.repos.d/fedora-updates.repo` 文件：
+:file:`/etc/yum.repos.d/fedora-updates.repo` 文件：
 
 .. literalinclude:: includes/fedora-updates.repo
 
-将以下内容保存到 :file:`/etc/yum.repos.d/fedora-modular.repo` 文件：
+:file:`/etc/yum.repos.d/fedora-modular.repo` 文件：
 
 .. literalinclude:: includes/fedora-modular.repo
 
-将以下内容保存到 :file:`/etc/yum.repos.d/fedora-updates-modular.repo` 文件：
+:file:`/etc/yum.repos.d/fedora-updates-modular.repo` 文件：
 
 .. literalinclude:: includes/fedora-updates-modular.repo
 
