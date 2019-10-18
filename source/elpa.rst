@@ -38,9 +38,9 @@ Spacemacs 使用说明
 ::
 
    (setq configuration-layer--elpa-archives
-         '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
-           ("org-cn"   . "http://elpa.emacs-china.org/org/")
-           ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
+         '(("melpa-cn" . "https://mirrors.ustc.edu.cn/elpa/melpa/")
+           ("org-cn"   . "https://mirrors.ustc.edu.cn/elpa/org/")
+           ("gnu-cn"   . "https://mirrors.ustc.edu.cn/elpa/gnu/")))
 
 develop 分支应使用 ``configuration-layer-elpa-archives`` 代替上面代码中的 ``configuration-layer--elpa-archives`` （ ``--`` 换成 ``-`` ）。
 
