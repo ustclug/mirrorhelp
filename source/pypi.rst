@@ -15,26 +15,22 @@ PyPI(pip) 软件源
 使用说明
 ========
 
-编辑 ``pip`` 配置文件，将 ``index-url`` 修改为 ``https://mirrors.ustc.edu.cn/pypi/web/simple`` 。
-
-``pip`` 的配置文件一般位于（如果没有，请直接创建）：
-
-* Unix 环境: :file:`$HOME/.config/pip/pip.conf`
-* macOS: :file:`$HOME/Library/Application Support/pip/pip.conf`
-* Windows: :file:`%APPDATA%\\pip\\pip.ini` （:file:`%APPDATA%` 通常是 :file:`C:\\Users\\YOUR_USERNAME\\AppData\\Roaming\\`）
-
-全局或者 ``virtualenv`` 等的 ``pip`` 配置文件位置，请参考 https://pip.pypa.io/en/stable/user_guide/#configuration
-
-:file:`pip.conf` 文件配置示例如下：
+临时使用
+--------
 
 ::
 
-    [global]
-    index-url = https://mirrors.ustc.edu.cn/pypi/web/simple
-    format = columns
+    pip install -i https://mirrors.ustc.edu.cn/pypi/web/simple package
 
-使用 ``pip`` 时如果出现 ``configparser.MissingSectionHeaderError: File contains no section headers.``,
-说明你的 ``pip.conf`` 忘记加上 ``[global]`` 这一行了。
+设为默认
+--------
+
+升级 ``pip`` 到最新的版本 ``(>=10.0.0)`` 后进行配置：
+
+::
+    # 使用本镜像站来升级 pip
+    pip install -i https://mirrors.ustc.edu.cn/pypi/web/simple pip -U
+    pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
 
 同步方式
 ========
