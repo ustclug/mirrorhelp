@@ -25,7 +25,6 @@ PyPI(pip) 软件源
 
 ::
 
-
     pip install -i https://mirrors.ustc.edu.cn/pypi/web/simple package
 
 设为默认
@@ -34,6 +33,7 @@ PyPI(pip) 软件源
 升级 ``pip`` 到最新的版本 ``(>=10.0.0)`` 后进行配置：
 
 ::
+
     # 使用本镜像站来升级 pip
     pip install -i https://mirrors.ustc.edu.cn/pypi/web/simple pip -U
     pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
