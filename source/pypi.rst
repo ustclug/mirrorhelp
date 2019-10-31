@@ -25,6 +25,7 @@ PyPI(pip) 软件源
 
 ::
 
+
     pip install -i https://mirrors.ustc.edu.cn/pypi/web/simple package
 
 设为默认
