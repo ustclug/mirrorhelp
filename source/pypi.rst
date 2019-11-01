@@ -15,6 +15,8 @@ https://mirrors.ustc.edu.cn/pypi/
 
 PyPI(pip) 软件源
 
+注意
+
 使用说明
 ========
 
