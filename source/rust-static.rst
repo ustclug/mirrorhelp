@@ -26,7 +26,7 @@ rustup 安装方法可参考官方的 `文档 <https://github.com/rust-lang-nurs
 
     export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
-windows下对应的设置环境变量的powershell命令为 ：
+Windows 下对应的设置环境变量的 PowerShell 命令为：
 
 ::
 
