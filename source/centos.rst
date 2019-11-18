@@ -20,7 +20,7 @@ x86_64, i386
 收录版本
 ========
 
-5, 6, 7
+5, 6, 7, 8
 
 使用说明
 ========
@@ -203,6 +203,15 @@ x86_64, i386
   enabled=0
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
   
+这是CentOS 8 的：
+::
+  [BaseOS]
+  name=CentOS-$releasever - Base
+  baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/BaseOS/$basearch/os/
+  gpgcheck=1
+  enabled=1
+  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
 运行 ``sudo yum makecache`` 生成缓存。
 
 相关链接
