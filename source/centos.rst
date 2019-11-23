@@ -205,6 +205,7 @@ x86_64, i386
   
 这是 CentOS 8 的：
 ::
+
   # CentOS-Base.repo
   #
   # The mirror system uses the connecting IP address of the client and the
@@ -224,7 +225,7 @@ x86_64, i386
   gpgcheck=1
   enabled=1
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
-
+  
   #additional packages that may be useful
   [extras]
   name=CentOS-$releasever - Extras
