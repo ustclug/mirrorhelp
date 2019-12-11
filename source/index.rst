@@ -78,6 +78,7 @@ USTC Mirror Help
    homebrew-cask.git
    mariadb
    archive.raspberrypi.org
+   ros
 
 其他
 ----
