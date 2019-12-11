@@ -26,11 +26,9 @@ Ubuntu, Debian
 
 2. 导入key::
 
-    sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+    sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 
-如果此服务器不可用，可以尝试换用 ``hkp://pgp.mit.edu:80`` 或 ``hkp://keyserver.ubuntu.com:80``。
-
-3. 刷新软件源缓存 ``sudo apt update``。
+3. 刷新软件源缓存 ``sudo apt update``，安装所需的ros发行版。
 
 相关链接
 ========
