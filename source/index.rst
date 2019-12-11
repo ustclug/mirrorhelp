@@ -72,6 +72,7 @@ USTC Mirror Help
    brew.git
    docker-ce
    dockerhub
+   elpa
    homebrew-bottles
    homebrew-core.git
    homebrew-cask.git

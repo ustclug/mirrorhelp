@@ -25,94 +25,38 @@ x86_64
 使用说明
 ========
 
-.. warning:: 
+.. warning::
     操作前请做好相应备份。
 
-将以下保存为 :file:`fedora.repo` ：
+用以下命令替换 :file:`/etc/yum.repos.d` 下的文件
 
 ::
 
-  [fedora]
-  name=Fedora $releasever - $basearch - ustc
-  failovermethod=priority
-  baseurl=https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/
-  #metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch
-  enabled=1
-  metadata_expire=7d
-  repo_gpgcheck=0
-  type=rpm
-  gpgcheck=1
-  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
-  skip_if_unavailable=False
-  
-  [fedora-debuginfo]
-  name=Fedora $releasever - $basearch - Debug - ustc
-  failovermethod=priority
-  baseurl=https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/debug/tree/
-  #metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&arch=$basearch
-  enabled=0
-  metadata_expire=7d
-  repo_gpgcheck=0
-  type=rpm
-  gpgcheck=1
-  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
-  skip_if_unavailable=False
-  
-  [fedora-source]
-  name=Fedora $releasever - Source - ustc
-  failovermethod=priority
-  baseurl=https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/source/tree/
-  #metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&arch=$basearch
-  enabled=0
-  metadata_expire=7d
-  repo_gpgcheck=0
-  type=rpm
-  gpgcheck=1
-  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
-  skip_if_unavailable=False
+  sudo sed -e 's|^metalink=|#metalink=|g' \
+           -e 's|^#baseurl=http://download.fedoraproject.org/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g' \
+           -i.bak \
+           /etc/yum.repos.d/fedora.repo \
+           /etc/yum.repos.d/fedora-modular.repo \
+           /etc/yum.repos.d/fedora-updates.repo \
+           /etc/yum.repos.d/fedora-updates-modular.repo
 
-将以下保存为 :file:`fedora-updates.repo` ：
+或者直接复制以下文件：
 
-::
+:file:`/etc/yum.repos.d/fedora.repo` 文件：
 
-  [updates]
-  name=Fedora $releasever - $basearch - Updates - ustc
-  failovermethod=priority
-  baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/$basearch/
-  #metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch
-  enabled=1
-  repo_gpgcheck=0
-  type=rpm
-  gpgcheck=1
-  metadata_expire=6h
-  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
-  skip_if_unavailable=False
-  
-  [updates-debuginfo]
-  name=Fedora $releasever - $basearch - Updates - Debug - ustc
-  failovermethod=priority
-  baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/$basearch/debug/tree/
-  #metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f$releasever&arch=$basearch
-  enabled=0
-  repo_gpgcheck=0
-  type=rpm
-  gpgcheck=1
-  metadata_expire=6h
-  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
-  skip_if_unavailable=False
-  
-  [updates-source]
-  name=Fedora $releasever - Updates Source - ustc
-  failovermethod=priority
-  baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/source/tree/
-  #metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&arch=$basearch
-  enabled=0
-  repo_gpgcheck=0
-  type=rpm
-  gpgcheck=1
-  metadata_expire=6h
-  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
-  skip_if_unavailable=False
+.. literalinclude:: includes/fedora.repo
+
+:file:`/etc/yum.repos.d/fedora-updates.repo` 文件：
+
+.. literalinclude:: includes/fedora-updates.repo
+
+:file:`/etc/yum.repos.d/fedora-modular.repo` 文件：
+
+.. literalinclude:: includes/fedora-modular.repo
+
+:file:`/etc/yum.repos.d/fedora-updates-modular.repo` 文件：
+
+.. literalinclude:: includes/fedora-updates-modular.repo
 
 最后运行 ``sudo dnf makecache`` 生成缓存。
 

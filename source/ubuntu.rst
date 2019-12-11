@@ -81,6 +81,9 @@ AMD64 (x86_64), Intel x86
 更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
 
 .. tip::
+    如要用于其他版本，把 xenial 换成其他版本代号即可: 18.04：``bionic``；17.10：``artful``；16.04：``xenial``；14.04：``trusty``。
+
+.. tip::
     使用 HTTPS 可以有效避免国内运营商的缓存劫持。
 
 另外，也可以使用 snullp 大叔开发的 `配置生成器 <https://mirrors.ustc.edu.cn/repogen>`_ 。
