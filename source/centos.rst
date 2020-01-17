@@ -31,7 +31,13 @@ x86_64, i386
 
   mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
   
-下载对应版本的 :file:`CentOS-Base.repo` , 放入 :file:`/etc/yum.repos.d/`
+对于 CentOS 8 需要删除重复的 :file:`repo`
+
+::
+
+  rm -f /etc/yum.repos.d/CentOS-AppStream.repo /etc/yum.repos.d/CentOS-PowerTools.repo /etc/yum.repos.d/CentOS-centosplus.repo /etc/yum.repos.d/CentOS-Extras.repo
+  
+接着复制对应版本的 :file:`CentOS-Base.repo` , 放入 :file:`/etc/yum.repos.d/CentOS-Base.repo`
 
 这是 CentOS 5 的： 
 
@@ -203,7 +209,7 @@ x86_64, i386
   enabled=0
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
   
-这是 CentOS 8 的：
+这是 CentOS 8 的： 
 ::
 
   # CentOS-Base.repo
@@ -260,7 +266,7 @@ x86_64, i386
   enabled=0
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 
-之后运行 ``sudo yum makecache`` 生成缓存。
+最后运行 ``sudo yum makecache`` 生成缓存。
 
 相关链接
 ========
