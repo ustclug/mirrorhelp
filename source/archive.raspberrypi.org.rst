@@ -25,9 +25,9 @@ https://mirrors.ustc.edu.cn/archive.raspberrypi.org/
 收录版本
 ========
 
-* wheezy
 * jessie
 * stretch
+* buster
 
 使用说明
 ========
@@ -42,19 +42,19 @@ https://mirrors.ustc.edu.cn/archive.raspberrypi.org/
 
 ::
 
-  sudo sed -i 's|//archive.raspberrypi.org|//mirrors.ustc.edu.cn/archive.raspberrypi.org|g' /etc/apt/sources.list.d/raspi.list
+    sudo sed -i 's|//archive.raspberrypi.org|//mirrors.ustc.edu.cn/archive.raspberrypi.org|g' /etc/apt/sources.list.d/raspi.list
 
-当然也可以直接编辑 :file:`/etc/apt/sources.list.d/raspi.list` 文件（需要使用 sudo）。以下是 Stretch 的参考配置内容：
+当然也可以直接编辑 :file:`/etc/apt/sources.list.d/raspi.list` 文件（需要使用 sudo）。以下是 Buster 的参考配置内容：
 
 ::
 
-    deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ stretch main ui
-    #deb-src http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ stretch main ui
+    deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ buster main ui
+    #deb-src http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ buster main ui
 
 更改完 :file:`raspi.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
 
 .. tip::
-    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装 ``apt-transport-https``。
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但 Stretch 及老版本系统需要事先安装 ``apt-transport-https``。
 
 相关链接
 ========
