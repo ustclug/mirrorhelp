@@ -10,7 +10,7 @@ https://mirrors.ustc.edu.cn/centos/
 说明
 ====
 
-CentOS 软件源.
+CentOS 软件源
 
 收录架构
 ========
