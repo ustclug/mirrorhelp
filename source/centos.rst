@@ -44,7 +44,7 @@ x86_64, i386
 ::
 
   sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' \
-           -e 's|^#baseurl=http://mirror.centos.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/centos|g' \
+           -e 's|^#baseurl=http://mirror.centos.org/centos|baseurl=https://mirrors.ustc.edu.cn/centos|g' \
            -i.bak \
            /etc/yum.repos.d/CentOS-Base.repo
 
