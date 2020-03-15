@@ -82,8 +82,8 @@ x86_64, i386
 ========
 
 :官方主页: https://www.centos.org/
-:邮件列表: https://www.centos.org/modules/tinycontent/index.php?id=16
-:论坛: https://www.centos.org/modules/newbb/
-:文档: https://www.centos.org/docs/
-:Wiki: https://wiki.centos.org/
-:镜像列表: https://www.centos.org/modules/tinycontent/index.php?id=32
+:邮件列表: https://wiki.centos.org/zh/GettingHelp/ListInfo
+:论坛: https://forums.centos.org/
+:文档: https://docs.centos.org/
+:Wiki: https://wiki.centos.org/zh/
+:镜像列表: https://www.centos.org/download/mirrors/

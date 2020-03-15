@@ -40,5 +40,5 @@ Red Hat Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux (OL
 相关链接
 ========
 
-:WIKI: http://fedoraproject.org/wiki/EPEL
-:FAQ: http://fedoraproject.org/wiki/EPEL/faq
+:WIKI: https://fedoraproject.org/wiki/EPEL
+:FAQ: https://fedoraproject.org/wiki/EPEL/FAQ
