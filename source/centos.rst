@@ -233,7 +233,7 @@ x86_64, i386
   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
   
   #additional packages that may be useful
-  [extras]
+  [Extras]
   name=CentOS-$releasever - Extras
   #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras&infra=$infra
   baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/extras/$basearch/os/
