@@ -15,6 +15,9 @@ Rust Crates Registry 源
 使用说明
 ========
 
+.. warning::
+    使用 nightly 版本时，Crates 源可能会出现 :code:`Couldn't resolve host name (Could not resolve host: crates)` 错误（见 https://github.com/ustclug/discussions/issues/294）。一个临时的解决方法是在运行 :code:`cargo` 的时候加入环境变量 :code:`CARGO_HTTP_MULTIPLEXING=false`。
+
 在 :file:`$HOME/.cargo/config` 中添加如下内容：
 
 ::
