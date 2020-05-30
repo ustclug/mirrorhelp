@@ -15,7 +15,28 @@ Stackage 镜像
 使用说明
 ========
 
-编辑 ``~/.stack/config.yaml``, 增加下列配置
+推荐搭配 USTC Hackage 源使用: :doc:`hackage`
+
+编辑 ``~/.stack/config.yaml``, 根据版本的不同，增加下列配置：
+
+>= 2.3:
+
+::
+    
+    setup-info-locations:
+      - http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml
+    urls:
+      latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
+
+< 2.3, >= v2.1.1:
+
+::
+    
+    setup-info: "http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml"
+    urls:
+      latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
+
+< v2.1.1:
 
 ::
     
@@ -25,7 +46,6 @@ Stackage 镜像
       lts-build-plans: http://mirrors.ustc.edu.cn/stackage/lts-haskell/
       nightly-build-plans: http://mirrors.ustc.edu.cn/stackage/stackage-nightly/
 
-推荐搭配USTC Hackage源使用: :doc:`hackage`
 
 相关链接
 ========
