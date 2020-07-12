@@ -55,7 +55,7 @@ AMD64 (x86_64), Intel x86
   sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 
 .. tip::
-    如果你在安装时选择的语言不是英语，默认的源地址通常不是 ``http://archive.ubuntu.com/`` ，
+    Ubuntu 图形安装器会根据用户设定的时区推断 locale，这导致默认的源地址通常不是 ``http://archive.ubuntu.com/`` ，
     而是 ``http://<country-code>.archive.ubuntu.com/ubuntu/`` ，如 ``http://cn.archive.ubuntu.com/ubuntu/`` ，
     此时只需将上面的命令进行相应的替换即可，即
     ``sudo sed -i 's/cn.archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list`` 。
