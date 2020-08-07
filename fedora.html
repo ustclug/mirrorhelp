@@ -1,0 +1,512 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Fedora 源使用帮助 &mdash; USTC Mirror Help  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="FreeBSD 源使用帮助" href="freebsd.html" />
+    <link rel="prev" title="Deb Multimedia 源使用帮助" href="deb-multimedia.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> USTC Mirror Help
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="alpine.html">Alpine Linux 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="anthon.html">AOSC OS 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="archlinux.html">Arch Linux 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="archlinuxcn.html">Arch Linux CN 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="archlinuxarm.html">Arch Linux ARM 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blackarch.html">Black Arch 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centos.html">CentOS 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="epel.html">EPEL 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chakra.html">Chakra 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debian.html">Debian 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debian-security.html">Debian Security 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debian-cd.html">Debian CD 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debian-cdimage.html">Debian-cdimage 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debiancn.html">Debiancn 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deb-multimedia.html">Deb Multimedia 源使用帮助</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Fedora 源使用帮助</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">收录架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">收录版本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">使用说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">相关链接</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="freebsd.html">FreeBSD 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freebsd-pkg.html">FreeBSD pkg 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freebsd-ports.html">FreeBSD ports 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rpmfusion.html">RPM Fusion 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gentoo.html">Gentoo 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gentoo-portage.html">Gentoo Portage 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kali.html">Kali Linux 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lede.html">OpenWRT/LEDE 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linuxmint.html">Linux Mint 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mageia.html">Mageia 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manjaro.html">Manjaro Linux 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msys2.html">MSYS2 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opensuse.html">openSUSE 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packman.html">PackMan 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspbian.html">Raspbian 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="termux.html">Termux 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trisquel.html">Trisquel 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntu.html">Ubuntu 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntu-ports.html">Ubuntu Ports 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntu-old-releases.html">Ubuntu Old Releases 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntu-releases.html">Ubuntu Releases 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntu-cdimage.html">Ubuntu CD Image 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntu-cloud-images.html">Ubuntu Cloud Images 源使用帮助</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hackage.html">Hackage 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nodesource.html">Nodesource 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pypi.html">PyPI 镜像源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rubygems.html">Rubygems 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crates.io-index.html">Rust Crates 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rust-static.html">Rust Toolchain 反向代理使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stackage.html">Stackage 源使用帮助</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dockerhub.html">Docker Hub 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elpa.html">Emacs ELPA 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="homebrew-bottles.html">Homebrew Bottles 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="homebrew-core.git.html">Homebrew Core 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="homebrew-cask.git.html">Homebrew Cask 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mariadb.html">MariaDB 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="archive.raspberrypi.org.html">Raspberrypi 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros.html">ROS 源使用帮助</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rsync-guide.html">科大源同步方法与注意事项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">TODO List</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributor.html">文档贡献者名单</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">USTC Mirror Help</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Fedora 源使用帮助</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/fedora.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fedora">
+<h1>Fedora 源使用帮助<a class="headerlink" href="#fedora" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>地址<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://mirrors.ustc.edu.cn/fedora/">https://mirrors.ustc.edu.cn/fedora/</a></p>
+</div>
+<div class="section" id="id2">
+<h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>Fedora 软件源</p>
+</div>
+<div class="section" id="id3">
+<h2>收录架构<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>x86_64</p>
+</div>
+<div class="section" id="id4">
+<h2>收录版本<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>所有仍在支持的版本和最新测试版本</p>
+</div>
+<div class="section" id="id5">
+<h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>操作前请做好相应备份。</p>
+</div>
+<p>用以下命令替换 <code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d</span></code> 下的文件</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^metalink=|#metalink=|g&#39;</span> \
+         <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^#baseurl=http://download.fedoraproject.org/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g&#39;</span> \
+         <span class="o">-</span><span class="n">i</span><span class="o">.</span><span class="n">bak</span> \
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">fedora</span><span class="o">.</span><span class="n">repo</span> \
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">fedora</span><span class="o">-</span><span class="n">modular</span><span class="o">.</span><span class="n">repo</span> \
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">fedora</span><span class="o">-</span><span class="n">updates</span><span class="o">.</span><span class="n">repo</span> \
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">fedora</span><span class="o">-</span><span class="n">updates</span><span class="o">-</span><span class="n">modular</span><span class="o">.</span><span class="n">repo</span>
+</pre></div>
+</div>
+<p>或者直接复制以下文件：</p>
+<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/fedora.repo</span></code> 文件：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[fedora]
+name=Fedora $releasever - $basearch
+failovermethod=priority
+baseurl=https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;arch=$basearch
+enabled=1
+metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+
+[fedora-debuginfo]
+name=Fedora $releasever - $basearch - Debug
+failovermethod=priority
+baseurl=https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/debug/tree/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&amp;arch=$basearch
+enabled=0
+metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+
+[fedora-source]
+name=Fedora $releasever - Source
+failovermethod=priority
+baseurl=https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/source/tree/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&amp;arch=$basearch
+enabled=0
+metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+</pre></div>
+</div>
+<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/fedora-updates.repo</span></code> 文件：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[updates]
+name=Fedora $releasever - $basearch - Updates
+failovermethod=priority
+baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/$basearch/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&amp;arch=$basearch
+enabled=1
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+metadata_expire=6h
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+
+[updates-debuginfo]
+name=Fedora $releasever - $basearch - Updates - Debug
+failovermethod=priority
+baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/$basearch/debug/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f$releasever&amp;arch=$basearch
+enabled=0
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+metadata_expire=6h
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+
+[updates-source]
+name=Fedora $releasever - Updates Source
+failovermethod=priority
+baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/SRPMS/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&amp;arch=$basearch
+enabled=0
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+metadata_expire=6h
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+</pre></div>
+</div>
+<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/fedora-modular.repo</span></code> 文件：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[fedora-modular]
+name=Fedora Modular $releasever - $basearch
+failovermethod=priority
+baseurl=https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Modular/$basearch/os/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-modular-$releasever&amp;arch=$basearch
+enabled=1
+#metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+
+[fedora-modular-debuginfo]
+name=Fedora Modular $releasever - $basearch - Debug
+failovermethod=priority
+baseurl=https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Modular/$basearch/debug/tree/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-modular-debug-$releasever&amp;arch=$basearch
+enabled=0
+metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+
+[fedora-modular-source]
+name=Fedora Modular $releasever - Source
+failovermethod=priority
+baseurl=https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Modular/source/tree/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-modular-source-$releasever&amp;arch=$basearch
+enabled=0
+metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+</pre></div>
+</div>
+<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/fedora-updates-modular.repo</span></code> 文件：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[updates-modular]
+name=Fedora Modular $releasever - $basearch - Updates
+failovermethod=priority
+baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Modular/$basearch/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-modular-f$releasever&amp;arch=$basearch
+enabled=1
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+metadata_expire=6h
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+
+[updates-modular-debuginfo]
+name=Fedora Modular $releasever - $basearch - Updates - Debug
+failovermethod=priority
+baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Modular/$basearch/debug/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-modular-debug-f$releasever&amp;arch=$basearch
+enabled=0
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+metadata_expire=6h
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+
+[updates-modular-source]
+name=Fedora Modular $releasever - Updates Source
+failovermethod=priority
+baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Modular/SRPMS/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-modular-source-f$releasever&amp;arch=$basearch
+enabled=0
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+metadata_expire=6h
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+</pre></div>
+</div>
+<p>最后运行 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">dnf</span> <span class="pre">makecache</span></code> 生成缓存。</p>
+</div>
+<div class="section" id="id6">
+<h2>相关链接<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">官方主页</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://getfedora.org/">https://getfedora.org/</a></p>
+</dd>
+<dt class="field-even">邮件列表</dt>
+<dd class="field-even"><p><a class="reference external" href="https://fedoraproject.org/wiki/Communicating_and_getting_help">https://fedoraproject.org/wiki/Communicating_and_getting_help</a></p>
+</dd>
+<dt class="field-odd">论坛</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://forums.fedoraforum.org/">https://forums.fedoraforum.org/</a></p>
+</dd>
+<dt class="field-even">文档</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.fedoraproject.org/">https://docs.fedoraproject.org/</a></p>
+</dd>
+<dt class="field-odd">Wiki</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://fedoraproject.org/wiki/">https://fedoraproject.org/wiki/</a></p>
+</dd>
+<dt class="field-even">镜像列表</dt>
+<dd class="field-even"><p><a class="reference external" href="https://admin.fedoraproject.org/mirrormanager">https://admin.fedoraproject.org/mirrormanager</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="freebsd.html" class="btn btn-neutral float-right" title="FreeBSD 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="deb-multimedia.html" class="btn btn-neutral float-left" title="Deb Multimedia 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 2017 - 2020, LUG@USTC
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+<p>除额外注明的地方外，本文档按 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议发布。</p>
+ 
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
