@@ -1,0 +1,42 @@
+name: build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          pip3 install -r requirements.txt
+      - name: Clone deploy branch
+        run: |
+          REMOTE_BRANCH="${REMOTE_BRANCH:-gh-pages}"
+          REMOTE_REPO="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+
+          rm -rf build/html/
+          mkdir -p build/html/
+          git clone --depth=1 --branch="${REMOTE_BRANCH}" --single-branch --no-checkout \
+            "${REMOTE_REPO}" build/html/
+      - run: make html
+      - name: Deploy to GitHub Pages
+        run: |
+          SOURCE_COMMIT="$(git log -1 --pretty="%an: %B" "$GITHUB_SHA")"
+          pushd build/html/ &>/dev/null
+          : > .nojekyll
+
+          git add --all
+          git -c user.name="${GITHUB_ACTOR}" -c user.email="${GITHUB_ACTOR}@users.noreply.github.com" \
+            commit --quiet \
+            --message "Deploy docs from ${GITHUB_SHA}" \
+            --message "$SOURCE_COMMIT"
+          git push
+
+          popd &>/dev/null
