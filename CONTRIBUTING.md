@@ -19,7 +19,7 @@
 
 * Chinese writing guideline
 
-  Please follow section 3 of https://mirrors.ustc.edu.cn/anthon/aosc-l10n/zh_CN_l10n.pdf
+  Please follow <https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.en-US.md>
 
 * reStructureText syntax
 
@@ -54,7 +54,7 @@ For those who improved the documents, the GitHub username will be mentioned in t
 
 * 中文写作规范
 
-  请参考 https://mirrors.ustc.edu.cn/anthon/aosc-l10n/zh_CN_l10n.pdf 中的第 3 章节。
+  请参考 <https://github.com/sparanoid/chinese-copywriting-guidelines>。
 
 * reStructureText 格式
 
