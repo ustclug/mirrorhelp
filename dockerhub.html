@@ -142,9 +142,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id4">检查 Docker Hub 是否生效</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">如何搭建本地镜像缓存？</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">相关链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">相关链接</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="elpa.html">Emacs ELPA 源使用帮助</a></li>
@@ -243,6 +244,7 @@
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
 <p>由于访问原始站点的网络带宽等条件的限制，导致 Docker Hub, Google Container Registry (gcr.io) 与 Quay Container Registry (quay.io) 的镜像缓存处于基本不可用的状态。故从 2020 年 4 月起，从科大校外对 Docker Hub 镜像缓存的访问会被 302 重定向至其他国内 Docker Hub 镜像源。从 2020 年 8 月 16 日起，从科大校外对 Google Container Registry 的镜像缓存的访问会被 302 重定向至阿里云提供的公开的镜像缓存服务；从科大校外对 Quay Container Registry 的镜像缓存的访问会被 302 重定向至源站。</p>
+<p>本文档结尾提供了搭建本地镜像缓存的方式，以供参考。</p>
 </div>
 <div class="section" id="linux">
 <h3>Linux<a class="headerlink" href="#linux" title="永久链接至标题">¶</a></h3>
@@ -287,9 +289,88 @@
 </pre></div>
 </div>
 </div>
-</div>
 <div class="section" id="id5">
-<h2>相关链接<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<h3>如何搭建本地镜像缓存？<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>由于镜像站目前暂不为校外提供容器镜像缓存服务，如果需要自行搭建本地镜像缓存，可以参考以下的方式：</p>
+<p>Redis 容器：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">rm</span> <span class="o">-</span><span class="n">f</span> <span class="n">redis</span>
+<span class="n">docker</span> <span class="n">run</span> \
+    <span class="o">--</span><span class="n">name</span><span class="o">=</span><span class="n">redis</span> \
+    <span class="o">-</span><span class="n">itd</span> \
+    <span class="o">--</span><span class="n">net</span><span class="o">=</span><span class="n">docker</span><span class="o">-</span><span class="n">registry</span> \
+    <span class="o">--</span><span class="n">restart</span><span class="o">=</span><span class="n">always</span> \
+    <span class="n">redis</span> \
+    <span class="n">redis</span><span class="o">-</span><span class="n">server</span> <span class="o">--</span><span class="n">maxmemory</span> <span class="mi">512</span><span class="n">m</span>
+</pre></div>
+</div>
+<p>镜像缓存容器：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">rm</span> <span class="o">-</span><span class="n">f</span> <span class="n">dockerhub</span><span class="o">-</span><span class="n">mirror</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">itd</span> \
+    <span class="o">--</span><span class="n">name</span> <span class="n">dockerhub</span><span class="o">-</span><span class="n">mirror</span> \
+    <span class="o">--</span><span class="n">restart</span><span class="o">=</span><span class="n">always</span> \
+    <span class="o">--</span><span class="n">net</span><span class="o">=</span><span class="n">docker</span><span class="o">-</span><span class="n">registry</span> \
+    <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">docker</span><span class="o">/</span><span class="n">dockerhub</span><span class="o">/</span><span class="n">data</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">registry</span> \
+    <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">docker</span><span class="o">/</span><span class="n">dockerhub</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">yml</span><span class="p">:</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">docker</span><span class="o">/</span><span class="n">registry</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">yml</span><span class="p">:</span><span class="n">ro</span> \
+    <span class="o">-</span><span class="n">p</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">5000</span><span class="p">:</span><span class="mi">5000</span><span class="o">/</span><span class="n">tcp</span> \
+    <span class="o">--</span><span class="n">log</span><span class="o">-</span><span class="n">driver</span><span class="o">=</span><span class="n">journald</span> \
+    <span class="o">--</span><span class="n">log</span><span class="o">-</span><span class="n">opt</span> <span class="n">tag</span><span class="o">=</span><span class="s2">&quot;dockerd-dockerhub&quot;</span> \
+    <span class="n">registry</span><span class="p">:</span><span class="mf">2.5</span><span class="o">.</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>/srv/docker/dockerhub/config.yml 的参考内容:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">version</span><span class="p">:</span> <span class="mf">0.1</span>
+<span class="n">log</span><span class="p">:</span>
+    <span class="n">level</span><span class="p">:</span> <span class="n">error</span>
+<span class="n">storage</span><span class="p">:</span>
+    <span class="n">delete</span><span class="p">:</span>
+        <span class="n">enabled</span><span class="p">:</span> <span class="n">true</span>
+    <span class="n">cache</span><span class="p">:</span>
+        <span class="n">blobdescriptor</span><span class="p">:</span> <span class="n">redis</span>
+    <span class="n">filesystem</span><span class="p">:</span>
+        <span class="n">rootdirectory</span><span class="p">:</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">registry</span>
+    <span class="n">maintenance</span><span class="p">:</span>
+        <span class="n">uploadpurging</span><span class="p">:</span>
+            <span class="n">enabled</span><span class="p">:</span> <span class="n">false</span>
+<span class="n">http</span><span class="p">:</span>
+    <span class="n">addr</span><span class="p">:</span> <span class="p">:</span><span class="mi">5000</span>
+    <span class="n">debug</span><span class="p">:</span>
+        <span class="n">addr</span><span class="p">:</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">5001</span>
+    <span class="n">headers</span><span class="p">:</span>
+        <span class="n">X</span><span class="o">-</span><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="o">-</span><span class="n">Options</span><span class="p">:</span> <span class="p">[</span><span class="n">nosniff</span><span class="p">]</span>
+<span class="n">notifications</span><span class="p">:</span>
+    <span class="n">endpoints</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">local</span><span class="o">-</span><span class="mi">5003</span>
+          <span class="n">url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5003</span><span class="o">/</span><span class="n">callback</span>
+          <span class="n">headers</span><span class="p">:</span>
+              <span class="n">Authorization</span><span class="p">:</span> <span class="p">[</span><span class="n">Bearer</span> <span class="o">&lt;</span><span class="n">an</span> <span class="n">example</span> <span class="n">token</span><span class="o">&gt;</span><span class="p">]</span>
+          <span class="n">timeout</span><span class="p">:</span> <span class="mi">1</span><span class="n">s</span>
+          <span class="n">threshold</span><span class="p">:</span> <span class="mi">10</span>
+          <span class="n">backoff</span><span class="p">:</span> <span class="mi">1</span><span class="n">s</span>
+          <span class="n">disabled</span><span class="p">:</span> <span class="n">true</span>
+        <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">local</span><span class="o">-</span><span class="mi">8083</span>
+          <span class="n">url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8083</span><span class="o">/</span><span class="n">callback</span>
+          <span class="n">timeout</span><span class="p">:</span> <span class="mi">1</span><span class="n">s</span>
+          <span class="n">threshold</span><span class="p">:</span> <span class="mi">10</span>
+          <span class="n">backoff</span><span class="p">:</span> <span class="mi">1</span><span class="n">s</span>
+          <span class="n">disabled</span><span class="p">:</span> <span class="n">true</span>
+<span class="n">health</span><span class="p">:</span>
+    <span class="n">storagedriver</span><span class="p">:</span>
+        <span class="n">enabled</span><span class="p">:</span> <span class="n">true</span>
+        <span class="n">interval</span><span class="p">:</span> <span class="mi">10</span><span class="n">s</span>
+        <span class="n">threshold</span><span class="p">:</span> <span class="mi">3</span>
+
+<span class="n">proxy</span><span class="p">:</span>
+    <span class="n">remoteurl</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">registry</span><span class="o">-</span><span class="mf">1.</span><span class="n">docker</span><span class="o">.</span><span class="n">io</span>
+    <span class="c1"># 更换为上游的地址。</span>
+
+<span class="n">redis</span><span class="p">:</span>
+    <span class="n">addr</span><span class="p">:</span> <span class="n">redis</span><span class="p">:</span><span class="mi">6379</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>相关链接<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Docker 主页</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://www.docker.com">https://www.docker.com</a></p>
