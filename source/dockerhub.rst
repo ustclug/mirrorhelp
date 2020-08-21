@@ -16,9 +16,11 @@ Docker Hub 镜像缓存
 ========
 
 .. attention::
-    由于访问原始站点的网络带宽等条件的限制，导致 Docker Hub, Google Container Registry (gcr.io) 与 Quay Container Registry (quay.io) 的镜像缓存处于基本不可用的状态。故从 2020 年 4 月起，从科大校外对 Docker Hub 镜像缓存的访问会被 302 重定向至其他国内 Docker Hub 镜像源。从 2020 年 8 月 16 日起，从科大校外对 Google Container Registry 的镜像缓存的访问会被 302 重定向至阿里云提供的公开的镜像缓存服务；从科大校外对 Quay Container Registry 的镜像缓存的访问会被 302 重定向至源站。
+    由于访问原始站点的网络带宽等条件的限制，导致 Docker Hub, Google Container Registry (gcr.io) 与 Quay Container Registry (quay.io) 的镜像缓存处于基本不可用的状态。故从 2020 年 4 月起，从科大校外对 Docker Hub 镜像缓存的访问会被 302 重定向至其他国内 Docker Hub 镜像源。从 2020 年 8 月 16 日起，从科大校外对 Google Container Registry 的镜像缓存的访问会被 302 重定向至阿里云提供的公开镜像服务（包含了部分 gcr.io 上存在的容器镜像）；从科大校外对 Quay Container Registry 的镜像缓存的访问会被 302 重定向至源站。
 
     本文档结尾提供了搭建本地镜像缓存的方式，以供参考。
+
+    2020/08/21 更新：考虑到 gcr 镜像重定向至阿里云提供的公开镜像服务可能存在的安全隐患（见 `mirrorhelp#158 <https://github.com/ustclug/mirrorhelp/issues/158>`_），目前校外对 gcr 镜像的访问返回 403。
 
 Linux
 -----
