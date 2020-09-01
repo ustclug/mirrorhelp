@@ -22,6 +22,9 @@ Docker Hub 镜像缓存
 
     2020/08/21 更新：考虑到 gcr 镜像重定向至阿里云提供的公开镜像服务可能存在的安全隐患（见 `mirrorhelp#158 <https://github.com/ustclug/mirrorhelp/issues/158>`_），目前校外对 gcr 镜像的访问返回 403。
 
+.. attention::
+    2020 年 11 月后，Docker Hub 将新增 `访问速率限制 <https://docs.docker.com/docker-hub/download-rate-limit/>`_，这可能导致在校内使用 Docker Hub 镜像缓存时出现间歇性的问题。
+
 Linux
 -----
 
