@@ -23,7 +23,7 @@ Debian 支持的所有架构，如 AMD64 (x86_64), Intel x86, ARM, MIPS, ppc64el
 
 Debian Old Old Stable, Old Stable, Stable
 
-当前 Stable 为 Debian 9，代号为 Stretch
+当前 Stable 为 Debian 10，代号为 Buster
 
 使用说明
 ========
@@ -35,7 +35,7 @@ Debian Old Old Stable, Old Stable, Stable
 替换为 ``http://mirrors.ustc.edu.cn/debian-security/`` 即可。
 
 .. attention::
-    如果你在使用 Debian 8 "Jessie" 或更早的版本，则默认的 debian-security 源地址为 ``http://security.debian.org/`` （和新版不同最后没有子目录）。下面的指南主要针对最新稳定版（Debian 9 "Stretch"），请旧版本用户注意。
+    如果你在使用 Debian 8 "Jessie" 或更早的版本，则默认的 debian-security 源地址为 ``http://security.debian.org/`` （和新版不同最后没有子目录）。下面的指南主要针对 Debian 10 "Buster"，请旧版本用户注意。
 
 
 可以直接使用如下命令完成上述修改：
