@@ -32,8 +32,11 @@ jobs:
         run: |
           SOURCE_COMMIT="$(git log -1 --pretty="%an: %B" "$GITHUB_SHA")"
           pushd build/html/ &>/dev/null
-          : > .nojekyll
+          if [ "$(git status --porcelain | wc -l)" -eq 0 ]; then
+            exit 0
+          fi
 
+          : > .nojekyll
           git add --all
           git -c user.name="${GITHUB_ACTOR}" -c user.email="${GITHUB_ACTOR}@users.noreply.github.com" \
             commit --quiet \
