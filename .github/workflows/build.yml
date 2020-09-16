@@ -2,8 +2,9 @@ name: build
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
   build:
@@ -27,6 +28,7 @@ jobs:
             "${REMOTE_REPO}" build/html/
       - run: make html
       - name: Deploy to GitHub Pages
+        if: "github.event_name == 'push'"
         run: |
           SOURCE_COMMIT="$(git log -1 --pretty="%an: %B" "$GITHUB_SHA")"
           pushd build/html/ &>/dev/null
