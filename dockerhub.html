@@ -274,6 +274,7 @@
 </div>
 <div class="section" id="macos">
 <h3>macOS<a class="headerlink" href="#macos" title="永久链接至标题">¶</a></h3>
+<p>旧版本：</p>
 <ol class="arabic simple">
 <li><p>打开 “Docker.app”</p></li>
 <li><p>进入偏好设置页面(快捷键 <code class="docutils literal notranslate"><span class="pre">⌘,</span></code> )</p></li>
@@ -281,10 +282,20 @@
 <li><p>在 “Registry mirrors” 中添加 <code class="docutils literal notranslate"><span class="pre">https://docker.mirrors.ustc.edu.cn/</span></code></p></li>
 <li><p>点击下方的 “Apply &amp; Restart” 按钮</p></li>
 </ol>
+<p>新版本：</p>
+<ol class="arabic simple">
+<li><p>打开 “Docker.app”</p></li>
+<li><p>进入偏好设置页面(快捷键 <code class="docutils literal notranslate"><span class="pre">⌘,</span></code> )</p></li>
+<li><p>打开 “Docker Engine” 选项卡</p></li>
+<li><p>参考 Linux 中 “使用 systemd 系统” 的配置，在 JSON 配置中添加 <code class="docutils literal notranslate"><span class="pre">&quot;registry-mirrors&quot;</span></code> 一项。</p></li>
+</ol>
 </div>
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="永久链接至标题">¶</a></h3>
+<p>旧版本：</p>
 <p>在系统右下角托盘 Docker 图标内右键菜单选择 <code class="docutils literal notranslate"><span class="pre">Settings</span></code> ，打开配置窗口后左侧导航菜单选择 <code class="docutils literal notranslate"><span class="pre">Daemon</span></code> 。在 <code class="docutils literal notranslate"><span class="pre">Registry</span> <span class="pre">mirrors</span></code> 一栏中填写地址 <code class="docutils literal notranslate"><span class="pre">https://docker.mirrors.ustc.edu.cn/</span></code> ，之后点击 Apply 保存后 Docker 就会重启并应用配置的镜像地址了。</p>
+<p>新版本：</p>
+<p>在系统右下角托盘 Docker 图标内右键菜单选择 <code class="docutils literal notranslate"><span class="pre">Settings</span></code> ，打开配置窗口后左侧导航菜单选择 <code class="docutils literal notranslate"><span class="pre">Docker</span> <span class="pre">Engine</span></code> 。参考 Linux 中 “使用 systemd 系统” 的配置，在 JSON 配置中添加 <code class="docutils literal notranslate"><span class="pre">&quot;registry-mirrors&quot;</span></code> 一项 ，之后点击 “Apply &amp; Restart” 保存并重启 Docker 即可。</p>
 </div>
 <div class="section" id="id5">
 <h3>检查 Docker Hub 是否生效<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
