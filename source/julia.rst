@@ -24,7 +24,7 @@ https://mirrors.ustc.edu.cn/julia/
 
 只需要设置环境变量 :sh:`JULIA_PKG_SERVER` 即可切换镜像。若成功切换镜像，则能通过 :sh:`versioninfo()` 查询到相关信息，例如：
 
-.. code-block:: julia
+.. code-block:: text
 
     julia> versioninfo()
     Julia Version 1.4.1
@@ -51,7 +51,7 @@ https://mirrors.ustc.edu.cn/julia/
 
 也可以利用 JuliaCN 社区维护的中文本地化工具包 `JuliaZH <https://github.com/JuliaCN/JuliaZH.jl>`_ 来进行切换：
 
-.. code-block:: julia
+.. code-block:: text
 
     using JuliaZH # 在 using 时会自动切换到国内的镜像站
     JuliaZH.set_mirror("USTC") # 也可以选择手动切换到 BFSU 镜像
@@ -79,7 +79,7 @@ https://mirrors.ustc.edu.cn/julia/
 
 也可以选择使用 :sh:`JuliaZH` 来一键修改/创建 :sh:`startup.jl` 文件：
 
-.. code-block:: julia
+.. code-block:: text
 
     julia> JuliaZH.generate_startup("default")
     ┌ Info: 添加 PkgServer
@@ -127,7 +127,7 @@ Julia :sh:`v1.4.0` 之前的版本采用的是 :sh:`git clone` 的方式拉取�
 镜像站只镜像注册表中记录的包，因此如果某些包是通过指定 URL 的方式来安装的话，那么该包的更新不会从镜像站进行下载。
 这常见于那些还未注册的包及其版本，例如：
 
-.. code-block:: julia
+.. code-block:: text
 
     ]add Flux#master
     ]add https://github.com/FluxML/Flux.jl.git
@@ -137,12 +137,13 @@ Julia :sh:`v1.4.0` 之前的版本采用的是 :sh:`git clone` 的方式拉取�
 加快 Conda.jl 相关操作的速度
 --------------------------------
 
-Conda.jl 的加速分为两部分：
+这里简单介绍一下其使用， 具体的细节可以参考 `Conda.jl <https://github.com/JuliaPy/Conda.jl>`_ 和
+`PyCall.jl <https://github.com/JuliaPy/PyCall.jl>`_ 的文档。 :sh:`Conda.jl` 的加速分为两部分：
 
 - :sh:`conda` 的安装：如果系统中没有找到 :sh:`conda` 的话， :sh:`Conda.jl` 会下载并安装一份
-  :sh:`miniconda`。 如果这一步下载非常缓慢的话，你可以提前从 `BFSU镜像站 <https://mirrors.bfsu.edu.cn/help/anaconda/>`_ 下载并安装 :sh:`anaconda`， 然后通过设置环境变量 
-  :sh:`CONDA_JL_HOME=$HOME/anaconda3` 来指定 :sh:`Conda.jl` 所使用的conda， 这样就避免重复下载 miniconda.
-  （:sh:`\$HOME/anaconda3` 是 anaconda3 的默认安装位置， 你可能需要根据具体情况进行调整。）
+  :sh:`miniconda`。 如果这一步下载非常缓慢的话，你可以提前从其他镜像站 （如 `BFSU镜像站 <https://mirrors.bfsu.edu.cn/help/anaconda/>`_) 下载并安装 :sh:`anaconda`， 然后通过设置环境变量 
+  :sh:`CONDA_JL_HOME=$HOME/anaconda3` 来指定 :sh:`Conda.jl` 所使用的 :sh:`conda`， 这样就避免重复下载 miniconda.
+  （:sh:`$HOME/anaconda3` 是 anaconda3 的默认安装位置， 你可能需要根据具体情况进行调整。）
 
-- :sh:`conda add` 等操作的加速： 这个只需要配置 anaconda 镜像源即可，即修改 :sh:`~/.condarc` 文
+- :sh:`conda add` 等操作的加速： 类似的， 这个只需要配置 anaconda 镜像源即可，即修改 :sh:`~/.condarc` 文
   件。 具体的配置可以查看镜像站中 anaconda 镜像的使用说明。

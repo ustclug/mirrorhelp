@@ -54,6 +54,7 @@ USTC Mirror Help
    :maxdepth: 1
 
    hackage
+   julia
    nodesource
    pypi
    rubygems
