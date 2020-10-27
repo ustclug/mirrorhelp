@@ -18,6 +18,14 @@ Rust Crates Registry 源
 .. warning::
     使用 nightly 版本时，Crates 源可能会出现 :code:`Couldn't resolve host name (Could not resolve host: crates)` 错误（见 https://github.com/ustclug/discussions/issues/294）。一个临时的解决方法是在运行 :code:`cargo` 的时候加入环境变量 :code:`CARGO_HTTP_MULTIPLEXING=false`。
 
+.. warning::
+    Windows 用户在使用 crates 源时可能会出现 :code:`next InitializeSecurityContext failed: Unknown error` 错误（见 https://github.com/ustclug/discussions/issues/339 和 https://github.com/rust-lang/cargo/issues/7096）。一个 workaround 是在运行 :code:`cargo` 的时候加入环境变量 :code:`CARGO_HTTP_CHECK_REVOKE=false`，或者在配置中增加：
+
+    ::
+
+        [http]
+        check-revoke = false
+
 在 :file:`$HOME/.cargo/config` 中添加如下内容：
 
 ::
