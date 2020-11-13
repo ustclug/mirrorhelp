@@ -232,16 +232,20 @@
 <div class="section" id="id2">
 <h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>OpenWRT/LEDE 下载站镜像。</p>
-<p>这是对 <a class="reference external" href="https://downloads.lede-project.org/">https://downloads.lede-project.org/</a> 的完整镜像，内容包括官方支持的平台的 ROM、SDK 及工具链、软件仓库镜像等。</p>
+<p>这是对 <a class="reference external" href="https://openwrt.org/">https://openwrt.org/</a> 的完整镜像，内容包括官方支持的平台的 ROM、SDK 及工具链、软件仓库镜像等。</p>
 </div>
 <div class="section" id="id3">
 <h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>一般情况下，下载来自 <code class="docutils literal notranslate"><span class="pre">downloads.lede-project.org</span></code> 的文件时，将 URL 中的这部分域名替换为 <code class="docutils literal notranslate"><span class="pre">mirrors.ustc.edu.cn/lede</span></code> 即可。</p>
+<p>一般情况下，下载来自 <code class="docutils literal notranslate"><span class="pre">downloads.openwrt.org</span></code> 的文件时，将 URL 中的这部分域名替换为 <code class="docutils literal notranslate"><span class="pre">mirrors.ustc.edu.cn/lede</span></code> 即可。</p>
 <p>如要使用本镜像作为 OpenWRT/LEDE 系统 opkg 软件仓库，SSH 登录路由器编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/opkg/distfeeds.conf</span></code> 文件，同样按照上面的方法替换域名即可。可以使用如下命令操作：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s_downloads\.lede-project\.org_mirrors.ustc.edu.cn/lede_&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">opkg</span><span class="o">/</span><span class="n">distfeeds</span><span class="o">.</span><span class="n">conf</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s/downloads.openwrt.org/mirrors.ustc.edu.cn\/lede/g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">opkg</span><span class="o">/</span><span class="n">distfeeds</span><span class="o">.</span><span class="n">conf</span>
 </pre></div>
 </div>
 <p>之后运行 <cite>opkg update</cite> 更新软件索引，注意检查是否出现错误。</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要另行安装 <code class="docutils literal notranslate"><span class="pre">libustream-openssl</span> <span class="pre">ca-bundle</span> <span class="pre">ca-certificates</span></code> 。</p>
+</div>
 </div>
 <div class="section" id="id4">
 <h2>相关链接<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
@@ -249,8 +253,8 @@
 <dt class="field-odd">官方主页</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://openwrt.org/">https://openwrt.org/</a></p>
 </dd>
-<dt class="field-even">LEDE 项目论坛</dt>
-<dd class="field-even"><p><a class="reference external" href="https://forum.lede-project.org/">https://forum.lede-project.org/</a></p>
+<dt class="field-even">OpenWRT 文档</dt>
+<dd class="field-even"><p><a class="reference external" href="https://openwrt.org/docs/start">https://openwrt.org/docs/start</a></p>
 </dd>
 <dt class="field-odd">OpenWRT 论坛</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://forum.openwrt.org/">https://forum.openwrt.org/</a></p>
