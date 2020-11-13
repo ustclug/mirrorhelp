@@ -37,8 +37,8 @@
     
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Linux Mint 源使用帮助" href="linuxmint.html" />
-    <link rel="prev" title="Kali Linux 源使用帮助" href="kali.html" /> 
+    <link rel="next" title="PackMan 源使用帮助" href="packman.html" />
+    <link rel="prev" title="openSUSE 源使用帮助" href="opensuse.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,6 +104,11 @@
 <li class="toctree-l1"><a class="reference internal" href="gentoo.html">Gentoo 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gentoo-portage.html">Gentoo Portage 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kali.html">Kali Linux 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linuxmint.html">Linux Mint 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mageia.html">Mageia 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manjaro.html">Manjaro Linux 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msys2.html">MSYS2 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opensuse.html">openSUSE 源使用帮助</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">OpenWRT/LEDE 源使用帮助</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
@@ -111,11 +116,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#id4">相关链接</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="linuxmint.html">Linux Mint 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mageia.html">Mageia 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="manjaro.html">Manjaro Linux 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msys2.html">MSYS2 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="opensuse.html">openSUSE 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packman.html">PackMan 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="raspbian.html">Raspbian 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="termux.html">Termux 源使用帮助</a></li>
@@ -209,7 +209,7 @@
         
             
             
-              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/lede.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/openwrt.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -227,18 +227,22 @@
 <h1>OpenWRT/LEDE 源使用帮助<a class="headerlink" href="#openwrt-lede" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
 <h2>地址<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://mirrors.ustc.edu.cn/lede/">https://mirrors.ustc.edu.cn/lede/</a></p>
+<p><a class="reference external" href="https://mirrors.ustc.edu.cn/openwrt/">https://mirrors.ustc.edu.cn/openwrt/</a></p>
 </div>
 <div class="section" id="id2">
 <h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>OpenWRT/LEDE 下载站镜像。</p>
-<p>这是对 <a class="reference external" href="https://openwrt.org/">https://openwrt.org/</a> 的完整镜像，内容包括官方支持的平台的 ROM、SDK 及工具链、软件仓库镜像等。</p>
+<p>这是对 <a class="reference external" href="https://downloads.openwrt.org/">https://downloads.openwrt.org/</a> 的除了 snapshots 以外的完整镜像，内容包括官方支持的平台的 ROM、SDK 及工具链、软件仓库镜像等。</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>访问 snapshots 会重定向至反向代理，如果需要下载 snapshots 中的内容，务必使用 HTTPS，否则连接可能会被中断。</p>
+</div>
 </div>
 <div class="section" id="id3">
 <h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>一般情况下，下载来自 <code class="docutils literal notranslate"><span class="pre">downloads.openwrt.org</span></code> 的文件时，将 URL 中的这部分域名替换为 <code class="docutils literal notranslate"><span class="pre">mirrors.ustc.edu.cn/lede</span></code> 即可。</p>
+<p>一般情况下，下载来自 <code class="docutils literal notranslate"><span class="pre">downloads.openwrt.org</span></code> 的文件时，将 URL 中的这部分域名替换为 <code class="docutils literal notranslate"><span class="pre">mirrors.ustc.edu.cn/openwrt</span></code> 即可。</p>
 <p>如要使用本镜像作为 OpenWRT/LEDE 系统 opkg 软件仓库，SSH 登录路由器编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/opkg/distfeeds.conf</span></code> 文件，同样按照上面的方法替换域名即可。可以使用如下命令操作：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s/downloads.openwrt.org/mirrors.ustc.edu.cn\/lede/g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">opkg</span><span class="o">/</span><span class="n">distfeeds</span><span class="o">.</span><span class="n">conf</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s/downloads.openwrt.org/mirrors.ustc.edu.cn\/openwrt/g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">opkg</span><span class="o">/</span><span class="n">distfeeds</span><span class="o">.</span><span class="n">conf</span>
 </pre></div>
 </div>
 <p>之后运行 <cite>opkg update</cite> 更新软件索引，注意检查是否出现错误。</p>
@@ -271,10 +275,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="linuxmint.html" class="btn btn-neutral float-right" title="Linux Mint 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="packman.html" class="btn btn-neutral float-right" title="PackMan 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="kali.html" class="btn btn-neutral float-left" title="Kali Linux 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="opensuse.html" class="btn btn-neutral float-left" title="openSUSE 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
