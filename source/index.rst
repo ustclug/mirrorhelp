@@ -30,12 +30,12 @@ USTC Mirror Help
    gentoo
    gentoo-portage
    kali
-   lede
    linuxmint
    mageia
    manjaro
    msys2
    opensuse
+   openwrt
    packman
    raspbian
    termux
