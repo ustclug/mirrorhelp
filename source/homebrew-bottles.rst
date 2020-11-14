@@ -16,12 +16,6 @@ Homebrew 预编译二进制软件包
 ========
 
 * homebrew/homebrew-core
-* homebrew/homebrew-dupes
-* homebrew/homebrew-php
-* homebrew/homebrew-science
-* homebrew/homebrew-nginx
-* homebrew/homebrew-apache
-* homebrew/homebrew-portable
 
 使用说明
 ========
