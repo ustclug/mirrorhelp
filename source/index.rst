@@ -77,6 +77,8 @@ USTC Mirror Help
    homebrew-bottles
    homebrew-core.git
    homebrew-cask.git
+   linuxbrew-bottles
+   linuxbrew-core.git
    mariadb
    archive.raspberrypi.org
    ros
