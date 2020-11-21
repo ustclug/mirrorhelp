@@ -39,6 +39,10 @@ Linuxbrew 预编译二进制软件包
 相关镜像
 ========
 - :doc:`brew.git`
+- :doc:`homebrew-bottles`
+- :doc:`homebrew-core.git`
+- :doc:`homebrew-cask.git`
+- :doc:`homebrew-cask-versions.git`
 - :doc:`linuxbrew-core.git`
 
 相关链接

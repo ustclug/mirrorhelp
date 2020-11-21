@@ -40,6 +40,10 @@ Homebrew 预编译二进制软件包
 ========
 - :doc:`brew.git`
 - :doc:`homebrew-core.git`
+- :doc:`homebrew-cask.git`
+- :doc:`homebrew-cask-versions.git`
+- :doc:`linuxbrew-core.git`
+- :doc:`linuxbrew-bottles`
 
 相关链接
 ========

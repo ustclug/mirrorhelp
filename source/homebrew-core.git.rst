@@ -33,6 +33,10 @@ Homebrew 核心软件仓库
 ========
 - :doc:`brew.git`
 - :doc:`homebrew-bottles`
+- :doc:`homebrew-cask.git`
+- :doc:`homebrew-cask-versions.git`
+- :doc:`linuxbrew-core.git`
+- :doc:`linuxbrew-bottles`
 
 相关链接
 ========

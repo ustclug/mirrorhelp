@@ -38,9 +38,12 @@ Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件
 - :doc:`brew.git`
 - :doc:`homebrew-bottles`
 - :doc:`homebrew-core.git`
+- :doc:`homebrew-cask-versions.git`
+- :doc:`linuxbrew-core.git`
+- :doc:`linuxbrew-bottles`
 
 相关链接
 ========
 
 :官方主页: https://caskroom.github.io
-:Homrbew: https://brew.sh/
+:Homebrew: https://brew.sh/
