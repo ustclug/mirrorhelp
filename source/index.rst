@@ -77,6 +77,7 @@ USTC Mirror Help
    homebrew-bottles
    homebrew-core.git
    homebrew-cask.git
+   homebrew-cask-versions.git
    linuxbrew-bottles
    linuxbrew-core.git
    mariadb
