@@ -15,7 +15,7 @@ Homebrew 源代码仓库
 使用说明
 ========
 
-替换USTC镜像：
+替换 USTC 镜像：
 
 ::
 
@@ -28,6 +28,12 @@ Homebrew 源代码仓库
 
     cd "$(brew --repo)"
     git remote set-url origin https://github.com/Homebrew/brew.git
+
+.. note::
+    初次安装 homebrew/linuxbrew 时，如果无法下载安装脚本，可以使用 `jsDelivr CDN <https://cdn.jsdelivr.net/gh/Homebrew/install@master/install.sh>`_ 下载 ``install.sh``，然后将脚本中的 ``BREW_REPO`` 变量对应的值修改为 ``https://mirrors.ustc.edu.cn/brew.git``。
+    
+    执行安装脚本时，环境变量 ``HOMEBREW_CORE_GIT_REMOTE`` 可以设置为 :doc:`homebrew-core.git` (macOS) 或 :doc:`linuxbrew-core.git` (Linux) 中对应的地址，以加快核心软件仓库索引下载的速度。
+
 
 相关镜像
 ========

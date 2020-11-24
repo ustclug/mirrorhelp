@@ -17,6 +17,9 @@ OpenWRT/LEDE 下载站镜像。
 .. tip::
     访问 snapshots 会重定向至反向代理，如果需要下载 snapshots 中的内容，务必使用 HTTPS，否则连接可能会被中断。
 
+.. tip::
+    访问 https://mirrors.ustc.edu.cn/lede/ 会被自动重定向到 https://mirrors.ustc.edu.cn/openwrt/。
+
 使用说明
 ========
 

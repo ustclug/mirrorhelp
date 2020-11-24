@@ -39,5 +39,5 @@ Windows 下对应的设置环境变量的 PowerShell 命令为：
 
 .. note::
     第一次安装 rustup 的时候，如果按照官网教程 https://sh.rustup.rs 链接无法下载，可以通过
-    `jsdelivr <https://cdn.jsdelivr.net/gh/rust-lang-nursery/rustup.rs/rustup-init.sh>`_ 下载 ``rustup-init.sh``，
+    `jsDelivr CDN <https://cdn.jsdelivr.net/gh/rust-lang-nursery/rustup.rs/rustup-init.sh>`_ 下载 ``rustup-init.sh``，
     然后把脚本中的 ``RUSTUP_UPDATE_ROOT`` 变量改为 ``https://mirrors.ustc.edu.cn/rust-static/rustup``。
