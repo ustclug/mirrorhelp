@@ -239,7 +239,7 @@
 </div>
 <div class="section" id="id3">
 <h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>替换USTC镜像：</p>
+<p>替换 USTC 镜像：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="s2">&quot;$(brew --repo)&quot;</span>
 <span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">brew</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
@@ -248,6 +248,11 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="s2">&quot;$(brew --repo)&quot;</span>
 <span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">brew</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>初次安装 homebrew/linuxbrew 时，如果无法下载安装脚本，可以使用 <a class="reference external" href="https://cdn.jsdelivr.net/gh/Homebrew/install&#64;master/install.sh">jsDelivr CDN</a> 下载 <code class="docutils literal notranslate"><span class="pre">install.sh</span></code>，然后将脚本中的 <code class="docutils literal notranslate"><span class="pre">BREW_REPO</span></code> 变量对应的值修改为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/brew.git</span></code>。</p>
+<p>执行安装脚本时，环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_CORE_GIT_REMOTE</span></code> 可以设置为 <a class="reference internal" href="homebrew-core.git.html"><span class="doc">Homebrew Core 源使用帮助</span></a> (macOS) 或 <a class="reference internal" href="linuxbrew-core.git.html"><span class="doc">Linuxbrew Core 源使用帮助</span></a> (Linux) 中对应的地址，以加快核心软件仓库索引下载的速度。</p>
 </div>
 </div>
 <div class="section" id="id4">
