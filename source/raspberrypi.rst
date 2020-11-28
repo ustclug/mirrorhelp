@@ -5,7 +5,7 @@ Raspberrypi 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/archive.raspberrypi.org/
+https://mirrors.ustc.edu.cn/archive.raspberrypi.org/ 或 https://mirrors.ustc.edu.cn/raspberrypi/
 
 说明
 ====

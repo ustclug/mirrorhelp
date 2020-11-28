@@ -56,7 +56,7 @@ raspbian 2018-04-19 之后的镜像默认源已经更改，用如下命令替换
 
 编辑此文件后，请使用 ``sudo apt-get update`` 命令，更新软件索引。
 
-同时也可能需要更改 archive.raspberrypi.org 源，请参考 :doc:`archive.raspberrypi.org` 。
+同时也可能需要更改 archive.raspberrypi.org 源，请参考 :doc:`raspberrypi` 。
 
 相关链接
 ========

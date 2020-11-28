@@ -81,7 +81,7 @@ USTC Mirror Help
    linuxbrew-bottles
    linuxbrew-core.git
    mariadb
-   archive.raspberrypi.org
+   raspberrypi
    ros
 
 其他
