@@ -73,6 +73,8 @@ USTC Mirror Help
 
    anaconda
    brew.git
+   CPAN
+   CRAN
    docker-ce
    dockerhub
    eclipse
