@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Arch Linux 源使用帮助 &mdash; USTC Mirror Help  文档</title>
+  <title>XBMC/Kodi 镜像使用帮助 &mdash; USTC Mirror Help  文档</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Arch Linux CN 源使用帮助" href="archlinuxcn.html" />
-    <link rel="prev" title="AOSP 镜像使用帮助" href="aosp.html" /> 
+    <link rel="next" title="科大源同步方法与注意事项" href="rsync-guide.html" />
+    <link rel="prev" title="ROS 源使用帮助" href="ros.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,18 +80,11 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="alpine.html">Alpine Linux 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="anthon.html">AOSC OS 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aosp.html">AOSP 镜像使用帮助</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Arch Linux 源使用帮助</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">收录架构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">使用说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">相关链接</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="archlinux.html">Arch Linux 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="archlinuxcn.html">Arch Linux CN 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="archlinuxarm.html">Arch Linux ARM 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blackarch.html">Black Arch 源使用帮助</a></li>
@@ -140,7 +133,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rust-static.html">Rust Toolchain 反向代理使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stackage.html">Stackage 源使用帮助</a></li>
 </ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
@@ -158,7 +151,23 @@
 <li class="toctree-l1"><a class="reference internal" href="mariadb.html">MariaDB 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="raspberrypi.html">Raspberrypi 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ros.html">ROS 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xbmc.html">XBMC/Kodi 镜像使用帮助</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">XBMC/Kodi 镜像使用帮助</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">镜像目录结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kodi">Kodi 简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">使用说明</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Kodi 安装</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#windowsandroid">Windows、Android 平台</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mac-osx">Mac OSX 平台</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ios">iOS 平台</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">插件库使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">编译依赖项目下载</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">相关链接</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="rsync-guide.html">科大源同步方法与注意事项</a></li>
@@ -212,14 +221,14 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Arch Linux 源使用帮助</li>
+      <li>XBMC/Kodi 镜像使用帮助</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/archlinux.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/xbmc.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -233,44 +242,88 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arch-linux">
-<h1>Arch Linux 源使用帮助<a class="headerlink" href="#arch-linux" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="xbmc-kodi">
+<h1>XBMC/Kodi 镜像使用帮助<a class="headerlink" href="#xbmc-kodi" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
-<h2>地址<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://mirrors.ustc.edu.cn/archlinux/">https://mirrors.ustc.edu.cn/archlinux/</a></p>
+<h2>镜像目录结构<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">addons</span></code> 官方插件库</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">apt</span></code> iOS 版 Kodi 安装源</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">build-deps</span></code> 编译 Kodi 依赖的其他开源项目代码</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">nightlies</span></code> 与 Kodi 开发主分支同步编译的每日开发版安装包下载目录</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">releases</span></code> Kodi 稳定版安装包下载目录（含 Beta 版和 RC 版）</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">snapshots</span></code> Kodi 每月发布的 Alpha 版安装包下载目录</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">tools</span></code> Kodi 相关的工具软件（Kora 遥控软件）</div>
+</div>
+</div>
+<div class="section" id="kodi">
+<h2>Kodi 简介<a class="headerlink" href="#kodi" title="永久链接至标题">¶</a></h2>
+<p>Kodi（前身是
+XBMC）媒体中心，是一个屡获殊荣的自由和开源的跨平台媒体播放器和用于
+HTPC（Home theater PC，家庭影院
+PC）的数字媒体娱乐中心软件。它使用遥控器作为主输入设备，针对 3
+米左右观看距离而设计的用户界面，成为适应客厅使用的媒体播放器。它的图形用户界面让用户轻按遥控，就能方便地从硬盘、光盘、局域网和互联网浏览和观看视频、图片，收听广播和音乐。Kodi
+项目由非营利的 XBMC
+基金会管理，并由分布在世界各地的志愿者参与开发。自从它于 2003
+年诞生以来，超过 500 名软件开发人员对 Kodi 作出贡献，并有 60
+名核心开发人员。另外，还有 200
+多名翻译人员在帮助它扩大影响范围，使它支持多达 72 种语言。</p>
+<p>Kodi（当时叫“Xbox Media Center”）最初是作为第一代 Xbox
+游戏机（现在已不支持）的一个媒体中心应用而开发的，而现在已经正式以原生应用运行于
+Android、Linux、Mac OS X、iOS 和 Windows
+操作系统，并支持主流的处理器架构。</p>
 </div>
 <div class="section" id="id2">
-<h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>Arch Linux 软件源</p>
-</div>
+<h2>使用说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id3">
-<h2>收录架构<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>i686, x86_64</p>
+<h3>Kodi 安装<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<div class="section" id="windowsandroid">
+<h4>Windows、Android 平台<a class="headerlink" href="#windowsandroid" title="永久链接至标题">¶</a></h4>
+<p>从镜像站相应目录下载你所需要版本的安装包安装即可。</p>
+</div>
+<div class="section" id="mac-osx">
+<h4>Mac OSX 平台<a class="headerlink" href="#mac-osx" title="永久链接至标题">¶</a></h4>
+<p>从镜像站相应目录下载 <code class="docutils literal notranslate"><span class="pre">.dmg</span></code> 磁盘镜像文件，在 OSX
+系统下装载此镜像文件后，可用鼠标将 Kodi 应用拖到“应用”文件夹即完成安装。</p>
+</div>
+<div class="section" id="ios">
+<h4>iOS 平台<a class="headerlink" href="#ios" title="永久链接至标题">¶</a></h4>
+<p>需要先越狱，然后通过 Cydia 安装。</p>
+<ul class="simple">
+<li><p>第一步：在已越狱的 iPhone 手机或 iPad 主屏幕上点击 Cydia 图标</p></li>
+<li><p>第二步：选择“软件源 → 编辑 → 添加”</p></li>
+<li><p>第三步：在弹出的录入框输入
+<code class="docutils literal notranslate"><span class="pre">http://mirrors.ustc.edu.cn/xbmc/apt/ios/</span></code></p></li>
+<li><p>第四步：点击刚增加的 teamKodi 源</p></li>
+<li><p>第五步：选择安装 Kodi-iOS</p></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id4">
-<h2>使用说明<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p>编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/pacman.d/mirrorlist</span></code> ，在文件的最顶端添加</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
-</pre></div>
-</div>
-<p>国内用户，推荐另外使用 Arch Linux CN 的源，请参考 <a class="reference internal" href="archlinuxcn.html"><span class="doc">Arch Linux CN 源使用帮助</span></a></p>
+<h3>插件库使用<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>可以使用此镜像服务器来访问 Kodi
+官方插件库，避免因网络访问的问题而无法正常安装使用插件。需要编辑 Kodi
+安装目录中的 addons/repository.xbmc.org/addon.xml 文件。将其中所有
+<code class="docutils literal notranslate"><span class="pre">http://mirrors.kodi.tv/</span></code> 替换为
+<code class="docutils literal notranslate"><span class="pre">http://mirrors.ustc.edu.cn/xbmc/</span></code>。</p>
 </div>
 <div class="section" id="id5">
-<h2>相关链接<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<dl class="field-list simple">
-<dt class="field-odd">官方主页</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://www.archlinux.org/">https://www.archlinux.org/</a></p>
-</dd>
-<dt class="field-even">邮件列表</dt>
-<dd class="field-even"><p><a class="reference external" href="https://www.archlinux.org/mailman/listinfo/">https://www.archlinux.org/mailman/listinfo/</a></p>
-</dd>
-<dt class="field-odd">论坛</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://bbs.archlinux.org/">https://bbs.archlinux.org/</a></p>
-</dd>
-<dt class="field-even">Wiki</dt>
-<dd class="field-even"><p><a class="reference external" href="https://wiki.archlinux.org/">https://wiki.archlinux.org/</a></p>
-</dd>
-</dl>
+<h3>编译依赖项目下载<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>开发人员或者想自行从源代码编译 Kodi
+的，可以使用此镜像服务器下载依赖项目。方法是在运行 DownloadBuildDeps.bat
+批处理文件前先在命令行执行
+<code class="docutils literal notranslate"><span class="pre">SET</span> <span class="pre">KODI_MIRROR=http://mirrors.ustc.edu.cn/xbmc/</span></code></p>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>相关链接<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>Kodi 链接</p>
+<ul class="simple">
+<li><p>Kodi 主页: <a class="reference external" href="http://kodi.tv/">http://kodi.tv/</a></p></li>
+<li><p>文档: <a class="reference external" href="http://kodi.wiki/">http://kodi.wiki/</a></p></li>
+<li><p>Bug Tracker: <a class="reference external" href="http://trac.kodi.tv/">http://trac.kodi.tv/</a></p></li>
+<li><p>源代码: <a class="reference external" href="https://github.com/xbmc/xbmc">https://github.com/xbmc/xbmc</a></p></li>
+</ul>
 </div>
 </div>
 
@@ -282,10 +335,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="archlinuxcn.html" class="btn btn-neutral float-right" title="Arch Linux CN 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="rsync-guide.html" class="btn btn-neutral float-right" title="科大源同步方法与注意事项" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="aosp.html" class="btn btn-neutral float-left" title="AOSP 镜像使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ros.html" class="btn btn-neutral float-left" title="ROS 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

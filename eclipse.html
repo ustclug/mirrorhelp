@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Arch Linux 源使用帮助 &mdash; USTC Mirror Help  文档</title>
+  <title>Eclipse 镜像使用帮助 &mdash; USTC Mirror Help  文档</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Arch Linux CN 源使用帮助" href="archlinuxcn.html" />
-    <link rel="prev" title="AOSP 镜像使用帮助" href="aosp.html" /> 
+    <link rel="next" title="Emacs ELPA 源使用帮助" href="elpa.html" />
+    <link rel="prev" title="Docker Hub 源使用帮助" href="dockerhub.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,18 +80,11 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="alpine.html">Alpine Linux 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="anthon.html">AOSC OS 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aosp.html">AOSP 镜像使用帮助</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Arch Linux 源使用帮助</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">收录架构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">使用说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">相关链接</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="archlinux.html">Arch Linux 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="archlinuxcn.html">Arch Linux CN 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="archlinuxarm.html">Arch Linux ARM 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blackarch.html">Black Arch 源使用帮助</a></li>
@@ -140,12 +133,21 @@
 <li class="toctree-l1"><a class="reference internal" href="rust-static.html">Rust Toolchain 反向代理使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stackage.html">Stackage 源使用帮助</a></li>
 </ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dockerhub.html">Docker Hub 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="eclipse.html">Eclipse 镜像使用帮助</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Eclipse 镜像使用帮助</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">使用科大镜像更新插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">基本配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vim-like">Vim-like 快捷键绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#java-api">离线 Java API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">参考资料</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="elpa.html">Emacs ELPA 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="homebrew-bottles.html">Homebrew Bottles 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="homebrew-core.git.html">Homebrew Core 源使用帮助</a></li>
@@ -212,14 +214,14 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Arch Linux 源使用帮助</li>
+      <li>Eclipse 镜像使用帮助</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/archlinux.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/eclipse.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -233,44 +235,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arch-linux">
-<h1>Arch Linux 源使用帮助<a class="headerlink" href="#arch-linux" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="eclipse">
+<h1>Eclipse 镜像使用帮助<a class="headerlink" href="#eclipse" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
-<h2>地址<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://mirrors.ustc.edu.cn/archlinux/">https://mirrors.ustc.edu.cn/archlinux/</a></p>
+<h2>使用科大镜像更新插件<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>以 Luna 为例，点击 <code class="docutils literal notranslate"><span class="pre">Help</span></code> → <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">New</span> <span class="pre">Software...</span></code> →
+<code class="docutils literal notranslate"><span class="pre">Available</span> <span class="pre">Software</span> <span class="pre">Sites</span></code> 可以看到所有的更新源，将其中的
+<code class="docutils literal notranslate"><span class="pre">download.eclipse.org</span></code> 全部替换成 <code class="docutils literal notranslate"><span class="pre">mirrors.ustc.edu.cn/eclipse</span></code>
+即可。</p>
 </div>
 <div class="section" id="id2">
-<h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>Arch Linux 软件源</p>
+<h2>基本配置<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="section" id="vim-like">
+<h3>Vim-like 快捷键绑定<a class="headerlink" href="#vim-like" title="永久链接至标题">¶</a></h3>
+<p>详见 <a class="reference external" href="http://vrapper.sourceforge.net/home/">http://vrapper.sourceforge.net/home/</a></p>
+</div>
+<div class="section" id="java-api">
+<h3>离线 Java API<a class="headerlink" href="#java-api" title="永久链接至标题">¶</a></h3>
+<p>详见
+<a class="reference external" href="http://stackoverflow.com/questions/4664007/off-line-java-api-documentation-in-eclipse">http://stackoverflow.com/questions/4664007/off-line-java-api-documentation-in-eclipse</a></p>
+</div>
 </div>
 <div class="section" id="id3">
-<h2>收录架构<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>i686, x86_64</p>
-</div>
-<div class="section" id="id4">
-<h2>使用说明<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p>编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/pacman.d/mirrorlist</span></code> ，在文件的最顶端添加</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
-</pre></div>
-</div>
-<p>国内用户，推荐另外使用 Arch Linux CN 的源，请参考 <a class="reference internal" href="archlinuxcn.html"><span class="doc">Arch Linux CN 源使用帮助</span></a></p>
-</div>
-<div class="section" id="id5">
-<h2>相关链接<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<dl class="field-list simple">
-<dt class="field-odd">官方主页</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://www.archlinux.org/">https://www.archlinux.org/</a></p>
-</dd>
-<dt class="field-even">邮件列表</dt>
-<dd class="field-even"><p><a class="reference external" href="https://www.archlinux.org/mailman/listinfo/">https://www.archlinux.org/mailman/listinfo/</a></p>
-</dd>
-<dt class="field-odd">论坛</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://bbs.archlinux.org/">https://bbs.archlinux.org/</a></p>
-</dd>
-<dt class="field-even">Wiki</dt>
-<dd class="field-even"><p><a class="reference external" href="https://wiki.archlinux.org/">https://wiki.archlinux.org/</a></p>
-</dd>
-</dl>
+<h2>参考资料<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="http://www.webupd8.org/2014/03/how-to-install-oracle-java-8-in-debian.html">http://www.webupd8.org/2014/03/how-to-install-oracle-java-8-in-debian.html</a></p>
 </div>
 </div>
 
@@ -282,10 +270,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="archlinuxcn.html" class="btn btn-neutral float-right" title="Arch Linux CN 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="elpa.html" class="btn btn-neutral float-right" title="Emacs ELPA 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="aosp.html" class="btn btn-neutral float-left" title="AOSP 镜像使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="dockerhub.html" class="btn btn-neutral float-left" title="Docker Hub 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
