@@ -9,6 +9,7 @@ USTC Mirror Help
 
    alpine
    anthon
+   aosp
    archlinux
    archlinuxcn
    archlinuxarm
@@ -38,6 +39,7 @@ USTC Mirror Help
    openwrt
    packman
    raspbian
+   scientificlinux
    termux
    trisquel
    ubuntu
@@ -73,16 +75,20 @@ USTC Mirror Help
    brew.git
    docker-ce
    dockerhub
+   eclipse
    elpa
    homebrew-bottles
    homebrew-core.git
    homebrew-cask.git
    homebrew-cask-versions.git
+   qtproject
+   linux.git
    linuxbrew-bottles
    linuxbrew-core.git
    mariadb
    raspberrypi
    ros
+   xbmc
 
 其他
 ----
