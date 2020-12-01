@@ -259,8 +259,8 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>初次安装 homebrew/linuxbrew 时，如果无法下载安装脚本，可以使用 <a class="reference external" href="https://cdn.jsdelivr.net/gh/Homebrew/install&#64;master/install.sh">jsDelivr CDN</a> 下载 <code class="docutils literal notranslate"><span class="pre">install.sh</span></code>。</p>
-<p>执行安装脚本时，环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BREW_GIT_REMOTE</span></code> 可以设置为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/brew.git/</span></code> （本镜像地址），以加快 brew.sh 源代码下载的速度。环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_CORE_GIT_REMOTE</span></code> 可以设置为 <a class="reference internal" href="homebrew-core.git.html"><span class="doc">Homebrew Core 源使用帮助</span></a> (macOS) 或 <a class="reference internal" href="linuxbrew-core.git.html"><span class="doc">Linuxbrew Core 源使用帮助</span></a> (Linux) 中对应的地址，以加快核心软件仓库索引下载的速度。</p>
+<p>初次安装 homebrew/linuxbrew 时，如果无法下载安装脚本，可以使用 <a class="reference external" href="https://cdn.jsdelivr.net/gh/Homebrew/install&#64;master/install.sh">jsDelivr CDN</a> 下载 <code class="docutils literal notranslate"><span class="pre">install.sh</span></code>，然后将脚本中的 <code class="docutils literal notranslate"><span class="pre">BREW_REPO</span></code> 变量对应的值修改为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/brew.git</span></code>。</p>
+<p>执行安装脚本时，环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_CORE_GIT_REMOTE</span></code> 可以设置为 <a class="reference internal" href="homebrew-core.git.html"><span class="doc">Homebrew Core 源使用帮助</span></a> (macOS) 或 <a class="reference internal" href="linuxbrew-core.git.html"><span class="doc">Linuxbrew Core 源使用帮助</span></a> (Linux) 中对应的地址，以加快核心软件仓库索引下载的速度。</p>
 </div>
 </div>
 <div class="section" id="id4">
