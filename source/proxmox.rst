@@ -31,6 +31,9 @@ Proxmox 软件源
 .. warning::
     操作前请做好相应备份
 
+Debian，Proxmox
+------------------------------
+
 一般情况下，需要同时修改基础系统（Debian）的源文件 :file:`/etc/apt/sources.list` 和Proxmox的源文件。
 
 修改基础系统（Debian）的源文件，可以使用如下命令：
@@ -51,6 +54,8 @@ Proxmox 软件源
 更改完 :file:`sources.list` 文件后请运行 ``apt update`` 更新索引以生效。
 
 
+CT Templates
+------------------------------
 
 另外，如果你需要使用Proxmox网页端下载CT Templates，可以替换CT Templates的源为``http://mirrors.ustc.edu.cn``。
 
