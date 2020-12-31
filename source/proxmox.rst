@@ -34,7 +34,7 @@ Proxmox 软件源
 Debian，Proxmox
 ------------------------------
 
-一般情况下，需要同时修改基础系统（Debian）的源文件 :file:`/etc/apt/sources.list` 和Proxmox的源文件。
+一般情况下，需要同时修改基础系统（Debian）的源文件 :file:`/etc/apt/sources.list` 和 Proxmox 的源文件。
 
 修改基础系统（Debian）的源文件，可以使用如下命令：
 
@@ -57,7 +57,7 @@ Debian，Proxmox
 CT Templates
 ------------------------------
 
-另外，如果你需要使用Proxmox网页端下载CT Templates，可以替换CT Templates的源为``http://mirrors.ustc.edu.cn``。
+另外，如果你需要使用 Proxmox 网页端下载 CT Templates，可以替换 CT Templates 的源为 ``http://mirrors.ustc.edu.cn``。
 
 具体方法：将 :file:`/usr/share/perl5/PVE/APLInfo.pm` 文件中默认的源地址 ``http://download.proxmox.com``
 替换为 ``https://mirrors.ustc.edu.cn/proxmox`` 即可。
@@ -69,5 +69,5 @@ CT Templates
   cp /usr/share/perl5/PVE/APLInfo.pm /usr/share/perl5/PVE/APLInfo.pm_back
   sed -i 's|http://download.proxmox.com|https://mirrors.ustc.edu.cn/proxmox|g' /usr/share/perl5/PVE/APLInfo.pm 
 
-针对file:`/usr/share/perl5/PVE/APLInfo.pm` 文件的修改，重启后生效。
+针对 :file:`/usr/share/perl5/PVE/APLInfo.pm` 文件的修改，重启后生效。
 
