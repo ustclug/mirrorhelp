@@ -38,6 +38,7 @@ USTC Mirror Help
    opensuse
    openwrt
    packman
+   proxmox
    raspbian
    scientificlinux
    termux
