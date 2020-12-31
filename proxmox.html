@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CPAN 镜像使用帮助 &mdash; USTC Mirror Help  文档</title>
+  <title>Proxmox 源使用帮助 &mdash; USTC Mirror Help  文档</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="CRAN 镜像使用帮助" href="CRAN.html" />
-    <link rel="prev" title="Homebrew 源使用帮助" href="brew.git.html" /> 
+    <link rel="next" title="Raspbian 源使用帮助" href="raspbian.html" />
+    <link rel="prev" title="PackMan 源使用帮助" href="packman.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -79,7 +79,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="alpine.html">Alpine Linux 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="anthon.html">AOSC OS 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aosp.html">AOSP 镜像使用帮助</a></li>
@@ -111,7 +111,18 @@
 <li class="toctree-l1"><a class="reference internal" href="opensuse.html">openSUSE 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openwrt.html">OpenWRT/LEDE 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packman.html">PackMan 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="proxmox.html">Proxmox 源使用帮助</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Proxmox 源使用帮助</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">收录架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">收录版本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">使用说明</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#debian-proxmox">Debian，Proxmox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ct-templates">CT Templates</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="raspbian.html">Raspbian 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scientificlinux.html">Scientific Linux 镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="termux.html">Termux 源使用帮助</a></li>
@@ -133,14 +144,10 @@
 <li class="toctree-l1"><a class="reference internal" href="rust-static.html">Rust Toolchain 反向代理使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stackage.html">Stackage 源使用帮助</a></li>
 </ul>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">CPAN 镜像使用帮助</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">使用说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">相关链接</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="CPAN.html">CPAN 镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CRAN.html">CRAN 镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dockerhub.html">Docker Hub 源使用帮助</a></li>
@@ -211,14 +218,14 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>CPAN 镜像使用帮助</li>
+      <li>Proxmox 源使用帮助</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/CPAN.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/proxmox.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -232,61 +239,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="cpan">
-<h1>CPAN 镜像使用帮助<a class="headerlink" href="#cpan" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="proxmox">
+<h1>Proxmox 源使用帮助<a class="headerlink" href="#proxmox" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
-<h2>使用说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p>若你以前从未使用过 CPAN，请在命令行下运行 cpan</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Would you like me to automatically choose some CPAN mirror sites for you? (This means connecting to the Internet) [yes]
-</pre></div>
-</div>
-<p>此处输入 no</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Would you like to pick from the CPAN mirror list? [yes]
-</pre></div>
-</div>
-<p>此处直接回车</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">You</span> <span class="n">should</span> <span class="n">select</span> <span class="n">more</span> <span class="n">than</span> <span class="n">one</span> <span class="p">(</span><span class="n">just</span> <span class="ow">in</span> <span class="n">case</span> <span class="n">the</span> <span class="n">first</span> <span class="n">isn</span><span class="s1">&#39;t available).</span>
-
-<span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">Africa</span>
-<span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="n">Asia</span>
-<span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="n">Europe</span>
-<span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="n">North</span> <span class="n">America</span>
-<span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="n">Oceania</span>
-<span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="n">South</span> <span class="n">America</span>
-<span class="n">Select</span> <span class="n">your</span> <span class="n">continent</span> <span class="p">(</span><span class="ow">or</span> <span class="n">several</span> <span class="n">nearby</span> <span class="n">continents</span><span class="p">)</span> <span class="p">[]</span>
-</pre></div>
-</div>
-<p>此处选择 2</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">China</span>
-<span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="n">India</span>
-<span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="n">Indonesia</span>
-<span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="n">Israel</span>
-<span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="n">Japan</span>
-<span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="n">Kazakhstan</span>
-<span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="n">Pakistan</span>
-<span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="n">Republic</span> <span class="n">of</span> <span class="n">Korea</span>
-<span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="n">Saudi</span> <span class="n">Arabia</span>
-<span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="n">Singapore</span>
-<span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="n">Taiwan</span>
-<span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="n">Thailand</span>
-<span class="p">(</span><span class="mi">13</span><span class="p">)</span> <span class="n">Turkey</span>
-<span class="p">(</span><span class="mi">14</span><span class="p">)</span> <span class="n">Viet</span> <span class="n">Nam</span>
-<span class="n">Select</span> <span class="n">your</span> <span class="n">country</span> <span class="p">(</span><span class="ow">or</span> <span class="n">several</span> <span class="n">nearby</span> <span class="n">countries</span><span class="p">)</span> <span class="p">[]</span>
-</pre></div>
-</div>
-<p>此处选择 1，然后选择科大源即可。</p>
-<p>若你已经用过 cpan 了，将 ~/.cpan/CPAN/MyConfig.pm 中的 ‘urllist’ 的值改为</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;urllist&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="n">q</span><span class="p">[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">CPAN</span><span class="o">/</span><span class="p">]],</span>
-</pre></div>
-</div>
+<h2>地址<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://mirrors.ustc.edu.cn/proxmox/">https://mirrors.ustc.edu.cn/proxmox/</a></p>
 </div>
 <div class="section" id="id2">
-<h2>相关链接<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<ul class="simple">
-<li><p>官方主页: <a class="reference external" href="http://www.cpan.org/">http://www.cpan.org/</a></p></li>
-<li><p>镜像列表: <a class="reference external" href="http://www.cpan.org/SITES.html">http://www.cpan.org/SITES.html</a></p></li>
-<li><p>FAQ: <a class="reference external" href="http://www.cpan.org/misc/cpan-faq.html">http://www.cpan.org/misc/cpan-faq.html</a></p></li>
-</ul>
+<h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>Proxmox 软件源</p>
+</div>
+<div class="section" id="id3">
+<h2>收录架构<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>所有 Proxmox 官方支持的架构</p>
+</div>
+<div class="section" id="id4">
+<h2>收录版本<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>所有 Proxmox 官方支持的版本</p>
+</div>
+<div class="section" id="id5">
+<h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>操作前请做好相应备份</p>
+</div>
+<div class="section" id="debian-proxmox">
+<h3>Debian，Proxmox<a class="headerlink" href="#debian-proxmox" title="永久链接至标题">¶</a></h3>
+<p>一般情况下，需要同时修改基础系统（Debian）的源文件 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 和 Proxmox 的源文件。</p>
+<p>修改基础系统（Debian）的源文件，可以使用如下命令：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s|^deb http://ftp.debian.org|deb https://mirrors.ustc.edu.cn|g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span>
+<span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s|^deb http://security.debian.org|deb https://mirrors.ustc.edu.cn/debian-security|g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span>
+</pre></div>
+</div>
+<p>修改Proxmox的源文件，可以使用如下命令：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>CODENAME=`cat /etc/os-release |grep CODENAME |cut -f 2 -d &quot;=&quot;`
+echo &quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/pve $CODENAME pve-no-subscription&quot; &gt; /etc/apt/sources.list.d/pve-no-subscription.list
+</pre></div>
+</div>
+<p>更改完 <code class="file docutils literal notranslate"><span class="pre">sources.list</span></code> 文件后请运行 <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">update</span></code> 更新索引以生效。</p>
+</div>
+<div class="section" id="ct-templates">
+<h3>CT Templates<a class="headerlink" href="#ct-templates" title="永久链接至标题">¶</a></h3>
+<p>另外，如果你需要使用 Proxmox 网页端下载 CT Templates，可以替换 CT Templates 的源为 <code class="docutils literal notranslate"><span class="pre">http://mirrors.ustc.edu.cn</span></code>。</p>
+<p>具体方法：将 <code class="file docutils literal notranslate"><span class="pre">/usr/share/perl5/PVE/APLInfo.pm</span></code> 文件中默认的源地址 <code class="docutils literal notranslate"><span class="pre">http://download.proxmox.com</span></code>
+替换为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/proxmox</span></code> 即可。</p>
+<p>可以使用如下命令：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">perl5</span><span class="o">/</span><span class="n">PVE</span><span class="o">/</span><span class="n">APLInfo</span><span class="o">.</span><span class="n">pm</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">perl5</span><span class="o">/</span><span class="n">PVE</span><span class="o">/</span><span class="n">APLInfo</span><span class="o">.</span><span class="n">pm_back</span>
+<span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s|http://download.proxmox.com|https://mirrors.ustc.edu.cn/proxmox|g&#39;</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">perl5</span><span class="o">/</span><span class="n">PVE</span><span class="o">/</span><span class="n">APLInfo</span><span class="o">.</span><span class="n">pm</span>
+</pre></div>
+</div>
+<p>针对 <code class="file docutils literal notranslate"><span class="pre">/usr/share/perl5/PVE/APLInfo.pm</span></code> 文件的修改，重启后生效。</p>
+</div>
 </div>
 </div>
 
@@ -298,10 +301,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CRAN.html" class="btn btn-neutral float-right" title="CRAN 镜像使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="raspbian.html" class="btn btn-neutral float-right" title="Raspbian 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="brew.git.html" class="btn btn-neutral float-left" title="Homebrew 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="packman.html" class="btn btn-neutral float-left" title="PackMan 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
