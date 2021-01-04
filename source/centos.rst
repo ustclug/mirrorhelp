@@ -35,9 +35,11 @@ x86_64, i386
   sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' \
            -e 's|^#baseurl=http://mirror.centos.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/centos|g' \
            -i.bak \
-           /etc/yum.repos.d/CentOS-Base.repo \
-           /etc/yum.repos.d/CentOS-Extras.repo \
-           /etc/yum.repos.d/CentOS-AppStream.repo
+           /etc/yum.repos.d/CentOS-Linux-AppStream.repo \
+           /etc/yum.repos.d/CentOS-Linux-BaseOS.repo \
+           /etc/yum.repos.d/CentOS-Linux-Extras.repo \
+           /etc/yum.repos.d/CentOS-Linux-PowerTools.repo \
+           /etc/yum.repos.d/CentOS-Linux-Plus.repo
 
 对于 CentOS 6、7，使用以下命令替换默认配置
 
@@ -52,19 +54,30 @@ x86_64, i386
 
 以下是替换之后的文件：
 
+.. warning::
+    以下给出的 `CentOS-Linux-PowerTools.repo` 与 `CentOS-Linux-Plus.repo` 设置了默认为停用状态。如需启用，请将 `enabled=0` 改为 `enabled=1`。
+
 * CentOS 8：
 
-  :file:`/etc/yum.repos.d/CentOS-Base.repo` 文件：
+  :file:`/etc/yum.repos.d/CentOS-Linux-BaseOS.repo` 文件：
 
-  .. literalinclude:: includes/centos8/CentOS-Base.repo
+  .. literalinclude:: includes/centos8/CentOS-Linux-BaseOS.repo
 
-  :file:`/etc/yum.repos.d/CentOS-Extras.repo` 文件：
+  :file:`/etc/yum.repos.d/CentOS-Linux-Extras.repo` 文件：
 
-  .. literalinclude:: includes/centos8/CentOS-Extras.repo
+  .. literalinclude:: includes/centos8/CentOS-Linux-Extras.repo
 
-  :file:`/etc/yum.repos.d/CentOS-AppStream.repo` 文件：
+  :file:`/etc/yum.repos.d/CentOS-Linux-AppStream.repo` 文件：
 
-  .. literalinclude:: includes/centos8/CentOS-AppStream.repo
+  .. literalinclude:: includes/centos8/CentOS-Linux-AppStream.repo
+
+  :file:`/etc/yum.repos.d/CentOS-Linux-PowerTools.repo` 文件：
+
+  .. literalinclude:: includes/centos8/CentOS-Linux-PowerTools.repo
+
+  :file:`/etc/yum.repos.d/CentOS-Linux-Plus.repo` 文件：
+
+  .. literalinclude:: includes/centos8/CentOS-Linux-Plus.repo
 
 * CentOS 7：
 
