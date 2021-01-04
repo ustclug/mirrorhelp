@@ -252,7 +252,7 @@
 </div>
 <div class="section" id="id4">
 <h2>收录版本<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p>6, 7, 8</p>
+<p>7, 8</p>
 </div>
 <div class="section" id="id5">
 <h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
@@ -271,7 +271,7 @@
          <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">Plus</span><span class="o">.</span><span class="n">repo</span>
 </pre></div>
 </div>
-<p>对于 CentOS 6、7，使用以下命令替换默认配置</p>
+<p>对于 CentOS 7，使用以下命令替换默认配置</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^mirrorlist=|#mirrorlist=|g&#39;</span> \
          <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^#baseurl=http://mirror.centos.org/centos|baseurl=https://mirrors.ustc.edu.cn/centos|g&#39;</span> \
          <span class="o">-</span><span class="n">i</span><span class="o">.</span><span class="n">bak</span> \
@@ -432,63 +432,6 @@ baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/centosplus/$basearch/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
-</pre></div>
-</div>
-</li>
-<li><p>CentOS 6：</p>
-<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Base.repo</span></code> 文件：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Base.repo
-#
-# The mirror system uses the connecting IP address of the client and the
-# update status of each mirror to pick mirrors that are updated to and
-# geographically close to the client.  You should use this for CentOS updates
-# unless you are manually picking other mirrors.
-#
-# If the mirrorlist= does not work for you, as a fall back you can try the
-# remarked out baseurl= line instead.
-#
-#
-
-[base]
-name=CentOS-$releasever - Base
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=os&amp;infra=$infra
-baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/os/$basearch/
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
-
-#released updates
-[updates]
-name=CentOS-$releasever - Updates
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=updates&amp;infra=$infra
-baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/updates/$basearch/
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
-
-#additional packages that may be useful
-[extras]
-name=CentOS-$releasever - Extras
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=extras&amp;infra=$infra
-baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/extras/$basearch/
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
-
-#additional packages that extend functionality of existing packages
-[centosplus]
-name=CentOS-$releasever - Plus
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=centosplus&amp;infra=$infra
-baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/centosplus/$basearch/
-gpgcheck=1
-enabled=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
-
-#contrib - packages by Centos Users
-[contrib]
-name=CentOS-$releasever - Contrib
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=contrib&amp;infra=$infra
-baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/contrib/$basearch/
-gpgcheck=1
-enabled=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
 </pre></div>
 </div>
 </li>
