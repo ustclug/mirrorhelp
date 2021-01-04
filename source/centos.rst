@@ -20,7 +20,7 @@ x86_64, i386
 收录版本
 ========
 
-6, 7, 8
+7, 8
 
 使用说明
 ========
@@ -41,7 +41,7 @@ x86_64, i386
            /etc/yum.repos.d/CentOS-Linux-PowerTools.repo \
            /etc/yum.repos.d/CentOS-Linux-Plus.repo
 
-对于 CentOS 6、7，使用以下命令替换默认配置
+对于 CentOS 7，使用以下命令替换默认配置
 
 ::
 
@@ -85,11 +85,6 @@ x86_64, i386
 
   .. literalinclude:: includes/centos7/CentOS-Base.repo
 
-* CentOS 6：
-
-  :file:`/etc/yum.repos.d/CentOS-Base.repo` 文件：
-
-  .. literalinclude:: includes/centos6/CentOS-Base.repo
 
 相关链接
 ========
