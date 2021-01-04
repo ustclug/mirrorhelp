@@ -55,7 +55,7 @@ x86_64, i386
 以下是替换之后的文件：
 
 .. warning::
-    以下给出的 `CentOS-Linux-PowerTools.repo` 与 `CentOS-Linux-Plus.repo` 设置了默认为停用状态。如需启用，请将 `enabled=0` 改为 `enabled=1`。
+    以下给出的 ``CentOS-Linux-PowerTools.repo`` 与 ``CentOS-Linux-Plus.repo`` 设置了默认为停用状态。如需启用，请将 ``enabled=0`` 改为 ``enabled=1``。
 
 * CentOS 8：
 
