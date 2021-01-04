@@ -264,9 +264,11 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^mirrorlist=|#mirrorlist=|g&#39;</span> \
          <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^#baseurl=http://mirror.centos.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/centos|g&#39;</span> \
          <span class="o">-</span><span class="n">i</span><span class="o">.</span><span class="n">bak</span> \
-         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Base</span><span class="o">.</span><span class="n">repo</span> \
-         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Extras</span><span class="o">.</span><span class="n">repo</span> \
-         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">AppStream</span><span class="o">.</span><span class="n">repo</span>
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">AppStream</span><span class="o">.</span><span class="n">repo</span> \
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">BaseOS</span><span class="o">.</span><span class="n">repo</span> \
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">Extras</span><span class="o">.</span><span class="n">repo</span> \
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">PowerTools</span><span class="o">.</span><span class="n">repo</span> \
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">Plus</span><span class="o">.</span><span class="n">repo</span>
 </pre></div>
 </div>
 <p>对于 CentOS 6、7，使用以下命令替换默认配置</p>
@@ -278,23 +280,25 @@
 </div>
 <p>以上命令只替换了默认启用的仓库。替换之后请运行 <code class="docutils literal notranslate"><span class="pre">yum</span> <span class="pre">makecache</span></code> 更新缓存。</p>
 <p>以下是替换之后的文件：</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>以下给出的 <cite>CentOS-Linux-PowerTools.repo</cite> 与 <cite>CentOS-Linux-Plus.repo</cite> 设置了默认为停用状态。如需启用，请将 <cite>enabled=0</cite> 改为 <cite>enabled=1</cite>。</p>
+</div>
 <ul>
 <li><p>CentOS 8：</p>
-<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Base.repo</span></code> 文件：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Base.repo
+<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Linux-BaseOS.repo</span></code> 文件：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Linux-BaseOS.repo
 #
-# The mirror system uses the connecting IP address of the client and the
-# update status of each mirror to pick mirrors that are updated to and
-# geographically close to the client.  You should use this for CentOS updates
-# unless you are manually picking other mirrors.
+# The mirrorlist system uses the connecting IP address of the client and the
+# update status of each mirror to pick current mirrors that are geographically
+# close to the client.  You should use this for CentOS updates unless you are
+# manually picking other mirrors.
 #
-# If the mirrorlist= does not work for you, as a fall back you can try the
-# remarked out baseurl= line instead.
-#
-#
+# If the mirrorlist does not work for you, you can try the commented out
+# baseurl line instead.
 
-[BaseOS]
-name=CentOS-$releasever - Base
+[baseos]
+name=CentOS Linux $releasever - BaseOS
 #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=BaseOS&amp;infra=$infra
 baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/BaseOS/$basearch/os/
 gpgcheck=1
@@ -302,22 +306,19 @@ enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 </pre></div>
 </div>
-<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Extras.repo</span></code> 文件：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Extras.repo
+<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Linux-Extras.repo</span></code> 文件：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Linux-Extras.repo
 #
-# The mirror system uses the connecting IP address of the client and the
-# update status of each mirror to pick mirrors that are updated to and
-# geographically close to the client.  You should use this for CentOS updates
-# unless you are manually picking other mirrors.
+# The mirrorlist system uses the connecting IP address of the client and the
+# update status of each mirror to pick current mirrors that are geographically
+# close to the client.  You should use this for CentOS updates unless you are
+# manually picking other mirrors.
 #
-# If the mirrorlist= does not work for you, as a fall back you can try the
-# remarked out baseurl= line instead.
-#
-#
+# If the mirrorlist does not work for you, you can try the commented out
+# baseurl line instead.
 
-#additional packages that may be useful
 [extras]
-name=CentOS-$releasever - Extras
+name=CentOS Linux $releasever - Extras
 #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=extras&amp;infra=$infra
 baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/extras/$basearch/os/
 gpgcheck=1
@@ -325,25 +326,63 @@ enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 </pre></div>
 </div>
-<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-AppStream.repo</span></code> 文件：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-AppStream.repo
+<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Linux-AppStream.repo</span></code> 文件：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Linux-AppStream.repo
 #
-# The mirror system uses the connecting IP address of the client and the
-# update status of each mirror to pick mirrors that are updated to and
-# geographically close to the client.  You should use this for CentOS updates
-# unless you are manually picking other mirrors.
+# The mirrorlist system uses the connecting IP address of the client and the
+# update status of each mirror to pick current mirrors that are geographically
+# close to the client.  You should use this for CentOS updates unless you are
+# manually picking other mirrors.
 #
-# If the mirrorlist= does not work for you, as a fall back you can try the
-# remarked out baseurl= line instead.
-#
-#
+# If the mirrorlist does not work for you, you can try the commented out
+# baseurl line instead.
 
-[AppStream]
-name=CentOS-$releasever - AppStream
+[appstream]
+name=CentOS Linux $releasever - AppStream
 #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=AppStream&amp;infra=$infra
 baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/AppStream/$basearch/os/
 gpgcheck=1
 enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+</pre></div>
+</div>
+<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Linux-PowerTools.repo</span></code> 文件：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Linux-PowerTools.repo
+#
+# The mirrorlist system uses the connecting IP address of the client and the
+# update status of each mirror to pick current mirrors that are geographically
+# close to the client.  You should use this for CentOS updates unless you are
+# manually picking other mirrors.
+#
+# If the mirrorlist does not work for you, you can try the commented out
+# baseurl line instead.
+
+[powertools]
+name=CentOS Linux $releasever - PowerTools
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=PowerTools&amp;infra=$infra
+baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/PowerTools/$basearch/os/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+</pre></div>
+</div>
+<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Linux-Plus.repo</span></code> 文件：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Linux-Plus.repo
+#
+# The mirrorlist system uses the connecting IP address of the client and the
+# update status of each mirror to pick current mirrors that are geographically
+# close to the client.  You should use this for CentOS updates unless you are
+# manually picking other mirrors.
+#
+# If the mirrorlist does not work for you, you can try the commented out
+# baseurl line instead.
+
+[plus]
+name=CentOS Linux $releasever - Plus
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=centosplus&amp;infra=$infra
+baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/centosplus/$basearch/os/
+gpgcheck=1
+enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 </pre></div>
 </div>
@@ -501,7 +540,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
   <div role="contentinfo">
     <p>
         
-        &copy; 版权所有 2017 - 2020, LUG@USTC
+        &copy; 版权所有 2017 - 2021, LUG@USTC
 
     </p>
   </div>
