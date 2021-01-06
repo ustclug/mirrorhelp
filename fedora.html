@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Fedora 源使用帮助 &mdash; USTC Mirror Help  文档</title>
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -51,7 +54,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> USTC Mirror Help
+            <a href="index.html" class="icon icon-home"> USTC Mirror Help
           
 
           
@@ -209,6 +212,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -220,7 +225,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/fedora.rst" class="fa fa-github"> Edit on GitHub</a>
             
@@ -252,7 +257,7 @@
 </div>
 <div class="section" id="id4">
 <h2>收录版本<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p>所有仍在支持的版本和最新测试版本</p>
+<p>所有仍在支持的版本</p>
 </div>
 <div class="section" id="id5">
 <h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
@@ -262,7 +267,7 @@
 </div>
 <p>用以下命令替换 <code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d</span></code> 下的文件</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^metalink=|#metalink=|g&#39;</span> \
-         <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^#baseurl=http://download.fedoraproject.org/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g&#39;</span> \
+         <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^#baseurl=http://download.example/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g&#39;</span> \
          <span class="o">-</span><span class="n">i</span><span class="o">.</span><span class="n">bak</span> \
          <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">fedora</span><span class="o">.</span><span class="n">repo</span> \
          <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">fedora</span><span class="o">-</span><span class="n">modular</span><span class="o">.</span><span class="n">repo</span> \
@@ -467,32 +472,25 @@ skip_if_unavailable=False
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="freebsd.html" class="btn btn-neutral float-right" title="FreeBSD 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="deb-multimedia.html" class="btn btn-neutral float-left" title="Deb Multimedia 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="freebsd.html" class="btn btn-neutral float-right" title="FreeBSD 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="deb-multimedia.html" class="btn btn-neutral float-left" title="Deb Multimedia 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; 版权所有 2017 - 2021, LUG@USTC
+        &#169; 版权所有 2017 - 2021, LUG@USTC.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
 <p>除额外注明的地方外，本文档按 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议发布。</p>
@@ -500,7 +498,6 @@ skip_if_unavailable=False
 
 
 </footer>
-
         </div>
       </div>
 
