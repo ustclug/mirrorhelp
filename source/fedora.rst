@@ -20,7 +20,7 @@ x86_64
 收录版本
 ========
 
-所有仍在支持的版本和最新测试版本
+所有仍在支持的版本
 
 使用说明
 ========
@@ -33,7 +33,7 @@ x86_64
 ::
 
   sudo sed -e 's|^metalink=|#metalink=|g' \
-           -e 's|^#baseurl=http://download.fedoraproject.org/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g' \
+           -e 's|^#baseurl=http://download.example/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g' \
            -i.bak \
            /etc/yum.repos.d/fedora.repo \
            /etc/yum.repos.d/fedora-modular.repo \
