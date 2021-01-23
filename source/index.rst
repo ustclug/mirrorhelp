@@ -39,7 +39,7 @@ USTC Mirror Help
    openwrt
    packman
    proxmox
-   raspberry-pi-os
+   raspberry-pi-os-images
    raspbian
    scientificlinux
    termux
