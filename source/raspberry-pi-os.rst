@@ -12,7 +12,7 @@ https://mirrors.ustc.edu.cn/raspbian/
 
 Raspberry Pi OS 软件源
 
-Raspberry Pi OS 的安装镜像在 ``http://mirrors.ustc.edu.cn/raspberry-pi-os-images/`` 处可以找到，
+Raspberry Pi OS 的安装镜像在 http://mirrors.ustc.edu.cn/raspberry-pi-os-images/ 处可以找到，
 目前仅同步了包括 raspios 在内的几个常用版本。
 
 系统架构
