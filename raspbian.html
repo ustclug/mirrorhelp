@@ -40,7 +40,7 @@
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
     <link rel="next" title="Scientific Linux 镜像使用帮助" href="scientificlinux.html" />
-    <link rel="prev" title="Proxmox 源使用帮助" href="proxmox.html" /> 
+    <link rel="prev" title="Raspberry Pi OS 使用帮助" href="raspberry-pi-os-images.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -115,6 +115,7 @@
 <li class="toctree-l1"><a class="reference internal" href="openwrt.html">OpenWRT/LEDE 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packman.html">PackMan 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="proxmox.html">Proxmox 源使用帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry-pi-os-images.html">Raspberry Pi OS 使用帮助</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Raspbian 源使用帮助</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
@@ -249,7 +250,7 @@
 </div>
 <div class="section" id="id2">
 <h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>Raspbian 安装镜像和软件源</p>
+<p>Raspbian 软件源</p>
 </div>
 <div class="section" id="id3">
 <h2>系统架构<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
@@ -282,7 +283,16 @@
 </div>
 <p>当然也可以直接编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件（需要使用 sudo）。删除原文件所有内容，用以下内容取代（以 Buster 示例）：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">raspbian</span><span class="o">/</span><span class="n">raspbian</span><span class="o">/</span> <span class="n">buster</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span> <span class="n">rpi</span>
-<span class="c1">#deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi</span>
+</pre></div>
+</div>
+<p>Arm64 架构的 Raspberry Pi OS 仍处于 beta 状态，本镜像上游亦不含此架构。对于 arm64 的 Raspberry Pi OS，可以直接使用 arm64 Debian 的源（以 Buster 示例）：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">/</span> <span class="n">buster</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian buster main contrib non-free</span>
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">/</span> <span class="n">buster</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free</span>
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">-</span><span class="n">security</span> <span class="n">buster</span><span class="o">/</span><span class="n">updates</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main non-free contrib</span>
 </pre></div>
 </div>
 <p>编辑此文件后，请使用 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code> 命令，更新软件索引。</p>
@@ -310,7 +320,7 @@
 <dt class="field-odd">树莓派基金会主页</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://www.raspberrypi.org/">https://www.raspberrypi.org/</a></p>
 </dd>
-<dt class="field-even">树莓派基金会论坛 Raspbian 版块</dt>
+<dt class="field-even">树莓派基金会论坛 Raspberry Pi OS 版块</dt>
 <dd class="field-even"><p><a class="reference external" href="https://www.raspberrypi.org/forums/viewforum.php?f=66">https://www.raspberrypi.org/forums/viewforum.php?f=66</a></p>
 </dd>
 </dl>
@@ -326,7 +336,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="scientificlinux.html" class="btn btn-neutral float-right" title="Scientific Linux 镜像使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="proxmox.html" class="btn btn-neutral float-left" title="Proxmox 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="raspberry-pi-os-images.html" class="btn btn-neutral float-left" title="Raspberry Pi OS 使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

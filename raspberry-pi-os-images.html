@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Gentoo Portage 源使用帮助 &mdash; USTC Mirror Help  文档</title>
+  <title>Raspberry Pi OS 使用帮助 &mdash; USTC Mirror Help  文档</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Kali Linux 源使用帮助" href="kali.html" />
-    <link rel="prev" title="Gentoo 源使用帮助" href="gentoo.html" /> 
+    <link rel="next" title="Raspbian 源使用帮助" href="raspbian.html" />
+    <link rel="prev" title="Proxmox 源使用帮助" href="proxmox.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -105,14 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="freebsd-ports.html">FreeBSD ports 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rpmfusion.html">RPM Fusion 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gentoo.html">Gentoo 源使用帮助</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Gentoo Portage 源使用帮助</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">收录架构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">使用说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">相关链接</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="gentoo-portage.html">Gentoo Portage 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kali.html">Kali Linux 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linuxmint.html">Linux Mint 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mageia.html">Mageia 源使用帮助</a></li>
@@ -122,7 +115,14 @@
 <li class="toctree-l1"><a class="reference internal" href="openwrt.html">OpenWRT/LEDE 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packman.html">PackMan 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="proxmox.html">Proxmox 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="raspberry-pi-os-images.html">Raspberry Pi OS 使用帮助</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Raspberry Pi OS 使用帮助</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">系统架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">收录版本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">使用说明</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="raspbian.html">Raspbian 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scientificlinux.html">Scientific Linux 镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="termux.html">Termux 源使用帮助</a></li>
@@ -220,14 +220,14 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Gentoo Portage 源使用帮助</li>
+      <li>Raspberry Pi OS 使用帮助</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
             
-              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/gentoo-portage.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/raspberry-pi-os-images.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -241,56 +241,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="gentoo-portage">
-<h1>Gentoo Portage 源使用帮助<a class="headerlink" href="#gentoo-portage" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="raspberry-pi-os">
+<h1>Raspberry Pi OS 使用帮助<a class="headerlink" href="#raspberry-pi-os" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
 <h2>地址<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://mirrors.ustc.edu.cn/gentoo-portage/">https://mirrors.ustc.edu.cn/gentoo-portage/</a></p>
+<p><a class="reference external" href="http://mirrors.ustc.edu.cn/raspberry-pi-os-images/">http://mirrors.ustc.edu.cn/raspberry-pi-os-images/</a></p>
 </div>
 <div class="section" id="id2">
 <h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>Gentoo Portage 软件源</p>
+<p>目前仅同步了包括 raspios 在内的几个常用版本，以及部分工具等。</p>
+<p>raspios 的默认用户是 pi，密码是 raspberry，root 默认关闭。</p>
 </div>
 <div class="section" id="id3">
-<h2>收录架构<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>ALL</p>
+<h2>系统架构<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>armhf</p></li>
+<li><p>arm64 (Beta)</p></li>
+<li><p>x86</p></li>
+</ul>
 </div>
 <div class="section" id="id4">
-<h2>使用说明<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p>新建或修改 <code class="file docutils literal notranslate"><span class="pre">/etc/portage/repos.conf</span></code> ：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">DEFAULT</span><span class="p">]</span>
-<span class="n">main</span><span class="o">-</span><span class="n">repo</span> <span class="o">=</span> <span class="n">gentoo</span>
-
-<span class="p">[</span><span class="n">gentoo</span><span class="p">]</span>
-<span class="n">location</span> <span class="o">=</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">portage</span>
-<span class="n">sync</span><span class="o">-</span><span class="nb">type</span> <span class="o">=</span> <span class="n">rsync</span>
-<span class="n">sync</span><span class="o">-</span><span class="n">uri</span> <span class="o">=</span> <span class="n">rsync</span><span class="p">:</span><span class="o">//</span><span class="n">rsync</span><span class="o">.</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">gentoo</span><span class="o">-</span><span class="n">portage</span><span class="o">/</span>
-<span class="n">auto</span><span class="o">-</span><span class="n">sync</span> <span class="o">=</span> <span class="n">yes</span>
-</pre></div>
-</div>
+<h2>收录版本<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>最新的稳定版（buster）</p>
 </div>
 <div class="section" id="id5">
-<h2>相关链接<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<dl class="field-list simple">
-<dt class="field-odd">官方主页</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://www.gentoo.org/">https://www.gentoo.org/</a></p>
-</dd>
-<dt class="field-even">邮件列表</dt>
-<dd class="field-even"><p><a class="reference external" href="https://www.gentoo.org/main/en/lists.xml">https://www.gentoo.org/main/en/lists.xml</a></p>
-</dd>
-<dt class="field-odd">论坛</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://forums.gentoo.org/">https://forums.gentoo.org/</a></p>
-</dd>
-<dt class="field-even">文档</dt>
-<dd class="field-even"><p><a class="reference external" href="https://www.gentoo.org/doc/en/">https://www.gentoo.org/doc/en/</a></p>
-</dd>
-<dt class="field-odd">Wiki</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://wiki.gentoo.org/">https://wiki.gentoo.org/</a></p>
-</dd>
-<dt class="field-even">镜像列表</dt>
-<dd class="field-even"><p><a class="reference external" href="https://www.gentoo.org/main/en/mirrors-rsync.xml">https://www.gentoo.org/main/en/mirrors-rsync.xml</a></p>
-</dd>
-</dl>
+<h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>目前本镜像包含如下内容：</p>
+<ul class="simple">
+<li><p>imager: Raspberry Pi Imager 官方刻录器。</p></li>
+<li><p>raspios_arm64: Arm64 架构的 Raspberry Pi OS（Beta）</p></li>
+<li><p>raspios_armhf: Armhf 架构的 Raspberry Pi OS</p></li>
+<li><p>raspios_full_armhf: Armhf 架构的 Raspberry Pi OS，并包含官方推荐的软件</p></li>
+<li><p>raspios_lite_arm64: Arm64 架构的 Raspberry Pi OS（Beta，不含桌面）</p></li>
+<li><p>raspios_lite_armhf: Armhf 架构的 Raspberry Pi OS（不含桌面）</p></li>
+<li><p>rpd_x86: Raspberry Pi Desktop，用于 x86 架构的设备</p></li>
+<li><p>Raspberry_Pi_Education_Manual.pdf: 教学用树莓派帮助手册</p></li>
+</ul>
+<p>需要安装 Raspberry Pi OS 时，一般下载 images 目录中的最新的即可，比如 arm64 的树莓派下载
+<a class="reference external" href="https://mirrors.ustc.edu.cn/raspberry-pi-os-images/raspios_lite_arm64/images/">https://mirrors.ustc.edu.cn/raspberry-pi-os-images/raspios_lite_arm64/images/</a> 中最新的 zip 压缩包即可，
+解压完 zip 压缩包后即可开始刻录。</p>
 </div>
 </div>
 
@@ -300,8 +289,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="kali.html" class="btn btn-neutral float-right" title="Kali Linux 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="gentoo.html" class="btn btn-neutral float-left" title="Gentoo 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="raspbian.html" class="btn btn-neutral float-right" title="Raspbian 源使用帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="proxmox.html" class="btn btn-neutral float-left" title="Proxmox 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
