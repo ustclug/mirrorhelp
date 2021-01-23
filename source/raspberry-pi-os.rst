@@ -55,7 +55,18 @@ raspbian 2018-04-19 之后的镜像默认源已经更改，用如下命令替换
 ::
 
     deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
-    #deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
+    # deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
+
+对于 arm64 的 Raspberry Pi OS，可以直接使用 arm64 Debian 的源（以 Buster 示例）：
+
+::
+
+    deb https://mirrors.ustc.edu.cn/debian/ buster main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian buster main contrib non-free
+    deb https://mirrors.ustc.edu.cn/debian/ buster-updates main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free
+    deb https://mirrors.ustc.edu.cn/debian-security buster/updates main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main non-free contrib
 
 编辑此文件后，请使用 ``sudo apt-get update`` 命令，更新软件索引。
 
