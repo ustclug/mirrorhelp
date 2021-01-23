@@ -1,5 +1,5 @@
 ===================
-Raspbian 源使用帮助
+Raspberry Pi OS（原 Raspbian）源使用帮助
 ===================
 
 地址
@@ -10,7 +10,10 @@ https://mirrors.ustc.edu.cn/raspbian/
 说明
 ====
 
-Raspbian 安装镜像和软件源
+Raspberry Pi OS 软件源
+
+Raspberry Pi OS 的安装镜像在 ``http://mirrors.ustc.edu.cn/raspberry-pi-os-images/`` 处可以找到，
+目前仅同步了包括 raspios 在内的几个常用版本。
 
 系统架构
 ========
@@ -61,7 +64,7 @@ raspbian 2018-04-19 之后的镜像默认源已经更改，用如下命令替换
 相关链接
 ========
 
-Raspbian 链接
+Raspberry Pi OS 链接
   :Raspbian 主页: http://www.raspbian.org/
   :文档: http://www.raspbian.org/RaspbianDocumentation
   :Bug Tracker: http://www.raspbian.org/RaspbianBugs
@@ -69,4 +72,4 @@ Raspbian 链接
 
 树莓派链接
   :树莓派基金会主页: https://www.raspberrypi.org/
-  :树莓派基金会论坛 Raspbian 版块: https://www.raspberrypi.org/forums/viewforum.php?f=66
+  :树莓派基金会论坛 Raspberry Pi OS 版块: https://www.raspberrypi.org/forums/viewforum.php?f=66
