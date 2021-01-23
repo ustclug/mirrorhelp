@@ -10,7 +10,7 @@ https://mirrors.ustc.edu.cn/raspbian/
 说明
 ====
 
-Raspbian 安装镜像和软件源
+Raspbian 软件源
 
 系统架构
 ========
@@ -52,7 +52,18 @@ raspbian 2018-04-19 之后的镜像默认源已经更改，用如下命令替换
 ::
 
     deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
-    #deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
+    # deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
+
+Arm64 架构的 Raspberry Pi OS 仍处于 beta 状态，本镜像上游亦不含此架构。对于 arm64 的 Raspberry Pi OS，可以直接使用 arm64 Debian 的源（以 Buster 示例）：
+
+::
+
+    deb https://mirrors.ustc.edu.cn/debian/ buster main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian buster main contrib non-free
+    deb https://mirrors.ustc.edu.cn/debian/ buster-updates main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free
+    deb https://mirrors.ustc.edu.cn/debian-security buster/updates main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main non-free contrib
 
 编辑此文件后，请使用 ``sudo apt-get update`` 命令，更新软件索引。
 
@@ -69,4 +80,4 @@ Raspbian 链接
 
 树莓派链接
   :树莓派基金会主页: https://www.raspberrypi.org/
-  :树莓派基金会论坛 Raspbian 版块: https://www.raspberrypi.org/forums/viewforum.php?f=66
+  :树莓派基金会论坛 Raspberry Pi OS 版块: https://www.raspberrypi.org/forums/viewforum.php?f=66
