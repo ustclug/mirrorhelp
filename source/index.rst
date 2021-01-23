@@ -40,6 +40,7 @@ USTC Mirror Help
    packman
    proxmox
    raspberry-pi-os
+   raspbian
    scientificlinux
    termux
    trisquel
