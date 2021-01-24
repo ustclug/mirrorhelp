@@ -258,10 +258,10 @@
 <h2>rsync 同步方式<a class="headerlink" href="#rsync" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id3">
 <h3>同步专用域名<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
-<p>如需使用 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 协议访问科大开源镜像站，建议使用 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 专用的域名： <code class="docutils literal notranslate"><span class="pre">rsync.mirrors.ustc.edu.cn</span></code> 。</p>
+<p>如需使用 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 协议访问科大开源镜像站，请使用 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 专用的域名： <code class="docutils literal notranslate"><span class="pre">rsync.mirrors.ustc.edu.cn</span></code> 。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>使用非标准域名 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 访问站点的用户可能无法进行同步。</p>
+<p>使用非标准域名 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 访问站点的用户无法进行同步。</p>
 </div>
 </div>
 <div class="section" id="id4">
@@ -307,7 +307,14 @@
 </div>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
-<p>在 2020 年 8 月 25 日后，Rsync 总连接数限制从夜晚 60 个连接，白天 30 个连接提升为全天 60 个连接。</p>
+<p>在 2020 年 8 月 25 日后，Rsync 总连接数限制从夜晚 60 个连接，
+白天 30 个连接提升为全天 60 个连接。</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>目前由于服务架构原因，Rsync 提供的文件内容相比于 HTTP(S) 提供的内容存在少许延迟（最多不超过 1 天）。
+如果对获取最新的内容有高要求，建议使用其他镜像站或官方源作为上游。
+如果发现 Rsync 获取的内容存在无法正常使用等问题，请邮件联系我们。</p>
 </div>
 </div>
 </div>
