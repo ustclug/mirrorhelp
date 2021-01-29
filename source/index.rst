@@ -90,6 +90,7 @@ USTC Mirror Help
    linuxbrew-bottles
    linuxbrew-core.git
    mariadb
+   nix-channels
    raspberrypi
    ros
    xbmc
