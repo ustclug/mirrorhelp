@@ -25,20 +25,18 @@ Nixpkgs channel 以及 binary cache。为节省磁盘空间，目前设置为保
     $ nix-channel --add https://mirrors.ustc.edu.cn/nix-channels/nixpkgs-unstable nixpkgs
     $ nix-channel --update
 
-NixOS channel 也可以以类似命令替换，以 ``nixos-19.09`` 为例：
+NixOS channel 也可以以类似命令替换，以 ``nixos-19.09`` 为例（需要以 root 用户身份执行）：
 
 ::
 
-    $ nix-channel --add https://mirrors.ustc.edu.cn/nix-channels/nixos-19.09 nixos
-    $ nix-channel --update
+    # nix-channel --add https://mirrors.ustc.edu.cn/nix-channels/nixos-19.09 nixos
+    # nix-channel --update
 
 
 替换 binary cache 为科大源
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-需要修改或添加相应的配置（``~/.config/nix/nix.conf`` 或 ``/etc/nix/nix.conf``）。
-
-对于单独安装的 Nix：
+对于单独安装的 Nix，需要修改或添加相应的配置（``~/.config/nix/nix.conf`` 或 ``/etc/nix/nix.conf``）：
 
 ::
 
