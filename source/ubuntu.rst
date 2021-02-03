@@ -32,8 +32,7 @@ AMD64 (x86_64), Intel x86
 图形界面配置（新手推荐）
 ------------------------
 
-依次打开：系统设置，软件和更新。在 ``下载自`` 中选择 ``其他站点`` ，然后在中国的条目
-下选择 ``mirrors.ustc.edu.cn`` 。
+依次打开：系统设置，软件和更新。在 ``下载自`` 中选择 ``其他站点``，然后在中国的条目下选择 ``mirrors.ustc.edu.cn``。
 
 下面是 Ubuntu 16.04 的操作示意图：
 
@@ -45,7 +44,7 @@ AMD64 (x86_64), Intel x86
 .. warning::
     操作前请做好相应备份
 
-一般情况下，将 :file:`/etc/apt/sources.list` 文件中 Ubuntu 默认的源地址 ``http://archive.ubuntu.com/`` 
+一般情况下，将 :file:`/etc/apt/sources.list` 文件中 Ubuntu 默认的源地址 ``http://archive.ubuntu.com/``
 替换为 ``https://mirrors.ustc.edu.cn/`` 即可。
 
 可以使用如下命令：
@@ -55,16 +54,16 @@ AMD64 (x86_64), Intel x86
   sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 
 .. tip::
-    Ubuntu 图形安装器会根据用户设定的时区推断 locale，这导致默认的源地址通常不是 ``http://archive.ubuntu.com/`` ，
-    而是 ``http://<country-code>.archive.ubuntu.com/ubuntu/`` ，如 ``http://cn.archive.ubuntu.com/ubuntu/`` ，
+    Ubuntu 图形安装器会根据用户设定的时区推断 locale，这导致默认的源地址通常不是 ``http://archive.ubuntu.com/``，
+    而是 ``http://<country-code>.archive.ubuntu.com/ubuntu/`` ，如 ``http://cn.archive.ubuntu.com/ubuntu/``，
     此时只需将上面的命令进行相应的替换即可，即
-    ``sudo sed -i 's/cn.archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list`` 。
+    ``sudo sed -i 's/cn.archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list``。
 
-若从默认安全更新源下载较慢或者想从镜像站下载安全更新，可以将安全更新源地址 ``http://security.ubuntu.com/`` 替换为 ``https://mirrors.ustc.edu.cn/``：
-
-::
-
-  sudo sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+.. tip::
+    因镜像站同步有延迟，可能会导致生产环境系统不能及时检查、安装上最新的安全更新，不建议替换 security 源。
+    如果有官方源下载速度不理想等问题，想通过镜像站下载安全更新，
+    可以将 security 源地址从 ``http://security.ubuntu.com/`` 替换为 ``https://mirrors.ustc.edu.cn/``，即
+    ``sudo sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list``。
 
 当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Ubuntu 20.04 参考配置内容：
 
