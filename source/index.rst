@@ -59,6 +59,7 @@ USTC Mirror Help
 
    hackage
    julia
+   node
    nodesource
    pypi
    rubygems
