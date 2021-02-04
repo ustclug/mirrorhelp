@@ -26,3 +26,5 @@ n 更改 Node.js 镜像为科大源
 ========
 
 :Node.js 官网: https://nodejs.org/
+:nvm: https://github.com/nvm-sh/nvm
+:n: https://github.com/tj/n
