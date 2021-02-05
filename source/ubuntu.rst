@@ -32,8 +32,7 @@ AMD64 (x86_64), Intel x86
 图形界面配置（新手推荐）
 ------------------------
 
-依次打开：系统设置，软件和更新。在 ``下载自`` 中选择 ``其他站点`` ，然后在中国的条目
-下选择 ``mirrors.ustc.edu.cn`` 。
+依次打开：系统设置，软件和更新。在 ``下载自`` 中选择 ``其他站点``，然后在中国的条目下选择 ``mirrors.ustc.edu.cn``。
 
 下面是 Ubuntu 16.04 的操作示意图：
 
@@ -46,7 +45,7 @@ AMD64 (x86_64), Intel x86
     操作前请做好相应备份
 
 一般情况下，将 :file:`/etc/apt/sources.list` 文件中 Ubuntu 默认的源地址 ``http://archive.ubuntu.com/``
-替换为 ``http://mirrors.ustc.edu.cn`` 即可。
+替换为 ``https://mirrors.ustc.edu.cn/`` 即可。
 
 可以使用如下命令：
 
@@ -55,33 +54,42 @@ AMD64 (x86_64), Intel x86
   sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 
 .. tip::
-    Ubuntu 图形安装器会根据用户设定的时区推断 locale，这导致默认的源地址通常不是 ``http://archive.ubuntu.com/`` ，
-    而是 ``http://<country-code>.archive.ubuntu.com/ubuntu/`` ，如 ``http://cn.archive.ubuntu.com/ubuntu/`` ，
+    Ubuntu 图形安装器会根据用户设定的时区推断 locale，这导致默认的源地址通常不是 ``http://archive.ubuntu.com/``，
+    而是 ``http://<country-code>.archive.ubuntu.com/ubuntu/`` ，如 ``http://cn.archive.ubuntu.com/ubuntu/``，
     此时只需将上面的命令进行相应的替换即可，即
-    ``sudo sed -i 's/cn.archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list`` 。
+    ``sudo sed -i 's/cn.archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list``。
 
-当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Ubuntu 16.04 参考配置内容：
+.. tip::
+    因镜像站同步有延迟，可能会导致生产环境系统不能及时检查、安装上最新的安全更新，不建议替换 security 源。
+    如果有官方源下载速度不理想等问题，想通过镜像站下载安全更新，
+    可以将 security 源地址从 ``http://security.ubuntu.com/`` 替换为 ``https://mirrors.ustc.edu.cn/``，即
+    ``sudo sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list``。
+
+当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Ubuntu 20.04 参考配置内容：
 
 ::
 
     # 默认注释了源码仓库，如有需要可自行取消注释
-    deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
-    deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
-    deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
-    deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+    deb https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
+    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
+
+    deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+
+    deb https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+
+    deb https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
 
     # 预发布软件源，不建议启用
-    # deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
+    # deb https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
 
 更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
 
 .. tip::
-    如要用于其他版本，把 xenial 换成其他版本代号即可: 20.04：``focal``；18.04：``bionic``；17.10：``artful``；16.04：``xenial``；14.04：``trusty``。
+    如要用于其他版本，把 focal 换成其他版本代号即可: 20.04：``focal``；18.04：``bionic``；16.04：``xenial``；14.04：``trusty``。
 
 .. tip::
     使用 HTTPS 可以有效避免国内运营商的缓存劫持。
