@@ -273,8 +273,7 @@
 <h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id6">
 <h3>图形界面配置（新手推荐）<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
-<p>依次打开：系统设置，软件和更新。在 <code class="docutils literal notranslate"><span class="pre">下载自</span></code> 中选择 <code class="docutils literal notranslate"><span class="pre">其他站点</span></code> ，然后在中国的条目
-下选择 <code class="docutils literal notranslate"><span class="pre">mirrors.ustc.edu.cn</span></code> 。</p>
+<p>依次打开：系统设置，软件和更新。在 <code class="docutils literal notranslate"><span class="pre">下载自</span></code> 中选择 <code class="docutils literal notranslate"><span class="pre">其他站点</span></code>，然后在中国的条目下选择 <code class="docutils literal notranslate"><span class="pre">mirrors.ustc.edu.cn</span></code>。</p>
 <p>下面是 Ubuntu 16.04 的操作示意图：</p>
 <img alt="_images/ubuntu-setting.png" src="_images/ubuntu-setting.png" />
 </div>
@@ -285,38 +284,48 @@
 <p>操作前请做好相应备份</p>
 </div>
 <p>一般情况下，将 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件中 Ubuntu 默认的源地址 <code class="docutils literal notranslate"><span class="pre">http://archive.ubuntu.com/</span></code>
-替换为 <code class="docutils literal notranslate"><span class="pre">http://mirrors.ustc.edu.cn</span></code> 即可。</p>
+替换为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/</span></code> 即可。</p>
 <p>可以使用如下命令：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s/archive.ubuntu.com/mirrors.ustc.edu.cn/g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span>
 </pre></div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
-<p>Ubuntu 图形安装器会根据用户设定的时区推断 locale，这导致默认的源地址通常不是 <code class="docutils literal notranslate"><span class="pre">http://archive.ubuntu.com/</span></code> ，
-而是 <code class="docutils literal notranslate"><span class="pre">http://&lt;country-code&gt;.archive.ubuntu.com/ubuntu/</span></code> ，如 <code class="docutils literal notranslate"><span class="pre">http://cn.archive.ubuntu.com/ubuntu/</span></code> ，
+<p>Ubuntu 图形安装器会根据用户设定的时区推断 locale，这导致默认的源地址通常不是 <code class="docutils literal notranslate"><span class="pre">http://archive.ubuntu.com/</span></code>，
+而是 <code class="docutils literal notranslate"><span class="pre">http://&lt;country-code&gt;.archive.ubuntu.com/ubuntu/</span></code> ，如 <code class="docutils literal notranslate"><span class="pre">http://cn.archive.ubuntu.com/ubuntu/</span></code>，
 此时只需将上面的命令进行相应的替换即可，即
-<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">sed</span> <span class="pre">-i</span> <span class="pre">'s/cn.archive.ubuntu.com/mirrors.ustc.edu.cn/g'</span> <span class="pre">/etc/apt/sources.list</span></code> 。</p>
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">sed</span> <span class="pre">-i</span> <span class="pre">'s/cn.archive.ubuntu.com/mirrors.ustc.edu.cn/g'</span> <span class="pre">/etc/apt/sources.list</span></code>。</p>
 </div>
-<p>当然也可以直接编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件（需要使用 sudo）。以下是 Ubuntu 16.04 参考配置内容：</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>因镜像站同步有延迟，可能会导致生产环境系统不能及时检查、安装上最新的安全更新，不建议替换 security 源。
+如果有官方源下载速度不理想等问题，想通过镜像站下载安全更新，
+可以将 security 源地址从 <code class="docutils literal notranslate"><span class="pre">http://security.ubuntu.com/</span></code> 替换为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/</span></code>，即
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">sed</span> <span class="pre">-i</span> <span class="pre">'s/security.ubuntu.com/mirrors.ustc.edu.cn/g'</span> <span class="pre">/etc/apt/sources.list</span></code>。</p>
+</div>
+<p>当然也可以直接编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件（需要使用 sudo）。以下是 Ubuntu 20.04 参考配置内容：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 默认注释了源码仓库，如有需要可自行取消注释</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">xenial</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">xenial</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">xenial</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">xenial</span><span class="o">-</span><span class="n">security</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span>
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse</span>
+
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">security</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse</span>
+
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse</span>
+
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse</span>
 
 <span class="c1"># 预发布软件源，不建议启用</span>
-<span class="c1"># deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse</span>
-<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse</span>
+<span class="c1"># deb https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse</span>
+<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse</span>
 </pre></div>
 </div>
 <p>更改完 <code class="file docutils literal notranslate"><span class="pre">sources.list</span></code> 文件后请运行 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code> 更新索引以生效。</p>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
-<p>如要用于其他版本，把 xenial 换成其他版本代号即可: 20.04：<code class="docutils literal notranslate"><span class="pre">focal</span></code>；18.04：<code class="docutils literal notranslate"><span class="pre">bionic</span></code>；17.10：<code class="docutils literal notranslate"><span class="pre">artful</span></code>；16.04：<code class="docutils literal notranslate"><span class="pre">xenial</span></code>；14.04：<code class="docutils literal notranslate"><span class="pre">trusty</span></code>。</p>
+<p>如要用于其他版本，把 focal 换成其他版本代号即可: 20.04：<code class="docutils literal notranslate"><span class="pre">focal</span></code>；18.04：<code class="docutils literal notranslate"><span class="pre">bionic</span></code>；16.04：<code class="docutils literal notranslate"><span class="pre">xenial</span></code>；14.04：<code class="docutils literal notranslate"><span class="pre">trusty</span></code>。</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
