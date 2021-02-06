@@ -45,7 +45,7 @@ AMD64 (x86_64), Intel x86
     操作前请做好相应备份
 
 一般情况下，将 :file:`/etc/apt/sources.list` 文件中 Ubuntu 默认的源地址 ``http://archive.ubuntu.com/``
-替换为 ``https://mirrors.ustc.edu.cn/`` 即可。
+替换为 ``http://mirrors.ustc.edu.cn/`` 即可。
 
 可以使用如下命令：
 
