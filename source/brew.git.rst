@@ -47,6 +47,11 @@ Homebrew 源代码仓库
             -e 's|https://github.com/Homebrew/brew|https://mirrors.ustc.edu.cn/brew.git|g' \
             -i.bak \
             install.sh
+        chmod +x install.sh
+        # macOS
+        HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles ./install.sh
+        # Linux
+        HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles ./install.sh
 
 相关镜像
 ========
