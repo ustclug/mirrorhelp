@@ -50,6 +50,10 @@ Homebrew 源代码仓库
         HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles ./install.sh
         # Linux
         HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles ./install.sh
+        # 在安装完成后，取消 git 的 insteadOf 配置
+        git config --global --unset url."https://mirrors.ustc.edu.cn/homebrew-core.git".insteadOf
+        git config --global --unset url."https://mirrors.ustc.edu.cn/linuxbrew-core.git".insteadOf
+        git config --global --unset url."https://mirrors.ustc.edu.cn/brew.git".insteadOf
 
 相关镜像
 ========
