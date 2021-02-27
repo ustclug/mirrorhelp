@@ -38,6 +38,22 @@ Homebrew 源代码仓库
     如有需要，脚本中的 ``HOMEBREW_CORE_GIT_REMOTE`` 变量可以修改为 :doc:`homebrew-core.git` 
     (macOS) 或 :doc:`linuxbrew-core.git` (Linux) 中对应的地址，以加快核心软件仓库索引下载的速度。
 
+    由于 brew 安装脚本此前多次修改相关的变量名，也可以参考以下命令，让 Git 将脚本访问的所有 GitHub 的 URL 替换为科大源:
+
+    ::
+
+        git config --global url."https://mirrors.ustc.edu.cn/homebrew-core.git".insteadOf "https://github.com/Homebrew/homebrew-core"
+        git config --global url."https://mirrors.ustc.edu.cn/linuxbrew-core.git".insteadOf "https://github.com/Homebrew/linuxbrew-core"
+        git config --global url."https://mirrors.ustc.edu.cn/brew.git".insteadOf "https://github.com/Homebrew/brew"
+        chmod +x install.sh
+        # macOS
+        HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles ./install.sh
+        # Linux
+        HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles ./install.sh
+        # 在安装完成后，取消 git 的 insteadOf 配置
+        git config --global --unset url."https://mirrors.ustc.edu.cn/homebrew-core.git".insteadOf
+        git config --global --unset url."https://mirrors.ustc.edu.cn/linuxbrew-core.git".insteadOf
+        git config --global --unset url."https://mirrors.ustc.edu.cn/brew.git".insteadOf
 
 相关镜像
 ========
