@@ -12,7 +12,7 @@
 =========
  * 帮助文档公网地址: http://nju-mirror-help.njuer.org 
  * 南大开源镜像地址：https://mirrors.nju.edu.cn
- * 欢迎找bug发 Pull Request.org. 地址： https://github.com/njulug/mirrorhelp 修改source目录下rst文件发送到dns@njuer。贡献者将被列入贡献者名单。
+ * 欢迎找bug发 Pull Request. 地址： https://github.com/njulug/mirrorhelp 或 修改source目录下rst文件发送到dns@njuer.org. 贡献者将被列入贡献者名单。
 
 致谢
 =========
