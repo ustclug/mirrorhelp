@@ -33,6 +33,7 @@ NJU Mirror Help
    mageia
    manjaro
    opensuse
+   openEuler
    raspbian
    trisquel
    ubuntu
@@ -75,8 +76,9 @@ NJU Mirror Help
 ----
 
 .. toctree::
+   :maxdepth: 1
 
-   todo
+   about
 
 贡献者
 ------
