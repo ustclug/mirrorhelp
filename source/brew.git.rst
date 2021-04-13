@@ -47,9 +47,9 @@ Homebrew 源代码仓库
         git config --global url."https://mirrors.ustc.edu.cn/brew.git".insteadOf "https://github.com/Homebrew/brew"
         chmod +x install.sh
         # macOS
-        HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles ./install.sh
+        HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/bottles ./install.sh
         # Linux
-        HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles ./install.sh
+        HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles/bottles ./install.sh
 
     初次安装完成后，若想从 GitHub 官方仓库获取后续更新，需要恢复上面步骤中修改过的 ``git config``：
 
