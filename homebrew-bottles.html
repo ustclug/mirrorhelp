@@ -263,6 +263,10 @@
 <div class="section" id="id4">
 <h2>使用说明<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>请在运行 brew 前设置环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BOTTLE_DOMAIN</span></code> ，值为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/homebrew-bottles/bottles</span></code> 。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>自 brew v3.0.7 开始，<code class="docutils literal notranslate"><span class="pre">HOMEBREW_BOTTLE_DOMAIN</span></code> 的定义发生变化（见 <a class="reference external" href="https://github.com/Homebrew/brew/pull/10863">brew#10863</a>）。从旧版本升级的用户需要手动修改 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BOTTLE_DOMAIN</span></code> 变量。</p>
+</div>
 <p>对于 bash 用户：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/bottles&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bash_profile</span>
 <span class="n">source</span> <span class="o">~/.</span><span class="n">bash_profile</span>
