@@ -17,7 +17,7 @@ stack使用说明
 
 编辑 ``~/.stack/config.yaml``, 增加下列参数
 
->=v1.11:
+>=v2.1.1:
 
 ::
 
@@ -39,13 +39,13 @@ stack使用说明
       # ignore expiration date, see https://github.com/commercialhaskell/stack/pull/4614
       ignore-expiry: true
 
-<v1.11:
+<v2.1.1:
 
 ::
 
     package-indices:
       - name: USTC
-        download-prefix: https://mirrors.ustc.edu.cn/hackage/
+        download-prefix: https://mirrors.ustc.edu.cn/hackage/package/
         http: https://mirrors.ustc.edu.cn/hackage/01-index.tar.gz
 
 
