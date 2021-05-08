@@ -279,6 +279,10 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Server = http://mirrors.ustc.edu.cn/msys2/msys/$arch
 </pre></div>
 </div>
+<p>编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/pacman.d/mirrorlist.ucrt64</span></code> ，在文件开头添加</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Server</span> <span class="o">=</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">msys2</span><span class="o">/</span><span class="n">mingw</span><span class="o">/</span><span class="n">ucrt64</span>
+</pre></div>
+</div>
 <p>然后执行 <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span></code> 刷新软件包数据即可。</p>
 </div>
 <div class="section" id="id5">
