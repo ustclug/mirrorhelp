@@ -45,6 +45,12 @@ pacman的配置
 
     Server = http://mirrors.ustc.edu.cn/msys2/msys/$arch
 
+编辑 :file:`/etc/pacman.d/mirrorlist.ucrt64` ，在文件开头添加
+
+::
+
+    Server = http://mirrors.ustc.edu.cn/msys2/mingw/ucrt64
+
 然后执行 ``pacman -Sy`` 刷新软件包数据即可。
 
 相关链接
