@@ -82,6 +82,7 @@ USTC Mirror Help
    dockerhub
    eclipse
    elpa
+   github-release
    homebrew-bottles
    homebrew-core.git
    homebrew-cask.git
