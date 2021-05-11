@@ -285,7 +285,7 @@
 </div>
 <p>修改Proxmox的源文件，可以使用如下命令：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>CODENAME=`cat /etc/os-release |grep CODENAME |cut -f 2 -d &quot;=&quot;`
-echo &quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/pve $CODENAME pve-no-subscription&quot; &gt; /etc/apt/sources.list.d/pve-no-subscription.list
+echo &quot;deb https://mirrors.ustc.edu.cn/proxmox/debian $CODENAME pve-no-subscription&quot; &gt; /etc/apt/sources.list.d/pve-no-subscription.list
 </pre></div>
 </div>
 <p>更改完 <code class="file docutils literal notranslate"><span class="pre">sources.list</span></code> 文件后请运行 <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">update</span></code> 更新索引以生效。</p>
