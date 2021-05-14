@@ -24,7 +24,7 @@ China Hefei 即可。
 
     options(repos = c(USTC="https://mirrors.ustc.edu.cn/CRAN/"))
 
-在Linux系统下，普通用户可能没有`$R_home`目录的修改权限，此时可以执行
+在Linux系统下，普通用户可能没有 ``$R_home`` 目录的修改权限，此时可以执行
 
 .. code-block:: text
 
