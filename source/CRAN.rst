@@ -11,19 +11,25 @@ China Hefei 即可。
 也可以通过 ``chooseCRANmirror()`` 来打开窗口，或者 ``options(repos = c(USTC="https://mirrors.ustc.edu.cn/CRAN/"))`` 这个选项来开启USTC镜像。
 
 
-我们也可以修改 `$R_home/library/base/R/Rprofile` 文件的第(28)行：
+我们也可以修改 :file:`$R_home/library/base/R/Rprofile` 文件的第(28)行：
 将
-```
-# options(repos = c(CRAN="@CRAN@"))
-```
+
+.. code-block:: text
+
+    # options(repos = c(CRAN="@CRAN@"))
+
 替换为
-```
-options(repos = c(USTC="https://mirrors.ustc.edu.cn/CRAN/"))
-```
+
+.. code-block:: text
+
+    options(repos = c(USTC="https://mirrors.ustc.edu.cn/CRAN/"))
+
 在Linux系统下，普通用户可能没有`$R_home`目录的修改权限，此时可以执行
-```
-echo 'options(repos=c(USTC="https://mirrors.ustc.edu.cn/CRAN/"))' >> ~/.Rprofile
-```
+
+.. code-block:: text
+
+    echo 'options(repos=c(USTC="https://mirrors.ustc.edu.cn/CRAN/"))' >> ~/.Rprofile
+
 以设置当前登录用户的R镜像
 
 相关链接
