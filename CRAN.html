@@ -250,8 +250,8 @@
 <h2>使用说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>在第一次执行 <code class="docutils literal notranslate"><span class="pre">install.package(&quot;xxx&quot;)</span></code> 时会弹出窗口让你选择镜像，此时选择
 China Hefei 即可。</p>
-<p>也可以通过 <code class="docutils literal notranslate"><span class="pre">chooseCRANmirror()</span></code> 来打开窗口，或者 <code class="docutils literal notranslate"><span class="pre">options(repos</span> <span class="pre">=</span> <span class="pre">c(USTC=&quot;https://mirrors.ustc.edu.cn/CRAN/&quot;))</span></code> 这个选项来开启USTC镜像。</p>
-<p>如果不希望每次打开R都必须选择镜像，可以修改 <code class="docutils literal notranslate"><span class="pre">$R_home/library/base/R/Rprofile</span></code> 文件的第(28)行（ <code class="docutils literal notranslate"><span class="pre">$R_home</span></code> 可以在R中执行 <code class="docutils literal notranslate"><span class="pre">R.home()</span></code> 得到）：
+<p>也可以通过 <code class="docutils literal notranslate"><span class="pre">chooseCRANmirror()</span></code> 来打开窗口，或者 <code class="docutils literal notranslate"><span class="pre">options(repos</span> <span class="pre">=</span> <span class="pre">c(USTC=&quot;https://mirrors.ustc.edu.cn/CRAN/&quot;))</span></code> 这个选项来开启 USTC 镜像。</p>
+<p>如果不希望每次打开 R 都必须选择镜像，可以修改 <code class="docutils literal notranslate"><span class="pre">$R_home/library/base/R/Rprofile</span></code> 文件的第(28)行（ <code class="docutils literal notranslate"><span class="pre">$R_home</span></code> 可以在 R 中执行 <code class="docutils literal notranslate"><span class="pre">R.home()</span></code> 得到）：
 将</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span># options(repos = c(CRAN=&quot;@CRAN@&quot;))
 </pre></div>
@@ -260,11 +260,11 @@ China Hefei 即可。</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>options(repos = c(USTC=&quot;https://mirrors.ustc.edu.cn/CRAN/&quot;))
 </pre></div>
 </div>
-<p>在Linux系统下，普通用户可能没有 <code class="docutils literal notranslate"><span class="pre">$R_home</span></code> 目录的修改权限，此时可以执行</p>
+<p>在 Linux 系统下，普通用户可能没有 <code class="docutils literal notranslate"><span class="pre">$R_home</span></code> 目录的修改权限，此时可以执行</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>echo &#39;options(repos=c(USTC=&quot;https://mirrors.ustc.edu.cn/CRAN/&quot;))&#39; &gt;&gt; ~/.Rprofile
 </pre></div>
 </div>
-<p>以设置当前登录用户的R镜像</p>
+<p>以设置当前登录用户的 R 镜像</p>
 </div>
 <div class="section" id="id2">
 <h2>相关链接<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
