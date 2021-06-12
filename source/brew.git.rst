@@ -44,7 +44,7 @@ Homebrew 源代码仓库
 
         git config --global url."https://mirrors.ustc.edu.cn/homebrew-core.git".insteadOf "https://github.com/Homebrew/homebrew-core"
         git config --global url."https://mirrors.ustc.edu.cn/linuxbrew-core.git".insteadOf "https://github.com/Homebrew/linuxbrew-core"
-        git config --global url."https://mirrors.ustc.edu.cn/brew.git".insteadOf "https://github.com/Homebrew/brew"
+        git config --global url."https://mirrors.ustc.edu.cn/brew.git".insteadOf "https://github.com/Homebrew/brew.git"
         chmod +x install.sh
         # macOS
         HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles ./install.sh
