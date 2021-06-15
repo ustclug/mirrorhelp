@@ -24,16 +24,19 @@ Termux APT 源镜像
 
 ::
 
-    deb https://mirrors.ustc.edu.cn/termux stable main
+    deb https://mirrors.ustc.edu.cn/termux/apt/termux-main stable main
 
-你也可以使用 ``sed`` 命令进行文本替换：
+或者，你也可以使用 ``sed`` 命令进行文本替换：
 
 ::
 
-    sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.ustc.edu.cn/termux stable main@' $PREFIX/etc/apt/sources.list
+    sed -i 's@packages.termux.org@mirrors.ustc.edu.cn/termux@' $PREFIX/etc/apt/sources.list
     pkg up
 
 注：Termux 会自动将环境变量 ``$PREFIX`` 设定为 :file:`/data/data/com.termux/files/usr`
+
+.. tip::
+    Termux 目前（2021 年 6 月）的官方源为 packages.termux.org，建议使用 ``termux-change-repo`` 命令先换回官方源，再进行文本替换，以减少出错的可能。
 
 相关链接
 ========
