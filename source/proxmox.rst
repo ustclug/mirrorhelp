@@ -49,6 +49,9 @@ Debian，Proxmox
 
   CODENAME=`cat /etc/os-release |grep CODENAME |cut -f 2 -d "="`
   echo "deb https://mirrors.ustc.edu.cn/proxmox/debian $CODENAME pve-no-subscription" > /etc/apt/sources.list.d/pve-no-subscription.list
+  rm -rf /etc/apt/sources.list.d/pve-enterprise.list
+  echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/pve/ buster pve-no-subscription " >/etc/apt/sources.list.d/pve-install-repo.list
+  echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-nautilus buster main " >/etc/apt/sources.list.d/pve-ceph.list
 
 
 更改完 :file:`sources.list` 文件后请运行 ``apt update`` 更新索引以生效。
