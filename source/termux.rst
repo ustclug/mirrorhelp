@@ -20,7 +20,9 @@ Termux APT 源镜像
 使用说明
 ==============
 
-编辑 :file:`/data/data/com.termux/files/usr/etc/apt/sources.list` 为如下内容
+Termux 目前（2021 年 6 月）的官方源为 packages.termux.org，我们推荐先更新 ``termux-tools`` 软件包，然后直接使用 ``termux-change-repo`` 命令选择 Mirrors by USTC 即可。
+
+如果想要手动更换 Termux APT 源的话，可以编辑 :file:`/data/data/com.termux/files/usr/etc/apt/sources.list` 为如下内容
 
 ::
 
@@ -34,9 +36,6 @@ Termux APT 源镜像
     pkg up
 
 注：Termux 会自动将环境变量 ``$PREFIX`` 设定为 :file:`/data/data/com.termux/files/usr`
-
-.. tip::
-    Termux 目前（2021 年 6 月）的官方源为 packages.termux.org，建议使用 ``termux-change-repo`` 命令先换回官方源，再进行文本替换，以减少出错的可能。
 
 相关链接
 ========
