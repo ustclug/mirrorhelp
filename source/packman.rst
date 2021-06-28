@@ -21,11 +21,11 @@ openSUSE 非官方社区软件源，主要收录允许自由分发但存在专�
 使用说明
 ========
 
-以 openSUSE Leap 42.3 为例添加软件源：
+以 openSUSE Leap 为例添加软件源：
 
 ::
 
-  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/packman/suse/openSUSE_Leap_42.3/ USTC:42.3:PACKMAN
+  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/packman/suse/openSUSE_Leap_\$releasever/ USTC:PACKMAN
 
 相关链接
 ========
