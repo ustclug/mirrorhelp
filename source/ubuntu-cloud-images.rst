@@ -22,12 +22,13 @@ AMD64(x86_64), Intel x86, arm64, armhf, PowerPC, ppc64el, s390x
 收录版本
 ========
 
-.. todo:: ubuntu-cloud-images 收录的版本
+收录官方的云Ubuntu镜像，由 Canonical 定制，提供Ubuntu认证镜像，可Openstack、LXD等的公共云上运行。
+收录官方对kvm,hyperv,xen等虚拟结构的官方定制镜像
 
 使用说明
 ========
 
-.. todo:: ubuntu-cloud-images 使用的方法
+可以使用https://mirrors.ustc.edu.cn/ubuntu-cloud-images/locator/查找所需要的结构和版本
 
 相关链接
 ========
