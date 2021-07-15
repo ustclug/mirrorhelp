@@ -22,7 +22,7 @@ AMD64(x86_64), Intel x86, arm64, armhf, PowerPC, ppc64el, s390x
 收录版本
 ========
 
-收录由 Canonical 定制的为云服务设计的 Ubuntu 镜像，包含官方对 KVM、Hyper-V、Xen 等虚拟化平台的官方定制镜像，可在 Google Compute Engine、Amazon AWS 、Azure 环境以及 OpenStack、LXD 等虚拟化平台上运行。
+收录由 Canonical 定制的为云服务设计的 Ubuntu 镜像，包含官方对 KVM、Hyper-V、Xen 等虚拟化平台的官方定制镜像，可在 Google Compute Engine、Amazon AWS、Azure 环境以及 OpenStack、LXD 等虚拟化平台上运行。
 
 使用说明
 ========
