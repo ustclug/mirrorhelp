@@ -36,7 +36,7 @@ NixOS channel 也可以以类似命令替换，以 ``nixos-19.09`` 为例（需�
 替换 binary cache 为科大源
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-对于单独安装的 Nix，需要修改或添加相应的配置（``~/.config/nix/nix.conf`` 或 ``/etc/nix/nix.conf``）：
+对于单独安装的 Nix，需要修改或添加相应的配置（``~/.config/nix/nix.conf`` 或 ``/etc/nix/nix.conf``），配置在重启 nix-daemon 服务之后生效：
 
 ::
 
