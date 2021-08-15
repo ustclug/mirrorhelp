@@ -277,15 +277,19 @@
 替换为 <code class="docutils literal notranslate"><span class="pre">http://mirrors.ustc.edu.cn/debian-security/</span></code> 即可。</p>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
-<p>如果你在使用 Debian 8 “Jessie” 或更早的版本，则默认的 debian-security 源地址为 <code class="docutils literal notranslate"><span class="pre">http://security.debian.org/</span></code> （和新版不同最后没有子目录）。下面的指南主要针对 Debian 10 “Buster”，请旧版本用户注意。</p>
+<p>如果你在使用 Debian 8 “Jessie” 或更早的版本，则默认的 debian-security 源地址为 <code class="docutils literal notranslate"><span class="pre">http://security.debian.org/</span></code> （和新版不同最后没有子目录）。</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>从 Debian 11 “Bullseye” 开始，安全更新仓库名从 <code class="docutils literal notranslate"><span class="pre">发行版代号/updates</span></code> 更新为 <code class="docutils literal notranslate"><span class="pre">发行版代号-security</span></code>，详见 <a class="reference external" href="https://www.debian.org/releases/bullseye/amd64/release-notes/ch-information.zh-cn.html#security-archive">Debian 11 (bullseye) 发行说明</a>，请旧版本用户注意。</p>
 </div>
 <p>可以直接使用如下命令完成上述修改：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span>
 </pre></div>
 </div>
 <p>当然也可以直接编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">-</span><span class="n">security</span><span class="o">/</span> <span class="n">stable</span><span class="o">/</span><span class="n">updates</span> <span class="n">main</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span> <span class="n">contrib</span>
-<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ stable/updates main non-free contrib</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">-</span><span class="n">security</span><span class="o">/</span> <span class="n">stable</span><span class="o">-</span><span class="n">security</span> <span class="n">main</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span> <span class="n">contrib</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ stable-security main non-free contrib</span>
 </pre></div>
 </div>
 <p>更改完 <code class="file docutils literal notranslate"><span class="pre">sources.list</span></code> 文件后请运行 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code> 更新索引以生效。</p>
