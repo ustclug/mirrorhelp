@@ -35,7 +35,10 @@ Debian Old Old Stable, Old Stable, Stable
 替换为 ``http://mirrors.ustc.edu.cn/debian-security/`` 即可。
 
 .. attention::
-    如果你在使用 Debian 8 "Jessie" 或更早的版本，则默认的 debian-security 源地址为 ``http://security.debian.org/`` （和新版不同最后没有子目录）。下面的指南主要针对 Debian 10 "Buster"，请旧版本用户注意。
+    如果你在使用 Debian 8 "Jessie" 或更早的版本，则默认的 debian-security 源地址为 ``http://security.debian.org/`` （和新版不同最后没有子目录）。
+    
+.. attention::
+    从 Debian 11 "Bullseye" 开始，安全更新仓库名从 ``发行版代号/updates`` 更新为 ``发行版代号-security``，详见 `Debian 11 (bullseye) 发行说明 <https://www.debian.org/releases/bullseye/amd64/release-notes/ch-information.zh-cn.html#security-archive>`_，请旧版本用户注意。
 
 
 可以直接使用如下命令完成上述修改：
@@ -48,8 +51,8 @@ Debian Old Old Stable, Old Stable, Stable
 
 ::
 
-    deb http://mirrors.ustc.edu.cn/debian-security/ stable/updates main non-free contrib
-    # deb-src http://mirrors.ustc.edu.cn/debian-security/ stable/updates main non-free contrib
+    deb http://mirrors.ustc.edu.cn/debian-security/ stable-security main non-free contrib
+    # deb-src http://mirrors.ustc.edu.cn/debian-security/ stable-security main non-free contrib
 
 更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
 
