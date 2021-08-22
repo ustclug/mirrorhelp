@@ -29,6 +29,7 @@ https://mirrors.ustc.edu.cn/archive.raspberrypi.org/ 或 https://mirrors.ustc.ed
 * jessie
 * stretch
 * buster
+* bullseye
 
 使用说明
 ========
@@ -36,8 +37,7 @@ https://mirrors.ustc.edu.cn/archive.raspberrypi.org/ 或 https://mirrors.ustc.ed
 .. warning::
     操作前请做好相应备份
 
-一般情况下，将 :file:`/etc/apt/sources.list.d/raspi.list` 文件中默认的源地址 ``http://archive.raspberrypi.org/``
-替换为 ``http://mirrors.ustc.edu.cn/archive.raspberrypi.org/`` 即可。
+一般情况下，将 :file:`/etc/apt/sources.list.d/raspi.list` 文件中默认的源地址 ``http://archive.raspberrypi.org/`` 替换为 ``http://mirrors.ustc.edu.cn/archive.raspberrypi.org/`` 即可。
 
 可以使用如下命令：
 
@@ -45,12 +45,12 @@ https://mirrors.ustc.edu.cn/archive.raspberrypi.org/ 或 https://mirrors.ustc.ed
 
     sudo sed -i 's|//archive.raspberrypi.org|//mirrors.ustc.edu.cn/archive.raspberrypi.org|g' /etc/apt/sources.list.d/raspi.list
 
-当然也可以直接编辑 :file:`/etc/apt/sources.list.d/raspi.list` 文件（需要使用 sudo）。以下是 Buster 的参考配置内容：
+当然也可以直接编辑 :file:`/etc/apt/sources.list.d/raspi.list` 文件（需要使用 sudo）。以下是 Bullseye 的参考配置内容：
 
 ::
 
-    deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ buster main ui
-    #deb-src http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ buster main ui
+    deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ bullseye main ui
+    #deb-src http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/ bullseye main ui
 
 更改完 :file:`raspi.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
 
