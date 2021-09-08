@@ -19,13 +19,13 @@ AOSC OS 内置 ``apt-gen-list`` 工具来开关社区提供的可用镜像源。
 
 ::
 
-  sudo apt-gen-list m +ustc
+  sudo apt-gen-list add-mirror ustc
 
 要仅启用 USTC 源，执行：
 
 ::
 
-  sudo apt-gen-list m ustc
+  sudo apt-gen-list set-mirror ustc
 
 关于 ``apt-gen-list`` 的语义和详细用法，请执行 ``apt-gen-list help`` 查看帮助。
 
@@ -33,5 +33,5 @@ AOSC OS 内置 ``apt-gen-list`` 工具来开关社区提供的可用镜像源。
 ========
 
 :官方主页: https://aosc.io
-:文档: https://github.com/AOSC-Dev/aosc-os/wiki
-:镜像列表: https://aosc.io/about
+:文档: https://wiki.aosc.io
+:镜像列表: https://aosc.io/repo
