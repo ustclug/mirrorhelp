@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>FreeBSD ports 源使用帮助 &mdash; USTC Mirror Help  文档</title>
+  <title>Rocky Linux 源使用帮助 &mdash; USTC Mirror Help  文档</title>
   
 
   
@@ -42,8 +42,8 @@
     
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="RPM Fusion 源使用帮助" href="rpmfusion.html" />
-    <link rel="prev" title="FreeBSD pkg 源使用帮助" href="freebsd-pkg.html" /> 
+    <link rel="next" title="Scientific Linux 镜像使用帮助" href="scientificlinux.html" />
+    <link rel="prev" title="Raspbian 源使用帮助" href="raspbian.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -105,13 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="fedora.html">Fedora 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="freebsd.html">FreeBSD 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="freebsd-pkg.html">FreeBSD pkg 源使用帮助</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">FreeBSD ports 源使用帮助</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">使用方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">相关链接</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="freebsd-ports.html">FreeBSD ports 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rpmfusion.html">RPM Fusion 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gentoo.html">Gentoo 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gentoo-portage.html">Gentoo Portage 源使用帮助</a></li>
@@ -126,7 +120,15 @@
 <li class="toctree-l1"><a class="reference internal" href="proxmox.html">Proxmox 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="raspberry-pi-os-images.html">Raspberry Pi OS Images 使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="raspbian.html">Raspbian 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rocky.html">Rocky Linux 源使用帮助</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Rocky Linux 源使用帮助</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">收录架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">收录版本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">使用说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">相关链接</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="scientificlinux.html">Scientific Linux 镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="termux.html">Termux 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trisquel.html">Trisquel 源使用帮助</a></li>
@@ -226,14 +228,14 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>FreeBSD ports 源使用帮助</li>
+      <li>Rocky Linux 源使用帮助</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
             
-              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/freebsd-ports.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/rocky.rst" class="fa fa-github"> 在 GitHub 上修改</a>
             
           
         
@@ -247,37 +249,59 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="freebsd-ports">
-<h1>FreeBSD ports 源使用帮助<a class="headerlink" href="#freebsd-ports" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="rocky-linux">
+<h1>Rocky Linux 源使用帮助<a class="headerlink" href="#rocky-linux" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
 <h2>地址<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="http://mirrors.ustc.edu.cn/freebsd-ports/">http://mirrors.ustc.edu.cn/freebsd-ports/</a></p>
+<p><a class="reference external" href="https://mirrors.ustc.edu.cn/rocky/">https://mirrors.ustc.edu.cn/rocky/</a></p>
 </div>
 <div class="section" id="id2">
 <h2>说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>FreeBSD ports 软件源</p>
+<p>Rocky Linux 软件源</p>
 </div>
 <div class="section" id="id3">
-<h2>使用方法<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>在 <code class="file docutils literal notranslate"><span class="pre">/etc/make.conf</span></code> 中添加以下内容（如果文件不存在，则新建之）：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
-</pre></div>
-</div>
+<h2>收录架构<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>x86_64, aarch64</p>
 </div>
 <div class="section" id="id4">
-<h2>相关链接<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<h2>收录版本<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>8</p>
+</div>
+<div class="section" id="id5">
+<h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>操作前请做好相应备份。</p>
+</div>
+<p>对于 Rocky Linux 8，使用以下命令替换默认的配置</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^mirrorlist=|#mirrorlist=|g&#39;</span> \
+    <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/rocky|g&#39;</span> \
+    <span class="o">-</span><span class="n">i</span><span class="o">.</span><span class="n">bak</span> \
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">Rocky</span><span class="o">-</span><span class="n">AppStream</span><span class="o">.</span><span class="n">repo</span> \
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">Rocky</span><span class="o">-</span><span class="n">BaseOS</span><span class="o">.</span><span class="n">repo</span> \
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">Rocky</span><span class="o">-</span><span class="n">Extras</span><span class="o">.</span><span class="n">repo</span> \
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">Rocky</span><span class="o">-</span><span class="n">PowerTools</span><span class="o">.</span><span class="n">repo</span>
+</pre></div>
+</div>
+<p>以上命令只替换了默认启用的仓库。替换之后请运行 <code class="docutils literal notranslate"><span class="pre">dnf</span> <span class="pre">makecache</span></code> 更新缓存。</p>
+</div>
+<div class="section" id="id6">
+<h2>相关链接<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">官方主页</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://www.freebsd.org">https://www.freebsd.org</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://rockylinux.org/">https://rockylinux.org/</a></p>
 </dd>
 <dt class="field-even">论坛</dt>
-<dd class="field-even"><p><a class="reference external" href="https://forums.freebsd.org">https://forums.freebsd.org</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://forums.rockylinux.org/">https://forums.rockylinux.org/</a></p>
 </dd>
 <dt class="field-odd">文档</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://www.freebsd.org/doc">https://www.freebsd.org/doc</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.rockylinux.org/">https://docs.rockylinux.org/</a></p>
 </dd>
-<dt class="field-even">官方介绍</dt>
-<dd class="field-even"><p><a class="reference external" href="https://www.freebsd.org/ports">https://www.freebsd.org/ports</a></p>
+<dt class="field-even">Wiki</dt>
+<dd class="field-even"><p><a class="reference external" href="https://wiki.rockylinux.org/">https://wiki.rockylinux.org/</a></p>
+</dd>
+<dt class="field-odd">镜像列表</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://mirrors.rockylinux.org/mirrormanager/mirrors">https://mirrors.rockylinux.org/mirrormanager/mirrors</a></p>
 </dd>
 </dl>
 </div>
@@ -289,8 +313,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="rpmfusion.html" class="btn btn-neutral float-right" title="RPM Fusion 源使用帮助" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="freebsd-pkg.html" class="btn btn-neutral float-left" title="FreeBSD pkg 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="scientificlinux.html" class="btn btn-neutral float-right" title="Scientific Linux 镜像使用帮助" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="raspbian.html" class="btn btn-neutral float-left" title="Raspbian 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
     </div>
 
   <hr/>
