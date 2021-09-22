@@ -1,71 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>AOSP 镜像使用帮助 &mdash; USTC Mirror Help  文档</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
     <link rel="next" title="Arch Linux 源使用帮助" href="archlinux.html" />
     <link rel="prev" title="AOSC OS 源使用帮助" href="anthon.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> USTC Mirror Help
-          
-
-          
           </a>
-
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="在文档中搜索" />
@@ -73,18 +37,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="alpine.html">Alpine Linux 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="anthon.html">AOSC OS 源使用帮助</a></li>
@@ -182,77 +135,34 @@
 <li class="toctree-l1"><a class="reference internal" href="contributor.html">文档贡献者名单</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">USTC Mirror Help</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>AOSP 镜像使用帮助</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-            
               <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/aosp.rst" class="fa fa-github"> 在 GitHub 上修改</a>
-            
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="aosp">
-<h1>AOSP 镜像使用帮助<a class="headerlink" href="#aosp" title="永久链接至标题">¶</a></h1>
-<div class="section" id="id1">
-<h2>初始同步方法 1<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+             
+  <section id="aosp">
+<h1>AOSP 镜像使用帮助<a class="headerlink" href="#aosp" title="永久链接至标题"></a></h1>
+<section id="id1">
+<h2>初始同步方法 1<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
 <p>第一次同步数据量特别大，如果网络不稳定，中间失败就要从头再来了。所以我们提供了打包的
 AOSP 镜像，为一个 tar 包，大约 100G（单文件
 100G，注意你的磁盘格式要支持）。这样你 就可以通过 HTTP(S)
@@ -263,9 +173,9 @@ AOSP 镜像，为一个 tar 包，大约 100G（单文件
 <p>解压后用命令 repo sync 就可以把代码都 checkout 出来。</p>
 <p>Note: tar 包为定时从 <a class="reference external" href="https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/">https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/</a>
 下载。</p>
-</div>
-<div class="section" id="id2">
-<h2>初始同步方法 2<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id2">
+<h2>初始同步方法 2<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
 <p>按照 Google 官方教程 <a class="reference external" href="https://source.android.com/source/downloading.html">https://source.android.com/source/downloading.html</a></p>
 <p>将 <code class="docutils literal notranslate"><span class="pre">https://android.googlesource.com/platform/manifest</span></code> 替换为
 <code class="docutils literal notranslate"><span class="pre">git://mirrors.ustc.edu.cn/aosp/platform/manifest</span></code> 。</p>
@@ -298,9 +208,9 @@ chmod a+x ~/bin/repo
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">repo</span> <span class="n">sync</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id3">
-<h2>已有仓库如何改用科大源<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id3">
+<h2>已有仓库如何改用科大源<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
 <p>如果您已经从官方同步了 AOSP 仓库，现在希望使用科大的 AOSP 仓库，请修改
 <code class="docutils literal notranslate"><span class="pre">.repo/manifests.git/config</span></code> ，将</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">android</span><span class="o">.</span><span class="n">googlesource</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">platform</span><span class="o">/</span><span class="n">manifest</span>
@@ -311,9 +221,9 @@ chmod a+x ~/bin/repo
 </pre></div>
 </div>
 <p>即可。</p>
-</div>
-<div class="section" id="http">
-<h2>通过 HTTP 协议同步<a class="headerlink" href="#http" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="http">
+<h2>通过 HTTP 协议同步<a class="headerlink" href="#http" title="永久链接至标题"></a></h2>
 <p>如果由于某种原因不能通过 git 协议同步，请修改
 <code class="docutils literal notranslate"><span class="pre">.repo/manifests.git/config</span></code> ，将</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">aosp</span><span class="o">/</span><span class="n">platform</span><span class="o">/</span><span class="n">manifest</span>
@@ -327,9 +237,9 @@ chmod a+x ~/bin/repo
 <code class="docutils literal notranslate"><span class="pre">--depth</span></code> 选项，可能导致部分仓库同步失败。</p>
 <p>通过 HTTP 同步过程中可能提示 clone.bundle 404
 错误，这是正常现象，可以忽略。</p>
-</div>
-<div class="section" id="id4">
-<h2>说明<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id4">
+<h2>说明<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
 <ol class="arabic simple">
 <li><p>本镜像每天凌晨 04:30
 同步一次。同步可能需要较长时间，因此使用本镜像时建议避开凌晨 04:30 ～
@@ -338,9 +248,9 @@ chmod a+x ~/bin/repo
 <code class="docutils literal notranslate"><span class="pre">repo</span> <span class="pre">sync</span></code> 命令默认使用 4 个并发连接，请勿使用 <code class="docutils literal notranslate"><span class="pre">-j</span></code>
 参数增加并发连接数。</p></li>
 </ol>
-</div>
-<div class="section" id="brillo">
-<h2>附录：Brillo<a class="headerlink" href="#brillo" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="brillo">
+<h2>附录：Brillo<a class="headerlink" href="#brillo" title="永久链接至标题"></a></h2>
 <p>Brillo 项目的代码托管在 AOSP 项目中，Mirrors 镜像的是整个 AOSP
 项目，所以自然也能从本镜像下载 Brillo 项目代码。</p>
 <p>参考 Brillo 官方文档
@@ -349,35 +259,27 @@ chmod a+x ~/bin/repo
 <code class="docutils literal notranslate"><span class="pre">git://mirrors.ustc.edu.cn/aosp/brillo/manifest</span></code> 。 即：</p>
 <p><code class="docutils literal notranslate"><span class="pre">repo</span> <span class="pre">init</span></code> 时，使用
 <code class="docutils literal notranslate"><span class="pre">repo</span> <span class="pre">init</span> <span class="pre">-u</span> <span class="pre">git://mirrors.ustc.edu.cn/aosp/brillo/manifest</span> <span class="pre">-b</span> <span class="pre">master</span></code></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="archlinux.html" class="btn btn-neutral float-right" title="Arch Linux 源使用帮助" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="anthon.html" class="btn btn-neutral float-left" title="AOSC OS 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="archlinux.html" class="btn btn-neutral float-right" title="Arch Linux 源使用帮助" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; 版权所有 2017 - 2021, LUG@USTC.
-
-    </p>
+    <p>&#169; 版权所有 2017 - 2021, LUG@USTC.</p>
   </div>
-    
-    
-    
-    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
-    
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    
     由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+  
 <p>除额外注明的地方外，本文档按 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议发布。</p>
  
 
@@ -385,22 +287,13 @@ chmod a+x ~/bin/repo
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
