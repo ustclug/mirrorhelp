@@ -44,6 +44,8 @@ Homebrew 源代码仓库
 .. note::
     重置回默认远程后，用户应该删除 shell 的 profile 设置中的环境变量 ``HOMEBREW_BREW_GIT_REMOTE`` 以免运行 ``brew update`` 时远程再次被更换。
 
+    若之前使用的 ``git config url.<URL>.insteadOf URL`` 的方式设置的镜像，请手动删除 ``config`` 文件（一般为 ``~/.gitconfig`` 或仓库目录下的 ``.git/config``）中的对应字段。
+
 使用科大源安装 Homebrew / Linuxbrew
 =====================================
 
