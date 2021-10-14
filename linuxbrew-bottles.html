@@ -177,15 +177,17 @@
 </section>
 <section id="id4">
 <h2>使用说明<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
-<p>请在运行 brew 前设置环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BOTTLE_DOMAIN</span></code> ，值为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/linuxbrew-bottles</span></code> 。</p>
-<p>对于 bash 用户：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bash_profile</span>
-<span class="n">source</span> <span class="o">~/.</span><span class="n">bash_profile</span>
+<p>请在运行 <code class="docutils literal notranslate"><span class="pre">brew</span></code> 前设置环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BOTTLE_DOMAIN</span></code>，值为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/linuxbrew-bottles</span></code> 。</p>
+<p>临时替换：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/linuxbrew-bottles&quot;</span>
 </pre></div>
 </div>
-<p>对于 zsh 用户：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
-<span class="n">source</span> <span class="o">~/.</span><span class="n">zshrc</span>
+<p>永久替换：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 对于 bash 用户</span>
+<span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_BOTTLE_DOMAIN=&quot;https://mirrors.ustc.edu.cn/linuxbrew-bottles&quot;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bash_profile</span>
+
+<span class="c1"># 对于 zsh 用户</span>
+<span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_BOTTLE_DOMAIN=&quot;https://mirrors.ustc.edu.cn/linuxbrew-bottles&quot;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
 </pre></div>
 </div>
 </section>

@@ -101,6 +101,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">使用说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#homebrew-linuxbrew">使用科大源安装 Homebrew / Linuxbrew</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">相关镜像</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id5">相关链接</a></li>
 </ul>
@@ -171,38 +172,52 @@
 <section id="id3">
 <h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
 <p>替换 USTC 镜像：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="s2">&quot;$(brew --repo)&quot;</span>
-<span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">brew</span><span class="o">.</span><span class="n">git</span>
-</pre></div>
-</div>
-<p>重置为官方地址：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="s2">&quot;$(brew --repo)&quot;</span>
-<span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">brew</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">HOMEBREW_BREW_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/brew.git&quot;</span>
+<span class="n">brew</span> <span class="n">update</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>初次安装 homebrew/linuxbrew 时，如果无法下载安装脚本，
-可以使用 <a class="reference external" href="https://cdn.jsdelivr.net/gh/Homebrew/install&#64;master/install.sh">jsDelivr CDN</a>
-下载 <code class="docutils literal notranslate"><span class="pre">install.sh</span></code>，然后将脚本中的 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BREW_GIT_REMOTE</span></code>
-变量对应的值修改为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/brew.git</span></code>。</p>
-<p>如有需要，脚本中的 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_CORE_GIT_REMOTE</span></code> 变量可以修改为 <a class="reference internal" href="homebrew-core.git.html"><span class="doc">Homebrew Core 源使用帮助</span></a>
-(macOS) 或 <a class="reference internal" href="linuxbrew-core.git.html"><span class="doc">Linuxbrew Core 源使用帮助</span></a> (Linux) 中对应的地址，以加快核心软件仓库索引下载的速度。</p>
-<p>由于 brew 安装脚本此前多次修改相关的变量名，也可以参考以下命令，让 Git 将脚本访问的所有 GitHub 的 URL 替换为科大源:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">url</span><span class="o">.</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;</span><span class="o">.</span><span class="n">insteadOf</span> <span class="s2">&quot;https://github.com/Homebrew/homebrew-core&quot;</span>
-<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">url</span><span class="o">.</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/linuxbrew-core.git&quot;</span><span class="o">.</span><span class="n">insteadOf</span> <span class="s2">&quot;https://github.com/Homebrew/linuxbrew-core&quot;</span>
-<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">url</span><span class="o">.</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/brew.git&quot;</span><span class="o">.</span><span class="n">insteadOf</span> <span class="s2">&quot;https://github.com/Homebrew/brew&quot;</span>
-<span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">install</span><span class="o">.</span><span class="n">sh</span>
-<span class="c1"># macOS</span>
-<span class="n">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">homebrew</span><span class="o">-</span><span class="n">bottles</span> <span class="o">./</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span>
-<span class="c1"># Linux</span>
-<span class="n">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">linuxbrew</span><span class="o">-</span><span class="n">bottles</span> <span class="o">./</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span>
+<p>若用户设置了环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BREW_GIT_REMOTE</span></code>，则每次运行 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">update</span></code> 时将会自动设置远程。
+推荐用户将环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BREW_GIT_REMOTE</span></code> 加入 shell 的 profile 设置中。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 对于 bash 用户</span>
+<span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/brew.git&quot;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bash_profile</span>
+
+<span class="c1"># 对于 zsh 用户</span>
+<span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/brew.git&quot;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
 </pre></div>
 </div>
-<p>初次安装完成后，若想从 GitHub 官方仓库获取后续更新，需要恢复上面步骤中修改过的 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span></code>：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="o">--</span><span class="n">unset</span> <span class="n">url</span><span class="o">.</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;</span><span class="o">.</span><span class="n">insteadOf</span>
-<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="o">--</span><span class="n">unset</span> <span class="n">url</span><span class="o">.</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/linuxbrew-core.git&quot;</span><span class="o">.</span><span class="n">insteadOf</span>
-<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="o">--</span><span class="n">unset</span> <span class="n">url</span><span class="o">.</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/brew.git&quot;</span><span class="o">.</span><span class="n">insteadOf</span>
+</div>
+<p>重置为官方地址：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unset</span> <span class="n">HOMEBREW_BREW_GIT_REMOTE</span>
+<span class="n">git</span> <span class="o">-</span><span class="n">C</span> <span class="s2">&quot;$(brew --repo)&quot;</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">brew</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>重置回默认远程后，用户应该删除 shell 的 profile 设置中的环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BREW_GIT_REMOTE</span></code> 以免运行 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">update</span></code> 时远程再次被更换。</p>
+<p>若之前使用的 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">url.&lt;URL&gt;.insteadOf</span> <span class="pre">URL</span></code> 的方式设置的镜像，请手动删除 <code class="docutils literal notranslate"><span class="pre">config</span></code> 文件（一般为 <code class="docutils literal notranslate"><span class="pre">~/.gitconfig</span></code> 或仓库目录下的 <code class="docutils literal notranslate"><span class="pre">.git/config</span></code>）中的对应字段。</p>
+</div>
+</section>
+<section id="homebrew-linuxbrew">
+<h2>使用科大源安装 Homebrew / Linuxbrew<a class="headerlink" href="#homebrew-linuxbrew" title="永久链接至标题"></a></h2>
+<p>首先在命令行运行如下几条命令设置环境变量：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">[[</span> <span class="s2">&quot;$(uname -s)&quot;</span> <span class="o">==</span> <span class="s2">&quot;Linux&quot;</span> <span class="p">]];</span> <span class="n">then</span> <span class="n">BREW_TYPE</span><span class="o">=</span><span class="s2">&quot;linuxbrew&quot;</span><span class="p">;</span> <span class="k">else</span> <span class="n">BREW_TYPE</span><span class="o">=</span><span class="s2">&quot;homebrew&quot;</span><span class="p">;</span> <span class="n">fi</span>
+<span class="n">export</span> <span class="n">HOMEBREW_BREW_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/brew.git&quot;</span>
+<span class="n">export</span> <span class="n">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/$</span><span class="si">{BREW_TYPE}</span><span class="s2">-core.git&quot;</span>
+<span class="n">export</span> <span class="n">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/$</span><span class="si">{BREW_TYPE}</span><span class="s2">-bottles&quot;</span>
+</pre></div>
+</div>
+<p>之后在命令行运行 Homebrew 安装脚本：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://github.com/Homebrew/install/raw/HEAD/install.sh)&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>初次安装 Homebrew / Linuxbrew 时，如果无法下载安装脚本，
+可以使用 <a class="reference external" href="https://cdn.jsdelivr.net/gh/Homebrew/install&#64;HEAD/install.sh">jsDelivr CDN</a>
+下载 <code class="docutils literal notranslate"><span class="pre">install.sh</span></code>。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://cdn.jsdelivr.net/gh/Homebrew/install@HEAD/install.sh)&quot;</span>
 </pre></div>
 </div>
 </div>
