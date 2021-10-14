@@ -20,21 +20,23 @@ Linuxbrew 预编译二进制软件包
 使用说明
 ========
 
-请在运行 brew 前设置环境变量 ``HOMEBREW_BOTTLE_DOMAIN`` ，值为 ``https://mirrors.ustc.edu.cn/linuxbrew-bottles`` 。
+请在运行 ``brew`` 前设置环境变量 ``HOMEBREW_BOTTLE_DOMAIN``，值为 ``https://mirrors.ustc.edu.cn/linuxbrew-bottles`` 。
 
-对于 bash 用户：
-
-::
-
-    echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles' >> ~/.bash_profile
-    source ~/.bash_profile
-
-对于 zsh 用户：
+临时替换：
 
 ::
 
-    echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/linuxbrew-bottles' >> ~/.zshrc
-    source ~/.zshrc
+    export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/linuxbrew-bottles"
+
+永久替换：
+
+::
+
+    # 对于 bash 用户
+    echo 'export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/linuxbrew-bottles"' >> ~/.bash_profile
+
+    # 对于 zsh 用户
+    echo 'export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/linuxbrew-bottles"' >> ~/.zshrc
 
 相关镜像
 ========
