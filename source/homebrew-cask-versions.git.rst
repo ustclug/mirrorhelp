@@ -15,23 +15,20 @@ Homebrew cask 其他版本 (alternative versions) 软件仓库，提供使用人
 使用说明
 ========
 
-使用 USTC 镜像安装：
+使用 USTC 镜像安装，或将已安装的仓库远程替换为 USTC 镜像：
 
 ::
 
-    brew tap --force-auto-update homebrew/cask-versions https://mirrors.ustc.edu.cn/homebrew-cask-versions.git
+    brew tap --custom-remote --force-auto-update homebrew/cask-versions https://mirrors.ustc.edu.cn/homebrew-cask-versions.git
 
-如果已安装，则使用如下命令将远程替换为 USTC 镜像：
-
-::
-
-    git -C "$(brew --repo homebrew/cask-versions)" remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask-versions.git
+.. note::
+    若出现 ``Error: invalid option: --custom-remote`` 错误，请先运行 ``brew update`` 将 ``brew`` 更新至 3.2.17 或以上版本。
 
 重置为官方地址：
 
 ::
 
-    git -C "$(brew --repo homebrew/cask-versions)" remote set-url origin https://github.com/Homebrew/homebrew-cask-versions
+    brew tap --custom-remote --force-auto-update homebrew/cask-versions https://github.com/Homebrew/homebrew-cask-versions
 
 
 相关镜像
