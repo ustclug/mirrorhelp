@@ -189,12 +189,13 @@
 </div>
 <p>重置为官方地址：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unset</span> <span class="n">HOMEBREW_CORE_GIT_REMOTE</span>
-<span class="n">git</span> <span class="o">-</span><span class="n">C</span> <span class="s2">&quot;$(brew --repo homebrew/core)&quot;</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">homebrew</span><span class="o">-</span><span class="n">core</span>
+<span class="n">brew</span> <span class="n">tap</span> <span class="o">--</span><span class="n">custom</span><span class="o">-</span><span class="n">remote</span> <span class="n">homebrew</span><span class="o">/</span><span class="n">core</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">homebrew</span><span class="o">-</span><span class="n">core</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>重置回默认远程后，用户应该删除 shell 的 profile 设置中的环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_CORE_GIT_REMOTE</span></code> 以免运行 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">update</span></code> 时远程再次被更换。</p>
+<p>若出现 <code class="docutils literal notranslate"><span class="pre">Error:</span> <span class="pre">invalid</span> <span class="pre">option:</span> <span class="pre">--custom-remote</span></code> 错误，请先运行 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">update</span></code> 将 <code class="docutils literal notranslate"><span class="pre">brew</span></code> 更新至 3.2.17 或以上版本。
+重置回默认远程后，用户应该删除 shell 的 profile 设置中的环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_CORE_GIT_REMOTE</span></code> 以免运行 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">update</span></code> 时远程再次被更换。</p>
 </div>
 </section>
 <section id="id4">
