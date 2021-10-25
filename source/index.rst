@@ -90,8 +90,6 @@ USTC Mirror Help
    homebrew-cask-versions.git
    qtproject
    linux.git
-   linuxbrew-bottles
-   linuxbrew-core.git
    mariadb
    nix-channels
    raspberrypi

@@ -78,8 +78,6 @@ Homebrew 源代码仓库
 - :doc:`homebrew-core.git`
 - :doc:`homebrew-cask.git`
 - :doc:`homebrew-cask-versions.git`
-- :doc:`linuxbrew-core.git`
-- :doc:`linuxbrew-bottles`
 
 相关链接
 ========
