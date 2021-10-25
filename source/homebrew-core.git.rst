@@ -45,6 +45,17 @@ Homebrew 核心软件仓库
     若出现 ``Error: invalid option: --custom-remote`` 错误，请先运行 ``brew update`` 将 ``brew`` 更新至 3.2.17 或以上版本。
     重置回默认远程后，用户应该删除 shell 的 profile 设置中的环境变量 ``HOMEBREW_CORE_GIT_REMOTE`` 以免运行 ``brew update`` 时远程再次被更换。
 
+.. note::
+    Linuxbrew 核心仓库 （``linuxbrew-core``） 自 2021 年 10 月 25 日（``brew`` 版本 3.3.0 起）被弃用，Linuxbrew 用户应迁移至 ``homebrew-core``。
+    Linuxbrew 用户请依本镜像说明重新设置镜像。注意迁移前请现运行 ``brew update`` 将 ``brew`` 更新至 3.3.0 或以上版本。
+    迁移过程中若出现任何问题，可使用如下命令重新安装 ``homebrew-core``：
+
+    ::
+
+        export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+        rm -rf "$(brew --repo homebrew/core)"
+        brew tap --custom-remote --force-auto-update homebrew/core https://mirrors.ustc.edu.cn/homebrew-core.git
+
 相关镜像
 ========
 - :doc:`brew.git`
