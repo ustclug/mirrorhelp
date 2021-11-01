@@ -53,10 +53,9 @@ Homebrew 源代码仓库
 
 ::
 
-    if [[ "$(uname -s)" == "Linux" ]]; then BREW_TYPE="linuxbrew"; else BREW_TYPE="homebrew"; fi
     export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
-    export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/${BREW_TYPE}-core.git"
-    export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/${BREW_TYPE}-bottles"
+    export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+    export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 
 之后在命令行运行 Homebrew 安装脚本：
 
@@ -79,8 +78,6 @@ Homebrew 源代码仓库
 - :doc:`homebrew-core.git`
 - :doc:`homebrew-cask.git`
 - :doc:`homebrew-cask-versions.git`
-- :doc:`linuxbrew-core.git`
-- :doc:`linuxbrew-bottles`
 
 相关链接
 ========

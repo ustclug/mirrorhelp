@@ -2,6 +2,9 @@
 Linuxbrew Bottles 源使用帮助
 ============================
 
+.. warning::
+    由于上游原因，Linuxbrew 核心仓库（``linuxbrew-core``）自 2021 年 10 月 25 日（``brew`` 版本 3.3.0 起）被弃用，Linuxbrew 用户应迁移至 ``homebrew-core``。详见 :doc:`homebrew-core.git` 及 :doc:`homebrew-bottles`。
+
 地址
 ====
 

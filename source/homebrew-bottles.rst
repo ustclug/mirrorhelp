@@ -38,14 +38,16 @@ Homebrew 预编译二进制软件包
     # 对于 zsh 用户
     echo 'export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"' >> ~/.zshrc
 
+.. note::
+    Linuxbrew 核心仓库（``linuxbrew-core``）自 2021 年 10 月 25 日（``brew`` 版本 3.3.0 起）被弃用，Linuxbrew 用户应迁移至 ``homebrew-core``。
+    Linuxbrew 用户请依本镜像说明重新设置镜像。
+
 相关镜像
 ========
 - :doc:`brew.git`
 - :doc:`homebrew-core.git`
 - :doc:`homebrew-cask.git`
 - :doc:`homebrew-cask-versions.git`
-- :doc:`linuxbrew-core.git`
-- :doc:`linuxbrew-bottles`
 
 相关链接
 ========
