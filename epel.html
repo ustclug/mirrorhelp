@@ -181,12 +181,84 @@ Red Hat Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux (OL
 </section>
 <section id="id5">
 <h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>操作前请做好相应备份。</p>
+</div>
 <p>执行以下命令：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">epel</span><span class="o">-</span><span class="n">release</span>
 <span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^metalink=|#metalink=|g&#39;</span> \
          <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^#baseurl=https\?://download.fedoraproject.org/pub/epel/|baseurl=https://mirrors.ustc.edu.cn/epel/|g&#39;</span> \
+         <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^#baseurl=https\?://download.example/pub/epel/|baseurl=https://mirrors.ustc.edu.cn/epel/|g&#39;</span> \
          <span class="o">-</span><span class="n">i</span><span class="o">.</span><span class="n">bak</span> \
          <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">epel</span><span class="o">.</span><span class="n">repo</span>
+</pre></div>
+</div>
+<p>以下是替换之后的 <code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/epel.repo</span></code> 文件：</p>
+<ul class="simple">
+<li><p>CentOS 8：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[epel]
+name=Extra Packages for Enterprise Linux $releasever - $basearch
+# It is much more secure to use the metalink, but if you wish to use a local mirror
+# place it&#39;s address here.
+baseurl=https://mirrors.ustc.edu.cn/epel/$releasever/Everything/$basearch
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-$releasever&amp;arch=$basearch&amp;infra=$infra&amp;content=$contentdir
+enabled=1
+gpgcheck=1
+countme=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+
+[epel-debuginfo]
+name=Extra Packages for Enterprise Linux $releasever - $basearch - Debug
+# It is much more secure to use the metalink, but if you wish to use a local mirror
+# place it&#39;s address here.
+baseurl=https://mirrors.ustc.edu.cn/epel/$releasever/Everything/$basearch/debug
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-debug-$releasever&amp;arch=$basearch&amp;infra=$infra&amp;content=$contentdir
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+gpgcheck=1
+
+[epel-source]
+name=Extra Packages for Enterprise Linux $releasever - $basearch - Source
+# It is much more secure to use the metalink, but if you wish to use a local mirror
+# place it&#39;s address here.
+baseurl=https://mirrors.ustc.edu.cn/epel/$releasever/Everything/SRPMS
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-$releasever&amp;arch=$basearch&amp;infra=$infra&amp;content=$contentdir
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
+gpgcheck=1
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>CentOS 7：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[epel]
+name=Extra Packages for Enterprise Linux 7 - $basearch
+baseurl=https://mirrors.ustc.edu.cn/epel/7/$basearch
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-7&amp;arch=$basearch
+failovermethod=priority
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+
+[epel-debuginfo]
+name=Extra Packages for Enterprise Linux 7 - $basearch - Debug
+baseurl=https://mirrors.ustc.edu.cn/epel/7/$basearch/debug
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-debug-7&amp;arch=$basearch
+failovermethod=priority
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+gpgcheck=1
+
+[epel-source]
+name=Extra Packages for Enterprise Linux 7 - $basearch - Source
+baseurl=https://mirrors.ustc.edu.cn/epel/7/SRPMS
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-7&amp;arch=$basearch
+failovermethod=priority
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+gpgcheck=1
 </pre></div>
 </div>
 </section>
