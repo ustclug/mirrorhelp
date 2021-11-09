@@ -176,10 +176,10 @@
 <section id="id4">
 <h2>收录版本<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
 <ul class="simple">
-<li><p>jessie (oldoldstable)</p></li>
-<li><p>stretch (oldstable)</p></li>
-<li><p>buster (stable)</p></li>
-<li><p>bullseye (testing)</p></li>
+<li><p>stretch (oldoldstable)</p></li>
+<li><p>buster (oldstable)</p></li>
+<li><p>bullseye (stable)</p></li>
+<li><p>bookworm (testing)</p></li>
 </ul>
 </section>
 <section id="id5">
@@ -198,18 +198,18 @@
 <span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s|archive.raspbian.org|mirrors.ustc.edu.cn/raspbian|g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span>
 </pre></div>
 </div>
-<p>当然也可以直接编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件（需要使用 sudo）。删除原文件所有内容，用以下内容取代（以 Buster 示例）：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">raspbian</span><span class="o">/</span><span class="n">raspbian</span><span class="o">/</span> <span class="n">buster</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span> <span class="n">rpi</span>
-<span class="c1"># deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi</span>
+<p>当然也可以直接编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件（需要使用 sudo）。删除原文件所有内容，用以下内容取代（以 Bullseye 示例）：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">raspbian</span><span class="o">/</span><span class="n">raspbian</span><span class="o">/</span> <span class="n">bullseye</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span> <span class="n">rpi</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ bullseye main contrib non-free rpi</span>
 </pre></div>
 </div>
-<p>Arm64 架构的 Raspberry Pi OS 仍处于 beta 状态，本镜像上游亦不含此架构。对于 arm64 的 Raspberry Pi OS，可以直接使用 arm64 Debian 的源（以 Buster 示例）：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">/</span> <span class="n">buster</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
-<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian buster main contrib non-free</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">/</span> <span class="n">buster</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
-<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">-</span><span class="n">security</span> <span class="n">buster</span><span class="o">/</span><span class="n">updates</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
-<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main non-free contrib</span>
+<p>Arm64 架构的 Raspberry Pi OS 仍处于 beta 状态，本镜像上游亦不含此架构。对于 arm64 的 Raspberry Pi OS，可以直接使用 arm64 Debian 的源（以 Bullseye 示例）：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">/</span> <span class="n">bullseye</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian bullseye main contrib non-free</span>
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">/</span> <span class="n">bullseye</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian bullseye-updates main contrib non-free</span>
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">-</span><span class="n">security</span> <span class="n">bullseye</span><span class="o">/</span><span class="n">updates</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ bullseye/updates main non-free contrib</span>
 </pre></div>
 </div>
 <p>编辑此文件后，请使用 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code> 命令，更新软件索引。</p>
