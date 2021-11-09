@@ -20,10 +20,10 @@ armhf
 收录版本
 ========
 
-* jessie (oldoldstable)
-* stretch (oldstable)
-* buster (stable)
-* bullseye (testing)
+* stretch (oldoldstable)
+* buster (oldstable)
+* bullseye (stable)
+* bookworm (testing)
 
 使用说明
 ========
@@ -47,23 +47,23 @@ raspbian 2018-04-19 之后的镜像默认源已经更改，用如下命令替换
   sudo sed -i 's|archive.raspbian.org|mirrors.ustc.edu.cn/raspbian|g' /etc/apt/sources.list
 
 
-当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。删除原文件所有内容，用以下内容取代（以 Buster 示例）：
+当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。删除原文件所有内容，用以下内容取代（以 Bullseye 示例）：
 
 ::
 
-    deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
-    # deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi
+    deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ bullseye main contrib non-free rpi
+    # deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ bullseye main contrib non-free rpi
 
-Arm64 架构的 Raspberry Pi OS 仍处于 beta 状态，本镜像上游亦不含此架构。对于 arm64 的 Raspberry Pi OS，可以直接使用 arm64 Debian 的源（以 Buster 示例）：
+Arm64 架构的 Raspberry Pi OS 仍处于 beta 状态，本镜像上游亦不含此架构。对于 arm64 的 Raspberry Pi OS，可以直接使用 arm64 Debian 的源（以 Bullseye 示例）：
 
 ::
 
-    deb https://mirrors.ustc.edu.cn/debian/ buster main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian buster main contrib non-free
-    deb https://mirrors.ustc.edu.cn/debian/ buster-updates main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free
-    deb https://mirrors.ustc.edu.cn/debian-security buster/updates main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main non-free contrib
+    deb https://mirrors.ustc.edu.cn/debian/ bullseye main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian bullseye main contrib non-free
+    deb https://mirrors.ustc.edu.cn/debian/ bullseye-updates main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian bullseye-updates main contrib non-free
+    deb https://mirrors.ustc.edu.cn/debian-security bullseye/updates main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian-security/ bullseye/updates main non-free contrib
 
 编辑此文件后，请使用 ``sudo apt-get update`` 命令，更新软件索引。
 

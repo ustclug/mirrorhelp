@@ -24,7 +24,7 @@ raspios 的默认用户是 pi，密码是 raspberry，root 默认关闭。
 收录版本
 ========
 
-最新的稳定版（buster）
+最新的稳定版（bullseye）
 
 使用说明
 ========

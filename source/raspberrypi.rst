@@ -26,6 +26,7 @@ https://mirrors.ustc.edu.cn/archive.raspberrypi.org/ 或 https://mirrors.ustc.ed
 收录版本
 ========
 
+* wheezy
 * jessie
 * stretch
 * buster
