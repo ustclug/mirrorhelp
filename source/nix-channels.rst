@@ -56,8 +56,6 @@ NixOS channel 也可以以类似命令替换，以 ``nixos-19.09`` 为例（需�
 相关链接
 ========
 
-:Nix 主页: https://nixos.org/nix
-:Nixpkgs 主页: https://nixos.org/nixpkgs
 :NixOS 主页: https://nixos.org/
-:安装 Nix: https://nixos.org/nix/manual/#ch-installing-binary
+:安装 Nix: https://nixos.org/manual/nix/stable/installation/installing-binary.html
 :上游 Nix Channels 列表: https://channels.nixos.org/
