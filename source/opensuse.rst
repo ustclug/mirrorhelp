@@ -32,7 +32,9 @@ i586, x86_64
 
   sudo zypper mr -da
 
-添加科大镜像源，以 openSUSE Leap 为例：
+建议 leap 15.3 用户不执行此操作，改为手动禁用以下命令对应的官方源，并添加以下源。
+
+添加中科大镜像源，以 openSUSE Leap 为例：
 
 ::
 
@@ -71,10 +73,10 @@ i586, x86_64
 
 * 由于使用了 MirrorBrain 技术，中央服务器 (download.opensuse.org) 会按照 IP
   地理位置中转下载请求到附近的镜像服务器（但刷新软件源时仍从中央服务器获取
-  元数据），所以更改软件源通常只会加快刷新软件源的速度，而对下载速度影响不大。
+  元数据），所以更改软件源通常只会加快刷新软件源的速度，而对下载速度影响不大，但对于经常滚动或重置的系统仍然有帮助（如 Kubic,MicroOS ）。
   参见 `openSUSE 中文论坛 <https://forum.suse.org.cn/t/opensuse/1759>`_ 。
-* 我们不提供 backports, source 和 debug 源。
-* Tumbleweed 滚动发行版软件源的地址与上述例子稍有不同。
+* 我们不提供 backports, source 和 debug 源，如您需要，请考虑上海交通大学的镜像站。
+* Tumbleweed 滚动发行版软件源的地址与上述例子稍有不同，一般为 [mirror site]/Tumbleweed/[file path]。
 
 相关链接
 ========
@@ -87,3 +89,4 @@ i586, x86_64
 :中文 Wiki: https://zh.opensuse.org/
 :文档: https://en.opensuse.org/Documentation
 :openSUSE Guide: https://lug.ustc.edu.cn/sites/opensuse-guide/
+**openSUSE Guide因为欠维护而过时，内容不能保证有效或有风险！**
