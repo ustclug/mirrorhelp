@@ -12,10 +12,10 @@ https://mirrors.ustc.edu.cn/packman/
 
 PackMan 软件源
 
-支持的 Linux 发行版
-====
+支持的发行版
+==========
 
-openSUSE, SLE[Suse Linux Enterprise], fedora, ununtu, debian.
+openSUSE, SLE[Suse Linux Enterprise], fedora.
 
 简介
 ====

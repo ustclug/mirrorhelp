@@ -17,6 +17,11 @@ openSUSE 软件源
 
 i586, x86_64
 
+支持的版本
+========
+
+Leap 15.1-15.3, tumbleweed
+
 使用说明
 ========
 
@@ -41,7 +46,7 @@ i586, x86_64
   sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/\$releasever/oss USTC:UPDATE-OSS
   sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/\$releasever/non-oss USTC:UPDATE-NON-OSS
   
-建议 openSUSE Leap 15.3 用户不禁用所有软件源，而是手动禁用以上命令对应的官方源，并添加USTC提供的镜像站源。
+建议 openSUSE Leap 15.3 用户不禁用所有软件源，而是手动禁用以上命令对应的官方源，并添加 USTC 提供的镜像站源。
 
 对于 15.3 或更高版本的 openSUSE Leap，还需添加或替换 SLE 更新源：
 
@@ -76,7 +81,6 @@ i586, x86_64
   元数据），所以更改软件源通常只会加快刷新软件源的速度，而对下载速度影响不
   大，但对于经常滚动或重置的系统仍然有帮助（如 openSUSE Kubic、openSUSE MicroOS）。
   参见 `openSUSE 中文论坛 <https://forum.suse.org.cn/t/opensuse/1759>`_ 。
-* 对于非常古老的 openSUSE Leap，我们更建议您考虑升级系统以及依赖老版本的代码或软件。
 * 如果您无法正常播放在线视频（例如爱奇艺），请尝试添加 `Packman 软件源 <http://mirrors.ustc.edu.cn/help/packman.html>`_ ，并安装VLC播放器。
 * 我们不提供 backports, source 和 debug 源，如您需要，请考虑其他镜像站，提供 Ports 的镜像站列表参见 `openSUSE Mirrors 信息页 <https://mirrors.opensuse.org/>`_ 。
 * Tumbleweed 滚动发行版软件源的地址与上述例子稍有不同，一般为：
