@@ -12,10 +12,15 @@ https://mirrors.ustc.edu.cn/packman/
 
 PackMan 软件源
 
+支持的 Linux 发行版
+====
+
+openSUSE, SLE[Suse Linux Enterprise], fedora, ununtu, debian.
+
 简介
 ====
 
-openSUSE 非官方社区软件源，主要收录允许自由分发但存在专利纠纷的软件，
+多个 Linux 发行版非官方社区软件源，主要收录允许自由分发但存在专利纠纷的软件，
 例如多媒体解码器等。
 
 使用说明
