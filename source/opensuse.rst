@@ -89,4 +89,3 @@ i586, x86_64
 :中文 Wiki: https://zh.opensuse.org/
 :文档: https://en.opensuse.org/Documentation
 :openSUSE Guide: https://lug.ustc.edu.cn/sites/opensuse-guide/
-**openSUSE Guide因为欠维护而过时，内容不能保证有效或有风险！**
