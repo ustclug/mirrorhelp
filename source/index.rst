@@ -41,6 +41,7 @@ USTC Mirror Help
    proxmox
    raspberry-pi-os-images
    raspbian
+   raspbian-addons
    rocky
    scientificlinux
    termux
