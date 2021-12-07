@@ -22,7 +22,7 @@ Raspbian Addons 是 Raspbian 非官方软件源，含有许多来自 GitHub 的�
 
 添加该仓库::
 
-  echo "deb https://mirrors.ustc.edu.cn/raspbian-addons/debian/ /" | sudo tee /etc/apt/sources.list.d/rpirepo.list
+  echo "deb https://mirrors.ustc.edu.cn/raspbian-addons/debian precise main" | sudo tee /etc/apt/sources.list.d/rpirepo.list
 
 更新软件包缓存::
 
