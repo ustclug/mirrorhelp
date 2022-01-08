@@ -59,6 +59,7 @@ USTC Mirror Help
 .. toctree::
    :maxdepth: 1
 
+   ghcup
    hackage
    julia
    node
