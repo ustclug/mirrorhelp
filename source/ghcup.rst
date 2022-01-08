@@ -45,4 +45,4 @@ GHCup 类似 Rustup，可以用于安装 Haskell 工具链。建议搭配 Hackag
 ========
 
 :Haskell 主页: https://www.haskell.org/
-:GHCup 主页: https://ghcup.haskell.org/
+:GHCup 主页: https://www.haskell.org/ghcup/
