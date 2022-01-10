@@ -28,7 +28,7 @@ Ubuntu, Debian
 
     sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 
-3. 刷新软件源缓存 ``sudo apt update``，安装所需的ros发行版。
+3. 刷新软件源缓存 ``sudo apt update``，安装所需的 ROS 发行版。
 
 相关链接
 ========
