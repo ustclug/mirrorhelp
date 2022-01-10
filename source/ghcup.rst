@@ -33,7 +33,7 @@ GHCup 类似 Rustup，可以用于安装 Haskell 工具链。建议搭配 Hackag
 ::
 
    url-source:
-       OwnSource: https://mirror.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.6.yaml
+       OwnSource: https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.6.yaml
 
 **第三步（可选）** ：配置 Cabal 和 Stack 使用科大源，请参考文档 :doc:`hackage` 和 :doc:`stackage` 。
 
