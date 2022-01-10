@@ -15,14 +15,13 @@ Raspbian Addons 是 Raspbian 非官方软件源，含有许多来自 GitHub 的�
 使用说明
 ========
 
-信任仓库的 GPG 公钥::
+将仓库的 GPG 公钥添加至系统::
 
-  wget -qO- https://mirrors.ustc.edu.cn/raspbian-addons/KEY.gpg | sudo apt-key add -
-
+  curl -fsSL https://apt.raspbian-addons.org/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/raspbian-addons-archive-keyring.gpg
 
 添加该仓库::
 
-  echo "deb https://mirrors.ustc.edu.cn/raspbian-addons/debian precise main" | sudo tee /etc/apt/sources.list.d/rpirepo.list
+  echo "deb [signed-by=/usr/share/keyrings/raspbian-addons-archive-keyring.gpg] https://mirrors.ustc.edu.cn/raspbian-addons/debian precise main" | sudo tee /etc/apt/sources.list.d/rpirepo.list
 
 更新软件包缓存::
 
