@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Linux Mint 源使用帮助 &mdash; USTC Mirror Help  文档</title>
+  <title>Clojars 源使用帮助 &mdash; USTC Mirror Help  文档</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Mageia 源使用帮助" href="mageia.html" />
-    <link rel="prev" title="Kali Linux 源使用帮助" href="kali.html" /> 
+    <link rel="next" title="GHCup 源使用帮助" href="ghcup.html" />
+    <link rel="prev" title="Ubuntu Cloud Images 源使用帮助" href="ubuntu-cloud-images.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="alpine.html">Alpine Linux 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="anthon.html">AOSC OS 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aosp.html">AOSP 镜像使用帮助</a></li>
@@ -63,15 +63,7 @@
 <li class="toctree-l1"><a class="reference internal" href="gentoo.html">Gentoo 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gentoo-portage.html">Gentoo Portage 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kali.html">Kali Linux 源使用帮助</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Linux Mint 源使用帮助</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">收录架构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">收录版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">使用方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">相关链接</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="linuxmint.html">Linux Mint 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mageia.html">Mageia 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="manjaro.html">Manjaro Linux 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="msys2.html">MSYS2 源使用帮助</a></li>
@@ -93,8 +85,15 @@
 <li class="toctree-l1"><a class="reference internal" href="ubuntu-cdimage.html">Ubuntu CD Image 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ubuntu-cloud-images.html">Ubuntu Cloud Images 源使用帮助</a></li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="clojars.html">Clojars 源使用帮助</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Clojars 源使用帮助</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">使用说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">极简示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">注意事项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">相关链接</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="ghcup.html">GHCup 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hackage.html">Hackage 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="julia.html">Julia 镜像使用帮助</a></li>
@@ -152,9 +151,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Linux Mint 源使用帮助</li>
+      <li>Clojars 源使用帮助</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/linuxmint.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/clojars.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -162,73 +161,55 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="linux-mint">
-<h1>Linux Mint 源使用帮助<a class="headerlink" href="#linux-mint" title="永久链接至标题"></a></h1>
+  <section id="clojars">
+<h1>Clojars 源使用帮助<a class="headerlink" href="#clojars" title="永久链接至标题"></a></h1>
 <section id="id1">
 <h2>地址<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
-<p><a class="reference external" href="https://mirrors.ustc.edu.cn/linuxmint/">https://mirrors.ustc.edu.cn/linuxmint/</a></p>
+<p><a class="reference external" href="https://mirrors.ustc.edu.cn/clojars/">https://mirrors.ustc.edu.cn/clojars/</a></p>
 </section>
 <section id="id2">
-<h2>说明<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
-<p>Linux Mint 软件源</p>
+<h2>使用说明<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
+<p>以 leiningen 为例，在项目根目录的 <code class="docutils literal notranslate"><span class="pre">project.clj</span></code> 中自己添加关键字 <code class="docutils literal notranslate"><span class="pre">:mirrors</span></code></p>
+<p>然后以如下 map 格式添加源:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">mirrors</span> <span class="p">{</span><span class="s2">&quot;clojars&quot;</span> <span class="p">{:</span><span class="n">name</span> <span class="s2">&quot;ustc&quot;</span>
+                     <span class="p">:</span><span class="n">url</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/clojars/&quot;</span><span class="p">}}</span>
+</pre></div>
+</div>
 </section>
 <section id="id3">
-<h2>收录架构<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
-<p>i386，amd64</p>
+<h2>极简示例<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">defproject</span> <span class="n">myapp</span> <span class="s2">&quot;1.0.0&quot;</span>
+   <span class="p">:</span><span class="n">description</span> <span class="s2">&quot;My Application&quot;</span>
+   <span class="p">:</span><span class="n">dependencies</span> <span class="p">[[</span><span class="n">enlive</span> <span class="s2">&quot;1.0.1&quot;</span><span class="p">]</span>
+                  <span class="p">[</span><span class="n">cheshire</span> <span class="s2">&quot;4.0.0&quot;</span><span class="p">]</span>
+                  <span class="p">[</span><span class="n">org</span><span class="o">.</span><span class="n">markdownj</span><span class="o">/</span><span class="n">markdownj</span> <span class="s2">&quot;0.3.0-1.0.2b4&quot;</span><span class="p">]]</span>
+   <span class="p">:</span><span class="n">mirrors</span> <span class="p">{</span><span class="s2">&quot;clojars&quot;</span> <span class="p">{:</span><span class="n">name</span> <span class="s2">&quot;ustc&quot;</span>
+                        <span class="p">:</span><span class="n">url</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/clojars/&quot;</span><span class="p">}}</span>
+   <span class="p">:</span><span class="n">main</span> <span class="n">leiningen</span><span class="o">.</span><span class="n">web</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>配置好后，在项目的根目录下运行 <code class="docutils literal notranslate"><span class="pre">lein</span> <span class="pre">run</span></code> ， 从输出中可以看到一些包是从 ustc 下载的。</p>
 </section>
 <section id="id4">
-<h2>收录版本<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
-<ul class="simple">
-<li><p>所有 Linux Mint 发行版本</p></li>
-<li><p>所有 LMDE 发行版本</p></li>
-</ul>
+<h2>注意事项<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
+<p>此镜像源替换的只是 clojars 这个仓库，一些 maven 的包依然会从 central maven 仓库下载。</p>
+<p>上述方法只针对单个项目生效。如果要针对所有项目进行全局配置，需修改 leiningen 的 <code class="docutils literal notranslate"><span class="pre">profiles</span></code> 。</p>
+<p>在 <code class="docutils literal notranslate"><span class="pre">~/.lein/projfiles.clj</span></code> 中添加:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">user</span> <span class="p">{:</span><span class="n">repositories</span> <span class="p">[[</span><span class="s2">&quot;clojars&quot;</span> <span class="p">{:</span><span class="n">url</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/clojars/&quot;</span><span class="p">}]]</span>
+       <span class="p">;;</span> <span class="n">other</span> <span class="p">:</span><span class="n">user</span> <span class="n">profile</span> <span class="n">settings</span><span class="o">...</span>
+       <span class="p">}</span>
+</pre></div>
+</div>
+<p>leiningen 会提示说 <code class="docutils literal notranslate"><span class="pre">:repositories</span></code> 写在了 <code class="docutils literal notranslate"><span class="pre">:user</span></code> 中，不过不影响使用。</p>
 </section>
 <section id="id5">
-<h2>使用方法<a class="headerlink" href="#id5" title="永久链接至标题"></a></h2>
-<div class="admonition warning">
-<p class="admonition-title">警告</p>
-<p>操作前请做好相应备份。</p>
-</div>
-<p>编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/official-package-repositories.list</span></code> ：</p>
-<ul class="simple">
-<li><p>对于基于 Ubuntu 的原版，以 Linuxmint 19 为例：</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">linuxmint</span><span class="o">/</span> <span class="n">tara</span> <span class="n">main</span> <span class="n">upstream</span> <span class="kn">import</span> <span class="nn">backport</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">bionic</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">bionic</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">bionic</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">bionic</span><span class="o">-</span><span class="n">security</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">archive</span><span class="o">.</span><span class="n">canonical</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">bionic</span> <span class="n">partner</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>对于基于 Debian 的 LMDE，以 LMDE 2 为例：</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">linuxmint</span><span class="o">/</span> <span class="n">betsy</span> <span class="n">main</span> <span class="n">upstream</span> <span class="kn">import</span>
-<span class="nn">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span> <span class="n">jessie</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span> <span class="n">jessie</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span> <span class="n">jessie</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">-</span><span class="n">security</span><span class="o">/</span> <span class="n">jessie</span><span class="o">/</span><span class="n">updates</span> <span class="n">main</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span> <span class="n">contrib</span>
-<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">deb</span><span class="o">-</span><span class="n">multimedia</span><span class="o">/</span> <span class="n">jessie</span> <span class="n">main</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
-</pre></div>
-</div>
-<p>然后运行 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code> 更新索引以生效。</p>
-<div class="admonition tip">
-<p class="admonition-title">小技巧</p>
-<p>完成后请不要再使用 mintsources（自带的图形化软件源设置工具）进行任何操作，因为在操作后，无论是否有按“确定”，mintsources 均会复写 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/official-package-repositories.list</span></code> 。</p>
-</div>
-</section>
-<section id="id6">
-<h2>相关链接<a class="headerlink" href="#id6" title="永久链接至标题"></a></h2>
+<h2>相关链接<a class="headerlink" href="#id5" title="永久链接至标题"></a></h2>
 <dl class="field-list simple">
-<dt class="field-odd">官方主页</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://www.linuxmint.com/">https://www.linuxmint.com/</a></p>
+<dt class="field-odd">leiningen 配置示例</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/technomancy/leiningen/blob/master/sample.project.clj">https://github.com/technomancy/leiningen/blob/master/sample.project.clj</a></p>
 </dd>
-<dt class="field-even">论坛</dt>
-<dd class="field-even"><p><a class="reference external" href="https://forums.linuxmint.com/index.php">https://forums.linuxmint.com/index.php</a></p>
-</dd>
-<dt class="field-odd">文档</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://linuxmint.com/documentation.php">https://linuxmint.com/documentation.php</a></p>
+<dt class="field-even">clojars-web 文档</dt>
+<dd class="field-even"><p><a class="reference external" href="https://github.com/clojars/clojars-web/wiki/Mirrors">https://github.com/clojars/clojars-web/wiki/Mirrors</a></p>
 </dd>
 </dl>
 </section>
@@ -238,8 +219,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="kali.html" class="btn btn-neutral float-left" title="Kali Linux 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="mageia.html" class="btn btn-neutral float-right" title="Mageia 源使用帮助" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ubuntu-cloud-images.html" class="btn btn-neutral float-left" title="Ubuntu Cloud Images 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="ghcup.html" class="btn btn-neutral float-right" title="GHCup 源使用帮助" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
