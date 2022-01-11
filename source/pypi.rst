@@ -3,7 +3,7 @@ PyPI 镜像源使用帮助
 ===================
 
 .. warning::
-    PyPI 源已暂时移除并重定向到 TUNA PyPI，详见 `PyPI 镜像变更通知 <https://servers.ustclug.org/2019/01/pypi-%e9%95%9c%e5%83%8f%e5%8f%98%e6%9b%b4%e9%80%9a%e7%9f%a5/>`_。
+    PyPI 源已暂时移除并重定向到 BFSU PyPI，详见 `PyPI 镜像变更通知 <https://servers.ustclug.org/2019/01/pypi-%e9%95%9c%e5%83%8f%e5%8f%98%e6%9b%b4%e9%80%9a%e7%9f%a5/>`_。
 
 地址
 ====
