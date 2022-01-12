@@ -178,14 +178,16 @@
 <section id="ubuntu-debian">
 <h3>Ubuntu, Debian<a class="headerlink" href="#ubuntu-debian" title="永久链接至标题"></a></h3>
 <ol class="arabic">
-<li><p>导入软件源的 GPG key:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">curl</span> <span class="n">gnupg2</span> <span class="n">lsb</span><span class="o">-</span><span class="n">release</span>
-<span class="n">sudo</span> <span class="n">curl</span> <span class="o">-</span><span class="n">sSL</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">rosdistro</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">ros</span><span class="o">.</span><span class="n">key</span>  <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">ros</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="n">gpg</span>
+<li><p>将软件源添加至系统:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;deb https://mirrors.ustc.edu.cn/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
 </pre></div>
 </div>
 </li>
-<li><p>添加软件源:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release &amp;&amp; echo $UBUNTU_CODENAME) main&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">ros2</span><span class="o">.</span><span class="n">list</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
+</ol>
+<p>如果 IPv6 地址无效导致无法刷新软件源信息，将 <code class="docutils literal notranslate"><span class="pre">mirrors.ustc.edu.cn</span></code> 改成 <code class="docutils literal notranslate"><span class="pre">ipv4.mirrors.ustc.edu.cn</span></code> 以强制使用 IPv4。</p>
+<ol class="arabic" start="2">
+<li><p>导入key:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">adv</span> <span class="o">--</span><span class="n">keyserver</span> <span class="s1">&#39;hkp://keyserver.ubuntu.com:80&#39;</span> <span class="o">--</span><span class="n">recv</span><span class="o">-</span><span class="n">key</span> <span class="n">C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</span>
 </pre></div>
 </div>
 </li>
@@ -197,7 +199,7 @@
 <h2>相关链接<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">项目主页</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://www.ros.org/">https://www.ros.org/</a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://www.ros.org/">http://www.ros.org/</a></p>
 </dd>
 </dl>
 </section>
