@@ -20,8 +20,6 @@ Ubuntu, Debian
 
 1. 导入软件源的 GPG key::
 
-    sudo sh -c 'echo "deb https://mirrors.ustc.edu.cn/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-    
     sudo apt update && sudo apt install curl gnupg2 lsb-release
     sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
 
@@ -34,4 +32,4 @@ Ubuntu, Debian
 相关链接
 ========
 
-:项目主页: http://www.ros.org/
+:项目主页: https://www.ros.org/
