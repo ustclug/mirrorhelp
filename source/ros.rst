@@ -18,18 +18,19 @@ https://mirrors.ustc.edu.cn/ros/
 Ubuntu, Debian
 ------------------------------
 
-1. 导入软件源的 GPG key::
+1. 将软件源添加至系统::
 
-    sudo apt update && sudo apt install curl gnupg2 lsb-release
-    sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
+    sudo sh -c 'echo "deb https://mirrors.ustc.edu.cn/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
-2. 添加软件源::
+如果 IPv6 地址无效导致无法刷新软件源信息，将 ``mirrors.ustc.edu.cn`` 改成 ``ipv4.mirrors.ustc.edu.cn`` 以强制使用 IPv4。
 
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+2. 导入key::
+
+    sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 
 3. 刷新软件源缓存 ``sudo apt update``，安装所需的 ROS 发行版。
 
 相关链接
 ========
 
-:项目主页: https://www.ros.org/
+:项目主页: http://www.ros.org/
