@@ -178,19 +178,20 @@
 <section id="ubuntu-debian">
 <h3>Ubuntu, Debian<a class="headerlink" href="#ubuntu-debian" title="永久链接至标题"></a></h3>
 <ol class="arabic">
+<li><p>导入key:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gpg</span> <span class="o">--</span><span class="n">keyserver</span> <span class="s1">&#39;hkp://keyserver.ubuntu.com:80&#39;</span> <span class="o">--</span><span class="n">recv</span><span class="o">-</span><span class="n">key</span> <span class="n">C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</span>
+<span class="n">gpg</span> <span class="o">--</span><span class="n">export</span> <span class="n">C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">trusted</span><span class="o">.</span><span class="n">gpg</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">ros</span><span class="o">.</span><span class="n">gpg</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
+</pre></div>
+</div>
+</li>
 <li><p>将软件源添加至系统:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;deb https://mirrors.ustc.edu.cn/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;deb [signed-by=/etc/apt/trusted.gpg.d/ros.gpg] https://mirrors.ustc.edu.cn/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
 </pre></div>
 </div>
 </li>
 </ol>
 <p>如果 IPv6 地址无效导致无法刷新软件源信息，将 <code class="docutils literal notranslate"><span class="pre">mirrors.ustc.edu.cn</span></code> 改成 <code class="docutils literal notranslate"><span class="pre">ipv4.mirrors.ustc.edu.cn</span></code> 以强制使用 IPv4。</p>
-<ol class="arabic" start="2">
-<li><p>导入key:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">adv</span> <span class="o">--</span><span class="n">keyserver</span> <span class="s1">&#39;hkp://keyserver.ubuntu.com:80&#39;</span> <span class="o">--</span><span class="n">recv</span><span class="o">-</span><span class="n">key</span> <span class="n">C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</span>
-</pre></div>
-</div>
-</li>
+<ol class="arabic simple" start="3">
 <li><p>刷新软件源缓存 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code>，安装所需的 ROS 发行版。</p></li>
 </ol>
 </section>
