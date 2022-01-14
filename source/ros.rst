@@ -21,11 +21,11 @@ Ubuntu, Debian
 1. 导入key::
 
     gpg --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-    gpg --export C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654 | sudo tee /etc/apt/trusted.gpg.d/ros.gpg > /dev/null
+    gpg --export C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654 | sudo tee /usr/share/keyrings/ros.gpg > /dev/null
 
 2. 将软件源添加至系统::
 
-    sudo sh -c 'echo "deb [signed-by=/etc/apt/trusted.gpg.d/ros.gpg] https://mirrors.ustc.edu.cn/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+    sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/ros.gpg] https://mirrors.ustc.edu.cn/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
 如果 IPv6 地址无效导致无法刷新软件源信息，将 ``mirrors.ustc.edu.cn`` 改成 ``ipv4.mirrors.ustc.edu.cn`` 以强制使用 IPv4。
 
