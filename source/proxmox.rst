@@ -43,13 +43,14 @@ Debian，Proxmox
   sed -i 's|^deb http://ftp.debian.org|deb https://mirrors.ustc.edu.cn|g' /etc/apt/sources.list
   sed -i 's|^deb http://security.debian.org|deb https://mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
 
-修改Proxmox的源文件，可以使用如下命令：
+修改 Proxmox 的源文件，可以使用如下命令：
 
 ::
 
-  CODENAME=`cat /etc/os-release |grep CODENAME |cut -f 2 -d "="`
-  echo "deb https://mirrors.ustc.edu.cn/proxmox/debian $CODENAME pve-no-subscription" > /etc/apt/sources.list.d/pve-no-subscription.list
+  source /etc/os-release
+  echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/pve $VERSION_CODENAME pve-no-subscription" > /etc/apt/sources.list.d/pve-no-subscription.list
 
+对于 Proxmox Backup Server 和 Proxmox Mail Gateway，请将以上命令中的 ``pve`` 分别替换为 ``pbs`` 和 ``pmg``。
 
 更改完 :file:`sources.list` 文件后请运行 ``apt update`` 更新索引以生效。
 
