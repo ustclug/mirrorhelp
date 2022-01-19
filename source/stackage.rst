@@ -19,7 +19,17 @@ Stackage 镜像
 
 编辑 ``~/.stack/config.yaml``, 根据版本的不同，增加下列配置：
 
->= 2.3:
+>= 2.5:
+
+::
+
+   setup-info-locations:
+      - http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml
+   urls:
+     latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
+   snapshot-location-base: http://mirrors.ustc.edu.cn/stackage/stackage-snapshots/
+
+< 2.5, >= 2.3:
 
 ::
     
