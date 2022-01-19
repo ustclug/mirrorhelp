@@ -29,6 +29,8 @@ Stackage 镜像
      latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
    snapshot-location-base: http://mirrors.ustc.edu.cn/stackage/stackage-snapshots/
 
+此外，还需要手动下载 https://mirrors.ustc.edu.cn/stackage/stackage-content/stack/global-hints.yaml 到 ~/.stack/pantry/global-hints-cache.yaml（在 Windows 下是 %APPDATA%\stack\pantry\global-hints-cache.yaml）。注意文件名不同。这是由于 stack 暂时不支持配置该文件的上游地址。该文件需要在每当第一次用到新版本的 GHC 时更新。
+
 < 2.5, >= 2.3:
 
 ::
