@@ -174,7 +174,15 @@
 <h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
 <p>推荐搭配 USTC Hackage 源使用: <a class="reference internal" href="hackage.html"><span class="doc">Hackage 源使用帮助</span></a></p>
 <p>编辑 <code class="docutils literal notranslate"><span class="pre">~/.stack/config.yaml</span></code>, 根据版本的不同，增加下列配置：</p>
-<p>&gt;= 2.3:</p>
+<p>&gt;= 2.5:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setup</span><span class="o">-</span><span class="n">info</span><span class="o">-</span><span class="n">locations</span><span class="p">:</span>
+   <span class="o">-</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">stackage</span><span class="o">/</span><span class="n">stack</span><span class="o">-</span><span class="n">setup</span><span class="o">.</span><span class="n">yaml</span>
+<span class="n">urls</span><span class="p">:</span>
+  <span class="n">latest</span><span class="o">-</span><span class="n">snapshot</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">stackage</span><span class="o">/</span><span class="n">snapshots</span><span class="o">.</span><span class="n">json</span>
+<span class="n">snapshot</span><span class="o">-</span><span class="n">location</span><span class="o">-</span><span class="n">base</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">stackage</span><span class="o">/</span><span class="n">stackage</span><span class="o">-</span><span class="n">snapshots</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>&lt; 2.5, &gt;= 2.3:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setup</span><span class="o">-</span><span class="n">info</span><span class="o">-</span><span class="n">locations</span><span class="p">:</span>
   <span class="o">-</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">stackage</span><span class="o">/</span><span class="n">stack</span><span class="o">-</span><span class="n">setup</span><span class="o">.</span><span class="n">yaml</span>
 <span class="n">urls</span><span class="p">:</span>
