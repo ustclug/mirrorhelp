@@ -178,7 +178,13 @@
 </section>
 <section id="id4">
 <h2>收录版本<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
-<p>7, 8</p>
+<p>7, 8 Stream</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>CentOS 8（非 Stream 版本）已被官方移除出该仓库。如有需要，请使用其他镜像站提供的 “centos-vault” 镜像，
+或切换至其他 RHEL 下游发行版。</p>
+<p>CentOS 9 Stream 及以后的版本的镜像位于 <a class="reference external" href="https://mirrors.ustc.edu.cn/centos-stream/">https://mirrors.ustc.edu.cn/centos-stream/</a>。</p>
+</div>
 </section>
 <section id="id5">
 <h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题"></a></h2>
@@ -186,15 +192,14 @@
 <p class="admonition-title">警告</p>
 <p>操作前请做好相应备份。</p>
 </div>
-<p>对于 CentOS 8，使用以下命令替换默认的配置</p>
+<p>对于 CentOS 8 Stream，使用以下命令替换默认的配置</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^mirrorlist=|#mirrorlist=|g&#39;</span> \
          <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^#baseurl=http://mirror.centos.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/centos|g&#39;</span> \
          <span class="o">-</span><span class="n">i</span><span class="o">.</span><span class="n">bak</span> \
-         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">AppStream</span><span class="o">.</span><span class="n">repo</span> \
-         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">BaseOS</span><span class="o">.</span><span class="n">repo</span> \
-         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">Extras</span><span class="o">.</span><span class="n">repo</span> \
-         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">PowerTools</span><span class="o">.</span><span class="n">repo</span> \
-         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">Plus</span><span class="o">.</span><span class="n">repo</span>
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Stream</span><span class="o">-</span><span class="n">AppStream</span><span class="o">.</span><span class="n">repo</span> \
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Stream</span><span class="o">-</span><span class="n">BaseOS</span><span class="o">.</span><span class="n">repo</span> \
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Stream</span><span class="o">-</span><span class="n">Extras</span><span class="o">.</span><span class="n">repo</span> \
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">CentOS</span><span class="o">-</span><span class="n">Stream</span><span class="o">-</span><span class="n">PowerTools</span><span class="o">.</span><span class="n">repo</span>
 </pre></div>
 </div>
 <p>对于 CentOS 7，使用以下命令替换默认配置</p>
@@ -208,12 +213,12 @@
 <p>以下是替换之后的文件：</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>以下给出的 <code class="docutils literal notranslate"><span class="pre">CentOS-Linux-PowerTools.repo</span></code> 与 <code class="docutils literal notranslate"><span class="pre">CentOS-Linux-Plus.repo</span></code> 设置了默认为停用状态。如需启用，请将 <code class="docutils literal notranslate"><span class="pre">enabled=0</span></code> 改为 <code class="docutils literal notranslate"><span class="pre">enabled=1</span></code>。</p>
+<p>以下给出的 <code class="docutils literal notranslate"><span class="pre">CentOS-Stream-PowerTools.repo</span></code> 设置了默认为停用状态。如需启用，请将 <code class="docutils literal notranslate"><span class="pre">enabled=0</span></code> 改为 <code class="docutils literal notranslate"><span class="pre">enabled=1</span></code>。</p>
 </div>
 <ul>
-<li><p>CentOS 8：</p>
-<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Linux-BaseOS.repo</span></code> 文件：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Linux-BaseOS.repo
+<li><p>CentOS 8 Stream：</p>
+<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Stream-BaseOS.repo</span></code> 文件：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Stream-BaseOS.repo
 #
 # The mirrorlist system uses the connecting IP address of the client and the
 # update status of each mirror to pick current mirrors that are geographically
@@ -224,16 +229,16 @@
 # baseurl line instead.
 
 [baseos]
-name=CentOS Linux $releasever - BaseOS
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=BaseOS&amp;infra=$infra
-baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/BaseOS/$basearch/os/
+name=CentOS Stream $releasever - BaseOS
+#mirrorlist=http://mirrorlist.centos.org/?release=$stream&amp;arch=$basearch&amp;repo=BaseOS&amp;infra=$infra
+baseurl=https://mirrors.ustc.edu.cn/centos/$stream/BaseOS/$basearch/os/
 gpgcheck=1
 enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 </pre></div>
 </div>
-<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Linux-Extras.repo</span></code> 文件：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Linux-Extras.repo
+<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Stream-Extras.repo</span></code> 文件：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Stream-Extras.repo
 #
 # The mirrorlist system uses the connecting IP address of the client and the
 # update status of each mirror to pick current mirrors that are geographically
@@ -244,16 +249,16 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 # baseurl line instead.
 
 [extras]
-name=CentOS Linux $releasever - Extras
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=extras&amp;infra=$infra
-baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/extras/$basearch/os/
+name=CentOS Stream $releasever - Extras
+#mirrorlist=http://mirrorlist.centos.org/?release=$stream&amp;arch=$basearch&amp;repo=extras&amp;infra=$infra
+baseurl=https://mirrors.ustc.edu.cn/centos/$stream/extras/$basearch/os/
 gpgcheck=1
 enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 </pre></div>
 </div>
-<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Linux-AppStream.repo</span></code> 文件：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Linux-AppStream.repo
+<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Stream-AppStream.repo</span></code> 文件：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Stream-AppStream.repo
 #
 # The mirrorlist system uses the connecting IP address of the client and the
 # update status of each mirror to pick current mirrors that are geographically
@@ -264,16 +269,16 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 # baseurl line instead.
 
 [appstream]
-name=CentOS Linux $releasever - AppStream
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=AppStream&amp;infra=$infra
-baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/AppStream/$basearch/os/
+name=CentOS Stream $releasever - AppStream
+#mirrorlist=http://mirrorlist.centos.org/?release=$stream&amp;arch=$basearch&amp;repo=AppStream&amp;infra=$infra
+baseurl=https://mirrors.ustc.edu.cn/centos/$stream/AppStream/$basearch/os/
 gpgcheck=1
 enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 </pre></div>
 </div>
-<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Linux-PowerTools.repo</span></code> 文件：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Linux-PowerTools.repo
+<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Stream-PowerTools.repo</span></code> 文件：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Stream-PowerTools.repo
 #
 # The mirrorlist system uses the connecting IP address of the client and the
 # update status of each mirror to pick current mirrors that are geographically
@@ -284,29 +289,9 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 # baseurl line instead.
 
 [powertools]
-name=CentOS Linux $releasever - PowerTools
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=PowerTools&amp;infra=$infra
-baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/PowerTools/$basearch/os/
-gpgcheck=1
-enabled=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
-</pre></div>
-</div>
-<p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/CentOS-Linux-Plus.repo</span></code> 文件：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># CentOS-Linux-Plus.repo
-#
-# The mirrorlist system uses the connecting IP address of the client and the
-# update status of each mirror to pick current mirrors that are geographically
-# close to the client.  You should use this for CentOS updates unless you are
-# manually picking other mirrors.
-#
-# If the mirrorlist does not work for you, you can try the commented out
-# baseurl line instead.
-
-[plus]
-name=CentOS Linux $releasever - Plus
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=centosplus&amp;infra=$infra
-baseurl=https://mirrors.ustc.edu.cn/centos/$releasever/centosplus/$basearch/os/
+name=CentOS Stream $releasever - PowerTools
+#mirrorlist=http://mirrorlist.centos.org/?release=$stream&amp;arch=$basearch&amp;repo=PowerTools&amp;infra=$infra
+baseurl=https://mirrors.ustc.edu.cn/centos/$stream/PowerTools/$basearch/os/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
