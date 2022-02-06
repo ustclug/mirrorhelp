@@ -23,6 +23,10 @@ https://mirrors.ustc.edu.cn/github-release/
 * `AdoptOpenJDK/openjdk11-binaries <https://github.com/AdoptOpenJDK/openjdk11-binaries>`_
 * `AdoptOpenJDK/openjdk12-binaries <https://github.com/AdoptOpenJDK/openjdk12-binaries>`_
 * `AdoptOpenJDK/openjdk13-binaries <https://github.com/AdoptOpenJDK/openjdk13-binaries>`_
+* `AdoptOpenJDK/openjdk14-binaries <https://github.com/AdoptOpenJDK/openjdk14-binaries>`_
+* `AdoptOpenJDK/openjdk15-binaries <https://github.com/AdoptOpenJDK/openjdk15-binaries>`_
+* `AdoptOpenJDK/openjdk16-binaries <https://github.com/AdoptOpenJDK/openjdk16-binaries>`_
+* `adoptium/temurin17-binaries <https://github.com/adoptium/temurin17-binaries>`_
 * `pbatard/rufus <https://github.com/pbatard/rufus>`_
 * `Homebrew/homebrew-portable-ruby <https://github.com/Homebrew/homebrew-portable-ruby>`_
 
@@ -33,7 +37,7 @@ https://mirrors.ustc.edu.cn/github-release/
 使用说明
 ========
 
-一般情况下，直接前往此镜像地址，点击即可进行下载
+一般情况下，直接前往此镜像地址，点击即可进行下载。
 
 相关链接
 ========
