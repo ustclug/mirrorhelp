@@ -211,6 +211,18 @@
 及以上版本不需要)。</p>
 </div>
 <p>另外，也可以使用 snullp 大叔开发的 <a class="reference external" href="https://mirrors.ustc.edu.cn/repogen">配置生成器</a> 。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>在 apt 2.1.9 及以后的版本中，apt 的 HTTP Pipelining 特性与 Nginx 服务器疑似存在一定的不兼容问题，可能导致高带宽从镜像站下载大量软件包
+（例如系统升级）时出现偶发的 Connection reset by peer 错误
+（详见 <a class="reference external" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=973581">Debian bug #973581</a>）。</p>
+<p>目前，用户可以通过关闭 HTTP Pipelining 特性解决此问题。
+如果需要关闭，可以在使用 <code class="docutils literal notranslate"><span class="pre">apt</span></code> 命令时加上 <code class="docutils literal notranslate"><span class="pre">-o</span> <span class="pre">Acquire::http::Pipeline-Depth=0</span></code> 参数，
+或使用以下命令将相关设置加入 apt 系统配置中：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;Acquire::http::Pipeline-Depth </span><span class="se">\&quot;</span><span class="s2">0</span><span class="se">\&quot;</span><span class="s2">;&quot;</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">apt</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="mi">99</span><span class="n">nopipelining</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="id7">
 <h2>相关链接<a class="headerlink" href="#id7" title="永久链接至标题"></a></h2>
