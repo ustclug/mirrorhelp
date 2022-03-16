@@ -45,6 +45,7 @@ USTC Mirror Help
    rocky
    scientificlinux
    termux
+   termux-its-pointless
    trisquel
    ubuntu
    ubuntu-ports
