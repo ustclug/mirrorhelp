@@ -38,11 +38,11 @@ Termux 目前（2021 年 6 月）的官方源为 packages.termux.org，我们推
 注：Termux 会自动将环境变量 ``$PREFIX`` 设定为 :file:`/data/data/com.termux/files/usr`
 
 .. warning::
-    Google Play 上的 Termux 已被弃用，如安装会产生兼容性问题。请通过 F-Droid 或 GitHub 来安装 Termux。
+    Google Play 上的 Termux 已被弃用，如安装会产生兼容性问题。请通过 GitHub 或 F-Droid 来安装 Termux。
 
 相关链接
 ========
 
 :Termux 官网: https://termux.com/
-:GitHub: https://github.com/termux
+:GitHub: https://github.com/termux/termux-app
 :F-Droid: https://f-droid.org/zh_Hant/packages/com.termux
