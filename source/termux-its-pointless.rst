@@ -17,7 +17,7 @@ Termux 第三方软件源，包含 gcc、R 语言和许多游戏
 
 添加 apt 存储库::
 
-  wget -qO- https://its-pointless.github.io/setup-pointless-repo.sh | bash setup-pointless-repo.sh
+  wget -qO- https://its-pointless.github.io/setup-pointless-repo.sh | bash
 
 使用 USTC 镜像::
 
