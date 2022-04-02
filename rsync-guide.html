@@ -182,21 +182,24 @@
 <p>如需使用 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 协议访问科大开源镜像站，请使用 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 专用的域名： <code class="docutils literal notranslate"><span class="pre">rsync.mirrors.ustc.edu.cn</span></code> 。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>使用非标准域名 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 访问站点的用户无法进行同步。</p>
+<p>使用非标准域名 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 访问站点的用户可能无法进行同步。</p>
 </div>
 </section>
 <section id="id4">
 <h3>同步路径<a class="headerlink" href="#id4" title="永久链接至标题"></a></h3>
-<p>目前，科大镜像站所有仓库的同步都必须添加 <code class="docutils literal notranslate"><span class="pre">/repo/</span></code> 的前缀来进行访问。
-如， <code class="docutils literal notranslate"><span class="pre">ubuntu</span></code> 仓库的实际路径为
-<code class="docutils literal notranslate"><span class="pre">rsync://rsync.mirrors.ustc.edu.cn/repo/ubuntu/</span></code> ，而非
-<code class="docutils literal notranslate"><span class="pre">rsync://rsync.mirrors.ustc.edu.cn/ubuntu</span></code> 。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>由于 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 协议实现的限制，原有的使用 <code class="docutils literal notranslate"><span class="pre">/repo/</span></code> 前缀同步的方式难以进行负载均衡。
+因此从 2022 年 4 月 2 日后，同步将不再需要添加 <code class="docutils literal notranslate"><span class="pre">/repo/</span></code> 前缀。
+例如，<code class="docutils literal notranslate"><span class="pre">ubuntu</span></code> 仓库的实际路径即为 <code class="docutils literal notranslate"><span class="pre">rsync://rsync.mirrors.ustc.edu.cn/ubuntu</span></code>。
+原有的 <code class="docutils literal notranslate"><span class="pre">/repo/</span></code> 仍然保留，但是其中的部分仓库之后会迁移出去，我们建议用户尽快更换为新的路径。</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
 <p>我们强烈推荐用户在实际进行 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 同步之前先使用 <code class="docutils literal notranslate"><span class="pre">rsync</span></code>
 工具列出目录内容以实际观察目录结构。
 例如，用户可以使用如下命令列出 <code class="docutils literal notranslate"><span class="pre">ubuntu</span></code> 仓库根目录的具体内容：
-<code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">rsync://rsync.mirrors.ustc.edu.cn/repo/ubuntu/</span></code> 。</p>
+<code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">rsync://rsync.mirrors.ustc.edu.cn/ubuntu/</span></code> 。</p>
 </div>
 </section>
 <section id="id5">
@@ -204,8 +207,8 @@
 <p>您可以使用 rsync 协议访问站点上绝大部分非反向代理的仓库中的文件内容。</p>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
-<p>如需获取完整的可同步仓库列表，请使用 rsync 列出 <code class="docutils literal notranslate"><span class="pre">/repo/</span></code> 路径下
-的目录列表： <code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">rsync://rsync.mirrors.ustc.edu.cn/repo/</span></code> 。</p>
+<p>如需获取完整的可同步仓库列表，请使用 rsync 列出根路径下
+的目录（模块）列表： <code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">rsync://rsync.mirrors.ustc.edu.cn/</span></code> 。</p>
 </div>
 </section>
 <section id="id6">
