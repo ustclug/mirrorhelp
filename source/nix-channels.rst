@@ -42,14 +42,31 @@ NixOS channel 也可以以类似命令替换，以 ``nixos-19.09`` 为例（需�
 
     substituters = https://mirrors.ustc.edu.cn/nix-channels/store https://cache.nixos.org/
 
-对于 NixOS 与 nix-darwin：
+对于 NixOS 和 nix-darwin，需要编辑 NixOS / nix-darwin 配置文件，系统会自动生成对应的 ``/etc/nix/nix.conf`` 文件。
+
+.. attention::
+    如果你手动指定了 ``NIX_PATH`` 或是使用 Flakes 管理系统，请根据具体情况编辑对应的文件，以下仅供参考。
+
+对于 nix-darwin，在 ``~/.nixpkgs/darwin-configuration.nix`` 中添加：
 
 ::
 
-    nix.binaryCaches = [ "https://mirrors.ustc.edu.cn/nix-channels/store" "https://cache.nixos.org/" ];
+    nix.binaryCaches = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
 
-.. tip::
-    如果使用 NixOS 19.09 之后的版本和 nix-darwin，配置中的 ``"https://cache.nixos.org/"`` 可以省略。
+对于 NixOS 21.11 及之前的版本，在 ``/etc/nixos/configuration.nix`` 中添加：
+
+::
+
+    nix.binaryCaches = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
+
+对于 NixOS 22.05 及之后的版本，在 ``/etc/nixos/configuration.nix`` 中添加：
+
+::
+
+    nix.settings.substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
+
+.. note::
+    对于所有 NixOS 19.09 及之后的版本和 nix-darwin， ``"https://cache.nixos.org/"`` 会被自动添加到配置中。
 
 本帮助参考了 `TUNA 的 nix 帮助 <https://mirrors.tuna.tsinghua.edu.cn/help/nix/>`_ 编写。
 
