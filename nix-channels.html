@@ -196,13 +196,26 @@ $ nix-channel --update
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">substituters</span> <span class="o">=</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">nix</span><span class="o">-</span><span class="n">channels</span><span class="o">/</span><span class="n">store</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cache</span><span class="o">.</span><span class="n">nixos</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
 </pre></div>
 </div>
-<p>对于 NixOS 与 nix-darwin：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nix</span><span class="o">.</span><span class="n">binaryCaches</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/nix-channels/store&quot;</span> <span class="s2">&quot;https://cache.nixos.org/&quot;</span> <span class="p">];</span>
+<p>对于 NixOS 和 nix-darwin，需要编辑 NixOS / nix-darwin 配置文件，系统会自动生成对应的 <code class="docutils literal notranslate"><span class="pre">/etc/nix/nix.conf</span></code> 文件。</p>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>如果你手动指定了 <code class="docutils literal notranslate"><span class="pre">NIX_PATH</span></code> 或是使用 Flakes 管理系统，请根据具体情况编辑对应的文件，以下仅供参考。</p>
+</div>
+<p>对于 nix-darwin，在 <code class="docutils literal notranslate"><span class="pre">~/.nixpkgs/darwin-configuration.nix</span></code> 中添加：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nix</span><span class="o">.</span><span class="n">binaryCaches</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/nix-channels/store&quot;</span> <span class="p">];</span>
 </pre></div>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">小技巧</p>
-<p>如果使用 NixOS 19.09 之后的版本和 nix-darwin，配置中的 <code class="docutils literal notranslate"><span class="pre">&quot;https://cache.nixos.org/&quot;</span></code> 可以省略。</p>
+<p>对于 NixOS 21.11 及之前的版本，在 <code class="docutils literal notranslate"><span class="pre">/etc/nixos/configuration.nix</span></code> 中添加：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nix</span><span class="o">.</span><span class="n">binaryCaches</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/nix-channels/store&quot;</span> <span class="p">];</span>
+</pre></div>
+</div>
+<p>对于 NixOS 22.05 及之后的版本，在 <code class="docutils literal notranslate"><span class="pre">/etc/nixos/configuration.nix</span></code> 中添加：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nix</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">substituters</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/nix-channels/store&quot;</span> <span class="p">];</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>对于所有 NixOS 19.09 及之后的版本和 nix-darwin， <code class="docutils literal notranslate"><span class="pre">&quot;https://cache.nixos.org/&quot;</span></code> 会被自动添加到配置中。</p>
 </div>
 <p>本帮助参考了 <a class="reference external" href="https://mirrors.tuna.tsinghua.edu.cn/help/nix/">TUNA 的 nix 帮助</a> 编写。</p>
 </section>
