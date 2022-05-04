@@ -36,7 +36,7 @@ Docker CE 仓库镜像
 在阅读官方安装手册时，只要把 ``download.docker.com`` 地址换成 ``mirrors.ustc.edu.cn/docker-ce`` 即可。
 
 `CentOS <https://docs.docker.com/engine/installation/linux/docker-ce/centos/>`_、
-`Fedora <https://docs.docker.com/engine/installation/linux/docker-ce/fedora/>`_ 等用户在下载 :file:`docker-ce.repo` 文件后，
+`Fedora <https://docs.docker.com/engine/installation/linux/docker-ce/fedora/>`_ 等用户在下载 :file:`docker-ce.repo` 文件后（位于 ``/etc/yum.repos.d/ ``），
 还需要将该文件中的 ``download.docker.com`` 地址换成 ``mirrors.ustc.edu.cn/docker-ce``。
 
 .. tip::
