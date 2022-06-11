@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -164,28 +165,28 @@
            <div itemprop="articleBody">
              
   <section id="msys2">
-<h1>MSYS2 源使用帮助<a class="headerlink" href="#msys2" title="永久链接至标题"></a></h1>
+<h1>MSYS2 源使用帮助<a class="headerlink" href="#msys2" title="Permalink to this heading"></a></h1>
 <section id="id1">
-<h2>地址<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
+<h2>地址<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="https://mirrors.ustc.edu.cn/msys2/">https://mirrors.ustc.edu.cn/msys2/</a></p>
 </section>
 <section id="id2">
-<h2>说明<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
+<h2>说明<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <p>MSYS2镜像</p>
 </section>
 <section id="id3">
-<h2>收录架构<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
+<h2>收录架构<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>MINGW: i686, x86_64</p></li>
 <li><p>MSYS: i686, x86_64</p></li>
 </ul>
 </section>
 <section id="id4">
-<h2>获取基本组件包<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
+<h2>获取基本组件包<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
 <p>访问该镜像目录下的 <code class="docutils literal notranslate"><span class="pre">distrib/</span></code> 目录 (<a class="reference external" href="http://mirrors.ustc.edu.cn/msys2/distrib/x86_64/">x86_64</a> 、 <a class="reference external" href="http://mirrors.ustc.edu.cn/msys2/distrib/i686/">i686</a> )，找到名为 <code class="docutils literal notranslate"><span class="pre">msys2-&lt;架构&gt;-&lt;日期&gt;.exe</span></code> 的文件 （如 <code class="docutils literal notranslate"><span class="pre">msys2-x86_64-20141113.exe</span></code> ），下载安装即可。</p>
 </section>
 <section id="pacman">
-<h2>pacman的配置<a class="headerlink" href="#pacman" title="永久链接至标题"></a></h2>
+<h2>pacman的配置<a class="headerlink" href="#pacman" title="Permalink to this heading"></a></h2>
 <p>编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/pacman.d/mirrorlist.mingw32</span></code> ，在文件开头添加：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Server</span> <span class="o">=</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">msys2</span><span class="o">/</span><span class="n">mingw</span><span class="o">/</span><span class="n">i686</span>
 </pre></div>
@@ -205,7 +206,7 @@
 <p>然后执行 <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span></code> 刷新软件包数据即可。</p>
 </section>
 <section id="id5">
-<h2>相关链接<a class="headerlink" href="#id5" title="永久链接至标题"></a></h2>
+<h2>相关链接<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">MSYS2主页</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://www.msys2.org/">https://www.msys2.org/</a></p>

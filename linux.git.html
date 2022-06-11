@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -159,10 +160,10 @@
            <div itemprop="articleBody">
              
   <section id="linux">
-<h1>Linux 内核源码镜像使用帮助<a class="headerlink" href="#linux" title="永久链接至标题"></a></h1>
+<h1>Linux 内核源码镜像使用帮助<a class="headerlink" href="#linux" title="Permalink to this heading"></a></h1>
 <p>其 Git 仓库的链接为 <code class="docutils literal notranslate"><span class="pre">git://mirrors.ustc.edu.cn/linux.git</span></code> 与 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/linux.git</span></code>。</p>
 <section id="id1">
-<h2>断点续传<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
+<h2>断点续传<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <p>由于 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> 不支持断点续传，所以可以使用支持断点续传的 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code>。一个简单的步骤如下所示，请按自己的需求酌情更改：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">linux</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">linux</span>
 <span class="n">git</span> <span class="n">init</span>

@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -162,13 +163,13 @@
            <div itemprop="articleBody">
              
   <section id="openwrt-lede">
-<h1>OpenWRT/LEDE 源使用帮助<a class="headerlink" href="#openwrt-lede" title="永久链接至标题"></a></h1>
+<h1>OpenWRT/LEDE 源使用帮助<a class="headerlink" href="#openwrt-lede" title="Permalink to this heading"></a></h1>
 <section id="id1">
-<h2>地址<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
+<h2>地址<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="https://mirrors.ustc.edu.cn/openwrt/">https://mirrors.ustc.edu.cn/openwrt/</a></p>
 </section>
 <section id="id2">
-<h2>说明<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
+<h2>说明<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <p>OpenWRT/LEDE 下载站镜像。</p>
 <p>这是对 <a class="reference external" href="https://downloads.openwrt.org/">https://downloads.openwrt.org/</a> 的除了 snapshots 以外的完整镜像，内容包括官方支持的平台的 ROM、SDK 及工具链、软件仓库镜像等。</p>
 <div class="admonition tip">
@@ -181,7 +182,7 @@
 </div>
 </section>
 <section id="id3">
-<h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
+<h2>使用说明<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
 <p>一般情况下，下载来自 <code class="docutils literal notranslate"><span class="pre">downloads.openwrt.org</span></code> 的文件时，将 URL 中的这部分域名替换为 <code class="docutils literal notranslate"><span class="pre">mirrors.ustc.edu.cn/openwrt</span></code> 即可。</p>
 <p>如要使用本镜像作为 OpenWRT/LEDE 系统 opkg 软件仓库，SSH 登录路由器编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/opkg/distfeeds.conf</span></code> 文件，同样按照上面的方法替换域名即可。可以使用如下命令操作：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s/downloads.openwrt.org/mirrors.ustc.edu.cn\/openwrt/g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">opkg</span><span class="o">/</span><span class="n">distfeeds</span><span class="o">.</span><span class="n">conf</span>
@@ -194,7 +195,7 @@
 </div>
 </section>
 <section id="id4">
-<h2>相关链接<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
+<h2>相关链接<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">官方主页</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://openwrt.org/">https://openwrt.org/</a></p>

@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -164,9 +165,9 @@
            <div itemprop="articleBody">
              
   <section id="aosp">
-<h1>AOSP 镜像使用帮助<a class="headerlink" href="#aosp" title="永久链接至标题"></a></h1>
+<h1>AOSP 镜像使用帮助<a class="headerlink" href="#aosp" title="Permalink to this heading"></a></h1>
 <section id="id1">
-<h2>初始同步方法 1<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
+<h2>初始同步方法 1<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <p>第一次同步数据量特别大，如果网络不稳定，中间失败就要从头再来了。所以我们提供了打包的
 AOSP 镜像，为一个 tar 包，大约 100G（单文件
 100G，注意你的磁盘格式要支持）。这样你 就可以通过 HTTP(S)
@@ -179,7 +180,7 @@ AOSP 镜像，为一个 tar 包，大约 100G（单文件
 下载。</p>
 </section>
 <section id="id2">
-<h2>初始同步方法 2<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
+<h2>初始同步方法 2<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <p>按照 Google 官方教程 <a class="reference external" href="https://source.android.com/source/downloading.html">https://source.android.com/source/downloading.html</a></p>
 <p>将 <code class="docutils literal notranslate"><span class="pre">https://android.googlesource.com/platform/manifest</span></code> 替换为
 <code class="docutils literal notranslate"><span class="pre">git://mirrors.ustc.edu.cn/aosp/platform/manifest</span></code> 。</p>
@@ -214,7 +215,7 @@ chmod a+x ~/bin/repo
 </div>
 </section>
 <section id="id3">
-<h2>已有仓库如何改用科大源<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
+<h2>已有仓库如何改用科大源<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
 <p>如果您已经从官方同步了 AOSP 仓库，现在希望使用科大的 AOSP 仓库，请修改
 <code class="docutils literal notranslate"><span class="pre">.repo/manifests.git/config</span></code> ，将</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">android</span><span class="o">.</span><span class="n">googlesource</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">platform</span><span class="o">/</span><span class="n">manifest</span>
@@ -227,7 +228,7 @@ chmod a+x ~/bin/repo
 <p>即可。</p>
 </section>
 <section id="http">
-<h2>通过 HTTP 协议同步<a class="headerlink" href="#http" title="永久链接至标题"></a></h2>
+<h2>通过 HTTP 协议同步<a class="headerlink" href="#http" title="Permalink to this heading"></a></h2>
 <p>如果由于某种原因不能通过 git 协议同步，请修改
 <code class="docutils literal notranslate"><span class="pre">.repo/manifests.git/config</span></code> ，将</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">aosp</span><span class="o">/</span><span class="n">platform</span><span class="o">/</span><span class="n">manifest</span>
@@ -243,7 +244,7 @@ chmod a+x ~/bin/repo
 错误，这是正常现象，可以忽略。</p>
 </section>
 <section id="id4">
-<h2>说明<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
+<h2>说明<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>本镜像每天凌晨 04:30
 同步一次。同步可能需要较长时间，因此使用本镜像时建议避开凌晨 04:30 ～
@@ -254,7 +255,7 @@ chmod a+x ~/bin/repo
 </ol>
 </section>
 <section id="brillo">
-<h2>附录：Brillo<a class="headerlink" href="#brillo" title="永久链接至标题"></a></h2>
+<h2>附录：Brillo<a class="headerlink" href="#brillo" title="Permalink to this heading"></a></h2>
 <p>Brillo 项目的代码托管在 AOSP 项目中，Mirrors 镜像的是整个 AOSP
 项目，所以自然也能从本镜像下载 Brillo 项目代码。</p>
 <p>参考 Brillo 官方文档

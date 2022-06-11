@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -167,31 +168,31 @@
            <div itemprop="articleBody">
              
   <section id="proxmox">
-<h1>Proxmox 源使用帮助<a class="headerlink" href="#proxmox" title="永久链接至标题"></a></h1>
+<h1>Proxmox 源使用帮助<a class="headerlink" href="#proxmox" title="Permalink to this heading"></a></h1>
 <section id="id1">
-<h2>地址<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
+<h2>地址<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="https://mirrors.ustc.edu.cn/proxmox/">https://mirrors.ustc.edu.cn/proxmox/</a></p>
 </section>
 <section id="id2">
-<h2>说明<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
+<h2>说明<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <p>Proxmox 软件源</p>
 </section>
 <section id="id3">
-<h2>收录架构<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
+<h2>收录架构<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
 <p>所有 Proxmox 官方支持的架构</p>
 </section>
 <section id="id4">
-<h2>收录版本<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
+<h2>收录版本<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
 <p>所有 Proxmox 官方支持的版本</p>
 </section>
 <section id="id5">
-<h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题"></a></h2>
+<h2>使用说明<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>操作前请做好相应备份</p>
 </div>
 <section id="debian-proxmox">
-<h3>Debian，Proxmox<a class="headerlink" href="#debian-proxmox" title="永久链接至标题"></a></h3>
+<h3>Debian，Proxmox<a class="headerlink" href="#debian-proxmox" title="Permalink to this heading"></a></h3>
 <p>一般情况下，需要同时修改基础系统（Debian）的源文件 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 和 Proxmox 的源文件。</p>
 <p>修改基础系统（Debian）的源文件，可以使用如下命令：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s|^deb http://ftp.debian.org|deb https://mirrors.ustc.edu.cn|g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span>
@@ -207,7 +208,7 @@
 <p>更改完 <code class="file docutils literal notranslate"><span class="pre">sources.list</span></code> 文件后请运行 <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">update</span></code> 更新索引以生效。</p>
 </section>
 <section id="ct-templates">
-<h3>CT Templates<a class="headerlink" href="#ct-templates" title="永久链接至标题"></a></h3>
+<h3>CT Templates<a class="headerlink" href="#ct-templates" title="Permalink to this heading"></a></h3>
 <p>另外，如果你需要使用 Proxmox 网页端下载 CT Templates，可以替换 CT Templates 的源为 <code class="docutils literal notranslate"><span class="pre">http://mirrors.ustc.edu.cn</span></code>。</p>
 <p>具体方法：将 <code class="file docutils literal notranslate"><span class="pre">/usr/share/perl5/PVE/APLInfo.pm</span></code> 文件中默认的源地址 <code class="docutils literal notranslate"><span class="pre">http://download.proxmox.com</span></code>
 替换为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/proxmox</span></code> 即可。</p>

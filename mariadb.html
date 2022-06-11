@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -167,23 +168,23 @@
            <div itemprop="articleBody">
              
   <section id="mariadb">
-<h1>MariaDB 源使用帮助<a class="headerlink" href="#mariadb" title="永久链接至标题"></a></h1>
+<h1>MariaDB 源使用帮助<a class="headerlink" href="#mariadb" title="Permalink to this heading"></a></h1>
 <section id="id1">
-<h2>地址<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
+<h2>地址<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="https://mirrors.ustc.edu.cn/mariadb/">https://mirrors.ustc.edu.cn/mariadb/</a></p>
 </section>
 <section id="id2">
-<h2>收录架构<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
+<h2>收录架构<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <p>官方支持的所有架构</p>
 </section>
 <section id="id3">
-<h2>收录版本<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
+<h2>收录版本<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
 <p>官方支持的所有版本</p>
 </section>
 <section id="id4">
-<h2>使用说明<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
+<h2>使用说明<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
 <section id="fedora-centos-red-hat">
-<h3>Fedora, CentOS, Red Hat<a class="headerlink" href="#fedora-centos-red-hat" title="永久链接至标题"></a></h3>
+<h3>Fedora, CentOS, Red Hat<a class="headerlink" href="#fedora-centos-red-hat" title="Permalink to this heading"></a></h3>
 <p>使用 <a class="reference external" href="https://downloads.mariadb.org/mariadb/repositories">MariaDB Repository Configuration Tool</a> 生成一份配置，保存为 <code class="docutils literal notranslate"><span class="pre">/etc/yum.repos.d/mariadb.repo</span></code></p>
 <p>然后执行以下命令替换源地址：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s#yum\.mariadb\.org#mirrors.ustc.edu.cn/mariadb/yum#&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">mariadb</span>
@@ -197,7 +198,7 @@
 </div>
 </section>
 <section id="mint-ubuntu-debian">
-<h3>Mint, Ubuntu, Debian<a class="headerlink" href="#mint-ubuntu-debian" title="永久链接至标题"></a></h3>
+<h3>Mint, Ubuntu, Debian<a class="headerlink" href="#mint-ubuntu-debian" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>使用 <a class="reference external" href="https://downloads.mariadb.org/mariadb/repositories">MariaDB Repository Configuration Tool</a> 生成要执行的命令（Mirror 选择 Babylon Network - NL）</p></li>
 <li><p>将 <code class="docutils literal notranslate"><span class="pre">add-apt-repository</span></code> 命令中的 “<a class="reference external" href="http://nl.mirror.babylon.network">http://nl.mirror.babylon.network</a>” 替换为 “<a class="reference external" href="https://mirrors.ustc.edu.cn">https://mirrors.ustc.edu.cn</a>”</p></li>
@@ -206,7 +207,7 @@
 </section>
 </section>
 <section id="id6">
-<h2>相关链接<a class="headerlink" href="#id6" title="永久链接至标题"></a></h2>
+<h2>相关链接<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">MariaDB 官网</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://mariadb.org/">https://mariadb.org/</a></p>

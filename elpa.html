@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -164,13 +165,13 @@
            <div itemprop="articleBody">
              
   <section id="emacs-elpa">
-<h1>Emacs ELPA 源使用帮助<a class="headerlink" href="#emacs-elpa" title="永久链接至标题"></a></h1>
+<h1>Emacs ELPA 源使用帮助<a class="headerlink" href="#emacs-elpa" title="Permalink to this heading"></a></h1>
 <section id="id1">
-<h2>地址<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
+<h2>地址<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="https://mirrors.ustc.edu.cn/elpa/">https://mirrors.ustc.edu.cn/elpa/</a></p>
 </section>
 <section id="id2">
-<h2>说明<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
+<h2>说明<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <p>Emacs ELPA 源。包括以下 ELPA 仓库：</p>
 <ul class="simple">
 <li><p>GNU ELPA 和 NonGNU ELPA</p></li>
@@ -178,7 +179,7 @@
 </ul>
 </section>
 <section id="id3">
-<h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
+<h2>使用说明<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
 <p>在 Emacs 配置文件中（任何用到 <code class="docutils literal notranslate"><span class="pre">package</span></code> 特性的代码之前）添加如下内容：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">setq</span> <span class="n">package</span><span class="o">-</span><span class="n">archives</span> <span class="s1">&#39;((&quot;gnu&quot; . &quot;http://mirrors.ustc.edu.cn/elpa/gnu/&quot;)</span>
                          <span class="p">(</span><span class="s2">&quot;melpa&quot;</span> <span class="o">.</span> <span class="s2">&quot;http://mirrors.ustc.edu.cn/elpa/melpa/&quot;</span><span class="p">)</span>
@@ -188,7 +189,7 @@
 <p>或使用 Customize 功能修改 <code class="docutils literal notranslate"><span class="pre">Package</span> <span class="pre">Archives</span></code> 选项为上述内容。</p>
 </section>
 <section id="spacemacs">
-<h2>Spacemacs 使用说明<a class="headerlink" href="#spacemacs" title="永久链接至标题"></a></h2>
+<h2>Spacemacs 使用说明<a class="headerlink" href="#spacemacs" title="Permalink to this heading"></a></h2>
 <p>添加下面的代码到 <code class="docutils literal notranslate"><span class="pre">.spacemacs</span></code> 的 <code class="docutils literal notranslate"><span class="pre">dotspacemacs/user-init</span></code> 中：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">setq</span> <span class="n">configuration</span><span class="o">-</span><span class="n">layer</span><span class="o">--</span><span class="n">elpa</span><span class="o">-</span><span class="n">archives</span>
       <span class="s1">&#39;((&quot;melpa-cn&quot; . &quot;http://mirrors.ustc.edu.cn/elpa/melpa/&quot;)</span>
@@ -199,11 +200,11 @@
 <p>develop 分支应使用 <code class="docutils literal notranslate"><span class="pre">configuration-layer-elpa-archives</span></code> 代替上面代码中的 <code class="docutils literal notranslate"><span class="pre">configuration-layer--elpa-archives</span></code> （ <code class="docutils literal notranslate"><span class="pre">--</span></code> 换成 <code class="docutils literal notranslate"><span class="pre">-</span></code> ）。</p>
 </section>
 <section id="id4">
-<h2>注意事项<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
+<h2>注意事项<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
 <p>由于 Emacs 的 BUG，URL 末尾的 <code class="docutils literal notranslate"><span class="pre">/</span></code> 不可略去，否则无法正常工作。</p>
 </section>
 <section id="id5">
-<h2>相关链接<a class="headerlink" href="#id5" title="永久链接至标题"></a></h2>
+<h2>相关链接<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Emacs 官方网站</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a></p>
