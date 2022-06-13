@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XBMC/Kodi 镜像使用帮助 &mdash; USTC Mirror Help  文档</title>
+  <title>Ceph 镜像使用帮助 &mdash; USTC Mirror Help  文档</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="科大源同步方法与注意事项" href="rsync-guide.html" />
-    <link rel="prev" title="ROS 源使用帮助" href="ros.html" /> 
+    <link rel="next" title="CPAN 镜像使用帮助" href="CPAN.html" />
+    <link rel="prev" title="Homebrew 源使用帮助" href="brew.git.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -103,7 +103,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ceph.html">Ceph 镜像使用帮助</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ceph 镜像使用帮助</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">使用说明</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="CPAN.html">CPAN 镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CRAN.html">CRAN 镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
@@ -123,23 +128,7 @@
 <li class="toctree-l1"><a class="reference internal" href="nix-channels.html">Nix Channels 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="raspberrypi.html">Raspberrypi 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ros.html">ROS 源使用帮助</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">XBMC/Kodi 镜像使用帮助</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">镜像目录结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#kodi">Kodi 简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">使用说明</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Kodi 安装</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#windowsandroid">Windows、Android 平台</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#mac-osx">Mac OSX 平台</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ios">iOS 平台</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">插件库使用</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">编译依赖项目下载</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">相关链接</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="xbmc.html">XBMC/Kodi 镜像使用帮助</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="rsync-guide.html">科大源同步方法与注意事项</a></li>
@@ -163,9 +152,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>XBMC/Kodi 镜像使用帮助</li>
+      <li>Ceph 镜像使用帮助</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/xbmc.rst" class="fa fa-github"> 在 GitHub 上修改</a>
+              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/ceph.rst" class="fa fa-github"> 在 GitHub 上修改</a>
       </li>
   </ul>
   <hr/>
@@ -173,88 +162,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="xbmc-kodi">
-<h1>XBMC/Kodi 镜像使用帮助<a class="headerlink" href="#xbmc-kodi" title="Permalink to this heading"></a></h1>
+  <section id="ceph">
+<h1>Ceph 镜像使用帮助<a class="headerlink" href="#ceph" title="Permalink to this heading"></a></h1>
 <section id="id1">
-<h2>镜像目录结构<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
-<div class="line-block">
-<div class="line"><code class="docutils literal notranslate"><span class="pre">addons</span></code> 官方插件库</div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">apt</span></code> iOS 版 Kodi 安装源</div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">build-deps</span></code> 编译 Kodi 依赖的其他开源项目代码</div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">nightlies</span></code> 与 Kodi 开发主分支同步编译的每日开发版安装包下载目录</div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">releases</span></code> Kodi 稳定版安装包下载目录（含 Beta 版和 RC 版）</div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">snapshots</span></code> Kodi 每月发布的 Alpha 版安装包下载目录</div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">tools</span></code> Kodi 相关的工具软件（Kora 遥控软件）</div>
-</div>
-</section>
-<section id="kodi">
-<h2>Kodi 简介<a class="headerlink" href="#kodi" title="Permalink to this heading"></a></h2>
-<p>Kodi（前身是
-XBMC）媒体中心，是一个屡获殊荣的自由和开源的跨平台媒体播放器和用于
-HTPC（Home theater PC，家庭影院
-PC）的数字媒体娱乐中心软件。它使用遥控器作为主输入设备，针对 3
-米左右观看距离而设计的用户界面，成为适应客厅使用的媒体播放器。它的图形用户界面让用户轻按遥控，就能方便地从硬盘、光盘、局域网和互联网浏览和观看视频、图片，收听广播和音乐。Kodi
-项目由非营利的 XBMC
-基金会管理，并由分布在世界各地的志愿者参与开发。自从它于 2003
-年诞生以来，超过 500 名软件开发人员对 Kodi 作出贡献，并有 60
-名核心开发人员。另外，还有 200
-多名翻译人员在帮助它扩大影响范围，使它支持多达 72 种语言。</p>
-<p>Kodi（当时叫“Xbox Media Center”）最初是作为第一代 Xbox
-游戏机（现在已不支持）的一个媒体中心应用而开发的，而现在已经正式以原生应用运行于
-Android、Linux、Mac OS X、iOS 和 Windows
-操作系统，并支持主流的处理器架构。</p>
+<h2>地址<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://mirrors.ustc.edu.cn/ceph/">https://mirrors.ustc.edu.cn/ceph/</a></p>
 </section>
 <section id="id2">
-<h2>使用说明<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<h2>说明<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>Ceph 是开源的分布式存储系统。本镜像为 download.ceph.com 的镜像，包含 ceph 的源代码，以及预编译的软件包。</p>
+</section>
 <section id="id3">
-<h3>Kodi 安装<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
-<section id="windowsandroid">
-<h4>Windows、Android 平台<a class="headerlink" href="#windowsandroid" title="Permalink to this heading"></a></h4>
-<p>从镜像站相应目录下载你所需要版本的安装包安装即可。</p>
-</section>
-<section id="mac-osx">
-<h4>Mac OSX 平台<a class="headerlink" href="#mac-osx" title="Permalink to this heading"></a></h4>
-<p>从镜像站相应目录下载 <code class="docutils literal notranslate"><span class="pre">.dmg</span></code> 磁盘镜像文件，在 OSX
-系统下装载此镜像文件后，可用鼠标将 Kodi 应用拖到“应用”文件夹即完成安装。</p>
-</section>
-<section id="ios">
-<h4>iOS 平台<a class="headerlink" href="#ios" title="Permalink to this heading"></a></h4>
-<p>需要先越狱，然后通过 Cydia 安装。</p>
-<ul class="simple">
-<li><p>第一步：在已越狱的 iPhone 手机或 iPad 主屏幕上点击 Cydia 图标</p></li>
-<li><p>第二步：选择“软件源 → 编辑 → 添加”</p></li>
-<li><p>第三步：在弹出的录入框输入
-<code class="docutils literal notranslate"><span class="pre">http://mirrors.ustc.edu.cn/xbmc/apt/ios/</span></code></p></li>
-<li><p>第四步：点击刚增加的 teamKodi 源</p></li>
-<li><p>第五步：选择安装 Kodi-iOS</p></li>
-</ul>
-</section>
-</section>
-<section id="id4">
-<h3>插件库使用<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
-<p>可以使用此镜像服务器来访问 Kodi
-官方插件库，避免因网络访问的问题而无法正常安装使用插件。需要编辑 Kodi
-安装目录中的 addons/repository.xbmc.org/addon.xml 文件。将其中所有
-<code class="docutils literal notranslate"><span class="pre">http://mirrors.kodi.tv/</span></code> 替换为
-<code class="docutils literal notranslate"><span class="pre">http://mirrors.ustc.edu.cn/xbmc/</span></code>。</p>
-</section>
-<section id="id5">
-<h3>编译依赖项目下载<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
-<p>开发人员或者想自行从源代码编译 Kodi
-的，可以使用此镜像服务器下载依赖项目。方法是在运行 DownloadBuildDeps.bat
-批处理文件前先在命令行执行
-<code class="docutils literal notranslate"><span class="pre">SET</span> <span class="pre">KODI_MIRROR=http://mirrors.ustc.edu.cn/xbmc/</span></code></p>
-</section>
-</section>
-<section id="id6">
-<h2>相关链接<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
-<p>Kodi 链接</p>
-<ul class="simple">
-<li><p>Kodi 主页: <a class="reference external" href="http://kodi.tv/">http://kodi.tv/</a></p></li>
-<li><p>文档: <a class="reference external" href="http://kodi.wiki/">http://kodi.wiki/</a></p></li>
-<li><p>Bug Tracker: <a class="reference external" href="http://trac.kodi.tv/">http://trac.kodi.tv/</a></p></li>
-<li><p>源代码: <a class="reference external" href="https://github.com/xbmc/xbmc">https://github.com/xbmc/xbmc</a></p></li>
-</ul>
+<h2>使用说明<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<p>预编译软件包：</p>
+<p>参考 ceph 官方使用帮助 <a class="reference external" href="https://docs.ceph.com/en/latest/install/get-packages/">https://docs.ceph.com/en/latest/install/get-packages/</a>，
+将所有 <code class="docutils literal notranslate"><span class="pre">download.ceph.com</span></code> 替换为 <code class="docutils literal notranslate"><span class="pre">mirrors.ustc.edu.cn/ceph</span></code> 即可。</p>
+<p>源代码：</p>
+<p>Ceph 打包的源代码位于 <a class="reference external" href="https://mirrors.ustc.edu.cn/ceph/tarballs/">https://mirrors.ustc.edu.cn/ceph/tarballs/</a> 目录中。</p>
 </section>
 </section>
 
@@ -262,8 +186,8 @@ Android、Linux、Mac OS X、iOS 和 Windows
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ros.html" class="btn btn-neutral float-left" title="ROS 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="rsync-guide.html" class="btn btn-neutral float-right" title="科大源同步方法与注意事项" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="brew.git.html" class="btn btn-neutral float-left" title="Homebrew 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="CPAN.html" class="btn btn-neutral float-right" title="CPAN 镜像使用帮助" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
