@@ -24,18 +24,18 @@ USTC Mirror Help
    debiancn
    deb-multimedia
    fedora
-   freebsd
-   freebsd-pkg
+   freebsd
+   freebsd-pkg
    freebsd-ports
-   rpmfusion
+   rpmfusion
    gentoo
    gentoo-portage
    kali
    linuxmint
    mageia
-   manjaro
+   manjaro
    msys2
-   opensuse
+   opensuse
    openwrt
    packman
    proxmox
