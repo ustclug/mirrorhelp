@@ -81,6 +81,7 @@ USTC Mirror Help
 
    anaconda
    brew.git
+   ceph
    CPAN
    CRAN
    docker-ce
