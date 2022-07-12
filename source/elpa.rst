@@ -52,4 +52,3 @@ develop 分支应使用 ``configuration-layer-elpa-archives`` 代替上面代码
 
 :Emacs 官方网站: https://www.gnu.org/software/emacs/
 :Emacs Packages 文档: https://www.gnu.org/software/emacs/manual/html_node/emacs/Packages.html
-:Emacs-China ELPA 源: https://elpa.emacs-china.org
