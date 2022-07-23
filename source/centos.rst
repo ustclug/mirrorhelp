@@ -15,7 +15,7 @@ CentOS 软件源
 收录架构
 ========
 
-x86_64, i386
+x86_64, aarch64, ppc64le
 
 收录版本
 ========
@@ -23,10 +23,9 @@ x86_64, i386
 7, 8 Stream
 
 .. warning::
-    CentOS 8（非 Stream 版本）已被官方移除出该仓库。如有需要，请使用其他镜像站提供的 "centos-vault" 镜像，
-    或切换至其他 RHEL 下游发行版。
+    CentOS 8（非 Stream 版本）已被官方移除出该仓库。如有需要，请使用 `centos-vault <https://mirrors.ustc.edu.cn/centos-vault/>`_ 镜像。
 
-    CentOS 9 Stream 及以后的版本的镜像位于 https://mirrors.ustc.edu.cn/centos-stream/。
+    CentOS 9 Stream 及以后的版本的镜像位于 `centos-stream <https://mirrors.ustc.edu.cn/centos-stream/>`_。
 
 使用说明
 ========
