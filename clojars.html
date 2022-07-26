@@ -165,13 +165,13 @@
            <div itemprop="articleBody">
              
   <section id="clojars">
-<h1>Clojars 源使用帮助<a class="headerlink" href="#clojars" title="Permalink to this heading"></a></h1>
+<h1>Clojars 源使用帮助<a class="headerlink" href="#clojars" title="此标题的永久链接"></a></h1>
 <section id="id1">
-<h2>地址<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<h2>地址<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
 <p><a class="reference external" href="https://mirrors.ustc.edu.cn/clojars/">https://mirrors.ustc.edu.cn/clojars/</a></p>
 </section>
 <section id="id2">
-<h2>使用说明<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<h2>使用说明<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
 <p>以 leiningen 为例，在项目根目录的 <code class="docutils literal notranslate"><span class="pre">project.clj</span></code> 中自己添加关键字 <code class="docutils literal notranslate"><span class="pre">:mirrors</span></code></p>
 <p>然后以如下 map 格式添加源:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">mirrors</span> <span class="p">{</span><span class="s2">&quot;clojars&quot;</span> <span class="p">{:</span><span class="n">name</span> <span class="s2">&quot;ustc&quot;</span>
@@ -180,7 +180,7 @@
 </div>
 </section>
 <section id="id3">
-<h2>极简示例<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<h2>极简示例<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">defproject</span> <span class="n">myapp</span> <span class="s2">&quot;1.0.0&quot;</span>
    <span class="p">:</span><span class="n">description</span> <span class="s2">&quot;My Application&quot;</span>
    <span class="p">:</span><span class="n">dependencies</span> <span class="p">[[</span><span class="n">enlive</span> <span class="s2">&quot;1.0.1&quot;</span><span class="p">]</span>
@@ -194,7 +194,7 @@
 <p>配置好后，在项目的根目录下运行 <code class="docutils literal notranslate"><span class="pre">lein</span> <span class="pre">run</span></code> ， 从输出中可以看到一些包是从 ustc 下载的。</p>
 </section>
 <section id="id4">
-<h2>注意事项<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<h2>注意事项<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
 <p>此镜像源替换的只是 clojars 这个仓库，一些 maven 的包依然会从 central maven 仓库下载。</p>
 <p>上述方法只针对单个项目生效。如果要针对所有项目进行全局配置，需修改 leiningen 的 <code class="docutils literal notranslate"><span class="pre">profiles</span></code> 。</p>
 <p>在 <code class="docutils literal notranslate"><span class="pre">~/.lein/projfiles.clj</span></code> 中添加:</p>
@@ -206,7 +206,7 @@
 <p>leiningen 会提示说 <code class="docutils literal notranslate"><span class="pre">:repositories</span></code> 写在了 <code class="docutils literal notranslate"><span class="pre">:user</span></code> 中，不过不影响使用。</p>
 </section>
 <section id="id5">
-<h2>相关链接<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<h2>相关链接<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">leiningen 配置示例</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://github.com/technomancy/leiningen/blob/master/sample.project.clj">https://github.com/technomancy/leiningen/blob/master/sample.project.clj</a></p>

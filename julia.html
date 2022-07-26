@@ -174,18 +174,18 @@
            <div itemprop="articleBody">
              
   <section id="julia">
-<h1>Julia 镜像使用帮助<a class="headerlink" href="#julia" title="Permalink to this heading"></a></h1>
+<h1>Julia 镜像使用帮助<a class="headerlink" href="#julia" title="此标题的永久链接"></a></h1>
 <section id="id1">
-<h2>地址<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<h2>地址<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
 <p><a class="reference external" href="https://mirrors.ustc.edu.cn/julia/">https://mirrors.ustc.edu.cn/julia/</a></p>
 </section>
 <section id="id2">
-<h2>说明<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<h2>说明<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
 <p>此镜像包括 Julia 的官方包注册表 <a class="reference external" href="https://github.com/JuliaRegistries/General">General</a> 以及装包时所涉及的源代码和二进制依赖。</p>
 <p>关于 Julia 二进制程序的镜像，请在 <a class="reference external" href="https://mirrors.ustc.edu.cn/julia-releases/">Julia Releases</a> 下载。</p>
 <p>注：本镜像的使用需要 Julia <code class="code highlight sh bash docutils literal highlight-bash">v1.4.0</code> 或更新的版本。</p>
 <section id="id3">
-<h3>使用说明<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<h3>使用说明<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h3>
 <p>只需要设置环境变量 <code class="code highlight sh bash docutils literal highlight-bash">JULIA_PKG_SERVER</code> 即可切换镜像。若成功切换镜像，则能通过 <code class="code highlight sh bash docutils literal highlight-bash">versioninfo<span class="o">()</span></code> 查询到相关信息，例如：</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>julia&gt; versioninfo()
 Julia Version 1.4.1
@@ -203,7 +203,7 @@ JULIA_PKG_SERVER = https://mirrors.ustc.edu.cn/julia
 <p>若不设置该环境变量则默认使用官方服务器 <code class="code highlight sh bash docutils literal highlight-bash">https://pkg.julialang.org</code> 作为上游。</p>
 </section>
 <section id="id4">
-<h3>临时使用<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<h3>临时使用<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h3>
 <p>不同系统和命令行下设置环境变量的方式各不相同，在命令行下可以通过以下方式来临时修改环境变量</p>
 <ul class="simple">
 <li><p>Linux Bash: <code class="code highlight sh bash docutils literal highlight-bash"><span class="nb">export</span> <span class="nv">JULIA_PKG_SERVER</span><span class="o">=</span>https://mirrors.ustc.edu.cn/julia</code></p></li>
@@ -217,7 +217,7 @@ JuliaZH.mirrors # 查询记录的上游信息
 </div>
 </section>
 <section id="id5">
-<h3>永久使用<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<h3>永久使用<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h3>
 <p>不同系统和命令行下永久设定环境变量的方式也不相同，例如 Linux Bash 下可以通过修改 <code class="code highlight sh bash docutils literal highlight-bash">~/.bashrc</code> 文件实现该目的：</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span># ~/.bashrc
 export JULIA_PKG_SERVER=https://mirrors.ustc.edu.cn/julia
@@ -247,9 +247,9 @@ julia&gt; JuliaZH.generate_startup(&quot;USTC&quot;)
 </section>
 </section>
 <section id="id6">
-<h2>常见问题<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<h2>常见问题<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h2>
 <section id="id7">
-<h3>为什么有些包的下载还是很慢？<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<h3>为什么有些包的下载还是很慢？<a class="headerlink" href="#id7" title="此标题的永久链接"></a></h3>
 <p>有两类数据不会被镜像：</p>
 <ul class="simple">
 <li><p>在 <code class="code highlight sh bash docutils literal highlight-bash">deps/build.jl</code> 文件中硬编码的下载地址，例如 <a class="reference external" href="https://github.com/jheinen/GR.jl/blob/70f025d5cb439d036409f1985107cb5e1615097f/deps/build.jl#L116">GR</a>.</p></li>
@@ -258,7 +258,7 @@ julia&gt; JuliaZH.generate_startup(&quot;USTC&quot;)
 <p>在安装包含这两类数据的包时，其数据依然是从原始地址进行下载，因此若网络不稳定则可能会在 <cite>build</cite> 阶段报错。</p>
 </section>
 <section id="id8">
-<h3>为什么注册表还是从原地址下载？<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<h3>为什么注册表还是从原地址下载？<a class="headerlink" href="#id8" title="此标题的永久链接"></a></h3>
 <p>Julia <code class="code highlight sh bash docutils literal highlight-bash">v1.4.0</code> 之前的版本采用的是 <code class="code highlight sh bash docutils literal highlight-bash">git clone</code> 的方式拉取注册表。为了保持兼容性，如果现有的注册表是一个完整的 git 仓库的话，
 那么即使设置了 PkgServer 作为上游镜像也依然会通过 <code class="code highlight sh bash docutils literal highlight-bash">git</code> 来进行更新，换句话说，不会通过镜像站来下载注册表数据。</p>
 <p>以默认注册表 <code class="code highlight sh bash docutils literal highlight-bash">General</code> 为例，只需要手动将其重置到镜像站即可：</p>
@@ -268,7 +268,7 @@ julia&gt; JuliaZH.generate_startup(&quot;USTC&quot;)
 </ol>
 </section>
 <section id="id9">
-<h3>为什么有些包还是从原地址下载？<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<h3>为什么有些包还是从原地址下载？<a class="headerlink" href="#id9" title="此标题的永久链接"></a></h3>
 <p>镜像站只镜像注册表中记录的包，因此如果某些包是通过指定 URL 的方式来安装的话，那么该包的更新不会从镜像站进行下载。
 这常见于那些还未注册的包及其版本，例如：</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>]add Flux#master
@@ -278,7 +278,7 @@ Pkg.add(PackageSpec(url=&quot;https://github.com/FluxML/Flux.jl.git&quot;))
 </div>
 </section>
 <section id="conda-jl">
-<h3>加快 Conda.jl 相关操作的速度<a class="headerlink" href="#conda-jl" title="Permalink to this heading"></a></h3>
+<h3>加快 Conda.jl 相关操作的速度<a class="headerlink" href="#conda-jl" title="此标题的永久链接"></a></h3>
 <p>这里简单介绍一下其使用， 具体的细节可以参考 <a class="reference external" href="https://github.com/JuliaPy/Conda.jl">Conda.jl</a> 和
 <a class="reference external" href="https://github.com/JuliaPy/PyCall.jl">PyCall.jl</a> 的文档。 <code class="code highlight sh bash docutils literal highlight-bash">Conda.jl</code> 的加速分为两部分：</p>
 <ul class="simple">
