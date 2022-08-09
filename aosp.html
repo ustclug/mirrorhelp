@@ -43,8 +43,8 @@
 <li class="toctree-l1"><a class="reference internal" href="alpine.html">Alpine Linux 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="anthon.html">AOSC OS 源使用帮助</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">AOSP 镜像使用帮助</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">初始同步方法 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">初始同步方法 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">初始同步方法 1（推荐）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">初始同步方法 2（不推荐）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">已有仓库如何改用科大源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#http">通过 HTTP 协议同步</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">说明</a></li>
@@ -168,7 +168,7 @@
   <section id="aosp">
 <h1>AOSP 镜像使用帮助<a class="headerlink" href="#aosp" title="此标题的永久链接"></a></h1>
 <section id="id1">
-<h2>初始同步方法 1<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
+<h2>初始同步方法 1（推荐）<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
 <p>第一次同步数据量特别大，如果网络不稳定，中间失败就要从头再来了。所以我们提供了打包的
 AOSP 镜像，为一个 tar 包，大约 200G（单文件
 200G，注意你的磁盘格式要支持）。这样你 就可以通过 HTTP(S)
@@ -181,7 +181,11 @@ AOSP 镜像，为一个 tar 包，大约 200G（单文件
 下载。</p>
 </section>
 <section id="id2">
-<h2>初始同步方法 2<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<h2>初始同步方法 2（不推荐）<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>由于 AOSP 镜像造成的 IO 负载很高，不建议使用以下方式初次同步。</p>
+</div>
 <p>按照 Google 官方教程 <a class="reference external" href="https://source.android.com/source/downloading.html">https://source.android.com/source/downloading.html</a></p>
 <p>将 <code class="docutils literal notranslate"><span class="pre">https://android.googlesource.com/platform/manifest</span></code> 替换为
 <code class="docutils literal notranslate"><span class="pre">git://mirrors.ustc.edu.cn/aosp/platform/manifest</span></code> 。</p>
