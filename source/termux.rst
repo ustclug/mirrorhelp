@@ -20,7 +20,7 @@ Termux APT 源镜像
 使用说明
 ==============
 
-Termux 目前（2021 年 6 月）的官方源为 packages.termux.org，我们推荐先更新 ``termux-tools`` 软件包，然后直接使用 ``termux-change-repo`` 命令选择 Mirrors by USTC 即可。
+Termux 目前（2022 年 8 月）的官方源为 packages.termux.dev，我们推荐先更新 ``termux-tools`` 软件包，然后直接使用 ``termux-change-repo`` 先选择 Single mirror，再选择 mirrors.ustc.edu.cn 即可。
 
 如果想要手动更换 Termux APT 源的话，可以编辑 :file:`/data/data/com.termux/files/usr/etc/apt/sources.list` 为如下内容
 
@@ -43,6 +43,6 @@ Termux 目前（2021 年 6 月）的官方源为 packages.termux.org，我们推
 相关链接
 ========
 
-:Termux 官网: https://termux.com/
+:Termux 官网: https://termux.dev/
 :GitHub: https://github.com/termux/termux-app
 :F-Droid: https://f-droid.org/zh_Hant/packages/com.termux
