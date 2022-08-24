@@ -43,7 +43,15 @@ Linux
     sudo service docker restart
 
 对于使用 systemd 的系统（Ubuntu 16.04+、Debian 8+、CentOS 7）， 在配置文件 ``/etc/docker/daemon.json`` 中加入：
-镜像yuan
+
+::
+
+    {
+      "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn/"]
+    }
+
+重新启动 dockerd：
+
 ::
 
   sudo systemctl restart docker
