@@ -22,6 +22,8 @@ Docker Hub 镜像缓存
 
     2020/08/21 更新：考虑到 gcr 镜像重定向至阿里云提供的公开镜像服务可能存在的安全隐患（见 `mirrorhelp#158 <https://github.com/ustclug/mirrorhelp/issues/158>`_），目前校外对 gcr 镜像的访问返回 403。
 
+    2022/08/24 更新：由于获悉阿里云的 Docker Hub 镜像不再更新，目前校外对 dockerhub 镜像的访问返回 403。用户需要修改配置，选择其他国内的 Docker Hub 镜像源。
+
 .. attention::
     2020 年 11 月后，Docker Hub 将新增 `访问速率限制 <https://docs.docker.com/docker-hub/download-rate-limit/>`_，这可能导致在校内使用 Docker Hub 镜像缓存时出现间歇性的问题。
 
@@ -41,15 +43,7 @@ Linux
     sudo service docker restart
 
 对于使用 systemd 的系统（Ubuntu 16.04+、Debian 8+、CentOS 7）， 在配置文件 ``/etc/docker/daemon.json`` 中加入：
-
-::
-
-    {
-      "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn/"]
-    }
-
-重新启动 dockerd：
-
+镜像yuan
 ::
 
   sudo systemctl restart docker
