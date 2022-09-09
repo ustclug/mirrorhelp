@@ -17,6 +17,11 @@ GHCup 类似 Rustup，可以用于安装 Haskell 工具链。建议搭配 Hackag
 
 参考如下步骤可安装完整的 Haskell 工具链。
 
+.. note::
+
+   以下命令会安装并配置 GHCup 0.0.6。
+   可查看 https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ 目录的内容，并选择需要安装的 GHCup 版本的 yaml 文件替换以下命令中的 URL。
+
 **第一步（可选）** ：使用科大源安装 GHCup 本体。如已经安装 GHCup，可跳到下一步。
 
 ::
