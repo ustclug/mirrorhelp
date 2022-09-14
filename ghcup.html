@@ -178,21 +178,21 @@
 <p>参考如下步骤可安装完整的 Haskell 工具链。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>以下命令会安装并配置 GHCup 0.0.6。
+<p>以下命令会安装并配置 GHCup 0.0.7 版本的元数据。
 可查看 <a class="reference external" href="https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/">https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/</a> 目录的内容，并选择需要安装的 GHCup 版本的 yaml 文件替换以下命令中的 URL。</p>
 </div>
 <p><strong>第一步（可选）</strong> ：使用科大源安装 GHCup 本体。如已经安装 GHCup，可跳到下一步。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Linux, FreeBSD, macOS 用户：在终端中运行如下命令
-curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell | BOOTSTRAP_HASKELL_YAML=https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.6.yaml sh
+curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell | BOOTSTRAP_HASKELL_YAML=https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml sh
 
 # Windows 用户：以非管理员身份在 PowerShell 中运行如下命令
-$env:BOOTSTRAP_HASKELL_YAML = &#39;https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.6.yaml&#39;
+$env:BOOTSTRAP_HASKELL_YAML = &#39;https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml&#39;
 Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;Invoke-Command -ScriptBlock ([ScriptBlock]::Create((Invoke-WebRequest https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -ArgumentList $true
 </pre></div>
 </div>
 <p><strong>第二步</strong> ：配置 GHCup 使用科大源。编辑 <code class="docutils literal notranslate"><span class="pre">~/.ghcup/config.yaml</span></code> 增加如下配置：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url</span><span class="o">-</span><span class="n">source</span><span class="p">:</span>
-    <span class="n">OwnSource</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ghcup</span><span class="o">/</span><span class="n">ghcup</span><span class="o">-</span><span class="n">metadata</span><span class="o">/</span><span class="n">ghcup</span><span class="o">-</span><span class="mf">0.0.6</span><span class="o">.</span><span class="n">yaml</span>
+    <span class="n">OwnSource</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ghcup</span><span class="o">/</span><span class="n">ghcup</span><span class="o">-</span><span class="n">metadata</span><span class="o">/</span><span class="n">ghcup</span><span class="o">-</span><span class="mf">0.0.7</span><span class="o">.</span><span class="n">yaml</span>
 </pre></div>
 </div>
 <p><strong>第三步（可选）</strong> ：配置 Cabal 和 Stack 使用科大源，请参考文档 <a class="reference internal" href="hackage.html"><span class="doc">Hackage 源使用帮助</span></a> 和 <a class="reference internal" href="stackage.html"><span class="doc">Stackage 源使用帮助</span></a> 。</p>
