@@ -66,6 +66,7 @@ USTC Mirror Help
    julia
    node
    nodesource
+   npm
    pypi
    rubygems
    crates.io-index
