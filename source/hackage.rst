@@ -12,12 +12,12 @@ https://mirrors.ustc.edu.cn/hackage/
 
 Hackage 镜像
 
-stack使用说明
-=============
+Stack 使用说明
+===============
 
-编辑 ``~/.stack/config.yaml``, 增加下列参数
+编辑 ``~/.stack/config.yaml``，增加下列参数
 
->=v2.1.1:
+>= v2.1.1:
 
 ::
 
@@ -39,7 +39,7 @@ stack使用说明
       # ignore expiration date, see https://github.com/commercialhaskell/stack/pull/4614
       ignore-expiry: true
 
-<v2.1.1:
+< v2.1.1:
 
 ::
 
@@ -49,8 +49,8 @@ stack使用说明
         http: https://mirrors.ustc.edu.cn/hackage/01-index.tar.gz
 
 
-cabal使用说明
-=============
+Cabal 使用说明
+===============
 
 1. 执行 ``cabal user-config init``
 2. 修改 ``~/.cabal/config``
@@ -70,15 +70,24 @@ Cabal ≥ 1.24 (GHC 8.0)
 ::
 
     repository mirrors.ustc.edu.cn
-      url: https://mirrors.ustc.edu.cn/hackage/
-      secure: False
+      url: https://mirrors.ustc.edu.cn/hackage/
+      secure: True
+
+.. note::
+    首次 ``cabal update`` 时会提示
+    ``Warning: No mirrors found for http://mirrors.ustc.edu.cn/hackage/``，
+    该警告可忽略。
+
+.. warning::
+    为了保证与老版本 cabal 的兼容性，
+    ``secure`` 值设置为 ``False`` 可能导致 cabal 无法获取到最新的包信息。
 
 Cabal < 1.24
 ------------
 找到官方仓库:
 ::
 
-    remote-repo: hackage.haskell.org:http://hackage.haskell.org/packages/archive
+    remote-repo: hackage.haskell.org:http://hackage.haskell.org/packages/archive
 
 改为科大源:
 ::

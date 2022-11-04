@@ -13,7 +13,7 @@ https://mirrors.ustc.edu.cn/archive.raspberrypi.org/ 或 https://mirrors.ustc.ed
 树莓派的 archive.raspberrypi.org 软件源，也即 :file:`/etc/apt/sources.list.d/raspi.list` ，
 
 是由树莓派基金会提供的软件源，包括 ui 相关程序（如 Raspbian 的桌面环境 PIXEL DE）及部分由树莓派基金会为
-树莓派编写的软件，通常与 archive.raspbian.org（参考 :doc:`raspbian`）一起使用。
+树莓派编写的软件，通常与 raspbian.raspberrypi.org（参考 :doc:`raspbian`，旧版为 archive.raspbian.org）一起使用。
 
 收录架构
 ========

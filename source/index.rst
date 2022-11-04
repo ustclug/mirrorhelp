@@ -24,26 +24,28 @@ USTC Mirror Help
    debiancn
    deb-multimedia
    fedora
-   freebsd
-   freebsd-pkg
+   freebsd
+   freebsd-pkg
    freebsd-ports
-   rpmfusion
+   rpmfusion
    gentoo
    gentoo-portage
    kali
    linuxmint
    mageia
-   manjaro
+   manjaro
    msys2
-   opensuse
+   opensuse
    openwrt
    packman
    proxmox
    raspberry-pi-os-images
    raspbian
+   raspbian-addons
    rocky
    scientificlinux
    termux
+   termux-its-pointless
    trisquel
    ubuntu
    ubuntu-ports
@@ -58,10 +60,13 @@ USTC Mirror Help
 .. toctree::
    :maxdepth: 1
 
+   clojars
+   ghcup
    hackage
    julia
    node
    nodesource
+   npm
    pypi
    rubygems
    crates.io-index
@@ -77,6 +82,7 @@ USTC Mirror Help
 
    anaconda
    brew.git
+   ceph
    CPAN
    CRAN
    docker-ce

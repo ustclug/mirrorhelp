@@ -54,6 +54,14 @@ Leap 15.1-15.3, tumbleweed
 
   sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/\$releasever/sle USTC:UPDATE-SLE
 
+对于 openSUSE Tumbleweed，只需执行：
+
+::
+
+  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/tumbleweed/repo/oss USTC:OSS
+  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/tumbleweed/repo/non-oss USTC:NON-OSS
+
+
 命令中最后一个参数为每一个源指定了一个 alias （别称），可以根据个人喜好更改。
 
 手动刷新软件源：

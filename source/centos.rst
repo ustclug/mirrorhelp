@@ -15,12 +15,17 @@ CentOS 软件源
 收录架构
 ========
 
-x86_64, i386
+x86_64, aarch64, ppc64le
 
 收录版本
 ========
 
-7, 8
+7, 8 Stream
+
+.. warning::
+    CentOS 8（非 Stream 版本）已被官方移除出该仓库。如有需要，请使用 `centos-vault <https://mirrors.ustc.edu.cn/centos-vault/>`_ 镜像。
+
+    CentOS 9 Stream 及以后的版本的镜像位于 `centos-stream <https://mirrors.ustc.edu.cn/centos-stream/>`_。
 
 使用说明
 ========
@@ -28,18 +33,17 @@ x86_64, i386
 .. warning::
     操作前请做好相应备份。
 
-对于 CentOS 8，使用以下命令替换默认的配置
+对于 CentOS 8 Stream，使用以下命令替换默认的配置
 
 ::
 
   sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' \
            -e 's|^#baseurl=http://mirror.centos.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/centos|g' \
            -i.bak \
-           /etc/yum.repos.d/CentOS-Linux-AppStream.repo \
-           /etc/yum.repos.d/CentOS-Linux-BaseOS.repo \
-           /etc/yum.repos.d/CentOS-Linux-Extras.repo \
-           /etc/yum.repos.d/CentOS-Linux-PowerTools.repo \
-           /etc/yum.repos.d/CentOS-Linux-Plus.repo
+           /etc/yum.repos.d/CentOS-Stream-AppStream.repo \
+           /etc/yum.repos.d/CentOS-Stream-BaseOS.repo \
+           /etc/yum.repos.d/CentOS-Stream-Extras.repo \
+           /etc/yum.repos.d/CentOS-Stream-PowerTools.repo
 
 对于 CentOS 7，使用以下命令替换默认配置
 
@@ -55,29 +59,25 @@ x86_64, i386
 以下是替换之后的文件：
 
 .. warning::
-    以下给出的 ``CentOS-Linux-PowerTools.repo`` 与 ``CentOS-Linux-Plus.repo`` 设置了默认为停用状态。如需启用，请将 ``enabled=0`` 改为 ``enabled=1``。
+    以下给出的 ``CentOS-Stream-PowerTools.repo`` 设置了默认为停用状态。如需启用，请将 ``enabled=0`` 改为 ``enabled=1``。
 
-* CentOS 8：
+* CentOS 8 Stream：
 
-  :file:`/etc/yum.repos.d/CentOS-Linux-BaseOS.repo` 文件：
+  :file:`/etc/yum.repos.d/CentOS-Stream-BaseOS.repo` 文件：
 
-  .. literalinclude:: includes/centos8/CentOS-Linux-BaseOS.repo
+  .. literalinclude:: includes/centos8stream/CentOS-Stream-BaseOS.repo
 
-  :file:`/etc/yum.repos.d/CentOS-Linux-Extras.repo` 文件：
+  :file:`/etc/yum.repos.d/CentOS-Stream-Extras.repo` 文件：
 
-  .. literalinclude:: includes/centos8/CentOS-Linux-Extras.repo
+  .. literalinclude:: includes/centos8stream/CentOS-Stream-Extras.repo
 
-  :file:`/etc/yum.repos.d/CentOS-Linux-AppStream.repo` 文件：
+  :file:`/etc/yum.repos.d/CentOS-Stream-AppStream.repo` 文件：
 
-  .. literalinclude:: includes/centos8/CentOS-Linux-AppStream.repo
+  .. literalinclude:: includes/centos8stream/CentOS-Stream-AppStream.repo
 
-  :file:`/etc/yum.repos.d/CentOS-Linux-PowerTools.repo` 文件：
+  :file:`/etc/yum.repos.d/CentOS-Stream-PowerTools.repo` 文件：
 
-  .. literalinclude:: includes/centos8/CentOS-Linux-PowerTools.repo
-
-  :file:`/etc/yum.repos.d/CentOS-Linux-Plus.repo` 文件：
-
-  .. literalinclude:: includes/centos8/CentOS-Linux-Plus.repo
+  .. literalinclude:: includes/centos8stream/CentOS-Stream-PowerTools.repo
 
 * CentOS 7：
 

@@ -12,9 +12,8 @@ https://mirrors.ustc.edu.cn/elpa/
 
 Emacs ELPA 源。包括以下 ELPA 仓库：
 
-- GNU ELPA
+- GNU ELPA 和 NonGNU ELPA
 - MELPA 及 MELPA Stable
-- Org
 
 使用说明
 ========
@@ -25,8 +24,7 @@ Emacs ELPA 源。包括以下 ELPA 仓库：
 
    (setq package-archives '(("gnu" . "http://mirrors.ustc.edu.cn/elpa/gnu/")
                             ("melpa" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
-                            ("melpa-stable" . "http://mirrors.ustc.edu.cn/elpa/melpa-stable/")
-                            ("org" . "http://mirrors.ustc.edu.cn/elpa/org/")))
+                            ("nongnu" . "http://mirrors.ustc.edu.cn/elpa/nongnu/")))
 
 或使用 Customize 功能修改 ``Package Archives`` 选项为上述内容。
 
@@ -39,7 +37,7 @@ Spacemacs 使用说明
 
    (setq configuration-layer--elpa-archives
          '(("melpa-cn" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
-           ("org-cn"   . "http://mirrors.ustc.edu.cn/elpa/org/")
+           ("nongnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/nongnu/")
            ("gnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/gnu/")))
 
 develop 分支应使用 ``configuration-layer-elpa-archives`` 代替上面代码中的 ``configuration-layer--elpa-archives`` （ ``--`` 换成 ``-`` ）。
@@ -54,4 +52,3 @@ develop 分支应使用 ``configuration-layer-elpa-archives`` 代替上面代码
 
 :Emacs 官方网站: https://www.gnu.org/software/emacs/
 :Emacs Packages 文档: https://www.gnu.org/software/emacs/manual/html_node/emacs/Packages.html
-:Emacs-China ELPA 源: https://elpa.emacs-china.org
