@@ -47,7 +47,7 @@ Linux
 ::
 
     {
-      "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn/"]
+      "registry-mirror": ["https://docker.mirrors.ustc.edu.cn/"]
     }
 
 重新启动 dockerd：
