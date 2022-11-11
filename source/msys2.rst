@@ -26,17 +26,12 @@ MSYS2镜像
 pacman的配置
 ============
 
-编辑 :file:`/etc/pacman.d/mirrorlist.mingw` ，在文件开头添加：
+
+直接运行命令替换镜像源
 
 ::
     
-    Server = https://mirrors.ustc.edu.cn/msys2/mingw/$repo
-
-编辑 :file:`/etc/pacman.d/mirrorlist.msys` ，在文件开头添加
-
-::
-
-    Server = http://mirrors.ustc.edu.cn/msys2/msys/$arch
+    sed -i "s#mirror.msys2.org/#mirrors.ustc.edu.cn/msys2/#g" /etc/pacman.d/mirrorlist*
 
 然后执行 ``pacman -Sy`` 刷新软件包数据即可。
 
