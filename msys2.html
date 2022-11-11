@@ -73,7 +73,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">收录架构</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">获取基本组件包</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pacman">pacman的配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pacman">Pacman 的配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id5">相关链接</a></li>
 </ul>
 </li>
@@ -175,7 +175,7 @@
 </section>
 <section id="id2">
 <h2>说明<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
-<p>MSYS2镜像</p>
+<p>MSYS2 镜像</p>
 </section>
 <section id="id3">
 <h2>收录架构<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
@@ -186,11 +186,11 @@
 </section>
 <section id="id4">
 <h2>获取基本组件包<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
-<p>访问该镜像目录下的 <code class="docutils literal notranslate"><span class="pre">distrib/</span></code> 目录 (<a class="reference external" href="http://mirrors.ustc.edu.cn/msys2/distrib/x86_64/">x86_64</a> 、 <a class="reference external" href="http://mirrors.ustc.edu.cn/msys2/distrib/i686/">i686</a> )，找到名为 <code class="docutils literal notranslate"><span class="pre">msys2-&lt;架构&gt;-&lt;日期&gt;.exe</span></code> 的文件 （如 <code class="docutils literal notranslate"><span class="pre">msys2-x86_64-20141113.exe</span></code> ），下载安装即可。</p>
+<p>访问该镜像目录下的 <code class="docutils literal notranslate"><span class="pre">distrib/</span></code> 目录（<a class="reference external" href="http://mirrors.ustc.edu.cn/msys2/distrib/x86_64/">x86_64</a>、<a class="reference external" href="http://mirrors.ustc.edu.cn/msys2/distrib/i686/">i686</a>），找到名为 <code class="docutils literal notranslate"><span class="pre">msys2-&lt;架构&gt;-&lt;日期&gt;.exe</span></code> 的文件 （如 <code class="docutils literal notranslate"><span class="pre">msys2-x86_64-20141113.exe</span></code>），下载安装即可。</p>
 </section>
 <section id="pacman">
-<h2>pacman的配置<a class="headerlink" href="#pacman" title="此标题的永久链接"></a></h2>
-<p>直接运行命令替换镜像源</p>
+<h2>Pacman 的配置<a class="headerlink" href="#pacman" title="此标题的永久链接"></a></h2>
+<p>在 MSYS2 环境下直接运行命令替换镜像源：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s2">&quot;s#mirror.msys2.org/#mirrors.ustc.edu.cn/msys2/#g&quot;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">pacman</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">mirrorlist</span><span class="o">*</span>
 </pre></div>
 </div>
@@ -199,7 +199,7 @@
 <section id="id5">
 <h2>相关链接<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
 <dl class="field-list simple">
-<dt class="field-odd">MSYS2主页</dt>
+<dt class="field-odd">MSYS2 主页</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://www.msys2.org/">https://www.msys2.org/</a></p>
 </dd>
 </dl>
