@@ -190,12 +190,8 @@
 </section>
 <section id="pacman">
 <h2>pacman的配置<a class="headerlink" href="#pacman" title="此标题的永久链接"></a></h2>
-<p>编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/pacman.d/mirrorlist.mingw</span></code> ，在文件开头添加：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Server = https://mirrors.ustc.edu.cn/msys2/mingw/$repo
-</pre></div>
-</div>
-<p>编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/pacman.d/mirrorlist.msys</span></code> ，在文件开头添加</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Server = http://mirrors.ustc.edu.cn/msys2/msys/$arch
+<p>直接运行命令替换镜像源</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s2">&quot;s#mirror.msys2.org/#mirrors.ustc.edu.cn/msys2/#g&quot;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">pacman</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">mirrorlist</span><span class="o">*</span>
 </pre></div>
 </div>
 <p>然后执行 <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span></code> 刷新软件包数据即可。</p>
