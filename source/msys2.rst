@@ -10,7 +10,7 @@ https://mirrors.ustc.edu.cn/msys2/
 说明
 ====
 
-MSYS2镜像
+MSYS2 镜像
 
 收录架构
 ========
@@ -21,16 +21,16 @@ MSYS2镜像
 获取基本组件包
 ==============
 
-访问该镜像目录下的 ``distrib/`` 目录 (`x86_64 <http://mirrors.ustc.edu.cn/msys2/distrib/x86_64/>`_ 、 `i686 <http://mirrors.ustc.edu.cn/msys2/distrib/i686/>`_ )，找到名为 ``msys2-<架构>-<日期>.exe`` 的文件 （如 ``msys2-x86_64-20141113.exe`` ），下载安装即可。
+访问该镜像目录下的 ``distrib/`` 目录（`x86_64 <http://mirrors.ustc.edu.cn/msys2/distrib/x86_64/>`_、`i686 <http://mirrors.ustc.edu.cn/msys2/distrib/i686/>`_），找到名为 ``msys2-<架构>-<日期>.exe`` 的文件 （如 ``msys2-x86_64-20141113.exe``），下载安装即可。
 
-pacman的配置
-============
+Pacman 的配置
+=============
 
 
-直接运行命令替换镜像源
+在 MSYS2 环境下直接运行命令替换镜像源：
 
 ::
-    
+
     sed -i "s#mirror.msys2.org/#mirrors.ustc.edu.cn/msys2/#g" /etc/pacman.d/mirrorlist*
 
 然后执行 ``pacman -Sy`` 刷新软件包数据即可。
@@ -38,4 +38,4 @@ pacman的配置
 相关链接
 ========
 
-:MSYS2主页: https://www.msys2.org/
+:MSYS2 主页: https://www.msys2.org/
