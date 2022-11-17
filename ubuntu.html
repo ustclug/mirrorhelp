@@ -226,6 +226,11 @@
 可以将 security 源地址从 <code class="docutils literal notranslate"><span class="pre">http://security.ubuntu.com/</span></code> 替换为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/</span></code>，即
 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">sed</span> <span class="pre">-i</span> <span class="pre">'s/security.ubuntu.com/mirrors.ustc.edu.cn/g'</span> <span class="pre">/etc/apt/sources.list</span></code>。</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>使用 HTTPS 可以有效避免国内运营商的缓存劫持。即
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">sed</span> <span class="pre">-i</span> <span class="pre">'s/http:/https:/g'</span> <span class="pre">/etc/apt/sources.list</span></code>。</p>
+</div>
 <p>当然也可以直接编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件（需要使用 sudo）。以下是 Ubuntu 20.04 参考配置内容：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 默认注释了源码仓库，如有需要可自行取消注释</span>
 <span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">focal</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
@@ -249,10 +254,6 @@
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
 <p>如要用于其他版本，把 focal 换成其他版本代号即可: 22.04：<code class="docutils literal notranslate"><span class="pre">jammy</span></code>；20.04：<code class="docutils literal notranslate"><span class="pre">focal</span></code>；18.04：<code class="docutils literal notranslate"><span class="pre">bionic</span></code>；16.04：<code class="docutils literal notranslate"><span class="pre">xenial</span></code>；14.04：<code class="docutils literal notranslate"><span class="pre">trusty</span></code>。</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">小技巧</p>
-<p>使用 HTTPS 可以有效避免国内运营商的缓存劫持。</p>
 </div>
 <p>另外，也可以使用 snullp 大叔开发的 <a class="reference external" href="https://mirrors.ustc.edu.cn/repogen">配置生成器</a> 。</p>
 </section>
