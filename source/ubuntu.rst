@@ -65,6 +65,10 @@ AMD64 (x86_64), Intel x86
     可以将 security 源地址从 ``http://security.ubuntu.com/`` 替换为 ``https://mirrors.ustc.edu.cn/``，即
     ``sudo sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list``。
 
+.. tip::
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持。即
+    ``sudo sed -i 's/http:/https:/g' /etc/apt/sources.list``。
+
 当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Ubuntu 20.04 参考配置内容：
 
 ::
@@ -90,9 +94,6 @@ AMD64 (x86_64), Intel x86
 
 .. tip::
     如要用于其他版本，把 focal 换成其他版本代号即可: 22.04：``jammy``；20.04：``focal``；18.04：``bionic``；16.04：``xenial``；14.04：``trusty``。
-
-.. tip::
-    使用 HTTPS 可以有效避免国内运营商的缓存劫持。
 
 另外，也可以使用 snullp 大叔开发的 `配置生成器 <https://mirrors.ustc.edu.cn/repogen>`_ 。
 
