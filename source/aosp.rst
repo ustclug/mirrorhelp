@@ -61,7 +61,7 @@ Note: tar 包为定时从 https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/
    ## 如果提示无法连接到 gerrit.googlesource.com，可以编辑 ~/bin/repo，把 REPO_URL 一行替换成下面的：
    ## REPO_URL = 'https://gerrit-googlesource.proxy.ustclug.org/git-repo'
 
-如果需要某个特定的 Android 版本（`Android 版本列表`_）：
+如果需要某个特定的 Android 版本（`Android 版本列表`_ `(USTC)`_）：
 
 ::
 
@@ -139,3 +139,4 @@ https://developers.google.com/brillo/docs/reference/downloads
 ``repo init -u git://mirrors.ustc.edu.cn/aosp/brillo/manifest -b master``
 
 .. _Android 版本列表: https://source.android.com/source/build-numbers.html#source-code-tags-and-builds
+.. _(USTC): http://mirrors.ustc.edu.cn/aosp/platform/manifest.git/refs/tags/
