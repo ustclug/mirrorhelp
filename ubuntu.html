@@ -209,15 +209,8 @@
 <p>一般情况下，将 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件中 Ubuntu 默认的源地址 <code class="docutils literal notranslate"><span class="pre">http://archive.ubuntu.com/</span></code>
 替换为 <code class="docutils literal notranslate"><span class="pre">http://mirrors.ustc.edu.cn/</span></code> 即可。</p>
 <p>可以使用如下命令：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s/archive.ubuntu.com/mirrors.ustc.edu.cn/g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span>
 </pre></div>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">小技巧</p>
-<p>Ubuntu 图形安装器会根据用户设定的时区推断 locale，这导致默认的源地址通常不是 <code class="docutils literal notranslate"><span class="pre">http://archive.ubuntu.com/</span></code>，
-而是 <code class="docutils literal notranslate"><span class="pre">http://&lt;country-code&gt;.archive.ubuntu.com/ubuntu/</span></code> ，如 <code class="docutils literal notranslate"><span class="pre">http://cn.archive.ubuntu.com/ubuntu/</span></code>，
-此时只需将上面的命令进行相应的替换即可，即
-<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">sed</span> <span class="pre">-i</span> <span class="pre">'s/cn.archive.ubuntu.com/mirrors.ustc.edu.cn/g'</span> <span class="pre">/etc/apt/sources.list</span></code>。</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
