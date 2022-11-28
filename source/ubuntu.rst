@@ -51,7 +51,7 @@ AMD64 (x86_64), Intel x86
 
 ::
 
-  sudo sed -i 's/\/\/.*archive.ubuntu.com/\/\/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+  sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list
 
 .. tip::
     因镜像站同步有延迟，可能会导致生产环境系统不能及时检查、安装上最新的安全更新，不建议替换 security 源。
