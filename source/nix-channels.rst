@@ -10,7 +10,7 @@ https://mirrors.ustc.edu.cn/nix-channels/
 说明
 ====
 
-Nixpkgs channel 以及 binary cache。为节省磁盘空间，目前设置为保留 20 天内的 channel releases 及其相关 cache。
+Nixpkgs channel 以及 binary cache。为节省磁盘空间，目前设置为保留 14 天内的 channel releases 及其相关 cache。
 
 使用说明
 ========
