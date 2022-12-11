@@ -46,6 +46,19 @@ GHCup 类似 Rustup，可以用于安装 Haskell 工具链。建议搭配 Hackag
 
    科大 GHCup 源仅支持较新的 GHCup 版本（元数据格式版本仅支持 0.0.6 及以上）。如果你使用的 GHCup 版本比较旧，请参考上述步骤安装新版本 GHCup。
 
+预发布版本
+==========
+
+使用预发布频道可以安装尚未正式发布的测试版本。要启用预发布源，将 ``~/.ghcup/config.yaml`` 文件中 ``url-source`` 一节修改如下：
+
+::
+
+   url-source:
+       OwnSource:
+       - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml
+       - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-preleases-0.0.7.yaml
+
+
 相关链接
 ========
 
