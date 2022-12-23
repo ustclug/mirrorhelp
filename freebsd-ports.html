@@ -181,10 +181,18 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
 </pre></div>
 </div>
-<p>ports.tar.gz 文件为 Ports Collection，可以下载后解压到 <code class="docutils literal notranslate"><span class="pre">/usr/ports/</span></code> 目录。</p>
+<p>ports.tar.gz 文件为 Ports Collection，可以下载后解压到 <code class="docutils literal notranslate"><span class="pre">/usr/ports/</span></code> 目录。
+也可参考 FreeBSD Handbook 中 <a class="reference external" href="https://docs.freebsd.org/en/books/handbook/ports/#ports-using-installation-methods">Installing the Ports Collection</a> 一节，使用 <code class="docutils literal notranslate"><span class="pre">git</span></code> 获取 ports tree：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># git clone https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports</span>
+</pre></div>
+</div>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
 <p>部分 ports 的源代码需要从 <a class="reference external" href="http://distcache.freebsd.org/ports-distfiles/">http://distcache.freebsd.org/ports-distfiles/</a> 以外的 master site 下载，本镜像不包含这些文件。</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>本镜像仅包含 ports tree 中 HEAD branch 引用到的文件。季度分支（如 <code class="docutils literal notranslate"><span class="pre">2020Q4</span></code>）引用的文件有可能不包含在本镜像中。</p>
 </div>
 </section>
 <section id="id4">
