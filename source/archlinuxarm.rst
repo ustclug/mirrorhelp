@@ -30,13 +30,7 @@ ARMv5, ARMv6, ARMv7, AArch64
 
 ::
 
-    # 修改前备份一下 /etc/pacman.d/mirrorlist 文件
-
-    test -f /etc/pacman.d/mirrorlist.save || cp -f /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.save
-
-    # 执行添加
-
-    sed -i '1 i  Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo' /etc/pacman.d/mirrorlist
+    sed -i.backup '1 i  Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo' /etc/pacman.d/mirrorlist
 
 
 更新软件包缓存：
