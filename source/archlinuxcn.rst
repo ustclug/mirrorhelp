@@ -29,6 +29,15 @@ Arch Linux 中文社区仓库是由 Arch Linux 中文社区驱动的非官方用
     [archlinuxcn]
     Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 
+可以使用如下命令添加：
+
+::
+
+    cat >> /etc/pacman.conf <<'EOF'
+    [archlinuxcn]
+    Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+    EOF
+
 然后请安装 ``archlinuxcn-keyring`` 包以导入 GPG key。
 
 相关链接

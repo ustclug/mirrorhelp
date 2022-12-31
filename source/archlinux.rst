@@ -28,6 +28,12 @@ i686, x86_64
 
 国内用户，推荐另外使用 Arch Linux CN 的源，请参考 :doc:`archlinuxcn`
 
+可以使用如下命令添加：
+
+::
+
+    sed -i '1 i  Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
+
 相关链接
 ========
 

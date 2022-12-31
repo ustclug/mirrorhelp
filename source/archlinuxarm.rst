@@ -26,6 +26,12 @@ ARMv5, ARMv6, ARMv7, AArch64
 
     Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
 
+可以使用如下命令添加：
+
+::
+
+    sed -i '1 i  Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo' /etc/pacman.d/mirrorlist
+
 相关链接
 ========
 
