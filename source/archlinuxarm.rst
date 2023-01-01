@@ -30,7 +30,7 @@ ARMv5, ARMv6, ARMv7, AArch64
 
 ::
 
-    sed -i.backup '1 i  Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo' /etc/pacman.d/mirrorlist
+    sed -i.backup '1 i Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo' /etc/pacman.d/mirrorlist
 
 
 更新软件包缓存：
