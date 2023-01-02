@@ -33,7 +33,7 @@ Arch Linux 中文社区仓库是由 Arch Linux 中文社区驱动的非官方用
 
 ::
 
-    cat >> /etc/pacman.conf <<'EOF'
+    cat <<'EOF'>> /etc/pacman.conf
     [archlinuxcn]
     Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
     EOF
