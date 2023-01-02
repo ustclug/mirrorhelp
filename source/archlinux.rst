@@ -32,7 +32,7 @@ i686, x86_64
 
 ::
 
-    sed -i.backup '1 i Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
+    sed -i '1 i Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
 
 
 更新软件包缓存：
