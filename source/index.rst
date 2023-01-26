@@ -16,7 +16,6 @@ USTC Mirror Help
    blackarch
    centos
    epel
-   chakra
    debian
    debian-security
    debian-cd
