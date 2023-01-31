@@ -32,13 +32,13 @@ jobs:
         run: |
           SOURCE_COMMIT="$(git log -1 --pretty="%an: %B" "$GITHUB_SHA")"
           pushd build/html/ &>/dev/null
-          git status --porcelain
-          if [ "$(git status --porcelain | wc -l)" -eq 0 ]; then
-            exit 0
-          fi
 
           : > .nojekyll
           git add --all
+
+          if [ "$(git status --porcelain | wc -l)" -eq 0 ]; then
+            exit 0
+          fi
           git -c user.name="GitHub" -c user.email="noreply@github.com" \
             commit --quiet \
             --message "Deploy docs from ${GITHUB_SHA}" \
