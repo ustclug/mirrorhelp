@@ -38,7 +38,7 @@ jobs:
 
           : > .nojekyll
           git add --all
-          git -c user.name="${GITHUB_ACTOR}" -c user.email="${GITHUB_ACTOR}@users.noreply.github.com" \
+          git -c user.name="GitHub" -c user.email="noreply@github.com" \
             commit --quiet \
             --message "Deploy docs from ${GITHUB_SHA}" \
             --message "$SOURCE_COMMIT"
