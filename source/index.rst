@@ -93,6 +93,7 @@ USTC Mirror Help
    homebrew-core.git
    homebrew-cask.git
    homebrew-cask-versions.git
+   influxdata
    qtproject
    linux.git
    linuxbrew-bottles
