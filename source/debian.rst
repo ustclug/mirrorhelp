@@ -53,6 +53,11 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
     # deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
     # deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
 
+.. tip::
+    目前 Debian testing (bookworm) 与 sid 添加了非自由固件组件 ``non-free-firmware``。
+    如果正在使用 testing 或 sid，并且需要使用非自由固件，则在编辑配置时需要添加 ``non-free-firmware``。
+    详情参考 https://wiki.debian.org/Firmware 与 `Debian bug #1030189 <https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1030189>`_。
+
 同时你也可能需要更改 Debian Security 源，请参考 :doc:`debian-security`
 
 更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
