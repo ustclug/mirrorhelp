@@ -1,3 +1,5 @@
+__pycache__
+*.py[cod]
 build
 .env
 .venv
@@ -6,3 +8,6 @@ venv
 
 # ignore IDE or editor files
 .vscode
+
+# generated file
+source/contributor.rst
