@@ -1,10 +1,8 @@
 USTC Mirror Help
 ================
 
-发行版镜像
-----------
-
 .. toctree::
+   :caption: 发行版镜像
    :maxdepth: 1
 
    alpine
@@ -53,10 +51,8 @@ USTC Mirror Help
    ubuntu-cdimage
    ubuntu-cloud-images
 
-语言镜像
---------
-
 .. toctree::
+   :caption: 语言镜像
    :maxdepth: 1
 
    clojars
@@ -72,12 +68,9 @@ USTC Mirror Help
    rust-static
    stackage
 
-软件镜像
---------
-
 .. toctree::
+   :caption: 软件镜像
    :maxdepth: 1
-
 
    anaconda
    brew.git
@@ -104,18 +97,10 @@ USTC Mirror Help
    ros
    xbmc
 
-其他
-----
-
 .. toctree::
+   :caption: 其他
    :maxdepth: 2
 
    rsync-guide
    todo
-
-贡献者
-------
-
-.. toctree::
-
    contributor
