@@ -24,7 +24,6 @@ USTC Mirror Help
    freebsd
    freebsd-pkg
    freebsd-ports
-   rpmfusion
    gentoo
    gentoo-portage
    kali
@@ -40,6 +39,7 @@ USTC Mirror Help
    raspbian
    raspbian-addons
    rocky
+   rpmfusion
    scientificlinux
    termux
    termux-its-pointless
