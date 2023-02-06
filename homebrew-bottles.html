@@ -187,6 +187,11 @@
 </section>
 <section id="id4">
 <h2>使用说明<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>目前（2023/02/06）由于最新版 brew 使用新的 API 机制获取包信息，导致默认情况下即使设置了 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BOTTLE_DOMAIN</span></code> 环境变量，
+brew 也不会从镜像站获取 bottles。添加环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_NO_INSTALL_FROM_API=1</span></code> 可以暂时缓解此问题。</p>
+</div>
 <p>请在运行 <code class="docutils literal notranslate"><span class="pre">brew</span></code> 前设置环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BOTTLE_DOMAIN</span></code>，值为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/homebrew-bottles</span></code> 。</p>
 <p>临时替换：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;</span>
