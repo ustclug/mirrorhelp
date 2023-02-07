@@ -63,31 +63,31 @@ AMD64 (x86_64), Intel x86
     使用 HTTPS 可以有效避免国内运营商的缓存劫持。即
     ``sudo sed -i 's/http:/https:/g' /etc/apt/sources.list``。
 
-当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Ubuntu 20.04 参考配置内容：
+当然也可以直接编辑 :file:`/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Ubuntu 22.04 参考配置内容：
 
 ::
 
     # 默认注释了源码仓库，如有需要可自行取消注释
-    deb https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
+    deb https://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted universe multiverse
+    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted universe multiverse
 
-    deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+    deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
 
-    deb https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+    deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
 
-    deb https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+    deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
 
     # 预发布软件源，不建议启用
-    # deb https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+    # deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
+    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
 
 更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
 
 .. tip::
-    如要用于其他版本，把 focal 换成其他版本代号即可: 22.04：``jammy``；20.04：``focal``；18.04：``bionic``；16.04：``xenial``；14.04：``trusty``。
+    如要用于其他版本，把 jammy 换成其他版本代号即可: 22.04：``jammy``；20.04：``focal``；18.04：``bionic``；16.04：``xenial``；14.04：``trusty``。
 
 另外，也可以使用 snullp 大叔开发的 `配置生成器 <https://mirrors.ustc.edu.cn/repogen>`_ 。
 
