@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Homebrew Bottles 源使用帮助 &mdash; USTC Mirror Help  文档</title>
@@ -30,11 +30,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> USTC Mirror Help
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            USTC Mirror Help
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="搜索文档" />
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -158,7 +162,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Homebrew Bottles 源使用帮助</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/homebrew-bottles.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
@@ -177,32 +181,32 @@
 </section>
 <section id="id2">
 <h2>说明<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
-<p>Homebrew 预编译二进制软件包</p>
+<p>Homebrew 预编译二进制软件包与软件包元数据文件</p>
 </section>
 <section id="id3">
 <h2>收录仓库<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
 <ul class="simple">
 <li><p>homebrew/homebrew-core</p></li>
+<li><p>brew formula 与 cask 的 JSON 元数据文件</p></li>
 </ul>
 </section>
 <section id="id4">
 <h2>使用说明<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
-<div class="admonition warning">
-<p class="admonition-title">警告</p>
-<p>目前（2023/02/06）由于最新版 brew 使用新的 API 机制获取包信息，导致默认情况下即使设置了 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BOTTLE_DOMAIN</span></code> 环境变量，
-brew 也不会从镜像站获取 bottles。添加环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_NO_INSTALL_FROM_API=1</span></code> 可以暂时缓解此问题。</p>
-</div>
-<p>请在运行 <code class="docutils literal notranslate"><span class="pre">brew</span></code> 前设置环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BOTTLE_DOMAIN</span></code>，值为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/homebrew-bottles</span></code> 。</p>
+<p>请在运行 <code class="docutils literal notranslate"><span class="pre">brew</span></code> 前设置环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BOTTLE_DOMAIN</span></code>，值为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/homebrew-bottles</span></code>。</p>
+<p>此外，brew 4.0 及之后的版本使用新的元数据 JSON API 接口，因此还需要设置环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_API_DOMAIN</span></code>，值为 <code class="docutils literal notranslate"><span class="pre">https://mirrors.ustc.edu.cn/homebrew-bottles/api</span></code>。</p>
 <p>临时替换：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;</span>
+<span class="n">export</span> <span class="n">HOMEBREW_API_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;</span>
 </pre></div>
 </div>
 <p>永久替换：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 对于 bash 用户</span>
 <span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_BOTTLE_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bash_profile</span>
+<span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_API_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bash_profile</span>
 
 <span class="c1"># 对于 zsh 用户</span>
 <span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_BOTTLE_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
+<span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_API_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -223,10 +227,10 @@ Linuxbrew 用户请依本镜像说明重新设置镜像。</p>
 <section id="id6">
 <h2>相关链接<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h2>
 <dl class="field-list simple">
-<dt class="field-odd">官方主页</dt>
+<dt class="field-odd">官方主页<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="http://brew.sh/">http://brew.sh/</a></p>
 </dd>
-<dt class="field-even">Bottles 介绍</dt>
+<dt class="field-even">Bottles 介绍<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="http://docs.brew.sh/Bottles.html">http://docs.brew.sh/Bottles.html</a></p>
 </dd>
 </dl>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Homebrew Core 源使用帮助 &mdash; USTC Mirror Help  文档</title>
@@ -30,11 +30,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> USTC Mirror Help
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            USTC Mirror Help
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="搜索文档" />
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -157,7 +161,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Homebrew Core 源使用帮助</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/homebrew-core.git.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
@@ -180,6 +184,10 @@
 </section>
 <section id="id3">
 <h2>使用说明<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>Brew 4.0 版本后默认使用元数据 JSON API 获取仓库信息，因此在大部分情况下都不再需要进行如下配置。可参考 <a class="reference internal" href="homebrew-bottles.html"><span class="doc">Homebrew Bottles 源使用帮助</span></a> 进行相关配置。</p>
+</div>
 <p>替换 USTC 镜像：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;</span>
 <span class="n">brew</span> <span class="n">update</span>
@@ -231,10 +239,10 @@ Linuxbrew 用户请依本镜像说明重新设置镜像。注意迁移前请先�
 <section id="id5">
 <h2>相关链接<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
 <dl class="field-list simple">
-<dt class="field-odd">官方主页</dt>
+<dt class="field-odd">官方主页<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="http://brew.sh/">http://brew.sh/</a></p>
 </dd>
-<dt class="field-even">brew 文档</dt>
+<dt class="field-even">brew 文档<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="http://docs.brew.sh/">http://docs.brew.sh/</a></p>
 </dd>
 </dl>
