@@ -89,8 +89,6 @@ USTC Mirror Help
    influxdata
    qtproject
    linux.git
-   linuxbrew-bottles
-   linuxbrew-core.git
    mariadb
    nix-channels
    raspberrypi
