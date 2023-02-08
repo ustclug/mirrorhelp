@@ -15,6 +15,9 @@ Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件
 使用说明
 ========
 
+.. note::
+    Brew 4.0 版本后默认使用元数据 JSON API 获取仓库信息，因此在大部分情况下都不再需要进行如下配置。可参考 :doc:`homebrew-bottles` 进行相关配置。
+
 使用 USTC 镜像安装，或将已安装的仓库远程替换为 USTC 镜像：
 
 ::

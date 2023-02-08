@@ -15,6 +15,9 @@ Homebrew 核心软件仓库
 使用说明
 ========
 
+.. note::
+    Brew 4.0 版本后默认使用元数据 JSON API 获取仓库信息，因此在大部分情况下都不再需要进行如下配置。可参考 :doc:`homebrew-bottles` 进行相关配置。
+
 替换 USTC 镜像：
 
 ::
