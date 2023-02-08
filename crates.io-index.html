@@ -195,6 +195,17 @@
 </pre></div>
 </div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>cargo 1.68 版本开始支持稀疏索引：不再需要完整克隆 crates.io-index 仓库，可以加快获取包的速度。如果您的 cargo 版本大于等于 1.68，可以在 <code class="file docutils literal notranslate"><span class="pre">$HOME/.cargo/config</span></code> 中添加如下内容：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">source</span><span class="o">.</span><span class="n">crates</span><span class="o">-</span><span class="n">io</span><span class="p">]</span>
+<span class="n">replace</span><span class="o">-</span><span class="k">with</span> <span class="o">=</span> <span class="s1">&#39;ustc&#39;</span>
+
+<span class="p">[</span><span class="n">source</span><span class="o">.</span><span class="n">ustc</span><span class="p">]</span>
+<span class="n">registry</span> <span class="o">=</span> <span class="s2">&quot;sparse+https://mirrors.ustc.edu.cn/crates.io-index/&quot;</span>
+</pre></div>
+</div>
+</div>
 <p>在 <code class="file docutils literal notranslate"><span class="pre">$HOME/.cargo/config</span></code> 中添加如下内容：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">source</span><span class="o">.</span><span class="n">crates</span><span class="o">-</span><span class="n">io</span><span class="p">]</span>
 <span class="n">replace</span><span class="o">-</span><span class="k">with</span> <span class="o">=</span> <span class="s1">&#39;ustc&#39;</span>
