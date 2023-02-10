@@ -56,6 +56,7 @@ Homebrew 源代码仓库
     export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
     export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
     export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+    export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 
 之后在命令行运行 Homebrew 安装脚本：
 
@@ -65,12 +66,11 @@ Homebrew 源代码仓库
 
 .. note::
     初次安装 Homebrew / Linuxbrew 时，如果无法下载安装脚本，
-    可以使用 `jsDelivr CDN <https://cdn.jsdelivr.net/gh/Homebrew/install@HEAD/install.sh>`_
-    下载 ``install.sh``。
+    可以使用我们每日同步的安装脚本文件。
 
     ::
 
-        /bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/Homebrew/install@HEAD/install.sh)"
+        /bin/bash -c "$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)"
 
 相关镜像
 ========
