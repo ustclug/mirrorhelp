@@ -217,6 +217,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">HOMEBREW_BREW_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/brew.git&quot;</span>
 <span class="n">export</span> <span class="n">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;</span>
 <span class="n">export</span> <span class="n">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;</span>
+<span class="n">export</span> <span class="n">HOMEBREW_API_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;</span>
 </pre></div>
 </div>
 <p>之后在命令行运行 Homebrew 安装脚本：</p>
@@ -226,9 +227,8 @@
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p>初次安装 Homebrew / Linuxbrew 时，如果无法下载安装脚本，
-可以使用 <a class="reference external" href="https://cdn.jsdelivr.net/gh/Homebrew/install&#64;HEAD/install.sh">jsDelivr CDN</a>
-下载 <code class="docutils literal notranslate"><span class="pre">install.sh</span></code>。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://cdn.jsdelivr.net/gh/Homebrew/install@HEAD/install.sh)&quot;</span>
+可以使用我们每日同步的安装脚本文件。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)&quot;</span>
 </pre></div>
 </div>
 </div>
