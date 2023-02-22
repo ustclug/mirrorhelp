@@ -17,22 +17,21 @@ https://mirrors.ustc.edu.cn/github-release/
 
 仅镜像最新版本：
 
-* `AdoptOpenJDK/openjdk8-binaries <https://github.com/AdoptOpenJDK/openjdk8-binaries>`_
-* `AdoptOpenJDK/openjdk9-binaries <https://github.com/AdoptOpenJDK/openjdk9-binaries>`_
-* `AdoptOpenJDK/openjdk10-binaries <https://github.com/AdoptOpenJDK/openjdk10-binaries>`_
-* `AdoptOpenJDK/openjdk11-binaries <https://github.com/AdoptOpenJDK/openjdk11-binaries>`_
-* `AdoptOpenJDK/openjdk12-binaries <https://github.com/AdoptOpenJDK/openjdk12-binaries>`_
-* `AdoptOpenJDK/openjdk13-binaries <https://github.com/AdoptOpenJDK/openjdk13-binaries>`_
-* `AdoptOpenJDK/openjdk14-binaries <https://github.com/AdoptOpenJDK/openjdk14-binaries>`_
-* `AdoptOpenJDK/openjdk15-binaries <https://github.com/AdoptOpenJDK/openjdk15-binaries>`_
-* `AdoptOpenJDK/openjdk16-binaries <https://github.com/AdoptOpenJDK/openjdk16-binaries>`_
+* `adoptium/temurin8-binaries <https://github.com/adoptium/temurin8-binaries>`_
+* `adoptium/temurin11-binaries <https://github.com/adoptium/temurin11-binaries>`_
 * `adoptium/temurin17-binaries <https://github.com/adoptium/temurin17-binaries>`_
+* `adoptium/temurin19-binaries <https://github.com/adoptium/temurin19-binaries>`_
 * `pbatard/rufus <https://github.com/pbatard/rufus>`_
 * `Homebrew/homebrew-portable-ruby <https://github.com/Homebrew/homebrew-portable-ruby>`_
+* `3-manifolds/Sage_macOS <https://github.com/3-manifolds/Sage_macOS>`_
 
 镜像最新的两个版本：
 
 * `TheThirdOne/rars <https://github.com/TheThirdOne/rars>`_
+
+镜像最新的五个版本：
+
+* `XmacsLabs/mogan <https://github.com/XmacsLabs/mogan>`_
 
 使用说明
 ========
