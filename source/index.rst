@@ -87,12 +87,13 @@ USTC Mirror Help
    homebrew-cask.git
    homebrew-cask-versions.git
    influxdata
-   qtproject
    linux.git
    mariadb
    nix-channels
+   qtproject
    raspberrypi
    ros
+   sagemath
    xbmc
 
 .. toctree::
