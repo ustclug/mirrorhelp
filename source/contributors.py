@@ -15,6 +15,12 @@ HEADER = """\
 
 
 def get_api():
+    if os.environ.get("DEV"):
+        return [
+            {
+                "login": "（名单生成已跳过）"
+            }
+        ]
     req = urllib.request.urlopen("https://api.github.com/repos/ustclug/mirrorhelp/contributors")
     return json.load(req)
 
