@@ -94,6 +94,7 @@ USTC Mirror Help
    raspberrypi
    ros
    sagemath
+   winget-source
    xbmc
 
 .. toctree::
