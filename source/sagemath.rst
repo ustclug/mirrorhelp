@@ -15,7 +15,7 @@ Sagemath 源代码与旧版本二进制包的镜像
 使用说明
 ========
 
-新版 Sagemath 的二进制包已经不再通过官网分发，因此该镜像仅包含旧版本的包。
+新版 Sagemath 的二进制包已经不再通过官网分发，该镜像仅包含源代码包。
 
 根据 `Sage 安装手册 <https://doc.sagemath.org/html/en/installation/index.html>`_，可以从本镜像下载源代码后编译。
 如果不希望编译 Sagemath：
