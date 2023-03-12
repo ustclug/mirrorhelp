@@ -28,6 +28,40 @@
   Please include a single rst file in a [TOC tree](http://www.sphinx-doc.org/en/stable/markup/toctree.html).
   For example, add a reference in `index.rst`.
 
+## Environment setup
+
+1. Create a virtual environment
+
+    ```bash
+    python3 -m venv .env
+    ```
+2. Activate the virtual environment
+
+    ```bash
+    # bash
+    source .env/bin/activate
+    # fish
+    source .env/bin/activate.fish
+    ```
+3. Install dependencies
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. Build the documents
+
+    ```bash
+    make html
+    ```
+5. Open the documents
+
+    ```bash
+    # macOS/fish
+    open build/html/index.html
+    # Linux
+    xdg-open build/html/index.html
+    ```
+
 ## Credit
 
 For those who improved the documents, the GitHub username will be mentioned in the
@@ -61,6 +95,40 @@ For those who improved the documents, the GitHub username will be mentioned in t
   `make html` 会检查语法，请确保运行结果没有错误。
 
   单个 rst 文件需要被包含在 [TOC tree](http://www.sphinx-doc.org/en/stable/markup/toctree.html) 中，例如可以在 `index.rst` 文件中添加索引。
+
+## 环境配置
+
+1. 创建虚拟环境
+
+    ```bash
+    python3 -m venv .env
+    ```
+2. 激活虚拟环境
+
+    ```bash
+    # bash
+    source .env/bin/activate
+    # fish
+    source .env/bin/activate.fish
+    ```
+3. 安装依赖
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. 构建帮助文档
+
+    ```bash
+    make html
+    ```
+5. 查看构建的帮助文档
+
+    ```bash
+    # macOS/fish
+    open build/html/index.html
+    # Linux
+    xdg-open build/html/index.html
+    ```
 
 ## 署名
 
