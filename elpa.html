@@ -190,9 +190,9 @@
 <section id="id3">
 <h2>使用说明<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
 <p>在 Emacs 配置文件中（任何用到 <code class="docutils literal notranslate"><span class="pre">package</span></code> 特性的代码之前）添加如下内容：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">setq</span> <span class="n">package</span><span class="o">-</span><span class="n">archives</span> <span class="s1">&#39;((&quot;gnu&quot; . &quot;http://mirrors.ustc.edu.cn/elpa/gnu/&quot;)</span>
-                         <span class="p">(</span><span class="s2">&quot;melpa&quot;</span> <span class="o">.</span> <span class="s2">&quot;http://mirrors.ustc.edu.cn/elpa/melpa/&quot;</span><span class="p">)</span>
-                         <span class="p">(</span><span class="s2">&quot;nongnu&quot;</span> <span class="o">.</span> <span class="s2">&quot;http://mirrors.ustc.edu.cn/elpa/nongnu/&quot;</span><span class="p">)))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">setq</span> <span class="n">package</span><span class="o">-</span><span class="n">archives</span> <span class="s1">&#39;((&quot;gnu&quot; . &quot;https://mirrors.ustc.edu.cn/elpa/gnu/&quot;)</span>
+                         <span class="p">(</span><span class="s2">&quot;melpa&quot;</span> <span class="o">.</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/elpa/melpa/&quot;</span><span class="p">)</span>
+                         <span class="p">(</span><span class="s2">&quot;nongnu&quot;</span> <span class="o">.</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/elpa/nongnu/&quot;</span><span class="p">)))</span>
 </pre></div>
 </div>
 <p>或使用 Customize 功能修改 <code class="docutils literal notranslate"><span class="pre">Package</span> <span class="pre">Archives</span></code> 选项为上述内容。</p>
@@ -201,9 +201,9 @@
 <h2>Spacemacs 使用说明<a class="headerlink" href="#spacemacs" title="此标题的永久链接"></a></h2>
 <p>添加下面的代码到 <code class="docutils literal notranslate"><span class="pre">.spacemacs</span></code> 的 <code class="docutils literal notranslate"><span class="pre">dotspacemacs/user-init</span></code> 中：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">setq</span> <span class="n">configuration</span><span class="o">-</span><span class="n">layer</span><span class="o">--</span><span class="n">elpa</span><span class="o">-</span><span class="n">archives</span>
-      <span class="s1">&#39;((&quot;melpa-cn&quot; . &quot;http://mirrors.ustc.edu.cn/elpa/melpa/&quot;)</span>
-        <span class="p">(</span><span class="s2">&quot;nongnu-cn&quot;</span>   <span class="o">.</span> <span class="s2">&quot;http://mirrors.ustc.edu.cn/elpa/nongnu/&quot;</span><span class="p">)</span>
-        <span class="p">(</span><span class="s2">&quot;gnu-cn&quot;</span>   <span class="o">.</span> <span class="s2">&quot;http://mirrors.ustc.edu.cn/elpa/gnu/&quot;</span><span class="p">)))</span>
+      <span class="s1">&#39;((&quot;melpa-cn&quot; . &quot;https://mirrors.ustc.edu.cn/elpa/melpa/&quot;)</span>
+        <span class="p">(</span><span class="s2">&quot;nongnu-cn&quot;</span>   <span class="o">.</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/elpa/nongnu/&quot;</span><span class="p">)</span>
+        <span class="p">(</span><span class="s2">&quot;gnu-cn&quot;</span>   <span class="o">.</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/elpa/gnu/&quot;</span><span class="p">)))</span>
 </pre></div>
 </div>
 <p>develop 分支应使用 <code class="docutils literal notranslate"><span class="pre">configuration-layer-elpa-archives</span></code> 代替上面代码中的 <code class="docutils literal notranslate"><span class="pre">configuration-layer--elpa-archives</span></code> （ <code class="docutils literal notranslate"><span class="pre">--</span></code> 换成 <code class="docutils literal notranslate"><span class="pre">-</span></code> ）。</p>
