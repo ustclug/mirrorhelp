@@ -194,6 +194,14 @@
 </pre></div>
 </div>
 <p>更改完 <code class="file docutils literal notranslate"><span class="pre">sources.list</span></code> 文件后请运行 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code> 更新索引以生效。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>由于 Kali 仓库未使用 by-hash 机制，同步时的一致性无法保证。如果在同步时执行 <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">update</span></code>，可能会看到以下错误</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>E: 无法下载 https://mirrors.ustc.edu.cn/kali/dists/kali-rolling/main/source/Sources.gz 文件尺寸不符(14593053 != 14592993)。您使用的镜像正在同步中？
+</pre></div>
+</div>
+<p>如果出现以上错误，则需等待同步完成后再执行 <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">update</span></code>。</p>
+</div>
 </section>
 <section id="id5">
 <h2>相关链接<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
