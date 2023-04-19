@@ -132,9 +132,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#id3">使用说明</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#channel">替换 channel 为科大源</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#binary-cache">替换 binary cache 为科大源</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">临时使用</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">相关链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">相关链接</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="qtproject.html">Qt 镜像使用帮助</a></li>
@@ -227,11 +228,23 @@ $ nix-channel --update
 <p class="admonition-title">备注</p>
 <p>对于所有 NixOS 19.09 及之后的版本和 nix-darwin， <code class="docutils literal notranslate"><span class="pre">&quot;https://cache.nixos.org/&quot;</span></code> 会被自动添加到配置中。</p>
 </div>
+</section>
+<section id="id4">
+<h3>临时使用<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h3>
+<p>在安装 NixOS 时，添加 <cite>–option substituters</cite> 可以临时使用科大源：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># nixos-install --option substituters https://mirrors.ustc.edu.cn/nix-channels/store</span>
+</pre></div>
+</div>
+<p>同样，在 NixOS 切换配置时也可以设置为临时使用：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># nixos-rebuild --option substituters https://mirrors.ustc.edu.cn/nix-channels/store</span>
+</pre></div>
+</div>
+<p>将 <code class="docutils literal notranslate"><span class="pre">substituters</span></code> 后的参数设置为空字符串 <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> 可以临时禁用自己设置的镜像。</p>
 <p>本帮助参考了 <a class="reference external" href="https://mirrors.tuna.tsinghua.edu.cn/help/nix/">TUNA 的 nix 帮助</a> 编写。</p>
 </section>
 </section>
-<section id="id4">
-<h2>相关链接<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<section id="id5">
+<h2>相关链接<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">NixOS 主页<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://nixos.org/">https://nixos.org/</a></p>
