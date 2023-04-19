@@ -68,6 +68,23 @@ NixOS channel 也可以以类似命令替换，以 ``nixos-19.09`` 为例（需�
 .. note::
     对于所有 NixOS 19.09 及之后的版本和 nix-darwin， ``"https://cache.nixos.org/"`` 会被自动添加到配置中。
 
+临时使用
+^^^^^^^^
+
+在安装 NixOS 时，添加 `--option substituters` 可以临时使用科大源：
+
+::
+
+    # nixos-install --option substituters https://mirrors.ustc.edu.cn/nix-channels/store
+
+同样，在 NixOS 切换配置时也可以设置为临时使用：
+
+::
+
+    # nixos-rebuild --option substituters https://mirrors.ustc.edu.cn/nix-channels/store
+
+将 ``substituters`` 后的参数设置为空字符串 ``""`` 可以临时禁用自己设置的镜像。
+
 本帮助参考了 `TUNA 的 nix 帮助 <https://mirrors.tuna.tsinghua.edu.cn/help/nix/>`_ 编写。
 
 相关链接
