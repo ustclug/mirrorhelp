@@ -23,6 +23,7 @@ https://mirrors.ustc.edu.cn/github-release/
 * `adoptium/temurin19-binaries <https://github.com/adoptium/temurin19-binaries>`_
 * `pbatard/rufus <https://github.com/pbatard/rufus>`_
 * `Homebrew/homebrew-portable-ruby <https://github.com/Homebrew/homebrew-portable-ruby>`_
+* `Homebrew/glibc-bootstrap <https://github.com/Homebrew/glibc-bootstrap>`_
 * `3-manifolds/Sage_macOS <https://github.com/3-manifolds/Sage_macOS>`_
 
 镜像最新的两个版本：
