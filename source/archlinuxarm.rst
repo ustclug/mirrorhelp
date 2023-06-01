@@ -15,7 +15,7 @@ Arch Linux ARM 软件源
 收录架构
 ========
 
-ARMv5, ARMv6, ARMv7, AArch64
+ARMv7, AArch64
 
 使用说明
 ========
