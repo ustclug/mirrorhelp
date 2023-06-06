@@ -21,8 +21,8 @@ Stack 使用说明
 
 ::
 
-  package-indices:
-  - download-prefix: https://mirrors.ustc.edu.cn/hackage/
+  package-index:
+    download-prefix: https://mirrors.ustc.edu.cn/hackage/
     hackage-security:
       keyids:
       - 0a5c7ea47cd1b15f01f5f51a33adda7e655bc0f0b0615baa8e271f4c3351e21d
