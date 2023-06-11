@@ -190,7 +190,7 @@
 <section id="id4">
 <h2>收录版本<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
 <p>Debian Old Stable, Stable, Testing, Unstable(sid)</p>
-<p>当前 Stable 为 Debian 11，代号为 Bullseye</p>
+<p>当前 Stable 为 Debian 12，代号为 Bookworm</p>
 </section>
 <section id="id5">
 <h2>使用说明<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
@@ -205,19 +205,20 @@
 </pre></div>
 </div>
 <p>当然也可以直接编辑 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span> <span class="n">stable</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
-<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free</span>
-<span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span> <span class="n">stable</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
-<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span> <span class="n">stable</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span><span class="o">-</span><span class="n">firmware</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free non-free-firmware</span>
+<span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span> <span class="n">stable</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">contrib</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span><span class="o">-</span><span class="n">firmware</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free non-free-firmware</span>
 
-<span class="c1"># deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free</span>
-<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free</span>
+<span class="c1"># deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free non-free-firmware</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free non-free-firmware</span>
 </pre></div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
-<p>目前 Debian testing (bookworm) 与 sid 添加了非自由固件组件 <code class="docutils literal notranslate"><span class="pre">non-free-firmware</span></code>。
-如果正在使用 testing 或 sid，并且需要使用非自由固件，则在编辑配置时需要添加 <code class="docutils literal notranslate"><span class="pre">non-free-firmware</span></code>。
+<p>从 Debian 12 (bookworm) 开始，仓库添加了非自由固件组件 <code class="docutils literal notranslate"><span class="pre">non-free-firmware</span></code>。
+如果正在使用 bookworm, testing 或 sid，并且需要使用非自由固件，则在编辑配置时需要添加 <code class="docutils literal notranslate"><span class="pre">non-free-firmware</span></code>。
+其中以上参考配置已经添加。
 详情参考 <a class="reference external" href="https://wiki.debian.org/Firmware">https://wiki.debian.org/Firmware</a> 与 <a class="reference external" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1030189">Debian bug #1030189</a>。</p>
 </div>
 <p>同时你也可能需要更改 Debian Security 源，请参考 <a class="reference internal" href="debian-security.html"><span class="doc">Debian Security 源使用帮助</span></a></p>
