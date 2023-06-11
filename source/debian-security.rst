@@ -23,7 +23,7 @@ Debian 支持的所有架构，如 AMD64 (x86_64), Intel x86, ARM, MIPS, ppc64el
 
 Debian Old Old Stable, Old Stable, Stable
 
-当前 Stable 为 Debian 11，代号为 Bullseye
+当前 Stable 为 Debian 12，代号为 Bookworm
 
 使用说明
 ========

@@ -23,7 +23,7 @@ Debian 支持的所有架构，如 AMD64 (x86_64), Intel x86, ARM, MIPS, ppc64el
 
 Debian Old Stable, Stable, Testing, Unstable(sid)
 
-当前 Stable 为 Debian 11，代号为 Bullseye
+当前 Stable 为 Debian 12，代号为 Bookworm
 
 使用说明
 ========
@@ -45,17 +45,17 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
 ::
 
-    deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free
-    deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
+    deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free non-free-firmware
+    # deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free non-free-firmware
+    deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free non-free-firmware
+    # deb-src http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free non-free-firmware
 
-    # deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
+    # deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free non-free-firmware
+    # deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free non-free-firmware
 
 .. tip::
-    目前 Debian testing (bookworm) 与 sid 添加了非自由固件组件 ``non-free-firmware``。
-    如果正在使用 testing 或 sid，并且需要使用非自由固件，则在编辑配置时需要添加 ``non-free-firmware``。
+    从 Debian 12 (bookworm) 开始，仓库添加了非自由固件组件 ``non-free-firmware``。
+    如果正在使用 bookworm, testing 或 sid，并且需要使用非自由固件，则在编辑配置时需要添加 ``non-free-firmware``（以上配置已经添加）。
     详情参考 https://wiki.debian.org/Firmware 与 `Debian bug #1030189 <https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1030189>`_。
 
 同时你也可能需要更改 Debian Security 源，请参考 :doc:`debian-security`

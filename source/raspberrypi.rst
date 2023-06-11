@@ -31,6 +31,7 @@ https://mirrors.ustc.edu.cn/archive.raspberrypi.org/ 或 https://mirrors.ustc.ed
 * stretch
 * buster
 * bullseye
+* bookworm
 
 使用说明
 ========
