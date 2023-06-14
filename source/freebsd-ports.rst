@@ -26,7 +26,7 @@ ports.tar.gz 文件为 Ports Collection，可以下载后解压到 ``/usr/ports/
 
 ::
 
-    # git clone https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+    # git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 
 .. attention::
     部分 ports 的源代码需要从 http://distcache.freebsd.org/ports-distfiles/ 以外的 master site 下载，本镜像不包含这些文件。
