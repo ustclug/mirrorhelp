@@ -13,13 +13,13 @@ USTC Mirror Help
    archlinuxarm
    blackarch
    centos
-   epel
    debian
    debian-security
    debian-cd
    debian-cdimage
    debiancn
    deb-multimedia
+   epel
    fedora
    freebsd
    freebsd-pkg
@@ -73,7 +73,6 @@ USTC Mirror Help
    :maxdepth: 1
 
    anaconda
-   brew.git
    ceph
    CPAN
    CRAN
@@ -82,6 +81,7 @@ USTC Mirror Help
    eclipse
    elpa
    github-release
+   brew.git
    homebrew-bottles
    homebrew-core.git
    homebrew-cask.git
