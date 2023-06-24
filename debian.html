@@ -221,7 +221,29 @@
 其中以上参考配置已经添加。
 详情参考 <a class="reference external" href="https://wiki.debian.org/Firmware">https://wiki.debian.org/Firmware</a> 与 <a class="reference external" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1030189">Debian bug #1030189</a>。</p>
 </div>
-<p>同时你也可能需要更改 Debian Security 源，请参考 <a class="reference internal" href="debian-security.html"><span class="doc">Debian Security 源使用帮助</span></a></p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>Debian 12 (bookworm) 的<strong>容器</strong>镜像开始使用 DEB822 格式，而非上文使用的传统的 One-Line-Style 格式。
+对应需要修改的文件为 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/debian.sources</span></code>。同样可以使用如下命令：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s/deb.debian.org/mirrors.ustc.edu.cn/g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">debian</span><span class="o">.</span><span class="n">sources</span>
+</pre></div>
+</div>
+<p>以下是在 Debian 12 容器镜像中<strong>同时修改了 Debian 与 Debian Security 源的情况下</strong>的参考配置内容：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Types</span><span class="p">:</span> <span class="n">deb</span>
+<span class="n">URIs</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span>
+<span class="n">Suites</span><span class="p">:</span> <span class="n">bookworm</span> <span class="n">bookworm</span><span class="o">-</span><span class="n">updates</span>
+<span class="n">Components</span><span class="p">:</span> <span class="n">main</span>
+<span class="n">Signed</span><span class="o">-</span><span class="n">By</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">debian</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="n">gpg</span>
+
+<span class="n">Types</span><span class="p">:</span> <span class="n">deb</span>
+<span class="n">URIs</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">-</span><span class="n">security</span>
+<span class="n">Suites</span><span class="p">:</span> <span class="n">bookworm</span><span class="o">-</span><span class="n">security</span>
+<span class="n">Components</span><span class="p">:</span> <span class="n">main</span>
+<span class="n">Signed</span><span class="o">-</span><span class="n">By</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">debian</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="n">gpg</span>
+</pre></div>
+</div>
+</div>
+<p>同时你也可能需要更改 Debian Security 源，请参考 <a class="reference internal" href="debian-security.html"><span class="doc">Debian Security 源使用帮助</span></a>。</p>
 <p>更改完 <code class="file docutils literal notranslate"><span class="pre">sources.list</span></code> 文件后请运行 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code> 更新索引以生效。</p>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
