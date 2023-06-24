@@ -59,7 +59,31 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
     其中以上参考配置已经添加。
     详情参考 https://wiki.debian.org/Firmware 与 `Debian bug #1030189 <https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1030189>`_。
 
-同时你也可能需要更改 Debian Security 源，请参考 :doc:`debian-security`
+.. tip::
+    Debian 12 (bookworm) 的\ **容器**\ 镜像开始使用 DEB822 格式，而非上文使用的传统的 One-Line-Style 格式。
+    对应需要修改的文件为 :file:`/etc/apt/sources.list.d/debian.sources`。同样可以使用如下命令：
+
+    ::
+
+        sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources
+    
+    以下是在 Debian 12 容器镜像中\ **同时修改了 Debian 与 Debian Security 源的情况下**\ 的参考配置内容：
+
+    ::
+
+        Types: deb
+        URIs: http://mirrors.ustc.edu.cn/debian
+        Suites: bookworm bookworm-updates
+        Components: main
+        Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+        Types: deb
+        URIs: http://mirrors.ustc.edu.cn/debian-security
+        Suites: bookworm-security
+        Components: main
+        Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+同时你也可能需要更改 Debian Security 源，请参考 :doc:`debian-security`。
 
 更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
 
