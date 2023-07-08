@@ -27,7 +27,7 @@ Rust Crates Registry 源
         check-revoke = false
 
 .. note::
-    cargo 1.68 版本开始支持稀疏索引：不再需要完整克隆 crates.io-index 仓库，可以加快获取包的速度。如果您的 cargo 版本大于等于 1.68，可以在 :file:`$HOME/.cargo/config` 中添加如下内容：
+    cargo 1.68 版本开始支持稀疏索引：不再需要完整克隆 crates.io-index 仓库，可以加快获取包的速度。如果您的 cargo 版本大于等于 1.68，可以在 :file:`$CARGO_HOME/config.toml` 中添加如下内容：
 
     ::
 
@@ -37,7 +37,22 @@ Rust Crates Registry 源
         [source.ustc]
         registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 
-在 :file:`$HOME/.cargo/config` 中添加如下内容：
+    可以使用下面的命令完成 
+
+    ::
+
+        mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
+
+        cat << EOF tee -a ${CARGO_HOME:-$HOME/.cargo}/config.toml
+        [source.crates-io]
+        replace-with = 'ustc'
+
+        [source.ustc]
+        registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
+        EOF
+
+
+在 :file:`$CARGO_HOME/config.toml` 中添加如下内容：
 
 ::
 
@@ -46,6 +61,20 @@ Rust Crates Registry 源
 
     [source.ustc]
     registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+
+可以使用下面的命令完成
+
+::
+
+    mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
+
+    cat << EOF tee -a ${CARGO_HOME:-$HOME/.cargo}/config.toml
+    [source.crates-io]
+    replace-with = 'ustc'
+
+    [source.ustc]
+    registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+    EOF
 
 如果所处的环境中不允许使用 git 协议，可以把上述地址改为：
 
