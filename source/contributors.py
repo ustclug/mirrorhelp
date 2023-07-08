@@ -1,6 +1,6 @@
 import os
 import json
-import urllib.request
+import requests
 
 
 HEADER = """\
@@ -15,14 +15,20 @@ HEADER = """\
 
 
 def get_api():
-    if os.environ.get("DEV"):
+    if "CI" not in os.environ:
         return [
             {
                 "login": "（名单生成已跳过）"
             }
         ]
-    req = urllib.request.urlopen("https://api.github.com/repos/ustclug/mirrorhelp/contributors")
-    return json.load(req)
+    headers = {
+        "User-Agent": "Python/0.0.1 (+https://github.com/ustclug/mirrorhelp/blob/master/source/contributors.py)"
+    }
+    if "GITHUB_TOKEN" in os.environ:
+        headers["Authorization"] = f"token {os.environ['GITHUB_TOKEN']}"
+    r = requests.get("https://api.github.com/repos/ustclug/mirrorhelp/contributors", headers=headers)
+    r.raise_for_status()
+    return r.json()
 
 
 def main(app):
