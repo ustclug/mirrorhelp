@@ -183,6 +183,64 @@
 </section>
 <section id="id3">
 <h2>使用说明<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<p>在 <code class="file docutils literal notranslate"><span class="pre">$CARGO_HOME/config</span></code> 中添加如下内容：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">source</span><span class="o">.</span><span class="n">crates</span><span class="o">-</span><span class="n">io</span><span class="p">]</span>
+<span class="n">replace</span><span class="o">-</span><span class="k">with</span> <span class="o">=</span> <span class="s1">&#39;ustc&#39;</span>
+
+<span class="p">[</span><span class="n">source</span><span class="o">.</span><span class="n">ustc</span><span class="p">]</span>
+<span class="n">registry</span> <span class="o">=</span> <span class="s2">&quot;git://mirrors.ustc.edu.cn/crates.io-index&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><code class="docutils literal notranslate"><span class="pre">$CARGO_HOME</span></code> 在 Windows 系统默认为：<code class="docutils literal notranslate"><span class="pre">%USERPROFILE%\.cargo</span></code>，在类 Unix 系统默认为：<code class="docutils literal notranslate"><span class="pre">$HOME/.cargo</span></code></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>如果所处的环境中不允许使用 git 协议，可以把上述地址改为：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">registry</span> <span class="o">=</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/crates.io-index&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>在 Linux 环境可以使用下面的命令完成：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
+
+cat &lt;&lt; EOF tee -a ${CARGO_HOME:-$HOME/.cargo}/config
+[source.crates-io]
+replace-with = &#39;ustc&#39;
+
+[source.ustc]
+registry = &quot;git://mirrors.ustc.edu.cn/crates.io-index&quot;
+EOF
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>cargo 1.68 版本开始支持稀疏索引：不再需要完整克隆 crates.io-index 仓库，可以加快获取包的速度。如果您的 cargo 版本大于等于 1.68，可以在 <code class="file docutils literal notranslate"><span class="pre">$CARGO_HOME/config</span></code> 中添加如下内容：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">source</span><span class="o">.</span><span class="n">crates</span><span class="o">-</span><span class="n">io</span><span class="p">]</span>
+<span class="n">replace</span><span class="o">-</span><span class="k">with</span> <span class="o">=</span> <span class="s1">&#39;ustc&#39;</span>
+
+<span class="p">[</span><span class="n">source</span><span class="o">.</span><span class="n">ustc</span><span class="p">]</span>
+<span class="n">registry</span> <span class="o">=</span> <span class="s2">&quot;sparse+https://mirrors.ustc.edu.cn/crates.io-index/&quot;</span>
+</pre></div>
+</div>
+<p>在 Linux 环境可以使用下面的命令完成：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
+
+cat &lt;&lt; EOF tee -a ${CARGO_HOME:-$HOME/.cargo}/config
+[source.crates-io]
+replace-with = &#39;ustc&#39;
+
+[source.ustc]
+registry = &quot;sparse+https://mirrors.ustc.edu.cn/crates.io-index/&quot;
+EOF
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p><code class="docutils literal notranslate"><span class="pre">cargo</span> <span class="pre">search</span></code> 无法使用镜像。</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>若使用 crates 源时出现 <code class="code docutils literal notranslate"><span class="pre">Couldn't</span> <span class="pre">resolve</span> <span class="pre">host</span> <span class="pre">name</span> <span class="pre">(Could</span> <span class="pre">not</span> <span class="pre">resolve</span> <span class="pre">host:</span> <span class="pre">crates)</span></code> 错误（见 <a class="reference external" href="https://github.com/ustclug/discussions/issues/294">https://github.com/ustclug/discussions/issues/294</a>），可能需要在运行 <code class="code docutils literal notranslate"><span class="pre">cargo</span></code> 的时候加入环境变量 <code class="code docutils literal notranslate"><span class="pre">CARGO_HTTP_MULTIPLEXING=false</span></code>。</p>
@@ -194,33 +252,6 @@
 <span class="n">check</span><span class="o">-</span><span class="n">revoke</span> <span class="o">=</span> <span class="n">false</span>
 </pre></div>
 </div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">备注</p>
-<p>cargo 1.68 版本开始支持稀疏索引：不再需要完整克隆 crates.io-index 仓库，可以加快获取包的速度。如果您的 cargo 版本大于等于 1.68，可以在 <code class="file docutils literal notranslate"><span class="pre">$HOME/.cargo/config</span></code> 中添加如下内容：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">source</span><span class="o">.</span><span class="n">crates</span><span class="o">-</span><span class="n">io</span><span class="p">]</span>
-<span class="n">replace</span><span class="o">-</span><span class="k">with</span> <span class="o">=</span> <span class="s1">&#39;ustc&#39;</span>
-
-<span class="p">[</span><span class="n">source</span><span class="o">.</span><span class="n">ustc</span><span class="p">]</span>
-<span class="n">registry</span> <span class="o">=</span> <span class="s2">&quot;sparse+https://mirrors.ustc.edu.cn/crates.io-index/&quot;</span>
-</pre></div>
-</div>
-</div>
-<p>在 <code class="file docutils literal notranslate"><span class="pre">$HOME/.cargo/config</span></code> 中添加如下内容：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">source</span><span class="o">.</span><span class="n">crates</span><span class="o">-</span><span class="n">io</span><span class="p">]</span>
-<span class="n">replace</span><span class="o">-</span><span class="k">with</span> <span class="o">=</span> <span class="s1">&#39;ustc&#39;</span>
-
-<span class="p">[</span><span class="n">source</span><span class="o">.</span><span class="n">ustc</span><span class="p">]</span>
-<span class="n">registry</span> <span class="o">=</span> <span class="s2">&quot;git://mirrors.ustc.edu.cn/crates.io-index&quot;</span>
-</pre></div>
-</div>
-<p>如果所处的环境中不允许使用 git 协议，可以把上述地址改为：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">registry</span> <span class="o">=</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/crates.io-index&quot;</span>
-</pre></div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">警告</p>
-<p><code class="docutils literal notranslate"><span class="pre">cargo</span> <span class="pre">search</span></code> 无法使用镜像。</p>
 </div>
 </section>
 <section id="id4">
