@@ -18,9 +18,7 @@ Rust Crates Registry 源
 在 :file:`$CARGO_HOME/config` 中添加如下内容：
 
 .. note::
-    Windows 系统默认路径为: `%USERPROFILE%\.cargo\config`
-    
-    类 Unix 系统默认路径为: `$HOME/.cargo/config` 
+    Windows 系统默认路径为: ``%USERPROFILE%\.cargo\config``，类 Unix 系统默认路径为: ``$HOME/.cargo/config``
 
 ::
 
@@ -30,7 +28,7 @@ Rust Crates Registry 源
     [source.ustc]
     registry = "git://mirrors.ustc.edu.cn/crates.io-index"
 
-在 Linux 环境可以使用下面的命令完成
+在 Linux 环境可以使用下面的命令完成:
 
 ::
 
@@ -61,7 +59,7 @@ Rust Crates Registry 源
         [source.ustc]
         registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 
-    在 Linux 环境可以使用下面的命令完成
+    在 Linux 环境可以使用下面的命令完成:
 
     ::
 
