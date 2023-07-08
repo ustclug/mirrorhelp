@@ -51,8 +51,7 @@
 4. Build the documents
 
     ```bash
-    # Set DEV=1 to skip building the contributor list, to avoid GitHub API rate limit
-    DEV=1 make html
+    make html
     ```
 5. Open the documents
 
@@ -120,8 +119,7 @@ For those who improved the documents, the GitHub username will be mentioned in t
 4. 构建帮助文档
 
     ```bash
-    # 设置 DEV=1 时不会构建贡献者名单，避免触发 GitHub API 限制
-    DEV=1 make html
+    make html
     ```
 5. 查看构建的帮助文档
 
