@@ -52,7 +52,7 @@ Rust Crates Registry 源
         EOF
 
 
-在 :file:`$CARGO_HOME/config.toml` 中添加如下内容：
+在 :file:`$CARGO_HOME/config` 中添加如下内容：
 
 ::
 
