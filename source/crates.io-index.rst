@@ -17,9 +17,6 @@ Rust Crates Registry 源
 
 在 :file:`$CARGO_HOME/config` 中添加如下内容：
 
-.. note::
-    Windows 系统默认路径为: ``%USERPROFILE%\.cargo\config``，类 Unix 系统默认路径为: ``$HOME/.cargo/config``
-
 ::
 
     [source.crates-io]
@@ -27,6 +24,16 @@ Rust Crates Registry 源
 
     [source.ustc]
     registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+
+.. note::
+    ``$CARGO_HOME`` 在 Windows 系统默认为：``%USERPROFILE%\.cargo``，在类 Unix 系统默认为：``$HOME/.cargo``
+
+.. note::
+    如果所处的环境中不允许使用 git 协议，可以把上述地址改为：
+
+    ::
+
+        registry = "https://mirrors.ustc.edu.cn/crates.io-index"
 
 在 Linux 环境可以使用下面的命令完成:
 
@@ -41,12 +48,6 @@ Rust Crates Registry 源
     [source.ustc]
     registry = "git://mirrors.ustc.edu.cn/crates.io-index"
     EOF
-
-如果所处的环境中不允许使用 git 协议，可以把上述地址改为：
-
-::
-
-    registry = "https://mirrors.ustc.edu.cn/crates.io-index"
 
 .. note::
     cargo 1.68 版本开始支持稀疏索引：不再需要完整克隆 crates.io-index 仓库，可以加快获取包的速度。如果您的 cargo 版本大于等于 1.68，可以在 :file:`$CARGO_HOME/config` 中添加如下内容：
