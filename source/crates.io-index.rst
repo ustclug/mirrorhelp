@@ -37,7 +37,7 @@ Rust Crates Registry 源
         [source.ustc]
         registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 
-    可以使用下面的命令完成 
+    在 Linux 环境可以使用下面的命令完成
 
     ::
 
@@ -62,7 +62,7 @@ Rust Crates Registry 源
     [source.ustc]
     registry = "git://mirrors.ustc.edu.cn/crates.io-index"
 
-可以使用下面的命令完成
+在 Linux 环境可以使用下面的命令完成
 
 ::
 
