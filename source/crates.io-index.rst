@@ -19,6 +19,7 @@ Rust Crates Registry 源
 
 .. note::
     Windows 系统默认路径为: `%USERPROFILE%\.cargo\config`
+    
     类 Unix 系统默认路径为: `$HOME/.cargo/config` 
 
 ::
