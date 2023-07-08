@@ -27,7 +27,7 @@ Rust Crates Registry 源
         check-revoke = false
 
 .. note::
-    cargo 1.68 版本开始支持稀疏索引：不再需要完整克隆 crates.io-index 仓库，可以加快获取包的速度。如果您的 cargo 版本大于等于 1.68，可以在 :file:`$CARGO_HOME/config.toml` 中添加如下内容：
+    cargo 1.68 版本开始支持稀疏索引：不再需要完整克隆 crates.io-index 仓库，可以加快获取包的速度。如果您的 cargo 版本大于等于 1.68，可以在 :file:`$CARGO_HOME/config` 中添加如下内容：
 
     ::
 
@@ -43,7 +43,7 @@ Rust Crates Registry 源
 
         mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
 
-        cat << EOF tee -a ${CARGO_HOME:-$HOME/.cargo}/config.toml
+        cat << EOF tee -a ${CARGO_HOME:-$HOME/.cargo}/config
         [source.crates-io]
         replace-with = 'ustc'
 
@@ -68,7 +68,7 @@ Rust Crates Registry 源
 
     mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
 
-    cat << EOF tee -a ${CARGO_HOME:-$HOME/.cargo}/config.toml
+    cat << EOF tee -a ${CARGO_HOME:-$HOME/.cargo}/config
     [source.crates-io]
     replace-with = 'ustc'
 
