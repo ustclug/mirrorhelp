@@ -205,7 +205,7 @@
 <p>在 Linux 环境可以使用下面的命令完成：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
 
-cat &lt;&lt; EOF tee -a ${CARGO_HOME:-$HOME/.cargo}/config
+cat &lt;&lt; EOF | tee -a ${CARGO_HOME:-$HOME/.cargo}/config
 [source.crates-io]
 replace-with = &#39;ustc&#39;
 
@@ -227,7 +227,7 @@ EOF
 <p>在 Linux 环境可以使用下面的命令完成：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
 
-cat &lt;&lt; EOF tee -a ${CARGO_HOME:-$HOME/.cargo}/config
+cat &lt;&lt; EOF | tee -a ${CARGO_HOME:-$HOME/.cargo}/config
 [source.crates-io]
 replace-with = &#39;ustc&#39;
 
