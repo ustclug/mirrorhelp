@@ -41,7 +41,7 @@ Rust Crates Registry 源
 
     mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
 
-    cat << EOF tee -a ${CARGO_HOME:-$HOME/.cargo}/config
+    cat << EOF | tee -a ${CARGO_HOME:-$HOME/.cargo}/config
     [source.crates-io]
     replace-with = 'ustc'
 
@@ -66,7 +66,7 @@ Rust Crates Registry 源
 
         mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
 
-        cat << EOF tee -a ${CARGO_HOME:-$HOME/.cargo}/config
+        cat << EOF | tee -a ${CARGO_HOME:-$HOME/.cargo}/config
         [source.crates-io]
         replace-with = 'ustc'
 
