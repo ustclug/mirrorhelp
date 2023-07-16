@@ -15,12 +15,12 @@ FreeBSD 预编译软件包镜像
 收录架构
 ========
 
-所有受官方支持的架构，当前稳定版 FreeBSD 11 支持的架构包括 amd64, i386, armv6, aarch64, mips, mips64。
+所有受官方支持的架构，当前稳定版 FreeBSD 13 支持的架构包括 amd64, i386, aarch64。
 
 收录版本
 ========
 
-自 FreeBSD 10 以后的版本，包括 quarterly 和滚动更新的 latest 仓库。
+自 FreeBSD 11 以后的版本，包括 quarterly 和滚动更新的 latest 仓库。
 
 FreeBSD 9 以前的版本不支持新的 pkg 包管理器（pkgng），请升级到新版。
 
@@ -34,7 +34,7 @@ FreeBSD pkg 包管理器的官方源配置是 :file:`/etc/pkg/FreeBSD.conf` ，�
 ::
 
   FreeBSD: {
-    url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+    url: "http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
   }
 
 如果要使用滚动更新的 latest 仓库，把 ``url`` 配置最后的 ``quarterly`` 换成 ``latest`` 即可。
