@@ -185,11 +185,11 @@
 </section>
 <section id="id3">
 <h2>收录架构<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
-<p>所有受官方支持的架构，当前稳定版 FreeBSD 11 支持的架构包括 amd64, i386, armv6, aarch64, mips, mips64。</p>
+<p>所有受官方支持的架构，当前稳定版 FreeBSD 13 支持的架构包括 amd64, i386, aarch64。</p>
 </section>
 <section id="id4">
 <h2>收录版本<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
-<p>自 FreeBSD 10 以后的版本，包括 quarterly 和滚动更新的 latest 仓库。</p>
+<p>自 FreeBSD 11 以后的版本，包括 quarterly 和滚动更新的 latest 仓库。</p>
 <p>FreeBSD 9 以前的版本不支持新的 pkg 包管理器（pkgng），请升级到新版。</p>
 </section>
 <section id="id5">
@@ -197,7 +197,7 @@
 <p>FreeBSD pkg 包管理器的官方源配置是 <code class="file docutils literal notranslate"><span class="pre">/etc/pkg/FreeBSD.conf</span></code> ，请先检查该文件内容。注意其中的 <code class="docutils literal notranslate"><span class="pre">url</span></code> 参数配置了官方仓库的地址，我们需要把它替换为镜像站的地址。</p>
 <p>该配置文件是 FreeBSD 基本系统的一部分，会随着 <code class="docutils literal notranslate"><span class="pre">freebsd-update</span></code> 更新，请不要直接修改，而是创建 <code class="file docutils literal notranslate"><span class="pre">/usr/local/etc/pkg/repos/FreeBSD.conf</span></code> 覆盖配置，文件内容如下：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FreeBSD</span><span class="p">:</span> <span class="p">{</span>
-  <span class="n">url</span><span class="p">:</span> <span class="s2">&quot;pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/$</span><span class="si">{ABI}</span><span class="s2">/quarterly&quot;</span><span class="p">,</span>
+  <span class="n">url</span><span class="p">:</span> <span class="s2">&quot;http://mirrors.ustc.edu.cn/freebsd-pkg/$</span><span class="si">{ABI}</span><span class="s2">/quarterly&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
 </div>
