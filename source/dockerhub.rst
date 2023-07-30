@@ -140,7 +140,7 @@ Redis 容器：
         -p 127.0.0.1:5000:5000/tcp \
         --log-driver=journald \
         --log-opt tag="dockerd-dockerhub" \
-        registry:2.5.1
+        registry:2.8.2
 
 :file:`/srv/docker/dockerhub/config.yml` 的参考内容:
 
