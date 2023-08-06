@@ -37,6 +37,7 @@ Homebrew cask 其他版本 (alternative versions) 软件仓库，提供使用人
 - :doc:`homebrew-bottles`
 - :doc:`homebrew-core.git`
 - :doc:`homebrew-cask.git`
+- :doc:`homebrew-services.git`
 
 相关链接
 ========

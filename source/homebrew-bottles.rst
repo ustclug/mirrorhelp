@@ -54,6 +54,7 @@ Homebrew 预编译二进制软件包与软件包元数据文件
 - :doc:`homebrew-core.git`
 - :doc:`homebrew-cask.git`
 - :doc:`homebrew-cask-versions.git`
+- :doc:`homebrew-services.git`
 
 相关链接
 ========

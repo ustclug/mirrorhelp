@@ -65,6 +65,7 @@ Homebrew 核心软件仓库
 - :doc:`homebrew-bottles`
 - :doc:`homebrew-cask.git`
 - :doc:`homebrew-cask-versions.git`
+- :doc:`homebrew-services.git`
 
 相关链接
 ========

@@ -86,6 +86,7 @@ USTC Mirror Help
    homebrew-core.git
    homebrew-cask.git
    homebrew-cask-versions.git
+   homebrew-services.git
    influxdata
    linux.git
    mariadb

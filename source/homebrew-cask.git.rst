@@ -43,6 +43,7 @@ Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件
 - :doc:`homebrew-bottles`
 - :doc:`homebrew-core.git`
 - :doc:`homebrew-cask-versions.git`
+- :doc:`homebrew-services.git`
 
 相关链接
 ========
