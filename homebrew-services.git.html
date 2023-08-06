@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ROS 源使用帮助 &mdash; USTC Mirror Help  文档</title>
+  <title>Homebrew Services 源使用帮助 &mdash; USTC Mirror Help  文档</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -21,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Sagemath 镜像使用帮助" href="sagemath.html" />
-    <link rel="prev" title="Raspberrypi 源使用帮助" href="raspberrypi.html" /> 
+    <link rel="next" title="InfluxData 镜像使用帮助" href="influxdata.html" />
+    <link rel="prev" title="Homebrew Cask Versions 源使用帮助" href="homebrew-cask-versions.git.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -123,23 +123,21 @@
 <li class="toctree-l1"><a class="reference internal" href="homebrew-core.git.html">Homebrew Core 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="homebrew-cask.git.html">Homebrew Cask 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="homebrew-cask-versions.git.html">Homebrew Cask Versions 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-services.git.html">Homebrew Services 源使用帮助</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Homebrew Services 源使用帮助</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">使用说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">相关镜像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">相关链接</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="influxdata.html">InfluxData 镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux.git.html">Linux 内核源码镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mariadb.html">MariaDB 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nix-channels.html">Nix Channels 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qtproject.html">Qt 镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="raspberrypi.html">Raspberrypi 源使用帮助</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">ROS 源使用帮助</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">使用说明</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#ubuntu-debian">Ubuntu, Debian</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">相关链接</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="ros.html">ROS 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sagemath.html">Sagemath 镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="winget-source.html">WinGet 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="xbmc.html">XBMC/Kodi 镜像使用帮助</a></li>
@@ -165,9 +163,9 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">ROS 源使用帮助</li>
+      <li class="breadcrumb-item active">Homebrew Services 源使用帮助</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/ros.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
+              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/homebrew-services.git.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
   </ul>
   <hr/>
@@ -175,44 +173,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ros">
-<h1>ROS 源使用帮助<a class="headerlink" href="#ros" title="此标题的永久链接"></a></h1>
+  <section id="homebrew-services">
+<h1>Homebrew Services 源使用帮助<a class="headerlink" href="#homebrew-services" title="此标题的永久链接"></a></h1>
 <section id="id1">
 <h2>地址<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
-<p><a class="reference external" href="https://mirrors.ustc.edu.cn/ros/">https://mirrors.ustc.edu.cn/ros/</a></p>
+<p><a class="reference external" href="https://mirrors.ustc.edu.cn/homebrew-services.git/">https://mirrors.ustc.edu.cn/homebrew-services.git/</a></p>
 </section>
 <section id="id2">
 <h2>说明<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
-<p>机器人操作系统（ROS）的软件源镜像。</p>
+<p>与 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">services</span></code> 有关的文件，用于在 macOS (<code class="docutils literal notranslate"><span class="pre">launchctl</span></code>) 与 Linux (<code class="docutils literal notranslate"><span class="pre">systemctl</span></code>) 上管理 brew 安装的服务。</p>
 </section>
 <section id="id3">
 <h2>使用说明<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
-<section id="ubuntu-debian">
-<h3>Ubuntu, Debian<a class="headerlink" href="#ubuntu-debian" title="此标题的永久链接"></a></h3>
-<ol class="arabic">
-<li><p>导入key:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gpg</span> <span class="o">--</span><span class="n">keyserver</span> <span class="s1">&#39;hkp://keyserver.ubuntu.com:80&#39;</span> <span class="o">--</span><span class="n">recv</span><span class="o">-</span><span class="n">key</span> <span class="n">C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</span>
-<span class="n">gpg</span> <span class="o">--</span><span class="n">export</span> <span class="n">C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">ros</span><span class="o">.</span><span class="n">gpg</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
+<p>使用 USTC 镜像安装，或将已安装的仓库远程替换为 USTC 镜像：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">tap</span> <span class="o">--</span><span class="n">custom</span><span class="o">-</span><span class="n">remote</span> <span class="o">--</span><span class="n">force</span><span class="o">-</span><span class="n">auto</span><span class="o">-</span><span class="n">update</span> <span class="n">homebrew</span><span class="o">/</span><span class="n">services</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">homebrew</span><span class="o">-</span><span class="n">services</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
-</li>
-<li><p>将软件源添加至系统:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;deb [signed-by=/usr/share/keyrings/ros.gpg] https://mirrors.ustc.edu.cn/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>若出现 <code class="docutils literal notranslate"><span class="pre">Error:</span> <span class="pre">invalid</span> <span class="pre">option:</span> <span class="pre">--custom-remote</span></code> 错误，请先运行 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">update</span></code> 将 <code class="docutils literal notranslate"><span class="pre">brew</span></code> 更新至 3.2.17 或以上版本。</p>
+</div>
+<p>重置为官方地址：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">tap</span> <span class="o">--</span><span class="n">custom</span><span class="o">-</span><span class="n">remote</span> <span class="o">--</span><span class="n">force</span><span class="o">-</span><span class="n">auto</span><span class="o">-</span><span class="n">update</span> <span class="n">homebrew</span><span class="o">/</span><span class="n">services</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">homebrew</span><span class="o">-</span><span class="n">services</span>
 </pre></div>
 </div>
-</li>
-</ol>
-<p>如果 IPv6 地址无效导致无法刷新软件源信息，将 <code class="docutils literal notranslate"><span class="pre">mirrors.ustc.edu.cn</span></code> 改成 <code class="docutils literal notranslate"><span class="pre">ipv4.mirrors.ustc.edu.cn</span></code> 以强制使用 IPv4。</p>
-<ol class="arabic simple" start="3">
-<li><p>刷新软件源缓存 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code>，安装所需的 ROS 发行版。</p></li>
-</ol>
-</section>
 </section>
 <section id="id4">
-<h2>相关链接<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<h2>相关镜像<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="brew.git.html"><span class="doc">Homebrew 源使用帮助</span></a></p></li>
+<li><p><a class="reference internal" href="homebrew-bottles.html"><span class="doc">Homebrew Bottles 源使用帮助</span></a></p></li>
+<li><p><a class="reference internal" href="homebrew-core.git.html"><span class="doc">Homebrew Core 源使用帮助</span></a></p></li>
+<li><p><a class="reference internal" href="homebrew-cask.git.html"><span class="doc">Homebrew Cask 源使用帮助</span></a></p></li>
+<li><p><a class="reference internal" href="homebrew-cask-versions.git.html"><span class="doc">Homebrew Cask Versions 源使用帮助</span></a></p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>相关链接<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
 <dl class="field-list simple">
-<dt class="field-odd">项目主页<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://www.ros.org/">http://www.ros.org/</a></p>
+<dt class="field-odd">官方主页<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Homebrew/homebrew-services">https://github.com/Homebrew/homebrew-services</a></p>
+</dd>
+<dt class="field-even">Homebrew<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://brew.sh/">https://brew.sh/</a></p>
 </dd>
 </dl>
 </section>
@@ -222,8 +225,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="raspberrypi.html" class="btn btn-neutral float-left" title="Raspberrypi 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="sagemath.html" class="btn btn-neutral float-right" title="Sagemath 镜像使用帮助" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="homebrew-cask-versions.git.html" class="btn btn-neutral float-left" title="Homebrew Cask Versions 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="influxdata.html" class="btn btn-neutral float-right" title="InfluxData 镜像使用帮助" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
