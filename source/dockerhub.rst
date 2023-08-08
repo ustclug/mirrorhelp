@@ -186,6 +186,12 @@ Redis 容器：
             enabled: true
             interval: 10s
             threshold: 3
+    
+    # 部分上游需要该选项，诸如 quay
+    # 详情参 https://github.com/distribution/distribution/issues/2367#issuecomment-454805687
+    # compatibility:
+    #     schema1:
+    #         enabled: true
 
     proxy:
         remoteurl: https://registry-1.docker.io
