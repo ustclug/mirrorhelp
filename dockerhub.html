@@ -335,6 +335,12 @@
         <span class="n">interval</span><span class="p">:</span> <span class="mi">10</span><span class="n">s</span>
         <span class="n">threshold</span><span class="p">:</span> <span class="mi">3</span>
 
+<span class="c1"># 部分上游需要该选项，诸如 quay</span>
+<span class="c1"># 详情参 https://github.com/distribution/distribution/issues/2367#issuecomment-454805687</span>
+<span class="c1"># compatibility:</span>
+<span class="c1">#     schema1:</span>
+<span class="c1">#         enabled: true</span>
+
 <span class="n">proxy</span><span class="p">:</span>
     <span class="n">remoteurl</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">registry</span><span class="o">-</span><span class="mf">1.</span><span class="n">docker</span><span class="o">.</span><span class="n">io</span>
     <span class="c1"># 更换为上游的地址。</span>
