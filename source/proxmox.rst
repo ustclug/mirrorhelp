@@ -52,6 +52,14 @@ Debian，Proxmox
 
 对于 Proxmox Backup Server 和 Proxmox Mail Gateway，请将以上命令中的 ``pve`` 分别替换为 ``pbs`` 和 ``pmg``。
 
+修改 Ceph 源文件，可以使用如下命令：（从 PVE8 及之后版本需修改 Ceph 源， PVE7 及之前版本无需修改）
+
+::
+
+  source /etc/os-release
+  echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-quincy $VERSION_CODENAME no-subscription" > /etc/apt/sources.list.d/ceph.list
+
+
 更改完 :file:`sources.list` 文件后请运行 ``apt update`` 更新索引以生效。
 
 
