@@ -56,7 +56,8 @@ Debian，Proxmox
 
 ::
 
-  if [ -f /etc/apt/sources.list.d/ceph.list ]; then source /etc/os-release; echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-quincy $VERSION_CODENAME no-subscription" > /etc/apt/sources.list.d/ceph.list; fi
+  sed -i 's|^deb https://enterprise.proxmox.com/debian/ceph|deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph|g' /etc/apt/sources.list.d/ceph.list
+  sed -i 's|enterprise|no-subscription|g' /etc/apt/sources.list.d/ceph.list
 
 
 更改完 :file:`sources.list` 文件后请运行 ``apt update`` 更新索引以生效。
