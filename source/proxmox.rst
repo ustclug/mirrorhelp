@@ -52,7 +52,7 @@ Debian，Proxmox
 
 对于 Proxmox Backup Server 和 Proxmox Mail Gateway，请将以上命令中的 ``pve`` 分别替换为 ``pbs`` 和 ``pmg``。
 
-如果需要使用 ceph，在 PVE 8 之后可以使用如下命令修改 ceph 仓库源文件：
+PVE 8 之后默认安装 ceph 仓库源文件 ``/etc/apt/sources.list.d/ceph.list``，可以使用如下命令更换源：
 
 ::
 
