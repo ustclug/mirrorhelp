@@ -215,6 +215,10 @@
 </pre></div>
 </div>
 <p>对于 Proxmox Backup Server 和 Proxmox Mail Gateway，请将以上命令中的 <code class="docutils literal notranslate"><span class="pre">pve</span></code> 分别替换为 <code class="docutils literal notranslate"><span class="pre">pbs</span></code> 和 <code class="docutils literal notranslate"><span class="pre">pmg</span></code>。</p>
+<p>PVE 8 之后默认安装 ceph 仓库源文件 <code class="docutils literal notranslate"><span class="pre">/etc/apt/sources.list.d/ceph.list</span></code>，可以使用如下命令更换源：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>if [ -f /etc/apt/sources.list.d/ceph.list ]; then CEPH_CODENAME=`ceph -v | grep ceph | awk &#39;{print $(NF-1)}&#39;`; source /etc/os-release; echo &quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-$CEPH_CODENAME $VERSION_CODENAME no-subscription&quot; &gt; /etc/apt/sources.list.d/ceph.list; fi
+</pre></div>
+</div>
 <p>更改完 <code class="file docutils literal notranslate"><span class="pre">sources.list</span></code> 文件后请运行 <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">update</span></code> 更新索引以生效。</p>
 </section>
 <section id="ct-templates">
