@@ -12,10 +12,10 @@ https://mirrors.ustc.edu.cn/openwrt/
 
 OpenWRT/LEDE 下载站镜像。
 
-这是对 https://downloads.openwrt.org/ 的除了 snapshots 以外的完整镜像，内容包括官方支持的平台的 ROM、SDK 及工具链、软件仓库镜像等。
+这是对 https://downloads.openwrt.org/ 的除了 snapshots 与预发布版本（RC）以外的完整镜像，内容包括官方支持的平台的 ROM、SDK 及工具链、软件仓库镜像等。
 
 .. tip::
-    访问 snapshots 会重定向至反向代理，如果需要下载 snapshots 中的内容，务必使用 HTTPS，否则连接可能会被中断。
+    访问 snapshots 与 RC 版本内容会重定向至反向代理，如果需要下载相关文件，务必使用 HTTPS，否则连接可能会被中断。
 
 .. tip::
     访问 https://mirrors.ustc.edu.cn/lede/ 会被自动重定向到 https://mirrors.ustc.edu.cn/openwrt/。
