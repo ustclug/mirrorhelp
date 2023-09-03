@@ -94,6 +94,7 @@ USTC Mirror Help
    qtproject
    raspberrypi
    ros
+   rosdistro
    sagemath
    winget-source
    xbmc

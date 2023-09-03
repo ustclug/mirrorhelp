@@ -31,6 +31,10 @@ Ubuntu, Debian
 
 3. 刷新软件源缓存 ``sudo apt update``，安装所需的 ROS 发行版。
 
+相关镜像
+========
+- :doc:`rosdistro`
+
 相关链接
 ========
 
