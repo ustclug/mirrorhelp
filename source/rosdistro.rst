@@ -32,6 +32,8 @@ https://mirrors.ustc.edu.cn/rosdistro/
     # 可以考虑持久化以上环境变量：
     $ echo 'export ROSDISTRO_INDEX_URL=https://mirrors.ustc.edu.cn/rosdistro/index-v4.yaml' >> ~/.bashrc
 
+本帮助参考了 `TUNA 的 rosdistro 帮助 <https://mirrors.tuna.tsinghua.edu.cn/help/rosdistro/>`_ 编写。
+
 相关镜像
 ========
 - :doc:`ros`
