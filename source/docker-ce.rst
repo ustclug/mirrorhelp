@@ -31,6 +31,19 @@ Docker CE 仓库镜像
 使用说明
 ========
 
+自动安装
+----------
+
+Docker 提供了便利安装的脚本，可以按照以下方式安装：
+
+::
+    
+    $ curl -fsSL https://get.docker.com -o get-docker.sh
+    $ sudo DOWNLOAD_URL=https://mirrors.ustc.edu.cn/docker-ce sh get-docker.sh
+
+手动安装
+----------
+
 安装 Docker CE，请按照 `官方安装文档 <https://docs.docker.com/engine/installation/>`_ ，选择你对应的系统。
 以 Ubuntu 为例，参考 `官方 Ubuntu 安装 Docker CE 手册 <https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/>`_ 进行安装。
 在阅读官方安装手册时，只要把 ``download.docker.com`` 地址换成 ``mirrors.ustc.edu.cn/docker-ce`` 即可。
