@@ -42,17 +42,17 @@ i586, x86_64
 
 ::
 
-  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/distribution/leap/\$releasever/repo/oss USTC:OSS
-  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/distribution/leap/\$releasever/repo/non-oss USTC:NON-OSS
-  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/\$releasever/oss USTC:UPDATE-OSS
-  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/\$releasever/non-oss USTC:UPDATE-NON-OSS
+  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/distribution/leap/$releasever/repo/oss USTC:OSS
+  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/distribution/leap/$releasever/repo/non-oss USTC:NON-OSS
+  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/$releasever/oss USTC:UPDATE-OSS
+  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/$releasever/non-oss USTC:UPDATE-NON-OSS
 
 对于 15.3 或更高版本的 openSUSE Leap，还需添加 SLE 更新源和 Backports 更新源：
 
 ::
 
-  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/\$releasever/sle USTC:UPDATE-SLE
-  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/\$releasever/backports USTC:UPDATE-BACKPORTS
+  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/$releasever/sle USTC:UPDATE-SLE
+  sudo zypper ar -fcg https://mirrors.ustc.edu.cn/opensuse/update/leap/$releasever/backports USTC:UPDATE-BACKPORTS
 
 对于 openSUSE Tumbleweed，只需执行：
 
