@@ -28,6 +28,25 @@
   Please include a single rst file in a [TOC tree](http://www.sphinx-doc.org/en/stable/markup/toctree.html).
   For example, add a reference in `index.rst`.
 
+  Sometimes when editing inline elements, you may want to remove the spaces before and after the element. This often occurs when writing Chinese technical documents. For example:
+
+  ```rst
+  .. 
+    This fails.
+
+  将该设置修改为 ``http://example.com``（注意别改错了）。
+
+  ..
+    This looks bad (although there are some cases like this in the repository).
+  
+  将该设置修改为 ``http://example.com`` （注意别改错了）。
+
+  ..
+    Correct way! You should escape the space.
+  
+  将该设置修改为 ``http://example.com``\ （注意别改错了）。
+  ```
+
 ## Environment setup
 
 1. Create a virtual environment
@@ -95,6 +114,25 @@ For those who improved the documents, the GitHub username will be mentioned in t
   `make html` 会检查语法，请确保运行结果没有错误。
 
   单个 rst 文件需要被包含在 [TOC tree](http://www.sphinx-doc.org/en/stable/markup/toctree.html) 中，例如可以在 `index.rst` 文件中添加索引。
+
+  如果不希望行内元素前后有空格，参考这个例子：
+
+  ```rst
+  .. 
+    这么写会导致识别错误。
+
+  将该设置修改为 ``http://example.com``（注意别改错了）。
+
+  ..
+    这么写不美观（尽管目前仓库里有一些这样的情况）。
+
+  将该设置修改为 ``http://example.com`` （注意别改错了）。
+
+  ..
+    正确做法：转义空格。
+
+  将该设置修改为 ``http://example.com``\ （注意别改错了）。
+  ```
 
 ## 环境配置
 
