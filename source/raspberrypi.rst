@@ -39,7 +39,7 @@ https://mirrors.ustc.edu.cn/archive.raspberrypi.org/ 或 https://mirrors.ustc.ed
 .. warning::
     操作前请做好相应备份
 
-一般情况下，将 :file:`/etc/apt/sources.list.d/raspi.list` 文件中默认的源地址 ``http://archive.raspberrypi.org/`` （bullseye 及之前版本）或者 ``http://archive.raspberrypi.com/`` （bookworm 及之后版本）替换为 ``http://mirrors.ustc.edu.cn/raspberrypi/`` 即可。
+一般情况下，将 :file:`/etc/apt/sources.list.d/raspi.list` 文件中默认的源地址 ``http://archive.raspberrypi.org/``\ （bullseye 及之前版本）或者 ``http://archive.raspberrypi.com/``\ （bookworm 及之后版本）替换为 ``http://mirrors.ustc.edu.cn/raspberrypi/`` 即可。
 
 可以使用如下命令：
 
