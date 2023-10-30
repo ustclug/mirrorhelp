@@ -77,5 +77,5 @@ CT Templates
   cp /usr/share/perl5/PVE/APLInfo.pm /usr/share/perl5/PVE/APLInfo.pm_back
   sed -i 's|http://download.proxmox.com|https://mirrors.ustc.edu.cn/proxmox|g' /usr/share/perl5/PVE/APLInfo.pm 
 
-针对 :file:`/usr/share/perl5/PVE/APLInfo.pm` 文件的修改，重启后生效。
+针对 :file:`/usr/share/perl5/PVE/APLInfo.pm` 文件的修改，执行`systemctl restart pvedaemon`后生效。
 
