@@ -192,7 +192,7 @@
 <section id="id4">
 <h2>收录版本<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
 <p>Debian Old Stable, Stable, Testing, Unstable(sid)</p>
-<p>当前 Stable 为 Debian 9，代号为 Stretch</p>
+<p>当前 Stable 为 Debian 12，代号为 Bookworm</p>
 </section>
 <section id="id5">
 <h2>使用说明<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
@@ -202,16 +202,16 @@
 是为 deb-multimedia.org 的镜像， 与 Debian 官方的 Multimedia 小组的区别见
 <a class="reference external" href="https://wiki.debian.org/DebianMultimedia/FAQ">https://wiki.debian.org/DebianMultimedia/FAQ</a></p>
 </div>
-<p>以 Jessie 为例，在 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 中加入</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">deb</span><span class="o">-</span><span class="n">multimedia</span><span class="o">/</span> <span class="n">jessie</span> <span class="n">main</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
-<span class="c1"># deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ jessie main non-free</span>
-<span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">deb</span><span class="o">-</span><span class="n">multimedia</span><span class="o">/</span> <span class="n">jessie</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span>
-<span class="c1"># deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ jessie-backports main</span>
+<p>以 Bookworm 为例，在 <code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code> 中加入</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">deb</span><span class="o">-</span><span class="n">multimedia</span><span class="o">/</span> <span class="n">bookworm</span> <span class="n">main</span> <span class="n">non</span><span class="o">-</span><span class="n">free</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ bookworm main non-free</span>
+<span class="n">deb</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">deb</span><span class="o">-</span><span class="n">multimedia</span><span class="o">/</span> <span class="n">bookworm</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span>
+<span class="c1"># deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ bookworm-backports main</span>
 </pre></div>
 </div>
 <p>更改完 <code class="file docutils literal notranslate"><span class="pre">sources.list</span></code> 文件后请导入 deb-multimedia-keyring</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">deb</span><span class="o">-</span><span class="n">multimedia</span><span class="o">/</span><span class="n">pool</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">d</span><span class="o">/</span><span class="n">deb</span><span class="o">-</span><span class="n">multimedia</span><span class="o">-</span><span class="n">keyring</span><span class="o">/</span><span class="n">deb</span><span class="o">-</span><span class="n">multimedia</span><span class="o">-</span><span class="n">keyring_2016</span><span class="mf">.8.1</span><span class="n">_all</span><span class="o">.</span><span class="n">deb</span>
-<span class="n">sudo</span> <span class="n">dpkg</span> <span class="o">-</span><span class="n">i</span> <span class="n">deb</span><span class="o">-</span><span class="n">multimedia</span><span class="o">-</span><span class="n">keyring_2016</span><span class="mf">.8.1</span><span class="n">_all</span><span class="o">.</span><span class="n">deb</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">./</span><span class="n">deb</span><span class="o">-</span><span class="n">multimedia</span><span class="o">-</span><span class="n">keyring_2016</span><span class="mf">.8.1</span><span class="n">_all</span><span class="o">.</span><span class="n">deb</span>
 </pre></div>
 </div>
 <p>然后请运行 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code> 更新索引以生效。</p>
