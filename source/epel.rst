@@ -27,6 +27,9 @@ Red Hat Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux (OL
 使用说明
 ========
 
+.. note::
+    本镜像不包含 EPEL Cisco OpenH264 仓库。
+
 .. warning::
     操作前请做好相应备份。
 
@@ -39,7 +42,7 @@ Red Hat Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux (OL
            -e 's|^#baseurl=https\?://download.fedoraproject.org/pub/epel/|baseurl=https://mirrors.ustc.edu.cn/epel/|g' \
            -e 's|^#baseurl=https\?://download.example/pub/epel/|baseurl=https://mirrors.ustc.edu.cn/epel/|g' \
            -i.bak \
-           /etc/yum.repos.d/epel.repo
+           /etc/yum.repos.d/epel{,-testing}.repo
 
 以下是替换之后的 :file:`/etc/yum.repos.d/epel.repo` 文件：
 
