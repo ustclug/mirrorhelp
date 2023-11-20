@@ -197,6 +197,10 @@ Red Hat Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux (OL
 </section>
 <section id="id5">
 <h2>使用说明<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>本镜像不包含 EPEL Cisco OpenH264 仓库。</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>操作前请做好相应备份。</p>
@@ -207,7 +211,7 @@ Red Hat Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux (OL
          <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^#baseurl=https\?://download.fedoraproject.org/pub/epel/|baseurl=https://mirrors.ustc.edu.cn/epel/|g&#39;</span> \
          <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s|^#baseurl=https\?://download.example/pub/epel/|baseurl=https://mirrors.ustc.edu.cn/epel/|g&#39;</span> \
          <span class="o">-</span><span class="n">i</span><span class="o">.</span><span class="n">bak</span> \
-         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">epel</span><span class="o">.</span><span class="n">repo</span>
+         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">epel</span><span class="p">{,</span><span class="o">-</span><span class="n">testing</span><span class="p">}</span><span class="o">.</span><span class="n">repo</span>
 </pre></div>
 </div>
 <p>以下是替换之后的 <code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/epel.repo</span></code> 文件：</p>
