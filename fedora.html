@@ -209,6 +209,11 @@
          <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">fedora</span><span class="o">-</span><span class="n">updates</span><span class="o">-</span><span class="n">modular</span><span class="o">.</span><span class="n">repo</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>Fedora 39 起 modular 仓库已经不复存在（详见 <a class="reference external" href="https://fedoraproject.org/wiki/Changes/RetireModularity">https://fedoraproject.org/wiki/Changes/RetireModularity</a>）。
+因此 Fedora 39 及以上的版本不需要修改 <code class="file docutils literal notranslate"><span class="pre">fedora-modular.repo</span></code> 和 <code class="file docutils literal notranslate"><span class="pre">fedora-updates-modular.repo</span></code>。</p>
+</div>
 <p>或者直接复制以下文件：</p>
 <p><code class="file docutils literal notranslate"><span class="pre">/etc/yum.repos.d/fedora.repo</span></code> 文件：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[fedora]
