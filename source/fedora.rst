@@ -40,6 +40,10 @@ x86_64
            /etc/yum.repos.d/fedora-updates.repo \
            /etc/yum.repos.d/fedora-updates-modular.repo
 
+.. note::
+    Fedora 39 起 modular 仓库已经不复存在（详见 https://fedoraproject.org/wiki/Changes/RetireModularity\ ）。
+    因此 Fedora 39 及以上的版本不需要修改 :file:`fedora-modular.repo` 和 :file:`fedora-updates-modular.repo`。
+
 或者直接复制以下文件：
 
 :file:`/etc/yum.repos.d/fedora.repo` 文件：
