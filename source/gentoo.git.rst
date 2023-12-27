@@ -48,7 +48,7 @@ ALL
   sync-openpgp-key-refresh-retry-delay-mult = 4
   sync-webrsync-verify-signature = yes
 
-- 第一次使用 ``Git``  同步方式的用户（从 ``Rsync`` 方式同步换到 ``Git`` 同步）：
+- 第一次使用 ``Git``  同步方式的用户（从 ``Rsync`` 方式同步换到 ``Git`` 方式同步）：
 
 按照上述教程更改完 :file:`/etc/portage/repos.conf/gentoo.conf`，需要：
 

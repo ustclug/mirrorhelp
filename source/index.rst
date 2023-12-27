@@ -26,6 +26,7 @@ USTC Mirror Help
    freebsd-ports
    gentoo
    gentoo-portage
+   gentoo.git
    kali
    linuxmint
    mageia
