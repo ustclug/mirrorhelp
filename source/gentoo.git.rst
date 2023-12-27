@@ -1,5 +1,5 @@
 =========================
-Gentoo Portage 源使用帮助
+Gentoo Git 源使用帮助
 =========================
 
 地址
@@ -10,7 +10,7 @@ https://mirrors.ustc.edu.cn/gentoo.git
 说明
 ====
 
-Gentoo Portage Ebuild 源 (Git同步)
+Gentoo Portage Ebuild 源 （Git 方式同步）
 
 收录架构
 ========
@@ -22,11 +22,11 @@ ALL
 
 请确保系统中已安装 ``dev-vcs/git``
 
-修改 :file:`/etc/portage/repos.conf/gentoo.conf`中的：
+修改 :file:`/etc/portage/repos.conf/gentoo.conf`中的
 
-``sync-type`` 为 ``git``
+``sync-type`` 为 ``git``；
 
-``sync-uri`` 为 ``https://mirrors.ustc.edu.cn/gentoo.git``
+``sync-uri`` 为 ``https://mirrors.ustc.edu.cn/gentoo.git`` 。
 
 以下是修改后的
 
@@ -52,14 +52,38 @@ ALL
   sync-openpgp-key-refresh-retry-delay-mult = 4
   sync-webrsync-verify-signature = yes
 
-然后：
+- 第一次使用 ``Git``  同步方式的用户（从 ``Rsync`` 方式同步换到 ``Git`` 同步）：
 
-* 删除本地main tree: ``rm -rf /var/db/repos/gentoo/``
+按照上述教程更改完 :file:`/etc/portage/repos.conf/gentoo.conf`，需要：
 
-* 重新同步(使用git): ``emerge --sync``
+::
 
-.. note::
-    需要 ``root`` 用户或者 ``sudo`` 才能完成上述操作
+  # 删除本地 main tree 目录
+  rm -rf /var/db/repos/gentoo
+
+  # 重新同步
+  emerge --sync
+
+- 已经配置过 ``Git`` 同步方式的用户（其他镜像站换中科大源）只需要：
+
+更改完 :file:`/etc/portage/repos.conf/gentoo.conf` ：
+
+::
+
+  # 进入 main tree 目录
+  cd /var/db/repos/gentoo
+
+  # 将 remote url 设置为中科大
+  git remote set-url origin https://mirrors.ustc.edu.cn/gentoo.git
+
+  # 重新同步
+  emerge --sync
+
+相关镜像
+========
+
+- :doc:`gentoo`
+- :doc:`gentoo-portage`
 
 相关链接
 ========
@@ -69,4 +93,3 @@ ALL
 :论坛: https://forums.gentoo.org/
 :文档: https://www.gentoo.org/doc/en/
 :Wiki: https://wiki.gentoo.org/
-:镜像列表: https://www.gentoo.org/main/en/mirrors-rsync.xml
