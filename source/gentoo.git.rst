@@ -22,11 +22,7 @@ ALL
 
 请确保系统中已安装 ``dev-vcs/git``
 
-修改 :file:`/etc/portage/repos.conf/gentoo.conf`中的
-
-``sync-type`` 为 ``git``；
-
-``sync-uri`` 为 ``https://mirrors.ustc.edu.cn/gentoo.git`` 。
+修改 :file:`/etc/portage/repos.conf/gentoo.conf`中的 ``sync-type`` 为 ``git``，``sync-uri`` 为 ``https://mirrors.ustc.edu.cn/gentoo.git`` 。
 
 以下是修改后的
 
@@ -66,7 +62,7 @@ ALL
 
 - 已经配置过 ``Git`` 同步方式的用户（其他镜像站换中科大源）只需要：
 
-更改完 :file:`/etc/portage/repos.conf/gentoo.conf` ：
+更改完 :file:`/etc/portage/repos.conf/gentoo.conf`：
 
 ::
 
