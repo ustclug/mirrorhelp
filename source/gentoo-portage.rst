@@ -5,12 +5,12 @@ Gentoo Portage 源使用帮助
 地址
 ====
 
-https://mirrors.ustc.edu.cn/gentoo-portage/
+https://mirrors.ustc.edu.cn/gentoo-portage
 
 说明
 ====
 
-Gentoo Portage 软件源
+Gentoo Portage Ebuild 源（Rsync 方式同步）
 
 收录架构
 ========
@@ -30,8 +30,14 @@ ALL
   [gentoo]
   location = /usr/portage
   sync-type = rsync
-  sync-uri = rsync://rsync.mirrors.ustc.edu.cn/gentoo-portage/
+  sync-uri = rsync://rsync.mirrors.ustc.edu.cn/gentoo-portage
   auto-sync = yes
+
+相关镜像
+========
+
+- :doc:`gentoo`
+- :doc:`gentoo.git`
 
 相关链接
 ========
