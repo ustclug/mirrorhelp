@@ -192,8 +192,15 @@
 </div>
 <p>ports.tar.gz 文件为 Ports Collection，可以下载后解压到 <code class="docutils literal notranslate"><span class="pre">/usr/ports/</span></code> 目录。
 也可参考 FreeBSD Handbook 中 <a class="reference external" href="https://docs.freebsd.org/en/books/handbook/ports/#ports-using-installation-methods">Installing the Ports Collection</a> 一节，使用 <code class="docutils literal notranslate"><span class="pre">git</span></code> 获取 ports tree：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports</span>
 </pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>这里使用了 <code class="docutils literal notranslate"><span class="pre">--filter=tree:0</span></code> 参数以进行 treeless clone，减少下载量与服务端压力。
+关于不同的部分 clone 方式及其注意事项，可参考 <a class="reference external" href="https://github.blog/2020-12-21-get-up-to-speed-with-partial-clone-and-shallow-clone/">GitHub Blog 的有关文章</a>。</p>
+<p>本帮助早期版本使用了 <code class="docutils literal notranslate"><span class="pre">--depth</span></code>，但请<strong>避免</strong>使用 <code class="docutils literal notranslate"><span class="pre">--depth</span></code> 参数，因为其后续更新会给服务器带来大量的计算压力。</p>
+<p>如果不需要后续更新 ports，推荐直接下载 <a class="reference external" href="http://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz">http://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz</a> 文件并解压。</p>
 </div>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
