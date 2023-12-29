@@ -26,7 +26,15 @@ ports.tar.gz 文件为 Ports Collection，可以下载后解压到 ``/usr/ports/
 
 ::
 
-    # git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+    # git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+
+.. attention::
+    这里使用了 ``--filter=tree:0`` 参数以进行 treeless clone，减少下载量与服务端压力。
+    关于不同的部分 clone 方式及其注意事项，可参考 `GitHub Blog 的有关文章 <https://github.blog/2020-12-21-get-up-to-speed-with-partial-clone-and-shallow-clone/>`_。
+    
+    本帮助早期版本使用了 ``--depth``，但请\ **避免**\ 使用 ``--depth`` 参数，因为其后续更新会给服务器带来大量的计算压力。
+
+    如果不需要后续更新 ports，推荐直接下载 http://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz 文件并解压。
 
 .. attention::
     部分 ports 的源代码需要从 http://distcache.freebsd.org/ports-distfiles/ 以外的 master site 下载，本镜像不包含这些文件。
