@@ -198,6 +198,18 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 </pre></div>
 </div>
 <p>然后请安装 <code class="docutils literal notranslate"><span class="pre">archlinuxcn-keyring</span></code> 包以导入 GPG key。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>2023 年 12 月后，在新系统下安装 <code class="docutils literal notranslate"><span class="pre">archlinuxcn-keyring</span></code> 时可能会出现错误：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">error</span><span class="p">:</span> <span class="n">archlinuxcn</span><span class="o">-</span><span class="n">keyring</span><span class="p">:</span> <span class="n">Signature</span> <span class="kn">from</span> <span class="s2">&quot;Jiachen YANG (Arch Linux Packager Signing Key) &quot;</span> <span class="ow">is</span> <span class="n">marginal</span> <span class="n">trust</span>
+</pre></div>
+</div>
+<p>需要在本地信任 farseerfc 的 GPG key：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pacman</span><span class="o">-</span><span class="n">key</span> <span class="o">--</span><span class="n">lsign</span><span class="o">-</span><span class="n">key</span> <span class="s2">&quot;farseerfc@archlinux.org&quot;</span>
+</pre></div>
+</div>
+<p>然后重试安装。详情参见 <a class="reference external" href="https://www.archlinuxcn.org/archlinuxcn-keyring-manually-trust-farseerfc-key/">https://www.archlinuxcn.org/archlinuxcn-keyring-manually-trust-farseerfc-key/</a>。</p>
+</div>
 </section>
 <section id="id5">
 <h2>相关链接<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
@@ -223,7 +235,7 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2017 - 2023, LUG@USTC.</p>
+    <p>&#169; 版权所有 2017 - 2024, LUG@USTC.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
