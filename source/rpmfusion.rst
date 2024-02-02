@@ -31,6 +31,23 @@ RPM Fusion 是为 Fedora/RHEL 提供额外 RPM 软件包的第三方软件源。
 
 如果 ``sudo`` 不可用，你可以把以上命令中的 ``sudo`` 替换成 ``su -c`` 。
 
+替换源地址
+====
+
+安装成功后，可使用下列命令备份并修改 ``/etc/yum.repos.d/`` 目录下以 ``rpmfusion`` 开头，以 ``.repo`` 结尾的文件。
+
+- 具体而言，需要将文件中 ``metalink=`` 开头的行注释掉，取消 ``baseurl=`` 开头的行的注释并将等号后面链接中的 ``http://download1.rpmfusion.org`` 替换为 ``https://mirrors.ustc.edu.cn/rpmfusion`` ::
+
+    sudo sed -e 's|^metalink=|#metalink=|g' \
+             -e 's|^#baseurl=http://download1.rpmfusion.org|baseurl=https://mirrors.ustc.edu.cn/rpmfusion|g' \
+             -i.bak \
+             /etc/yum.repos.d/rpmfusion*.repo
+
+- 修改完成后，清除并重建缓存::
+
+    sudo dnf clean all
+    sudo dnf makecache
+
 备注
 ====
 
