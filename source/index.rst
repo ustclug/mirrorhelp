@@ -91,6 +91,7 @@ USTC Mirror Help
    influxdata
    linux.git
    mariadb
+   mysql-repo
    nix-channels
    qtproject
    raspberrypi
