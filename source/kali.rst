@@ -24,8 +24,8 @@ amd64, armel, armhf, i386
 
 ::
 
-  deb https://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
-  deb-src https://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
+  deb https://mirrors.ustc.edu.cn/kali kali-rolling main non-free non-free-firmware contrib
+  deb-src https://mirrors.ustc.edu.cn/kali kali-rolling main non-free non-free-firmware contrib
   
 更改完 :file:`sources.list` 文件后请运行 ``sudo apt-get update`` 更新索引以生效。
 
