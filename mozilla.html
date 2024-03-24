@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Homebrew 源使用帮助 &mdash; USTC Mirror Help  文档</title>
+  <title>Mozilla Firefox 源使用帮助 &mdash; USTC Mirror Help  文档</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -21,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Homebrew Bottles 源使用帮助" href="homebrew-bottles.html" />
-    <link rel="prev" title="GitHub Release 镜像使用帮助" href="github-release.html" /> 
+    <link rel="next" title="MySQL 源使用帮助" href="mysql-repo.html" />
+    <link rel="prev" title="MariaDB 源使用帮助" href="mariadb.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -119,15 +119,7 @@
 <li class="toctree-l1"><a class="reference internal" href="eclipse.html">Eclipse 镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="elpa.html">Emacs ELPA 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="github-release.html">GitHub Release 镜像使用帮助</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Homebrew 源使用帮助</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">使用说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#homebrew-linuxbrew">使用科大源安装 Homebrew / Linuxbrew</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">相关镜像</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">相关链接</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="homebrew-bottles.html">Homebrew Bottles 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="homebrew-core.git.html">Homebrew Core 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="homebrew-cask.git.html">Homebrew Cask 源使用帮助</a></li>
@@ -136,7 +128,13 @@
 <li class="toctree-l1"><a class="reference internal" href="influxdata.html">InfluxData 镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux.git.html">Linux 内核源码镜像使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mariadb.html">MariaDB 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mozilla.html">Mozilla Firefox 源使用帮助</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mozilla Firefox 源使用帮助</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">收录版本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">使用说明</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="mysql-repo.html">MySQL 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nix-channels.html">Nix Channels 源使用帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qtproject.html">Qt 镜像使用帮助</a></li>
@@ -168,9 +166,9 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Homebrew 源使用帮助</li>
+      <li class="breadcrumb-item active">Mozilla Firefox 源使用帮助</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/brew.git.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
+              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/mozilla.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
   </ul>
   <hr/>
@@ -178,88 +176,64 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="homebrew">
-<h1>Homebrew 源使用帮助<a class="headerlink" href="#homebrew" title="此标题的永久链接"></a></h1>
+  <section id="mozilla-firefox">
+<h1>Mozilla Firefox 源使用帮助<a class="headerlink" href="#mozilla-firefox" title="此标题的永久链接"></a></h1>
 <section id="id1">
 <h2>地址<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
-<p><a class="reference external" href="https://mirrors.ustc.edu.cn/brew.git/">https://mirrors.ustc.edu.cn/brew.git/</a></p>
+<p><a class="reference external" href="https://mirrors.ustc.edu.cn/mozilla/">https://mirrors.ustc.edu.cn/mozilla/</a></p>
 </section>
 <section id="id2">
 <h2>说明<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
-<p>Homebrew 源代码仓库</p>
+<p>Firefox Deb 包镜像</p>
 </section>
 <section id="id3">
-<h2>使用说明<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
-<p>替换 USTC 镜像：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">HOMEBREW_BREW_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/brew.git&quot;</span>
-<span class="n">brew</span> <span class="n">update</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">备注</p>
-<p>若用户设置了环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BREW_GIT_REMOTE</span></code>，则每次运行 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">update</span></code> 时将会自动设置远程。
-推荐用户将环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BREW_GIT_REMOTE</span></code> 加入 shell 的 profile 设置中。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 对于 bash 用户</span>
-<span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/brew.git&quot;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bash_profile</span>
-
-<span class="c1"># 对于 zsh 用户</span>
-<span class="n">echo</span> <span class="s1">&#39;export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/brew.git&quot;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
-</pre></div>
-</div>
-</div>
-<p>重置为官方地址：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unset</span> <span class="n">HOMEBREW_BREW_GIT_REMOTE</span>
-<span class="n">git</span> <span class="o">-</span><span class="n">C</span> <span class="s2">&quot;$(brew --repo)&quot;</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">brew</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">备注</p>
-<p>重置回默认远程后，用户应该删除 shell 的 profile 设置中的环境变量 <code class="docutils literal notranslate"><span class="pre">HOMEBREW_BREW_GIT_REMOTE</span></code> 以免运行 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">update</span></code> 时远程再次被更换。</p>
-<p>若之前使用的 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">url.&lt;URL&gt;.insteadOf</span> <span class="pre">URL</span></code> 的方式设置的镜像，请手动删除 <code class="docutils literal notranslate"><span class="pre">config</span></code> 文件（一般为 <code class="docutils literal notranslate"><span class="pre">~/.gitconfig</span></code> 或仓库目录下的 <code class="docutils literal notranslate"><span class="pre">.git/config</span></code>）中的对应字段。</p>
-</div>
-</section>
-<section id="homebrew-linuxbrew">
-<h2>使用科大源安装 Homebrew / Linuxbrew<a class="headerlink" href="#homebrew-linuxbrew" title="此标题的永久链接"></a></h2>
-<p>首先在命令行运行如下几条命令设置环境变量：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">HOMEBREW_BREW_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/brew.git&quot;</span>
-<span class="n">export</span> <span class="n">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;</span>
-<span class="n">export</span> <span class="n">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;</span>
-<span class="n">export</span> <span class="n">HOMEBREW_API_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;</span>
-</pre></div>
-</div>
-<p>之后在命令行运行 Homebrew 安装脚本：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://github.com/Homebrew/install/raw/HEAD/install.sh)&quot;</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">备注</p>
-<p>初次安装 Homebrew / Linuxbrew 时，如果无法下载安装脚本，
-可以使用我们每日同步的安装脚本文件。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)&quot;</span>
-</pre></div>
-</div>
-</div>
+<h2>收录版本<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<p>AMD64 架构下的最新稳定版、beta、nightly、开发者版本与语言包。</p>
 </section>
 <section id="id4">
-<h2>相关镜像<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="homebrew-bottles.html"><span class="doc">Homebrew Bottles 源使用帮助</span></a></p></li>
-<li><p><a class="reference internal" href="homebrew-core.git.html"><span class="doc">Homebrew Core 源使用帮助</span></a></p></li>
-<li><p><a class="reference internal" href="homebrew-cask.git.html"><span class="doc">Homebrew Cask 源使用帮助</span></a></p></li>
-<li><p><a class="reference internal" href="homebrew-cask-versions.git.html"><span class="doc">Homebrew Cask Versions 源使用帮助</span></a></p></li>
-<li><p><a class="reference internal" href="homebrew-services.git.html"><span class="doc">Homebrew Services 源使用帮助</span></a></p></li>
-</ul>
-</section>
-<section id="id5">
-<h2>相关链接<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
-<dl class="field-list simple">
-<dt class="field-odd">官方主页<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://brew.sh/">http://brew.sh/</a></p>
-</dd>
-<dt class="field-even">brew 文档<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.brew.sh/">http://docs.brew.sh/</a></p>
-</dd>
-</dl>
+<h2>使用说明<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<p>以下内容参考了 <a class="reference external" href="https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions">Install Firefox on Linux</a>
+的说明并稍作修改：</p>
+<ol class="arabic simple">
+<li><p>创建 keyrings 目录：</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">install</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">m</span> <span class="mi">0755</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">keyrings</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>导入 Mozilla APT 仓库公钥：</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">q</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">packages</span><span class="o">.</span><span class="n">mozilla</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">repo</span><span class="o">-</span><span class="n">signing</span><span class="o">-</span><span class="n">key</span><span class="o">.</span><span class="n">gpg</span> <span class="o">-</span><span class="n">O</span><span class="o">-</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">packages</span><span class="o">.</span><span class="n">mozilla</span><span class="o">.</span><span class="n">org</span><span class="o">.</span><span class="n">asc</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>验证签名一致性：</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gpg</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">q</span> <span class="o">--</span><span class="kn">import</span> <span class="o">--</span><span class="n">import</span><span class="o">-</span><span class="n">options</span> <span class="n">import</span><span class="o">-</span><span class="n">show</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">packages</span><span class="o">.</span><span class="n">mozilla</span><span class="o">.</span><span class="n">org</span><span class="o">.</span><span class="n">asc</span> <span class="o">|</span> <span class="n">awk</span> <span class="s1">&#39;/pub/{getline; gsub(/^ +| +$/,&quot;&quot;); if($0 == &quot;35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3&quot;) print &quot;</span><span class="se">\n</span><span class="s1">The key fingerprint matches (&quot;$0&quot;).</span><span class="se">\n</span><span class="s1">&quot;; else print &quot;</span><span class="se">\n</span><span class="s1">Verification failed: the fingerprint (&quot;$0&quot;) does not match the expected one.</span><span class="se">\n</span><span class="s1">&quot;}&#39;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>添加镜像仓库：</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://mirrors.ustc.edu.cn/mozilla/apt mozilla main&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">-</span><span class="n">a</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">mozilla</span><span class="o">.</span><span class="n">list</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>设置优先级，避免 Ubuntu 下 snap 版本被优先安装：</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s1">&#39;</span>
+<span class="n">Package</span><span class="p">:</span> <span class="o">*</span>
+<span class="n">Pin</span><span class="p">:</span> <span class="n">release</span> <span class="n">a</span><span class="o">=</span><span class="n">mozilla</span>
+<span class="n">Pin</span><span class="o">-</span><span class="n">Priority</span><span class="p">:</span> <span class="mi">1000</span>
+<span class="s1">&#39; | sudo tee /etc/apt/preferences.d/mozilla</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>更新并安装：</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">firefox</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -267,8 +241,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="github-release.html" class="btn btn-neutral float-left" title="GitHub Release 镜像使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="homebrew-bottles.html" class="btn btn-neutral float-right" title="Homebrew Bottles 源使用帮助" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mariadb.html" class="btn btn-neutral float-left" title="MariaDB 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="mysql-repo.html" class="btn btn-neutral float-right" title="MySQL 源使用帮助" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
