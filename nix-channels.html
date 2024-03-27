@@ -218,7 +218,7 @@ $ nix-channel --update
 <p>如果你手动指定了 <code class="docutils literal notranslate"><span class="pre">NIX_PATH</span></code> 或是使用 Flakes 管理系统，请根据具体情况编辑对应的文件，以下仅供参考。</p>
 </div>
 <p>对于 nix-darwin，在 <code class="docutils literal notranslate"><span class="pre">~/.nixpkgs/darwin-configuration.nix</span></code> 中添加：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nix</span><span class="o">.</span><span class="n">binaryCaches</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/nix-channels/store&quot;</span> <span class="p">];</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nix</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">substituters</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;https://mirrors.ustc.edu.cn/nix-channels/store&quot;</span> <span class="p">];</span>
 </pre></div>
 </div>
 <p>对于 NixOS 21.11 及之前的版本，在 <code class="docutils literal notranslate"><span class="pre">/etc/nixos/configuration.nix</span></code> 中添加：</p>
