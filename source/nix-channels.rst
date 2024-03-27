@@ -51,7 +51,7 @@ NixOS channel 也可以以类似命令替换，以 ``nixos-19.09`` 为例（需�
 
 ::
 
-    nix.binaryCaches = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
+    nix.settings.substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
 
 对于 NixOS 21.11 及之前的版本，在 ``/etc/nixos/configuration.nix`` 中添加：
 
