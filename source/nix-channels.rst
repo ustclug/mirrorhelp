@@ -68,6 +68,15 @@ NixOS channel 也可以以类似命令替换，以 ``nixos-19.09`` 为例（需�
 .. note::
     对于所有 NixOS 19.09 及之后的版本和 nix-darwin， ``"https://cache.nixos.org/"`` 会被自动添加到配置中。
 
+.. note::
+    由于目前的动态缓存设计不会关联 ``narinfo`` 与 ``nar.xz`` 文件，下载新文件时可能会出现类似如下的错误：
+
+    ::
+
+        error: file 'nar/1q9n0kjn2m11z49j1bcif6d2i63h4lz964w6apkxb4mkam6phni3.nar.xz' does not exist in binary cache 'https://mirrors.ustc.edu.cn/nix-channels/store'
+
+    忽略即可，Nix 会自动回退。也可以在以上配置中按顺序添加其他的 binary cache 站点作为备选。
+
 临时使用
 ^^^^^^^^
 
