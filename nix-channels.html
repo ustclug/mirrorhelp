@@ -233,6 +233,14 @@ $ nix-channel --update
 <p class="admonition-title">备注</p>
 <p>对于所有 NixOS 19.09 及之后的版本和 nix-darwin， <code class="docutils literal notranslate"><span class="pre">&quot;https://cache.nixos.org/&quot;</span></code> 会被自动添加到配置中。</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>由于目前的动态缓存设计不会关联 <code class="docutils literal notranslate"><span class="pre">narinfo</span></code> 与 <code class="docutils literal notranslate"><span class="pre">nar.xz</span></code> 文件，下载新文件时可能会出现类似如下的错误：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">error</span><span class="p">:</span> <span class="n">file</span> <span class="s1">&#39;nar/1q9n0kjn2m11z49j1bcif6d2i63h4lz964w6apkxb4mkam6phni3.nar.xz&#39;</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">exist</span> <span class="ow">in</span> <span class="n">binary</span> <span class="n">cache</span> <span class="s1">&#39;https://mirrors.ustc.edu.cn/nix-channels/store&#39;</span>
+</pre></div>
+</div>
+<p>忽略即可，Nix 会自动回退。也可以在以上配置中按顺序添加其他的 binary cache 站点作为备选。</p>
+</div>
 </section>
 <section id="id4">
 <h3>临时使用<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h3>
