@@ -80,7 +80,7 @@ NixOS channel 也可以以类似命令替换，以 ``nixos-19.09`` 为例（需�
 临时使用
 ^^^^^^^^
 
-在安装 NixOS 时，添加 `--option substituters` 可以临时使用科大源：
+在安装 NixOS 时，添加 ``--option substituters`` 可以临时使用科大源：
 
 ::
 
