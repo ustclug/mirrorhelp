@@ -26,6 +26,8 @@ Debian/Ubuntu 用户参考以下帮助文档配置：https://dev.mysql.com/doc/m
 
 RHEL/Fedora 用户参考以下帮助文档配置：https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/\ 。
 
+以上配置文档中需要下载的配置软件源的安装包也可以在该镜像顶层目录找到。
+
 在安装配置软件源的 deb 或 rpm 包后，将 ``/etc/apt/sources.list.d/mysql.list``
 或 ``/etc/yum.repos.d/mysql-community.repo`` 中的 ``repo.mysql.com``
 替换为 ``mirrors.ustc.edu.cn/mysql-repo`` 即可。
