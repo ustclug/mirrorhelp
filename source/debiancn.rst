@@ -13,23 +13,23 @@ Debiancn 源使用帮助
 Debiancn 社区（https://www.debiancn.org）维护的
 `非官方，第三方社区软件源的镜像`_
 
-提供了如 WPS Office、网易云音乐、``python-jieba``、``bcloud``、``wine-staging`` 等方便国内 Debian 用户使用的补充软件。
+提供了如 WPS Office、网易云音乐、``bcloud``、``wine-staging`` 等方便国内 Debian 用户使用的补充软件。
 
 .. _非官方，第三方社区软件源的镜像: https://repo.debiancn.org/
 
 收录架构
 ========
 
-``x86_64`` 为主，极少量软件提供 ``x86`` 和 ``armhf`` 架构。
+``amd64`` 为主，极少量软件提供 ``i386`` 等其他架构。
 
 收录版本
 ========
 
-* jessie（少量）
-* stretch（有限）
 * buster
+* bullseye
+* bookworm
 
-Debian Unstable 用户与 Debian Testing（目前为 Buster）用户同用 buster 仓库。
+目前暂无专用于 testing 和 sid 的仓库。
 
 使用说明
 ========
@@ -45,5 +45,5 @@ Debian Unstable 用户与 Debian Testing（目前为 Buster）用户同用 buste
 
 :社区主页: https://www.debiancn.org/
 :仓库主页: https://repo.debiancn.org/
-:使用文档与Git仓库: https://github.com/debiancn/repo
+:使用文档与 Git 仓库: https://github.com/debiancn/repo
 :其它镜像列表: https://github.com/debiancn/repo/issues/60
