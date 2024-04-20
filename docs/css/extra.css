@@ -14,6 +14,7 @@
 
 :root { --md-text-font: Roboto; --md-code-font: Roboto Mono; }
 
+.md-typeset { font-feature-settings: "kern" 0; }
 .md-typeset #references, .md-typeset .no-underline { margin-bottom: 0; padding-bottom: 0; border: none; }
 .md-typeset h2 { margin-top: 1.25em; padding-bottom: 0.2em; border-bottom: 1px solid #d3d3d3; }
 .md-typeset h3 { margin-top: 1em; padding-bottom: 0.2em; border-bottom: 1px dashed #d3d3d3; }
