@@ -1,14 +1,11 @@
 import os
-import json
 import requests
 
 
 HEADER = """\
-==============
-文档贡献者名单
-==============
+# 文档贡献者名单
 
-你也可以前往 https://github.com/ustclug/mirrorhelp/graphs/contributors 获取全部贡献者列表。
+你也可以前往 <https://github.com/ustclug/mirrorhelp/graphs/contributors> 获取全部贡献者列表。
 
 以字典序排序：
 """
@@ -18,7 +15,7 @@ def get_api():
     if "CI" not in os.environ:
         return [
             {
-                "login": "（名单生成已跳过）"
+                "login": "（本文件由 CI 生成，参见仓库中的 `scripts/contributors.py`）"
             }
         ]
     headers = {
@@ -31,8 +28,8 @@ def get_api():
     return r.json()
 
 
-def main(app):
-    filename = os.path.abspath(os.path.join(__file__, os.path.pardir, "contributor.rst"))
+def main():
+    filename = os.path.abspath(os.path.join(__file__, os.path.pardir, os.path.pardir, "docs", "contributor.md"))
     with open(filename, "w") as f:
         print(HEADER, file=f)
         data = get_api()
@@ -41,5 +38,5 @@ def main(app):
             print(f"* {item['login']}", file=f)
 
 
-def setup(app):
-    app.connect("builder-inited", main)
+if __name__ == "__main__":
+    main()

@@ -5,9 +5,7 @@ build
 .venv
 env
 venv
+/site/
 
 # ignore IDE or editor files
 .vscode
-
-# generated file
-source/contributor.rst

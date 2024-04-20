@@ -2,6 +2,7 @@ site_name: USTC Mirror Help
 site_description: USTC Mirror Help
 site_author: LUG @ USTC
 site_url: https://mirrors.ustc.edu.cn/help/
+use_directory_urls: false
 repo_name: ustclug/mirrorhelp
 repo_url: https://github.com/ustclug/mirrorhelp
 copyright: |
@@ -53,11 +54,7 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path:
         - includes
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
   - toc:
       permalink: true
 
