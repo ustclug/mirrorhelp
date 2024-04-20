@@ -1275,7 +1275,7 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      备注
+      替换源地址
     </span>
   </a>
   
@@ -1283,6 +1283,15 @@
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      备注
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       相关链接
     </span>
@@ -2590,7 +2599,7 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      备注
+      替换源地址
     </span>
   </a>
   
@@ -2598,6 +2607,15 @@
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      备注
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       相关链接
     </span>
@@ -2629,8 +2647,7 @@
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>RPM Fusion 是为 Fedora/RHEL 提供额外 RPM 软件包的第三方软件源。</p>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>使用下列命令（在 bash 或兼容 shell 中），可以同时启用其 <strong>free</strong> 和
-<strong>nonfree</strong> 软件源：</p>
+<p>使用下列命令（在 bash 或兼容 shell 中），可以同时启用其 <strong>free</strong> 和 <strong>nonfree</strong> 软件源：</p>
 <ul>
 <li>
 <p>Fedora 22 及更高版本：</p>
@@ -2638,21 +2655,33 @@
 </code></pre></div>
 </li>
 <li>
-<p>RHEL 6 或兼容系统（如 CentOS）:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>localinstall<span class="w"> </span>--nogpgcheck<span class="w"> </span>https://mirrors.ustc.edu.cn/rpmfusion/free/el/rpmfusion-free-release-6.noarch.rpm<span class="w"> </span>https://mirrors.ustc.edu.cn/rpmfusion/nonfree/el/rpmfusion-nonfree-release-6.noarch.rpm
-</code></pre></div>
-</li>
-<li>
 <p>RHEL 7 或兼容系统（如 CentOS）:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>localinstall<span class="w"> </span>--nogpgcheck<span class="w"> </span>https://mirrors.ustc.edu.cn/rpmfusion/free/el/rpmfusion-free-release-7.noarch.rpm<span class="w"> </span>https://mirrors.ustc.edu.cn/rpmfusion/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>localinstall<span class="w"> </span>--nogpgcheck<span class="w"> </span>https://mirrors.ustc.edu.cn/rpmfusion/free/el/rpmfusion-free-release-7.noarch.rpm<span class="w"> </span>https://mirrors.ustc.edu.cn/rpmfusion/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
 </code></pre></div>
 </li>
 </ul>
 <p>如果 <code>sudo</code> 不可用，你可以把以上命令中的 <code>sudo</code> 替换成 <code>su -c</code>。</p>
-<h2 id="_4">备注<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>在 RHEL 或兼容发行版（如 CentOS）上，您需要先启用 EPEL 源，请参考
-<code>epel</code>。</p>
-<h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_4">替换源地址<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>安装成功后，可使用下列命令备份并修改 <code>/etc/yum.repos.d/</code> 目录下以 <code>rpmfusion</code> 开头，以 <code>.repo</code> 结尾的文件。</p>
+<ul>
+<li>
+<p>具体而言，需要将文件中 <code>metalink=</code> 开头的行注释掉，取消 <code>baseurl=</code> 开头的行的注释并将等号后面链接中的 <code>http://download1.rpmfusion.org</code> 替换为 <code>https://mirrors.ustc.edu.cn/rpmfusion</code>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s|^metalink=|#metalink=|g&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">         </span>-e<span class="w"> </span><span class="s1">&#39;s|^#baseurl=http://download1.rpmfusion.org|baseurl=https://mirrors.ustc.edu.cn/rpmfusion|g&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">         </span>-i.bak<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">         </span>/etc/yum.repos.d/rpmfusion*.repo
+</code></pre></div>
+</li>
+<li>
+<p>修改完成后，清除并重建缓存：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>clean<span class="w"> </span>all
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>makecache
+</code></pre></div>
+</li>
+</ul>
+<h2 id="_5">备注<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>在 RHEL 或兼容发行版（如 CentOS）上，您需要先启用 EPEL 源，请参考 <a href="epel.html">epel</a>。</p>
+<h2 id="_6">相关链接<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>项目主页</dt>
 <dd>
