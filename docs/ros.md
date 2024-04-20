@@ -28,7 +28,7 @@
 
 ## 相关镜像
 
--   `rosdistro`{.interpreted-text role="doc"}
+-   `rosdistro`
 
 ## 相关链接
 

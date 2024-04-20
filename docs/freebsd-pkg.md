@@ -22,13 +22,13 @@ FreeBSD 9 以前的版本不支持新的 pkg 包管理器（pkgng），请升级
 ## 使用方法
 
 FreeBSD pkg 包管理器的官方源配置是
-`/etc/pkg/FreeBSD.conf`{.interpreted-text role="file"}
+`/etc/pkg/FreeBSD.conf`
 ，请先检查该文件内容。注意其中的 `url`
 参数配置了官方仓库的地址，我们需要把它替换为镜像站的地址。
 
 该配置文件是 FreeBSD 基本系统的一部分，会随着 `freebsd-update`
 更新，请不要直接修改，而是创建
-`/usr/local/etc/pkg/repos/FreeBSD.conf`{.interpreted-text role="file"}
+`/usr/local/etc/pkg/repos/FreeBSD.conf`
 覆盖配置，文件内容如下：
 
     FreeBSD: {

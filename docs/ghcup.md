@@ -37,8 +37,7 @@ GHCup，可跳到下一步。
         OwnSource: https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml
 
 **第三步（可选）** ：配置 Cabal 和 Stack 使用科大源，请参考文档
-`hackage`{.interpreted-text role="doc"} 和 `stackage`{.interpreted-text
-role="doc"} 。
+`hackage` 和 `stackage`。
 
 !!! warning
 

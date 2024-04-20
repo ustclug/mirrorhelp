@@ -30,7 +30,7 @@ RPM Fusion 是为 Fedora/RHEL 提供额外 RPM 软件包的第三方软件源。
 ## 备注
 
 在 RHEL 或兼容发行版（如 CentOS ）上，您需要先启用 EPEL 源，请参考
-`epel`{.interpreted-text role="doc"}。
+`epel`。
 
 ## 相关链接
 

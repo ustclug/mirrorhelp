@@ -54,7 +54,7 @@ dnf 在默认情况下已经被预装，如果你发现并没有，可以使用 
     su
     urpmi mageia-repos dnf
 
-接下来编辑 `/etc/yum.repos.d/`{.interpreted-text role="file"} 中的文件：
+接下来编辑 `/etc/yum.repos.d/` 中的文件：
 
 将所有文件中的：
 
@@ -89,9 +89,9 @@ dnf 在默认情况下已经被预装，如果你发现并没有，可以使用 
 -   Nonfree 32bit Updates
 
 接下来，逐个检查文件，确认 urpmi 已仓库在 dnf 也被已启用，依然是编辑
-`/etc/yum.repos.d/`{.interpreted-text role="file"} 中的文件：
+`/etc/yum.repos.d/` 中的文件：
 
-以 `/etc/yum.repos.d/mageia-x86_64.repo`{.interpreted-text role="file"}
+以 `/etc/yum.repos.d/mageia-x86_64.repo`
 为例：
 
     [mageia-x86_64]

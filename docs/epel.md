@@ -39,8 +39,8 @@ Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux
              -i.bak \
              /etc/yum.repos.d/epel{,-testing}.repo
 
-以下是替换之后的 `/etc/yum.repos.d/epel.repo`{.interpreted-text
-role="file"} 文件：
+以下是替换之后的 `/etc/yum.repos.d/epel.repo`
+ 文件：
 
 -   CentOS 8：
 

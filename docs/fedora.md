@@ -22,7 +22,7 @@ x86_64
 
     操作前请做好相应备份。
 
-用以下命令替换 `/etc/yum.repos.d`{.interpreted-text role="file"}
+用以下命令替换 `/etc/yum.repos.d`
 下的文件
 
     sudo sed -e 's|^metalink=|#metalink=|g' \
@@ -38,33 +38,33 @@ x86_64
     Fedora 39 起 modular 仓库已经不复存在（详见
     [https://fedoraproject.org/wiki/Changes/RetireModularity\\](https://fedoraproject.org/wiki/Changes/RetireModularity\)
     ）。 因此 Fedora 39 及以上的版本不需要修改
-    `fedora-modular.repo`{.interpreted-text role="file"} 和
-    `fedora-updates-modular.repo`{.interpreted-text role="file"}。
+    `fedora-modular.repo` 和
+    `fedora-updates-modular.repo`。
 
 或者直接复制以下文件：
 
-`/etc/yum.repos.d/fedora.repo`{.interpreted-text role="file"} 文件：
+`/etc/yum.repos.d/fedora.repo` 文件：
 
 ```
 --8<-- "fedora.repo"
 ```
 
-`/etc/yum.repos.d/fedora-updates.repo`{.interpreted-text role="file"}
+`/etc/yum.repos.d/fedora-updates.repo`
 文件：
 
 ```
 --8<-- "fedora-updates.repo"
 ```
 
-`/etc/yum.repos.d/fedora-modular.repo`{.interpreted-text role="file"}
+`/etc/yum.repos.d/fedora-modular.repo`
 文件：
 
 ```
 --8<-- "fedora-modular.repo"
 ```
 
-`/etc/yum.repos.d/fedora-updates-modular.repo`{.interpreted-text
-role="file"} 文件：
+`/etc/yum.repos.d/fedora-updates-modular.repo`
+ 文件：
 
 ```
 --8<-- "fedora-updates-modular.repo"

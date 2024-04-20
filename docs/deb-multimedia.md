@@ -28,15 +28,15 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
     的镜像， 与 Debian 官方的 Multimedia 小组的区别见
     <https://wiki.debian.org/DebianMultimedia/FAQ>
 
-以 Bookworm 为例，在 `/etc/apt/sources.list`{.interpreted-text
-role="file"} 中加入
+以 Bookworm 为例，在 `/etc/apt/sources.list`
+ 中加入
 
     deb http://mirrors.ustc.edu.cn/deb-multimedia/ bookworm main non-free
     # deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ bookworm main non-free
     deb http://mirrors.ustc.edu.cn/deb-multimedia/ bookworm-backports main
     # deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ bookworm-backports main
 
-更改完 `sources.list`{.interpreted-text role="file"} 文件后请导入
+更改完 `sources.list` 文件后请导入
 deb-multimedia-keyring
 
        wget https://mirrors.ustc.edu.cn/deb-multimedia/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb

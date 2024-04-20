@@ -14,7 +14,7 @@ Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件
 
     Brew 4.0 版本后默认使用元数据 JSON API
     获取仓库信息，因此在大部分情况下都不再需要进行如下配置。可参考
-    `homebrew-bottles`{.interpreted-text role="doc"} 进行相关配置。
+    `homebrew-bottles` 进行相关配置。
 
 使用 USTC 镜像安装，或将已安装的仓库远程替换为 USTC 镜像：
 
@@ -37,11 +37,11 @@ Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件
 
 ## 相关镜像
 
--   `brew.git`{.interpreted-text role="doc"}
--   `homebrew-bottles`{.interpreted-text role="doc"}
--   `homebrew-core.git`{.interpreted-text role="doc"}
--   `homebrew-cask-versions.git`{.interpreted-text role="doc"}
--   `homebrew-services.git`{.interpreted-text role="doc"}
+-   `brew.git`
+-   `homebrew-bottles`
+-   `homebrew-core.git`
+-   `homebrew-cask-versions.git`
+-   `homebrew-services.git`
 
 ## 相关链接
 

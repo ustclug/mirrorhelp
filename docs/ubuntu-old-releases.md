@@ -23,11 +23,11 @@ Ubuntu 曾经发布过的所有版本
 
 ### 软件源
 
-在 `/etc/apt/sources.list`{.interpreted-text role="file"}
+在 `/etc/apt/sources.list`
 文件中，将软件源的地址改为
 `http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu`
 
-更改完 `sources.list`{.interpreted-text role="file"} 文件后请运行
+更改完 `sources.list` 文件后请运行
 `sudo apt-get update` 更新索引以生效。
 
 !!! tip

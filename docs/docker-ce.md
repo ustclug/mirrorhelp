@@ -42,14 +42,14 @@ Docker 提供了便利安装的脚本，可以按照以下方式安装：
 
 [CentOS](https://docs.docker.com/engine/installation/linux/docker-ce/centos/)、
 [Fedora](https://docs.docker.com/engine/installation/linux/docker-ce/fedora/)
-等用户在下载 `docker-ce.repo`{.interpreted-text role="file"}
+等用户在下载 `docker-ce.repo`
 文件后（位于 `/etc/yum.repos.d/`）， 还需要将该文件中的
 `download.docker.com` 地址换成 `mirrors.ustc.edu.cn/docker-ce`。
 
 !!! tip
 
     安装完 Docker CE 之后，替换掉官方的 Docker Registry 服务，可加快拉取
-    Docker 镜像的速度，请参考 `dockerhub`{.interpreted-text role="doc"}。
+    Docker 镜像的速度，请参考 `dockerhub`。
 
 ## 相关链接
 

@@ -4,7 +4,7 @@
 
 ## 使用说明
 
-编辑 `~/.npmrc`{.interpreted-text role="file"} ，添加
+编辑 `~/.npmrc` ，添加
 
     registry=https://npmreg.proxy.ustclug.org/
 
@@ -14,8 +14,8 @@
 
 ## 注意事项
 
-不支持 publish，若出现错误，请将 `~/.npmrc`{.interpreted-text
-role="file"} 中的用户名密码部分注释掉，并删除缓存 ( `rm -rf ~/.npm` )
+不支持 publish，若出现错误，请将 `~/.npmrc`
+ 中的用户名密码部分注释掉，并删除缓存 ( `rm -rf ~/.npm` )
 重试。
 
 ## 相关链接

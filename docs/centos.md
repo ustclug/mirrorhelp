@@ -59,29 +59,29 @@ x86_64, aarch64, ppc64le
 
 -   CentOS 8 Stream：
 
-    `/etc/yum.repos.d/CentOS-Stream-BaseOS.repo`{.interpreted-text
-    role="file"} 文件：
+    `/etc/yum.repos.d/CentOS-Stream-BaseOS.repo`
+     文件：
 
     ```
     --8<-- "centos8stream/CentOS-Stream-BaseOS.repo"
     ```
 
-    `/etc/yum.repos.d/CentOS-Stream-Extras.repo`{.interpreted-text
-    role="file"} 文件：
+    `/etc/yum.repos.d/CentOS-Stream-Extras.repo`
+     文件：
 
     ```
     --8<-- "centos8stream/CentOS-Stream-Extras.repo"
     ```
 
-    `/etc/yum.repos.d/CentOS-Stream-AppStream.repo`{.interpreted-text
-    role="file"} 文件：
+    `/etc/yum.repos.d/CentOS-Stream-AppStream.repo`
+     文件：
 
     ```
     --8<-- "centos8stream/CentOS-Stream-AppStream.repo"
     ```
 
-    `/etc/yum.repos.d/CentOS-Stream-PowerTools.repo`{.interpreted-text
-    role="file"} 文件：
+    `/etc/yum.repos.d/CentOS-Stream-PowerTools.repo`
+     文件：
 
     ```
     --8<-- "centos8stream/CentOS-Stream-PowerTools.repo"
@@ -89,7 +89,7 @@ x86_64, aarch64, ppc64le
 
 -   CentOS 7：
 
-    `/etc/yum.repos.d/CentOS-Base.repo`{.interpreted-text role="file"}
+    `/etc/yum.repos.d/CentOS-Base.repo`
     文件：
 
     ```

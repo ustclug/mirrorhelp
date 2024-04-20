@@ -25,7 +25,7 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
     操作前请做好相应备份
 
-一般情况下，将 `/etc/apt/sources.list`{.interpreted-text role="file"}
+一般情况下，将 `/etc/apt/sources.list`
 文件中 Debian 默认的源地址 `http://deb.debian.org/` 替换为
 `http://mirrors.ustc.edu.cn` 即可。
 
@@ -33,8 +33,8 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
     sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 
-当然也可以直接编辑 `/etc/apt/sources.list`{.interpreted-text
-role="file"} 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
+当然也可以直接编辑 `/etc/apt/sources.list`
+ 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
 
     deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free non-free-firmware
     # deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free non-free-firmware
@@ -57,8 +57,8 @@ role="file"} 文件（需要使用 sudo）。以下是 Debian Stable 参考配�
 
     Debian 12 (bookworm) 的**容器**镜像开始使用 DEB822
     格式，而非上文使用的传统的 One-Line-Style 格式。 对应需要修改的文件为
-    `/etc/apt/sources.list.d/debian.sources`{.interpreted-text
-    role="file"}。同样可以使用如下命令：
+    `/etc/apt/sources.list.d/debian.sources`
+    。同样可以使用如下命令：
 
         sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources
 
@@ -78,9 +78,9 @@ role="file"} 文件（需要使用 sudo）。以下是 Debian Stable 参考配�
         Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
 同时你也可能需要更改 Debian Security 源，请参考
-`debian-security`{.interpreted-text role="doc"}。
+`debian-security`。
 
-更改完 `sources.list`{.interpreted-text role="file"} 文件后请运行
+更改完 `sources.list` 文件后请运行
 `sudo apt-get update` 更新索引以生效。
 
 !!! tip

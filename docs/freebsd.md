@@ -31,8 +31,8 @@ FreeBSD 支持的所有正式版本
 
 ## 相关镜像
 
--   `freebsd-pkg`{.interpreted-text role="doc"}
--   `freebsd-ports`{.interpreted-text role="doc"}
+-   `freebsd-pkg`
+-   `freebsd-ports`
 
 ## 相关链接
 

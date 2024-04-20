@@ -25,7 +25,7 @@ Debian Old Old Stable, Old Stable, Stable
 
     操作前请做好相应备份
 
-一般情况下，将 `/etc/apt/sources.list`{.interpreted-text role="file"}
+一般情况下，将 `/etc/apt/sources.list`
 文件中 Debian 默认的源地址 `http://security.debian.org/debian-security/`
 替换为 `http://mirrors.ustc.edu.cn/debian-security/` 即可。
 
@@ -44,13 +44,13 @@ Debian Old Old Stable, Old Stable, Stable
 
     sudo sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
 
-当然也可以直接编辑 `/etc/apt/sources.list`{.interpreted-text
-role="file"} 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
+当然也可以直接编辑 `/etc/apt/sources.list`
+ 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
 
     deb http://mirrors.ustc.edu.cn/debian-security/ stable-security main non-free contrib
     # deb-src http://mirrors.ustc.edu.cn/debian-security/ stable-security main non-free contrib
 
-更改完 `sources.list`{.interpreted-text role="file"} 文件后请运行
+更改完 `sources.list` 文件后请运行
 `sudo apt-get update` 更新索引以生效。
 
 !!! tip

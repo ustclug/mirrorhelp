@@ -26,11 +26,11 @@
 
 ## 相关镜像
 
--   `brew.git`{.interpreted-text role="doc"}
--   `homebrew-bottles`{.interpreted-text role="doc"}
--   `homebrew-core.git`{.interpreted-text role="doc"}
--   `homebrew-cask.git`{.interpreted-text role="doc"}
--   `homebrew-cask-versions.git`{.interpreted-text role="doc"}
+-   `brew.git`
+-   `homebrew-bottles`
+-   `homebrew-core.git`
+-   `homebrew-cask.git`
+-   `homebrew-cask-versions.git`
 
 ## 相关链接
 

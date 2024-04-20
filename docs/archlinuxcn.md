@@ -17,7 +17,7 @@ Arch Linux 中文社区仓库是由 Arch Linux
 
 ## 使用说明
 
-在 `/etc/pacman.conf`{.interpreted-text role="file"} 文件末尾添加两行：
+在 `/etc/pacman.conf` 文件末尾添加两行：
 
     [archlinuxcn]
     Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch

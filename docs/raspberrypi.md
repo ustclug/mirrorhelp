@@ -8,12 +8,11 @@
 ## 说明
 
 树莓派的 archive.raspberrypi.org 软件源，也即
-`/etc/apt/sources.list.d/raspi.list`{.interpreted-text role="file"} ，
+`/etc/apt/sources.list.d/raspi.list` ，
 
 是由树莓派基金会提供的软件源，包括 ui 相关程序（如 Raspbian 的桌面环境
 PIXEL DE）及部分由树莓派基金会为 树莓派编写的软件，通常与
-raspbian.raspberrypi.org（参考 `raspbian`{.interpreted-text
-role="doc"}，旧版为 archive.raspbian.org）一起使用。
+raspbian.raspberrypi.org（参考 `raspbian`，旧版为 archive.raspbian.org）一起使用。
 
 ## 收录架构
 
@@ -37,8 +36,8 @@ role="doc"}，旧版为 archive.raspbian.org）一起使用。
 
     操作前请做好相应备份
 
-一般情况下，将 `/etc/apt/sources.list.d/raspi.list`{.interpreted-text
-role="file"} 文件中默认的源地址
+一般情况下，将 `/etc/apt/sources.list.d/raspi.list`
+ 文件中默认的源地址
 `http://archive.raspberrypi.org/`（bullseye 及之前版本）或者
 `http://archive.raspberrypi.com/`（bookworm 及之后版本）替换为
 `http://mirrors.ustc.edu.cn/raspberrypi/` 即可。
@@ -52,13 +51,13 @@ role="file"} 文件中默认的源地址
     /etc/apt/sources.list.d/raspi.list
 
 当然也可以直接编辑
-`/etc/apt/sources.list.d/raspi.list`{.interpreted-text role="file"}
+`/etc/apt/sources.list.d/raspi.list`
 文件（需要使用 sudo）。以下是 bookworm 的参考配置内容：
 
     deb http://mirrors.ustc.edu.cn/raspberrypi/debian/ bookworm main
     #deb-src http://mirrors.ustc.edu.cn/raspberrypi/debian/ bookworm main
 
-更改完 `raspi.list`{.interpreted-text role="file"} 文件后请运行
+更改完 `raspi.list` 文件后请运行
 `sudo apt-get update` 更新索引以生效。
 
 !!! tip

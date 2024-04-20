@@ -29,7 +29,7 @@ OpenWRT/LEDE 下载站镜像。
 中的这部分域名替换为 `mirrors.ustc.edu.cn/openwrt` 即可。
 
 如要使用本镜像作为 OpenWRT/LEDE 系统 opkg 软件仓库，SSH 登录路由器编辑
-`/etc/opkg/distfeeds.conf`{.interpreted-text role="file"}
+`/etc/opkg/distfeeds.conf`
 文件，同样按照上面的方法替换域名即可。可以使用如下命令操作：
 
     sed -i 's/downloads.openwrt.org/mirrors.ustc.edu.cn\/openwrt/g' /etc/opkg/distfeeds.conf

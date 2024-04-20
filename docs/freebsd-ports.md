@@ -10,7 +10,7 @@ FreeBSD ports 软件源
 
 ## 使用方法
 
-在 `/etc/make.conf`{.interpreted-text role="file"}
+在 `/etc/make.conf`
 中添加以下内容（如果文件不存在，则新建之）：
 
     MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/

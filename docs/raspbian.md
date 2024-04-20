@@ -25,7 +25,7 @@ armhf
 
     操作前请做好相应备份
 
-将 `/etc/apt/sources.list`{.interpreted-text role="file"}
+将 `/etc/apt/sources.list`
 文件中默认的源地址 `http://raspbian.raspberrypi.org/` 替换为
 `http://mirrors.ustc.edu.cn/raspbian/` 即可。
 
@@ -38,8 +38,8 @@ raspbian 2018-04-19 之后的镜像默认源已经更改，用如下命令替换
     sudo sed -i 's|mirrordirector.raspbian.org|mirrors.ustc.edu.cn/raspbian|g' /etc/apt/sources.list
     sudo sed -i 's|archive.raspbian.org|mirrors.ustc.edu.cn/raspbian|g' /etc/apt/sources.list
 
-当然也可以直接编辑 `/etc/apt/sources.list`{.interpreted-text
-role="file"} 文件（需要使用
+当然也可以直接编辑 `/etc/apt/sources.list`
+ 文件（需要使用
 sudo）。删除原文件所有内容，用以下内容取代（以 Bullseye 示例）：
 
     deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ bullseye main contrib non-free rpi
@@ -59,7 +59,7 @@ OS，可以直接使用 arm64 Debian 的源（以 Bullseye 示例）：
 编辑此文件后，请使用 `sudo apt-get update` 命令，更新软件索引。
 
 同时也可能需要更改 archive.raspberrypi.org 源，请参考
-`raspberrypi`{.interpreted-text role="doc"} 。
+`raspberrypi` 。
 
 ## 相关链接
 

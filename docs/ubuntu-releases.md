@@ -12,7 +12,7 @@ Ubuntu 镜像
 
 AMD64 (x86_64), Intel x86
 
-其他架构请参考 `ubuntu-cdimage`{.interpreted-text role="doc"}
+其他架构请参考 `ubuntu-cdimage`
 
 ## 收录版本
 
@@ -20,7 +20,7 @@ AMD64 (x86_64), Intel x86
 <https://wiki.ubuntu.com/Releases>
 
 对于 Ubuntu 不再支持的版本，请参考
-`ubuntu-old-releases`{.interpreted-text role="doc"}
+`ubuntu-old-releases`
 
 ## 使用说明
 

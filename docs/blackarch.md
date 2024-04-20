@@ -22,7 +22,7 @@ i686, x86_64, ARM 相关（目前包含 armv6h/armv7h/aarch64）
 
 ## 使用说明
 
-在 `/etc/pacman.conf`{.interpreted-text role="file"} 文件末尾添加两行：
+在 `/etc/pacman.conf` 文件末尾添加两行：
 
     [blackarch]
     Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch
@@ -32,7 +32,7 @@ i686, x86_64, ARM 相关（目前包含 armv6h/armv7h/aarch64）
 !!! tip
 
     Black Arch 软件源仅包含其打包的工具等软件。如果需要更换 Arch Linux
-    基础系统的软件源，请查看 `archlinux`{.interpreted-text role="doc"}。
+    基础系统的软件源，请查看 `archlinux`。
 
 ## 相关链接
 

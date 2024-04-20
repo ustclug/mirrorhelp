@@ -10,7 +10,7 @@ Stackage 镜像
 
 ## 使用说明
 
-推荐搭配 USTC Hackage 源使用: `hackage`{.interpreted-text role="doc"}
+推荐搭配 USTC Hackage 源使用: `hackage`
 
 编辑 `~/.stack/config.yaml`, 根据版本的不同，增加下列配置：
 

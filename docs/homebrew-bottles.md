@@ -45,11 +45,11 @@ Homebrew 预编译二进制软件包与软件包元数据文件
 
 ## 相关镜像
 
--   `brew.git`{.interpreted-text role="doc"}
--   `homebrew-core.git`{.interpreted-text role="doc"}
--   `homebrew-cask.git`{.interpreted-text role="doc"}
--   `homebrew-cask-versions.git`{.interpreted-text role="doc"}
--   `homebrew-services.git`{.interpreted-text role="doc"}
+-   `brew.git`
+-   `homebrew-core.git`
+-   `homebrew-cask.git`
+-   `homebrew-cask-versions.git`
+-   `homebrew-services.git`
 
 ## 相关链接
 

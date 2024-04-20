@@ -14,8 +14,8 @@ ALL
 
 ## 使用说明
 
-新建或修改 `/etc/portage/repos.conf/gentoo.conf`{.interpreted-text
-role="file"} ：
+新建或修改 `/etc/portage/repos.conf/gentoo.conf`
+ ：
 
     [DEFAULT]
     main-repo = gentoo
@@ -28,8 +28,8 @@ role="file"} ：
 
 ## 相关镜像
 
--   `gentoo`{.interpreted-text role="doc"}
--   `gentoo.git`{.interpreted-text role="doc"}
+-   `gentoo`
+-   `gentoo.git`
 
 ## 相关链接
 

@@ -12,7 +12,7 @@ Ubuntu 软件源
 
 AMD64 (x86_64), Intel x86
 
-其他架构请参考 `ubuntu-ports`{.interpreted-text role="doc"}
+其他架构请参考 `ubuntu-ports`
 
 ## 收录版本
 
@@ -20,7 +20,7 @@ AMD64 (x86_64), Intel x86
 <https://wiki.ubuntu.com/Releases>
 
 对于 Ubuntu 不再支持的版本，请参考
-`ubuntu-old-releases`{.interpreted-text role="doc"}
+`ubuntu-old-releases`
 
 ## 使用说明
 
@@ -39,7 +39,7 @@ AMD64 (x86_64), Intel x86
 
     操作前请做好相应备份
 
-一般情况下，将 `/etc/apt/sources.list`{.interpreted-text role="file"}
+一般情况下，将 `/etc/apt/sources.list`
 文件中 Ubuntu 默认的源地址 `http://archive.ubuntu.com/` 替换为
 `http://mirrors.ustc.edu.cn/` 即可。
 
@@ -61,8 +61,8 @@ AMD64 (x86_64), Intel x86
     使用 HTTPS 可以有效避免国内运营商的缓存劫持。即
     `sudo sed -i 's/http:/https:/g' /etc/apt/sources.list`。
 
-当然也可以直接编辑 `/etc/apt/sources.list`{.interpreted-text
-role="file"} 文件（需要使用 sudo）。以下是 Ubuntu 22.04 参考配置内容：
+当然也可以直接编辑 `/etc/apt/sources.list`
+ 文件（需要使用 sudo）。以下是 Ubuntu 22.04 参考配置内容：
 
     # 默认注释了源码仓库，如有需要可自行取消注释
     deb https://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted universe multiverse
@@ -81,7 +81,7 @@ role="file"} 文件（需要使用 sudo）。以下是 Ubuntu 22.04 参考配置
     # deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
     # deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
 
-更改完 `sources.list`{.interpreted-text role="file"} 文件后请运行
+更改完 `sources.list` 文件后请运行
 `sudo apt-get update` 更新索引以生效。
 
 !!! tip
@@ -95,7 +95,7 @@ role="file"} 文件（需要使用 sudo）。以下是 Ubuntu 22.04 参考配置
 ### 镜像下载
 
 如果需要下载 Ubuntu 的 ISO 镜像以便安装，请参考
-`ubuntu-releases`{.interpreted-text role="doc"}
+`ubuntu-releases`
 
 ## 相关链接
 

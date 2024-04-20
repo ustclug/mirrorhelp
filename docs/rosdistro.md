@@ -31,7 +31,7 @@
 
 ## 相关镜像
 
--   `ros`{.interpreted-text role="doc"}
+-   `ros`
 
 ## 相关链接
 

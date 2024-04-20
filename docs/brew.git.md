@@ -63,11 +63,11 @@ Homebrew 源代码仓库
 
 ## 相关镜像
 
--   `homebrew-bottles`{.interpreted-text role="doc"}
--   `homebrew-core.git`{.interpreted-text role="doc"}
--   `homebrew-cask.git`{.interpreted-text role="doc"}
--   `homebrew-cask-versions.git`{.interpreted-text role="doc"}
--   `homebrew-services.git`{.interpreted-text role="doc"}
+-   `homebrew-bottles`
+-   `homebrew-core.git`
+-   `homebrew-cask.git`
+-   `homebrew-cask-versions.git`
+-   `homebrew-services.git`
 
 ## 相关链接
 

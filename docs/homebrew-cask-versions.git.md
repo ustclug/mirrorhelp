@@ -26,11 +26,11 @@ Homebrew cask 其他版本 (alternative versions)
 
 ## 相关镜像
 
--   `brew.git`{.interpreted-text role="doc"}
--   `homebrew-bottles`{.interpreted-text role="doc"}
--   `homebrew-core.git`{.interpreted-text role="doc"}
--   `homebrew-cask.git`{.interpreted-text role="doc"}
--   `homebrew-services.git`{.interpreted-text role="doc"}
+-   `brew.git`
+-   `homebrew-bottles`
+-   `homebrew-core.git`
+-   `homebrew-cask.git`
+-   `homebrew-services.git`
 
 ## 相关链接
 

@@ -7,7 +7,7 @@
 ## 说明
 
 Android 开源项目源代码镜像。支持 git 与 http(s) 协议。
-关于协议选择，请参考 `http_sync`{.interpreted-text role="ref"}。
+关于协议选择，请参考 `http_sync`。
 
 ## 初始同步
 
@@ -21,7 +21,7 @@ AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约
 下载地址：https://mirrors.ustc.edu.cn/aosp-monthly/。\**请注意对比
 checksum。*\*
 
-然后解压后根据下文 `change_to_ustc`{.interpreted-text role="ref"}
+然后解压后根据下文 `change_to_ustc`
 的方法更改同步地址， 然后用命令 `repo sync` 就可以把代码都 checkout
 出来。
 

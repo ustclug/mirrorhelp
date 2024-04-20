@@ -20,8 +20,8 @@ packages.termux.dev，我们推荐先更新 `termux-tools` 软件包，然后直
 即可。
 
 如果想要手动更换 Termux APT 源的话，可以编辑
-`/data/data/com.termux/files/usr/etc/apt/sources.list`{.interpreted-text
-role="file"} 为如下内容
+`/data/data/com.termux/files/usr/etc/apt/sources.list`
+ 为如下内容
 
     deb https://mirrors.ustc.edu.cn/termux/apt/termux-main stable main
 
@@ -31,7 +31,7 @@ role="file"} 为如下内容
     pkg up
 
 注：Termux 会自动将环境变量 `$PREFIX` 设定为
-`/data/data/com.termux/files/usr`{.interpreted-text role="file"}
+`/data/data/com.termux/files/usr`
 
 !!! warning
 

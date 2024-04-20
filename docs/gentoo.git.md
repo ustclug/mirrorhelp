@@ -16,8 +16,8 @@ ALL
 
 请确保系统中已安装 `dev-vcs/git`。
 
-修改 `/etc/portage/repos.conf/gentoo.conf`{.interpreted-text
-role="file"} 中的 `sync-type` 为 `git`，`sync-uri` 为
+修改 `/etc/portage/repos.conf/gentoo.conf`
+ 中的 `sync-type` 为 `git`，`sync-uri` 为
 `https://mirrors.ustc.edu.cn/gentoo.git` 。
 
 以下是修改后的：
@@ -46,8 +46,8 @@ role="file"} 中的 `sync-type` 为 `git`，`sync-uri` 为
     方式同步）：
 
 按照上述教程更改完
-`/etc/portage/repos.conf/gentoo.conf`{.interpreted-text
-role="file"}，需要：
+`/etc/portage/repos.conf/gentoo.conf`
+，需要：
 
     # 删除本地 main tree 目录
     rm -rf /var/db/repos/gentoo
@@ -57,8 +57,8 @@ role="file"}，需要：
 
 -   已经配置过 `Git` 同步方式的用户（其他镜像站换中科大源）只需要：
 
-更改完 `/etc/portage/repos.conf/gentoo.conf`{.interpreted-text
-role="file"}：
+更改完 `/etc/portage/repos.conf/gentoo.conf`
+：
 
     # 进入 main tree 目录
     cd /var/db/repos/gentoo
@@ -71,8 +71,8 @@ role="file"}：
 
 ## 相关镜像
 
--   `gentoo`{.interpreted-text role="doc"}
--   `gentoo-portage`{.interpreted-text role="doc"}
+-   `gentoo`
+-   `gentoo-portage`
 
 ## 相关链接
 

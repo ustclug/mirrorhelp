@@ -14,7 +14,7 @@ Homebrew 核心软件仓库
 
     Brew 4.0 版本后默认使用元数据 JSON API
     获取仓库信息，因此在大部分情况下都不再需要进行如下配置。可参考
-    `homebrew-bottles`{.interpreted-text role="doc"} 进行相关配置。
+    `homebrew-bottles` 进行相关配置。
 
 替换 USTC 镜像：
 
@@ -60,11 +60,11 @@ Homebrew 核心软件仓库
 
 ## 相关镜像
 
--   `brew.git`{.interpreted-text role="doc"}
--   `homebrew-bottles`{.interpreted-text role="doc"}
--   `homebrew-cask.git`{.interpreted-text role="doc"}
--   `homebrew-cask-versions.git`{.interpreted-text role="doc"}
--   `homebrew-services.git`{.interpreted-text role="doc"}
+-   `brew.git`
+-   `homebrew-bottles`
+-   `homebrew-cask.git`
+-   `homebrew-cask-versions.git`
+-   `homebrew-services.git`
 
 ## 相关链接
 

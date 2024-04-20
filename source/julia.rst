@@ -2,9 +2,6 @@
 Julia 镜像使用帮助
 ===================
 
-.. role:: sh(code)
-   :language: bash
-
 地址
 ====
 

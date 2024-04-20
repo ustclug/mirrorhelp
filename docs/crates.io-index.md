@@ -10,7 +10,7 @@ Rust Crates Registry 源
 
 ## 使用说明
 
-在 `$CARGO_HOME/config`{.interpreted-text role="file"} 中添加如下内容：
+在 `$CARGO_HOME/config` 中添加如下内容：
 
     [source.crates-io]
     replace-with = 'ustc'
@@ -45,7 +45,7 @@ Rust Crates Registry 源
 
     cargo 1.68 版本开始支持稀疏索引：不再需要完整克隆 crates.io-index
     仓库，可以加快获取包的速度。如果您的 cargo 版本大于等于 1.68，可以在
-    `$CARGO_HOME/config`{.interpreted-text role="file"} 中添加如下内容：
+    `$CARGO_HOME/config` 中添加如下内容：
 
         [source.crates-io]
         replace-with = 'ustc'

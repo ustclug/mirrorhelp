@@ -17,7 +17,7 @@ Alpine Linux 软件源
 
 ## 使用说明
 
-一般情况下，将 `/etc/apk/repositories`{.interpreted-text role="file"}
+一般情况下，将 `/etc/apk/repositories`
 文件中 Alpine 默认的源地址 `http://dl-cdn.alpinelinux.org/` 替换为
 `http://mirrors.ustc.edu.cn/` 即可。
 
@@ -25,7 +25,7 @@ Alpine Linux 软件源
 
     sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 
-也可以直接编辑 `/etc/apk/repositories`{.interpreted-text role="file"}
+也可以直接编辑 `/etc/apk/repositories`
 文件。以下是 v3.5 版本的参考配置：
 
     https://mirrors.ustc.edu.cn/alpine/v3.5/main
@@ -36,7 +36,7 @@ Alpine Linux 软件源
     https://mirrors.ustc.edu.cn/alpine/latest-stable/main
     https://mirrors.ustc.edu.cn/alpine/latest-stable/community
 
-更改完 `/etc/apk/repositories`{.interpreted-text role="file"}
+更改完 `/etc/apk/repositories`
 文件后请运行 `apk update` 更新索引以生效。
 
 !!! tip

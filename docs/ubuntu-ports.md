@@ -17,7 +17,7 @@ arm64, armhf, PowerPC, ppc64el, s390x
 所有 Ubuntu 当前对该架构支持的版本，包括开发版
 
 对于 Ubuntu 不再支持的版本，请参考
-`ubuntu-old-releases`{.interpreted-text role="doc"}
+`ubuntu-old-releases`
 
 ## 使用说明
 
@@ -27,7 +27,7 @@ arm64, armhf, PowerPC, ppc64el, s390x
 
     操作前请做好相应备份
 
-在 `/etc/apt/sources.list`{.interpreted-text role="file"}
+在 `/etc/apt/sources.list`
 文件中，将软件源的地址改为 `http://mirrors.ustc.edu.cn/ubuntu-ports`
 
 以下是 Ubuntu 22.04 /etc/apt/sources.list 文件的参考配置内容：
@@ -46,7 +46,7 @@ arm64, armhf, PowerPC, ppc64el, s390x
     # deb https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy-proposed main restricted universe multiverse
     # deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy-proposed main restricted universe multiverse
 
-更改完 `sources.list`{.interpreted-text role="file"} 文件后请运行
+更改完 `sources.list` 文件后请运行
 `sudo apt-get update` 更新索引以生效。
 
 !!! tip
@@ -56,7 +56,7 @@ arm64, armhf, PowerPC, ppc64el, s390x
 
 ### 镜像下载
 
-相关架构的 ISO 下载请参考 `ubuntu-cdimage`{.interpreted-text role="doc"}
+相关架构的 ISO 下载请参考 `ubuntu-cdimage`
 
 ## 相关链接
 
