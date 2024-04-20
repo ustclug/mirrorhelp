@@ -12,8 +12,9 @@ Hackage 镜像
 
 编辑 `~/.stack/config.yaml`，增加下列参数
 
-\>= v2.9.3:
+=== ">= v2.9.3"
 
+    ```yaml
     package-index:
       download-prefix: https://mirrors.ustc.edu.cn/hackage/
       hackage-security:
@@ -31,9 +32,11 @@ Hackage 镜像
 
         # ignore expiration date, see https://github.com/commercialhaskell/stack/pull/4614
         ignore-expiry: true
+    ```
 
-\>= v2.1.1, <v2.9.3:
+=== ">= v2.1.1, <v2.9.3"
 
+    ```yaml
     package-indices:
     - download-prefix: https://mirrors.ustc.edu.cn/hackage/
       hackage-security:
@@ -51,20 +54,23 @@ Hackage 镜像
 
         # ignore expiration date, see https://github.com/commercialhaskell/stack/pull/4614
         ignore-expiry: true
+    ```
 
-< v2.1.1:
+=== "< v2.1.1"
 
+    ```yaml
     package-indices:
       - name: USTC
         download-prefix: https://mirrors.ustc.edu.cn/hackage/package/
         http: https://mirrors.ustc.edu.cn/hackage/01-index.tar.gz
+    ```
 
 ## Cabal 使用说明
 
 1.  执行 `cabal user-config init`
 2.  修改 `~/.cabal/config`
 
-    - Cabal ≥ 1.24 (GHC 8.0)
+    === "Cabal >= 1.24 (GHC 8.0)"
 
         找到官方仓库：
 
@@ -91,13 +97,13 @@ Hackage 镜像
             为了保证与老版本 cabal 的兼容性，`secure` 值设置为 `False` 可能导致
             cabal 无法获取到最新的包信息。
 
-    - Cabal < 1.24
+    === "Cabal < 1.24"
 
-        找到官方仓库: :
+        找到官方仓库：
 
             remote-repo: hackage.haskell.org:http://hackage.haskell.org/packages/archive
 
-        改为科大源: :
+        改为科大源：
 
             remote-repo: mirrors.ustc.edu.cn:http://mirrors.ustc.edu.cn/hackage/
 

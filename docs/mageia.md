@@ -4,7 +4,7 @@
 
     Mageia 源于 2018 年 11 月起转为反向代理服务（详见 [mageia
     镜像变更通知](https://servers.ustclug.org/2018/11/mageia-mirror-change/)），并于
-    2022 年 1 月改为重定向至 BFSU。
+    2022 年 1 月改为重定向至其他教育网镜像站。
 
 ## 地址
 

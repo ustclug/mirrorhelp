@@ -10,42 +10,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.12'
       - name: Install dependencies
         run: |
           pip3 install -r requirements.txt
-      - name: Clone deploy branch
-        run: |
-          REMOTE_BRANCH="${REMOTE_BRANCH:-gh-pages}"
-          REMOTE_REPO="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
-
-          rm -rf build/html/
-          mkdir -p build/html/
-          git clone --depth=1 --branch="${REMOTE_BRANCH}" --single-branch --no-checkout \
-            "${REMOTE_REPO}" build/html/
       - name: Build documentation
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: make html
+        run: make
       - name: Deploy to GitHub Pages
-        if: "github.event_name == 'push'"
+        if: github.event_name == 'push'
         run: |
-          SOURCE_COMMIT="$(git log -1 --pretty="%an: %B" "$GITHUB_SHA")"
-          pushd build/html/ &>/dev/null
-
-          : > .nojekyll
-          git add --all
-
-          if [ "$(git status --porcelain | wc -l)" -eq 0 ]; then
-            exit 0
-          fi
-          git -c user.name="GitHub" -c user.email="noreply@github.com" \
-            commit --quiet \
-            --message "Deploy docs from ${GITHUB_SHA}" \
-            --message "$SOURCE_COMMIT"
+          CINFO="$(git log -1 --pretty="%an: [%h] %B")"
+          git clone --depth=1 --branch=gh-pages --single-branch --no-checkout \
+            "https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" test
+          mv test/.git site/.git && rmdir test/
+          pushd site/ &>/dev/null
+          git add -A
+          git -c user.name=GitHub -c user.email=noreply@github.com commit \
+            -m "Auto deploy from GitHub Actions build ${GITHUB_RUN_NUMBER}" \
+            -m "$CINFO"
           git push
-
           popd &>/dev/null
