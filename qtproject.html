@@ -2350,7 +2350,25 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      在线安装
+      地址
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装
     </span>
   </a>
   
@@ -2527,7 +2545,25 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      在线安装
+      地址
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装
     </span>
   </a>
   
@@ -2552,21 +2588,35 @@
 
 
 <h1 id="qt">Qt<a class="headerlink" href="#qt" title="Permanent link">&para;</a></h1>
-<h2 id="_1">在线安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>从
-<a href="https://mirrors.ustc.edu.cn/qtproject/official_releases/online_installers/">https://mirrors.ustc.edu.cn/qtproject/official_releases/online_installers/</a>
-下载在线安装器。</p>
-<p>可以使用以下两种方式之一在安装器中配置使用科大源下载 Qt：</p>
+<h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><a href="https://mirrors.ustc.edu.cn/qtproject/">https://mirrors.ustc.edu.cn/qtproject/</a></p>
+<h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Qt 应用开发框架目前支持的版本。已经不再被官方维护的版本未同步。</p>
+<h2 id="_3">安装<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>首先，从 <a href="https://mirrors.ustc.edu.cn/qtproject/official_releases/online_installers/">https://mirrors.ustc.edu.cn/qtproject/official_releases/online_installers/</a> 下载在线安装器。然后可以使用以下两种方式之一在安装器中配置使用科大源下载 Qt：</p>
 <ol>
 <li>
-<p>（推荐）新版本的安装器（4.0.1-1 后）支持 <code>--mirror</code> 命令行参数。在命令行中执行安装器，添加
-    <code>--mirror https://mirrors.ustc.edu.cn/qtproject</code> 参数。</p>
-<p>例如 Windows
-下执行当前目录的安装器的命令为
-<code>.\qt-unified-windows-x86-online.exe --mirror https://mirrors.ustc.edu.cn/qtproject</code>；
-2. 或在启动安装器后在设置中禁用默认源，添加新源
-<a href="http://mirrors.ustc.edu.cn/qtproject/online/qtsdkrepository/linux_x64/root/qt/">http://mirrors.ustc.edu.cn/qtproject/online/qtsdkrepository/linux_x64/root/qt/</a>
-（其他版本注意更改地址）。</p>
+<p>（<strong>推荐</strong>）目前安装器支持 <code>--mirror</code> 命令行参数。在命令行中执行安装器，添加 <code>--mirror https://mirrors.ustc.edu.cn/qtproject</code> 参数即可。</p>
+<p>Windows 下执行当前目录的安装器的命令为：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="go">.\qt-unified-windows-x86-online.exe --mirror https://mirrors.ustc.edu.cn/qtproject</span>
+</code></pre></div>
+<p>Linux (amd64)：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="go">chmod +x qt-unified-linux-x64-online.run</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="go">./qt-unified-linux-x64-online.run --mirror https://mirrors.ustc.edu.cn/qtproject</span>
+</code></pre></div>
+<p>Linux (aarch64)：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">chmod +x qt-unified-linux-arm64-online.run</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="go">./qt-unified-linux-arm64-online.run --mirror https://mirrors.ustc.edu.cn/qtproject</span>
+</code></pre></div>
+<p>macOS 需要点击 dmg 挂载后，使用终端打开挂载后的 dmg 目录：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp"># </span>文件名需要根据实际情况调整
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="go">open qt-unified-macOS-x64-4.7.0-online.app --args --mirror https://mirrors.ustc.edu.cn/qtproject</span>
+</code></pre></div>
+</li>
+<li>
+<p>（不建议）在启动安装器后在设置中禁用默认源，添加新源
+    <a href="http://mirrors.ustc.edu.cn/qtproject/online/qtsdkrepository/linux_x64/root/qt/">http://mirrors.ustc.edu.cn/qtproject/online/qtsdkrepository/linux_x64/root/qt/</a>
+    （其他版本注意更改地址）。</p>
 </li>
 </ol>
 
