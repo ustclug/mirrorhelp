@@ -56,32 +56,50 @@ AMD64 (x86_64), Intel x86
     使用 HTTPS 可以有效避免国内运营商的缓存劫持。即
     `sudo sed -i 's/http:/https:/g' /etc/apt/sources.list`。
 
-当然也可以直接编辑 `/etc/apt/sources.list`
- 文件（需要使用 sudo）。以下是 Ubuntu 22.04 参考配置内容：
+当然也可以直接编辑 APT 源文件（需要使用 sudo）。以下是参考配置内容：
 
-    # 默认注释了源码仓库，如有需要可自行取消注释
-    deb https://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted universe multiverse
+=== "`sources.list` 格式"
+{% for release in ubuntu_releases %}
+    === "Ubuntu {{ release.name }}"
 
-    deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+        ```shell title="/etc/apt/sources.list"
+        # 默认注释了源码仓库，如有需要可自行取消注释
+        deb https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }} main restricted universe multiverse
+        # deb-src https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }} main restricted universe multiverse
 
-    deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+        deb https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }}-security main restricted universe multiverse
+        # deb-src https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }}-security main restricted universe multiverse
 
-    deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+        deb https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }}-updates main restricted universe multiverse
+        # deb-src https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }}-updates main restricted universe multiverse
 
-    # 预发布软件源，不建议启用
-    # deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
-    # deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
+        deb https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }}-backports main restricted universe multiverse
+        # deb-src https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }}-backports main restricted universe multiverse
+
+        # 预发布软件源，不建议启用
+        # deb https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }}-proposed main restricted universe multiverse
+        # deb-src https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }}-proposed main restricted universe multiverse
+        ```
+{% endfor %}
+
+=== "DEB822 格式"
+{% for release in ubuntu_releases %}
+    === "Ubuntu {{ release.name }}"
+
+        ```yaml title="/etc/apt/sources.list.d/ubuntu.sources"
+        Enabled: yes
+        Types: deb
+        URIs: https://mirrors.ustc.edu.cn/ubuntu
+        Suites: {{ release.codename }} {{ release.codename }}-updates {{ release.codename }}-security
+        Components: main restricted universe multiverse
+        ```
+
+        如果需要使用源码仓库，可以在 `Types` 中添加 `deb-src`。
+
+        如果需要使用预发布软件源，可以在 `Suites` 中添加 `{{ release.codename }}-proposed`。
+{% endfor %}
 
 更改完 `sources.list` 文件后请运行 `sudo apt-get update` 更新索引以生效。
-
-!!! tip
-
-    如要用于其他版本，把 jammy 换成其他版本代号即可:
-    22.04：`jammy`；20.04：`focal`；18.04：`bionic`；16.04：`xenial`；14.04：`trusty`。
 
 另外，也可以使用 snullp 大叔开发的[配置生成器](https://mirrors.ustc.edu.cn/repogen)。
 

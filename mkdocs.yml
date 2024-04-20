@@ -60,6 +60,13 @@ markdown_extensions:
   - toc:
       permalink: true
 
+plugins:
+  - search
+  - macros:
+      include_dir: includes
+      j2_comment_start_string: "{%#"
+      j2_comment_end_string: "%}"
+
 extra:
   social:
     - icon: fontawesome/brands/linux
@@ -69,6 +76,24 @@ extra:
   analytics:
     provider: google
     property: UA-160637954-1
+
+  # data for use in templates
+  debian_releases:
+    - version: 12
+      codename: bookworm
+    - version: 11
+      codename: bullseye
+    - version: 10
+      codename: buster
+  ubuntu_releases:
+    - name: 22.04
+      codename: jammy
+    - name: 20.04
+      codename: focal
+    - name: 18.04
+      codename: bionic
+    - name: 16.04
+      codename: xenial
 
 extra_css:
   - css/extra.css

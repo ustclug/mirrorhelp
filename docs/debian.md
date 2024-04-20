@@ -24,24 +24,62 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
     操作前请做好相应备份。
 
-一般情况下，将 `/etc/apt/sources.list`
-文件中 Debian 默认的源地址 `http://deb.debian.org/` 替换为
-`http://mirrors.ustc.edu.cn` 即可。
+一般情况下，将 `/etc/apt/sources.list` 文件中 Debian 默认的源地址 `http://deb.debian.org/` 替换为 `http://mirrors.ustc.edu.cn` 即可。
 
 可以使用如下命令：
 
     sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 
-当然也可以直接编辑 `/etc/apt/sources.list` 文件（需要使用 sudo）。
-以下是 Debian Stable 参考配置内容：
+当然也可以直接编辑 APT 源文件（需要使用 sudo）。以下是参考配置内容：
 
-    deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free non-free-firmware
-    # deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free non-free-firmware
-    deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free non-free-firmware
-    # deb-src http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free non-free-firmware
+{% for release in debian_releases %}
 
-    # deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free non-free-firmware
-    # deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free non-free-firmware
+{% set debian_suites = "main contrib non-free" %}
+{% if release.version >= 12 %}
+{% set debian_suites = debian_suites + " non-free-firmware" %}
+{% endif %}
+
+{% set debian_security = release.codename + "-security" %}
+{% if release.version < 11 %}
+{% set debian_security = release.codename + "/updates" %}
+{% endif %}
+
+=== "Debian {{ release.version }}"
+
+    === "`sources.list` 格式"
+
+        ```shell title="/etc/apt/sources.list"
+        # 默认注释了源码仓库，如有需要可自行取消注释
+        deb http://mirrors.ustc.edu.cn/debian {{ release.codename }} {{ debian_suites }}
+        # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }} {{ debian_suites }}
+        deb http://mirrors.ustc.edu.cn/debian {{ release.codename }}-updates {{ debian_suites }}
+        # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }}-updates {{ debian_suites }}
+
+        # backports 软件源，请按需启用
+        # deb http://mirrors.ustc.edu.cn/debian {{ release.codename }}-backports {{ debian_suites }}
+        # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }}-backports {{ debian_suites }}
+        ```
+
+    === "DEB822 格式"
+
+        ```yaml title="/etc/apt/sources.list.d/debian.sources"
+        Types: deb
+        URIs: https://mirrors.ustc.edu.cn/debian
+        Suites: {{ release.codename }} {{ release.codename }}-updates
+        Components: {{ debian_suites }}
+        
+        Types: deb
+        URIs: https://mirrors.ustc.edu.cn/debian-security
+        Suites: {{ debian_security }}
+        Components: {{ debian_suites }}
+        ```
+
+        !!! warning "DEB822 格式包含了对 debian-security 源的修改"
+
+        如果需要使用源码仓库，可以在 Types 中添加 `deb-src`。
+
+        如果需要使用 backports 软件源，可以在 Suites 中添加 `{{ release.codename }}-backports`。
+{% endfor %}
 
 !!! tip
 
@@ -57,20 +95,6 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
     `/etc/apt/sources.list.d/debian.sources`。同样可以使用如下命令：
 
         sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources
-
-    以下是在 Debian 12 容器镜像中**同时修改了 Debian 与 Debian Security 源的情况下**的参考配置内容：
-
-        Types: deb
-        URIs: http://mirrors.ustc.edu.cn/debian
-        Suites: bookworm bookworm-updates
-        Components: main
-        Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
-
-        Types: deb
-        URIs: http://mirrors.ustc.edu.cn/debian-security
-        Suites: bookworm-security
-        Components: main
-        Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
 同时你也可能需要更改 Debian Security 源，请参考 [debian-security](debian-security.md)。
 

@@ -1,3 +1,4 @@
 mkdocs-material
 requests
 jieba
+mkdocs-macros-plugin

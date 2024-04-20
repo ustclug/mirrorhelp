@@ -36,12 +36,44 @@ Debian Old Old Stable, Old Stable, Stable
 
 可以直接使用如下命令完成上述修改：
 
-    sudo sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
+    sudo sed -i 's|security.debian.org|mirrors.ustc.edu.cn|g' /etc/apt/sources.list
 
-当然也可以直接编辑 `/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
+当然也可以直接编辑 APT 源文件（需要使用 sudo）。以下是参考配置内容：
 
-    deb http://mirrors.ustc.edu.cn/debian-security/ stable-security main non-free contrib
-    # deb-src http://mirrors.ustc.edu.cn/debian-security/ stable-security main non-free contrib
+{% for release in debian_releases %}
+
+{% set debian_suites = "main contrib non-free" %}
+{% if release.version >= 12 %}
+{% set debian_suites = debian_suites + " non-free-firmware" %}
+{% endif %}
+
+{% set debian_security = release.codename + "-security" %}
+{% if release.version < 11 %}
+{% set debian_security = release.codename + "/updates" %}
+{% endif %}
+
+=== "Debian {{ release.version }}"
+
+    === "`sources.list` 格式"
+
+        ```shell title="/etc/apt/sources.list"
+        deb http://mirrors.ustc.edu.cn/debian-security/ {{ debian_security }} {{ debian_suites }}
+        # deb-src http://mirrors.ustc.edu.cn/debian-security/ {{ debian_security }} {{ debian_suites }}
+        ```
+
+    === "DEB822 格式"
+
+        ```yaml title="/etc/apt/sources.list.d/debian.sources"
+        Types: deb
+        URIs: https://mirrors.ustc.edu.cn/debian-security
+        Suites: {{ debian_security }}
+        Components: {{ debian_suites }}
+        ```
+
+        如果需要使用源码仓库，可以在 Types 中添加 `deb-src`。
+
+        如果需要使用 backports 软件源，可以在 Suites 中添加 `{{ release.codename }}-backports`。
+{% endfor %}
 
 更改完 `sources.list` 文件后请运行 `sudo apt-get update` 更新索引以生效。
 
