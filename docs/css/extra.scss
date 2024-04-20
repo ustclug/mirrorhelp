@@ -1,0 +1,97 @@
+// Manually compile this file:
+//
+// scss extra.scss > extra.css
+
+$color-codes: red, darkred, orangered, green, limegreen, cyan, darkcyan;
+@each $color in $color-codes {
+  .#{"" + $color}, .#{"" + $color}-important {
+    color: #{$color} !important;
+  }
+}
+
+:root {
+  --md-text-font: Roboto;
+  --md-code-font: Roboto Mono;
+}
+
+.md-typeset {
+  #references,
+  .no-underline {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: none;
+  }
+
+  h2 {
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #d3d3d3;
+  }
+
+  h3 {
+    padding-bottom: 0.2em;
+    border-bottom: 1px dashed #d3d3d3;
+  }
+
+  h4 {
+    font-size: 1.17em;
+  }
+
+  h5 {
+    font-size: 1.08em;
+  }
+
+  h6 {
+    font-size: 1em;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img-inline {
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
+  .img-border {
+    border: 1px solid black;
+  }
+
+  kbd {
+    box-shadow: 0 0 0 0.05rem var(--md-default-fg-color--lighter), 0 0.1rem 0 var(--md-default-fg-color--lighter),
+      inset 0 -0.1rem 0.2rem var(--md-default-bg-color);
+  }
+
+  .admonition,
+  details {
+    font-size: 0.9em;
+  }
+
+  .md-typeset__table {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    > table {
+      display: table;
+      width: auto;
+      margin: 0 auto;
+    }
+  }
+
+  p.caption {
+    text-align: center;
+    font-size: 0.94em;
+    color: grey;
+    margin: -0.7em 0 0;
+  }
+
+  .footnote hr {
+    margin-top: 0.2em;
+  }
+}
