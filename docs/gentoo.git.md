@@ -6,7 +6,7 @@
 
 ## 说明
 
-Gentoo Portage Ebuild 源 （Git 方式同步）
+Gentoo Portage Ebuild 源（Git 方式同步）
 
 ## 收录架构
 
@@ -68,8 +68,8 @@ ALL
 
 ## 相关镜像
 
--   `gentoo`
--   `gentoo-portage`
+-   [gentoo](gentoo.md)
+-   [gentoo-portage](gentoo-portage.md)
 
 ## 相关链接
 

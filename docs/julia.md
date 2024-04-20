@@ -69,7 +69,7 @@ JuliaZH.mirrors # 查询记录的上游信息
 export JULIA_PKG_SERVER=https://mirrors.ustc.edu.cn/julia
 ```
 
-此外， 这里再提供一种针对 Julia 的全平台通用的方式：
+此外，这里再提供一种针对 Julia 的全平台通用的方式：
 `$JULIA_DEPOT_PATH/config/startup.jl`
 （默认为 `~/.julia/config/startup.jl`）文件定义了每次启动 Julia
 时都会执行的命令，编辑该文件，添加以下内容即可：
@@ -105,7 +105,7 @@ julia> JuliaZH.generate_startup("USTC")
 -   在 `deps/build.jl` 文件中硬编码的下载地址，例如
     [GR](https://github.com/jheinen/GR.jl/blob/70f025d5cb439d036409f1985107cb5e1615097f/deps/build.jl#L116).
 -   在 `Artifacts.toml` 中没有给出 `download`
-    项的资源, 例如
+    项的资源，例如
     [TestImages](https://github.com/JuliaImages/TestImages.jl/blob/eaa94348df619c65956e8cfb0032ecddb7a29d3a/Artifacts.toml).
 
 在安装包含这两类数据的包时，其数据依然是从原始地址进行下载，因此若网络不稳定则可能会在 build 阶段报错。
@@ -114,7 +114,7 @@ julia> JuliaZH.generate_startup("USTC")
 
 Julia `v1.4.0` 之前的版本采用的是 `git clone`
 的方式拉取注册表。为了保持兼容性，如果现有的注册表是一个完整的 git
-仓库的话， 那么即使设置了 PkgServer 作为上游镜像也依然会通过 `git`
+仓库的话，那么即使设置了 PkgServer 作为上游镜像也依然会通过 `git`
  来进行更新，换句话说，不会通过镜像站来下载注册表数据。
 
 以默认注册表 `General` 为例，只需要手动将其重置到镜像站即可：
@@ -137,7 +137,7 @@ Pkg.add(PackageSpec(url="https://github.com/FluxML/Flux.jl.git"))
 
 ### 加快 Conda.jl 相关操作的速度
 
-这里简单介绍一下其使用， 具体的细节可以参考
+这里简单介绍一下其使用，具体的细节可以参考
 [Conda.jl](https://github.com/JuliaPy/Conda.jl) 和
 [PyCall.jl](https://github.com/JuliaPy/PyCall.jl) 的文档。
 `Conda.jl` 的加速分为两部分：

@@ -17,7 +17,7 @@ MSYS2 镜像
 
 访问该镜像目录下的 `distrib/`
 目录（[x86_64](http://mirrors.ustc.edu.cn/msys2/distrib/x86_64/)、[i686](http://mirrors.ustc.edu.cn/msys2/distrib/i686/)），找到名为
-`msys2-<架构>-<日期>.exe` 的文件 （如
+`msys2-<架构>-<日期>.exe` 的文件（如
 `msys2-x86_64-20141113.exe`），下载安装即可。
 
 ## Pacman 的配置

@@ -30,8 +30,8 @@ FreeBSD 支持的所有正式版本
 
 ## 相关镜像
 
--   `freebsd-pkg`
--   `freebsd-ports`
+-   [freebsd-pkg](freebsd-pkg.md)
+-   [freebsd-ports](freebsd-ports.md)
 
 ## 相关链接
 

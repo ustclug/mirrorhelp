@@ -63,9 +63,7 @@ OS，可以直接使用 arm64 Debian 的源（以 Bullseye 示例）：
 
 ## 相关链接
 
-Raspbian 链接
-
-:   
+- Raspbian 链接
 
     Raspbian 主页
 
@@ -83,9 +81,7 @@ Raspbian 链接
 
     :   <http://www.raspbian.org/RaspbianMirrors>
 
-树莓派链接
-
-:   
+- 树莓派链接
 
     树莓派基金会主页
 

@@ -88,7 +88,7 @@ Hackage 镜像
 
         !!! warning
 
-            为了保证与老版本 cabal 的兼容性， `secure` 值设置为 `False` 可能导致
+            为了保证与老版本 cabal 的兼容性，`secure` 值设置为 `False` 可能导致
             cabal 无法获取到最新的包信息。
 
     - Cabal < 1.24

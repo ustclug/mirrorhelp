@@ -21,7 +21,7 @@ ports.tar.gz 文件为 Ports Collection，可以下载后解压到 `/usr/ports/`
 !!! warning
 
     这里使用了 `--filter=tree:0` 参数以进行 treeless
-    clone，减少下载量与服务端压力。 关于不同的部分 clone
+    clone，减少下载量与服务端压力。关于不同的部分 clone
     方式及其注意事项，可参考
     [GitHub Blog 的有关文章](https://github.blog/2020-12-21-get-up-to-speed-with-partial-clone-and-shallow-clone/)。
 

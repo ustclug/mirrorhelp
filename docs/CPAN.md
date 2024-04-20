@@ -48,6 +48,6 @@
 
 ## 相关链接
 
--   官方主页: <http://www.cpan.org/>
--   镜像列表: <http://www.cpan.org/SITES.html>
+-   官方主页：<http://www.cpan.org/>
+-   镜像列表：<http://www.cpan.org/SITES.html>
 -   FAQ: <http://www.cpan.org/misc/cpan-faq.html>

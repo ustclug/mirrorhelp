@@ -29,8 +29,8 @@ auto-sync = yes
 
 ## 相关镜像
 
--   `gentoo`
--   `gentoo.git`
+-   [gentoo](gentoo.md)
+-   [gentoo.git](gentoo.git.md)
 
 ## 相关链接
 

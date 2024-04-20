@@ -12,14 +12,14 @@
 
 ### Ubuntu, Debian
 
-1.  导入key:
+1.  导入 key:
 
     ```shell
     gpg --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
     gpg --export C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654 | sudo tee /usr/share/keyrings/ros.gpg > /dev/null
     ```
 
-2.  将软件源添加至系统:
+2.  将软件源添加至系统：
 
     ```shell
     sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/ros.gpg] https://mirrors.ustc.edu.cn/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -32,7 +32,7 @@
 
 ## 相关镜像
 
--   `rosdistro`
+-   [rosdistro](rosdistro.md)
 
 ## 相关链接
 

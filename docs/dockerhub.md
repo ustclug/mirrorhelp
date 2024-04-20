@@ -123,7 +123,7 @@ Redis 容器：
         --log-opt tag="dockerd-dockerhub" \
         registry:2.8.2
 
-`/srv/docker/dockerhub/config.yml` 的参考内容:
+`/srv/docker/dockerhub/config.yml` 的参考内容：
 
 ```yaml
 version: 0.1

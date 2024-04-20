@@ -53,7 +53,7 @@ Kodi（当时叫「Xbox Media Center」）最初是作为第一代 Xbox 游戏�
 
 Kodi 链接
 
--   Kodi 主页: <http://kodi.tv/>
--   文档: <http://kodi.wiki/>
+-   Kodi 主页：<http://kodi.tv/>
+-   文档：<http://kodi.wiki/>
 -   Bug Tracker: <http://trac.kodi.tv/>
--   源代码: <https://github.com/xbmc/xbmc>
+-   源代码：<https://github.com/xbmc/xbmc>

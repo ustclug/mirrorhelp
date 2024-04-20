@@ -24,7 +24,7 @@ Homebrew 核心软件仓库
 !!! note
 
     若用户设置了环境变量 `HOMEBREW_CORE_GIT_REMOTE`，则每次运行
-    `brew update` 时将会自动设置远程。 推荐用户将环境变量
+    `brew update` 时将会自动设置远程。推荐用户将环境变量
     `HOMEBREW_CORE_GIT_REMOTE` 加入 shell 的 profile 设置中。
 
         # 对于 bash 用户
@@ -60,11 +60,11 @@ Homebrew 核心软件仓库
 
 ## 相关镜像
 
--   `brew.git`
--   `homebrew-bottles`
--   `homebrew-cask.git`
--   `homebrew-cask-versions.git`
--   `homebrew-services.git`
+-   [brew.git](brew.git.md)
+-   [homebrew-bottles](homebrew-bottles.md)
+-   [homebrew-cask.git](homebrew-cask.git.md)
+-   [homebrew-cask-versions.git](homebrew-cask-versions.git.md)
+-   [homebrew-services.git](homebrew-services.git.md)
 
 ## 相关链接
 

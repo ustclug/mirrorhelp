@@ -92,8 +92,7 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
     目前，用户可以通过关闭 HTTP Pipelining 特性解决此问题。
     如果需要关闭，可以在使用 `apt` 命令时加上
-    `-o Acquire::http::Pipeline-Depth=0` 参数， 或使用以下命令将相关设置加入
-    apt 系统配置中：
+    `-o Acquire::http::Pipeline-Depth=0` 参数，或使用以下命令将相关设置加入 apt 系统配置中：
 
         echo "Acquire::http::Pipeline-Depth \"0\";" > /etc/apt/apt.conf.d/99nopipelining
 

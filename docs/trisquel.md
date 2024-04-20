@@ -6,11 +6,11 @@
 
 ## 说明
 
-Trisquel GNU/Linux 软件源.
+Trisquel GNU/Linux 软件源。
 
 ## 收录架构
 
-Trisquel 支持的所有架构.
+Trisquel 支持的所有架构。
 
 ## 收录版本
 
@@ -25,8 +25,8 @@ Trisquel 支持的所有架构.
 Trisquel 使用 APT 软件包管理系统，故其软件源使用方法与 Ubuntu 或 Debian
 等很相似。
 
-以 Flidas 为例, 编辑 `/etc/apt/sources.list`
- 文件 (需要使用 sudo), 在文件最前面添加以下条目:
+以 Flidas 为例，编辑 `/etc/apt/sources.list`
+ 文件 (需要使用 sudo), 在文件最前面添加以下条目：
 
     deb https://mirrors.ustc.edu.cn/trisquel/ flidas main
     deb-src https://mirrors.ustc.edu.cn/trisquel/ flidas main
