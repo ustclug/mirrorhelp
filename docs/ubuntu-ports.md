@@ -32,7 +32,7 @@ arm64, armhf, PowerPC, ppc64el, s390x
 以下是参考配置内容：
 
 {% for release in ubuntu_releases %}
-=== "Ubuntu {{ release.name }}"
+=== "Ubuntu {{ release.version }}"
 
     === "`sources.list` 格式"
 
@@ -54,7 +54,7 @@ arm64, armhf, PowerPC, ppc64el, s390x
         # deb https://mirrors.ustc.edu.cn/ubuntu-ports/ {{ release.codename }}-proposed main restricted universe multiverse
         # deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ {{ release.codename }}-proposed main restricted universe multiverse
         ```
-        
+
     === "DEB822 格式"
 
         ```yaml title="/etc/apt/sources.list.d/ubuntu-ports.sources"

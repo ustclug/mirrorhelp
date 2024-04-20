@@ -91,13 +91,13 @@ extra:
       codename: buster
       proxmox_version: 6
   ubuntu_releases:
-    - name: 22.04
+    - version: 22.04
       codename: jammy
-    - name: 20.04
+    - version: 20.04
       codename: focal
-    - name: 18.04
+    - version: 18.04
       codename: bionic
-    - name: 16.04
+    - version: 16.04
       codename: xenial
 
 extra_css:

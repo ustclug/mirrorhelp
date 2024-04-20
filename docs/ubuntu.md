@@ -56,7 +56,7 @@ AMD64 (x86_64), Intel x86
 当然也可以直接编辑 APT 源文件（需要使用 sudo）。以下是参考配置内容：
 
 {% for release in ubuntu_releases %}
-=== "Ubuntu {{ release.name }}"
+=== "Ubuntu {{ release.version }}"
 
     === "`sources.list` 格式"
 
@@ -78,7 +78,7 @@ AMD64 (x86_64), Intel x86
         # deb https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }}-proposed main restricted universe multiverse
         # deb-src https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }}-proposed main restricted universe multiverse
         ```
-        
+
     === "DEB822 格式"
 
         ```yaml title="/etc/apt/sources.list.d/ubuntu.sources"
