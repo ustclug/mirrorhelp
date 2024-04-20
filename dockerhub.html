@@ -1,405 +1,2974 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="zh-CN" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Docker Hub 源使用帮助 &mdash; USTC Mirror Help  文档</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="USTC Mirror Help">
+      
+      
+        <meta name="author" content="LUG @ USTC">
+      
+      
+        <link rel="canonical" href="https://mirrors.ustc.edu.cn/help/dockerhub.html">
+      
+      
+        <link rel="prev" href="docker-ce.html">
+      
+      
+        <link rel="next" href="eclipse.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+    
+    
+      
+        <title>Docker Hub - USTC Mirror Help</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/translations.js"></script>
-    <script src="_static/js/theme.js"></script>
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Eclipse 镜像使用帮助" href="eclipse.html" />
-    <link rel="prev" title="Docker CE 源使用帮助" href="docker-ce.html" /> 
-</head>
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
 
-          
-          
-          <a href="index.html" class="icon icon-home">
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","UA-160637954-1"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","UA-160637954-1",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=UA-160637954-1",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#docker-hub" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="index.html" title="USTC Mirror Help" class="md-header__button md-logo" aria-label="USTC Mirror Help" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m8.29 10.28 3.24-3.25 1.06 1.06-3.24 3.25-1.06-1.06m.41 4.33 5.66-5.66L15.42 10l-5.66 5.67-1.06-1.06M18 3v18H6V3h12m2-2H4v22h16V1Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             USTC Mirror Help
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
-              <p class="caption" role="heading"><span class="caption-text">发行版镜像</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="alpine.html">Alpine Linux 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="anthon.html">AOSC OS 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aosp.html">AOSP 镜像使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="archlinux.html">Arch Linux 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="archlinuxcn.html">Arch Linux CN 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="archlinuxarm.html">Arch Linux ARM 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blackarch.html">Black Arch 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="centos.html">CentOS 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="debian.html">Debian 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="debian-security.html">Debian Security 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="debian-cd.html">Debian CD 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="debian-cdimage.html">Debian-cdimage 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="debiancn.html">Debiancn 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deb-multimedia.html">Deb Multimedia 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="epel.html">EPEL 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fedora.html">Fedora 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="freebsd.html">FreeBSD 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="freebsd-pkg.html">FreeBSD pkg 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="freebsd-ports.html">FreeBSD ports 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gentoo.html">Gentoo 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gentoo-portage.html">Gentoo Portage 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gentoo.git.html">Gentoo Git 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kali.html">Kali Linux 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linuxmint.html">Linux Mint 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mageia.html">Mageia 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="manjaro.html">Manjaro Linux 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msys2.html">MSYS2 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="opensuse.html">openSUSE 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="openwrt.html">OpenWRT/LEDE 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packman.html">PackMan 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="proxmox.html">Proxmox 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="raspberry-pi-os-images.html">Raspberry Pi OS Images 使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="raspbian.html">Raspbian 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="raspbian-addons.html">Raspbian Addons 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rocky.html">Rocky Linux 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rpmfusion.html">RPM Fusion 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scientificlinux.html">Scientific Linux 镜像使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="termux.html">Termux 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="termux-its-pointless.html">Termux Its Pointless 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trisquel.html">Trisquel 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubuntu.html">Ubuntu 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubuntu-ports.html">Ubuntu Ports 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubuntu-old-releases.html">Ubuntu Old Releases 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubuntu-releases.html">Ubuntu Releases 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubuntu-cdimage.html">Ubuntu CD Image 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubuntu-cloud-images.html">Ubuntu Cloud Images 源使用帮助</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">语言镜像</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="clojars.html">Clojars 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ghcup.html">GHCup 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hackage.html">Hackage 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="julia.html">Julia 镜像使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="node.html">Node 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nodesource.html">Nodesource 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="npm.html">NPM 反向代理使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pypi.html">PyPI 镜像源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rubygems.html">Rubygems 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="crates.io-index.html">Rust Crates 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rust-static.html">Rust Toolchain 反向代理使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stackage.html">Stackage 源使用帮助</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">软件镜像</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="anaconda.html">Anaconda 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ceph.html">Ceph 镜像使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CPAN.html">CPAN 镜像使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CRAN.html">CRAN 镜像使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docker-ce.html">Docker CE 源使用帮助</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Docker Hub 源使用帮助</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">地址</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">使用说明</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">检查 Docker Hub 是否生效</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">如何搭建本地镜像缓存？</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">相关链接</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="eclipse.html">Eclipse 镜像使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="elpa.html">Emacs ELPA 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="github-release.html">GitHub Release 镜像使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="brew.git.html">Homebrew 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-bottles.html">Homebrew Bottles 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-core.git.html">Homebrew Core 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-cask.git.html">Homebrew Cask 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-cask-versions.git.html">Homebrew Cask Versions 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="homebrew-services.git.html">Homebrew Services 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="influxdata.html">InfluxData 镜像使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linux.git.html">Linux 内核源码镜像使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mariadb.html">MariaDB 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mozilla.html">Mozilla Firefox 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mysql-repo.html">MySQL 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nix-channels.html">Nix Channels 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qtproject.html">Qt 镜像使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="raspberrypi.html">Raspberrypi 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ros.html">ROS 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rosdistro.html">ROS distributions 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sagemath.html">Sagemath 镜像使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="winget-source.html">WinGet 源使用帮助</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xbmc.html">XBMC/Kodi 镜像使用帮助</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">其他</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="rsync-guide.html">科大源同步方法与注意事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="todo.html">TODO List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributor.html">文档贡献者名单</a></li>
-</ul>
-
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Docker Hub
+            
+          </span>
         </div>
       </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">USTC Mirror Help</a>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
       </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="页面导航">
-  <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Docker Hub 源使用帮助</li>
-      <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ustclug/mirrorhelp/blob/master/source/dockerhub.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
-      </li>
-  </ul>
-  <hr/>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-  <section id="docker-hub">
-<h1>Docker Hub 源使用帮助<a class="headerlink" href="#docker-hub" title="此标题的永久链接"></a></h1>
-<section id="id1">
-<h2>地址<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
-<p><a class="reference external" href="https://docker.mirrors.ustc.edu.cn/">https://docker.mirrors.ustc.edu.cn/</a></p>
-</section>
-<section id="id2">
-<h2>说明<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ustclug/mirrorhelp" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ustclug/mirrorhelp
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="USTC Mirror Help" class="md-nav__button md-logo" aria-label="USTC Mirror Help" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m8.29 10.28 3.24-3.25 1.06 1.06-3.24 3.25-1.06-1.06m.41 4.33 5.66-5.66L15.42 10l-5.66 5.67-1.06-1.06M18 3v18H6V3h12m2-2H4v22h16V1Z"/></svg>
+
+    </a>
+    USTC Mirror Help
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ustclug/mirrorhelp" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ustclug/mirrorhelp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    帮助首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rsync-guide.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科大源同步方法与注意事项
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contributor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文档贡献者名单
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    发行版镜像
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            发行版镜像
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="alpine.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alpine Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="anthon.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AOSC OS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aosp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AOSP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="archlinux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arch Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="archlinuxarm.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arch Linux ARM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="archlinuxcn.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arch Linux CN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="blackarch.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Black Arch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="centos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CentOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="debian.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debian
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="debian-security.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debian Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="debian-cd.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debian CD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="debian-cdimage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debian-cdimage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="debiancn.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debiancn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deb-multimedia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deb Multimedia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="epel.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EPEL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fedora.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fedora
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="freebsd.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FreeBSD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="freebsd-pkg.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FreeBSD pkg
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="freebsd-ports.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FreeBSD ports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gentoo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gentoo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gentoo-portage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gentoo Portage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gentoo.git.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gentoo Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="kali.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kali Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="linuxmint.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux Mint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mageia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mageia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="manjaro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manjaro Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="msys2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MSYS2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="opensuse.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    openSUSE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="openwrt.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenWRT/LEDE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="packman.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PackMan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="proxmox.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proxmox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="raspberry-pi-os-images.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspberry Pi OS Images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="raspbian.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspbian
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="raspbian-addons.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspbian Addons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rocky.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rocky Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rpmfusion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RPM Fusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scientificlinux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scientific Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="termux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Termux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="termux-its-pointless.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Termux Its Pointless
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="trisquel.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trisquel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ubuntu.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ubuntu-ports.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu Ports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ubuntu-old-releases.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu Old Releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ubuntu-releases.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu Releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ubuntu-cdimage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu CD Image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ubuntu-cloud-images.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu Cloud Images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    语言镜像
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            语言镜像
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="clojars.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clojars
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ghcup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GHCup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hackage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hackage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="julia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Julia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="node.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nodesource.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nodesource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="npm.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NPM 反向代理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pypi.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyPI 镜像
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rubygems.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rubygems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="crates.io-index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rust Crates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rust-static.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rust Toolchain 反向代理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stackage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stackage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    软件镜像
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            软件镜像
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="anaconda.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anaconda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ceph.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ceph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CPAN.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CPAN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CRAN.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CRAN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docker-ce.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker CE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Docker Hub
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="dockerhub.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Docker Hub
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      地址
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用说明
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      macOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-hub_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      检查 Docker Hub 是否生效
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何搭建本地镜像缓存？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      相关链接
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eclipse.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eclipse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="elpa.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emacs ELPA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="github-release.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Release
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="brew.git.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homebrew
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="homebrew-bottles.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homebrew Bottles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="homebrew-core.git.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homebrew Core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="homebrew-cask.git.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homebrew Cask
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="homebrew-cask-versions.git.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homebrew Cask Versions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="homebrew-services.git.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homebrew Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="influxdata.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    InfluxData
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="linux.git.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux 内核源码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mariadb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MariaDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mozilla.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mozilla Firefox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mysql-repo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nix-channels.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nix Channels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="qtproject.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="raspberrypi.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspberrypi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ros.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rosdistro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROS distributions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sagemath.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sagemath
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="winget-source.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WinGet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="xbmc.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    XBMC/Kodi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      地址
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用说明
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      macOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-hub_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      检查 Docker Hub 是否生效
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何搭建本地镜像缓存？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      相关链接
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="docker-hub">Docker Hub<a class="headerlink" href="#docker-hub" title="Permanent link">&para;</a></h1>
+<h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><a href="https://docker.mirrors.ustc.edu.cn/">https://docker.mirrors.ustc.edu.cn/</a></p>
+<h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Docker Hub 镜像缓存</p>
-</section>
-<section id="id3">
-<h2>使用说明<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
-<div class="admonition attention">
-<p class="admonition-title">注意</p>
-<p>由于访问原始站点的网络带宽等条件的限制，导致 Docker Hub, Google Container Registry (gcr.io) 与 Quay Container Registry (quay.io) 的镜像缓存处于基本不可用的状态，因此科大镜像站的各容器镜像服务仅限校内使用。</p>
+<h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>由于访问原始站点的网络带宽等条件的限制，导致 Docker Hub, Google
+Container Registry (gcr.io) 与 Quay Container Registry (quay.io)
+的镜像缓存处于基本不可用的状态，因此科大镜像站的各容器镜像服务仅限校内使用。</p>
 <p>对于从科大校外的访问：</p>
-<ul class="simple">
-<li><p>Docker Hub 和 Google Container Registry 会返回 403；</p></li>
-<li><p>Quay 会被 302 重定向至源站。</p></li>
+<ul>
+<li>Docker Hub 和 Google Container Registry 会返回 403；</li>
+<li>Quay 会被 302 重定向至源站。</li>
 </ul>
 <p>本文档结尾提供了搭建本地镜像缓存的方式，以供参考。</p>
-<hr><ul class="simple">
-<li><p><em>2020-04-??</em> Docker Hub 镜像缓存的访问会被 302 重定向至其他国内 Docker Hub 镜像源。</p></li>
-<li><p><em>2020-08-16</em> Google Container Registry 的镜像缓存的访问会被 302 重定向至阿里云提供的公开镜像服务（包含了部分 gcr.io 上存在的容器镜像）；Quay Container Registry 的镜像缓存的访问会被 302 重定向至源站。</p></li>
-<li><p><em>2020-08-21</em> 考虑到 gcr 镜像重定向至阿里云提供的公开镜像服务可能存在的安全隐患（见 <a class="reference external" href="https://github.com/ustclug/mirrorhelp/issues/158">mirrorhelp#158</a>），目前校外对 gcr 镜像的访问返回 403。</p></li>
-<li><p><em>2022-08-24</em> 由于获悉阿里云的 Docker Hub 镜像不再更新，目前校外对 Docker Hub 镜像的访问返回 403。用户需要修改配置，选择其他国内的 Docker Hub 镜像源。</p></li>
+</div>
+<ul>
+<li><em>2020-04-??</em> Docker Hub 镜像缓存的访问会被 302 重定向至其他国内
+    Docker Hub 镜像源。</li>
+<li><em>2020-08-16</em> Google Container Registry 的镜像缓存的访问会被 302
+    重定向至阿里云提供的公开镜像服务（包含了部分 gcr.io
+    上存在的容器镜像）；Quay Container Registry 的镜像缓存的访问会被 302
+    重定向至源站。</li>
+<li><em>2020-08-21</em> 考虑到 gcr
+    镜像重定向至阿里云提供的公开镜像服务可能存在的安全隐患（见
+    <a href="https://github.com/ustclug/mirrorhelp/issues/158">mirrorhelp#158</a>），目前校外对
+    gcr 镜像的访问返回 403。</li>
+<li><em>2022-08-24</em> 由于获悉阿里云的 Docker Hub 镜像不再更新，目前校外对
+    Docker Hub 镜像的访问返回 403。用户需要修改配置，选择其他国内的
+    Docker Hub 镜像源。</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>2020 年 11 月后，Docker Hub 新增了 <a href="https://docs.docker.com/docker-hub/download-rate-limit/">访问速率限制</a>，这可能导致在校内使用 Docker Hub 镜像缓存时出现间歇性的问题。</p>
 </div>
-<div class="admonition attention">
-<p class="admonition-title">注意</p>
-<p>2020 年 11 月后，Docker Hub 新增了 <a class="reference external" href="https://docs.docker.com/docker-hub/download-rate-limit/">访问速率限制</a>，这可能导致在校内使用 Docker Hub 镜像缓存时出现间歇性的问题。</p>
-</div>
-<section id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="此标题的永久链接"></a></h3>
-<p>对于使用 upstart 的系统（Ubuntu 14.04、Debian 7 Wheezy），在配置文件 <code class="docutils literal notranslate"><span class="pre">/etc/default/docker</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">DOCKER_OPTS</span></code> 中配置Hub地址：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DOCKER_OPTS</span><span class="o">=</span><span class="s2">&quot;--registry-mirror=https://docker.mirrors.ustc.edu.cn/&quot;</span>
-</pre></div>
-</div>
-<p>重新启动服务:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">docker</span> <span class="n">restart</span>
-</pre></div>
-</div>
-<p>对于使用 systemd 的系统（Ubuntu 16.04+、Debian 8+、CentOS 7）， 在配置文件 <code class="docutils literal notranslate"><span class="pre">/etc/docker/daemon.json</span></code> 中加入：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;registry-mirrors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;https://docker.mirrors.ustc.edu.cn/&quot;</span><span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+<h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
+<p>对于使用 systemd 的系统（Ubuntu 16.04+、Debian 8+、CentOS 7），
+在配置文件 <code>/etc/docker/daemon.json</code> 中加入：</p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;registry-mirrors&quot;: [&quot;https://docker.mirrors.ustc.edu.cn/&quot;]
+}
+</code></pre></div>
 <p>重新启动 dockerd：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">restart</span> <span class="n">docker</span>
-</pre></div>
-</div>
-</section>
-<section id="macos">
-<h3>macOS<a class="headerlink" href="#macos" title="此标题的永久链接"></a></h3>
+<div class="highlight"><pre><span></span><code>sudo systemctl restart docker
+</code></pre></div>
+<h3 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
 <p>旧版本：</p>
-<ol class="arabic simple">
-<li><p>打开 “Docker.app”</p></li>
-<li><p>进入偏好设置页面(快捷键 <code class="docutils literal notranslate"><span class="pre">⌘,</span></code> )</p></li>
-<li><p>打开 “Daemon” 选项卡</p></li>
-<li><p>在 “Registry mirrors” 中添加 <code class="docutils literal notranslate"><span class="pre">https://docker.mirrors.ustc.edu.cn/</span></code></p></li>
-<li><p>点击下方的 “Apply &amp; Restart” 按钮</p></li>
+<ol>
+<li>打开 "Docker.app"</li>
+<li>进入偏好设置页面（快捷键 <code>⌘,</code>）</li>
+<li>打开 "Daemon" 选项卡</li>
+<li>在 "Registry mirrors" 中添加 <code>https://docker.mirrors.ustc.edu.cn/</code></li>
+<li>点击下方的 "Apply &amp; Restart" 按钮</li>
 </ol>
 <p>新版本：</p>
-<ol class="arabic simple">
-<li><p>打开 “Docker.app”</p></li>
-<li><p>进入偏好设置页面(快捷键 <code class="docutils literal notranslate"><span class="pre">⌘,</span></code> )</p></li>
-<li><p>打开 “Docker Engine” 选项卡</p></li>
-<li><p>参考 Linux 中 “使用 systemd 系统” 的配置，在 JSON 配置中添加 <code class="docutils literal notranslate"><span class="pre">&quot;registry-mirrors&quot;</span></code> 一项。</p></li>
+<ol>
+<li>打开 "Docker.app"</li>
+<li>进入偏好设置页面（快捷键 <code>⌘,</code>）</li>
+<li>打开 "Docker Engine" 选项卡</li>
+<li>参考 Linux 中 "使用 systemd 系统" 的配置，在 JSON 配置中添加
+    <code>"registry-mirrors"</code> 一项。</li>
 </ol>
-</section>
-<section id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="此标题的永久链接"></a></h3>
+<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
 <p>旧版本：</p>
-<p>在系统右下角托盘 Docker 图标内右键菜单选择 <code class="docutils literal notranslate"><span class="pre">Settings</span></code> ，打开配置窗口后左侧导航菜单选择 <code class="docutils literal notranslate"><span class="pre">Daemon</span></code> 。在 <code class="docutils literal notranslate"><span class="pre">Registry</span> <span class="pre">mirrors</span></code> 一栏中填写地址 <code class="docutils literal notranslate"><span class="pre">https://docker.mirrors.ustc.edu.cn/</span></code> ，之后点击 Apply 保存后 Docker 就会重启并应用配置的镜像地址了。</p>
+<p>在系统右下角托盘 Docker 图标内右键菜单选择 <code>Settings</code>
+，打开配置窗口后左侧导航菜单选择 <code>Daemon</code>。在 <code>Registry mirrors</code>
+一栏中填写地址 <code>https://docker.mirrors.ustc.edu.cn/</code>，之后点击 Apply
+保存后 Docker 就会重启并应用配置的镜像地址了。</p>
 <p>新版本：</p>
-<p>在系统右下角托盘 Docker 图标内右键菜单选择 <code class="docutils literal notranslate"><span class="pre">Settings</span></code> ，打开配置窗口后左侧导航菜单选择 <code class="docutils literal notranslate"><span class="pre">Docker</span> <span class="pre">Engine</span></code> 。参考 Linux 中 “使用 systemd 系统” 的配置，在 JSON 配置中添加 <code class="docutils literal notranslate"><span class="pre">&quot;registry-mirrors&quot;</span></code> 一项 ，之后点击 “Apply &amp; Restart” 保存并重启 Docker 即可。</p>
-</section>
-<section id="id5">
-<h3>检查 Docker Hub 是否生效<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h3>
-<p>在命令行执行 <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">info</span></code> ，如果从结果中看到了如下内容，说明配置成功。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Registry</span> <span class="n">Mirrors</span><span class="p">:</span>
-    <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docker</span><span class="o">.</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span>
-</pre></div>
-</div>
-</section>
-<section id="id6">
-<h3>如何搭建本地镜像缓存？<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h3>
+<p>在系统右下角托盘 Docker 图标内右键菜单选择 <code>Settings</code>，
+打开配置窗口后左侧导航菜单选择 <code>Docker Engine</code>。参考 Linux 中 "使用 systemd 系统" 的配置，
+在 JSON 配置中添加 <code>"registry-mirrors"</code> 一项，之后点击 "Apply &amp; Restart" 保存并重启 Docker 即可。</p>
+<h3 id="docker-hub_1">检查 Docker Hub 是否生效<a class="headerlink" href="#docker-hub_1" title="Permanent link">&para;</a></h3>
+<p>在命令行执行 <code>docker info</code>，如果从结果中看到了如下内容，说明配置成功。</p>
+<div class="highlight"><pre><span></span><code>Registry Mirrors:
+    https://docker.mirrors.ustc.edu.cn/
+</code></pre></div>
+<h3 id="_4">如何搭建本地镜像缓存？<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>由于镜像站目前暂不为校外提供容器镜像缓存服务，如果需要自行搭建本地镜像缓存，可以参考以下的方式：</p>
 <p>Redis 容器：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">rm</span> <span class="o">-</span><span class="n">f</span> <span class="n">redis</span>
-<span class="n">docker</span> <span class="n">run</span> \
-    <span class="o">--</span><span class="n">name</span><span class="o">=</span><span class="n">redis</span> \
-    <span class="o">-</span><span class="n">itd</span> \
-    <span class="o">--</span><span class="n">net</span><span class="o">=</span><span class="n">docker</span><span class="o">-</span><span class="n">registry</span> \
-    <span class="o">--</span><span class="n">restart</span><span class="o">=</span><span class="n">always</span> \
-    <span class="n">redis</span> \
-    <span class="n">redis</span><span class="o">-</span><span class="n">server</span> <span class="o">--</span><span class="n">maxmemory</span> <span class="mi">512</span><span class="n">m</span>
-</pre></div>
-</div>
+<div class="highlight"><pre><span></span><code>docker rm -f redis
+docker run \
+    --name=redis \
+    -itd \
+    --net=docker-registry \
+    --restart=always \
+    redis \
+    redis-server --maxmemory 512m
+</code></pre></div>
 <p>镜像缓存容器：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">rm</span> <span class="o">-</span><span class="n">f</span> <span class="n">dockerhub</span><span class="o">-</span><span class="n">mirror</span>
-<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">itd</span> \
-    <span class="o">--</span><span class="n">name</span> <span class="n">dockerhub</span><span class="o">-</span><span class="n">mirror</span> \
-    <span class="o">--</span><span class="n">restart</span><span class="o">=</span><span class="n">always</span> \
-    <span class="o">--</span><span class="n">net</span><span class="o">=</span><span class="n">docker</span><span class="o">-</span><span class="n">registry</span> \
-    <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">docker</span><span class="o">/</span><span class="n">dockerhub</span><span class="o">/</span><span class="n">data</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">registry</span> \
-    <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">docker</span><span class="o">/</span><span class="n">dockerhub</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">yml</span><span class="p">:</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">docker</span><span class="o">/</span><span class="n">registry</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">yml</span><span class="p">:</span><span class="n">ro</span> \
-    <span class="o">-</span><span class="n">p</span> <span class="mf">127.0.0.1</span><span class="p">:</span><span class="mi">5000</span><span class="p">:</span><span class="mi">5000</span><span class="o">/</span><span class="n">tcp</span> \
-    <span class="o">--</span><span class="n">log</span><span class="o">-</span><span class="n">driver</span><span class="o">=</span><span class="n">journald</span> \
-    <span class="o">--</span><span class="n">log</span><span class="o">-</span><span class="n">opt</span> <span class="n">tag</span><span class="o">=</span><span class="s2">&quot;dockerd-dockerhub&quot;</span> \
-    <span class="n">registry</span><span class="p">:</span><span class="mf">2.8.2</span>
-</pre></div>
-</div>
-<p><code class="file docutils literal notranslate"><span class="pre">/srv/docker/dockerhub/config.yml</span></code> 的参考内容:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">version</span><span class="p">:</span> <span class="mf">0.1</span>
-<span class="n">log</span><span class="p">:</span>
-    <span class="n">level</span><span class="p">:</span> <span class="n">error</span>
-<span class="n">storage</span><span class="p">:</span>
-    <span class="n">delete</span><span class="p">:</span>
-        <span class="n">enabled</span><span class="p">:</span> <span class="n">true</span>
-    <span class="n">cache</span><span class="p">:</span>
-        <span class="n">blobdescriptor</span><span class="p">:</span> <span class="n">redis</span>
-    <span class="n">filesystem</span><span class="p">:</span>
-        <span class="n">rootdirectory</span><span class="p">:</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">registry</span>
-    <span class="n">maintenance</span><span class="p">:</span>
-        <span class="n">uploadpurging</span><span class="p">:</span>
-            <span class="n">enabled</span><span class="p">:</span> <span class="n">false</span>
-<span class="n">http</span><span class="p">:</span>
-    <span class="n">addr</span><span class="p">:</span> <span class="p">:</span><span class="mi">5000</span>
-    <span class="n">debug</span><span class="p">:</span>
-        <span class="n">addr</span><span class="p">:</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">5001</span>
-    <span class="n">headers</span><span class="p">:</span>
-        <span class="n">X</span><span class="o">-</span><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="o">-</span><span class="n">Options</span><span class="p">:</span> <span class="p">[</span><span class="n">nosniff</span><span class="p">]</span>
-<span class="n">notifications</span><span class="p">:</span>
-    <span class="n">endpoints</span><span class="p">:</span>
-        <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">local</span><span class="o">-</span><span class="mi">5003</span>
-          <span class="n">url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5003</span><span class="o">/</span><span class="n">callback</span>
-          <span class="n">headers</span><span class="p">:</span>
-              <span class="n">Authorization</span><span class="p">:</span> <span class="p">[</span><span class="n">Bearer</span> <span class="o">&lt;</span><span class="n">an</span> <span class="n">example</span> <span class="n">token</span><span class="o">&gt;</span><span class="p">]</span>
-          <span class="n">timeout</span><span class="p">:</span> <span class="mi">1</span><span class="n">s</span>
-          <span class="n">threshold</span><span class="p">:</span> <span class="mi">10</span>
-          <span class="n">backoff</span><span class="p">:</span> <span class="mi">1</span><span class="n">s</span>
-          <span class="n">disabled</span><span class="p">:</span> <span class="n">true</span>
-        <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">local</span><span class="o">-</span><span class="mi">8083</span>
-          <span class="n">url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8083</span><span class="o">/</span><span class="n">callback</span>
-          <span class="n">timeout</span><span class="p">:</span> <span class="mi">1</span><span class="n">s</span>
-          <span class="n">threshold</span><span class="p">:</span> <span class="mi">10</span>
-          <span class="n">backoff</span><span class="p">:</span> <span class="mi">1</span><span class="n">s</span>
-          <span class="n">disabled</span><span class="p">:</span> <span class="n">true</span>
-<span class="n">health</span><span class="p">:</span>
-    <span class="n">storagedriver</span><span class="p">:</span>
-        <span class="n">enabled</span><span class="p">:</span> <span class="n">true</span>
-        <span class="n">interval</span><span class="p">:</span> <span class="mi">10</span><span class="n">s</span>
-        <span class="n">threshold</span><span class="p">:</span> <span class="mi">3</span>
-
-<span class="c1"># 部分上游需要该选项，诸如 quay</span>
-<span class="c1"># 详情参 https://github.com/distribution/distribution/issues/2367#issuecomment-454805687</span>
-<span class="c1"># compatibility:</span>
-<span class="c1">#     schema1:</span>
-<span class="c1">#         enabled: true</span>
-
-<span class="n">proxy</span><span class="p">:</span>
-    <span class="n">remoteurl</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">registry</span><span class="o">-</span><span class="mf">1.</span><span class="n">docker</span><span class="o">.</span><span class="n">io</span>
-    <span class="c1"># 更换为上游的地址。</span>
-
-<span class="n">redis</span><span class="p">:</span>
-    <span class="n">addr</span><span class="p">:</span> <span class="n">redis</span><span class="p">:</span><span class="mi">6379</span>
-</pre></div>
-</div>
-</section>
-</section>
-<section id="id7">
-<h2>相关链接<a class="headerlink" href="#id7" title="此标题的永久链接"></a></h2>
-<dl class="field-list simple">
-<dt class="field-odd">Docker 主页<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://www.docker.com">https://www.docker.com</a></p>
+<div class="highlight"><pre><span></span><code>docker rm -f dockerhub-mirror
+docker run -itd \
+    --name dockerhub-mirror \
+    --restart=always \
+    --net=docker-registry \
+    -v /srv/docker/dockerhub/data:/var/lib/registry \
+    -v /srv/docker/dockerhub/config.yml:/etc/docker/registry/config.yml:ro \
+    -p 127.0.0.1:5000:5000/tcp \
+    --log-driver=journald \
+    --log-opt tag=&quot;dockerd-dockerhub&quot; \
+    registry:2.8.2
+</code></pre></div>
+<p><code>/srv/docker/dockerhub/config.yml</code> 的参考内容：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.1</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">log</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">error</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">storage</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">delete</span><span class="p">:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">cache</span><span class="p">:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nt">blobdescriptor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">filesystem</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="nt">rootdirectory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/lib/registry</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">maintenance</span><span class="p">:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="nt">uploadpurging</span><span class="p">:</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">            </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nt">http</span><span class="p">:</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nt">addr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">:5000</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nt">debug</span><span class="p">:</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="nt">addr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost:5001</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="nt">headers</span><span class="p">:</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="nt">X-Content-Type-Options</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">nosniff</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nt">notifications</span><span class="p">:</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="nt">endpoints</span><span class="p">:</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local-5003</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:5003/callback</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">headers</span><span class="p p-Indicator">:</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">                </span><span class="nt">Authorization</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">Bearer &lt;an example token&gt;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">          </span><span class="w w-Error">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">            </span><span class="nt">threshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">            </span><span class="nt">backoff</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">            </span><span class="nt">disabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local-8083</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:8083/callback</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">timeout</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">threshold</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">backoff</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">disabled</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="nt">health</span><span class="p">:</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="nt">storagedriver</span><span class="p">:</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">        </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">        </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">        </span><span class="nt">threshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="c1"># 部分上游需要该选项，诸如 quay</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="c1"># 详情参 https://github.com/distribution/distribution/issues/2367#issuecomment-454805687</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="c1"># compatibility:</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="c1">#     schema1:</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="c1">#         enabled: true</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="nt">proxy</span><span class="p">:</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">    </span><span class="nt">remoteurl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://registry-1.docker.io</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">    </span><span class="c1"># 更换为上游的地址。</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="nt">redis</span><span class="p">:</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">    </span><span class="nt">addr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis:6379</span>
+</code></pre></div>
+<h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<dl>
+<dt>Docker 主页</dt>
+<dd>
+<p><a href="https://www.docker.com">https://www.docker.com</a></p>
 </dd>
-<dt class="field-even">Docker Hub<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://hub.docker.com">https://hub.docker.com</a></p>
+<dt>Docker Hub</dt>
+<dd>
+<p><a href="https://hub.docker.com">https://hub.docker.com</a></p>
 </dd>
 </dl>
-</section>
-</section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="docker-ce.html" class="btn btn-neutral float-left" title="Docker CE 源使用帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="eclipse.html" class="btn btn-neutral float-right" title="Eclipse 镜像使用帮助" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
 
-  <hr/>
 
-  <div role="contentinfo">
-    <p>&#169; 版权所有 2017 - 2024, LUG@USTC.</p>
-  </div>
 
-  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+
+
+
+
   
-<p>除额外注明的地方外，本文档按 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议发布。</p>
- 
 
 
-</footer>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-      </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 版权所有 2017 - 2024, LUG@USTC.
+<br>
+除额外注明的地方外，本文档按 CC BY-NC-SA 4.0 许可协议发布。
 
-</body>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://lug.ustc.edu.cn/" target="_blank" rel="noopener" title="lug.ustc.edu.cn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M220.8 123.3c1 .5 1.8 1.7 3 1.7 1.1 0 2.8-.4 2.9-1.5.2-1.4-1.9-2.3-3.2-2.9-1.7-.7-3.9-1-5.5-.1-.4.2-.8.7-.6 1.1.3 1.3 2.3 1.1 3.4 1.7zm-21.9 1.7c1.2 0 2-1.2 3-1.7 1.1-.6 3.1-.4 3.5-1.6.2-.4-.2-.9-.6-1.1-1.6-.9-3.8-.6-5.5.1-1.3.6-3.4 1.5-3.2 2.9.1 1 1.8 1.5 2.8 1.4zM420 403.8c-3.6-4-5.3-11.6-7.2-19.7-1.8-8.1-3.9-16.8-10.5-22.4-1.3-1.1-2.6-2.1-4-2.9-1.3-.8-2.7-1.5-4.1-2 9.2-27.3 5.6-54.5-3.7-79.1-11.4-30.1-31.3-56.4-46.5-74.4-17.1-21.5-33.7-41.9-33.4-72C311.1 85.4 315.7.1 234.8 0 132.4-.2 158 103.4 156.9 135.2c-1.7 23.4-6.4 41.8-22.5 64.7-18.9 22.5-45.5 58.8-58.1 96.7-6 17.9-8.8 36.1-6.2 53.3-6.5 5.8-11.4 14.7-16.6 20.2-4.2 4.3-10.3 5.9-17 8.3s-14 6-18.5 14.5c-2.1 3.9-2.8 8.1-2.8 12.4 0 3.9.6 7.9 1.2 11.8 1.2 8.1 2.5 15.7.8 20.8-5.2 14.4-5.9 24.4-2.2 31.7 3.8 7.3 11.4 10.5 20.1 12.3 17.3 3.6 40.8 2.7 59.3 12.5 19.8 10.4 39.9 14.1 55.9 10.4 11.6-2.6 21.1-9.6 25.9-20.2 12.5-.1 26.3-5.4 48.3-6.6 14.9-1.2 33.6 5.3 55.1 4.1.6 2.3 1.4 4.6 2.5 6.7v.1c8.3 16.7 23.8 24.3 40.3 23 16.6-1.3 34.1-11 48.3-27.9 13.6-16.4 36-23.2 50.9-32.2 7.4-4.5 13.4-10.1 13.9-18.3.4-8.2-4.4-17.3-15.5-29.7zM223.7 87.3c9.8-22.2 34.2-21.8 44-.4 6.5 14.2 3.6 30.9-4.3 40.4-1.6-.8-5.9-2.6-12.6-4.9 1.1-1.2 3.1-2.7 3.9-4.6 4.8-11.8-.2-27-9.1-27.3-7.3-.5-13.9 10.8-11.8 23-4.1-2-9.4-3.5-13-4.4-1-6.9-.3-14.6 2.9-21.8zM183 75.8c10.1 0 20.8 14.2 19.1 33.5-3.5 1-7.1 2.5-10.2 4.6 1.2-8.9-3.3-20.1-9.6-19.6-8.4.7-9.8 21.2-1.8 28.1 1 .8 1.9-.2-5.9 5.5-15.6-14.6-10.5-52.1 8.4-52.1zm-13.6 60.7c6.2-4.6 13.6-10 14.1-10.5 4.7-4.4 13.5-14.2 27.9-14.2 7.1 0 15.6 2.3 25.9 8.9 6.3 4.1 11.3 4.4 22.6 9.3 8.4 3.5 13.7 9.7 10.5 18.2-2.6 7.1-11 14.4-22.7 18.1-11.1 3.6-19.8 16-38.2 14.9-3.9-.2-7-1-9.6-2.1-8-3.5-12.2-10.4-20-15-8.6-4.8-13.2-10.4-14.7-15.3-1.4-4.9 0-9 4.2-12.3zm3.3 334c-2.7 35.1-43.9 34.4-75.3 18-29.9-15.8-68.6-6.5-76.5-21.9-2.4-4.7-2.4-12.7 2.6-26.4v-.2c2.4-7.6.6-16-.6-23.9-1.2-7.8-1.8-15 .9-20 3.5-6.7 8.5-9.1 14.8-11.3 10.3-3.7 11.8-3.4 19.6-9.9 5.5-5.7 9.5-12.9 14.3-18 5.1-5.5 10-8.1 17.7-6.9 8.1 1.2 15.1 6.8 21.9 16l19.6 35.6c9.5 19.9 43.1 48.4 41 68.9zm-1.4-25.9c-4.1-6.6-9.6-13.6-14.4-19.6 7.1 0 14.2-2.2 16.7-8.9 2.3-6.2 0-14.9-7.4-24.9-13.5-18.2-38.3-32.5-38.3-32.5-13.5-8.4-21.1-18.7-24.6-29.9s-3-23.3-.3-35.2c5.2-22.9 18.6-45.2 27.2-59.2 2.3-1.7.8 3.2-8.7 20.8-8.5 16.1-24.4 53.3-2.6 82.4.6-20.7 5.5-41.8 13.8-61.5 12-27.4 37.3-74.9 39.3-112.7 1.1.8 4.6 3.2 6.2 4.1 4.6 2.7 8.1 6.7 12.6 10.3 12.4 10 28.5 9.2 42.4 1.2 6.2-3.5 11.2-7.5 15.9-9 9.9-3.1 17.8-8.6 22.3-15 7.7 30.4 25.7 74.3 37.2 95.7 6.1 11.4 18.3 35.5 23.6 64.6 3.3-.1 7 .4 10.9 1.4 13.8-35.7-11.7-74.2-23.3-84.9-4.7-4.6-4.9-6.6-2.6-6.5 12.6 11.2 29.2 33.7 35.2 59 2.8 11.6 3.3 23.7.4 35.7 16.4 6.8 35.9 17.9 30.7 34.8-2.2-.1-3.2 0-4.2 0 3.2-10.1-3.9-17.6-22.8-26.1-19.6-8.6-36-8.6-38.3 12.5-12.1 4.2-18.3 14.7-21.4 27.3-2.8 11.2-3.6 24.7-4.4 39.9-.5 7.7-3.6 18-6.8 29-32.1 22.9-76.7 32.9-114.3 7.2zm257.4-11.5c-.9 16.8-41.2 19.9-63.2 46.5-13.2 15.7-29.4 24.4-43.6 25.5s-26.5-4.8-33.7-19.3c-4.7-11.1-2.4-23.1 1.1-36.3 3.7-14.2 9.2-28.8 9.9-40.6.8-15.2 1.7-28.5 4.2-38.7 2.6-10.3 6.6-17.2 13.7-21.1.3-.2.7-.3 1-.5.8 13.2 7.3 26.6 18.8 29.5 12.6 3.3 30.7-7.5 38.4-16.3 9-.3 15.7-.9 22.6 5.1 9.9 8.5 7.1 30.3 17.1 41.6 10.6 11.6 14 19.5 13.7 24.6zM173.3 148.7c2 1.9 4.7 4.5 8 7.1 6.6 5.2 15.8 10.6 27.3 10.6 11.6 0 22.5-5.9 31.8-10.8 4.9-2.6 10.9-7 14.8-10.4s5.9-6.3 3.1-6.6-2.6 2.6-6 5.1c-4.4 3.2-9.7 7.4-13.9 9.8-7.4 4.2-19.5 10.2-29.9 10.2s-18.7-4.8-24.9-9.7c-3.1-2.5-5.7-5-7.7-6.9-1.5-1.4-1.9-4.6-4.3-4.9-1.4-.1-1.8 3.7 1.7 6.5z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ustclug" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.code.copy", "navigation.indexes", "navigation.sections", "navigation.top"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+    
+  </body>
 </html>
