@@ -14,9 +14,13 @@ Debian 支持的所有架构，如 AMD64 (x86_64), Intel x86, ARM, MIPS, ppc64el
 
 ## 收录版本
 
-Debian Old Stable, Stable, Testing, Unstable(sid)
+Debian Old Old Stable, Old Stable, Stable, Testing, Unstable (sid)
 
-当前 Stable 为 Debian 12，代号为 Bookworm
+{% for release in debian_releases %}
+{% if loop.first %}
+当前 Stable 为 Debian {{ release.version }}，代号为 {{ release.codename }}。
+{% endif %}
+{% endfor %}
 
 ## 使用说明
 
@@ -34,9 +38,9 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
 {% for release in debian_releases %}
 
-{% set debian_suites = "main contrib non-free" %}
+{% set debian_components = "main contrib non-free" %}
 {% if release.version >= 12 %}
-{% set debian_suites = debian_suites + " non-free-firmware" %}
+{% set debian_components = debian_components + " non-free-firmware" %}
 {% endif %}
 
 {% set debian_security = release.codename + "-security" %}
@@ -50,14 +54,14 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
         ```shell title="/etc/apt/sources.list"
         # 默认注释了源码仓库，如有需要可自行取消注释
-        deb http://mirrors.ustc.edu.cn/debian {{ release.codename }} {{ debian_suites }}
-        # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }} {{ debian_suites }}
-        deb http://mirrors.ustc.edu.cn/debian {{ release.codename }}-updates {{ debian_suites }}
-        # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }}-updates {{ debian_suites }}
+        deb http://mirrors.ustc.edu.cn/debian {{ release.codename }} {{ debian_components }}
+        # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }} {{ debian_components }}
+        deb http://mirrors.ustc.edu.cn/debian {{ release.codename }}-updates {{ debian_components }}
+        # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }}-updates {{ debian_components }}
 
         # backports 软件源，请按需启用
-        # deb http://mirrors.ustc.edu.cn/debian {{ release.codename }}-backports {{ debian_suites }}
-        # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }}-backports {{ debian_suites }}
+        # deb http://mirrors.ustc.edu.cn/debian {{ release.codename }}-backports {{ debian_components }}
+        # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }}-backports {{ debian_components }}
         ```
 
     === "DEB822 格式"
@@ -66,12 +70,12 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
         Types: deb
         URIs: https://mirrors.ustc.edu.cn/debian
         Suites: {{ release.codename }} {{ release.codename }}-updates
-        Components: {{ debian_suites }}
-        
+        Components: {{ debian_components }}
+
         Types: deb
         URIs: https://mirrors.ustc.edu.cn/debian-security
         Suites: {{ debian_security }}
-        Components: {{ debian_suites }}
+        Components: {{ debian_components }}
         ```
 
         !!! warning "DEB822 格式包含了对 debian-security 源的修改"

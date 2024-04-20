@@ -42,9 +42,9 @@ Debian Old Old Stable, Old Stable, Stable
 
 {% for release in debian_releases %}
 
-{% set debian_suites = "main contrib non-free" %}
+{% set debian_components = "main contrib non-free" %}
 {% if release.version >= 12 %}
-{% set debian_suites = debian_suites + " non-free-firmware" %}
+{% set debian_components = debian_components + " non-free-firmware" %}
 {% endif %}
 
 {% set debian_security = release.codename + "-security" %}
@@ -57,8 +57,8 @@ Debian Old Old Stable, Old Stable, Stable
     === "`sources.list` 格式"
 
         ```shell title="/etc/apt/sources.list"
-        deb http://mirrors.ustc.edu.cn/debian-security/ {{ debian_security }} {{ debian_suites }}
-        # deb-src http://mirrors.ustc.edu.cn/debian-security/ {{ debian_security }} {{ debian_suites }}
+        deb http://mirrors.ustc.edu.cn/debian-security/ {{ debian_security }} {{ debian_components }}
+        # deb-src http://mirrors.ustc.edu.cn/debian-security/ {{ debian_security }} {{ debian_components }}
         ```
 
     === "DEB822 格式"
@@ -67,7 +67,7 @@ Debian Old Old Stable, Old Stable, Stable
         Types: deb
         URIs: https://mirrors.ustc.edu.cn/debian-security
         Suites: {{ debian_security }}
-        Components: {{ debian_suites }}
+        Components: {{ debian_components }}
         ```
 
         如果需要使用源码仓库，可以在 Types 中添加 `deb-src`。
