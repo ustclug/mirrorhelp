@@ -13,6 +13,7 @@ copyright: |
 theme:
   name: material
   language: zh
+  font: false
   palette:
     - scheme: default
       media: "(prefers-color-scheme: light)"
@@ -101,6 +102,8 @@ extra:
 
 extra_css:
   - css/extra.css
+  - https://mirrors.ustc.edu.cn/static/help/roboto.css
+  - https://mirrors.ustc.edu.cn/static/help/roboto-mono/stylesheet.css
 
 nav:
   - index.md
