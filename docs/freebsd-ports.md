@@ -10,15 +10,11 @@ FreeBSD ports 软件源
 
 ## 使用方法
 
-在 `/etc/make.conf`
-中添加以下内容（如果文件不存在，则新建之）：
+在 `/etc/make.conf` 中添加以下内容（如果文件不存在，则新建之）：
 
     MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
 
-ports.tar.gz 文件为 Ports Collection，可以下载后解压到 `/usr/ports/`
-目录。 也可参考 FreeBSD Handbook 中
-[Installing the Ports Collection](https://docs.freebsd.org/en/books/handbook/ports/#ports-using-installation-methods)
-一节，使用 `git` 获取 ports tree：
+ports.tar.gz 文件为 Ports Collection，可以下载后解压到 `/usr/ports/` 目录。也可参考 FreeBSD Handbook 中 [Installing the Ports Collection](https://docs.freebsd.org/en/books/handbook/ports/#ports-using-installation-methods) 一节，使用 `git` 获取 ports tree：
 
     git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 

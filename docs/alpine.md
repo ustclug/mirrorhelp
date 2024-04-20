@@ -25,8 +25,7 @@ Alpine Linux 软件源
 
     sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 
-也可以直接编辑 `/etc/apk/repositories`
-文件。以下是 v3.5 版本的参考配置：
+也可以直接编辑 `/etc/apk/repositories` 文件。以下是 v3.5 版本的参考配置：
 
     https://mirrors.ustc.edu.cn/alpine/v3.5/main
     https://mirrors.ustc.edu.cn/alpine/v3.5/community
@@ -36,8 +35,7 @@ Alpine Linux 软件源
     https://mirrors.ustc.edu.cn/alpine/latest-stable/main
     https://mirrors.ustc.edu.cn/alpine/latest-stable/community
 
-更改完 `/etc/apk/repositories`
-文件后请运行 `apk update` 更新索引以生效。
+更改完 `/etc/apk/repositories` 文件后请运行 `apk update` 更新索引以生效。
 
 !!! tip
 

@@ -14,11 +14,9 @@ Anaconda 仓库镜像
 
 ## 使用说明
 
-Anaconda 安装包可以在 <https://mirrors.ustc.edu.cn/anaconda/archive/>
-下载。
+Anaconda 安装包可以在 <https://mirrors.ustc.edu.cn/anaconda/archive/> 下载。
 
-Miniconda 安装包可以在 <https://mirrors.ustc.edu.cn/anaconda/miniconda/>
-下载。
+Miniconda 安装包可以在 <https://mirrors.ustc.edu.cn/anaconda/miniconda/> 下载。
 
 添加 USTC 仓库镜像：
 

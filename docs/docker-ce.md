@@ -47,8 +47,7 @@ sudo DOWNLOAD_URL=https://mirrors.ustc.edu.cn/docker-ce sh get-docker.sh
 
 !!! tip
 
-    安装完 Docker CE 之后，替换掉官方的 Docker Registry 服务，可加快拉取
-    Docker 镜像的速度，请参考 `dockerhub`。
+    安装完 Docker CE 之后，替换掉官方的 Docker Registry 服务，可加快拉取 Docker 镜像的速度，请参考 `dockerhub`。
 
 ## 相关链接
 

@@ -22,10 +22,9 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
 !!! note
 
-    该项目以前的名字为 Debian Multimedia，现改名为 Deb
-    Multimedia。注意这不是 Debian 官方项目， 是为 deb-multimedia.org
-    的镜像， 与 Debian 官方的 Multimedia 小组的区别见
-    <https://wiki.debian.org/DebianMultimedia/FAQ>
+    该项目以前的名字为 Debian Multimedia，现改名为 Deb Multimedia。
+    注意这不是 Debian 官方项目，而是 deb-multimedia.org 的镜像，
+    与 Debian 官方的 Multimedia 小组的区别见 <https://wiki.debian.org/DebianMultimedia/FAQ>。
 
 以 Bookworm 为例，在 `/etc/apt/sources.list` 中加入
 

@@ -23,9 +23,7 @@ i386，amd64
 
     操作前请做好相应备份。
 
-编辑
-`/etc/apt/sources.list.d/official-package-repositories.list`
- ：
+编辑 `/etc/apt/sources.list.d/official-package-repositories.list`：
 
 -   对于基于 Ubuntu 的原版，以 Linuxmint 19 为例：
 
@@ -53,10 +51,7 @@ i386，amd64
 
 !!! tip
 
-    完成后请不要再使用
-    mintsources（自带的图形化软件源设置工具）进行任何操作，因为在操作后，无论是否有按"确定"，mintsources
-    均会覆盖
-    `/etc/apt/sources.list.d/official-package-repositories.list`。
+    完成后请不要再使用 mintsources（自带的图形化软件源设置工具）进行任何操作，因为在操作后，无论是否有按"确定"，mintsources 均会覆盖 `/etc/apt/sources.list.d/official-package-repositories.list`。
 
 ## 相关链接
 

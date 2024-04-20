@@ -31,7 +31,7 @@ Emacs ELPA 源。包括以下 ELPA 仓库：
             ("gnu-cn"   . "https://mirrors.ustc.edu.cn/elpa/gnu/")))
 
 develop 分支应使用 `configuration-layer-elpa-archives` 代替上面代码中的
-`configuration-layer--elpa-archives` （ `--` 换成 `-` ）。
+`configuration-layer--elpa-archives`（`--` 换成 `-`）。
 
 ## 注意事项
 

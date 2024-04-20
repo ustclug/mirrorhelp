@@ -6,8 +6,7 @@
 
 ## 说明
 
-Android 开源项目源代码镜像。支持 git 与 http(s) 协议。
-关于协议选择，请参考[此处的说明](#http_sync)。
+Android 开源项目源代码镜像。支持 git 与 http(s) 协议。关于协议选择，请参考[此处的说明](#http_sync)。
 
 ## 初始同步
 
@@ -83,11 +82,9 @@ AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约 80G（注意磁盘格
 
 ## 通过 HTTP(S) 协议同步 {#http_sync}
 
-以上说明中，默认使用了 git
-协议的地址：`git://mirrors.ustc.edu.cn/aosp/platform/manifest`。
+以上说明中，默认使用了 git 协议的地址：`git://mirrors.ustc.edu.cn/aosp/platform/manifest`。
 
-如果由于某种原因不能通过 git 协议同步，请修改
-`.repo/manifests.git/config` ，将
+如果由于某种原因不能通过 git 协议同步，请修改 `.repo/manifests.git/config`，将
 
     url = git://mirrors.ustc.edu.cn/aosp/platform/manifest
 
@@ -118,7 +115,7 @@ Brillo 项目的代码托管在 AOSP 项目中，Mirrors 镜像的是整个 AOSP
 参考 Brillo 官方文档
 <https://developers.google.com/brillo/docs/reference/downloads>
 进行下载，将其中源码 manifest 地址改为
-`git://mirrors.ustc.edu.cn/aosp/brillo/manifest` 。即：
+`git://mirrors.ustc.edu.cn/aosp/brillo/manifest`。即：
 
 `repo init` 时，使用
 `repo init -u git://mirrors.ustc.edu.cn/aosp/brillo/manifest -b master`

@@ -6,8 +6,7 @@
 
 ## 使用说明
 
-以 leiningen 为例，在项目根目录的 `project.clj` 中自己添加关键字
-`:mirrors`
+以 leiningen 为例，在项目根目录的 `project.clj` 中自己添加关键字 `:mirrors`。
 
 然后以如下 map 格式添加源:
 
@@ -25,16 +24,13 @@
                             :url "https://mirrors.ustc.edu.cn/clojars/"}}
        :main leiningen.web)
 
-配置好后，在项目的根目录下运行 `lein run`，从输出中可以看到一些包是从
-ustc 下载的。
+配置好后，在项目的根目录下运行 `lein run`，从输出中可以看到一些包是从 ustc 下载的。
 
 ## 注意事项
 
-此镜像源替换的只是 clojars 这个仓库，一些 maven 的包依然会从 central
-maven 仓库下载。
+此镜像源替换的只是 clojars 这个仓库，一些 maven 的包依然会从 central maven 仓库下载。
 
-上述方法只针对单个项目生效。如果要针对所有项目进行全局配置，需修改
-leiningen 的 `profiles`。
+上述方法只针对单个项目生效。如果要针对所有项目进行全局配置，需修改 leiningen 的 `profiles`。
 
 在 `~/.lein/projfiles.clj` 中添加:
 

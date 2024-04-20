@@ -10,8 +10,7 @@ Debian 软件源
 
 ## 收录架构
 
-Debian 支持的所有架构，如 AMD64 (x86_64), Intel x86, ARM, MIPS, ppc64el,
-s390x 等
+Debian 支持的所有架构，如 AMD64 (x86_64), Intel x86, ARM, MIPS, ppc64el, s390x 等
 
 ## 收录版本
 
@@ -23,7 +22,7 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
 !!! warning
 
-    操作前请做好相应备份
+    操作前请做好相应备份。
 
 一般情况下，将 `/etc/apt/sources.list`
 文件中 Debian 默认的源地址 `http://deb.debian.org/` 替换为
@@ -46,10 +45,8 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
 !!! tip
 
-    从 Debian 12 (bookworm) 开始，仓库添加了非自由固件组件
-    `non-free-firmware`。如果正在使用 bookworm, testing 或
-    sid，并且需要使用非自由固件，则在编辑配置时需要添加
-    `non-free-firmware`。其中以上参考配置已经添加。
+    从 Debian 12 (bookworm) 开始，仓库添加了非自由固件组件 `non-free-firmware`。如果正在使用 bookworm, testing 或 sid，并且需要使用非自由固件，则在编辑配置时需要添加 `non-free-firmware`。其中以上参考配置已经添加。
+
     详情参考 <https://wiki.debian.org/Firmware> 与
     [Debian bug #1030189](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1030189)。
 
@@ -77,16 +74,14 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
 同时你也可能需要更改 Debian Security 源，请参考 [debian-security](debian-security.md)。
 
-更改完 `sources.list` 文件后请运行
-`sudo apt-get update` 更新索引以生效。
+更改完 `sources.list` 文件后请运行 `sudo apt-get update` 更新索引以生效。
 
 !!! tip
 
     使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装
     `apt-transport-https` (Debian Buster 及以上版本不需要)。
 
-另外，也可以使用 snullp 大叔开发的
-[配置生成器](https://mirrors.ustc.edu.cn/repogen) 。
+另外，也可以使用 snullp 大叔开发的 [配置生成器](https://mirrors.ustc.edu.cn/repogen)。
 
 !!! warning
 

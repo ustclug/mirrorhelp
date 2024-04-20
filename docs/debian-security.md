@@ -32,29 +32,25 @@ Debian Old Old Stable, Old Stable, Stable
 !!! note
 
     从 Debian 11 "Bullseye" 开始，安全更新仓库名从 `发行版代号/updates`
-    更新为 `发行版代号-security`，详见 [Debian 11 (bullseye)
-    发行说明](https://www.debian.org/releases/bullseye/amd64/release-notes/ch-information.zh-cn.html#security-archive)，请旧版本用户注意。
+    更新为 `发行版代号-security`，详见 [Debian 11 (bullseye) 发行说明](https://www.debian.org/releases/bullseye/amd64/release-notes/ch-information.zh-cn.html#security-archive)，请旧版本用户注意。
 
 可以直接使用如下命令完成上述修改：
 
     sudo sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
 
-当然也可以直接编辑 `/etc/apt/sources.list`
- 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
+当然也可以直接编辑 `/etc/apt/sources.list` 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
 
     deb http://mirrors.ustc.edu.cn/debian-security/ stable-security main non-free contrib
     # deb-src http://mirrors.ustc.edu.cn/debian-security/ stable-security main non-free contrib
 
-更改完 `sources.list` 文件后请运行
-`sudo apt-get update` 更新索引以生效。
+更改完 `sources.list` 文件后请运行 `sudo apt-get update` 更新索引以生效。
 
 !!! tip
 
     使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装
     `apt-transport-https` (Debian Buster 及以上版本不需要)。
 
-另外，也可以使用 snullp 大叔开发的
-[配置生成器](https://mirrors.ustc.edu.cn/repogen)。
+另外，也可以使用 snullp 大叔开发的 [配置生成器](https://mirrors.ustc.edu.cn/repogen)。
 
 ## 相关链接
 

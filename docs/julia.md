@@ -25,7 +25,7 @@ Releases](https://mirrors.ustc.edu.cn/julia-releases/) 下载。
 即可切换镜像。若成功切换镜像，则能通过 `versioninfo()`
 查询到相关信息，例如：
 
-``` text
+```console
 julia> versioninfo()
 Julia Version 1.4.1
 Commit 381693d3df* (2020-04-14 17:20 UTC)
@@ -53,7 +53,7 @@ JULIA_PKG_SERVER = https://mirrors.ustc.edu.cn/julia
 也可以利用 JuliaCN 社区维护的中文本地化工具包
 [JuliaZH](https://github.com/JuliaCN/JuliaZH.jl) 来进行切换：
 
-``` text
+```julia
 using JuliaZH # 在 using 时会自动切换到国内的镜像站
 JuliaZH.set_mirror("USTC") # 也可以选择手动切换到 BFSU 镜像
 JuliaZH.mirrors # 查询记录的上游信息
@@ -64,7 +64,7 @@ JuliaZH.mirrors # 查询记录的上游信息
 不同系统和命令行下永久设定环境变量的方式也不相同，例如 Linux Bash
 下可以通过修改 `~/.bashrc` 文件实现该目的：
 
-``` text
+```shell
 # ~/.bashrc
 export JULIA_PKG_SERVER=https://mirrors.ustc.edu.cn/julia
 ```
@@ -74,14 +74,14 @@ export JULIA_PKG_SERVER=https://mirrors.ustc.edu.cn/julia
 （默认为 `~/.julia/config/startup.jl`）文件定义了每次启动 Julia
 时都会执行的命令，编辑该文件，添加以下内容即可：
 
-``` text
+```julia
 # ~/.julia/config/startup.jl
 ENV["JULIA_PKG_SERVER"] = "https://mirrors.ustc.edu.cn/julia"
 ```
 
 也可以选择使用 `JuliaZH` 来一键修改/创建 `startup.jl` 文件：
 
-``` text
+```console
 julia> JuliaZH.generate_startup("default")
 ┌ Info: 添加 PkgServer
 │   服务器地址 = "https://pkg.julialang.org"
@@ -94,8 +94,7 @@ julia> JuliaZH.generate_startup("USTC")
 └   配置文件 = "/root/.julia/config"
 ```
 
-若要临时禁止，可以通过 `julia --startup-file=no` 来取消执行
-`startup.jl` 文件。
+若要临时禁止，可以通过 `julia --startup-file=no` 来取消执行 `startup.jl` 文件。
 
 ## 常见问题
 
@@ -109,8 +108,7 @@ julia> JuliaZH.generate_startup("USTC")
     项的资源, 例如
     [TestImages](https://github.com/JuliaImages/TestImages.jl/blob/eaa94348df619c65956e8cfb0032ecddb7a29d3a/Artifacts.toml).
 
-在安装包含这两类数据的包时，其数据依然是从原始地址进行下载，因此若网络不稳定则可能会在
-build 阶段报错。
+在安装包含这两类数据的包时，其数据依然是从原始地址进行下载，因此若网络不稳定则可能会在 build 阶段报错。
 
 ### 为什么注册表还是从原地址下载？
 

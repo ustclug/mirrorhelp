@@ -20,8 +20,7 @@ Rust Crates Registry 源
 
 !!! note
 
-    `$CARGO_HOME` 在 Windows 系统默认为：`%USERPROFILE%\.cargo`，在类 Unix
-    系统默认为：`$HOME/.cargo`
+    `$CARGO_HOME` 在 Windows 系统默认为：`%USERPROFILE%\.cargo`，在类 Unix 系统默认为：`$HOME/.cargo`
 
 !!! note
 
@@ -43,9 +42,7 @@ Rust Crates Registry 源
 
 !!! note
 
-    cargo 1.68 版本开始支持稀疏索引：不再需要完整克隆 crates.io-index
-    仓库，可以加快获取包的速度。如果您的 cargo 版本大于等于 1.68，可以在
-    `$CARGO_HOME/config` 中添加如下内容：
+    cargo 1.68 版本开始支持稀疏索引：不再需要完整克隆 crates.io-index 仓库，可以加快获取包的速度。如果您的 cargo 版本大于等于 1.68，可以在 `$CARGO_HOME/config` 中添加如下内容：
 
         [source.crates-io]
         replace-with = 'ustc'
@@ -71,19 +68,11 @@ Rust Crates Registry 源
 
 !!! warning
 
-    若使用 crates 源时出现
-    `Couldn't resolve host name (Could not resolve host: crates)` 错误（见
-    <https://github.com/ustclug/discussions/issues/294>），可能需要在运行
-    `cargo` 的时候加入环境变量 `CARGO_HTTP_MULTIPLEXING=false`。
+    若使用 crates 源时出现 `Couldn't resolve host name (Could not resolve host: crates)` 错误（见 <https://github.com/ustclug/discussions/issues/294>），可能需要在运行 `cargo` 的时候加入环境变量 `CARGO_HTTP_MULTIPLEXING=false`。
 
 !!! warning
 
-    Windows 用户在使用 crates 源时可能会出现
-    `next InitializeSecurityContext failed: Unknown error` 错误（见
-    <https://github.com/ustclug/discussions/issues/339> 和
-    <https://github.com/rust-lang/cargo/issues/7096>）。一个 workaround
-    是在运行 `cargo` 的时候加入环境变量
-    `CARGO_HTTP_CHECK_REVOKE=false`，或者在配置中增加：
+    Windows 用户在使用 crates 源时可能会出现 `next InitializeSecurityContext failed: Unknown error` 错误（见 <https://github.com/ustclug/discussions/issues/339> 和 <https://github.com/rust-lang/cargo/issues/7096>）。一个 workaround 是在运行 `cargo` 的时候加入环境变量 `CARGO_HTTP_CHECK_REVOKE=false`，或者在配置中增加：
 
         [http]
         check-revoke = false
