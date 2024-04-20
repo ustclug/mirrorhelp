@@ -45,20 +45,29 @@ sudo）。删除原文件所有内容，用以下内容取代（以 Bullseye 示
     deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ bullseye main contrib non-free rpi
     # deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ bullseye main contrib non-free rpi
 
-Arm64 架构的 Raspberry Pi OS 仍处于 beta
-状态，本镜像上游亦不含此架构。对于 arm64 的 Raspberry Pi
-OS，可以直接使用 arm64 Debian 的源（以 Bullseye 示例）：
+Arm64 架构的 Raspberry Pi OS 仍处于 beta 状态，本镜像上游亦不含此架构。对于 arm64 的 Raspberry Pi OS，可以直接使用 arm64 Debian 的源：
 
-    deb https://mirrors.ustc.edu.cn/debian/ bullseye main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian bullseye main contrib non-free
-    deb https://mirrors.ustc.edu.cn/debian/ bullseye-updates main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian bullseye-updates main contrib non-free
-    deb https://mirrors.ustc.edu.cn/debian-security bullseye-security main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian-security/ bullseye-security main non-free contrib
+{% for release in debian_releases %}
+
+{% set debian_security = release.codename + "-security" %}
+{% if release.version < 11 %}
+{% set debian_security = release.codename + "/updates" %}
+{% endif %}
+=== "Raspbian {{ release.codename }}"
+
+    ```shell title="/etc/apt/sources.list"
+    deb https://mirrors.ustc.edu.cn/debian/ {{ release.codename }} main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }} main contrib non-free
+    deb https://mirrors.ustc.edu.cn/debian/ {{ release.codename }}-updates main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }}-updates main contrib non-free
+    deb https://mirrors.ustc.edu.cn/debian-security {{ debian_security }} main contrib non-free
+    # deb-src http://mirrors.ustc.edu.cn/debian-security/ {{ debian_security }}-security main non-free contrib
+    ```
+{% endfor %}
 
 编辑此文件后，请使用 `sudo apt-get update` 命令，更新软件索引。
 
-同时也可能需要更改 archive.raspberrypi.org 源，请参考 `raspberrypi`。
+同时也可能需要更改 archive.raspberrypi.org 源，请参考 [raspberrypi](raspberrypi.md)。
 
 ## 相关链接
 

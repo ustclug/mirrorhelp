@@ -82,10 +82,13 @@ extra:
   debian_releases:
     - version: 12
       codename: bookworm
+      proxmox_version: 8
     - version: 11
       codename: bullseye
+      proxmox_version: 7
     - version: 10
       codename: buster
+      proxmox_version: 6
   ubuntu_releases:
     - name: 22.04
       codename: jammy

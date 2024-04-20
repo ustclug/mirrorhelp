@@ -47,22 +47,22 @@ sudo sed \
   /etc/apt/sources.list.d/raspi.list
 ```
 
-当然也可以直接编辑
-`/etc/apt/sources.list.d/raspi.list`
-文件（需要使用 sudo）。以下是 bookworm 的参考配置内容：
+当然也可以直接编辑 `raspi.list` 文件（需要使用 sudo）。以下是 bookworm 的参考配置内容：
 
-```shell
-    deb http://mirrors.ustc.edu.cn/raspberrypi/debian/ bookworm main
-    #deb-src http://mirrors.ustc.edu.cn/raspberrypi/debian/ bookworm main
-```
+{% for release in debian_releases %}
+=== "Raspbian {{ release.codename }}"
 
-更改完 `raspi.list` 文件后请运行
-`sudo apt-get update` 更新索引以生效。
+    ```shell title="/etc/apt/sources.list.d/raspi.list"
+    deb http://mirrors.ustc.edu.cn/raspberrypi/debian/ {{ release.codename }} main
+    #deb-src http://mirrors.ustc.edu.cn/raspberrypi/debian/ {{ release.codename }} main
+    ```
+{% endfor %}
+
+更改完 `raspi.list` 文件后请运行 `sudo apt-get update` 更新索引以生效。
 
 !!! tip
 
-    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但 Stretch
-    及老版本系统需要事先安装 `apt-transport-https`。
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但 stretch 及老版本系统需要事先安装 `apt-transport-https`。
 
 ## 相关链接
 

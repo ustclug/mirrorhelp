@@ -18,9 +18,9 @@ Debian 用户使用的补充软件。
 
 ## 收录版本
 
-- buster
-- bullseye
-- bookworm
+{% for release in debian_releases %}
+- {{ release.codename }}
+{% endfor %}
 
 目前暂无专用于 testing 和 sid 的仓库。
 

@@ -13,8 +13,8 @@
 对于 Debian/Ubuntu 用户，使用以下命令导入 InfluxData 的 GPG 密钥，并更新配置：
 
     wget -q https://repos.influxdata.com/influxdata-archive_compat.key
-    echo '393e8779c89ac8d958f81f942f9ad7fb82a25e133faddaf92e15b16e6ac9ce4c influxdata-archive_compat.key' | sha256sum -c && cat influxdata-archive_compat.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg > /dev/null
-    echo 'deb [signed-by=/etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg] https://mirrors.ustc.edu.cn/influxdata/debian stable main' | sudo tee /etc/apt/sources.list.d/influxdata.list
+    echo '393e8779c89ac8d958f81f942f9ad7fb82a25e133faddaf92e15b16e6ac9ce4c influxdata-archive_compat.key' | sha256sum -c && cat influxdata-archive_compat.key | gpg --dearmor | sudo tee /etc/apt/keyrings/influxdata-archive_compat.gpg > /dev/null
+    echo 'deb [signed-by=/etc/apt/keyrings/influxdata-archive_compat.gpg] https://mirrors.ustc.edu.cn/influxdata/debian stable main' | sudo tee /etc/apt/sources.list.d/influxdata.list
 
 `apt update` 之后即可安装 `influxdb2` 与 `telegraf` 等软件包。
 

@@ -24,11 +24,9 @@ Proxmox 软件源
 
 ### Debian，Proxmox
 
-一般情况下，需要同时修改基础系统（Debian）的源文件
-`/etc/apt/sources.list` 和 Proxmox
-的源文件。
+一般情况下，需要同时修改基础系统（Debian）的源文件 `/etc/apt/sources.list` 和 Proxmox 的源文件。
 
-修改基础系统（Debian）的源文件，可以使用如下命令：
+修改基础系统（Debian）的源文件，可以参考 [Debian 帮助](debian.md) 或使用如下命令：
 
     sed -i 's|^deb http://ftp.debian.org|deb https://mirrors.ustc.edu.cn|g' /etc/apt/sources.list
     sed -i 's|^deb http://security.debian.org|deb https://mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
@@ -38,11 +36,9 @@ Proxmox 软件源
     source /etc/os-release
     echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/pve $VERSION_CODENAME pve-no-subscription" > /etc/apt/sources.list.d/pve-no-subscription.list
 
-对于 Proxmox Backup Server 和 Proxmox Mail Gateway，请将以上命令中的
-`pve` 分别替换为 `pbs` 和 `pmg`。
+对于 Proxmox Backup Server 和 Proxmox Mail Gateway，请将以上命令中的 `pve` 分别替换为 `pbs` 和 `pmg`。
 
-PVE 8 之后默认安装 Ceph 仓库源文件
-`/etc/apt/sources.list.d/ceph.list`，可以使用如下命令更换源：
+PVE 8 之后默认安装 Ceph 仓库源文件 `/etc/apt/sources.list.d/ceph.list`，可以使用如下命令更换源：
 
 ```shell
 if [ -f /etc/apt/sources.list.d/ceph.list ]; then
@@ -52,8 +48,7 @@ if [ -f /etc/apt/sources.list.d/ceph.list ]; then
 fi
 ```
 
-更改完 `sources.list` 文件后请运行
-`apt update` 更新索引以生效。
+更改完 `sources.list` 文件后请运行 `apt update` 更新索引以生效。
 
 ### CT Templates
 
