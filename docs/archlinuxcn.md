@@ -13,7 +13,7 @@ Arch Linux CN 软件源
 Arch Linux 中文社区仓库是由 Arch Linux
 中文社区驱动的非官方用户仓库。包含中文用户常用软件、工具、字体/美化包等。
 
-仓库地址：http://repo.archlinuxcn.org
+仓库地址：<http://repo.archlinuxcn.org>
 
 ## 使用说明
 
@@ -35,8 +35,7 @@ Arch Linux 中文社区仓库是由 Arch Linux
         sudo pacman-key --lsign-key "farseerfc@archlinux.org"
 
     然后重试安装。详情参见
-    [https://www.archlinuxcn.org/archlinuxcn-keyring-manually-trust-farseerfc-key/](https://www.archlinuxcn.org/archlinuxcn-keyring-manually-trust-farseerfc-key/)
-    。
+    [新系统中安装 archlinuxcn-keyring 包前需要手动信任 farseerfc 的 key](https://www.archlinuxcn.org/archlinuxcn-keyring-manually-trust-farseerfc-key/)。
 
 ## 相关链接
 

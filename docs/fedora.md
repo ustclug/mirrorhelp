@@ -36,37 +36,36 @@ x86_64
 !!! note
 
     Fedora 39 起 modular 仓库已经不复存在（详见
-    [https://fedoraproject.org/wiki/Changes/RetireModularity\\](https://fedoraproject.org/wiki/Changes/RetireModularity\)
-    ）。 因此 Fedora 39 及以上的版本不需要修改
-    `fedora-modular.repo` 和
-    `fedora-updates-modular.repo`。
+    <https://fedoraproject.org/wiki/Changes/RetireModularity>）。
+    因此 Fedora 39 及以上的版本不需要修改
+    `fedora-modular.repo` 和 `fedora-updates-modular.repo`。
 
 或者直接复制以下文件：
 
 `/etc/yum.repos.d/fedora.repo` 文件：
 
-```
+```ini
 --8<-- "fedora.repo"
 ```
 
 `/etc/yum.repos.d/fedora-updates.repo`
 文件：
 
-```
+```ini
 --8<-- "fedora-updates.repo"
 ```
 
 `/etc/yum.repos.d/fedora-modular.repo`
 文件：
 
-```
+```ini
 --8<-- "fedora-modular.repo"
 ```
 
 `/etc/yum.repos.d/fedora-updates-modular.repo`
  文件：
 
-```
+```ini
 --8<-- "fedora-updates-modular.repo"
 ```
 

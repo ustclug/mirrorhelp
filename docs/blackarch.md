@@ -14,7 +14,7 @@ BlackArch 是一款基于 ArchLinux
 的为渗透测试及安全研究人员开发的发行版，相当于 Arch 版的
 BackTrack/Kali。
 
-仓库地址：https://blackarch.org/blackarch/
+仓库地址：<https://blackarch.org/blackarch/>
 
 ## 收录架构
 
@@ -32,7 +32,7 @@ i686, x86_64, ARM 相关（目前包含 armv6h/armv7h/aarch64）
 !!! tip
 
     Black Arch 软件源仅包含其打包的工具等软件。如果需要更换 Arch Linux
-    基础系统的软件源，请查看 `archlinux`。
+    基础系统的软件源，请查看 [archlinux](archlinux.md)。
 
 ## 相关链接
 

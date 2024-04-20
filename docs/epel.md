@@ -7,10 +7,8 @@
 ## 说明
 
 EPEL (Extra Packages for Enterprise Linux) 是由 Fedora Special Interest
-Group 为企业 Linux
-创建、维护和管理的一个高质量附加包集合，适用于但不仅限于 Red Hat
-Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux
-(OL)。
+Group 为企业 Linux 创建、维护和管理的一个高质量附加包集合，适用于但不仅限于
+Red Hat Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux (OL)。
 
 ## 收录架构
 
@@ -44,9 +42,7 @@ Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux
 
 -   CentOS 8：
 
-```{=html}
-<!-- -->
-```
+    ```ini
     [epel]
     name=Extra Packages for Enterprise Linux $releasever - $basearch
     # It is much more secure to use the metalink, but if you wish to use a local mirror
@@ -77,12 +73,11 @@ Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux
     enabled=0
     gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
     gpgcheck=1
+    ```
 
 -   CentOS 7：
 
-```{=html}
-<!-- -->
-```
+    ```ini
     [epel]
     name=Extra Packages for Enterprise Linux 7 - $basearch
     baseurl=https://mirrors.ustc.edu.cn/epel/7/$basearch
@@ -109,6 +104,7 @@ Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux
     enabled=0
     gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
     gpgcheck=1
+    ```
 
 ## 相关链接
 

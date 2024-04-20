@@ -6,8 +6,7 @@
 
 ## 说明
 
-此镜像包含 InfluxData 的时序数据平台的开源产品，诸如 InfluxDB、Telegraf
-等。
+此镜像包含 InfluxData 的时序数据平台的开源产品，诸如 InfluxDB、Telegraf 等。
 
 ## 使用说明
 

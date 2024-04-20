@@ -14,17 +14,18 @@ ALL
 
 ## 使用说明
 
-新建或修改 `/etc/portage/repos.conf/gentoo.conf`
- ：
+新建或修改 `/etc/portage/repos.conf/gentoo.conf`：
 
-    [DEFAULT]
-    main-repo = gentoo
+```toml
+[DEFAULT]
+main-repo = gentoo
 
-    [gentoo]
-    location = /usr/portage
-    sync-type = rsync
-    sync-uri = rsync://rsync.mirrors.ustc.edu.cn/gentoo-portage
-    auto-sync = yes
+[gentoo]
+location = /usr/portage
+sync-type = rsync
+sync-uri = rsync://rsync.mirrors.ustc.edu.cn/gentoo-portage
+auto-sync = yes
+```
 
 ## 相关镜像
 

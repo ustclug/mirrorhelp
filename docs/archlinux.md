@@ -14,13 +14,11 @@ i686, x86_64
 
 ## 使用说明
 
-编辑 `/etc/pacman.d/mirrorlist`
-，在文件的最顶端添加
+编辑 `/etc/pacman.d/mirrorlist`，在文件的最顶端添加
 
     Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 
-国内用户，推荐另外使用 Arch Linux CN 的源，请参考
-`archlinuxcn`
+国内用户，推荐另外使用 Arch Linux CN 的源，请参考 [archlinuxcn](archlinuxcn.md)。
 
 ## 相关链接
 

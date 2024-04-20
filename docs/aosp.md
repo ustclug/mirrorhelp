@@ -7,26 +7,23 @@
 ## 说明
 
 Android 开源项目源代码镜像。支持 git 与 http(s) 协议。
-关于协议选择，请参考 `http_sync`。
+关于协议选择，请参考[此处的说明](#http_sync)。
 
 ## 初始同步
 
 ### 初始同步方法 1（推荐）
 
 第一次同步数据量特别大，如果网络不稳定，中间失败就要从头再来了。所以我们提供了打包的
-AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约
-80G（注意磁盘格式需要能够支持大文件）。 这样就可以通过 HTTP(S)
-的方式下载，支持断点续传。
+AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约 80G（注意磁盘格式需要能够支持大文件）。
+这样就可以通过 HTTP(S) 的方式下载，支持断点续传。
 
-下载地址：https://mirrors.ustc.edu.cn/aosp-monthly/。\**请注意对比
-checksum。*\*
+下载地址：<https://mirrors.ustc.edu.cn/aosp-monthly/>。
+**请注意对比 checksum。**
 
-然后解压后根据下文 `change_to_ustc`
-的方法更改同步地址， 然后用命令 `repo sync` 就可以把代码都 checkout
-出来。
+然后解压后根据[下文的方法](#change_to_ustc)更改同步地址，
+然后用命令 `repo sync` 就可以把代码都 checkout 出来。
 
-该 tar 包为定时从 <https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/>
-下载。
+该 tar 包为定时从 <https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/> 下载。
 
 ### 初始同步方法 2（不推荐）
 
@@ -34,10 +31,9 @@ checksum。*\*
 
     由于 AOSP 镜像造成的 IO 负载很高，不建议使用以下方式初次同步。
 
-按照 [Google
-官方教程](https://source.android.com/source/downloading.html)
-([CN](https://source.android.google.cn/source/downloading))， 将
-`https://android.googlesource.com/platform/manifest` 替换为
+按照 [Google 官方教程](https://source.android.com/source/downloading.html)
+([CN](https://source.android.google.cn/source/downloading))，
+将 `https://android.googlesource.com/platform/manifest` 替换为
 `git://mirrors.ustc.edu.cn/aosp/platform/manifest` 或
 `http://mirrors.ustc.edu.cn/aosp/platform/manifest`。
 
@@ -61,11 +57,10 @@ checksum。*\*
     ## 如果提示无法连接到 gerrit.googlesource.com，可以编辑 ~/bin/repo，把 REPO_URL 一行替换成下面的：
     ## REPO_URL = 'https://gerrit-googlesource.proxy.ustclug.org/git-repo'
 
-如果需要某个特定的 Android 版本 （[Android
-版本列表](https://source.android.com/source/build-numbers.html#source-code-tags-and-builds)
-([CN](https://source.android.google.cn/source/build-numbers?hl=zh-cn#source-code-tags-and-builds))，[镜像站
-tags
-列表](http://mirrors.ustc.edu.cn/aosp/platform/manifest.git/refs/tags/)）：
+如果需要某个特定的 Android 版本
+（[Android 版本列表](https://source.android.com/source/build-numbers.html#source-code-tags-and-builds)
+([CN](https://source.android.google.cn/source/build-numbers?hl=zh-cn#source-code-tags-and-builds))，
+[镜像站 tags 列表](http://mirrors.ustc.edu.cn/aosp/platform/manifest.git/refs/tags/)）：
 
     repo init -u git://mirrors.ustc.edu.cn/aosp/platform/manifest -b android-4.0.1_r1
 
@@ -104,10 +99,9 @@ tags
 
     url = https://mirrors.ustc.edu.cn/aosp/platform/manifest
 
-通过 HTTP(S) 同步过程中可能提示 clone.bundle 404
-错误，这是正常现象，可以忽略。
+通过 HTTP(S) 同步过程中可能提示 clone.bundle 404 错误，这是正常现象，可以忽略。
 
-## 说明
+## 使用时间段与并发设置建议
 
 1.  本镜像每天凌晨 04:30
     同步一次。同步可能需要较长时间，因此使用本镜像时建议避开凌晨 04:30

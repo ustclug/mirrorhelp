@@ -33,8 +33,8 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
     sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 
-当然也可以直接编辑 `/etc/apt/sources.list`
- 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容：
+当然也可以直接编辑 `/etc/apt/sources.list` 文件（需要使用 sudo）。
+以下是 Debian Stable 参考配置内容：
 
     deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free non-free-firmware
     # deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free non-free-firmware
@@ -47,23 +47,21 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 !!! tip
 
     从 Debian 12 (bookworm) 开始，仓库添加了非自由固件组件
-    `non-free-firmware`。 如果正在使用 bookworm, testing 或
+    `non-free-firmware`。如果正在使用 bookworm, testing 或
     sid，并且需要使用非自由固件，则在编辑配置时需要添加
-    `non-free-firmware`。 其中以上参考配置已经添加。 详情参考
-    <https://wiki.debian.org/Firmware> 与 [Debian bug
-    #1030189](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1030189)。
+    `non-free-firmware`。其中以上参考配置已经添加。
+    详情参考 <https://wiki.debian.org/Firmware> 与
+    [Debian bug #1030189](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1030189)。
 
 !!! tip
 
-    Debian 12 (bookworm) 的**容器**镜像开始使用 DEB822
-    格式，而非上文使用的传统的 One-Line-Style 格式。 对应需要修改的文件为
-    `/etc/apt/sources.list.d/debian.sources`
-    。同样可以使用如下命令：
+    Debian 12 (bookworm) 的**容器**镜像开始使用 DEB822 格式，
+    而非上文使用的传统的 One-Line-Style 格式。对应需要修改的文件为
+    `/etc/apt/sources.list.d/debian.sources`。同样可以使用如下命令：
 
         sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources
 
-    以下是在 Debian 12 容器镜像中**同时修改了 Debian 与 Debian Security
-    源的情况下**的参考配置内容：
+    以下是在 Debian 12 容器镜像中**同时修改了 Debian 与 Debian Security 源的情况下**的参考配置内容：
 
         Types: deb
         URIs: http://mirrors.ustc.edu.cn/debian
@@ -77,8 +75,7 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
         Components: main
         Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
-同时你也可能需要更改 Debian Security 源，请参考
-`debian-security`。
+同时你也可能需要更改 Debian Security 源，请参考 [debian-security](debian-security.md)。
 
 更改完 `sources.list` 文件后请运行
 `sudo apt-get update` 更新索引以生效。
@@ -95,9 +92,8 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
     在 apt 2.1.9 及以后的版本中，apt 的 HTTP Pipelining 特性与 Nginx
     服务器疑似存在一定的不兼容问题，可能导致高带宽从镜像站下载大量软件包
-    （例如系统升级）时出现偶发的 Connection reset by peer 错误 （详见
-    [Debian bug
-    #973581](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=973581)）。
+    （例如系统升级）时出现偶发的 Connection reset by peer 错误（详见
+    [Debian bug #973581](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=973581)）。
 
     目前，用户可以通过关闭 HTTP Pipelining 特性解决此问题。
     如果需要关闭，可以在使用 `apt` 命令时加上

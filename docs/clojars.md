@@ -25,7 +25,7 @@
                             :url "https://mirrors.ustc.edu.cn/clojars/"}}
        :main leiningen.web)
 
-配置好后，在项目的根目录下运行 `lein run` ， 从输出中可以看到一些包是从
+配置好后，在项目的根目录下运行 `lein run`，从输出中可以看到一些包是从
 ustc 下载的。
 
 ## 注意事项
@@ -34,7 +34,7 @@ ustc 下载的。
 maven 仓库下载。
 
 上述方法只针对单个项目生效。如果要针对所有项目进行全局配置，需修改
-leiningen 的 `profiles` 。
+leiningen 的 `profiles`。
 
 在 `~/.lein/projfiles.clj` 中添加:
 

@@ -16,9 +16,8 @@ ALL
 
 请确保系统中已安装 `dev-vcs/git`。
 
-修改 `/etc/portage/repos.conf/gentoo.conf`
- 中的 `sync-type` 为 `git`，`sync-uri` 为
-`https://mirrors.ustc.edu.cn/gentoo.git` 。
+修改 `/etc/portage/repos.conf/gentoo.conf` 中的 `sync-type` 为 `git`，`sync-uri` 为
+`https://mirrors.ustc.edu.cn/gentoo.git`。
 
 以下是修改后的：
 
@@ -45,29 +44,27 @@ ALL
 -   第一次使用 `Git` 同步方式的用户（从 `Rsync` 方式同步换到 `Git`
     方式同步）：
 
-按照上述教程更改完
-`/etc/portage/repos.conf/gentoo.conf`
-，需要：
+    按照上述教程更改完
+    `/etc/portage/repos.conf/gentoo.conf`，需要：
 
-    # 删除本地 main tree 目录
-    rm -rf /var/db/repos/gentoo
+        # 删除本地 main tree 目录
+        rm -rf /var/db/repos/gentoo
 
-    # 重新同步
-    emerge --sync
+        # 重新同步
+        emerge --sync
 
 -   已经配置过 `Git` 同步方式的用户（其他镜像站换中科大源）只需要：
 
-更改完 `/etc/portage/repos.conf/gentoo.conf`
-：
+    更改完 `/etc/portage/repos.conf/gentoo.conf`：
 
-    # 进入 main tree 目录
-    cd /var/db/repos/gentoo
+        # 进入 main tree 目录
+        cd /var/db/repos/gentoo
 
-    # 将 remote url 设置为中科大
-    git remote set-url origin https://mirrors.ustc.edu.cn/gentoo.git
+        # 将 remote url 设置为中科大
+        git remote set-url origin https://mirrors.ustc.edu.cn/gentoo.git
 
-    # 重新同步
-    emerge --sync
+        # 重新同步
+        emerge --sync
 
 ## 相关镜像
 

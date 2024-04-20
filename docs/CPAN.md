@@ -42,8 +42,7 @@
 
 此处选择 1，然后选择科大源即可。
 
-若你已经用过 cpan 了，将 \~/.cpan/CPAN/MyConfig.pm 中的 \'urllist\'
-的值改为
+若你已经用过 cpan 了，将 `~/.cpan/CPAN/MyConfig.pm` 中的 `'urllist'` 的值改为：
 
     'urllist' => [q[http://mirrors.ustc.edu.cn/CPAN/]],
 

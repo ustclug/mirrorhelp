@@ -14,8 +14,7 @@ ALL
 
 ## 使用说明
 
-在 `/etc/portage/make.conf`
-中添加或修改：
+在 `/etc/portage/make.conf` 中添加或修改：
 
     GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo/"
 

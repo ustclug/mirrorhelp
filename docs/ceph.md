@@ -11,13 +11,13 @@ ceph 的源代码，以及预编译的软件包。
 
 ## 使用说明
 
-预编译软件包：
+- 预编译软件包：
 
-参考 ceph 官方使用帮助
-<https://docs.ceph.com/en/latest/install/get-packages/>， 将所有
-`download.ceph.com` 替换为 `mirrors.ustc.edu.cn/ceph` 即可。
+    参考 ceph 官方使用帮助
+    <https://docs.ceph.com/en/latest/install/get-packages/>，将所有
+    `download.ceph.com` 替换为 `mirrors.ustc.edu.cn/ceph` 即可。
 
-源代码：
+- 源代码：
 
-Ceph 打包的源代码位于 <https://mirrors.ustc.edu.cn/ceph/tarballs/>
-目录中。
+    Ceph 打包的源代码位于 <https://mirrors.ustc.edu.cn/ceph/tarballs/>
+    目录中。

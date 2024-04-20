@@ -10,7 +10,7 @@ Docker Hub 镜像缓存
 
 ## 使用说明
 
-!!! danger
+!!! warning
 
     由于访问原始站点的网络带宽等条件的限制，导致 Docker Hub, Google
     Container Registry (gcr.io) 与 Quay Container Registry (quay.io)
@@ -35,9 +35,9 @@ Docker Hub 镜像缓存
     gcr 镜像的访问返回 403。
 -   *2022-08-24* 由于获悉阿里云的 Docker Hub 镜像不再更新，目前校外对
     Docker Hub 镜像的访问返回 403。用户需要修改配置，选择其他国内的
-    Docker Hub 镜像源。
+    Docker Hub 镜像源。sdoc
 
-!!! danger
+!!! warning
 
     2020 年 11 月后，Docker Hub 新增了
     [访问速率限制](https://docs.docker.com/docker-hub/download-rate-limit/)，这可能导致在校内使用
@@ -69,18 +69,18 @@ Docker Hub 镜像缓存
 
 旧版本：
 
-1.  打开 \"Docker.app\"
-2.  进入偏好设置页面(快捷键 `⌘,` )
-3.  打开 \"Daemon\" 选项卡
-4.  在 \"Registry mirrors\" 中添加 `https://docker.mirrors.ustc.edu.cn/`
-5.  点击下方的 \"Apply & Restart\" 按钮
+1.  打开 "Docker.app"
+2.  进入偏好设置页面（快捷键 `⌘,`）
+3.  打开 "Daemon" 选项卡
+4.  在 "Registry mirrors" 中添加 `https://docker.mirrors.ustc.edu.cn/`
+5.  点击下方的 "Apply & Restart" 按钮
 
 新版本：
 
-1.  打开 \"Docker.app\"
-2.  进入偏好设置页面(快捷键 `⌘,` )
-3.  打开 \"Docker Engine\" 选项卡
-4.  参考 Linux 中 \"使用 systemd 系统\" 的配置，在 JSON 配置中添加
+1.  打开 "Docker.app"
+2.  进入偏好设置页面（快捷键 `⌘,`）
+3.  打开 "Docker Engine" 选项卡
+4.  参考 Linux 中 "使用 systemd 系统" 的配置，在 JSON 配置中添加
     `"registry-mirrors"` 一项。
 
 ### Windows
@@ -94,10 +94,9 @@ Docker Hub 镜像缓存
 
 新版本：
 
-在系统右下角托盘 Docker 图标内右键菜单选择 `Settings`
-，打开配置窗口后左侧导航菜单选择 `Docker Engine` 。参考 Linux 中 \"使用
-systemd 系统\" 的配置，在 JSON 配置中添加 `"registry-mirrors"` 一项
-，之后点击 \"Apply & Restart\" 保存并重启 Docker 即可。
+在系统右下角托盘 Docker 图标内右键菜单选择 `Settings`，
+打开配置窗口后左侧导航菜单选择 `Docker Engine` 。参考 Linux 中 "使用 systemd 系统" 的配置，
+在 JSON 配置中添加 `"registry-mirrors"` 一项，之后点击 "Apply & Restart" 保存并重启 Docker 即可。
 
 ### 检查 Docker Hub 是否生效
 

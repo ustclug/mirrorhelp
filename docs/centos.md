@@ -62,28 +62,28 @@ x86_64, aarch64, ppc64le
     `/etc/yum.repos.d/CentOS-Stream-BaseOS.repo`
      文件：
 
-    ```
+    ```ini
     --8<-- "centos8stream/CentOS-Stream-BaseOS.repo"
     ```
 
     `/etc/yum.repos.d/CentOS-Stream-Extras.repo`
      文件：
 
-    ```
+    ```ini
     --8<-- "centos8stream/CentOS-Stream-Extras.repo"
     ```
 
     `/etc/yum.repos.d/CentOS-Stream-AppStream.repo`
      文件：
 
-    ```
+    ```ini
     --8<-- "centos8stream/CentOS-Stream-AppStream.repo"
     ```
 
     `/etc/yum.repos.d/CentOS-Stream-PowerTools.repo`
      文件：
 
-    ```
+    ```ini
     --8<-- "centos8stream/CentOS-Stream-PowerTools.repo"
     ```
 
@@ -92,7 +92,7 @@ x86_64, aarch64, ppc64le
     `/etc/yum.repos.d/CentOS-Base.repo`
     文件：
 
-    ```
+    ```ini
     --8<-- "centos7/CentOS-Base.repo"
     ```
 
