@@ -63,7 +63,8 @@ markdown_extensions:
       permalink: true
 
 plugins:
-  - search
+  - search:
+      lang: zh
   - macros:
       include_dir: includes
       j2_comment_start_string: "{%#"
