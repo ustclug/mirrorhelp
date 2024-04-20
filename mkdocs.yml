@@ -29,7 +29,7 @@ theme:
         icon: material/weather-sunny
         name: 切换至浅色模式
   icon:
-    logo: fontawesome/brands/linux
+    logo: material/mirror-rectangle
     repo: octicons/mark-github-16
   features:
     - content.code.annotate
@@ -60,7 +60,7 @@ markdown_extensions:
 
 extra:
   social:
-    - icon: octicons/globe-16
+    - icon: fontawesome/brands/linux
       link: https://lug.ustc.edu.cn/
     - icon: octicons/mark-github-16
       link: https://github.com/ustclug
@@ -72,6 +72,10 @@ extra_css:
   - css/extra.css
 
 nav:
+  - index.md
+  - rsync-guide.md
+  - contributor.md
+
   - 发行版镜像:
     - alpine.md
     - anthon.md
@@ -161,7 +165,3 @@ nav:
     - sagemath.md
     - winget-source.md
     - xbmc.md
-  - 其他:
-    - rsync-guide.md
-    - todo.md
-    - contributor.md

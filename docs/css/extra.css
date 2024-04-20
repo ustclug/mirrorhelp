@@ -15,12 +15,18 @@
 :root { --md-text-font: Roboto; --md-code-font: Roboto Mono; }
 
 .md-typeset #references, .md-typeset .no-underline { margin-bottom: 0; padding-bottom: 0; border: none; }
-.md-typeset h2 { padding-bottom: 0.2em; border-bottom: 1px solid #d3d3d3; }
-.md-typeset h3 { padding-bottom: 0.2em; border-bottom: 1px dashed #d3d3d3; }
+.md-typeset h2 { margin-top: 1.25em; padding-bottom: 0.2em; border-bottom: 1px solid #d3d3d3; }
+.md-typeset h3 { margin-top: 1em; padding-bottom: 0.2em; border-bottom: 1px dashed #d3d3d3; }
 .md-typeset h4 { font-size: 1.17em; }
 .md-typeset h5 { font-size: 1.08em; }
 .md-typeset h6 { font-size: 1em; }
+.md-typeset ul li, .md-typeset ol li { margin-bottom: 0; }
+.md-typeset dl { display: grid; grid-template-columns: auto minmax(60%, 95%); }
+.md-typeset dl dt, .md-typeset dl dd { margin-bottom: 0.5em; }
 .md-typeset dt { font-weight: bold; }
+.md-typeset dd { margin-top: 0; margin-bottom: 0; }
+.md-typeset dd > :first-child { margin-top: 0; }
+.md-typeset dd > :last-child { margin-bottom: 0; }
 .md-typeset img { display: block; margin-left: auto; margin-right: auto; }
 .md-typeset .img-inline { display: inline-block; vertical-align: text-bottom; }
 .md-typeset .img-border { border: 1px solid black; }

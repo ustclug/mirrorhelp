@@ -23,11 +23,13 @@ $color-codes: red, darkred, orangered, green, limegreen, cyan, darkcyan;
   }
 
   h2 {
+    margin-top: 1.25em;
     padding-bottom: 0.2em;
     border-bottom: 1px solid #d3d3d3;
   }
 
   h3 {
+    margin-top: 1em;
     padding-bottom: 0.2em;
     border-bottom: 1px dashed #d3d3d3;
   }
@@ -44,8 +46,36 @@ $color-codes: red, darkred, orangered, green, limegreen, cyan, darkcyan;
     font-size: 1em;
   }
 
+  ul, ol {
+    li {
+      margin-bottom: 0;
+    }
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: auto minmax(60%, 95%);
+
+    dt, dd {
+      margin-bottom: 0.5em;
+    }
+  }
+
   dt {
     font-weight: bold;
+  }
+
+  dd {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 
   img {
