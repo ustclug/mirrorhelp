@@ -20,8 +20,7 @@ Ubuntu 及其衍生发行版当前支持的版本
 
 Ubuntu 各版本各架构 ISO 请到
 <https://mirrors.ustc.edu.cn/ubuntu-cdimage/releases/> 下载。
-如果有些桌面版的 ISO 镜像没找到，也可以去参考
-`ubuntu-releases`
+如果有些桌面版的 ISO 镜像没找到，也可以去参考 [ubuntu-releases](ubuntu-releases.md)。
 
 Ubuntu 衍生版，如 Edubuntu, KUbuntu(KDE), LUbuntu(LXDE),
 Mythbuntu(MythTV), Ubuntu Base, Ubuntu Gnome, Ubuntu Mate, Ubuntu

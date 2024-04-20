@@ -80,7 +80,7 @@ arm64, armhf, PowerPC, ppc64el, s390x
 
 ### 镜像下载
 
-相关架构的 ISO 下载请参考 `ubuntu-cdimage`
+相关架构的 ISO 下载请参考 [ubuntu-cdimage](ubuntu-cdimage.md)。
 
 ## 相关链接
 

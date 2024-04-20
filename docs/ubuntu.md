@@ -12,22 +12,19 @@ Ubuntu 软件源
 
 AMD64 (x86_64), Intel x86
 
-其他架构请参考 `ubuntu-ports`
+其他架构请参考 [ubuntu-ports](ubuntu-ports.md)
 
 ## 收录版本
 
-所有 Ubuntu 当前支持的版本，包括开发版，具体版本见
-<https://wiki.ubuntu.com/Releases>
+所有 Ubuntu 当前支持的版本，包括开发版，具体版本见 <https://wiki.ubuntu.com/Releases>。
 
-对于 Ubuntu 不再支持的版本，请参考
-`ubuntu-old-releases`
+对于 Ubuntu 不再支持的版本，请参考 [ubuntu-old-releases](ubuntu-old-releases.md)
 
 ## 使用说明
 
 ### 图形界面配置（新手推荐）
 
-依次打开：系统设置，软件和更新。在 `下载自` 中选择
-`其他站点`，然后在中国的条目下选择 `mirrors.ustc.edu.cn`。
+依次打开：系统设置，软件和更新。在 `下载自` 中选择 `其他站点`，然后在中国的条目下选择 `mirrors.ustc.edu.cn`。
 
 下面是 Ubuntu 16.04 的操作示意图：
 

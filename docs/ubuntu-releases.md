@@ -12,7 +12,7 @@ Ubuntu 镜像
 
 AMD64 (x86_64), Intel x86
 
-其他架构请参考 `ubuntu-cdimage`
+其他架构请参考 [ubuntu-cdimage](ubuntu-cdimage.md)
 
 ## 收录版本
 
