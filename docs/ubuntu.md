@@ -58,9 +58,10 @@ AMD64 (x86_64), Intel x86
 
 当然也可以直接编辑 APT 源文件（需要使用 sudo）。以下是参考配置内容：
 
-=== "`sources.list` 格式"
 {% for release in ubuntu_releases %}
-    === "Ubuntu {{ release.name }}"
+=== "Ubuntu {{ release.name }}"
+
+    === "`sources.list` 格式"
 
         ```shell title="/etc/apt/sources.list"
         # 默认注释了源码仓库，如有需要可自行取消注释
@@ -80,23 +81,28 @@ AMD64 (x86_64), Intel x86
         # deb https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }}-proposed main restricted universe multiverse
         # deb-src https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }}-proposed main restricted universe multiverse
         ```
-{% endfor %}
-
-=== "DEB822 格式"
-{% for release in ubuntu_releases %}
-    === "Ubuntu {{ release.name }}"
+        
+    === "DEB822 格式"
 
         ```yaml title="/etc/apt/sources.list.d/ubuntu.sources"
-        Enabled: yes
         Types: deb
         URIs: https://mirrors.ustc.edu.cn/ubuntu
-        Suites: {{ release.codename }} {{ release.codename }}-updates {{ release.codename }}-security
+        Suites: {{ release.codename }} {{ release.codename }}-updates {{ release.codename }}-backports
+        Components: main restricted universe multiverse
+
+        Types: deb
+        URIs: https://mirrors.ustc.edu.cn/ubuntu
+        Suites: {{ release.codename }}-security
         Components: main restricted universe multiverse
         ```
+
+        !!! warning "DEB822 格式包含了对 ubuntu-security 源的修改"
 
         如果需要使用源码仓库，可以在 `Types` 中添加 `deb-src`。
 
         如果需要使用预发布软件源，可以在 `Suites` 中添加 `{{ release.codename }}-proposed`。
+
+        --8<-- "deb822.md"
 {% endfor %}
 
 更改完 `sources.list` 文件后请运行 `sudo apt-get update` 更新索引以生效。
