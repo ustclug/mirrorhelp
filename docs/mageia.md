@@ -94,105 +94,107 @@ dnf 在默认情况下已经被预装，如果你发现并没有，可以使用 
 以 `/etc/yum.repos.d/mageia-x86_64.repo`
 为例：
 
-    [mageia-x86_64]
-    name=Mageia $releasever - x86_64
-    baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/core/release/
-    #metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=release
-    mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=release
-    gpgcheck=1
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
-    failovermethod=priority
-    enabled=1
+```ini
+[mageia-x86_64]
+name=Mageia $releasever - x86_64
+baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/core/release/
+#metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=release
+mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=release
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
+failovermethod=priority
+enabled=1
 
-    [updates-x86_64]
-    name=Mageia $releasever - x86_64 - Updates
-    baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/core/updates/
-    #metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=updates
-    mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=updates
-    gpgcheck=1
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
-    failovermethod=priority
-    enabled=1
+[updates-x86_64]
+name=Mageia $releasever - x86_64 - Updates
+baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/core/updates/
+#metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=updates
+mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=updates
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
+failovermethod=priority
+enabled=1
 
-    [updates_testing-x86_64]
-    name=Mageia $releasever - x86_64 - Test Updates
-    baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/core/updates_testing/
-    #metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=updates_testing
-    mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=updates_testing
-    gpgcheck=1
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
-    failovermethod=priority
-    enabled=0
+[updates_testing-x86_64]
+name=Mageia $releasever - x86_64 - Test Updates
+baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/core/updates_testing/
+#metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=updates_testing
+mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=updates_testing
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
+failovermethod=priority
+enabled=0
 
-    [backports-x86_64]
-    name=Mageia $releasever - x86_64 - Backports
-    baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/core/backports/
-    #metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=backports
-    mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=backports
-    gpgcheck=1
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
-    failovermethod=priority
-    enabled=0
+[backports-x86_64]
+name=Mageia $releasever - x86_64 - Backports
+baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/core/backports/
+#metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=backports
+mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=backports
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
+failovermethod=priority
+enabled=0
 
-    [backports_testing-x86_64]
-    name=Mageia $releasever - x86_64 - Test Backports
-    baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/core/backports_testing/
-    #metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=backports_testing
-    mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=backports_testing
-    gpgcheck=1
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
-    failovermethod=priority
-    enabled=0
+[backports_testing-x86_64]
+name=Mageia $releasever - x86_64 - Test Backports
+baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/core/backports_testing/
+#metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=backports_testing
+mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=backports_testing
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
+failovermethod=priority
+enabled=0
 
-    [mageia-x86_64-debuginfo]
-    name=Mageia $releasever - x86_64 - Debug
-    baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/debug/core/release/
-    #metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=release&debug=true
-    mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=release&debug=1
-    gpgcheck=1
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
-    failovermethod=priority
-    enabled=0
+[mageia-x86_64-debuginfo]
+name=Mageia $releasever - x86_64 - Debug
+baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/debug/core/release/
+#metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=release&debug=true
+mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=release&debug=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
+failovermethod=priority
+enabled=0
 
-    [updates-x86_64-debuginfo]
-    name=Mageia $releasever - x86_64 - Updates - Debug
-    baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/debug/core/updates/
-    #metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=updates&debug=true
-    mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=updates&debug=1
-    gpgcheck=1
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
-    failovermethod=priority
-    enabled=0
+[updates-x86_64-debuginfo]
+name=Mageia $releasever - x86_64 - Updates - Debug
+baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/debug/core/updates/
+#metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=updates&debug=true
+mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=updates&debug=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
+failovermethod=priority
+enabled=0
 
-    [updates_testing-x86_64-debuginfo]
-    name=Mageia $releasever - x86_64 - Test Updates - Debug
-    baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/debug/core/updates_testing/
-    #metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=updates_testing&debug=true
-    mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=updates_testing&debug=1
-    gpgcheck=1
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
-    failovermethod=priority
-    enabled=0
+[updates_testing-x86_64-debuginfo]
+name=Mageia $releasever - x86_64 - Test Updates - Debug
+baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/debug/core/updates_testing/
+#metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=updates_testing&debug=true
+mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=updates_testing&debug=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
+failovermethod=priority
+enabled=0
 
-    [backports-x86_64-debuginfo]
-    name=Mageia $releasever - x86_64 - Backports - Debug
-    baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/debug/core/backports/
-    #metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=backports&debug=true
-    mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=backports&debug=1
-    gpgcheck=1
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
-    failovermethod=priority
-    enabled=0
+[backports-x86_64-debuginfo]
+name=Mageia $releasever - x86_64 - Backports - Debug
+baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/debug/core/backports/
+#metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=backports&debug=true
+mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=backports&debug=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
+failovermethod=priority
+enabled=0
 
-    [backports_testing-x86_64-debuginfo]
-    name=Mageia $releasever - x86_64 - Test Backports - Debug
-    baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/debug/core/backports_testing/
-    #metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=backports_testing&debug=true
-    mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=backports_testing&debug=1
-    gpgcheck=1
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
-    failovermethod=priority
-    enabled=0
+[backports_testing-x86_64-debuginfo]
+name=Mageia $releasever - x86_64 - Test Backports - Debug
+baseurl=https://mirrors.ustc.edu.cn/mageia/distrib/$releasever/x86_64/media/debug/core/backports_testing/
+#metalink=https://mirrors.mageia.org/metalink?distrib=mageia-$releasever&arch=x86_64&section=core&repo=backports_testing&debug=true
+mirrorlist=https://www.mageia.org/mirrorlist/?release=$releasever&arch=x86_64&section=core&repo=backports_testing&debug=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Mageia
+failovermethod=priority
+enabled=0
+```
 
 你需要确认所有需要开启的软件仓库，如上面这个文件中的 \[mageia-x86_64\]
 和 \[updates-x86_64\] （即 Core Release 和 Core Updates）部分末端

@@ -44,18 +44,22 @@ raspbian.raspberrypi.org（参考 `raspbian`，旧版为 archive.raspbian.org）
 
 可以使用如下命令：
 
-    sudo sed \
-    -e 's|http://archive.raspberrypi.org|http://mirrors.ustc.edu.cn/raspberrypi|g' \
-    -e 's|http://archive.raspberrypi.com|http://mirrors.ustc.edu.cn/raspberrypi|g' \
-    -i.bak \
-    /etc/apt/sources.list.d/raspi.list
+```shell
+sudo sed \
+  -e 's|http://archive.raspberrypi.org|http://mirrors.ustc.edu.cn/raspberrypi|g' \
+  -e 's|http://archive.raspberrypi.com|http://mirrors.ustc.edu.cn/raspberrypi|g' \
+  -i.bak \
+  /etc/apt/sources.list.d/raspi.list
+```
 
 当然也可以直接编辑
 `/etc/apt/sources.list.d/raspi.list`
 文件（需要使用 sudo）。以下是 bookworm 的参考配置内容：
 
+```shell
     deb http://mirrors.ustc.edu.cn/raspberrypi/debian/ bookworm main
     #deb-src http://mirrors.ustc.edu.cn/raspberrypi/debian/ bookworm main
+```
 
 更改完 `raspi.list` 文件后请运行
 `sudo apt-get update` 更新索引以生效。

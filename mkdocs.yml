@@ -55,6 +55,8 @@ markdown_extensions:
       base_path:
         - includes
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: true
 

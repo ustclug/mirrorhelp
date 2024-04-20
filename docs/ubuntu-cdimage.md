@@ -19,7 +19,7 @@ Ubuntu 及其衍生发行版当前支持的版本
 ## 使用说明
 
 Ubuntu 各版本各架构 ISO 请到
-<http://mirrors.ustc.edu.cn/ubuntu-cdimage/releases/> 下载。
+<https://mirrors.ustc.edu.cn/ubuntu-cdimage/releases/> 下载。
 如果有些桌面版的 ISO 镜像没找到，也可以去参考
 `ubuntu-releases`
 

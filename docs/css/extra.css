@@ -20,7 +20,7 @@
 .md-typeset h4 { font-size: 1.17em; }
 .md-typeset h5 { font-size: 1.08em; }
 .md-typeset h6 { font-size: 1em; }
-.md-typeset ul li, .md-typeset ol li { margin-bottom: 0; }
+.md-typeset ul li, .md-typeset ol li { margin-bottom: 0.2em; }
 .md-typeset dl { display: grid; grid-template-columns: auto minmax(60%, 95%); }
 .md-typeset dl dt, .md-typeset dl dd { margin-bottom: 0.5em; }
 .md-typeset dt { font-weight: bold; }

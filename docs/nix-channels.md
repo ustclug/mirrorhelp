@@ -14,14 +14,14 @@ Nixpkgs channel 以及 binary cache。Binary cache 为动态缓存。
 
 单独安装的 Nix 对应使用的是 nixpkgs。以 `nixpkgs-unstable` 为例：
 
-    $ nix-channel --add https://mirrors.ustc.edu.cn/nix-channels/nixpkgs-unstable nixpkgs
-    $ nix-channel --update
+    nix-channel --add https://mirrors.ustc.edu.cn/nix-channels/nixpkgs-unstable nixpkgs
+    nix-channel --update
 
 NixOS channel 也可以以类似命令替换，以 `nixos-19.09` 为例（需要以 root
 用户身份执行）：
 
-    # nix-channel --add https://mirrors.ustc.edu.cn/nix-channels/nixos-19.09 nixos
-    # nix-channel --update
+    nix-channel --add https://mirrors.ustc.edu.cn/nix-channels/nixos-19.09 nixos
+    nix-channel --update
 
 ### 替换 binary cache 为科大源
 
@@ -33,7 +33,7 @@ NixOS channel 也可以以类似命令替换，以 `nixos-19.09` 为例（需要
 对于 NixOS 和 nix-darwin，需要编辑 NixOS / nix-darwin
 配置文件，系统会自动生成对应的 `/etc/nix/nix.conf` 文件。
 
-!!! danger
+!!! warning
 
     如果你手动指定了 `NIX_PATH` 或是使用 Flakes
     管理系统，请根据具体情况编辑对应的文件，以下仅供参考。

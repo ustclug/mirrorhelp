@@ -2,13 +2,13 @@
 
 ## 地址
 
-<http://mirrors.ustc.edu.cn/raspberry-pi-os-images/>
+<https://mirrors.ustc.edu.cn/raspberry-pi-os-images/>
 
 ## 说明
 
 目前仅同步了包括 raspios 在内的几个常用版本，以及部分工具等。
 
-raspios 的默认用户是 pi，密码是 raspberry，root 默认关闭。
+raspios 的默认用户是 `pi`，密码是 `raspberry`，root 默认关闭。
 
 ## 系统架构
 

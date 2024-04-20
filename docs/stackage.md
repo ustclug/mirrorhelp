@@ -14,13 +14,42 @@ Stackage 镜像
 
 编辑 `~/.stack/config.yaml`, 根据版本的不同，增加下列配置：
 
-\>= 2.5:
+=== ">= 2.5"
 
+    ```yaml
     setup-info-locations:
-       - http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml
+      - http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml
     urls:
       latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
     snapshot-location-base: http://mirrors.ustc.edu.cn/stackage/stackage-snapshots/
+    ```
+
+=== ">= 2.3, < 2.5"
+
+    ```yaml
+    setup-info-locations:
+      - http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml
+    urls:
+      latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
+    ```
+
+=== ">= v2.1.1, < 2.3"
+
+    ```yaml
+    setup-info: "http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml"
+    urls:
+      latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
+    ```
+
+=== "< v2.1.1"
+
+    ```yaml
+    setup-info: "http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml"
+    urls:
+      latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
+      lts-build-plans: http://mirrors.ustc.edu.cn/stackage/lts-haskell/
+      nightly-build-plans: http://mirrors.ustc.edu.cn/stackage/stackage-nightly/
+    ```
 
 此外，还需要手动下载
 <https://mirrors.ustc.edu.cn/stackage/stackage-content/stack/global-hints.yaml>
@@ -29,27 +58,6 @@ Stackage 镜像
 ）。注意文件名不同。这是由于 stack
 暂时不支持配置该文件的上游地址。该文件需要在每当第一次用到新版本的 GHC
 时更新。
-
-\< 2.5, \>= 2.3:
-
-    setup-info-locations:
-      - http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml
-    urls:
-      latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
-
-\< 2.3, \>= v2.1.1:
-
-    setup-info: "http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml"
-    urls:
-      latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
-
-\< v2.1.1:
-
-    setup-info: "http://mirrors.ustc.edu.cn/stackage/stack-setup.yaml"
-    urls:
-      latest-snapshot: http://mirrors.ustc.edu.cn/stackage/snapshots.json
-      lts-build-plans: http://mirrors.ustc.edu.cn/stackage/lts-haskell/
-      nightly-build-plans: http://mirrors.ustc.edu.cn/stackage/stackage-nightly/
 
 ## 相关链接
 

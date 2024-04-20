@@ -17,10 +17,10 @@ MySQL 软件仓库镜像
 ## 使用说明
 
 Debian/Ubuntu
-用户参考以下帮助文档配置：https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/。
+用户参考以下帮助文档配置：<https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/>。
 
 RHEL/Fedora
-用户参考以下帮助文档配置：https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/。
+用户参考以下帮助文档配置：<https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/>。
 
 以上配置文档中需要下载的配置软件源的安装包也可以在该镜像顶层目录找到。
 
