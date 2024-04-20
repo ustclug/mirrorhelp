@@ -2686,10 +2686,8 @@
 <p>操作前请做好相应备份</p>
 </div>
 <h3 id="debianproxmox">Debian，Proxmox<a class="headerlink" href="#debianproxmox" title="Permanent link">&para;</a></h3>
-<p>一般情况下，需要同时修改基础系统（Debian）的源文件
-<code>/etc/apt/sources.list</code> 和 Proxmox
-的源文件。</p>
-<p>修改基础系统（Debian）的源文件，可以使用如下命令：</p>
+<p>一般情况下，需要同时修改基础系统（Debian）的源文件 <code>/etc/apt/sources.list</code> 和 Proxmox 的源文件。</p>
+<p>修改基础系统（Debian）的源文件，可以参考 <a href="debian.html">Debian 帮助</a> 或使用如下命令：</p>
 <div class="highlight"><pre><span></span><code>sed -i &#39;s|^deb http://ftp.debian.org|deb https://mirrors.ustc.edu.cn|g&#39; /etc/apt/sources.list
 sed -i &#39;s|^deb http://security.debian.org|deb https://mirrors.ustc.edu.cn/debian-security|g&#39; /etc/apt/sources.list
 </code></pre></div>
@@ -2697,18 +2695,15 @@ sed -i &#39;s|^deb http://security.debian.org|deb https://mirrors.ustc.edu.cn/de
 <div class="highlight"><pre><span></span><code>source /etc/os-release
 echo &quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/pve $VERSION_CODENAME pve-no-subscription&quot; &gt; /etc/apt/sources.list.d/pve-no-subscription.list
 </code></pre></div>
-<p>对于 Proxmox Backup Server 和 Proxmox Mail Gateway，请将以上命令中的
-<code>pve</code> 分别替换为 <code>pbs</code> 和 <code>pmg</code>。</p>
-<p>PVE 8 之后默认安装 Ceph 仓库源文件
-<code>/etc/apt/sources.list.d/ceph.list</code>，可以使用如下命令更换源：</p>
+<p>对于 Proxmox Backup Server 和 Proxmox Mail Gateway，请将以上命令中的 <code>pve</code> 分别替换为 <code>pbs</code> 和 <code>pmg</code>。</p>
+<p>PVE 8 之后默认安装 Ceph 仓库源文件 <code>/etc/apt/sources.list.d/ceph.list</code>，可以使用如下命令更换源：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>/etc/apt/sources.list.d/ceph.list<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nv">CEPH_CODENAME</span><span class="o">=</span><span class="sb">`</span>ceph<span class="w"> </span>-v<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ceph<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $(NF-1)}&#39;</span><span class="sb">`</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nb">source</span><span class="w"> </span>/etc/os-release
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-</span><span class="nv">$CEPH_CODENAME</span><span class="s2"> </span><span class="nv">$VERSION_CODENAME</span><span class="s2"> no-subscription&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/ceph.list
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">fi</span>
 </code></pre></div>
-<p>更改完 <code>sources.list</code> 文件后请运行
-<code>apt update</code> 更新索引以生效。</p>
+<p>更改完 <code>sources.list</code> 文件后请运行 <code>apt update</code> 更新索引以生效。</p>
 <h3 id="ct-templates">CT Templates<a class="headerlink" href="#ct-templates" title="Permanent link">&para;</a></h3>
 <p>另外，如果你需要使用 Proxmox 网页端下载 CT Templates，可以替换 CT
 Templates 的源为 <code>http://mirrors.ustc.edu.cn</code>。</p>

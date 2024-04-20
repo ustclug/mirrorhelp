@@ -2613,8 +2613,8 @@
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>对于 Debian/Ubuntu 用户，使用以下命令导入 InfluxData 的 GPG 密钥，并更新配置：</p>
 <div class="highlight"><pre><span></span><code>wget -q https://repos.influxdata.com/influxdata-archive_compat.key
-echo &#39;393e8779c89ac8d958f81f942f9ad7fb82a25e133faddaf92e15b16e6ac9ce4c influxdata-archive_compat.key&#39; | sha256sum -c &amp;&amp; cat influxdata-archive_compat.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg &gt; /dev/null
-echo &#39;deb [signed-by=/etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg] https://mirrors.ustc.edu.cn/influxdata/debian stable main&#39; | sudo tee /etc/apt/sources.list.d/influxdata.list
+echo &#39;393e8779c89ac8d958f81f942f9ad7fb82a25e133faddaf92e15b16e6ac9ce4c influxdata-archive_compat.key&#39; | sha256sum -c &amp;&amp; cat influxdata-archive_compat.key | gpg --dearmor | sudo tee /etc/apt/keyrings/influxdata-archive_compat.gpg &gt; /dev/null
+echo &#39;deb [signed-by=/etc/apt/keyrings/influxdata-archive_compat.gpg] https://mirrors.ustc.edu.cn/influxdata/debian stable main&#39; | sudo tee /etc/apt/sources.list.d/influxdata.list
 </code></pre></div>
 <p><code>apt update</code> 之后即可安装 <code>influxdb2</code> 与 <code>telegraf</code> 等软件包。</p>
 <p>对于 CentOS/RHEL 用户，使用以下命令导入 InfluxData 的 GPG 密钥，并更新配置：</p>

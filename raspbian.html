@@ -2676,18 +2676,40 @@ sudo）。删除原文件所有内容，用以下内容取代（以 Bullseye 示
 <div class="highlight"><pre><span></span><code>deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ bullseye main contrib non-free rpi
 # deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ bullseye main contrib non-free rpi
 </code></pre></div>
-<p>Arm64 架构的 Raspberry Pi OS 仍处于 beta
-状态，本镜像上游亦不含此架构。对于 arm64 的 Raspberry Pi
-OS，可以直接使用 arm64 Debian 的源（以 Bullseye 示例）：</p>
-<div class="highlight"><pre><span></span><code>deb https://mirrors.ustc.edu.cn/debian/ bullseye main contrib non-free
-# deb-src http://mirrors.ustc.edu.cn/debian bullseye main contrib non-free
-deb https://mirrors.ustc.edu.cn/debian/ bullseye-updates main contrib non-free
-# deb-src http://mirrors.ustc.edu.cn/debian bullseye-updates main contrib non-free
-deb https://mirrors.ustc.edu.cn/debian-security bullseye-security main contrib non-free
-# deb-src http://mirrors.ustc.edu.cn/debian-security/ bullseye-security main non-free contrib
+<p>Arm64 架构的 Raspberry Pi OS 仍处于 beta 状态，本镜像上游亦不含此架构。对于 arm64 的 Raspberry Pi OS，可以直接使用 arm64 Debian 的源：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Raspbian bookworm</label><label for="__tabbed_1_2">Raspbian bullseye</label><label for="__tabbed_1_3">Raspbian buster</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>deb<span class="w"> </span>https://mirrors.ustc.edu.cn/debian/<span class="w"> </span>bookworm<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian bookworm main contrib non-free</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>deb<span class="w"> </span>https://mirrors.ustc.edu.cn/debian/<span class="w"> </span>bookworm-updates<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian bookworm-updates main contrib non-free</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>deb<span class="w"> </span>https://mirrors.ustc.edu.cn/debian-security<span class="w"> </span>bookworm-security<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ bookworm-security-security main non-free contrib</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>deb<span class="w"> </span>https://mirrors.ustc.edu.cn/debian/<span class="w"> </span>bullseye<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian bullseye main contrib non-free</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>deb<span class="w"> </span>https://mirrors.ustc.edu.cn/debian/<span class="w"> </span>bullseye-updates<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian bullseye-updates main contrib non-free</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>deb<span class="w"> </span>https://mirrors.ustc.edu.cn/debian-security<span class="w"> </span>bullseye-security<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ bullseye-security-security main non-free contrib</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>deb<span class="w"> </span>https://mirrors.ustc.edu.cn/debian/<span class="w"> </span>buster<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian buster main contrib non-free</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>deb<span class="w"> </span>https://mirrors.ustc.edu.cn/debian/<span class="w"> </span>buster-updates<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>deb<span class="w"> </span>https://mirrors.ustc.edu.cn/debian-security<span class="w"> </span>buster/updates<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates-security main non-free contrib</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 <p>编辑此文件后，请使用 <code>sudo apt-get update</code> 命令，更新软件索引。</p>
-<p>同时也可能需要更改 archive.raspberrypi.org 源，请参考 <code>raspberrypi</code>。</p>
+<p>同时也可能需要更改 archive.raspberrypi.org 源，请参考 <a href="raspberrypi.html">raspberrypi</a>。</p>
 <h2 id="_6">相关链接<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
