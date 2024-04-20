@@ -1,4 +1,4 @@
-# Homebrew Bottles 源使用帮助
+# Homebrew Bottles
 
 ## 地址
 

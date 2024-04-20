@@ -1,4 +1,4 @@
-# Homebrew Core 源使用帮助
+# Homebrew Core
 
 ## 地址
 

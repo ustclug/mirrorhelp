@@ -1,4 +1,4 @@
-# Manjaro Linux 源使用帮助
+# Manjaro Linux
 
 ## 地址
 

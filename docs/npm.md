@@ -1,4 +1,4 @@
-# NPM 反向代理使用帮助
+# NPM 反向代理
 
 中科大镜像站的 npm 镜像是 <https://registry.npmjs.org/> 的反代。
 

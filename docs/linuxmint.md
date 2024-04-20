@@ -1,4 +1,4 @@
-# Linux Mint 源使用帮助
+# Linux Mint
 
 ## 地址
 

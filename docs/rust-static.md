@@ -1,4 +1,4 @@
-# Rust Toolchain 反向代理使用帮助
+# Rust Toolchain 反向代理
 
 ## 说明
 

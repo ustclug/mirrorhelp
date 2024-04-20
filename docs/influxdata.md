@@ -1,4 +1,4 @@
-# InfluxData 镜像使用帮助
+# InfluxData
 
 ## 地址
 

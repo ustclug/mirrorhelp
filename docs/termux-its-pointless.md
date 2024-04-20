@@ -1,4 +1,4 @@
-# Termux Its Pointless 源使用帮助
+# Termux Its Pointless
 
 ## 地址
 

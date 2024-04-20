@@ -1,4 +1,4 @@
-# Arch Linux CN 源使用帮助
+# Arch Linux CN
 
 ## 地址
 

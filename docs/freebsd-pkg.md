@@ -1,4 +1,4 @@
-# FreeBSD pkg 源使用帮助
+# FreeBSD pkg
 
 ## 地址
 

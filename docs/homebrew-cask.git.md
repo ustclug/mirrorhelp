@@ -1,4 +1,4 @@
-# Homebrew Cask 源使用帮助
+# Homebrew Cask
 
 ## 地址
 

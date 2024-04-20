@@ -1,4 +1,4 @@
-# Debian-cdimage 源使用帮助
+# Debian-cdimage
 
 ## 地址
 

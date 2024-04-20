@@ -1,4 +1,4 @@
-# Ubuntu CD Image 源使用帮助
+# Ubuntu CD Image
 
 ## 地址
 

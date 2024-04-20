@@ -1,4 +1,4 @@
-# Mozilla Firefox 源使用帮助
+# Mozilla Firefox
 
 ## 地址
 

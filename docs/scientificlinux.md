@@ -1,4 +1,4 @@
-# Scientific Linux 镜像使用帮助
+# Scientific Linux
 
 ## 收录版本
 

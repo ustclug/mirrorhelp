@@ -1,4 +1,4 @@
-# GitHub Release 镜像使用帮助
+# GitHub Release
 
 ## 地址
 

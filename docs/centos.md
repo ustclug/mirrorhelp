@@ -1,4 +1,4 @@
-# CentOS 源使用帮助
+# CentOS
 
 ## 地址
 

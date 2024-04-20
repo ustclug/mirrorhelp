@@ -1,4 +1,4 @@
-# openSUSE 源使用帮助
+# openSUSE
 
 ## 地址
 

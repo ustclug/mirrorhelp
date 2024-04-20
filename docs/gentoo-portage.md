@@ -1,4 +1,4 @@
-# Gentoo Portage 源使用帮助
+# Gentoo Portage
 
 ## 地址
 

@@ -1,4 +1,4 @@
-# Arch Linux 源使用帮助
+# Arch Linux
 
 ## 地址
 

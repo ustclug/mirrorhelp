@@ -1,4 +1,4 @@
-# Trisquel 源使用帮助
+# Trisquel
 
 ## 地址
 

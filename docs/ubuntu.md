@@ -1,4 +1,4 @@
-# Ubuntu 源使用帮助
+# Ubuntu
 
 ## 地址
 

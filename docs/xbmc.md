@@ -1,4 +1,4 @@
-# XBMC/Kodi 镜像使用帮助
+# XBMC/Kodi
 
 ## 镜像目录结构
 

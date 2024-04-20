@@ -1,4 +1,4 @@
-# Ubuntu Cloud Images 源使用帮助
+# Ubuntu Cloud Images
 
 ## 地址
 

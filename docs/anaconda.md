@@ -1,4 +1,4 @@
-# Anaconda 源使用帮助
+# Anaconda
 
 :::: warning
 ::: title

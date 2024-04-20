@@ -1,4 +1,4 @@
-# Rocky Linux 源使用帮助
+# Rocky Linux
 
 ## 地址
 

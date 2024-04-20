@@ -1,4 +1,4 @@
-# Hackage 源使用帮助
+# Hackage
 
 ## 地址
 

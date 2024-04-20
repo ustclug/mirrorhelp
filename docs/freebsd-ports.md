@@ -1,4 +1,4 @@
-# FreeBSD ports 源使用帮助
+# FreeBSD ports
 
 ## 地址
 

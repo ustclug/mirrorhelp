@@ -1,4 +1,4 @@
-# Homebrew Services 源使用帮助
+# Homebrew Services
 
 ## 地址
 

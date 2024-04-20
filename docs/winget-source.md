@@ -1,4 +1,4 @@
-# WinGet 源使用帮助
+# WinGet
 
 ## 地址
 

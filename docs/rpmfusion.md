@@ -1,4 +1,4 @@
-# RPM Fusion 源使用帮助
+# RPM Fusion
 
 ## 地址
 

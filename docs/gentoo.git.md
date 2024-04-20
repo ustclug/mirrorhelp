@@ -1,4 +1,4 @@
-# Gentoo Git 源使用帮助
+# Gentoo Git
 
 ## 地址
 

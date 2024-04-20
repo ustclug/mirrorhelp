@@ -1,4 +1,4 @@
-# Black Arch 源使用帮助
+# Black Arch
 
 ## 地址
 

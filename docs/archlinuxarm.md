@@ -1,4 +1,4 @@
-# Arch Linux ARM 源使用帮助
+# Arch Linux ARM
 
 ## 地址
 

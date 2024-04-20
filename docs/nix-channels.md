@@ -1,4 +1,4 @@
-# Nix Channels 源使用帮助
+# Nix Channels
 
 ## 地址
 

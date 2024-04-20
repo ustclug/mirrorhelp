@@ -1,4 +1,4 @@
-# Linux 内核源码镜像使用帮助
+# Linux 内核源码
 
 其 Git 仓库的链接为 `git://mirrors.ustc.edu.cn/linux.git` 与
 `https://mirrors.ustc.edu.cn/linux.git`。

@@ -1,4 +1,4 @@
-# FreeBSD 源使用帮助
+# FreeBSD
 
 ## 地址
 

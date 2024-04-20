@@ -1,4 +1,4 @@
-# Gentoo 源使用帮助
+# Gentoo
 
 ## 地址
 

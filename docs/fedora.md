@@ -1,4 +1,4 @@
-# Fedora 源使用帮助
+# Fedora
 
 ## 地址
 

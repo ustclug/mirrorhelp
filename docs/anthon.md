@@ -1,4 +1,4 @@
-# AOSC OS 源使用帮助
+# AOSC OS
 
 ## 地址
 

@@ -1,4 +1,4 @@
-# Mageia 源使用帮助
+# Mageia
 
 :::: warning
 ::: title

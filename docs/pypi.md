@@ -1,4 +1,4 @@
-# PyPI 镜像源使用帮助
+# PyPI 镜像
 
 :::: warning
 ::: title

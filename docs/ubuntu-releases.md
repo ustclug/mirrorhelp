@@ -1,4 +1,4 @@
-# Ubuntu Releases 源使用帮助
+# Ubuntu Releases
 
 ## 地址
 

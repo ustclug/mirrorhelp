@@ -1,4 +1,4 @@
-# OpenWRT/LEDE 源使用帮助
+# OpenWRT/LEDE
 
 ## 地址
 

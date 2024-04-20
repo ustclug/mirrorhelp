@@ -1,4 +1,4 @@
-# Rubygems 源使用帮助
+# Rubygems
 
 ## 地址
 

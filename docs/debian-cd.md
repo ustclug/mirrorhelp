@@ -1,4 +1,4 @@
-# Debian CD 源使用帮助
+# Debian CD
 
 ## 地址
 
