@@ -34,11 +34,11 @@ Kodi（当时叫「Xbox Media Center」）最初是作为第一代 Xbox 游戏�
 
 需要先越狱，然后通过 Cydia 安装。
 
--   第一步：在已越狱的 iPhone 手机或 iPad 主屏幕上点击 Cydia 图标
--   第二步：选择"软件源 → 编辑 → 添加"
--   第三步：在弹出的录入框输入 `http://mirrors.ustc.edu.cn/xbmc/apt/ios/`
--   第四步：点击刚增加的 teamKodi 源
--   第五步：选择安装 Kodi-iOS
+- 第一步：在已越狱的 iPhone 手机或 iPad 主屏幕上点击 Cydia 图标
+- 第二步：选择"软件源 → 编辑 → 添加"
+- 第三步：在弹出的录入框输入 `http://mirrors.ustc.edu.cn/xbmc/apt/ios/`
+- 第四步：点击刚增加的 teamKodi 源
+- 第五步：选择安装 Kodi-iOS
 
 ### 插件库使用
 
@@ -53,7 +53,7 @@ Kodi（当时叫「Xbox Media Center」）最初是作为第一代 Xbox 游戏�
 
 Kodi 链接
 
--   Kodi 主页：<http://kodi.tv/>
--   文档：<http://kodi.wiki/>
--   Bug Tracker: <http://trac.kodi.tv/>
--   源代码：<https://github.com/xbmc/xbmc>
+- Kodi 主页：<http://kodi.tv/>
+- 文档：<http://kodi.wiki/>
+- Bug Tracker: <http://trac.kodi.tv/>
+- 源代码：<https://github.com/xbmc/xbmc>

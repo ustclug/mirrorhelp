@@ -40,7 +40,7 @@ Red Hat Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux (OL
 以下是替换之后的 `/etc/yum.repos.d/epel.repo`
  文件：
 
--   CentOS 8:
+- CentOS 8:
 
     ```ini
     [epel]
@@ -75,7 +75,7 @@ Red Hat Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux (OL
     gpgcheck=1
     ```
 
--   CentOS 7:
+- CentOS 7:
 
     ```ini
     [epel]

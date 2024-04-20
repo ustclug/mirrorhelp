@@ -14,8 +14,8 @@ i386，amd64
 
 ## 收录版本
 
--   所有 Linux Mint 发行版本
--   所有 LMDE 发行版本
+- 所有 Linux Mint 发行版本
+- 所有 LMDE 发行版本
 
 ## 使用方法
 
@@ -25,7 +25,7 @@ i386，amd64
 
 编辑 `/etc/apt/sources.list.d/official-package-repositories.list`：
 
--   对于基于 Ubuntu 的原版，以 Linuxmint 19 为例：
+- 对于基于 Ubuntu 的原版，以 Linuxmint 19 为例：
 
     ```deb
     deb https://mirrors.ustc.edu.cn/linuxmint/ tara main upstream import backport 
@@ -36,7 +36,7 @@ i386，amd64
     deb http://archive.canonical.com/ubuntu/ bionic partner
     ```
 
--   对于基于 Debian 的 LMDE，以 LMDE 2 为例：
+- 对于基于 Debian 的 LMDE，以 LMDE 2 为例：
 
     ```deb
     deb https://mirrors.ustc.edu.cn/linuxmint/ betsy main upstream import

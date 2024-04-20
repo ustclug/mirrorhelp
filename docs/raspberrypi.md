@@ -11,19 +11,19 @@
 
 ## 收录架构
 
--   armhf
--   arm64
--   x86
--   x86_64
+- armhf
+- arm64
+- x86
+- x86_64
 
 ## 收录版本
 
--   wheezy
--   jessie
--   stretch
--   buster
--   bullseye
--   bookworm
+- wheezy
+- jessie
+- stretch
+- buster
+- bullseye
+- bookworm
 
 ## 使用说明
 

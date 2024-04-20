@@ -74,19 +74,19 @@ dnf 在默认情况下已经被预装，如果你发现并没有，可以使用 
 启用的软件仓库不一致，在保存之前，还需要额外进行检查，查看 urpmi
 已启用仓库的方法如下：
 
--   打开 Mageia 控制中心。
--   选择配置安装和更新所用的介质源。
+- 打开 Mageia 控制中心。
+- 选择配置安装和更新所用的介质源。
 
 默认情况下，一个使用 x86_64 架构的 Mageia 在 urpmi 下默认启用的仓库有：
 
--   Core Release
--   Core Updates
--   Nonfree Release
--   Nonfree Updates
--   Core 32bit Release
--   Core 32bit Updates
--   Nonfree 32bit Release
--   Nonfree 32bit Updates
+- Core Release
+- Core Updates
+- Nonfree Release
+- Nonfree Updates
+- Core 32bit Release
+- Core 32bit Updates
+- Nonfree 32bit Release
+- Nonfree 32bit Updates
 
 接下来，逐个检查文件，确认 urpmi 已仓库在 dnf 也被已启用，依然是编辑
 `/etc/yum.repos.d/` 中的文件：

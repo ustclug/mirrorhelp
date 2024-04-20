@@ -10,7 +10,7 @@ Termux APT 源镜像
 
 ## 收录架构
 
--   ARM, AArch64, i686, x86_64
+- ARM, AArch64, i686, x86_64
 
 ## 使用说明
 

@@ -8,8 +8,8 @@
 
 Emacs ELPA 源。包括以下 ELPA 仓库：
 
--   GNU ELPA 和 NonGNU ELPA
--   MELPA 及 MELPA Stable
+- GNU ELPA 和 NonGNU ELPA
+- MELPA 及 MELPA Stable
 
 ## 使用说明
 

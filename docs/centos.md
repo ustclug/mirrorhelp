@@ -57,7 +57,7 @@ x86_64, aarch64, ppc64le
     以下给出的 `CentOS-Stream-PowerTools.repo`
     设置了默认为停用状态。如需启用，请将 `enabled=0` 改为 `enabled=1`。
 
--   CentOS 8 Stream：
+- CentOS 8 Stream：
 
     `/etc/yum.repos.d/CentOS-Stream-BaseOS.repo`
      文件：
@@ -87,7 +87,7 @@ x86_64, aarch64, ppc64le
     --8<-- "centos8stream/CentOS-Stream-PowerTools.repo"
     ```
 
--   CentOS 7：
+- CentOS 7：
 
     `/etc/yum.repos.d/CentOS-Base.repo`
     文件：

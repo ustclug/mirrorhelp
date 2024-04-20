@@ -12,22 +12,22 @@
 
 仅镜像最新版本：
 
--   [adoptium/temurin8-binaries](https://github.com/adoptium/temurin8-binaries)
--   [adoptium/temurin11-binaries](https://github.com/adoptium/temurin11-binaries)
--   [adoptium/temurin17-binaries](https://github.com/adoptium/temurin17-binaries)
--   [adoptium/temurin19-binaries](https://github.com/adoptium/temurin19-binaries)
--   [pbatard/rufus](https://github.com/pbatard/rufus)
--   [Homebrew/homebrew-portable-ruby](https://github.com/Homebrew/homebrew-portable-ruby)
--   [Homebrew/glibc-bootstrap](https://github.com/Homebrew/glibc-bootstrap)
--   [3-manifolds/Sage_macOS](https://github.com/3-manifolds/Sage_macOS)
+- [adoptium/temurin8-binaries](https://github.com/adoptium/temurin8-binaries)
+- [adoptium/temurin11-binaries](https://github.com/adoptium/temurin11-binaries)
+- [adoptium/temurin17-binaries](https://github.com/adoptium/temurin17-binaries)
+- [adoptium/temurin19-binaries](https://github.com/adoptium/temurin19-binaries)
+- [pbatard/rufus](https://github.com/pbatard/rufus)
+- [Homebrew/homebrew-portable-ruby](https://github.com/Homebrew/homebrew-portable-ruby)
+- [Homebrew/glibc-bootstrap](https://github.com/Homebrew/glibc-bootstrap)
+- [3-manifolds/Sage_macOS](https://github.com/3-manifolds/Sage_macOS)
 
 镜像最新的两个版本：
 
--   [TheThirdOne/rars](https://github.com/TheThirdOne/rars)
+- [TheThirdOne/rars](https://github.com/TheThirdOne/rars)
 
 镜像最新的五个版本：
 
--   [XmacsLabs/mogan](https://github.com/XmacsLabs/mogan)
+- [XmacsLabs/mogan](https://github.com/XmacsLabs/mogan)
 
 ## 使用说明
 

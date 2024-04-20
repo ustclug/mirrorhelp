@@ -14,10 +14,10 @@ armhf
 
 ## 收录版本
 
--   stretch (oldoldstable)
--   buster (oldstable)
--   bullseye (stable)
--   bookworm (testing)
+- stretch (oldoldstable)
+- buster (oldstable)
+- bullseye (stable)
+- bookworm (testing)
 
 ## 使用说明
 

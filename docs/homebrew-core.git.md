@@ -57,14 +57,13 @@ Homebrew 核心软件仓库
         rm -rf "$(brew --repo homebrew/core)"
         brew tap --custom-remote --force-auto-update homebrew/core https://mirrors.ustc.edu.cn/homebrew-core.git
 
-
 ## 相关镜像
 
--   [brew.git](brew.git.md)
--   [homebrew-bottles](homebrew-bottles.md)
--   [homebrew-cask.git](homebrew-cask.git.md)
--   [homebrew-cask-versions.git](homebrew-cask-versions.git.md)
--   [homebrew-services.git](homebrew-services.git.md)
+- [brew.git](brew.git.md)
+- [homebrew-bottles](homebrew-bottles.md)
+- [homebrew-cask.git](homebrew-cask.git.md)
+- [homebrew-cask-versions.git](homebrew-cask-versions.git.md)
+- [homebrew-services.git](homebrew-services.git.md)
 
 ## 相关链接
 

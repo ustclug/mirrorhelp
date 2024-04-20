@@ -26,25 +26,25 @@ Miniconda 安装包可以在 <https://mirrors.ustc.edu.cn/anaconda/miniconda/> �
 
 Conda 附加库：
 
--   Conda Forge
+- Conda Forge
 
     ```console
     conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
     ```
 
--   msys2
+- msys2
 
     ```console
     conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/
     ```
 
--   bioconda
+- bioconda
 
     ```console
     conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/
     ```
 
--   menpo
+- menpo
 
     ```console
     conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/

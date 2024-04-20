@@ -67,8 +67,8 @@ Hackage 镜像
 
 ## Cabal 使用说明
 
-1.  执行 `cabal user-config init`
-2.  修改 `~/.cabal/config`
+1. 执行 `cabal user-config init`
+2. 修改 `~/.cabal/config`
 
     === "Cabal >= 1.24 (GHC 8.0)"
 
@@ -107,7 +107,7 @@ Hackage 镜像
 
             remote-repo: mirrors.ustc.edu.cn:http://mirrors.ustc.edu.cn/hackage/
 
-3.  执行 `cabal update`
+3. 执行 `cabal update`
 
 ## 相关链接
 

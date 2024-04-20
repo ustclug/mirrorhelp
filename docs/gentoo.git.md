@@ -41,7 +41,7 @@ ALL
     sync-openpgp-key-refresh-retry-delay-mult = 4
     sync-webrsync-verify-signature = yes
 
--   第一次使用 `Git` 同步方式的用户（从 `Rsync` 方式同步换到 `Git`
+- 第一次使用 `Git` 同步方式的用户（从 `Rsync` 方式同步换到 `Git`
     方式同步）：
 
     按照上述教程更改完
@@ -53,7 +53,7 @@ ALL
         # 重新同步
         emerge --sync
 
--   已经配置过 `Git` 同步方式的用户（其他镜像站换中科大源）只需要：
+- 已经配置过 `Git` 同步方式的用户（其他镜像站换中科大源）只需要：
 
     更改完 `/etc/portage/repos.conf/gentoo.conf`：
 
@@ -68,8 +68,8 @@ ALL
 
 ## 相关镜像
 
--   [gentoo](gentoo.md)
--   [gentoo-portage](gentoo-portage.md)
+- [gentoo](gentoo.md)
+- [gentoo-portage](gentoo-portage.md)
 
 ## 相关链接
 

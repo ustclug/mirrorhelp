@@ -30,6 +30,6 @@ echo 'options(repos=c(USTC="https://mirrors.ustc.edu.cn/CRAN/"))' >> ~/.Rprofile
 
 ## 相关链接
 
--   官方主页： <http://cran.r-project.org/>
--   FAQ： <http://cran.r-project.org/faqs.html>
--   文档： <http://cran.r-project.org/doc/>
+- 官方主页： <http://cran.r-project.org/>
+- FAQ： <http://cran.r-project.org/faqs.html>
+- 文档： <http://cran.r-project.org/doc/>

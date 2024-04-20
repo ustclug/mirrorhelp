@@ -58,25 +58,25 @@ alias（别称），可以根据个人喜好更改。
 
 以 openSUSE Leap 15.3 为例：
 
-1.  打开 YaST；
-2.  点击 Software 分组中的 Software Repositories；
-3.  在打开的窗口上方的列表中点击 Main Repository，点击 Edit；
-4.  将 download.opensuse.org 替换为 mirrors.ustc.edu.cn/opensuse，点
+1. 打开 YaST；
+2. 点击 Software 分组中的 Software Repositories；
+3. 在打开的窗口上方的列表中点击 Main Repository，点击 Edit；
+4. 将 download.opensuse.org 替换为 mirrors.ustc.edu.cn/opensuse，点
     OK；
-5.  再用同样的方法编辑 Non-OSS Repository, Main Update Repository,
+5. 再用同样的方法编辑 Non-OSS Repository, Main Update Repository,
     Update Repository (Non-Oss), Update repository with updates from
     SUSE Linux Enterprise 15 和 Update repository of openSUSE
     Backports。
 
 ## 注意事项
 
--   由于使用了 MirrorBrain 技术，中央服务器 (download.opensuse.org)
+- 由于使用了 MirrorBrain 技术，中央服务器 (download.opensuse.org)
     会按照 IP
     地理位置中转下载请求到附近的镜像服务器（但刷新软件源时仍从中央服务器获取
     元数据），所以更改软件源通常只会加快刷新软件源的速度，而对下载速度影响不大。
     参见 [openSUSE 中文论坛](https://forum.suse.org.cn/t/opensuse/1759)。
--   我们不提供 source 和 debug 源。
--   Tumbleweed 滚动发行版软件源的地址与上述例子稍有不同。
+- 我们不提供 source 和 debug 源。
+- Tumbleweed 滚动发行版软件源的地址与上述例子稍有不同。
 
 ## 相关链接
 

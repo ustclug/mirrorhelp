@@ -45,9 +45,9 @@ JULIA_PKG_SERVER = https://mirrors.ustc.edu.cn/julia
 
 不同系统和命令行下设置环境变量的方式各不相同，在命令行下可以通过以下方式来临时修改环境变量
 
--   Linux Bash:
+- Linux Bash:
     `export JULIA_PKG_SERVER=https://mirrors.ustc.edu.cn/julia`
--   Windows Powershell:
+- Windows Powershell:
     `$env:JULIA_PKG_SERVER = 'https://mirrors.ustc.edu.cn/julia'`
 
 也可以利用 JuliaCN 社区维护的中文本地化工具包
@@ -102,9 +102,9 @@ julia> JuliaZH.generate_startup("USTC")
 
 有两类数据不会被镜像：
 
--   在 `deps/build.jl` 文件中硬编码的下载地址，例如
+- 在 `deps/build.jl` 文件中硬编码的下载地址，例如
     [GR](https://github.com/jheinen/GR.jl/blob/70f025d5cb439d036409f1985107cb5e1615097f/deps/build.jl#L116).
--   在 `Artifacts.toml` 中没有给出 `download`
+- 在 `Artifacts.toml` 中没有给出 `download`
     项的资源，例如
     [TestImages](https://github.com/JuliaImages/TestImages.jl/blob/eaa94348df619c65956e8cfb0032ecddb7a29d3a/Artifacts.toml).
 
@@ -119,8 +119,8 @@ Julia `v1.4.0` 之前的版本采用的是 `git clone`
 
 以默认注册表 `General` 为例，只需要手动将其重置到镜像站即可：
 
-1.  删除当前注册表： `(@v1.4) pkg> registry rm General`
-2.  从镜像站下载/拉取注册表： `(@v1.4) pkg> registry add General`
+1. 删除当前注册表： `(@v1.4) pkg> registry rm General`
+2. 从镜像站下载/拉取注册表： `(@v1.4) pkg> registry add General`
     - 将无法在旧 Julia 版本中更新注册表
 
 ### 为什么有些包还是从原地址下载？
@@ -142,7 +142,7 @@ Pkg.add(PackageSpec(url="https://github.com/FluxML/Flux.jl.git"))
 [PyCall.jl](https://github.com/JuliaPy/PyCall.jl) 的文档。
 `Conda.jl` 的加速分为两部分：
 
--   `conda` 的安装：如果系统中没有找到 `conda`
+- `conda` 的安装：如果系统中没有找到 `conda`
     的话，`Conda.jl` 会下载并安装一份 `miniconda`。
     如果这一步下载非常缓慢的话，你可以提前从其他镜像站
     （如 [BFSU 镜像站](https://mirrors.bfsu.edu.cn/help/anaconda/)）
@@ -151,6 +151,6 @@ Pkg.add(PackageSpec(url="https://github.com/FluxML/Flux.jl.git"))
     所使用的 `conda`，这样就避免重复下载 miniconda.
     （`$HOME/anaconda3` 是 anaconda3 的默认安装位置，
     你可能需要根据具体情况进行调整。）
--   `conda add` 等操作的加速：类似的，这个只需要配置
+- `conda add` 等操作的加速：类似的，这个只需要配置
     anaconda 镜像源即可，即修改 `~/.condarc` 文件。
     具体的配置可以查看镜像站中 anaconda 镜像的使用说明。

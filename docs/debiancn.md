@@ -2,7 +2,7 @@
 
 ## 地址
 
--   <https://mirrors.ustc.edu.cn/debiancn/>
+- <https://mirrors.ustc.edu.cn/debiancn/>
 
 ## 说明
 
@@ -18,9 +18,9 @@ Debian 用户使用的补充软件。
 
 ## 收录版本
 
--   buster
--   bullseye
--   bookworm
+- buster
+- bullseye
+- bookworm
 
 目前暂无专用于 testing 和 sid 的仓库。
 

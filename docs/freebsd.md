@@ -18,11 +18,11 @@ FreeBSD 支持的所有正式版本
 
 ## 使用说明
 
--   ISO 镜像位于
+- ISO 镜像位于
     [/releases/ISO-IMAGES](http://mirrors.ustc.edu.cn/freebsd/releases/ISO-IMAGES)
--   虚拟机模板位于
+- 虚拟机模板位于
     [/releases/VM-IMAGES](http://mirrors.ustc.edu.cn/freebsd/releases/VM-IMAGES)
--   文档及资料位于 [/doc](http://mirrors.ustc.edu.cn/freebsd/doc)
+- 文档及资料位于 [/doc](http://mirrors.ustc.edu.cn/freebsd/doc)
 
 !!! warning
 
@@ -30,8 +30,8 @@ FreeBSD 支持的所有正式版本
 
 ## 相关镜像
 
--   [freebsd-pkg](freebsd-pkg.md)
--   [freebsd-ports](freebsd-ports.md)
+- [freebsd-pkg](freebsd-pkg.md)
+- [freebsd-ports](freebsd-ports.md)
 
 ## 相关链接
 

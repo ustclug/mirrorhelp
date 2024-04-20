@@ -23,17 +23,17 @@ Docker Hub 镜像缓存
 
     本文档结尾提供了搭建本地镜像缓存的方式，以供参考。
 
--   *2020-04-??* Docker Hub 镜像缓存的访问会被 302 重定向至其他国内
+- *2020-04-??* Docker Hub 镜像缓存的访问会被 302 重定向至其他国内
     Docker Hub 镜像源。
--   *2020-08-16* Google Container Registry 的镜像缓存的访问会被 302
+- *2020-08-16* Google Container Registry 的镜像缓存的访问会被 302
     重定向至阿里云提供的公开镜像服务（包含了部分 gcr.io
     上存在的容器镜像）；Quay Container Registry 的镜像缓存的访问会被 302
     重定向至源站。
--   *2020-08-21* 考虑到 gcr
+- *2020-08-21* 考虑到 gcr
     镜像重定向至阿里云提供的公开镜像服务可能存在的安全隐患（见
     [mirrorhelp#158](https://github.com/ustclug/mirrorhelp/issues/158)），目前校外对
     gcr 镜像的访问返回 403。
--   *2022-08-24* 由于获悉阿里云的 Docker Hub 镜像不再更新，目前校外对
+- *2022-08-24* 由于获悉阿里云的 Docker Hub 镜像不再更新，目前校外对
     Docker Hub 镜像的访问返回 403。用户需要修改配置，选择其他国内的
     Docker Hub 镜像源。
 
@@ -58,18 +58,18 @@ Docker Hub 镜像缓存
 
 旧版本：
 
-1.  打开 "Docker.app"
-2.  进入偏好设置页面（快捷键 `⌘,`）
-3.  打开 "Daemon" 选项卡
-4.  在 "Registry mirrors" 中添加 `https://docker.mirrors.ustc.edu.cn/`
-5.  点击下方的 "Apply & Restart" 按钮
+1. 打开 "Docker.app"
+2. 进入偏好设置页面（快捷键 `⌘,`）
+3. 打开 "Daemon" 选项卡
+4. 在 "Registry mirrors" 中添加 `https://docker.mirrors.ustc.edu.cn/`
+5. 点击下方的 "Apply & Restart" 按钮
 
 新版本：
 
-1.  打开 "Docker.app"
-2.  进入偏好设置页面（快捷键 `⌘,`）
-3.  打开 "Docker Engine" 选项卡
-4.  参考 Linux 中 "使用 systemd 系统" 的配置，在 JSON 配置中添加
+1. 打开 "Docker.app"
+2. 进入偏好设置页面（快捷键 `⌘,`）
+3. 打开 "Docker Engine" 选项卡
+4. 参考 Linux 中 "使用 systemd 系统" 的配置，在 JSON 配置中添加
     `"registry-mirrors"` 一项。
 
 ### Windows

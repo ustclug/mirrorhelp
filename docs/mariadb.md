@@ -34,13 +34,13 @@ unreachable"，将源地址中的 `mirrors.ustc.edu.cn` 替换为
 
 ### Mint, Ubuntu, Debian
 
-1.  使用 [MariaDB Repository Configuration
+1. 使用 [MariaDB Repository Configuration
     Tool](https://downloads.mariadb.org/mariadb/repositories)
     生成要执行的命令（Mirror 选择 Babylon Network - NL）
-2.  将 `add-apt-repository` 命令中的
+2. 将 `add-apt-repository` 命令中的
     `http://nl.mirror.babylon.network` 替换为
     `https://mirrors.ustc.edu.cn`
-3.  执行命令
+3. 执行命令
 
 ## 相关链接
 

@@ -63,11 +63,11 @@ Homebrew 源代码仓库
 
 ## 相关镜像
 
--   [homebrew-bottles](homebrew-bottles.md)
--   [homebrew-core.git](homebrew-core.git.md)
--   [homebrew-cask.git](homebrew-cask.git.md)
--   [homebrew-cask-versions.git](homebrew-cask-versions.git.md)
--   [homebrew-services.git](homebrew-services.git.md)
+- [homebrew-bottles](homebrew-bottles.md)
+- [homebrew-core.git](homebrew-core.git.md)
+- [homebrew-cask.git](homebrew-cask.git.md)
+- [homebrew-cask-versions.git](homebrew-cask-versions.git.md)
+- [homebrew-services.git](homebrew-services.git.md)
 
 ## 相关链接
 

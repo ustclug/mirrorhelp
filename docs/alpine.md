@@ -10,10 +10,10 @@ Alpine Linux 软件源
 
 ## 收录架构
 
--   aarch64
--   armhf
--   x86
--   x86_64
+- aarch64
+- armhf
+- x86
+- x86_64
 
 ## 使用说明
 
