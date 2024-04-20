@@ -16,14 +16,10 @@ Stable, Testing, Unstable
 
 i686, x86_64, AArch64
 
-:::: tip
-::: title
-Tip
-:::
+!!! tip
 
-目前 AArch64 (ARM) 架构的 manjaro 源位于主源，manjaro-arm
-镜像上游已不再更新。
-::::
+    目前 AArch64 (ARM) 架构的 manjaro 源位于主源，manjaro-arm
+    镜像上游已不再更新。
 
 ## 使用说明
 

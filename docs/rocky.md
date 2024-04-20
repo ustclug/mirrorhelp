@@ -18,13 +18,9 @@ x86_64, aarch64
 
 ## 使用说明
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-操作前请做好相应备份。
-::::
+    操作前请做好相应备份。
 
 对于 Rocky Linux 8，使用以下命令替换默认的配置
 

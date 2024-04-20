@@ -18,13 +18,9 @@ Proxmox 软件源
 
 ## 使用说明
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-操作前请做好相应备份
-::::
+    操作前请做好相应备份
 
 ### Debian，Proxmox
 

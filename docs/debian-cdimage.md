@@ -24,13 +24,9 @@
 -   供 OpenStack 使用的 raw 镜像和 qcow2 镜像 `openstack`
 -   非正式发行架构（debian-ports）的安装镜像 `ports`
 
-:::: tip
-::: title
-Tip
-:::
+!!! tip
 
-为节约服务器资源，我们不同步每日构建镜像。
-::::
+    为节约服务器资源，我们不同步每日构建镜像。
 
 ## 使用说明
 

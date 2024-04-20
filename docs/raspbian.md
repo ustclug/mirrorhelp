@@ -21,13 +21,9 @@ armhf
 
 ## 使用说明
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-操作前请做好相应备份
-::::
+    操作前请做好相应备份
 
 将 `/etc/apt/sources.list`{.interpreted-text role="file"}
 文件中默认的源地址 `http://raspbian.raspberrypi.org/` 替换为

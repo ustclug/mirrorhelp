@@ -18,13 +18,9 @@ Trisquel 支持的所有架构.
 
 ## 使用说明
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-操作前请做好相应备份.
-::::
+    操作前请做好相应备份.
 
 Trisquel 使用 APT 软件包管理系统，故其软件源使用方法与 Ubuntu 或 Debian
 等很相似。

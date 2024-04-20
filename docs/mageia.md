@@ -1,14 +1,10 @@
 # Mageia
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-Mageia 源于 2018 年 11 月起转为反向代理服务（详见 [mageia
-镜像变更通知](https://servers.ustclug.org/2018/11/mageia-mirror-change/)），并于
-2022 年 1 月改为重定向至 BFSU。
-::::
+    Mageia 源于 2018 年 11 月起转为反向代理服务（详见 [mageia
+    镜像变更通知](https://servers.ustclug.org/2018/11/mageia-mirror-change/)），并于
+    2022 年 1 月改为重定向至 BFSU。
 
 ## 地址
 
@@ -68,15 +64,11 @@ dnf 在默认情况下已经被预装，如果你发现并没有，可以使用 
 
     baseurl=https://mirrors.ustc.edu.cn/mageia/
 
-:::: tip
-::: title
-Tip
-:::
+!!! tip
 
-为了让 dnf
-能在中科大软件源出现问题时，自动切换至其它后备软件源，我们不建议你注释掉
-mirrorlist 行。
-::::
+    为了让 dnf
+    能在中科大软件源出现问题时，自动切换至其它后备软件源，我们不建议你注释掉
+    mirrorlist 行。
 
 为了避免 dnf 和 urpmi
 启用的软件仓库不一致，在保存之前，还需要额外进行检查，查看 urpmi

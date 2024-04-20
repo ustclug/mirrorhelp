@@ -15,14 +15,10 @@ Homebrew cask 其他版本 (alternative versions)
 
     brew tap --custom-remote --force-auto-update homebrew/cask-versions https://mirrors.ustc.edu.cn/homebrew-cask-versions.git
 
-:::: note
-::: title
-Note
-:::
+!!! note
 
-若出现 `Error: invalid option: --custom-remote` 错误，请先运行
-`brew update` 将 `brew` 更新至 3.2.17 或以上版本。
-::::
+    若出现 `Error: invalid option: --custom-remote` 错误，请先运行
+    `brew update` 将 `brew` 更新至 3.2.17 或以上版本。
 
 重置为官方地址：
 

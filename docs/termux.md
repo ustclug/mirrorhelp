@@ -33,14 +33,10 @@ role="file"} 为如下内容
 注：Termux 会自动将环境变量 `$PREFIX` 设定为
 `/data/data/com.termux/files/usr`{.interpreted-text role="file"}
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-Google Play 上的 Termux 已被弃用，如安装会产生兼容性问题。请通过 GitHub
-或 F-Droid 来安装 Termux。
-::::
+    Google Play 上的 Termux 已被弃用，如安装会产生兼容性问题。请通过 GitHub
+    或 F-Droid 来安装 Termux。
 
 ## 相关链接
 

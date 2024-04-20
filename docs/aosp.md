@@ -30,13 +30,9 @@ checksum。*\*
 
 ### 初始同步方法 2（不推荐）
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-由于 AOSP 镜像造成的 IO 负载很高，不建议使用以下方式初次同步。
-::::
+    由于 AOSP 镜像造成的 IO 负载很高，不建议使用以下方式初次同步。
 
 按照 [Google
 官方教程](https://source.android.com/source/downloading.html)

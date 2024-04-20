@@ -18,13 +18,9 @@ x86_64
 
 ## 使用说明
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-操作前请做好相应备份。
-::::
+    操作前请做好相应备份。
 
 用以下命令替换 `/etc/yum.repos.d`{.interpreted-text role="file"}
 下的文件
@@ -37,46 +33,42 @@ Warning
              /etc/yum.repos.d/fedora-updates.repo \
              /etc/yum.repos.d/fedora-updates-modular.repo
 
-:::: note
-::: title
-Note
-:::
+!!! note
 
-Fedora 39 起 modular 仓库已经不复存在（详见
-[https://fedoraproject.org/wiki/Changes/RetireModularity\\](https://fedoraproject.org/wiki/Changes/RetireModularity\)
-）。 因此 Fedora 39 及以上的版本不需要修改
-`fedora-modular.repo`{.interpreted-text role="file"} 和
-`fedora-updates-modular.repo`{.interpreted-text role="file"}。
-::::
+    Fedora 39 起 modular 仓库已经不复存在（详见
+    [https://fedoraproject.org/wiki/Changes/RetireModularity\\](https://fedoraproject.org/wiki/Changes/RetireModularity\)
+    ）。 因此 Fedora 39 及以上的版本不需要修改
+    `fedora-modular.repo`{.interpreted-text role="file"} 和
+    `fedora-updates-modular.repo`{.interpreted-text role="file"}。
 
 或者直接复制以下文件：
 
 `/etc/yum.repos.d/fedora.repo`{.interpreted-text role="file"} 文件：
 
-::: literalinclude
-includes/fedora.repo
-:::
+```
+--8<-- "fedora.repo"
+```
 
 `/etc/yum.repos.d/fedora-updates.repo`{.interpreted-text role="file"}
 文件：
 
-::: literalinclude
-includes/fedora-updates.repo
-:::
+```
+--8<-- "fedora-updates.repo"
+```
 
 `/etc/yum.repos.d/fedora-modular.repo`{.interpreted-text role="file"}
 文件：
 
-::: literalinclude
-includes/fedora-modular.repo
-:::
+```
+--8<-- "fedora-modular.repo"
+```
 
 `/etc/yum.repos.d/fedora-updates-modular.repo`{.interpreted-text
 role="file"} 文件：
 
-::: literalinclude
-includes/fedora-updates-modular.repo
-:::
+```
+--8<-- "fedora-updates-modular.repo"
+```
 
 最后运行 `sudo dnf makecache` 生成缓存。
 

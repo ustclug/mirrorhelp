@@ -1,12 +1,8 @@
 # Anaconda
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-由于合规性，Anaconda 源目前已经无限期停止服务。
-::::
+    由于合规性，Anaconda 源目前已经无限期停止服务。
 
 ## 地址
 

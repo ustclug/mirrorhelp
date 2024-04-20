@@ -15,39 +15,31 @@ Homebrew 源代码仓库
     export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
     brew update
 
-:::: note
-::: title
-Note
-:::
+!!! note
 
-若用户设置了环境变量 `HOMEBREW_BREW_GIT_REMOTE`，则每次运行
-`brew update` 时将会自动设置远程。 推荐用户将环境变量
-`HOMEBREW_BREW_GIT_REMOTE` 加入 shell 的 profile 设置中。
+    若用户设置了环境变量 `HOMEBREW_BREW_GIT_REMOTE`，则每次运行
+    `brew update` 时将会自动设置远程。 推荐用户将环境变量
+    `HOMEBREW_BREW_GIT_REMOTE` 加入 shell 的 profile 设置中。
 
-    # 对于 bash 用户
-    echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"' >> ~/.bash_profile
+        # 对于 bash 用户
+        echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"' >> ~/.bash_profile
 
-    # 对于 zsh 用户
-    echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"' >> ~/.zshrc
-::::
+        # 对于 zsh 用户
+        echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"' >> ~/.zshrc
 
 重置为官方地址：
 
     unset HOMEBREW_BREW_GIT_REMOTE
     git -C "$(brew --repo)" remote set-url origin https://github.com/Homebrew/brew
 
-:::: note
-::: title
-Note
-:::
+!!! note
 
-重置回默认远程后，用户应该删除 shell 的 profile 设置中的环境变量
-`HOMEBREW_BREW_GIT_REMOTE` 以免运行 `brew update` 时远程再次被更换。
+    重置回默认远程后，用户应该删除 shell 的 profile 设置中的环境变量
+    `HOMEBREW_BREW_GIT_REMOTE` 以免运行 `brew update` 时远程再次被更换。
 
-若之前使用的 `git config url.<URL>.insteadOf URL`
-的方式设置的镜像，请手动删除 `config` 文件（一般为 `~/.gitconfig`
-或仓库目录下的 `.git/config`）中的对应字段。
-::::
+    若之前使用的 `git config url.<URL>.insteadOf URL`
+    的方式设置的镜像，请手动删除 `config` 文件（一般为 `~/.gitconfig`
+    或仓库目录下的 `.git/config`）中的对应字段。
 
 ## 使用科大源安装 Homebrew / Linuxbrew
 
@@ -62,16 +54,12 @@ Note
 
     /bin/bash -c "$(curl -fsSL https://github.com/Homebrew/install/raw/HEAD/install.sh)"
 
-:::: note
-::: title
-Note
-:::
+!!! note
 
-初次安装 Homebrew / Linuxbrew 时，如果无法下载安装脚本，
-可以使用我们每日同步的安装脚本文件。
+    初次安装 Homebrew / Linuxbrew 时，如果无法下载安装脚本，
+    可以使用我们每日同步的安装脚本文件。
 
-    /bin/bash -c "$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)"
-::::
+        /bin/bash -c "$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)"
 
 ## 相关镜像
 

@@ -30,14 +30,10 @@ Ubuntu 曾经发布过的所有版本
 更改完 `sources.list`{.interpreted-text role="file"} 文件后请运行
 `sudo apt-get update` 更新索引以生效。
 
-:::: tip
-::: title
-Tip
-:::
+!!! tip
 
-使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装
-`apt-transport-https`
-::::
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装
+    `apt-transport-https`
 
 ### 镜像
 

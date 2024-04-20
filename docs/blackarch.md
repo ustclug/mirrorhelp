@@ -29,14 +29,10 @@ i686, x86_64, ARM 相关（目前包含 armv6h/armv7h/aarch64）
 
 然后请安装 `blackarch-keyring` 包以导入 GPG key。
 
-:::: tip
-::: title
-Tip
-:::
+!!! tip
 
-Black Arch 软件源仅包含其打包的工具等软件。如果需要更换 Arch Linux
-基础系统的软件源，请查看 `archlinux`{.interpreted-text role="doc"}。
-::::
+    Black Arch 软件源仅包含其打包的工具等软件。如果需要更换 Arch Linux
+    基础系统的软件源，请查看 `archlinux`{.interpreted-text role="doc"}。
 
 ## 相关链接
 

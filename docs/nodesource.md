@@ -1,13 +1,9 @@
 # Nodesource
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-由于上游原因，nodesource 仓库的同步无限期停止。我们建议选择使用 nvm 或 n
-来管理系统中的 Node.js 环境。详见 `node`{.interpreted-text role="doc"}。
-::::
+    由于上游原因，nodesource 仓库的同步无限期停止。我们建议选择使用 nvm 或 n
+    来管理系统中的 Node.js 环境。详见 `node`{.interpreted-text role="doc"}。
 
 ## 地址
 

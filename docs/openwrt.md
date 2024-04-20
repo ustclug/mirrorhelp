@@ -12,24 +12,16 @@ OpenWRT/LEDE 下载站镜像。
 与预发布版本（RC）以外的完整镜像，内容包括官方支持的平台的 ROM、SDK
 及工具链、软件仓库镜像等。
 
-:::: tip
-::: title
-Tip
-:::
+!!! tip
 
-访问 snapshots 与 RC
-版本内容会重定向至反向代理，如果需要下载相关文件，务必使用
-HTTPS，否则连接可能会被中断。
-::::
+    访问 snapshots 与 RC
+    版本内容会重定向至反向代理，如果需要下载相关文件，务必使用
+    HTTPS，否则连接可能会被中断。
 
-:::: tip
-::: title
-Tip
-:::
+!!! tip
 
-访问 <https://mirrors.ustc.edu.cn/lede/> 会被自动重定向到
-<https://mirrors.ustc.edu.cn/openwrt/>。
-::::
+    访问 <https://mirrors.ustc.edu.cn/lede/> 会被自动重定向到
+    <https://mirrors.ustc.edu.cn/openwrt/>。
 
 ## 使用说明
 
@@ -44,14 +36,10 @@ Tip
 
 之后运行 [opkg update]{.title-ref} 更新软件索引，注意检查是否出现错误。
 
-:::: tip
-::: title
-Tip
-:::
+!!! tip
 
-使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要另行安装
-`libustream-openssl ca-bundle ca-certificates` 。
-::::
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要另行安装
+    `libustream-openssl ca-bundle ca-certificates` 。
 
 ## 相关链接
 

@@ -23,19 +23,15 @@ amd64, armel, armhf, i386
 更改完 `sources.list`{.interpreted-text role="file"} 文件后请运行
 `sudo apt-get update` 更新索引以生效。
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-由于 Kali 仓库未使用 by-hash
-机制，同步时的一致性无法保证。如果在同步时执行
-`apt update`，可能会看到以下错误
+    由于 Kali 仓库未使用 by-hash
+    机制，同步时的一致性无法保证。如果在同步时执行
+    `apt update`，可能会看到以下错误
 
-    E: 无法下载 https://mirrors.ustc.edu.cn/kali/dists/kali-rolling/main/source/Sources.gz 文件尺寸不符(14593053 != 14592993)。您使用的镜像正在同步中？
+        E: 无法下载 https://mirrors.ustc.edu.cn/kali/dists/kali-rolling/main/source/Sources.gz 文件尺寸不符(14593053 != 14592993)。您使用的镜像正在同步中？
 
-如果出现以上错误，则需等待同步完成后再执行 `apt update`。
-::::
+    如果出现以上错误，则需等待同步完成后再执行 `apt update`。
 
 ## 相关链接
 

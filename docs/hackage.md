@@ -80,24 +80,16 @@ Hackage 镜像
       url: https://mirrors.ustc.edu.cn/hackage/
       secure: True
 
-:::: note
-::: title
-Note
-:::
+!!! note
 
-首次 `cabal update` 时会提示
-`Warning: No mirrors found for http://mirrors.ustc.edu.cn/hackage/`，
-该警告可忽略。
-::::
+    首次 `cabal update` 时会提示
+    `Warning: No mirrors found for http://mirrors.ustc.edu.cn/hackage/`，
+    该警告可忽略。
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-为了保证与老版本 cabal 的兼容性， `secure` 值设置为 `False` 可能导致
-cabal 无法获取到最新的包信息。
-::::
+    为了保证与老版本 cabal 的兼容性， `secure` 值设置为 `False` 可能导致
+    cabal 无法获取到最新的包信息。
 
 ### Cabal \< 1.24
 

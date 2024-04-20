@@ -40,14 +40,10 @@ FreeBSD pkg 包管理器的官方源配置是
 
 修改配置后，运行 `pkg update -f` 更新索引。
 
-:::: tip
-::: title
-Tip
-:::
+!!! tip
 
-使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装
-`security/ca_root_nss` 软件包。
-::::
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装
+    `security/ca_root_nss` 软件包。
 
 ## 相关链接
 

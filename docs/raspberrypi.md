@@ -33,13 +33,9 @@ role="doc"}，旧版为 archive.raspbian.org）一起使用。
 
 ## 使用说明
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-操作前请做好相应备份
-::::
+    操作前请做好相应备份
 
 一般情况下，将 `/etc/apt/sources.list.d/raspi.list`{.interpreted-text
 role="file"} 文件中默认的源地址
@@ -65,14 +61,10 @@ role="file"} 文件中默认的源地址
 更改完 `raspi.list`{.interpreted-text role="file"} 文件后请运行
 `sudo apt-get update` 更新索引以生效。
 
-:::: tip
-::: title
-Tip
-:::
+!!! tip
 
-使用 HTTPS 可以有效避免国内运营商的缓存劫持，但 Stretch
-及老版本系统需要事先安装 `apt-transport-https`。
-::::
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但 Stretch
+    及老版本系统需要事先安装 `apt-transport-https`。
 
 ## 相关链接
 

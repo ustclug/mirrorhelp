@@ -23,13 +23,9 @@ arm64, armhf, PowerPC, ppc64el, s390x
 
 ### 手动更改配置文件
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-操作前请做好相应备份
-::::
+    操作前请做好相应备份
 
 在 `/etc/apt/sources.list`{.interpreted-text role="file"}
 文件中，将软件源的地址改为 `http://mirrors.ustc.edu.cn/ubuntu-ports`
@@ -53,14 +49,10 @@ Warning
 更改完 `sources.list`{.interpreted-text role="file"} 文件后请运行
 `sudo apt-get update` 更新索引以生效。
 
-:::: tip
-::: title
-Tip
-:::
+!!! tip
 
-使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装
-`apt-transport-https`
-::::
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装
+    `apt-transport-https`
 
 ### 镜像下载
 

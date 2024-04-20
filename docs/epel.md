@@ -22,21 +22,13 @@ Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux
 
 ## 使用说明
 
-:::: note
-::: title
-Note
-:::
+!!! note
 
-本镜像不包含 EPEL Cisco OpenH264 仓库。
-::::
+    本镜像不包含 EPEL Cisco OpenH264 仓库。
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-操作前请做好相应备份。
-::::
+    操作前请做好相应备份。
 
 执行以下命令：
 

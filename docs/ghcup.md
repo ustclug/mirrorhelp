@@ -13,16 +13,12 @@ Stackage 源使用。
 
 参考如下步骤可安装完整的 Haskell 工具链。
 
-:::: note
-::: title
-Note
-:::
+!!! note
 
-以下命令会安装并配置 GHCup 0.0.7 版本的元数据。 可查看
-<https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/>
-目录的内容，并选择需要安装的 GHCup 版本的 yaml 文件替换以下命令中的
-URL。
-::::
+    以下命令会安装并配置 GHCup 0.0.7 版本的元数据。 可查看
+    <https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/>
+    目录的内容，并选择需要安装的 GHCup 版本的 yaml 文件替换以下命令中的
+    URL。
 
 **第一步（可选）** ：使用科大源安装 GHCup 本体。如已经安装
 GHCup，可跳到下一步。
@@ -44,15 +40,11 @@ GHCup，可跳到下一步。
 `hackage`{.interpreted-text role="doc"} 和 `stackage`{.interpreted-text
 role="doc"} 。
 
-:::: warning
-::: title
-Warning
-:::
+!!! warning
 
-科大 GHCup 源仅支持较新的 GHCup 版本（元数据格式版本仅支持 0.0.6
-及以上）。如果你使用的 GHCup 版本比较旧，请参考上述步骤安装新版本
-GHCup。
-::::
+    科大 GHCup 源仅支持较新的 GHCup 版本（元数据格式版本仅支持 0.0.6
+    及以上）。如果你使用的 GHCup 版本比较旧，请参考上述步骤安装新版本
+    GHCup。
 
 ## 预发布版本
 
