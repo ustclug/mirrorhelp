@@ -14,8 +14,7 @@
 
 ### 同步专用域名
 
-如需使用 `rsync` 协议访问科大开源镜像站，请使用 `rsync` 专用的域名：
-`rsync.mirrors.ustc.edu.cn` 。
+如需使用 `rsync` 协议访问科大开源镜像站，请使用 `rsync` 专用的域名：`rsync.mirrors.ustc.edu.cn`。
 
 !!! warning
 
@@ -32,7 +31,10 @@
     我们强烈推荐用户在实际进行 `rsync` 同步之前先使用 `rsync`
     工具列出目录内容以实际观察目录结构。例如，用户可以使用如下命令列出
     `ubuntu` 仓库根目录的具体内容：
-    `rsync rsync://rsync.mirrors.ustc.edu.cn/ubuntu/` 。
+
+    ```shell
+    rsync rsync://rsync.mirrors.ustc.edu.cn/ubuntu/
+    ```
 
 ### 可同步内容
 

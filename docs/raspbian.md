@@ -58,8 +58,7 @@ OS，可以直接使用 arm64 Debian 的源（以 Bullseye 示例）：
 
 编辑此文件后，请使用 `sudo apt-get update` 命令，更新软件索引。
 
-同时也可能需要更改 archive.raspberrypi.org 源，请参考
-`raspberrypi` 。
+同时也可能需要更改 archive.raspberrypi.org 源，请参考 `raspberrypi`。
 
 ## 相关链接
 

@@ -74,8 +74,7 @@ alias（别称），可以根据个人喜好更改。
     会按照 IP
     地理位置中转下载请求到附近的镜像服务器（但刷新软件源时仍从中央服务器获取
     元数据），所以更改软件源通常只会加快刷新软件源的速度，而对下载速度影响不大。
-    参见 [openSUSE 中文论坛](https://forum.suse.org.cn/t/opensuse/1759)
-    。
+    参见 [openSUSE 中文论坛](https://forum.suse.org.cn/t/opensuse/1759)。
 -   我们不提供 source 和 debug 源。
 -   Tumbleweed 滚动发行版软件源的地址与上述例子稍有不同。
 

@@ -38,8 +38,7 @@ OpenWRT/LEDE 下载站镜像。
 
 !!! tip
 
-    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要另行安装
-    `libustream-openssl ca-bundle ca-certificates` 。
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要另行安装 `libustream-openssl ca-bundle ca-certificates`。
 
 ## 相关链接
 

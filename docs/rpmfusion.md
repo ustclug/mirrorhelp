@@ -31,7 +31,7 @@ RPM Fusion 是为 Fedora/RHEL 提供额外 RPM 软件包的第三方软件源。
     sudo yum localinstall --nogpgcheck https://mirrors.ustc.edu.cn/rpmfusion/free/el/rpmfusion-free-release-7.noarch.rpm https://mirrors.ustc.edu.cn/rpmfusion/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
     ```
 
-如果 `sudo` 不可用，你可以把以上命令中的 `sudo` 替换成 `su -c` 。
+如果 `sudo` 不可用，你可以把以上命令中的 `sudo` 替换成 `su -c`。
 
 ## 备注
 

@@ -76,21 +76,18 @@ AMD64 (x86_64), Intel x86
     # deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
     # deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
 
-更改完 `sources.list` 文件后请运行
-`sudo apt-get update` 更新索引以生效。
+更改完 `sources.list` 文件后请运行 `sudo apt-get update` 更新索引以生效。
 
 !!! tip
 
     如要用于其他版本，把 jammy 换成其他版本代号即可:
     22.04：`jammy`；20.04：`focal`；18.04：`bionic`；16.04：`xenial`；14.04：`trusty`。
 
-另外，也可以使用 snullp 大叔开发的
-[配置生成器](https://mirrors.ustc.edu.cn/repogen) 。
+另外，也可以使用 snullp 大叔开发的[配置生成器](https://mirrors.ustc.edu.cn/repogen)。
 
 ### 镜像下载
 
-如果需要下载 Ubuntu 的 ISO 镜像以便安装，请参考
-`ubuntu-releases`
+如果需要下载 Ubuntu 的 ISO 镜像以便安装，请参考 [ubuntu-releases](ubuntu-releases.md)。
 
 ## 相关链接
 

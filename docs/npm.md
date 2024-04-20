@@ -4,7 +4,7 @@
 
 ## 使用说明
 
-编辑 `~/.npmrc` ，添加
+编辑 `~/.npmrc`，添加
 
     registry=https://npmreg.proxy.ustclug.org/
 
