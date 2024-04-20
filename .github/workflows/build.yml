@@ -17,6 +17,14 @@ jobs:
       - name: Install dependencies
         run: |
           pip3 install -r requirements.txt
+      - name: "Linting: autocorrect"
+        run: |
+          curl -sSL https://raw.githubusercontent.com/huacnlee/autocorrect/main/install | sh
+          autocorrect --lint
+      - name: "Linting: markdownlint"
+        uses: DavidAnson/markdownlint-cli2-action@v15
+        with:
+          globs: docs/**/*.md
       - name: Build documentation
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
