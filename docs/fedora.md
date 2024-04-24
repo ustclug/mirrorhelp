@@ -25,13 +25,15 @@ x86_64
 用以下命令替换 `/etc/yum.repos.d`
 下的文件
 
-    sudo sed -e 's|^metalink=|#metalink=|g' \
-             -e 's|^#baseurl=http://download.example/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g' \
-             -i.bak \
-             /etc/yum.repos.d/fedora.repo \
-             /etc/yum.repos.d/fedora-modular.repo \
-             /etc/yum.repos.d/fedora-updates.repo \
-             /etc/yum.repos.d/fedora-updates-modular.repo
+```shell
+sudo sed -e 's|^metalink=|#metalink=|g' \
+         -e 's|^#baseurl=http://download.example/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g' \
+         -i.bak \
+         /etc/yum.repos.d/fedora.repo \
+         /etc/yum.repos.d/fedora-modular.repo \
+         /etc/yum.repos.d/fedora-updates.repo \
+         /etc/yum.repos.d/fedora-updates-modular.repo
+```
 
 !!! note
 
@@ -42,30 +44,19 @@ x86_64
 
 或者直接复制以下文件：
 
-`/etc/yum.repos.d/fedora.repo` 文件：
-
-```ini
+```ini title="/etc/yum.repos.d/fedora.repo"
 --8<-- "fedora.repo"
 ```
 
-`/etc/yum.repos.d/fedora-updates.repo`
-文件：
-
-```ini
+```ini title="/etc/yum.repos.d/fedora-updates.repo"
 --8<-- "fedora-updates.repo"
 ```
 
-`/etc/yum.repos.d/fedora-modular.repo`
-文件：
-
-```ini
+```ini title="/etc/yum.repos.d/fedora-modular.repo"
 --8<-- "fedora-modular.repo"
 ```
 
-`/etc/yum.repos.d/fedora-updates-modular.repo`
- 文件：
-
-```ini
+```ini title="/etc/yum.repos.d/fedora-updates-modular.repo"
 --8<-- "fedora-updates-modular.repo"
 ```
 
