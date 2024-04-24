@@ -93,6 +93,8 @@ extra:
       codename: buster
       proxmox_version: 6
   ubuntu_releases:
+    - version: 24.04
+      codename: noble
     - version: 22.04
       codename: jammy
     - version: 20.04
