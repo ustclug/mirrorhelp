@@ -77,9 +77,17 @@ Ubuntu 软件源
 
     使用 HTTPS 可以有效避免国内运营商的缓存劫持。可以运行以下命令替换：
 
-    ```shell
-    sudo sed -i 's/http:/https:/g' /etc/apt/sources.list
-    ```
+    - 传统格式
+
+        ```shell
+        sudo sed -i 's/http:/https:/g' /etc/apt/sources.list
+        ```
+    
+    - DEB822 格式
+
+        ```shell
+        sudo sed -i 's/http:/https:/g' /etc/apt/sources.list.d/ubuntu.sources
+        ```
 
 当然也可以直接编辑 APT 源文件（需要使用 sudo）。以下是参考配置内容，**同时修改了软件源与安全更新源**：
 
