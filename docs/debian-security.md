@@ -86,9 +86,9 @@ Debian Old Old Stable, Old Stable, Stable
         Components: {{ debian_components }}
         ```
 
-        如果需要使用源码仓库，可以在 `Types` 中添加 `deb-src`。
+        如果需要使用源码仓库，可以在 Types 中添加 `deb-src`。
 
-        如果需要使用 backports 软件源，可以在 `Suites` 中添加 `{{ release.codename }}-backports`。
+        如果需要使用 backports 软件源，可以在 Suites 中添加 `{{ release.codename }}-backports`。
 
 {% endfor %}
 
