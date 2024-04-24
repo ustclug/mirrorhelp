@@ -85,11 +85,13 @@ Debian Old Old Stable, Old Stable, Stable, Testing, Unstable (sid)
         URIs: https://mirrors.ustc.edu.cn/debian
         Suites: {{ release.codename }} {{ release.codename }}-updates
         Components: {{ debian_components }}
+        Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
         Types: deb
         URIs: https://mirrors.ustc.edu.cn/debian-security
         Suites: {{ debian_security }}
         Components: {{ debian_components }}
+        Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
         ```
 
         !!! warning "以上 DEB822 格式的参考配置包含了对 debian-security 源的修改"

@@ -84,6 +84,7 @@ Debian Old Old Stable, Old Stable, Stable
         URIs: https://mirrors.ustc.edu.cn/debian-security
         Suites: {{ debian_security }}
         Components: {{ debian_components }}
+        Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
         ```
 
         如果需要使用源码仓库，可以在 Types 中添加 `deb-src`。

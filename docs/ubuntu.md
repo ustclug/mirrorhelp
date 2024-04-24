@@ -122,11 +122,13 @@ Ubuntu 软件源
         URIs: https://mirrors.ustc.edu.cn/ubuntu
         Suites: {{ release.codename }} {{ release.codename }}-updates {{ release.codename }}-backports
         Components: main restricted universe multiverse
+        Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 
         Types: deb
         URIs: https://mirrors.ustc.edu.cn/ubuntu
         Suites: {{ release.codename }}-security
         Components: main restricted universe multiverse
+        Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
         ```
 
         如果需要使用源码仓库，可以在 Types 中添加 `deb-src`。
