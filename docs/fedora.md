@@ -22,43 +22,63 @@ x86_64
 
     操作前请做好相应备份。
 
-用以下命令替换 `/etc/yum.repos.d`
-下的文件
+=== "Fedora >= 39"
 
-```shell
-sudo sed -e 's|^metalink=|#metalink=|g' \
-         -e 's|^#baseurl=http://download.example/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g' \
-         -i.bak \
-         /etc/yum.repos.d/fedora.repo \
-         /etc/yum.repos.d/fedora-modular.repo \
-         /etc/yum.repos.d/fedora-updates.repo \
-         /etc/yum.repos.d/fedora-updates-modular.repo
-```
+    用以下命令替换 `/etc/yum.repos.d` 下的文件：
 
-!!! note
+    ```shell
+    sudo sed -e 's|^metalink=|#metalink=|g' \
+             -e 's|^#baseurl=http://download.example/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g' \
+             -i.bak \
+             /etc/yum.repos.d/fedora.repo \
+             /etc/yum.repos.d/fedora-updates.repo
+    ```
 
-    Fedora 39 起 modular 仓库已经不复存在（详见
-    <https://fedoraproject.org/wiki/Changes/RetireModularity>）。
-    因此 Fedora 39 及以上的版本不需要修改
-    `fedora-modular.repo` 和 `fedora-updates-modular.repo`。
+    或者直接复制以下文件：
 
-或者直接复制以下文件：
+    ```ini title="/etc/yum.repos.d/fedora.repo"
+    --8<-- "fedora.repo"
+    ```
 
-```ini title="/etc/yum.repos.d/fedora.repo"
---8<-- "fedora.repo"
-```
+    ```ini title="/etc/yum.repos.d/fedora-updates.repo"
+    --8<-- "fedora-updates.repo"
 
-```ini title="/etc/yum.repos.d/fedora-updates.repo"
---8<-- "fedora-updates.repo"
-```
+    !!! note
 
-```ini title="/etc/yum.repos.d/fedora-modular.repo"
---8<-- "fedora-modular.repo"
-```
+        Fedora 39 起 modular 仓库已经不复存在（详见 <https://fedoraproject.org/wiki/Changes/RetireModularity>）。
+        因此 Fedora 39 及以上的版本不需要修改 `fedora-modular.repo` 和 `fedora-updates-modular.repo`。
 
-```ini title="/etc/yum.repos.d/fedora-updates-modular.repo"
---8<-- "fedora-updates-modular.repo"
-```
+=== "Fedora <= 38"
+
+    用以下命令替换 `/etc/yum.repos.d` 下的文件：
+
+    ```shell
+    sudo sed -e 's|^metalink=|#metalink=|g' \
+             -e 's|^#baseurl=http://download.example/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g' \
+             -i.bak \
+             /etc/yum.repos.d/fedora.repo \
+             /etc/yum.repos.d/fedora-modular.repo \
+             /etc/yum.repos.d/fedora-updates.repo \
+             /etc/yum.repos.d/fedora-updates-modular.repo
+    ```
+
+    或者直接复制以下文件：
+
+    ```ini title="/etc/yum.repos.d/fedora.repo"
+    --8<-- "fedora.repo"
+    ```
+
+    ```ini title="/etc/yum.repos.d/fedora-updates.repo"
+    --8<-- "fedora-updates.repo"
+    ```
+
+    ```ini title="/etc/yum.repos.d/fedora-modular.repo"
+    --8<-- "fedora-modular.repo"
+    ```
+
+    ```ini title="/etc/yum.repos.d/fedora-updates-modular.repo"
+    --8<-- "fedora-updates-modular.repo"
+    ```
 
 最后运行 `sudo dnf makecache` 生成缓存。
 
