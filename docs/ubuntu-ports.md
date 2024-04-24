@@ -26,10 +26,30 @@ arm64, armhf, PowerPC, ppc64el, s390x
 
     操作前请做好相应备份
 
-在 `/etc/apt/sources.list`
-文件中，将软件源的地址改为 `http://mirrors.ustc.edu.cn/ubuntu-ports`
+在 `/etc/apt/sources.list` 或 `/etc/apt/sources.list.d/ubuntu.sources` 文件中，将软件源的地址改为 `http://mirrors.ustc.edu.cn/ubuntu-ports`。
 
-以下是参考配置内容：
+--8<-- "deb822.md"
+
+可以使用如下命令：
+
+!!! warning "安全更新源注意事项"
+
+    因镜像站同步有延迟，可能会导致生产环境系统不能及时检查、安装上最新的安全更新，**不建议替换 security 源**。
+    但是由于 Ubuntu Ports 中软件与安全更新源地址相同，因此以下提供的例子中均一并替换。
+
+- 传统格式（`/etc/apt/sources.list`）
+
+    ```shell
+    sudo sed -i 's@//ports.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list
+    ```
+
+- DEB822 格式（`/etc/apt/sources.list.d/ubuntu.sources`）
+
+    ```shell
+    sudo sed -i 's@//ports.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list.d/ubuntu.sources
+    ```
+
+以下是参考配置内容，**同时修改了软件源与安全更新源**：
 
 {% for release in ubuntu_releases %}
 === "Ubuntu {{ release.version }}"
@@ -57,26 +77,29 @@ arm64, armhf, PowerPC, ppc64el, s390x
 
     === "DEB822 格式"
 
-        ```yaml title="/etc/apt/sources.list.d/ubuntu-ports.sources"
+        ```yaml title="/etc/apt/sources.list.d/ubuntu.sources"
         Types: deb
         URIs: https://mirrors.ustc.edu.cn/ubuntu-ports
         Suites: {{ release.codename }} {{ release.codename }}-updates {{ release.codename }}-backports
         Components: main restricted universe multiverse
+
+        Types: deb
+        URIs: https://mirrors.ustc.edu.cn/ubuntu-ports
+        Suites: {{ release.codename }}-security
+        Components: main universe restricted multiverse
         ```
 
         如果需要使用源码仓库，可以在 `Types` 中添加 `deb-src`。
 
         如果需要使用预发布软件源，可以在 `Suites` 中添加 `{{ release.codename }}-proposed`。
-
-        --8<-- "deb822.md"
 {% endfor %}
 
-更改完 `sources.list` 文件后请运行 `sudo apt-get update` 更新索引以生效。
+更改后请运行 `sudo apt-get update` 更新索引以生效。
 
 !!! tip
 
     使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装
-    `apt-transport-https`
+    `apt-transport-https`。
 
 ### 镜像下载
 
