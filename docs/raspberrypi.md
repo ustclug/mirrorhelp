@@ -52,7 +52,7 @@ sudo sed \
 {% for release in debian_releases %}
 === "Raspbian {{ release.codename }}"
 
-    ```shell title="/etc/apt/sources.list.d/raspi.list"
+    ```debsources title="/etc/apt/sources.list.d/raspi.list"
     deb http://mirrors.ustc.edu.cn/raspberrypi/debian/ {{ release.codename }} main
     #deb-src http://mirrors.ustc.edu.cn/raspberrypi/debian/ {{ release.codename }} main
     ```

@@ -55,7 +55,7 @@ Arm64 架构的 Raspberry Pi OS 仍处于 beta 状态，本镜像上游亦不含
 {% endif %}
 === "Raspbian {{ release.codename }}"
 
-    ```shell title="/etc/apt/sources.list"
+    ```debsources title="/etc/apt/sources.list"
     deb https://mirrors.ustc.edu.cn/debian/ {{ release.codename }} main contrib non-free
     # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }} main contrib non-free
     deb https://mirrors.ustc.edu.cn/debian/ {{ release.codename }}-updates main contrib non-free

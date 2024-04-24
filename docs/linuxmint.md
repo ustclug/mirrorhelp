@@ -27,7 +27,7 @@ i386，amd64
 
 - 对于基于 Ubuntu 的原版，以 Linuxmint 19 为例：
 
-    ```deb
+    ```debsources
     deb https://mirrors.ustc.edu.cn/linuxmint/ tara main upstream import backport 
     deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
     deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
@@ -38,7 +38,7 @@ i386，amd64
 
 - 对于基于 Debian 的 LMDE，以 LMDE 2 为例：
 
-    ```deb
+    ```debsources
     deb https://mirrors.ustc.edu.cn/linuxmint/ betsy main upstream import
     deb https://mirrors.ustc.edu.cn/debian jessie main contrib non-free
     deb https://mirrors.ustc.edu.cn/debian jessie-updates main contrib non-free
