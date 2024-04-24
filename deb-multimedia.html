@@ -2648,7 +2648,7 @@
 <p>Deb Multimedia 支持的所有架构，如 AMD64 (x86_64), Intel x86, ARM, MIPS 等</p>
 <h2 id="_4">收录版本<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>Debian Old Stable, Stable, Testing, Unstable(sid)</p>
-<p>当前 Stable 为 Debian 12，代号为 Bookworm</p>
+<p>当前 Stable 为 Debian 12，代号为 bookworm。</p>
 <h2 id="_5">使用说明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2656,21 +2656,43 @@
 注意这不是 Debian 官方项目，而是 deb-multimedia.org 的镜像，
 与 Debian 官方的 Multimedia 小组的区别见 <a href="https://wiki.debian.org/DebianMultimedia/FAQ">https://wiki.debian.org/DebianMultimedia/FAQ</a>。</p>
 </div>
-<p>以 Bookworm 为例，在 <code>/etc/apt/sources.list</code> 中加入</p>
-<div class="highlight"><pre><span></span><code>deb http://mirrors.ustc.edu.cn/deb-multimedia/ bookworm main non-free
-# deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ bookworm main non-free
-deb http://mirrors.ustc.edu.cn/deb-multimedia/ bookworm-backports main
-# deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ bookworm-backports main
+<p>在 <code>/etc/apt/sources.list.d/deb-multimedia.list</code> 中加入</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Debian 12</label><label for="__tabbed_1_2">Debian 11</label><label for="__tabbed_1_3">Debian 10</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 默认注释了源码仓库，如有需要可自行取消注释</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>deb<span class="w"> </span>http://mirrors.ustc.edu.cn/deb-multimedia/<span class="w"> </span>bookworm<span class="w"> </span>main<span class="w"> </span>non-free
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">#deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ bookworm main non-free</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>deb<span class="w"> </span>http://mirrors.ustc.edu.cn/deb-multimedia/<span class="w"> </span>bookworm-backports<span class="w"> </span>main
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">#deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ bookworm-backports main</span>
 </code></pre></div>
-<p>更改完 <code>sources.list</code> 文件后请导入 deb-multimedia-keyring</p>
-<div class="highlight"><pre><span></span><code>   wget https://mirrors.ustc.edu.cn/deb-multimedia/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
-   sudo apt-get install ./deb-multimedia-keyring_2016.8.1_all.deb
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 默认注释了源码仓库，如有需要可自行取消注释</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>deb<span class="w"> </span>http://mirrors.ustc.edu.cn/deb-multimedia/<span class="w"> </span>bullseye<span class="w"> </span>main<span class="w"> </span>non-free
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">#deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ bullseye main non-free</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>deb<span class="w"> </span>http://mirrors.ustc.edu.cn/deb-multimedia/<span class="w"> </span>bullseye-backports<span class="w"> </span>main
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">#deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ bullseye-backports main</span>
 </code></pre></div>
-<p>然后请运行 <code>sudo apt-get update</code> 更新索引以生效。</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 默认注释了源码仓库，如有需要可自行取消注释</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>deb<span class="w"> </span>http://mirrors.ustc.edu.cn/deb-multimedia/<span class="w"> </span>buster<span class="w"> </span>main<span class="w"> </span>non-free
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">#deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ buster main non-free</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>deb<span class="w"> </span>http://mirrors.ustc.edu.cn/deb-multimedia/<span class="w"> </span>buster-backports<span class="w"> </span>main
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">#deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ buster-backports main</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>更改完 <code>sources.list</code> 文件后请导入 <code>deb-multimedia-keyring</code>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>wget<span class="w"> </span>https://mirrors.ustc.edu.cn/deb-multimedia/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>./deb-multimedia-keyring_2016.8.1_all.deb
+</code></pre></div>
+<p>然后运行 <code>sudo apt-get update</code> 更新索引以生效。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装
-<code>apt-transport-https</code></p>
+<p>使用 HTTPS 可以有效避免国内运营商的缓存劫持。</p>
 </div>
 <h2 id="_6">相关链接<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <dl>
