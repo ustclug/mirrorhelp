@@ -42,6 +42,7 @@ x86_64
 
     ```ini title="/etc/yum.repos.d/fedora-updates.repo"
     --8<-- "fedora-updates.repo"
+    ```
 
     !!! note
 
