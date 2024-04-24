@@ -34,7 +34,7 @@ Stackage 源使用。
     url-source:
         OwnSource: https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml
 
-**第三步（可选）** ：配置 Cabal 和 Stack 使用科大源，请参考文档 `hackage` 和 `stackage`。
+**第三步（可选）** ：配置 Cabal 和 Stack 使用科大源，请参考文档 [hackage](hackage.md) 和 [stackage](stackage.md)。
 
 !!! warning
 
