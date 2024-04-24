@@ -27,7 +27,7 @@ skip_if_unavailable=False
 [updates-source]
 name=Fedora $releasever - Updates Source
 failovermethod=priority
-baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/SRPMS/
+baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/source/tree/
 #metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&arch=$basearch
 enabled=0
 repo_gpgcheck=0
