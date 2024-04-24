@@ -10,7 +10,8 @@ Ubuntu 软件源
 
 ## 收录架构
 
-AMD64 (x86_64), Intel x86
+- AMD64 (x86_64)
+- Intel x86 (i386)
 
 其他架构请参考 [ubuntu-ports](ubuntu-ports.md)
 
@@ -36,24 +37,51 @@ AMD64 (x86_64), Intel x86
 
     操作前请做好相应备份
 
-一般情况下，将 `/etc/apt/sources.list`
-文件中 Ubuntu 默认的源地址 `http://archive.ubuntu.com/` 替换为
-`http://mirrors.ustc.edu.cn/` 即可。
+一般情况下，将 `/etc/apt/sources.list` 或 `/etc/apt/sources.list.d/ubuntu.sources` 文件中 Ubuntu 默认的源地址 `http://archive.ubuntu.com/` 替换为 `http://mirrors.ustc.edu.cn/` 即可。
+
+--8<-- "deb822.md"
 
 可以使用如下命令：
 
+- 传统格式（`/etc/apt/sources.list`）
+
+    ```shell
     sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list
+    ```
+
+- DEB822 格式（`/etc/apt/sources.list.d/ubuntu.sources`）
+
+    ```shell
+    sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list.d/ubuntu.sources
+    ```
+
+!!! warning "安全更新源注意事项"
+
+    因镜像站同步有延迟，可能会导致生产环境系统不能及时检查、安装上最新的安全更新，**不建议替换 security 源**。
+    
+    如果有官方源下载速度不理想等问题，想通过镜像站下载安全更新，可以将 security 源地址从 `http://security.ubuntu.com/` 替换为 `https://mirrors.ustc.edu.cn/`，即：
+    
+    - 传统格式
+
+        ```shell
+        sudo sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+        ```
+    
+    - DEB822 格式
+
+        ```shell
+        sudo sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/ubuntu.sources
+        ```
 
 !!! tip
 
-    因镜像站同步有延迟，可能会导致生产环境系统不能及时检查、安装上最新的安全更新，不建议替换 security 源。如果有官方源下载速度不理想等问题，想通过镜像站下载安全更新，可以将 security 源地址从 `http://security.ubuntu.com/` 替换为 `https://mirrors.ustc.edu.cn/`，即 `sudo sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list`。
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持。可以运行以下命令替换：
 
-!!! tip
+    ```shell
+    sudo sed -i 's/http:/https:/g' /etc/apt/sources.list
+    ```
 
-    使用 HTTPS 可以有效避免国内运营商的缓存劫持。即
-    `sudo sed -i 's/http:/https:/g' /etc/apt/sources.list`。
-
-当然也可以直接编辑 APT 源文件（需要使用 sudo）。以下是参考配置内容：
+当然也可以直接编辑 APT 源文件（需要使用 sudo）。以下是参考配置内容，**同时修改了软件源与安全更新源**：
 
 {% for release in ubuntu_releases %}
 === "Ubuntu {{ release.version }}"
@@ -93,16 +121,12 @@ AMD64 (x86_64), Intel x86
         Components: main restricted universe multiverse
         ```
 
-        !!! warning "DEB822 格式包含了对 ubuntu-security 源的修改"
-
         如果需要使用源码仓库，可以在 `Types` 中添加 `deb-src`。
 
         如果需要使用预发布软件源，可以在 `Suites` 中添加 `{{ release.codename }}-proposed`。
-
-        --8<-- "deb822.md"
 {% endfor %}
 
-更改完 `sources.list` 文件后请运行 `sudo apt-get update` 更新索引以生效。
+更改文件后请运行 `sudo apt-get update` 更新索引以生效。
 
 另外，也可以使用 snullp 大叔开发的[配置生成器](https://mirrors.ustc.edu.cn/repogen)。
 
