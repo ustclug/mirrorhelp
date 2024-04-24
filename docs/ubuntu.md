@@ -96,7 +96,7 @@ Ubuntu 软件源
 
     === "`sources.list` 格式"
 
-        ```shell title="/etc/apt/sources.list"
+        ```debsources title="/etc/apt/sources.list"
         # 默认注释了源码仓库，如有需要可自行取消注释
         deb https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }} main restricted universe multiverse
         # deb-src https://mirrors.ustc.edu.cn/ubuntu/ {{ release.codename }} main restricted universe multiverse

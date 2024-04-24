@@ -36,7 +36,7 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 
 === "Debian {{ release.version }}"
 
-    ```shell
+    ```debsources
     # 默认注释了源码仓库，如有需要可自行取消注释
     deb http://mirrors.ustc.edu.cn/deb-multimedia/ {{ release.codename }} main non-free
     #deb-src http://mirrors.ustc.edu.cn/deb-multimedia/ {{ release.codename }} main non-free

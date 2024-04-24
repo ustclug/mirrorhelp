@@ -72,7 +72,7 @@ Debian Old Old Stable, Old Stable, Stable
 
     === "`sources.list` 格式"
 
-        ```shell title="/etc/apt/sources.list"
+        ```debsources title="/etc/apt/sources.list"
         deb http://mirrors.ustc.edu.cn/debian-security/ {{ debian_security }} {{ debian_components }}
         # deb-src http://mirrors.ustc.edu.cn/debian-security/ {{ debian_security }} {{ debian_components }}
         ```

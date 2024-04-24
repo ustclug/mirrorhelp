@@ -66,7 +66,7 @@ Debian Old Old Stable, Old Stable, Stable, Testing, Unstable (sid)
 
     === "`sources.list` 格式"
 
-        ```shell title="/etc/apt/sources.list"
+        ```debsources title="/etc/apt/sources.list"
         # 默认注释了源码仓库，如有需要可自行取消注释
         deb http://mirrors.ustc.edu.cn/debian {{ release.codename }} {{ debian_components }}
         # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }} {{ debian_components }}
