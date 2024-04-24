@@ -82,13 +82,13 @@ Debian Old Old Stable, Old Stable, Stable, Testing, Unstable (sid)
 
         ```yaml title="/etc/apt/sources.list.d/debian.sources"
         Types: deb
-        URIs: https://mirrors.ustc.edu.cn/debian
+        URIs: http://mirrors.ustc.edu.cn/debian
         Suites: {{ release.codename }} {{ release.codename }}-updates
         Components: {{ debian_components }}
         Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
         Types: deb
-        URIs: https://mirrors.ustc.edu.cn/debian-security
+        URIs: http://mirrors.ustc.edu.cn/debian-security
         Suites: {{ debian_security }}
         Components: {{ debian_components }}
         Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg

@@ -81,7 +81,7 @@ Debian Old Old Stable, Old Stable, Stable
 
         ```yaml title="/etc/apt/sources.list.d/debian.sources"
         Types: deb
-        URIs: https://mirrors.ustc.edu.cn/debian-security
+        URIs: http://mirrors.ustc.edu.cn/debian-security
         Suites: {{ debian_security }}
         Components: {{ debian_components }}
         Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
