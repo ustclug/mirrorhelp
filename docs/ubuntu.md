@@ -129,9 +129,9 @@ Ubuntu 软件源
         Components: main restricted universe multiverse
         ```
 
-        如果需要使用源码仓库，可以在 `Types` 中添加 `deb-src`。
+        如果需要使用源码仓库，可以在 Types 中添加 `deb-src`。
 
-        如果需要使用预发布软件源，可以在 `Suites` 中添加 `{{ release.codename }}-proposed`。
+        如果需要使用预发布软件源，可以在 Suites 中添加 `{{ release.codename }}-proposed`。
 {% endfor %}
 
 更改文件后请运行 `sudo apt-get update` 更新索引以生效。
