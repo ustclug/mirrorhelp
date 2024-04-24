@@ -2655,17 +2655,50 @@ s390x 等</p>
 <p class="admonition-title">Warning</p>
 <p>操作前请做好相应备份</p>
 </div>
-<p>一般情况下，将 <code>/etc/apt/sources.list</code>
-文件中 Debian 默认的源地址 <code>http://security.debian.org/debian-security/</code>
-替换为 <code>http://mirrors.ustc.edu.cn/debian-security/</code> 即可。</p>
+<div class="admonition warning">
+<p class="admonition-title">安全更新源注意事项</p>
+<p>由于镜像站同步安全更新存在延迟，可能导致安全更新无法及时获取，因此仅建议在确实有需要的情况下才使用镜像站的安全更新源。</p>
+</div>
+<p>一般情况下，将 <code>/etc/apt/sources.list</code> 或 <code>/etc/apt/sources.list.d/debian.sources</code> 文件中 Debian 默认的源地址 <code>http://security.debian.org/debian-security/</code>（或 <code>http://deb.debian.org/debian-security</code>）替换为 <code>http://mirrors.ustc.edu.cn/debian-security/</code> 即可。</p>
+<!-- markdownlint-disable MD041 -->
+<div class="admonition tip">
+<p class="admonition-title">什么是 DEB822 (.sources) 文件格式？</p>
+<p>自新版本的 Debian 与 Ubuntu 起，例如：</p>
+<ul>
+<li>Debian 12 的容器镜像</li>
+<li>Ubuntu 24.04</li>
+</ul>
+<p>默认预装的系统中 APT 的系统源配置文件不再是传统的 <code>/etc/apt/sources.list</code>。传统格式（又被称为 One-Line-Style 格式）类似如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>deb http://mirrors.ustc.edu.cn/debian/ bookworm main contrib
+</code></pre></div>
+<p>新的 DEB822 格式自 APT 1.1（2015 年发布）起支持，后缀为 <code>.sources</code>，存储在 <code>/etc/apt/sources.list.d/</code> 目录下，格式类似如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/debian</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bookworm</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main contrib</span>
+</code></pre></div>
+<p>在切换软件源时，<strong>需要根据实际情况选择对应的格式进行修改</strong>。</p>
+<p>关于 DEB822 格式的设计考虑，可以参考<a href="https://repolib.readthedocs.io/en/latest/deb822-format.html">官方文档</a>（英文）。</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>从 Debian 11 "Bullseye" 开始，安全更新仓库名从 <code>发行版代号/updates</code>
 更新为 <code>发行版代号-security</code>，详见 <a href="https://www.debian.org/releases/bullseye/amd64/release-notes/ch-information.zh-cn.html#security-archive">Debian 11 (bullseye) 发行说明</a>，请旧版本用户注意。</p>
 </div>
 <p>可以直接使用如下命令完成上述修改：</p>
-<div class="highlight"><pre><span></span><code>sudo sed -i &#39;s|security.debian.org|mirrors.ustc.edu.cn|g&#39; /etc/apt/sources.list
+<ul>
+<li>
+<p>传统格式（<code>/etc/apt/sources.list</code>）</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/security.debian.org/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/apt/sources.list
 </code></pre></div>
+</li>
+<li>
+<p>DEB822 格式（<code>/etc/apt/sources.list.d/debian.sources</code>）</p>
+<p>目前使用 DEB822 格式的 Debian 分发仅有容器镜像，且其安全更新源默认设置为 <code>http://deb.debian.org/debian-security</code>，因此以下命令会同时替换 Debian 官方源和安全更新源：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/deb.debian.org/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/debian.sources
+</code></pre></div>
+</li>
+</ul>
 <p>当然也可以直接编辑 APT 源文件（需要使用 sudo）。以下是参考配置内容：</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Debian 12</label><label for="__tabbed_1_2">Debian 11</label><label for="__tabbed_1_3">Debian 10</label></div>
 <div class="tabbed-content">
@@ -2673,19 +2706,18 @@ s390x 等</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><code>sources.list</code> 格式</label><label for="__tabbed_2_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>deb<span class="w"> </span>http://mirrors.ustc.edu.cn/debian-security/<span class="w"> </span>bookworm-security<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free<span class="w"> </span>non-free-firmware
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ bookworm-security main contrib non-free non-free-firmware</span>
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>deb<span class="w"> </span>http://mirrors.ustc.edu.cn/debian-security/<span class="w"> </span>bookworm-security<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free<span class="w"> </span>non-free-firmware
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ bookworm-security main contrib non-free non-free-firmware</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list.d/debian.sources</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/debian-security</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bookworm-security</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main contrib non-free non-free-firmware</span>
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/debian.sources</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/debian-security</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bookworm-security</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main contrib non-free non-free-firmware</span>
 </code></pre></div>
 <p>如果需要使用源码仓库，可以在 Types 中添加 <code>deb-src</code>。</p>
 <p>如果需要使用 backports 软件源，可以在 Suites 中添加 <code>bookworm-backports</code>。</p>
-<!-- 待补充：DEB822 (.sources) 文件格式的解释 -->
 </div>
 </div>
 </div>
@@ -2694,19 +2726,18 @@ s390x 等</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><code>sources.list</code> 格式</label><label for="__tabbed_3_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>deb<span class="w"> </span>http://mirrors.ustc.edu.cn/debian-security/<span class="w"> </span>bullseye-security<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ bullseye-security main contrib non-free</span>
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>deb<span class="w"> </span>http://mirrors.ustc.edu.cn/debian-security/<span class="w"> </span>bullseye-security<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ bullseye-security main contrib non-free</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list.d/debian.sources</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/debian-security</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bullseye-security</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main contrib non-free</span>
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/debian.sources</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/debian-security</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bullseye-security</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main contrib non-free</span>
 </code></pre></div>
 <p>如果需要使用源码仓库，可以在 Types 中添加 <code>deb-src</code>。</p>
 <p>如果需要使用 backports 软件源，可以在 Suites 中添加 <code>bullseye-backports</code>。</p>
-<!-- 待补充：DEB822 (.sources) 文件格式的解释 -->
 </div>
 </div>
 </div>
@@ -2715,30 +2746,28 @@ s390x 等</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><code>sources.list</code> 格式</label><label for="__tabbed_4_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>deb<span class="w"> </span>http://mirrors.ustc.edu.cn/debian-security/<span class="w"> </span>buster/updates<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free</span>
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>deb<span class="w"> </span>http://mirrors.ustc.edu.cn/debian-security/<span class="w"> </span>buster/updates<span class="w"> </span>main<span class="w"> </span>contrib<span class="w"> </span>non-free
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list.d/debian.sources</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/debian-security</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">buster/updates</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main contrib non-free</span>
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/debian.sources</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/debian-security</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">buster/updates</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main contrib non-free</span>
 </code></pre></div>
 <p>如果需要使用源码仓库，可以在 Types 中添加 <code>deb-src</code>。</p>
 <p>如果需要使用 backports 软件源，可以在 Suites 中添加 <code>buster-backports</code>。</p>
-<!-- 待补充：DEB822 (.sources) 文件格式的解释 -->
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>更改完 <code>sources.list</code> 文件后请运行 <code>sudo apt-get update</code> 更新索引以生效。</p>
+<p>更改后请运行 <code>sudo apt-get update</code> 更新索引以生效。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装
-<code>apt-transport-https</code> (Debian Buster 及以上版本不需要)。</p>
+<p>使用 HTTPS 可以有效避免国内运营商的缓存劫持。</p>
 </div>
 <p>另外，也可以使用 snullp 大叔开发的 <a href="https://mirrors.ustc.edu.cn/repogen">配置生成器</a>。</p>
 <h2 id="_6">相关链接<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
