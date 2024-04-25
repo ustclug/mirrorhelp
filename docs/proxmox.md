@@ -28,8 +28,10 @@ Proxmox 软件源
 
 修改基础系统（Debian）的源文件，可以参考 [Debian 帮助](debian.md) 或使用如下命令：
 
-    sed -i 's|^deb http://ftp.debian.org|deb https://mirrors.ustc.edu.cn|g' /etc/apt/sources.list
-    sed -i 's|^deb http://security.debian.org|deb https://mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
+```shell
+sed -i 's|^deb http://ftp.debian.org|deb https://mirrors.ustc.edu.cn|g' /etc/apt/sources.list
+sed -i 's|^deb http://security.debian.org|deb https://mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
+```
 
 修改 Proxmox 的源文件，可以使用如下命令：
 
@@ -65,6 +67,8 @@ fi
 
 可以使用如下命令：
 
-    sed -i.bak 's|http://download.proxmox.com|https://mirrors.ustc.edu.cn/proxmox|g' /usr/share/perl5/PVE/APLInfo.pm 
+```shell
+sed -i.bak 's|http://download.proxmox.com|https://mirrors.ustc.edu.cn/proxmox|g' /usr/share/perl5/PVE/APLInfo.pm
+```
 
 针对 `/usr/share/perl5/PVE/APLInfo.pm` 文件的修改，执行 `systemctl restart pvedaemon` 后生效。
