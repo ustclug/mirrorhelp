@@ -1,3 +1,15 @@
+---
+trisquel_releases:
+  - version: 11
+    codename: aramo
+  - version: 10
+    codename: nabia
+  - version: 9
+    codename: etiona
+  - version: 8
+    codename: flidas
+---
+
 # Trisquel
 
 ## 地址
@@ -25,17 +37,23 @@ Trisquel 支持的所有架构。
 Trisquel 使用 APT 软件包管理系统，故其软件源使用方法与 Ubuntu 或 Debian
 等很相似。
 
-以 Flidas 为例，编辑 `/etc/apt/sources.list`
- 文件 (需要使用 sudo), 在文件最前面添加以下条目：
+编辑 `/etc/apt/sources.list` 文件 (需要使用 sudo), 在文件最前面添加以下条目：
 
-    deb https://mirrors.ustc.edu.cn/trisquel/ flidas main
-    deb-src https://mirrors.ustc.edu.cn/trisquel/ flidas main
-    deb https://mirrors.ustc.edu.cn/trisquel/ flidas-security main
-    deb-src https://mirrors.ustc.edu.cn/trisquel/ flidas-security main
-    deb https://mirrors.ustc.edu.cn/trisquel/ flidas-updates main
-    deb-src https://mirrors.ustc.edu.cn/trisquel/ flidas-updates main
-    deb https://mirrors.ustc.edu.cn/trisquel/ flidas-backports main
-    deb-src https://mirrors.ustc.edu.cn/trisquel/ flidas-backports main
+{% for release in trisquel_releases %}
+=== "Trisquel {{ release.version }}"
+
+    ```debsources title="/etc/apt/sources.list"
+    # 默认注释了源码仓库，如有需要可自行取消注释
+    deb https://mirrors.ustc.edu.cn/trisquel/ {{ release.codename }} main
+    #deb-src https://mirrors.ustc.edu.cn/trisquel/ {{ release.codename }} main
+    deb https://mirrors.ustc.edu.cn/trisquel/ {{ release.codename }}-security main
+    #deb-src https://mirrors.ustc.edu.cn/trisquel/ {{ release.codename }}-security main
+    deb https://mirrors.ustc.edu.cn/trisquel/ {{ release.codename }}-updates main
+    #deb-src https://mirrors.ustc.edu.cn/trisquel/ {{ release.codename }}-updates main
+    deb https://mirrors.ustc.edu.cn/trisquel/ {{ release.codename }}-backports main
+    #deb-src https://mirrors.ustc.edu.cn/trisquel/ {{ release.codename }}-backports main
+    ```
+{% endfor %}
 
 ## 相关链接
 
