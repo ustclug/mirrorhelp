@@ -34,7 +34,7 @@ OpenWRT/LEDE 下载站镜像。
 
     sed -i 's/downloads.openwrt.org/mirrors.ustc.edu.cn\/openwrt/g' /etc/opkg/distfeeds.conf
 
-之后运行 [opkg update]{.title-ref} 更新软件索引，注意检查是否出现错误。
+之后运行 `opkg update` 更新软件索引，注意检查是否出现错误。
 
 !!! tip
 
