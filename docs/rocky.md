@@ -22,30 +22,33 @@ x86_64, aarch64
 
     操作前请做好相应备份。
 
-对于 Rocky Linux 8，使用以下命令替换默认的配置
+=== "Rocky Linux 8"
 
-```shell
-sed -e 's|^mirrorlist=|#mirrorlist=|g' \
-    -e 's|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/rocky|g' \
-    -i.bak \
-    /etc/yum.repos.d/Rocky-AppStream.repo \
-    /etc/yum.repos.d/Rocky-BaseOS.repo \
-    /etc/yum.repos.d/Rocky-Extras.repo \
-    /etc/yum.repos.d/Rocky-PowerTools.repo
-```
+    使用以下命令替换默认的配置：
 
-对于 Rocky Linux 9，使用以下命令替换默认的配置
+    ```shell
+    sed -e 's|^mirrorlist=|#mirrorlist=|g' \
+        -e 's|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/rocky|g' \
+        -i.bak \
+        /etc/yum.repos.d/Rocky-AppStream.repo \
+        /etc/yum.repos.d/Rocky-BaseOS.repo \
+        /etc/yum.repos.d/Rocky-Extras.repo \
+        /etc/yum.repos.d/Rocky-PowerTools.repo
+    ```
 
-```shell
-sed -e 's|^mirrorlist=|#mirrorlist=|g' \
-    -e 's|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/rocky|g' \
-    -i.bak \
-    /etc/yum.repos.d/rocky-extras.repo \
-    /etc/yum.repos.d/rocky.repo
-```
+=== "Rocky Linux 9"
 
-以上命令只替换了默认启用的仓库。替换之后请运行 `dnf makecache`
-更新缓存。
+    使用以下命令替换默认的配置：
+
+    ```shell
+    sed -e 's|^mirrorlist=|#mirrorlist=|g' \
+        -e 's|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/rocky|g' \
+        -i.bak \
+        /etc/yum.repos.d/rocky-extras.repo \
+        /etc/yum.repos.d/rocky.repo
+    ```
+
+以上命令只替换了默认启用的仓库。替换之后请运行 `dnf makecache` 更新缓存。
 
 ## 相关链接
 
