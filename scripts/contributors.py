@@ -15,7 +15,8 @@ def get_api():
     if "CI" not in os.environ:
         return [
             {
-                "login": "（本文件由 CI 生成，参见仓库中的 `scripts/contributors.py`）"
+                "login": "（本文件由 CI 生成，参见仓库中的 `scripts/contributors.py`）",
+                "html_url": "#",
             }
         ]
     headers = {
@@ -35,7 +36,7 @@ def main():
         data = get_api()
         data.sort(key=lambda x: x["login"].casefold())
         for item in data:
-            print(f"* {item['login']}", file=f)
+            print(f"- [{item['login']}]({item['html_url']})", file=f)
 
 
 if __name__ == "__main__":
