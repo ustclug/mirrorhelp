@@ -16,7 +16,7 @@ def get_api():
         return [
             {
                 "login": "（本文件由 CI 生成，参见仓库中的 `scripts/contributors.py`）",
-                "html_url": "#",
+                "html_url": "#top",
             }
         ]
     headers = {

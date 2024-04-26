@@ -4,4 +4,4 @@
 
 以字典序排序：
 
-- [（本文件由 CI 生成，参见仓库中的 `scripts/contributors.py`）](#)
+- [（本文件由 CI 生成，参见仓库中的 `scripts/contributors.py`）](#top)
