@@ -61,13 +61,13 @@ Ubuntu 软件源
     
     如果有官方源下载速度不理想等问题，想通过镜像站下载安全更新，可以将 security 源地址从 `http://security.ubuntu.com/` 替换为 `https://mirrors.ustc.edu.cn/`，即：
     
-    - 传统格式
+    === "`sources.list` 格式"
 
         ```shell
         sudo sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
         ```
     
-    - DEB822 格式
+    === "DEB822 格式"
 
         ```shell
         sudo sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/ubuntu.sources
@@ -77,13 +77,13 @@ Ubuntu 软件源
 
     使用 HTTPS 可以有效避免国内运营商的缓存劫持。可以运行以下命令替换：
 
-    - 传统格式
+    === "`sources.list` 格式"
 
         ```shell
         sudo sed -i 's/http:/https:/g' /etc/apt/sources.list
         ```
     
-    - DEB822 格式
+    === "DEB822 格式"
 
         ```shell
         sudo sed -i 's/http:/https:/g' /etc/apt/sources.list.d/ubuntu.sources
