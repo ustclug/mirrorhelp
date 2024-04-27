@@ -16,22 +16,27 @@ Termux APT 源镜像
 
 Termux 目前（2022 年 8 月）的官方源为
 packages.termux.dev，我们推荐先更新 `termux-tools` 软件包，然后直接使用
-`termux-change-repo` 先选择 Single mirror，再选择 mirrors.ustc.edu.cn
+`termux-change-repo` 命令，先选择 Single mirror，再选择 mirrors.ustc.edu.cn
 即可。
 
-如果想要手动更换 Termux APT 源的话，可以编辑
-`/data/data/com.termux/files/usr/etc/apt/sources.list`
- 为如下内容
+??? tip "手动换源（不推荐）"
 
+    如果想要手动更换 Termux APT 源的话，可以编辑
+    `/data/data/com.termux/files/usr/etc/apt/sources.list`
+    为如下内容
+
+    ```debsources
     deb https://mirrors.ustc.edu.cn/termux/apt/termux-main stable main
+    ```
 
-或者，你也可以使用 `sed` 命令进行文本替换：
+    或者，你也可以使用 `sed` 命令进行文本替换：
 
+    ```shell
     sed -i 's@packages.termux.org@mirrors.ustc.edu.cn/termux@' $PREFIX/etc/apt/sources.list
     pkg up
+    ```
 
-注：Termux 会自动将环境变量 `$PREFIX` 设定为
-`/data/data/com.termux/files/usr`
+    注：Termux 会自动将环境变量 `$PREFIX` 设定为 `/data/data/com.termux/files/usr`。
 
 !!! warning
 

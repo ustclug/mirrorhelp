@@ -29,7 +29,7 @@ Debian Old Old Stable, Old Stable, Stable
 
     由于镜像站同步安全更新存在延迟，可能导致安全更新无法及时获取，因此仅建议在确实有需要的情况下才使用镜像站的安全更新源。
 
-一般情况下，将 `/etc/apt/sources.list` 或 `/etc/apt/sources.list.d/debian.sources` 文件中 Debian 默认的源地址 `http://security.debian.org/debian-security/`（或 `http://deb.debian.org/debian-security`）替换为 `http://mirrors.ustc.edu.cn/debian-security/` 即可。
+一般情况下，将 `/etc/apt/sources.list` 或 `/etc/apt/sources.list.d/debian.sources` 文件中 Debian 默认的源地址 `http://security.debian.org/debian-security/`（或 `http://deb.debian.org/debian-security/`）替换为 `http://mirrors.ustc.edu.cn/debian-security/` 即可。
 
 --8<-- "deb822.md"
 
@@ -40,19 +40,19 @@ Debian Old Old Stable, Old Stable, Stable
 
 可以直接使用如下命令完成上述修改：
 
-- 传统格式（`/etc/apt/sources.list`）
+=== "`sources.list` 格式"
 
     ```shell
     sudo sed -i 's/security.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
     ```
 
-- DEB822 格式（`/etc/apt/sources.list.d/debian.sources`）
-
-    目前使用 DEB822 格式的 Debian 分发仅有容器镜像，且其安全更新源默认设置为 `http://deb.debian.org/debian-security`，因此以下命令会同时替换 Debian 官方源和安全更新源：
+=== "DEB822 格式"
 
     ```shell
     sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources
     ```
+
+    目前使用 DEB822 格式的 Debian 分发仅有容器镜像，且其安全更新源默认设置为 `http://deb.debian.org/debian-security`，因此以上命令会同时替换 Debian 官方源和安全更新源。
 
 当然也可以直接编辑 APT 源文件（需要使用 sudo）。以下是参考配置内容：
 

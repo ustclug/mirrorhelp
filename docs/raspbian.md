@@ -38,12 +38,16 @@ raspbian 2018-04-19 之后的镜像默认源已经更改，用如下命令替换
     sudo sed -i 's|mirrordirector.raspbian.org|mirrors.ustc.edu.cn/raspbian|g' /etc/apt/sources.list
     sudo sed -i 's|archive.raspbian.org|mirrors.ustc.edu.cn/raspbian|g' /etc/apt/sources.list
 
-当然也可以直接编辑 `/etc/apt/sources.list`
- 文件（需要使用
-sudo）。删除原文件所有内容，用以下内容取代（以 Bullseye 示例）：
+当然也可以直接编辑 `/etc/apt/sources.list` 文件（需要使用 sudo）。删除原文件所有内容，用以下内容取代：
 
-    deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ bullseye main contrib non-free rpi
-    # deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ bullseye main contrib non-free rpi
+{% for release in debian_releases %}
+=== "Raspbian {{ release.codename }}"
+
+    ```debsources title="/etc/apt/sources.list"
+    deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ {{ release.codename }} main contrib non-free rpi
+    # deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ {{ release.codename }} main contrib non-free rpi
+    ```
+{% endfor %}
 
 Arm64 架构的 Raspberry Pi OS 仍处于 beta 状态，本镜像上游亦不含此架构。对于 arm64 的 Raspberry Pi OS，可以直接使用 arm64 Debian 的源：
 
