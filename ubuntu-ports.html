@@ -2705,8 +2705,8 @@
 </div>
 <p>在 <code>/etc/apt/sources.list</code> 或 <code>/etc/apt/sources.list.d/ubuntu.sources</code> 文件中，将软件源的地址改为 <code>http://mirrors.ustc.edu.cn/ubuntu-ports</code>。</p>
 <!-- markdownlint-disable MD041 -->
-<div class="admonition tip">
-<p class="admonition-title">什么是 DEB822 (.sources) 文件格式？</p>
+<details class="tip">
+<summary>什么是 DEB822 (.sources) 文件格式？</summary>
 <p>自新版本的 Debian 与 Ubuntu 起，例如：</p>
 <ul>
 <li>Debian 12 的容器镜像</li>
@@ -2724,7 +2724,7 @@
 </code></pre></div>
 <p>在切换软件源时，<strong>需要根据实际情况选择对应的格式进行修改</strong>。</p>
 <p>关于 DEB822 格式的设计考虑，可以参考<a href="https://repolib.readthedocs.io/en/latest/deb822-format.html">官方文档</a>（英文）。</p>
-</div>
+</details>
 <p>可以使用如下命令：</p>
 <div class="admonition warning">
 <p class="admonition-title">安全更新源注意事项</p>
