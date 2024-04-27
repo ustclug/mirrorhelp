@@ -43,13 +43,13 @@ Ubuntu 软件源
 
 可以使用如下命令：
 
-- 传统格式（`/etc/apt/sources.list`）
+=== "`sources.list` 格式"
 
     ```shell
     sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list
     ```
 
-- DEB822 格式（`/etc/apt/sources.list.d/ubuntu.sources`）
+=== "DEB822 格式"
 
     ```shell
     sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list.d/ubuntu.sources
