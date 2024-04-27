@@ -2752,23 +2752,23 @@
 <p>关于 DEB822 格式的设计考虑，可以参考<a href="https://repolib.readthedocs.io/en/latest/deb822-format.html">官方文档</a>（英文）。</p>
 </details>
 <p>可以使用如下命令：</p>
-<ul>
-<li>
-<p>传统格式（<code>/etc/apt/sources.list</code>）</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>sources.list</code> 格式</label><label for="__tabbed_1_2">DEB822 格式</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g&#39;</span><span class="w"> </span>/etc/apt/sources.list
 </code></pre></div>
-</li>
-<li>
-<p>DEB822 格式（<code>/etc/apt/sources.list.d/ubuntu.sources</code>）</p>
+</div>
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/ubuntu.sources
 </code></pre></div>
-</li>
-</ul>
+</div>
+</div>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">安全更新源注意事项</p>
 <p>因镜像站同步有延迟，可能会导致生产环境系统不能及时检查、安装上最新的安全更新，<strong>不建议替换 security 源</strong>。</p>
 <p>如果有官方源下载速度不理想等问题，想通过镜像站下载安全更新，可以将 security 源地址从 <code>http://security.ubuntu.com/</code> 替换为 <code>https://mirrors.ustc.edu.cn/</code>，即：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>sources.list</code> 格式</label><label for="__tabbed_1_2">DEB822 格式</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><code>sources.list</code> 格式</label><label for="__tabbed_2_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/security.ubuntu.com/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/apt/sources.list
@@ -2784,7 +2784,7 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>使用 HTTPS 可以有效避免国内运营商的缓存劫持。可以运行以下命令替换：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><code>sources.list</code> 格式</label><label for="__tabbed_2_2">DEB822 格式</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><code>sources.list</code> 格式</label><label for="__tabbed_3_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/http:/https:/g&#39;</span><span class="w"> </span>/etc/apt/sources.list
@@ -2798,10 +2798,10 @@
 </div>
 </div>
 <p>当然也可以直接编辑 APT 源文件（需要使用 sudo）。以下是参考配置内容，<strong>同时修改了软件源与安全更新源</strong>：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Ubuntu 24.04</label><label for="__tabbed_3_2">Ubuntu 22.04</label><label for="__tabbed_3_3">Ubuntu 20.04</label><label for="__tabbed_3_4">Ubuntu 18.04</label><label for="__tabbed_3_5">Ubuntu 16.04</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:5"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><input id="__tabbed_4_5" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Ubuntu 24.04</label><label for="__tabbed_4_2">Ubuntu 22.04</label><label for="__tabbed_4_3">Ubuntu 20.04</label><label for="__tabbed_4_4">Ubuntu 18.04</label><label for="__tabbed_4_5">Ubuntu 16.04</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><code>sources.list</code> 格式</label><label for="__tabbed_4_2">DEB822 格式</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"><code>sources.list</code> 格式</label><label for="__tabbed_5_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c"># 默认注释了源码仓库，如有需要可自行取消注释</span>
@@ -2842,7 +2842,7 @@
 </div>
 </div>
 <div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"><code>sources.list</code> 格式</label><label for="__tabbed_5_2">DEB822 格式</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1"><code>sources.list</code> 格式</label><label for="__tabbed_6_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c"># 默认注释了源码仓库，如有需要可自行取消注释</span>
@@ -2883,7 +2883,7 @@
 </div>
 </div>
 <div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1"><code>sources.list</code> 格式</label><label for="__tabbed_6_2">DEB822 格式</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1"><code>sources.list</code> 格式</label><label for="__tabbed_7_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c"># 默认注释了源码仓库，如有需要可自行取消注释</span>
@@ -2924,7 +2924,7 @@
 </div>
 </div>
 <div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1"><code>sources.list</code> 格式</label><label for="__tabbed_7_2">DEB822 格式</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1"><code>sources.list</code> 格式</label><label for="__tabbed_8_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c"># 默认注释了源码仓库，如有需要可自行取消注释</span>
@@ -2965,7 +2965,7 @@
 </div>
 </div>
 <div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1"><code>sources.list</code> 格式</label><label for="__tabbed_8_2">DEB822 格式</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1"><code>sources.list</code> 格式</label><label for="__tabbed_9_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c"># 默认注释了源码仓库，如有需要可自行取消注释</span>
