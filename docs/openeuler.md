@@ -10,11 +10,11 @@ openEuler 软件源
 
 ## 收录架构
 
-x86_64,aarch64
+x86_64, aarch64
 
 ## 收录版本
 
-20.03-LTS,20.09,21.03,22.02,22.09,23.03,23.09
+20.03-LTS, 20.09, 21.03, 22.03-LTS, 22.09, 23.03, 23.09
 
 ## 使用说明
 
@@ -24,13 +24,14 @@ x86_64,aarch64
 
 使用以下命令替换默认配置
 
-    sudo sed -e 's|http://repo.openeuler.org/|https://mirrors.ustc.edu.cn/openeuler/|g' \
-             -e 's|https://mirrors.openeuler.org/|https://mirrors.ustc.edu.cn/openeuler/|g' \
-             -i.bak \
-             /etc/yum.repos.d/openEuler.repo
+```shell
+sudo sed -e 's|http://repo.openeuler.org/|https://mirrors.ustc.edu.cn/openeuler/|g' \
+         -e 's|https://mirrors.openeuler.org/|https://mirrors.ustc.edu.cn/openeuler/|g' \
+         -i.bak \
+         /etc/yum.repos.d/openEuler.repo
+```
 
-以上命令替换了所有的仓库。替换之后请运行 `yum makecache`
-更新缓存。
+以上命令替换了所有的仓库。替换之后请运行 `yum makecache` 更新缓存。
 
 ## 相关链接
 
