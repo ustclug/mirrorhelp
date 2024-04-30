@@ -291,6 +291,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mirrors.ustc.edu.cn/help/openeuler.html</loc>
+         <lastmod>2024-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mirrors.ustc.edu.cn/help/opensuse.html</loc>
          <lastmod>2024-04-30</lastmod>
          <changefreq>daily</changefreq>
