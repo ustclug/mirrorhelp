@@ -29,7 +29,7 @@ x86_64,aarch64
              -i.bak \
              /etc/yum.repos.d/openEuler.repo
 
-以上命令只替换了所有的仓库。替换之后请运行 `yum makecache`
+以上命令替换了所有的仓库。替换之后请运行 `yum makecache`
 更新缓存。
 
 ## 相关链接
@@ -53,4 +53,3 @@ x86_64,aarch64
 镜像列表
 
 :   <https://www.openeuler.org/zh/mirror/list/>
-
