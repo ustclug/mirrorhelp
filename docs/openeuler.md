@@ -6,7 +6,7 @@
 
 ## 说明
 
-CentOS 软件源
+openEuler 软件源
 
 ## 收录架构
 
@@ -22,7 +22,6 @@ x86_64,aarch64
 
     操作前请做好相应备份。
 
-
 使用以下命令替换默认配置
 
     sudo sed -e 's|http://repo.openeuler.org/|https://mirrors.ustc.edu.cn/openeuler/|g' \
@@ -32,7 +31,6 @@ x86_64,aarch64
 
 以上命令只替换了所有的仓库。替换之后请运行 `yum makecache`
 更新缓存。
-
 
 ## 相关链接
 
