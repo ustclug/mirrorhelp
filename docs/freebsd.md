@@ -26,9 +26,9 @@ FreeBSD 支持的所有正式版本
 
 !!! warning
 
-    pkg 和 ports 仓库已被官方移动到独立的仓库中。详见 [相关镜像](#相关镜像)。
+    pkg 和 ports 仓库已被官方移动到独立的仓库中。详见 [相关镜像](#related-mirrors)。
 
-## 相关镜像
+## 相关镜像 {#related-mirrors}
 
 - [freebsd-pkg](freebsd-pkg.md)
 - [freebsd-ports](freebsd-ports.md)
