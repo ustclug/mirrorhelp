@@ -193,6 +193,7 @@ nav:
     - homebrew-cask-versions.git.md
     - homebrew-services.git.md
     - influxdata.md
+    - kubernetes.md
     - linux.git.md
     - mariadb.md
     - mozilla.md
