@@ -190,7 +190,6 @@ nav:
     - homebrew-bottles.md
     - homebrew-core.git.md
     - homebrew-cask.git.md
-    - homebrew-cask-versions.git.md
     - homebrew-services.git.md
     - influxdata.md
     - kubernetes.md
