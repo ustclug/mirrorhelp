@@ -30,7 +30,6 @@
 - [homebrew-bottles](homebrew-bottles.md)
 - [homebrew-core.git](homebrew-core.git.md)
 - [homebrew-cask.git](homebrew-cask.git.md)
-- [homebrew-cask-versions.git](homebrew-cask-versions.git.md)
 
 ## 相关链接
 
