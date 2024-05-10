@@ -2629,7 +2629,8 @@
 <h1 id="anaconda">Anaconda<a class="headerlink" href="#anaconda" title="Permanent link">&para;</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>由于合规性，Anaconda 源目前已经无限期停止服务。</p>
+<p>~~由于合规性问题，Anaconda 源目前已经无限期停止服务。~~</p>
+<p>由于硬盘容量问题，Anaconda 源暂时停止服务，所有访问将会被 302 重定向至 TUNA 镜像站。</p>
 </div>
 <h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><a href="https://mirrors.ustc.edu.cn/anaconda/">https://mirrors.ustc.edu.cn/anaconda/</a></p>
@@ -2639,30 +2640,30 @@
 <p>Anaconda 安装包可以在 <a href="https://mirrors.ustc.edu.cn/anaconda/archive/">https://mirrors.ustc.edu.cn/anaconda/archive/</a> 下载。</p>
 <p>Miniconda 安装包可以在 <a href="https://mirrors.ustc.edu.cn/anaconda/miniconda/">https://mirrors.ustc.edu.cn/anaconda/miniconda/</a> 下载。</p>
 <p>添加 USTC 仓库镜像：</p>
-<div class="highlight"><pre><span></span><code>conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
-conda config --set show_channel_urls yes
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>show_channel_urls<span class="w"> </span>yes
 </code></pre></div>
 <p>Conda 附加库：</p>
 <ul>
 <li>
 <p>Conda Forge</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="go">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
 </code></pre></div>
 </li>
 <li>
 <p>msys2</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="go">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/
 </code></pre></div>
 </li>
 <li>
 <p>bioconda</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/
 </code></pre></div>
 </li>
 <li>
 <p>menpo</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/
 </code></pre></div>
 </li>
 </ul>

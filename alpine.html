@@ -2661,15 +2661,15 @@
 文件中 Alpine 默认的源地址 <code>http://dl-cdn.alpinelinux.org/</code> 替换为
 <code>http://mirrors.ustc.edu.cn/</code> 即可。</p>
 <p>可以使用如下命令：</p>
-<div class="highlight"><pre><span></span><code>sed -i &#39;s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g&#39; /etc/apk/repositories
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/apk/repositories
 </code></pre></div>
 <p>也可以直接编辑 <code>/etc/apk/repositories</code> 文件。以下是 v3.5 版本的参考配置：</p>
-<div class="highlight"><pre><span></span><code>https://mirrors.ustc.edu.cn/alpine/v3.5/main
-https://mirrors.ustc.edu.cn/alpine/v3.5/community
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://mirrors.ustc.edu.cn/alpine/v3.5/main
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>https://mirrors.ustc.edu.cn/alpine/v3.5/community
 </code></pre></div>
 <p>也可以使用 <code>latest-stable</code> 指向最新的稳定版本：</p>
-<div class="highlight"><pre><span></span><code>https://mirrors.ustc.edu.cn/alpine/latest-stable/main
-https://mirrors.ustc.edu.cn/alpine/latest-stable/community
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://mirrors.ustc.edu.cn/alpine/latest-stable/main
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>https://mirrors.ustc.edu.cn/alpine/latest-stable/community
 </code></pre></div>
 <p>更改完 <code>/etc/apk/repositories</code> 文件后请运行 <code>apk update</code> 更新索引以生效。</p>
 <div class="admonition tip">
