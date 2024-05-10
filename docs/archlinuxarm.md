@@ -16,7 +16,9 @@ ARMv7, AArch64
 
 编辑 `/etc/pacman.d/mirrorlist`，在文件的最顶端添加
 
-    Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
+```ini
+Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
+```
 
 ## 相关链接
 

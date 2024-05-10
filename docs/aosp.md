@@ -28,7 +28,7 @@ AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约 80G（注意磁盘格
 
 !!! warning
 
-    由于 AOSP 镜像造成的 IO 负载很高，不建议使用以下方式初次同步。
+    由于 AOSP 镜像造成的 IO 负载很高，请**不要**使用以下方式初次同步。
 
 按照 [Google 官方教程](https://source.android.com/source/downloading.html)
 ([CN](https://source.android.google.cn/source/downloading))，

@@ -2,7 +2,9 @@
 
 !!! warning
 
-    由于合规性，Anaconda 源目前已经无限期停止服务。
+    ~~由于合规性问题，Anaconda 源目前已经无限期停止服务。~~
+
+    由于硬盘容量问题，Anaconda 源暂时停止服务，所有访问将会被 302 重定向至 TUNA 镜像站。
 
 ## 地址
 
@@ -20,33 +22,35 @@ Miniconda 安装包可以在 <https://mirrors.ustc.edu.cn/anaconda/miniconda/> �
 
 添加 USTC 仓库镜像：
 
-    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
-    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
-    conda config --set show_channel_urls yes
+```shell
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+```
 
 Conda 附加库：
 
 - Conda Forge
 
-    ```console
+    ```shell
     conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
     ```
 
 - msys2
 
-    ```console
+    ```shell
     conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/
     ```
 
 - bioconda
 
-    ```console
+    ```shell
     conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/
     ```
 
 - menpo
 
-    ```console
+    ```shell
     conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/
     ```
 
