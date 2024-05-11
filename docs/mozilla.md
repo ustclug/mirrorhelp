@@ -40,7 +40,7 @@ Linux](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-fire
 4. 添加镜像仓库：
 
     ```shell
-    echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://mirrors.ustc.edu.cn/mozilla/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
+    echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://mirrors.ustc.edu.cn/mozilla/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
     ```
 
 5. 设置优先级，避免 Ubuntu 下 snap 版本被优先安装：
