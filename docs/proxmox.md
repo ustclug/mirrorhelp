@@ -72,3 +72,7 @@ sed -i.bak 's|http://download.proxmox.com|https://mirrors.ustc.edu.cn/proxmox|g'
 ```
 
 针对 `/usr/share/perl5/PVE/APLInfo.pm` 文件的修改，执行 `systemctl restart pvedaemon` 后生效。
+
+!!! note
+
+    `/usr/share/perl5/PVE/APLInfo.pm` 文件属于 pve-manager 软件包，该软件包升级后，需要重新替换 URL。
