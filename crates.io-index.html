@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="/static/img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
     
     
       
@@ -1787,6 +1787,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-mirrors" class="md-nav__link">
+    <span class="md-ellipsis">
+      相关镜像
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       相关链接
@@ -2600,6 +2609,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-mirrors" class="md-nav__link">
+    <span class="md-ellipsis">
+      相关镜像
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       相关链接
@@ -2632,54 +2650,43 @@
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Rust Crates Registry 源</p>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>在 <code>$CARGO_HOME/config</code> 中添加如下内容：</p>
-<div class="highlight"><pre><span></span><code>[source.crates-io]
-replace-with = &#39;ustc&#39;
-
-[source.ustc]
-registry = &quot;git://mirrors.ustc.edu.cn/crates.io-index&quot;
+<p>如果正在使用 cargo 1.68 及以上版本，在 <code>$CARGO_HOME/config.toml</code> 中添加如下内容即可：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">[source.crates-io]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">replace-with</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;ustc&#39;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">[source.ustc]</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">registry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;sparse+https://mirrors.ustc.edu.cn/crates.io-index/&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code>$CARGO_HOME</code> 在 Windows 系统默认为：<code>%USERPROFILE%\.cargo</code>，在类 Unix 系统默认为：<code>$HOME/.cargo</code></p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>如果所处的环境中不允许使用 git 协议，可以把上述地址改为：</p>
-<div class="highlight"><pre><span></span><code>registry = &quot;https://mirrors.ustc.edu.cn/crates.io-index&quot;
+<p>在 Linux 环境可以使用下面的命令完成：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir<span class="w"> </span>-vp<span class="w"> </span><span class="si">${</span><span class="nv">CARGO_HOME</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.cargo</span><span class="si">}</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>cat<span class="w"> </span><span class="s">&lt;&lt; EOF | tee -a ${CARGO_HOME:-$HOME/.cargo}/config.toml</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="s">[source.crates-io]</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s">replace-with = &#39;ustc&#39;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="s">[source.ustc]</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="s">registry = &quot;sparse+https://mirrors.ustc.edu.cn/crates.io-index/&quot;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="s">EOF</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">cargo &lt;= 1.68?</p>
+<p>如果 cargo 版本低于 1.68，则必须设置为完整克隆仓库，<code>[source.ustc]</code> 里的 <code>registry</code> 需要修改为：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[source.ustc]</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">registry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;git://mirrors.ustc.edu.cn/crates.io-index&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># 或者如果无法使用 git 协议</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">[source.ustc]</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">registry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://mirrors.ustc.edu.cn/crates.io-index/&quot;</span>
+</code></pre></div>
+<p>完整克隆仓库速度<strong>远慢于</strong>新版的稀疏索引，因此<strong>强烈建议升级 cargo 版本</strong>。详见<a href="#related-mirrors">相关镜像</a>。</p>
 </div>
-<p>在 Linux 环境可以使用下面的命令完成：</p>
-<div class="highlight"><pre><span></span><code>mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
-
-cat &lt;&lt; EOF | tee -a ${CARGO_HOME:-$HOME/.cargo}/config
-[source.crates-io]
-replace-with = &#39;ustc&#39;
-
-[source.ustc]
-registry = &quot;git://mirrors.ustc.edu.cn/crates.io-index&quot;
-EOF
-</code></pre></div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>cargo 1.68 版本开始支持稀疏索引：不再需要完整克隆 crates.io-index 仓库，可以加快获取包的速度。如果您的 cargo 版本大于等于 1.68，可以在 <code>$CARGO_HOME/config</code> 中添加如下内容：</p>
-<div class="highlight"><pre><span></span><code>[source.crates-io]
-replace-with = &#39;ustc&#39;
-
-[source.ustc]
-registry = &quot;sparse+https://mirrors.ustc.edu.cn/crates.io-index/&quot;
-</code></pre></div>
-<p>在 Linux 环境可以使用下面的命令完成：</p>
-<div class="highlight"><pre><span></span><code>mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
-
-cat &lt;&lt; EOF | tee -a ${CARGO_HOME:-$HOME/.cargo}/config
-[source.crates-io]
-replace-with = &#39;ustc&#39;
-
-[source.ustc]
-registry = &quot;sparse+https://mirrors.ustc.edu.cn/crates.io-index/&quot;
-EOF
-</code></pre></div>
+<p class="admonition-title">cargo &lt;= 1.38?</p>
+<p>如果正在使用的 cargo 版本低于 1.38，则需要修改的文件为 <code>config</code> 文件，而不是 <code>config.toml</code> 文件。</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2696,6 +2703,10 @@ EOF
 check-revoke = false
 </code></pre></div>
 </div>
+<h2 id="related-mirrors">相关镜像<a class="headerlink" href="#related-mirrors" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="rust-static.html">Rust Toolchain 反向代理</a></li>
+</ul>
 <h2 id="_4">相关链接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>官方主页</dt>
@@ -2795,7 +2806,7 @@ check-revoke = false
     <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes", "navigation.sections", "navigation.top"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="assets/javascripts/bundle.ebd0bdb7.min.js"></script>
+      <script src="assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
   </body>
