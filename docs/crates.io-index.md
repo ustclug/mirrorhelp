@@ -10,57 +10,52 @@ Rust Crates Registry 源
 
 ## 使用说明
 
-在 `$CARGO_HOME/config` 中添加如下内容：
+如果正在使用 cargo 1.68 及以上版本，在 `$CARGO_HOME/config.toml` 中添加如下内容即可：
 
-    [source.crates-io]
-    replace-with = 'ustc'
+```toml
+[source.crates-io]
+replace-with = 'ustc'
 
-    [source.ustc]
-    registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+[source.ustc]
+registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
+```
 
 !!! note
 
     `$CARGO_HOME` 在 Windows 系统默认为：`%USERPROFILE%\.cargo`，在类 Unix 系统默认为：`$HOME/.cargo`
 
-!!! note
-
-    如果所处的环境中不允许使用 git 协议，可以把上述地址改为：
-
-        registry = "https://mirrors.ustc.edu.cn/crates.io-index"
-
 在 Linux 环境可以使用下面的命令完成：
 
-    mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
+```shell
+mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
 
-    cat << EOF | tee -a ${CARGO_HOME:-$HOME/.cargo}/config
-    [source.crates-io]
-    replace-with = 'ustc'
+cat << EOF | tee -a ${CARGO_HOME:-$HOME/.cargo}/config.toml
+[source.crates-io]
+replace-with = 'ustc'
 
+[source.ustc]
+registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
+EOF
+```
+
+!!! note "cargo <= 1.68?"
+
+    如果 cargo 版本低于 1.68，则必须设置为完整克隆仓库，`[source.ustc]` 里的 `registry` 需要修改为：
+
+    ```toml
     [source.ustc]
     registry = "git://mirrors.ustc.edu.cn/crates.io-index"
-    EOF
 
-!!! note
+    # 或者如果无法使用 git 协议
+    [source.ustc]
+    registry = "https://mirrors.ustc.edu.cn/crates.io-index/"
+    ```
 
-    cargo 1.68 版本开始支持稀疏索引：不再需要完整克隆 crates.io-index 仓库，可以加快获取包的速度。如果您的 cargo 版本大于等于 1.68，可以在 `$CARGO_HOME/config` 中添加如下内容：
+    完整克隆仓库速度**远慢于**新版的稀疏索引，因此**强烈建议升级 cargo 版本**。详见[相关镜像](#related-mirrors)。
 
-        [source.crates-io]
-        replace-with = 'ustc'
+!!! note "cargo <= 1.38?"
 
-        [source.ustc]
-        registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
-
-    在 Linux 环境可以使用下面的命令完成：
-
-        mkdir -vp ${CARGO_HOME:-$HOME/.cargo}
-
-        cat << EOF | tee -a ${CARGO_HOME:-$HOME/.cargo}/config
-        [source.crates-io]
-        replace-with = 'ustc'
-
-        [source.ustc]
-        registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
-        EOF
+    如果正在使用的 cargo 版本低于 1.38，则需要修改的文件为 `config` 文件，而不是 `config.toml` 文件。
 
 !!! warning
 
@@ -76,6 +71,10 @@ Rust Crates Registry 源
 
         [http]
         check-revoke = false
+
+## 相关镜像 {#related-mirrors}
+
+- [Rust Toolchain 反向代理](./rust-static.md)
 
 ## 相关链接
 
