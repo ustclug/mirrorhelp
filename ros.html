@@ -18,7 +18,7 @@
         <link rel="prev" href="raspberrypi.html">
       
       
-        <link rel="next" href="rosdistro.html">
+        <link rel="next" href="ros2.html">
       
       
       <link rel="icon" href="/static/img/favicon.png">
@@ -1842,6 +1842,8 @@
       
         
       
+        
+      
     
     
       
@@ -2486,6 +2488,27 @@
   
   
     <li class="md-nav__item">
+      <a href="ros2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROS2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="rosdistro.html" class="md-nav__link">
         
   
@@ -2693,11 +2716,9 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo &quot;deb [signed-by=/usr/share/keyrings/ros.gpg] https://mirrors.ustc.edu.cn/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
 </code></pre></div>
 </li>
-</ol>
-<p>如果 IPv6 地址无效导致无法刷新软件源信息，将 <code>mirrors.ustc.edu.cn</code> 改成
-<code>ipv4.mirrors.ustc.edu.cn</code> 以强制使用 IPv4。</p>
-<ol>
-<li>刷新软件源缓存 <code>sudo apt update</code>，安装所需的 ROS 发行版。</li>
+<li>
+<p>刷新软件源缓存 <code>sudo apt update</code>，安装所需的 ROS 发行版。</p>
+</li>
 </ol>
 <h2 id="_4">相关镜像<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
