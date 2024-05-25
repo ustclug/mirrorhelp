@@ -201,6 +201,7 @@ nav:
     - qtproject.md
     - raspberrypi.md
     - ros.md
+    - ros2.md
     - rosdistro.md
     - sagemath.md
     - winget-source.md

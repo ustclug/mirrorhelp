@@ -34,6 +34,7 @@ echo 'export ROSDISTRO_INDEX_URL=https://mirrors.ustc.edu.cn/rosdistro/index-v4.
 ## 相关镜像
 
 - [ros](ros.md)
+- [ros2](ros2.md)
 
 ## 相关链接
 

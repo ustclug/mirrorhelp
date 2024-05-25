@@ -25,10 +25,7 @@
     sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/ros.gpg] https://mirrors.ustc.edu.cn/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
     ```
 
-如果 IPv6 地址无效导致无法刷新软件源信息，将 `mirrors.ustc.edu.cn` 改成
-`ipv4.mirrors.ustc.edu.cn` 以强制使用 IPv4。
-
-1. 刷新软件源缓存 `sudo apt update`，安装所需的 ROS 发行版。
+3. 刷新软件源缓存 `sudo apt update`，安装所需的 ROS 发行版。
 
 ## 相关镜像
 
