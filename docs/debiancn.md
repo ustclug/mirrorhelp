@@ -30,7 +30,7 @@ Debian 用户使用的补充软件。
 
 !!! tip
 
-    请参考[上游使用说明](https://github.com/debiancn/repo) 并将所有 `repo.debiancn.org` 字符串替换为 `mirrors.ustc.edu.cn` 即可。
+    请参考[上游使用说明](https://github.com/debiancn/repo) 并将所有 `repo.debiancn.org` 字符串替换为 `mirrors.ustc.edu.cn/debiancn` 即可。
 
 ## 相关链接
 
