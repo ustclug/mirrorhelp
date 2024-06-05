@@ -14,31 +14,21 @@ x86_64, aarch64, ppc64le
 
 ## 收录版本
 
-7, 8 Stream
+7
 
 !!! warning
 
-    CentOS 8（非 Stream 版本）已被官方移除出该仓库。如有需要，请使用
-    [centos-vault](https://mirrors.ustc.edu.cn/centos-vault/) 镜像。
+    不受支持的版本已被官方移除出该仓库。如有需要，请使用 [centos-vault](https://mirrors.ustc.edu.cn/centos-vault/) 镜像，并自行替换对应的 URL。
 
-    CentOS 9 Stream 及以后的版本的镜像位于
-    [centos-stream](https://mirrors.ustc.edu.cn/centos-stream/)。
+    CentOS 7 将于 2024 年 6 月 30 日结束维护，我们强烈建议尽快迁移到其他解决方案。关于镜像仓库后续处理，请阅读 [CentOS 仓库即将结束服务 (2024-06-30)](https://servers.ustclug.org/2024/05/centos-eol/)。
+
+    CentOS 9 Stream 及以后的版本的镜像位于 [centos-stream](https://mirrors.ustc.edu.cn/centos-stream/)，详见 [centos-stream 帮助页](./centos-stream.md)。
 
 ## 使用说明
 
 !!! warning
 
     操作前请做好相应备份。
-
-对于 CentOS 8 Stream，使用以下命令替换默认的配置
-
-    sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' \
-             -e 's|^#baseurl=http://mirror.centos.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/centos|g' \
-             -i.bak \
-             /etc/yum.repos.d/CentOS-Stream-AppStream.repo \
-             /etc/yum.repos.d/CentOS-Stream-BaseOS.repo \
-             /etc/yum.repos.d/CentOS-Stream-Extras.repo \
-             /etc/yum.repos.d/CentOS-Stream-PowerTools.repo
 
 对于 CentOS 7，使用以下命令替换默认配置
 
@@ -47,45 +37,9 @@ x86_64, aarch64, ppc64le
              -i.bak \
              /etc/yum.repos.d/CentOS-Base.repo
 
-以上命令只替换了默认启用的仓库。替换之后请运行 `yum makecache`
-更新缓存。
+以上命令只替换了默认启用的仓库。替换之后请运行 `yum makecache` 更新缓存。
 
 以下是替换之后的文件：
-
-!!! warning
-
-    以下给出的 `CentOS-Stream-PowerTools.repo`
-    设置了默认为停用状态。如需启用，请将 `enabled=0` 改为 `enabled=1`。
-
-- CentOS 8 Stream：
-
-    `/etc/yum.repos.d/CentOS-Stream-BaseOS.repo`
-     文件：
-
-    ```ini
-    --8<-- "centos8stream/CentOS-Stream-BaseOS.repo"
-    ```
-
-    `/etc/yum.repos.d/CentOS-Stream-Extras.repo`
-     文件：
-
-    ```ini
-    --8<-- "centos8stream/CentOS-Stream-Extras.repo"
-    ```
-
-    `/etc/yum.repos.d/CentOS-Stream-AppStream.repo`
-     文件：
-
-    ```ini
-    --8<-- "centos8stream/CentOS-Stream-AppStream.repo"
-    ```
-
-    `/etc/yum.repos.d/CentOS-Stream-PowerTools.repo`
-     文件：
-
-    ```ini
-    --8<-- "centos8stream/CentOS-Stream-PowerTools.repo"
-    ```
 
 - CentOS 7：
 
