@@ -2,11 +2,13 @@
 
 ## 地址
 
-*暂停服务*
+- Docker Hub 镜像缓存: *暂停服务*
+- Google Container Registry 镜像缓存：<https://gcr.mirrors.ustc.edu.cn>
+- Quay.io 镜像缓存：<https://quay.mirrors.ustc.edu.cn>
 
 ## 说明
 
-Docker Hub 镜像缓存
+Docker Hub、Google Container Registry 与 Quay.io 镜像缓存
 
 ## 使用说明
 
@@ -46,53 +48,58 @@ Docker Hub 镜像缓存
 对于使用 systemd 的系统（Ubuntu 16.04+、Debian 8+、CentOS 7），
 在配置文件 `/etc/docker/daemon.json` 中加入：
 
-    {
-      "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn/"]
-    }
+```json
+{
+  "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn/"]
+}
+```
 
 重新启动 dockerd：
 
-    sudo systemctl restart docker
+```shell
+sudo systemctl restart docker
+```
 
 ### macOS
 
-旧版本：
+=== "新版本"
 
-1. 打开 "Docker.app"
-2. 进入偏好设置页面（快捷键 `⌘,`）
-3. 打开 "Daemon" 选项卡
-4. 在 "Registry mirrors" 中添加 `https://docker.mirrors.ustc.edu.cn/`
-5. 点击下方的 "Apply & Restart" 按钮
+    1. 打开 "Docker.app"
+    2. 进入偏好设置页面（快捷键 ++cmd+comma++）
+    3. 打开 "Docker Engine" 选项卡
+    4. 参考 Linux 中 "使用 systemd 系统" 的配置，在 JSON 配置中添加 `"registry-mirrors"` 一项。
 
-新版本：
+=== "旧版本"
 
-1. 打开 "Docker.app"
-2. 进入偏好设置页面（快捷键 `⌘,`）
-3. 打开 "Docker Engine" 选项卡
-4. 参考 Linux 中 "使用 systemd 系统" 的配置，在 JSON 配置中添加
-    `"registry-mirrors"` 一项。
+    1. 打开 "Docker.app"
+    2. 进入偏好设置页面（快捷键 ++cmd+comma++）
+    3. 打开 "Daemon" 选项卡
+    4. 在 "Registry mirrors" 中添加 `https://docker.mirrors.ustc.edu.cn/`
+    5. 点击下方的 "Apply & Restart" 按钮
 
 ### Windows
 
-旧版本：
+=== "新版本"
 
-在系统右下角托盘 Docker 图标内右键菜单选择 `Settings`
-，打开配置窗口后左侧导航菜单选择 `Daemon`。在 `Registry mirrors`
-一栏中填写地址 `https://docker.mirrors.ustc.edu.cn/`，之后点击 Apply
-保存后 Docker 就会重启并应用配置的镜像地址了。
+    在系统右下角托盘 Docker 图标内右键菜单选择 `Settings`，
+    打开配置窗口后左侧导航菜单选择 `Docker Engine`。参考 Linux 中 "使用 systemd 系统" 的配置，
+    在 JSON 配置中添加 `"registry-mirrors"` 一项，之后点击 "Apply & Restart" 保存并重启 Docker 即可。
 
-新版本：
+=== "旧版本"
 
-在系统右下角托盘 Docker 图标内右键菜单选择 `Settings`，
-打开配置窗口后左侧导航菜单选择 `Docker Engine`。参考 Linux 中 "使用 systemd 系统" 的配置，
-在 JSON 配置中添加 `"registry-mirrors"` 一项，之后点击 "Apply & Restart" 保存并重启 Docker 即可。
+    在系统右下角托盘 Docker 图标内右键菜单选择 `Settings`
+    ，打开配置窗口后左侧导航菜单选择 `Daemon`。在 `Registry mirrors`
+    一栏中填写地址 `https://docker.mirrors.ustc.edu.cn/`，之后点击 Apply
+    保存后 Docker 就会重启并应用配置的镜像地址了。
 
 ### 检查 Docker Hub 是否生效
 
 在命令行执行 `docker info`，如果从结果中看到了如下内容，说明配置成功。
 
-    Registry Mirrors:
-        https://docker.mirrors.ustc.edu.cn/
+```text
+Registry Mirrors:
+    https://docker.mirrors.ustc.edu.cn/
+```
 
 ### 如何搭建本地镜像缓存？ {#self-host}
 
@@ -100,32 +107,36 @@ Docker Hub 镜像缓存
 
 Redis 容器：
 
-    docker rm -f redis
-    docker run \
-        --name=redis \
-        -itd \
-        --net=docker-registry \
-        --restart=always \
-        redis \
-        redis-server --maxmemory 512m
+```shell
+docker rm -f redis
+docker run \
+  --name=redis \
+  -itd \
+  --net=docker-registry \
+  --restart=always \
+  redis \
+  redis-server --maxmemory 512m
+```
 
 镜像缓存容器：
 
-    docker rm -f dockerhub-mirror
-    docker run -itd \
-        --name dockerhub-mirror \
-        --restart=always \
-        --net=docker-registry \
-        -v /srv/docker/dockerhub/data:/var/lib/registry \
-        -v /srv/docker/dockerhub/config.yml:/etc/docker/registry/config.yml:ro \
-        -p 127.0.0.1:5000:5000/tcp \
-        --log-driver=journald \
-        --log-opt tag="dockerd-dockerhub" \
-        registry:2.8.2
+```shell
+docker rm -f dockerhub-mirror
+docker run -itd \
+  --name dockerhub-mirror \
+  --restart=always \
+  --net=docker-registry \
+  -v /srv/docker/dockerhub/data:/var/lib/registry \
+  -v /srv/docker/dockerhub/config.yml:/etc/docker/registry/config.yml:ro \
+  -p 127.0.0.1:5000:5000/tcp \
+  --log-driver=journald \
+  --log-opt tag="dockerd-dockerhub" \
+  registry:2
+```
 
 `/srv/docker/dockerhub/config.yml` 的参考内容：
 
-```yaml
+```yaml title="/srv/docker/dockerhub/config.yml"
 version: 0.1
 log:
     level: error
