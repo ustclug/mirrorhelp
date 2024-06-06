@@ -2,7 +2,7 @@
 
 ## 地址
 
-<https://docker.mirrors.ustc.edu.cn/>
+*暂停服务*
 
 ## 说明
 
@@ -12,13 +12,12 @@ Docker Hub 镜像缓存
 
 !!! warning
 
-    由于访问原始站点的网络带宽等条件的限制，导致 Docker Hub, Google
-    Container Registry (gcr.io) 与 Quay Container Registry (quay.io)
+    由于访问原始站点的网络带宽等条件的限制，导致 Google Container Registry (gcr.io) 与 Quay Container Registry (quay.io)
     的镜像缓存处于基本不可用的状态，因此科大镜像站的各容器镜像服务仅限校内使用。
 
     对于从科大校外的访问：
 
-    -   Docker Hub 和 Google Container Registry 会返回 403；
+    -   Google Container Registry 会返回 403；
     -   Quay 会被 302 重定向至源站。
 
     本文档结尾提供了搭建本地镜像缓存的方式，以供参考。
@@ -36,6 +35,7 @@ Docker Hub 镜像缓存
 - *2022-08-24* 由于获悉阿里云的 Docker Hub 镜像不再更新，目前校外对
     Docker Hub 镜像的访问返回 403。用户需要修改配置，选择其他国内的
     Docker Hub 镜像源。
+- *2024-06-06* 接上级主管部门通知，暂时关闭 Docker Hub 镜像缓存服务，GCR 与 Quay 暂不受影响。
 
 !!! warning
 
