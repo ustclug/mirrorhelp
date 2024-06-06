@@ -2,7 +2,7 @@
 
 ## 地址
 
-- Docker Hub 镜像缓存: *暂停服务*
+- Docker Hub 镜像缓存：*暂停服务*
 - Google Container Registry 镜像缓存：<https://gcr.mirrors.ustc.edu.cn>
 - Quay.io 镜像缓存：<https://quay.mirrors.ustc.edu.cn>
 
