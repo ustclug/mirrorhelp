@@ -45,7 +45,7 @@ Docker Hub、Google Container Registry 与 Quay.io 镜像缓存
 
 ### Linux
 
-对于使用 systemd 的系统（Ubuntu 16.04+、Debian 8+、CentOS 7），
+对于使用 systemd 的系统（Ubuntu 16.04+、Debian 8+、Rocky Linux），
 在配置文件 `/etc/docker/daemon.json` 中加入：
 
 ```json
