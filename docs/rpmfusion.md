@@ -18,7 +18,7 @@ RPM Fusion 是为 Fedora/RHEL 提供额外 RPM 软件包的第三方软件源。
     sudo dnf install https://mirrors.ustc.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.ustc.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
     ```
 
-=== "RHEL 或兼容系统（如 CentOS Stream）"
+=== "RHEL 或兼容系统（如 Rocky Linux）"
 
     ```shell
     sudo dnf install https://mirrors.ustc.edu.cn/rpmfusion/free/el/rpmfusion-free-release-$(rpm -E %centos_ver).noarch.rpm https://mirrors.ustc.edu.cn/rpmfusion/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %centos_ver).noarch.rpm
