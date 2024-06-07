@@ -2816,7 +2816,7 @@
 <p>2020 年 11 月后，Docker Hub 新增了 <a href="https://docs.docker.com/docker-hub/download-rate-limit/">访问速率限制</a>，这可能导致在校内使用 Docker Hub 镜像缓存时出现间歇性的问题。</p>
 </div>
 <h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
-<p>对于使用 systemd 的系统（Ubuntu 16.04+、Debian 8+、CentOS 7），
+<p>对于使用 systemd 的系统（Ubuntu 16.04+、Debian 8+、Rocky Linux），
 在配置文件 <code>/etc/docker/daemon.json</code> 中加入：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;registry-mirrors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;https://docker.mirrors.ustc.edu.cn/&quot;</span><span class="p">]</span>
