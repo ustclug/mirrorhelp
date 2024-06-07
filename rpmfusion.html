@@ -2715,18 +2715,18 @@
 <p>RPM Fusion 是为 Fedora/RHEL 提供额外 RPM 软件包的第三方软件源。</p>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>使用下列命令（在 bash 或兼容 shell 中），可以同时启用其 <strong>free</strong> 和 <strong>nonfree</strong> 软件源：</p>
-<ul>
-<li>
-<p>Fedora 22 及更高版本：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Fedora 22 及更高版本</label><label for="__tabbed_1_2">RHEL 或兼容系统（如 CentOS Stream）</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>https://mirrors.ustc.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-<span class="k">$(</span>rpm<span class="w"> </span>-E<span class="w"> </span>%fedora<span class="k">)</span>.noarch.rpm<span class="w"> </span>https://mirrors.ustc.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-<span class="k">$(</span>rpm<span class="w"> </span>-E<span class="w"> </span>%fedora<span class="k">)</span>.noarch.rpm
 </code></pre></div>
-</li>
-<li>
-<p>RHEL 7 或兼容系统（如 CentOS）:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>localinstall<span class="w"> </span>--nogpgcheck<span class="w"> </span>https://mirrors.ustc.edu.cn/rpmfusion/free/el/rpmfusion-free-release-7.noarch.rpm<span class="w"> </span>https://mirrors.ustc.edu.cn/rpmfusion/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>https://mirrors.ustc.edu.cn/rpmfusion/free/el/rpmfusion-free-release-<span class="k">$(</span>rpm<span class="w"> </span>-E<span class="w"> </span>%centos_ver<span class="k">)</span>.noarch.rpm<span class="w"> </span>https://mirrors.ustc.edu.cn/rpmfusion/nonfree/el/rpmfusion-nonfree-release-<span class="k">$(</span>rpm<span class="w"> </span>-E<span class="w"> </span>%centos_ver<span class="k">)</span>.noarch.rpm
 </code></pre></div>
-</li>
-</ul>
+</div>
+</div>
+</div>
 <p>如果 <code>sudo</code> 不可用，你可以把以上命令中的 <code>sudo</code> 替换成 <code>su -c</code>。</p>
 <h2 id="_4">替换源地址<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>安装成功后，可使用下列命令备份并修改 <code>/etc/yum.repos.d/</code> 目录下以 <code>rpmfusion</code> 开头，以 <code>.repo</code> 结尾的文件。</p>
