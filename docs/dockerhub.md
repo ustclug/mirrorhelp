@@ -37,7 +37,7 @@ Docker Hub、Google Container Registry 与 Quay.io 镜像缓存
 - *2022-08-24* 由于获悉阿里云的 Docker Hub 镜像不再更新，目前校外对
     Docker Hub 镜像的访问返回 403。用户需要修改配置，选择其他国内的
     Docker Hub 镜像源。
-- *2024-06-06* 接上级主管部门通知，暂时关闭 Docker Hub 镜像缓存服务，GCR 与 Quay 暂不受影响。
+- *2024-06-06* ，暂时关闭 Docker Hub 镜像缓存服务，GCR 与 Quay 暂不受影响。
 
 !!! warning
 
