@@ -24,7 +24,7 @@ Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
 
 官方主页
 
-:   <https://www.archlinuxarm.org/>
+:   <https://archlinuxarm.org/>
 
 论坛
 
