@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="/static/img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -2709,6 +2709,12 @@
 
 
 <h1 id="centos">CentOS<a class="headerlink" href="#centos" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>不受支持的版本已被官方移除出该仓库。如有需要，请<a href="centos-vault.md">使用 centos-vault 镜像</a>，并自行替换对应的 URL。</p>
+<p>CentOS 7 将于 2024 年 6 月 30 日结束维护，我们强烈建议尽快迁移到其他解决方案。关于镜像仓库的后续处理，请阅读 <a href="https://servers.ustclug.org/2024/05/centos-eol/">CentOS 仓库即将结束服务 (2024-06-30)</a>。</p>
+<p>CentOS Stream 9 及以后的版本的镜像位于 <a href="https://mirrors.ustc.edu.cn/centos-stream/">centos-stream</a>，详见 <a href="centos-stream.html">centos-stream 帮助页</a>。</p>
+</div>
 <h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><a href="https://mirrors.ustc.edu.cn/centos/">https://mirrors.ustc.edu.cn/centos/</a></p>
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
@@ -2717,12 +2723,6 @@
 <p>x86_64, aarch64, ppc64le</p>
 <h2 id="_4">收录版本<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>7</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>不受支持的版本已被官方移除出该仓库。如有需要，请使用 <a href="https://mirrors.ustc.edu.cn/centos-vault/">centos-vault</a> 镜像，并自行替换对应的 URL。</p>
-<p>CentOS 7 将于 2024 年 6 月 30 日结束维护，我们强烈建议尽快迁移到其他解决方案。关于镜像仓库后续处理，请阅读 <a href="https://servers.ustclug.org/2024/05/centos-eol/">CentOS 仓库即将结束服务 (2024-06-30)</a>。</p>
-<p>CentOS 9 Stream 及以后的版本的镜像位于 <a href="https://mirrors.ustc.edu.cn/centos-stream/">centos-stream</a>，详见 <a href="centos-stream.html">centos-stream 帮助页</a>。</p>
-</div>
 <h2 id="_5">使用说明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2736,11 +2736,10 @@
 </code></pre></div>
 <p>以上命令只替换了默认启用的仓库。替换之后请运行 <code>yum makecache</code> 更新缓存。</p>
 <p>以下是替换之后的文件：</p>
-<ul>
-<li>
-<p>CentOS 7：</p>
-<p><code>/etc/yum.repos.d/CentOS-Base.repo</code>
-文件：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">CentOS 7</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><code>/etc/yum.repos.d/CentOS-Base.repo</code> 文件：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># CentOS-Base.repo</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">#</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># The mirror system uses the connecting IP address of the client and the</span>
@@ -2785,8 +2784,9 @@
 <a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="na">enabled</span><span class="o">=</span><span class="s">0</span>
 <a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span>
 </code></pre></div>
-</li>
-</ul>
+</div>
+</div>
+</div>
 <h2 id="_6">相关链接<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>官方主页</dt>
