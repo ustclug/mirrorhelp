@@ -40,13 +40,13 @@ arm64, armhf, PowerPC, ppc64el, s390x
 - 传统格式（`/etc/apt/sources.list`）
 
     ```shell
-    sudo sed -i 's@//ports.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list
+    sudo sed -i 's@//ports.ubuntu.com@//mirrors.ustc.edu.cn/ubuntu-ports@g' /etc/apt/sources.list
     ```
 
 - DEB822 格式（`/etc/apt/sources.list.d/ubuntu.sources`）
 
     ```shell
-    sudo sed -i 's@//ports.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list.d/ubuntu.sources
+    sudo sed -i 's@//ports.ubuntu.com@//mirrors.ustc.edu.cn/ubuntu-ports@g' /etc/apt/sources.list.d/ubuntu.sources
     ```
 
 以下是参考配置内容，**同时修改了软件源与安全更新源**：
