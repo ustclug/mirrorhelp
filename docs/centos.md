@@ -2,7 +2,7 @@
 
 !!! warning
 
-    不受支持的版本已被官方移除出该仓库。如有需要，请[使用 centos-vault 镜像](centos-vault.md)，并自行替换对应的 URL。
+    不受支持的版本已被官方移除出该仓库。如有需要，请使用 [centos-vault](https://mirrors.ustc.edu.cn/centos-vault/) 镜像，并自行替换对应的 URL。
 
     CentOS 7 将于 2024 年 6 月 30 日结束维护，我们强烈建议尽快迁移到其他解决方案。关于镜像仓库的后续处理，请阅读 [CentOS 仓库即将结束服务 (2024-06-30)](https://servers.ustclug.org/2024/05/centos-eol/)。
 
