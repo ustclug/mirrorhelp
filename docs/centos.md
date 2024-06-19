@@ -32,10 +32,12 @@ x86_64, aarch64, ppc64le
 
 对于 CentOS 7，使用以下命令替换默认配置
 
-    sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' \
-             -e 's|^#baseurl=http://mirror.centos.org/centos|baseurl=https://mirrors.ustc.edu.cn/centos|g' \
-             -i.bak \
-             /etc/yum.repos.d/CentOS-Base.repo
+```shell
+sudo sed -i.bak \
+  -e 's|^mirrorlist=|#mirrorlist=|g' \
+  -e 's|^#baseurl=http://mirror.centos.org/centos|baseurl=https://mirrors.ustc.edu.cn/centos|g' \
+  /etc/yum.repos.d/CentOS-Base.repo
+```
 
 以上命令只替换了默认启用的仓库。替换之后请运行 `yum makecache` 更新缓存。
 
@@ -43,9 +45,7 @@ x86_64, aarch64, ppc64le
 
 === "CentOS 7"
 
-    `/etc/yum.repos.d/CentOS-Base.repo` 文件：
-
-    ```ini
+    ```ini title="/etc/yum.repos.d/CentOS-Base.repo"
     --8<-- "centos7/CentOS-Base.repo"
     ```
 
