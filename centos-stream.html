@@ -2698,17 +2698,14 @@
 <h2 id="_3">收录架构<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>官方支持的架构</p>
 <h2 id="_4">收录版本<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>9-stream</p>
+<p>9-stream, 10-stream</p>
 <h2 id="_5">使用说明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>操作前请做好相应备份。</p>
 </div>
 <p>替换以下文件：</p>
-<ul>
-<li><code>/etc/yum.repos.d/centos.repo</code> 文件：</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">[baseos]</span>
+<div class="highlight"><span class="filename">/etc/yum.repos.d/centos.repo</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">[baseos]</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="na">name</span><span class="o">=</span><span class="s">CentOS Stream $releasever - BaseOS</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/centos-stream/$releasever-stream/BaseOS/$basearch/os</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># metalink=https://mirrors.centos.org/metalink?repo=centos-baseos-$stream&amp;arch=$basearch&amp;protocol=https,http</span>
@@ -2801,10 +2798,7 @@
 <a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a><span class="na">metadata_expire</span><span class="o">=</span><span class="s">6h</span>
 <a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a><span class="na">enabled</span><span class="o">=</span><span class="s">0</span>
 </code></pre></div>
-<ul>
-<li><code>/etc/yum.repos.d/centos-addons.repo</code> 文件：</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">[highavailability]</span>
+<div class="highlight"><span class="filename">/etc/yum.repos.d/centos-addons.repo</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">[highavailability]</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="na">name</span><span class="o">=</span><span class="s">CentOS Stream $releasever - HighAvailability</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/centos-stream/$releasever-stream/HighAvailability/$basearch/os</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># metalink=https://mirrors.centos.org/metalink?repo=centos-highavailability-$stream&amp;arch=$basearch&amp;protocol=https,http</span>
