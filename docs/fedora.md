@@ -20,7 +20,7 @@ x86_64
 
 !!! note
 
-    Fedora 默认使用 metalink 来根据用户发出请求的 IP 选择合适的镜像。通常情况下以下配置并不需要。
+    Fedora 默认使用 metalink 来根据用户发出请求的 IP 选择合适的镜像，通常情况下并不需要手动换源。
 
 !!! warning
 
