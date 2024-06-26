@@ -113,6 +113,7 @@ extra_css:
 nav:
   - index.md
   - rsync-guide.md
+  - quickstart.md
   - contributor.md
 
   - 发行版镜像:
