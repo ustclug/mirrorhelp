@@ -12,13 +12,13 @@
         <meta name="author" content="LUG @ USTC">
       
       
-        <link rel="canonical" href="https://mirrors.ustc.edu.cn/help/homebrew-services.git.html">
+        <link rel="canonical" href="https://mirrors.ustc.edu.cn/help/quickstart.html">
       
       
-        <link rel="prev" href="homebrew-cask.git.html">
+        <link rel="prev" href="rsync-guide.html">
       
       
-        <link rel="next" href="influxdata.html">
+        <link rel="next" href="contributor.html">
       
       
       <link rel="icon" href="/static/img/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Homebrew Services - USTC Mirror Help</title>
+        <title>镜像站搭建简要教程 - USTC Mirror Help</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#homebrew-services" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Homebrew Services
+              镜像站搭建简要教程
             
           </span>
         </div>
@@ -304,10 +304,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="quickstart.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    镜像站搭建简要教程
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="quickstart.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -316,6 +336,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#yuki" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yuki
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homepage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homepage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nginxhttp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx（HTTP 服务）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rsyncdrsync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rsyncd（Rsync 服务）
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1822,10 +1898,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1895,11 +1969,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
@@ -1913,7 +1987,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             软件镜像
@@ -2197,30 +2271,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Homebrew Services
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="homebrew-services.git.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="homebrew-services.git.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2229,71 +2283,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      地址
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      说明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      使用说明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      相关镜像
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      相关链接
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2648,45 +2637,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#yuki" class="md-nav__link">
     <span class="md-ellipsis">
-      地址
+      Yuki
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#homepage" class="md-nav__link">
     <span class="md-ellipsis">
-      说明
+      Homepage
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#nginxhttp" class="md-nav__link">
     <span class="md-ellipsis">
-      使用说明
+      Nginx（HTTP 服务）
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#rsyncdrsync" class="md-nav__link">
     <span class="md-ellipsis">
-      相关镜像
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      相关链接
+      Rsyncd（Rsync 服务）
     </span>
   </a>
   
@@ -2710,42 +2690,79 @@
   
 
 
-<h1 id="homebrew-services">Homebrew Services<a class="headerlink" href="#homebrew-services" title="Permanent link">&para;</a></h1>
-<h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><a href="https://mirrors.ustc.edu.cn/homebrew-services.git/">https://mirrors.ustc.edu.cn/homebrew-services.git/</a></p>
-<h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>与 <code>brew services</code> 有关的文件，用于在 macOS (<code>launchctl</code>) 与 Linux
-(<code>systemctl</code>) 上管理 brew 安装的服务。</p>
-<h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>使用 USTC 镜像安装，或将已安装的仓库远程替换为 USTC 镜像：</p>
-<div class="highlight"><pre><span></span><code>brew tap --custom-remote --force-auto-update homebrew/services https://mirrors.ustc.edu.cn/homebrew-services.git
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>若出现 <code>Error: invalid option: --custom-remote</code> 错误，请先运行
-<code>brew update</code> 将 <code>brew</code> 更新至 3.2.17 或以上版本。</p>
+<h1 id="_1">镜像站搭建简要教程<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">本部分需要验证与进一步扩充</p>
 </div>
-<p>重置为官方地址：</p>
-<div class="highlight"><pre><span></span><code>brew tap --custom-remote --force-auto-update homebrew/services https://github.com/Homebrew/homebrew-services
+<p>开始前先阅读 <a href="https://github.com/tuna/tunasync/wiki/Mirroring-Howto">https://github.com/tuna/tunasync/wiki/Mirroring-Howto</a>。</p>
+<p>假设 repo 总目录在 <code>/srv/repo</code>。</p>
+<h2 id="yuki">Yuki<a class="headerlink" href="#yuki" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/ustclug/yuki?tab=readme-ov-file#quickstart">https://github.com/ustclug/yuki?tab=readme-ov-file#quickstart</a></p>
+<p>假设镜像配置在 <code>/home/mirror/repos</code>，同步日志在 <code>/home/mirror/logs</code>，对应修改 <code>daemon.toml</code> 中 <code>repo_logs_dir</code> 和 <code>repo_config_dir</code>。同时范例中的 docker-ce 同步配置就位于 <code>/home/mirror/repos/docker-ce.yaml</code>，内容如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker-ce</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># every 1 hour</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">cron</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">storageDir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/srv/repo/docker-ce</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ustcmirror/rsync:latest</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">logRotCycle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nt">envs</span><span class="p">:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">RSYNC_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rsync.mirrors.ustc.edu.cn</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">RSYNC_PATH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker-ce/</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">RSYNC_EXCLUDE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--exclude=.~tmp~/</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">RSYNC_EXTRA</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--size-only</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">RSYNC_MAXDELETE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;50000&quot;</span>
 </code></pre></div>
-<h2 id="_4">相关镜像<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>如果需要快速获取仓库大小：</p>
 <ul>
-<li><a href="brew.git.html">brew.git</a></li>
-<li><a href="homebrew-bottles.html">homebrew-bottles</a></li>
-<li><a href="homebrew-core.git.html">homebrew-core.git</a></li>
-<li><a href="homebrew-cask.git.html">homebrew-cask.git</a></li>
+<li>ZFS: 需要创建 dataset 挂载到 /srv/repo/docker-ce</li>
+<li>XFS: 需要为 /srv/repo/docker-ce 设置 quota，可阅读 <a href="https://201.ustclug.org/ops/storage/filesystem/#xfs">https://201.ustclug.org/ops/storage/filesystem/#xfs</a></li>
+<li>其他：不支持</li>
 </ul>
-<h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<dl>
-<dt>官方主页</dt>
-<dd>
-<p><a href="https://github.com/Homebrew/homebrew-services">https://github.com/Homebrew/homebrew-services</a></p>
-</dd>
-<dt>Homebrew</dt>
-<dd>
-<p><a href="https://brew.sh/">https://brew.sh/</a></p>
-</dd>
-</dl>
+<p>并参考 <a href="https://github.com/ustclug/Yuki/blob/main/cmd/yukid/README.md#server-configuration">https://github.com/ustclug/Yuki/blob/main/cmd/yukid/README.md#server-configuration</a> 调整 daemon.toml。</p>
+<h2 id="homepage">Homepage<a class="headerlink" href="#homepage" title="Permanent link">&para;</a></h2>
+<p><a href="https://git.lug.ustc.edu.cn/mirrors/mirrors-index">https://git.lug.ustc.edu.cn/mirrors/mirrors-index</a></p>
+<ol>
+<li>clone 后 <code>git submodule update --init --recursive</code></li>
+<li>安装对应 Python 依赖（requests, jinja2）</li>
+<li>调整配置和代码的 <code>/srv/rsync-attrs</code> 到 <code>/srv/repo</code></li>
+<li>添加 crontab 定时运行，输出到 <code>/srv/repo/index.html</code></li>
+</ol>
+<p>如果需要状态页，参考 <a href="https://git.lug.ustc.edu.cn/mirrors/mirrors-index/-/blob/master/status/genstatus.py">https://git.lug.ustc.edu.cn/mirrors/mirrors-index/-/blob/master/status/genstatus.py</a></p>
+<h2 id="nginxhttp">Nginx（HTTP 服务）<a class="headerlink" href="#nginxhttp" title="Permanent link">&para;</a></h2>
+<p>最简单的 nginx 配置直接将 root 设置为 <code>/srv/repo</code>，并添加 <code>autoindex on</code> 即可。</p>
+<h2 id="rsyncdrsync">Rsyncd（Rsync 服务）<a class="headerlink" href="#rsyncdrsync" title="Permanent link">&para;</a></h2>
+<p>对于机械硬盘阵列，TUNA 的坏人有过优化 patch: <a href="https://github.com/tuna/rsync/blob/master/README-huai.md">https://github.com/tuna/rsync/blob/master/README-huai.md</a>，具体而言，需要在 SSD 上创建一个 ReiserFS 分区，然后每次同步完成之后将所有文件元数据同步到这个分区上，然后 patch 过的服务端会先读取 SSD 上的元数据。</p>
+<p>我们在 <a href="https://github.com/ustclug/rsync">https://github.com/ustclug/rsync</a> 自行维护一个 fork，应用到较新的 rsync 版本上。</p>
+<p>但是作为 quickstart，这里只介绍 Debian rsync 的配置。服务依赖于创建 <code>/etc/rsyncd.conf</code>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp">$ </span>cat<span class="w"> </span>/lib/systemd/system/rsync.service
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="go">[Unit]</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="go">Description=fast remote file copy program daemon</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="go">ConditionPathExists=/etc/rsyncd.conf</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="go">After=network.target</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="go">Documentation=man:rsync(1) man:rsyncd.conf(5)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="go">（省略）</span>
+</code></pre></div>
+<p>因此需要创建对应的文件，一个参考配置如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pid file = /var/run/rsyncd.pid
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>log file = /var/log/rsyncd.log
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>max verbosity = yes
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>transfer logging = yes
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>ignore nonreadable = yes
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>uid = nobody
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>gid = nogroup
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>use chroot = yes
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>dont compress = *
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>max connections = 60
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>refuse options = checksum
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>read only = true
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>timeout = 240
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>list = no
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>reverse lookup = no
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>[docker-ce]
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>path = /srv/repo/docker-ce
+</code></pre></div>
 
 
 
