@@ -70,7 +70,7 @@ Documentation=man:rsync(1) man:rsyncd.conf(5)
 
 因此需要创建对应的文件，一个参考配置如下：
 
-```
+```conf
 pid file = /var/run/rsyncd.pid
 log file = /var/log/rsyncd.log
 
