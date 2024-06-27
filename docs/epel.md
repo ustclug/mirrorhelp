@@ -30,17 +30,19 @@ Red Hat Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux (OL
 
 执行以下命令：
 
-    sudo yum install -y epel-release
-    sudo sed -e 's|^metalink=|#metalink=|g' \
-             -e 's|^#baseurl=https\?://download.fedoraproject.org/pub/epel/|baseurl=https://mirrors.ustc.edu.cn/epel/|g' \
-             -e 's|^#baseurl=https\?://download.example/pub/epel/|baseurl=https://mirrors.ustc.edu.cn/epel/|g' \
-             -i.bak \
-             /etc/yum.repos.d/epel{,-testing}.repo
+```shell
+sudo yum install -y epel-release
+sudo sed -e 's|^metalink=|#metalink=|g' \
+         -e 's|^#baseurl=https\?://download.fedoraproject.org/pub/epel/|baseurl=https://mirrors.ustc.edu.cn/epel/|g' \
+         -e 's|^#baseurl=https\?://download.example/pub/epel/|baseurl=https://mirrors.ustc.edu.cn/epel/|g' \
+         -i.bak \
+         /etc/yum.repos.d/epel{,-testing}.repo
+```
 
 以下是替换之后的 `/etc/yum.repos.d/epel.repo`
  文件：
 
-- CentOS 8:
+=== "CentOS 8"
 
     ```ini
     [epel]
@@ -75,7 +77,7 @@ Red Hat Enterprise Linux (RHEL), CentOS, Scientific Linux (SL), Oracle Linux (OL
     gpgcheck=1
     ```
 
-- CentOS 7:
+=== "CentOS 7"
 
     ```ini
     [epel]

@@ -24,9 +24,11 @@ FreeBSD pkg 包管理器的官方源配置是 `/etc/pkg/FreeBSD.conf`，请先�
 
 该配置文件是 FreeBSD 基本系统的一部分，会随着 `freebsd-update` 更新，请不要直接修改，而是创建 `/usr/local/etc/pkg/repos/FreeBSD.conf` 覆盖配置，文件内容如下：
 
-    FreeBSD: {
-      url: "http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
-    }
+```yaml
+FreeBSD: {
+  url: "http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+}
+```
 
 如果要使用滚动更新的 latest 仓库，把 `url` 配置最后的 `quarterly` 换成 `latest` 即可。
 
