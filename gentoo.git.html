@@ -1030,24 +1030,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      相关镜像
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      相关链接
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2692,24 +2674,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      相关镜像
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      相关链接
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2740,25 +2704,25 @@
 <p>修改 <code>/etc/portage/repos.conf/gentoo.conf</code> 中的 <code>sync-type</code> 为 <code>git</code>，<code>sync-uri</code> 为
 <code>https://mirrors.ustc.edu.cn/gentoo.git</code>。</p>
 <p>以下是修改后的：</p>
-<div class="highlight"><pre><span></span><code>[DEFAULT]
-main-repo = gentoo
-
-[gentoo]
-location = /var/db/repos/gentoo
-sync-type = git
-sync-uri = https://mirrors.ustc.edu.cn/gentoo.git
-auto-sync = yes
-sync-rsync-verify-jobs = 1
-sync-rsync-verify-metamanifest = yes
-sync-rsync-verify-max-age = 24
-sync-openpgp-key-path = /usr/share/openpgp-keys/gentoo-release.asc
-sync-openpgp-keyserver = hkps://keys.gentoo.org
-sync-openpgp-key-refresh-retry-count = 40
-sync-openpgp-key-refresh-retry-overall-timeout = 1200
-sync-openpgp-key-refresh-retry-delay-exp-base = 2
-sync-openpgp-key-refresh-retry-delay-max = 60
-sync-openpgp-key-refresh-retry-delay-mult = 4
-sync-webrsync-verify-signature = yes
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">[DEFAULT]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="na">main-repo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">gentoo</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">[gentoo]</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="na">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/db/repos/gentoo</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="na">sync-type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">git</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="na">sync-uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/gentoo.git</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="na">auto-sync</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="na">sync-rsync-verify-jobs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="na">sync-rsync-verify-metamanifest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="na">sync-rsync-verify-max-age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">24</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="na">sync-openpgp-key-path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/share/openpgp-keys/gentoo-release.asc</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="na">sync-openpgp-keyserver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">hkps://keys.gentoo.org</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="na">sync-openpgp-key-refresh-retry-count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">40</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="na">sync-openpgp-key-refresh-retry-overall-timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1200</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="na">sync-openpgp-key-refresh-retry-delay-exp-base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="na">sync-openpgp-key-refresh-retry-delay-max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">60</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="na">sync-openpgp-key-refresh-retry-delay-mult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">4</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="na">sync-webrsync-verify-signature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 </code></pre></div>
 <ul>
 <li>
@@ -2766,33 +2730,32 @@ sync-webrsync-verify-signature = yes
     方式同步）：</p>
 <p>按照上述教程更改完
 <code>/etc/portage/repos.conf/gentoo.conf</code>，需要：</p>
-<div class="highlight"><pre><span></span><code># 删除本地 main tree 目录
-rm -rf /var/db/repos/gentoo
-
-# 重新同步
-emerge --sync
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 删除本地 main tree 目录</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>rm<span class="w"> </span>-rf<span class="w"> </span>/var/db/repos/gentoo
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># 重新同步</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>emerge<span class="w"> </span>--sync
 </code></pre></div>
 </li>
 <li>
 <p>已经配置过 <code>Git</code> 同步方式的用户（其他镜像站换中科大源）只需要：</p>
 <p>更改完 <code>/etc/portage/repos.conf/gentoo.conf</code>：</p>
-<div class="highlight"><pre><span></span><code># 进入 main tree 目录
-cd /var/db/repos/gentoo
-
-# 将 remote url 设置为中科大
-git remote set-url origin https://mirrors.ustc.edu.cn/gentoo.git
-
-# 重新同步
-emerge --sync
-</code></pre></div>
+<p>```shell</p>
+<h1 id="main-tree">进入 main tree 目录<a class="headerlink" href="#main-tree" title="Permanent link">&para;</a></h1>
+<p>cd /var/db/repos/gentoo</p>
+<h1 id="remote-url">将 remote url 设置为中科大<a class="headerlink" href="#remote-url" title="Permanent link">&para;</a></h1>
+<p>git remote set-url origin https://mirrors.ustc.edu.cn/gentoo.git</p>
+<h1 id="_5">重新同步<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<p>emerge --sync
+emerge --sync</p>
 </li>
 </ul>
-<h2 id="_5">相关镜像<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_6">相关镜像<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="gentoo.html">gentoo</a></li>
 <li><a href="gentoo-portage.html">gentoo-portage</a></li>
 </ul>
-<h2 id="_6">相关链接<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_7">相关链接<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>官方主页</dt>
 <dd>
