@@ -1,63 +1,18 @@
 # CentOS
 
-!!! warning
+!!! warning "警告"
 
-    不受支持的版本已被官方移除出该仓库。如有需要，请使用 [centos-vault](https://mirrors.ustc.edu.cn/centos-vault/) 镜像，并自行替换对应的 URL。
+    CentOS 7 已于 2024 年 6 月 30 日结束维护，我们强烈建议立即迁移到其他解决方案，详情请见 [CentOS 仓库即将结束服务 (2024-06-30)](https://servers.ustclug.org/2024/05/centos-eol/)。
 
-    CentOS 7 将于 2024 年 6 月 30 日结束维护，我们强烈建议尽快迁移到其他解决方案。关于镜像仓库的后续处理，请阅读 [CentOS 仓库即将结束服务 (2024-06-30)](https://servers.ustclug.org/2024/05/centos-eol/)。
+    如有需要继续使用 CentOS，请使用 [CentOS Vault](centos-vault.md) 镜像。我们不对 CentOS Vault 镜像的稳定性及可用性作出任何保证。
 
     CentOS Stream 9 及以后的版本的镜像位于 [centos-stream](https://mirrors.ustc.edu.cn/centos-stream/)，详见 [centos-stream 帮助页](centos-stream.md)。
-
-## 地址
-
-<https://mirrors.ustc.edu.cn/centos/>
-
-## 说明
-
-CentOS 软件源
-
-## 收录架构
-
-x86_64, aarch64, ppc64le
-
-## 收录版本
-
-7
-
-## 使用说明
-
-!!! warning
-
-    操作前请做好相应备份。
-
-对于 CentOS 7，使用以下命令替换默认配置
-
-```shell
-sudo sed -i.bak \
-  -e 's|^mirrorlist=|#mirrorlist=|g' \
-  -e 's|^#baseurl=http://mirror.centos.org/centos|baseurl=https://mirrors.ustc.edu.cn/centos|g' \
-  /etc/yum.repos.d/CentOS-Base.repo
-```
-
-以上命令只替换了默认启用的仓库。替换之后请运行 `yum makecache` 更新缓存。
-
-以下是替换之后的文件：
-
-=== "CentOS 7"
-
-    ```ini title="/etc/yum.repos.d/CentOS-Base.repo"
-    --8<-- "centos7/CentOS-Base.repo"
-    ```
 
 ## 相关链接
 
 官方主页
 
 :   <https://www.centos.org/>
-
-邮件列表
-
-:   <https://wiki.centos.org/zh/GettingHelp/ListInfo>
 
 论坛
 
@@ -69,7 +24,7 @@ sudo sed -i.bak \
 
 Wiki
 
-:   <https://wiki.centos.org/zh/>
+:   <https://wiki.centos.org/>
 
 镜像列表
 

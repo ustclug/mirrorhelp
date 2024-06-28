@@ -126,6 +126,7 @@ nav:
     - blackarch.md
     - centos.md
     - centos-stream.md
+    - centos-vault.md
     - debian.md
     - debian-security.md
     - debian-cd.md

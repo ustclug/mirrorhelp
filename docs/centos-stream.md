@@ -33,3 +33,29 @@ CentOS Stream 软件源
 ```
 
 替换之后请运行 `yum makecache` 更新缓存。
+
+## 相关链接
+
+官方主页
+
+:   <https://www.centos.org/>
+
+邮件列表
+
+:   <https://wiki.centos.org/zh/GettingHelp/ListInfo>
+
+论坛
+
+:   <https://forums.centos.org/>
+
+文档
+
+:   <https://docs.centos.org/>
+
+Wiki
+
+:   <https://wiki.centos.org/>
+
+镜像列表
+
+:   <https://mirrormanager.fedoraproject.org/mirrors/CentOS>
