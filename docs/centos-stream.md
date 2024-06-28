@@ -40,10 +40,6 @@ CentOS Stream 软件源
 
 :   <https://www.centos.org/>
 
-邮件列表
-
-:   <https://wiki.centos.org/zh/GettingHelp/ListInfo>
-
 论坛
 
 :   <https://forums.centos.org/>
