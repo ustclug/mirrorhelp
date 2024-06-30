@@ -43,7 +43,10 @@ Debian Old Old Stable, Old Stable, Stable
 === "`sources.list` 格式"
 
     ```shell
-    sudo sed -i 's/security.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+    sudo sed -i -e 's|security.debian.org/\? |security.debian.org/debian-security |g' \
+                -e 's|security.debian.org|mirrors.ustc.edu.cn|g' \
+                -e 's|deb.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' \
+                /etc/apt/sources.list
     ```
 
 === "DEB822 格式"
