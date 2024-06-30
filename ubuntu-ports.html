@@ -2846,7 +2846,9 @@
 <ul>
 <li>
 <p>传统格式（<code>/etc/apt/sources.list</code>）</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s@//ports.ubuntu.com@//mirrors.ustc.edu.cn@g&#39;</span><span class="w"> </span>/etc/apt/sources.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s@//ports.ubuntu.com/\? @//ports.ubuntu.com/ubuntu-ports @g&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">            </span>-e<span class="w"> </span><span class="s1">&#39;s@//ports.ubuntu.com@//mirrors.ustc.edu.cn@g&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">            </span>/etc/apt/sources.list
 </code></pre></div>
 </li>
 <li>
