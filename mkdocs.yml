@@ -90,9 +90,6 @@ extra:
     - version: 11
       codename: bullseye
       proxmox_version: 7
-    - version: 10
-      codename: buster
-      proxmox_version: 6
   ubuntu_releases:
     - version: 24.04
       codename: noble
