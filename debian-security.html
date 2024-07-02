@@ -2793,7 +2793,7 @@ s390x 等</p>
 </div>
 </div>
 <p>当然也可以直接编辑 APT 源文件（需要使用 sudo）。以下是参考配置内容：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Debian 12</label><label for="__tabbed_2_2">Debian 11</label><label for="__tabbed_2_3">Debian 10</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Debian 12</label><label for="__tabbed_2_2">Debian 11</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><code>sources.list</code> 格式</label><label for="__tabbed_3_2">DEB822 格式</label></div>
@@ -2833,27 +2833,6 @@ s390x 等</p>
 </code></pre></div>
 <p>如果需要使用源码仓库，可以在 Types 中添加 <code>deb-src</code>。</p>
 <p>如果需要使用 backports 软件源，可以在 Suites 中添加 <code>bullseye-backports</code>。</p>
-</div>
-</div>
-</div>
-</div>
-<div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"><code>sources.list</code> 格式</label><label for="__tabbed_5_2">DEB822 格式</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/debian-security/</span><span class="w"> </span><span class="kp">buster/updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list.d/debian.sources</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://mirrors.ustc.edu.cn/debian-security</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">buster/updates</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main contrib non-free</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/debian-archive-keyring.gpg</span>
-</code></pre></div>
-<p>如果需要使用源码仓库，可以在 Types 中添加 <code>deb-src</code>。</p>
-<p>如果需要使用 backports 软件源，可以在 Suites 中添加 <code>buster-backports</code>。</p>
 </div>
 </div>
 </div>

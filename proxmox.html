@@ -2779,7 +2779,7 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s|^deb http://security.debian.org|deb https://mirrors.ustc.edu.cn/debian-security|g&#39;</span><span class="w"> </span>/etc/apt/sources.list
 </code></pre></div>
 <p>修改 Proxmox 的源文件，可以使用如下命令：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Proxmox VE 8</label><label for="__tabbed_1_2">Proxmox VE 7</label><label for="__tabbed_1_3">Proxmox VE 6</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Proxmox VE 8</label><label for="__tabbed_1_2">Proxmox VE 7</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bookworm pve-no-subscription&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/pve-no-subscription.list
@@ -2789,26 +2789,22 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/pve-no-subscription.list
 </code></pre></div>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/pve buster pve-no-subscription&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/pve-no-subscription.list
-</code></pre></div>
-</div>
 </div>
 </div>
 <p>对于 Proxmox Backup Server 和 Proxmox Mail Gateway，请将以上命令中的 <code>pve</code> 分别替换为 <code>pbs</code> 和 <code>pmg</code>。</p>
 <p>PVE 8 之后默认安装 Ceph 仓库源文件 <code>/etc/apt/sources.list.d/ceph.list</code>，可以使用如下命令更换源：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>/etc/apt/sources.list.d/ceph.list<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nv">CEPH_CODENAME</span><span class="o">=</span><span class="sb">`</span>ceph<span class="w"> </span>-v<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ceph<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $(NF-1)}&#39;</span><span class="sb">`</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nb">source</span><span class="w"> </span>/etc/os-release
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-</span><span class="nv">$CEPH_CODENAME</span><span class="s2"> </span><span class="nv">$VERSION_CODENAME</span><span class="s2"> no-subscription&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/ceph.list
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">fi</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>/etc/apt/sources.list.d/ceph.list<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nv">CEPH_CODENAME</span><span class="o">=</span><span class="sb">`</span>ceph<span class="w"> </span>-v<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ceph<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $(NF-1)}&#39;</span><span class="sb">`</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nb">source</span><span class="w"> </span>/etc/os-release
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-</span><span class="nv">$CEPH_CODENAME</span><span class="s2"> </span><span class="nv">$VERSION_CODENAME</span><span class="s2"> no-subscription&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/ceph.list
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">fi</span>
 </code></pre></div>
 <p>更改完 <code>sources.list</code> 文件后请运行 <code>apt update</code> 更新索引以生效。</p>
 <h3 id="ct-templates">CT Templates<a class="headerlink" href="#ct-templates" title="Permanent link">&para;</a></h3>
 <p>另外，如果你需要使用 Proxmox 网页端或 <code>pveam</code> 命令下载 CT Templates，可以替换 CT Templates 的源为 <code>http://mirrors.ustc.edu.cn</code>。</p>
 <p>具体方法：将 <code>/usr/share/perl5/PVE/APLInfo.pm</code> 文件中默认的源地址 <code>http://download.proxmox.com</code> 替换为 <code>https://mirrors.ustc.edu.cn/proxmox</code> 即可。</p>
 <p>可以使用如下命令：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sed<span class="w"> </span>-i.bak<span class="w"> </span><span class="s1">&#39;s|http://download.proxmox.com|https://mirrors.ustc.edu.cn/proxmox|g&#39;</span><span class="w"> </span>/usr/share/perl5/PVE/APLInfo.pm
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sed<span class="w"> </span>-i.bak<span class="w"> </span><span class="s1">&#39;s|http://download.proxmox.com|https://mirrors.ustc.edu.cn/proxmox|g&#39;</span><span class="w"> </span>/usr/share/perl5/PVE/APLInfo.pm
 </code></pre></div>
 <p>针对 <code>/usr/share/perl5/PVE/APLInfo.pm</code> 文件的修改，执行 <code>systemctl restart pvedaemon</code> 后生效。</p>
 <div class="admonition note">

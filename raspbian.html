@@ -2737,10 +2737,10 @@
 <p>armhf</p>
 <h2 id="_4">收录版本<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li>stretch (oldoldstable)</li>
-<li>buster (oldstable)</li>
-<li>bullseye (stable)</li>
-<li>bookworm (testing)</li>
+<li>stretch</li>
+<li>buster</li>
+<li>bullseye</li>
+<li>bookworm</li>
 </ul>
 <h2 id="_5">使用说明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
@@ -2758,7 +2758,7 @@
 sudo sed -i &#39;s|archive.raspbian.org|mirrors.ustc.edu.cn/raspbian|g&#39; /etc/apt/sources.list
 </code></pre></div>
 <p>当然也可以直接编辑 <code>/etc/apt/sources.list</code> 文件（需要使用 sudo）。删除原文件所有内容，用以下内容取代：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Raspbian bookworm</label><label for="__tabbed_1_2">Raspbian bullseye</label><label for="__tabbed_1_3">Raspbian buster</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Raspbian bookworm</label><label for="__tabbed_1_2">Raspbian bullseye</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/raspbian/raspbian/</span><span class="w"> </span><span class="kp">bookworm</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">rpi</span>
@@ -2770,41 +2770,27 @@ sudo sed -i &#39;s|archive.raspbian.org|mirrors.ustc.edu.cn/raspbian|g&#39; /etc
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ bullseye main contrib non-free rpi</span>
 </code></pre></div>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/raspbian/raspbian/</span><span class="w"> </span><span class="kp">buster</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">rpi</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ buster main contrib non-free rpi</span>
-</code></pre></div>
-</div>
 </div>
 </div>
 <p>Arm64 架构的 Raspberry Pi OS 仍处于 beta 状态，本镜像上游亦不含此架构。对于 arm64 的 Raspberry Pi OS，可以直接使用 arm64 Debian 的源：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Raspbian bookworm</label><label for="__tabbed_2_2">Raspbian bullseye</label><label for="__tabbed_2_3">Raspbian buster</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Raspbian bookworm</label><label for="__tabbed_2_2">Raspbian bullseye</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian/</span><span class="w"> </span><span class="kp">bookworm</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian bookworm main contrib non-free</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian/</span><span class="w"> </span><span class="kp">bookworm-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian bookworm-updates main contrib non-free</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian-security</span><span class="w"> </span><span class="kp">bookworm-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian-security/ bookworm-security-security main non-free contrib</span>
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian/</span><span class="w"> </span><span class="kp">bookworm</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian bookworm main contrib non-free</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian/</span><span class="w"> </span><span class="kp">bookworm-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian bookworm-updates main contrib non-free</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian-security</span><span class="w"> </span><span class="kp">bookworm-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian-security/ bookworm-security-security main non-free contrib</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian/</span><span class="w"> </span><span class="kp">bullseye</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian bullseye main contrib non-free</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian/</span><span class="w"> </span><span class="kp">bullseye-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian bullseye-updates main contrib non-free</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian-security</span><span class="w"> </span><span class="kp">bullseye-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian-security/ bullseye-security-security main non-free contrib</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian/</span><span class="w"> </span><span class="kp">buster</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian buster main contrib non-free</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian/</span><span class="w"> </span><span class="kp">buster-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian-security</span><span class="w"> </span><span class="kp">buster/updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates-security main non-free contrib</span>
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian/</span><span class="w"> </span><span class="kp">bullseye</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian bullseye main contrib non-free</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian/</span><span class="w"> </span><span class="kp">bullseye-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian bullseye-updates main contrib non-free</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian-security</span><span class="w"> </span><span class="kp">bullseye-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/debian-security/ bullseye-security-security main non-free contrib</span>
 </code></pre></div>
 </div>
 </div>
