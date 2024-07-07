@@ -105,9 +105,10 @@ Registry Mirrors:
 
 由于镜像站目前暂不为校外提供容器镜像缓存服务，如果需要自行搭建本地镜像缓存，可以参考以下的方式：
 
-Redis 容器：
+创建 Docker network 与 Redis 容器：
 
 ```shell
+docker network create docker-registry
 docker rm -f redis
 docker run \
   --name=redis \
@@ -159,19 +160,19 @@ http:
 notifications:
     endpoints:
         - name: local-5003
-            url: http://localhost:5003/callback
-            headers:
-                Authorization: [Bearer <an example token>]
-            timeout: 1s
-            threshold: 10
-            backoff: 1s
-            disabled: true
+          url: http://localhost:5003/callback
+          headers:
+              Authorization: [Bearer <an example token>]
+          timeout: 1s
+          threshold: 10
+          backoff: 1s
+          disabled: true
         - name: local-8083
-            url: http://localhost:8083/callback
-            timeout: 1s
-            threshold: 10
-            backoff: 1s
-            disabled: true
+          url: http://localhost:8083/callback
+          timeout: 1s
+          threshold: 10
+          backoff: 1s
+          disabled: true
 health:
     storagedriver:
         enabled: true
