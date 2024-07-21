@@ -32,7 +32,7 @@ Stackage 源使用。
 **第二步** ：配置 GHCup 使用科大源。编辑 `~/.ghcup/config.yaml` 增加如下配置：
 
     url-source:
-        OwnSource: https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml
+      OwnSource: https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml
 
 **第三步（可选）** ：配置 Cabal 和 Stack 使用科大源，请参考文档 [hackage](hackage.md) 和 [stackage](stackage.md)。
 
@@ -47,7 +47,7 @@ Stackage 源使用。
 使用预发布频道可以安装尚未正式发布的测试版本。要启用预发布源，将 `~/.ghcup/config.yaml` 文件中 `url-source` 一节修改如下：
 
     url-source:
-        OwnSource:
+      OwnSource:
         - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml
         - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-prereleases-0.0.7.yaml
 
