@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="/static/img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.76a95c52.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
@@ -2735,7 +2735,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager
 </code></pre></div>
 <p><strong>第二步</strong> ：配置 GHCup 使用科大源。编辑 <code>~/.ghcup/config.yaml</code> 增加如下配置：</p>
 <div class="highlight"><pre><span></span><code>url-source:
-    OwnSource: https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml
+  OwnSource: https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml
 </code></pre></div>
 <p><strong>第三步（可选）</strong> ：配置 Cabal 和 Stack 使用科大源，请参考文档 <a href="hackage.html">hackage</a> 和 <a href="stackage.html">stackage</a>。</p>
 <div class="admonition warning">
@@ -2747,7 +2747,7 @@ GHCup。</p>
 <h2 id="_4">预发布版本<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>使用预发布频道可以安装尚未正式发布的测试版本。要启用预发布源，将 <code>~/.ghcup/config.yaml</code> 文件中 <code>url-source</code> 一节修改如下：</p>
 <div class="highlight"><pre><span></span><code>url-source:
-    OwnSource:
+  OwnSource:
     - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml
     - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-prereleases-0.0.7.yaml
 </code></pre></div>
