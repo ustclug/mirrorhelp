@@ -192,6 +192,7 @@ nav:
     - homebrew-services.git.md
     - influxdata.md
     - kubernetes.md
+    - libnvidia-container.md
     - linux.git.md
     - mariadb.md
     - mozilla.md
