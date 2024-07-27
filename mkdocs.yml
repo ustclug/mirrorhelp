@@ -192,12 +192,12 @@ nav:
     - homebrew-services.git.md
     - influxdata.md
     - kubernetes.md
-    - libnvidia-container.md
     - linux.git.md
     - mariadb.md
     - mozilla.md
     - mysql-repo.md
     - nix-channels.md
+    - libnvidia-container.md
     - qtproject.md
     - raspberrypi.md
     - ros.md
