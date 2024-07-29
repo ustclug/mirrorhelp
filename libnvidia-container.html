@@ -2792,24 +2792,35 @@
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>以 Apache-2.0 协议开源的 NVIDIA Container Toolkit 的二进制软件包</p>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">已经在使用官方源了？</p>
+<p>你可以直接替换仓库配置文件中的 URL。</p>
+<p>对于 APT：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/nvidia.github.io/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/nvidia-container-toolkit.list
+</code></pre></div>
+<p>对于 Yum / Dnf：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/nvidia.github.io/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/yum.repos.d/nvidia-container-toolkit.repo
+</code></pre></div>
+<p>我们为 <a href="https://github.com/NVIDIA/nvidia-container-runtime">nvidia-container-runtime</a> 和 <a href="https://github.com/NVIDIA/nvidia-docker">nvidia-docker</a> 提供了 301 重定向，因此较早安装的 nvidia-container-runtime 和 nvidia-docker 也可以直接迁移，但需要注意 libnvidia-container 源中的软件版本会更新。</p>
+</div>
 <p>以下说明修改自 <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html">Installing the NVIDIA Container Toolkit</a>。</p>
 <h3 id="apt">Apt<a class="headerlink" href="#apt" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://nvidia.github.io/libnvidia-container/gpgkey<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>curl<span class="w"> </span>-s<span class="w"> </span>-L<span class="w"> </span>https://mirrors.ustc.edu.cn/libnvidia-container/stable/deb/nvidia-container-toolkit.list<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>sed<span class="w"> </span><span class="s1">&#39;s#deb https://nvidia.github.io#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://mirrors.ustc.edu.cn#g&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/nvidia-container-toolkit.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://nvidia.github.io/libnvidia-container/gpgkey<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>curl<span class="w"> </span>-s<span class="w"> </span>-L<span class="w"> </span>https://mirrors.ustc.edu.cn/libnvidia-container/stable/deb/nvidia-container-toolkit.list<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span>sed<span class="w"> </span><span class="s1">&#39;s#deb https://nvidia.github.io#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://mirrors.ustc.edu.cn#g&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/nvidia-container-toolkit.list
 </code></pre></div>
 <p>然后安装：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nvidia-container-toolkit
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nvidia-container-toolkit
 </code></pre></div>
 <h3 id="yum-dnf">Yum / Dnf<a class="headerlink" href="#yum-dnf" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>curl<span class="w"> </span>-s<span class="w"> </span>-L<span class="w"> </span>https://mirrors.ustc.edu.cn/libnvidia-container/stable/rpm/nvidia-container-toolkit.repo<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span>sed<span class="w"> </span><span class="s1">&#39;s#nvidia.github.io/libnvidia-container/stable/#mirrors.ustc.edu.cn/libnvidia-container/stable/#g&#39;</span><span class="w"> </span><span class="p">|</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span>sed<span class="w"> </span><span class="s1">&#39;s#nvidia.github.io/libnvidia-container/experimental/#mirrors.ustc.edu.cn/libnvidia-container/experimental/#g&#39;</span><span class="w"> </span><span class="p">|</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/yum.repos.d/nvidia-container-toolkit.repo
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>curl<span class="w"> </span>-s<span class="w"> </span>-L<span class="w"> </span>https://mirrors.ustc.edu.cn/libnvidia-container/stable/rpm/nvidia-container-toolkit.repo<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>sed<span class="w"> </span><span class="s1">&#39;s#nvidia.github.io/libnvidia-container/stable/#mirrors.ustc.edu.cn/libnvidia-container/stable/#g&#39;</span><span class="w"> </span><span class="p">|</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>sed<span class="w"> </span><span class="s1">&#39;s#nvidia.github.io/libnvidia-container/experimental/#mirrors.ustc.edu.cn/libnvidia-container/experimental/#g&#39;</span><span class="w"> </span><span class="p">|</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/yum.repos.d/nvidia-container-toolkit.repo
 </code></pre></div>
 <p>然后安装：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>nvidia-container-toolkit
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>nvidia-container-toolkit
 </code></pre></div>
 <h2 id="_4">相关链接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <dl>
