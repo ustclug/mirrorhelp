@@ -17,13 +17,13 @@
     对于 APT：
 
     ```shell
-    sed -i 's/nvidia.github.io/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/nvidia-container-toolkit.list
+    sed -i 's#nvidia.github.io#mirrors.ustc.edu.cn#g' /etc/apt/sources.list.d/nvidia-container-toolkit.list
     ```
 
     对于 Yum / Dnf：
 
     ```shell
-    sed -i 's/nvidia.github.io/mirrors.ustc.edu.cn/g' /etc/yum.repos.d/nvidia-container-toolkit.repo
+    sed -i 's#nvidia.github.io/libnvidia-container/stable/#mirrors.ustc.edu.cn/libnvidia-container/stable/#g;s#nvidia.github.io/libnvidia-container/experimental/#mirrors.ustc.edu.cn/libnvidia-container/experimental/#g' | /etc/yum.repos.d/nvidia-container-toolkit.repo
     ```
 
     我们为 [nvidia-container-runtime](https://github.com/NVIDIA/nvidia-container-runtime) 和 [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) 提供了 301 重定向，因此较早安装的 nvidia-container-runtime 和 nvidia-docker 也可以直接迁移，但需要注意 libnvidia-container 源中的软件版本会更新。
