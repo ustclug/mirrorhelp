@@ -2796,10 +2796,10 @@
 <p class="admonition-title">已经在使用官方源了？</p>
 <p>你可以直接替换仓库配置文件中的 URL。</p>
 <p>对于 APT：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/nvidia.github.io/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/nvidia-container-toolkit.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s#nvidia.github.io#mirrors.ustc.edu.cn#g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/nvidia-container-toolkit.list
 </code></pre></div>
 <p>对于 Yum / Dnf：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/nvidia.github.io/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/yum.repos.d/nvidia-container-toolkit.repo
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s#nvidia.github.io/libnvidia-container/stable/#mirrors.ustc.edu.cn/libnvidia-container/stable/#g;s#nvidia.github.io/libnvidia-container/experimental/#mirrors.ustc.edu.cn/libnvidia-container/experimental/#g&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>/etc/yum.repos.d/nvidia-container-toolkit.repo
 </code></pre></div>
 <p>我们为 <a href="https://github.com/NVIDIA/nvidia-container-runtime">nvidia-container-runtime</a> 和 <a href="https://github.com/NVIDIA/nvidia-docker">nvidia-docker</a> 提供了 301 重定向，因此较早安装的 nvidia-container-runtime 和 nvidia-docker 也可以直接迁移，但需要注意 libnvidia-container 源中的软件版本会更新。</p>
 </div>
