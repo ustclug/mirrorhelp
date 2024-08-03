@@ -38,45 +38,59 @@ AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约 80G（注意磁盘格
 
 具体做法摘录如下：首先下载 repo 工具。
 
-    mkdir ~/bin
-    PATH=~/bin:$PATH
-    curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-    ## 如果上述 URL 不可访问，可以用下面的：
-    ## curl -sSL  'https://gerrit-googlesource.proxy.ustclug.org/git-repo/+/master/repo?format=TEXT' |base64 -d > ~/bin/repo
-    chmod a+x ~/bin/repo
+```shell
+mkdir ~/bin
+PATH=~/bin:$PATH
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+## 如果上述 URL 不可访问，可以用下面的：
+## curl -sSL  'https://gerrit-googlesource.proxy.ustclug.org/git-repo/+/master/repo?format=TEXT' |base64 -d > ~/bin/repo
+chmod a+x ~/bin/repo
+```
 
 然后建立一个工作目录（名字任意）：
 
-    mkdir WORKING_DIRECTORY
-    cd WORKING_DIRECTORY
+```shell
+mkdir WORKING_DIRECTORY
+cd WORKING_DIRECTORY
+```
 
 初始化仓库：
 
-    repo init -u git://mirrors.ustc.edu.cn/aosp/platform/manifest
-    ## 如果提示无法连接到 gerrit.googlesource.com，可以编辑 ~/bin/repo，把 REPO_URL 一行替换成下面的：
-    ## REPO_URL = 'https://gerrit-googlesource.proxy.ustclug.org/git-repo'
+```shell
+repo init -u git://mirrors.ustc.edu.cn/aosp/platform/manifest
+## 如果提示无法连接到 gerrit.googlesource.com，可以编辑 ~/bin/repo，把 REPO_URL 一行替换成下面的：
+## REPO_URL = 'https://gerrit-googlesource.proxy.ustclug.org/git-repo'
+```
 
 如果需要某个特定的 Android 版本
 （[Android 版本列表](https://source.android.com/source/build-numbers.html#source-code-tags-and-builds)
 ([CN](https://source.android.google.cn/source/build-numbers?hl=zh-cn#source-code-tags-and-builds))，
 [镜像站 tags 列表](http://mirrors.ustc.edu.cn/aosp/platform/manifest.git/refs/tags/)）：
 
-    repo init -u git://mirrors.ustc.edu.cn/aosp/platform/manifest -b android-4.0.1_r1
+```shell
+repo init -u git://mirrors.ustc.edu.cn/aosp/platform/manifest -b android-4.0.1_r1
+```
 
 同步源码树（以后只需执行这条命令来同步）：
 
-    repo sync
+```shell
+repo sync
+```
 
 ## 已有仓库如何改用科大源 {#change_to_ustc}
 
 如果您已经从官方同步了 AOSP 仓库，现在希望使用科大的 AOSP 仓库，请修改
 `.repo/manifests.git/config`，将：
 
-    url = https://android.googlesource.com/platform/manifest
+```shell
+url = https://android.googlesource.com/platform/manifest
+```
 
 修改成：
 
-    url = git://mirrors.ustc.edu.cn/aosp/platform/manifest
+```shell
+url = git://mirrors.ustc.edu.cn/aosp/platform/manifest
+```
 
 即可。
 
@@ -86,15 +100,21 @@ AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约 80G（注意磁盘格
 
 如果由于某种原因不能通过 git 协议同步，请修改 `.repo/manifests.git/config`，将
 
-    url = git://mirrors.ustc.edu.cn/aosp/platform/manifest
+```shell
+url = git://mirrors.ustc.edu.cn/aosp/platform/manifest
+```
 
 修改成 (HTTP)：
 
-    url = http://mirrors.ustc.edu.cn/aosp/platform/manifest
+```shell
+url = http://mirrors.ustc.edu.cn/aosp/platform/manifest
+```
 
 或 (HTTPS)：
 
-    url = https://mirrors.ustc.edu.cn/aosp/platform/manifest
+```shell
+url = https://mirrors.ustc.edu.cn/aosp/platform/manifest
+```
 
 通过 HTTP(S) 同步过程中可能提示 clone.bundle 404 错误，这是正常现象，可以忽略。
 

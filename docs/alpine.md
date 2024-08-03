@@ -27,11 +27,11 @@ Alpine Linux 软件源
 sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 ```
 
-也可以直接编辑 `/etc/apk/repositories` 文件。以下是 v3.5 版本的参考配置：
+也可以直接编辑 `/etc/apk/repositories` 文件。以下是 v3.20 版本的参考配置：
 
 ```text
-https://mirrors.ustc.edu.cn/alpine/v3.5/main
-https://mirrors.ustc.edu.cn/alpine/v3.5/community
+https://mirrors.ustc.edu.cn/alpine/v3.20/main
+https://mirrors.ustc.edu.cn/alpine/v3.20/community
 ```
 
 也可以使用 `latest-stable` 指向最新的稳定版本：
