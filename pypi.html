@@ -26,7 +26,7 @@
     
     
       
-        <title>PyPI 镜像 - USTC Mirror Help</title>
+        <title>PyPI - USTC Mirror Help</title>
       
     
     
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PyPI 镜像
+              PyPI
             
           </span>
         </div>
@@ -1751,7 +1751,7 @@
           
   
   <span class="md-ellipsis">
-    PyPI 镜像
+    PyPI
   </span>
   
 
@@ -1762,7 +1762,7 @@
         
   
   <span class="md-ellipsis">
-    PyPI 镜像
+    PyPI
   </span>
   
 
@@ -2804,38 +2804,35 @@
   
 
 
-<h1 id="pypi">PyPI 镜像<a class="headerlink" href="#pypi" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>PyPI 源已暂时移除并重定向到 BFSU PyPI，详见 <a href="https://servers.ustclug.org/2019/01/pypi-%e9%95%9c%e5%83%8f%e5%8f%98%e6%9b%b4%e9%80%9a%e7%9f%a5/">PyPI
-镜像变更通知</a>。</p>
-</div>
+<h1 id="pypi">PyPI<a class="headerlink" href="#pypi" title="Permanent link">&para;</a></h1>
 <h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><a href="https://mirrors.ustc.edu.cn/pypi/">https://mirrors.ustc.edu.cn/pypi/</a></p>
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>PyPI（pip）软件源</p>
-<p>注意</p>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="_4">临时使用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>pip install -i https://mirrors.ustc.edu.cn/pypi/web/simple package
+<div class="highlight"><pre><span></span><code>pip install -i https://mirrors.ustc.edu.cn/pypi/simple package
 </code></pre></div>
 <h3 id="_5">设为默认<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>升级 <code>pip</code> 到最新的版本 <code>(&gt;=10.0.0)</code> 后进行配置：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 使用本镜像站来升级 pip</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/web/simple<span class="w"> </span>pip<span class="w"> </span>-U
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/web/simple
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple<span class="w"> </span>pip<span class="w"> </span>-U
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple
 </code></pre></div>
 <h2 id="_6">同步方式<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p>使用 bandersnatch，从 pypi.python.org 官方同步。</p>
+<ul>
+<li>软件包元数据使用 shadowmire 从 TUNA 同步</li>
+<li>软件包根据访问情况进行动态缓存，未命中的包重定向到 BFSU</li>
+</ul>
 <h2 id="_7">相关链接<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>pip</dt>
 <dd>
 <p><a href="https://pip.pypa.io/">https://pip.pypa.io/</a></p>
 </dd>
-<dt>bandersnatch</dt>
+<dt>shadowmire</dt>
 <dd>
-<p><a href="https://pypi.python.org/pypi/bandersnatch">https://pypi.python.org/pypi/bandersnatch</a></p>
+<p><a href="https://github.com/taoky/shadowmire/">https://github.com/taoky/shadowmire/</a></p>
 </dd>
 </dl>
 
