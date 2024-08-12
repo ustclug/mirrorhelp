@@ -10,7 +10,9 @@ Tailscale 镜像
 
 ## 收录版本
 
-Stable 版本的 Debian 与 Ubuntu 系统的安装包，除 MIPS 以外的所有架构
+- 软件版本：Stable
+- 发行版：受支持的 Debian 版本与 Ubuntu LTS 版本
+- 架构：除 MIPS 以外的所有架构
 
 ## 使用说明
 
