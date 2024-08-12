@@ -2767,7 +2767,11 @@
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Tailscale 镜像</p>
 <h2 id="_3">收录版本<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>Stable 版本的 Debian 与 Ubuntu 系统的安装包，除 MIPS 以外的所有架构</p>
+<ul>
+<li>软件版本：Stable</li>
+<li>发行版：受支持的 Debian 版本与 Ubuntu LTS 版本</li>
+<li>架构：除 MIPS 以外的所有架构</li>
+</ul>
 <h2 id="_4">使用说明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>参考 <a href="https://tailscale.com/kb/1031/install-linux">Tailscale 的安装教程</a>，在安装完成后替换软件源：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s,pkgs.tailscale.com/stable,mirrors.ustc.edu.cn/tailscale,g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/tailscale.list
