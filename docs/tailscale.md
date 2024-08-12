@@ -1,12 +1,6 @@
 # Tailscale
 
-## 地址
-
 <https://mirrors.ustc.edu.cn/tailscale/>
-
-## 说明
-
-Tailscale 镜像
 
 ## 收录版本
 
