@@ -205,5 +205,6 @@ nav:
     - ros2.md
     - rosdistro.md
     - sagemath.md
+    - tailscale.md
     - winget-source.md
     - xbmc.md
