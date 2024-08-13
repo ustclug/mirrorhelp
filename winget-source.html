@@ -2771,14 +2771,26 @@
 <p class="admonition-title">Note</p>
 <p>修改 WinGet 软件源需要管理员权限，请以管理员身份运行终端。</p>
 </div>
-<p>替换 USTC 镜像：</p>
-<div class="highlight"><pre><span></span><code>winget source remove winget
-winget source add winget https://mirrors.ustc.edu.cn/winget-source
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">WinGet &gt;= 1.8</label><label for="__tabbed_1_2">WinGet &lt;= 1.7</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>用以下命令替换 WinGet 源：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>winget<span class="w"> </span><span class="nb">source</span><span class="w"> </span>remove<span class="w"> </span>winget
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>winget<span class="w"> </span><span class="nb">source</span><span class="w"> </span>add<span class="w"> </span>winget<span class="w"> </span>https://mirrors.ustc.edu.cn/winget-source<span class="w"> </span>--trust-level<span class="w"> </span>trusted
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>用以下命令替换 WinGet 源：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>winget<span class="w"> </span><span class="nb">source</span><span class="w"> </span>remove<span class="w"> </span>winget
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>winget<span class="w"> </span><span class="nb">source</span><span class="w"> </span>add<span class="w"> </span>winget<span class="w"> </span>https://mirrors.ustc.edu.cn/winget-source
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>若出现 0x80073d1b : smartscreen reputation check failed.
+<p>若出现 0x80073d1b: SmartScreen reputation check failed.
 错误，请检查网络连接或暂时关闭 SmartScreen。</p>
+</div>
+</div>
+</div>
 </div>
 <p>重置为官方地址：</p>
 <div class="highlight"><pre><span></span><code>winget source reset winget
