@@ -1,11 +1,5 @@
 # Anaconda
 
-!!! warning
-
-    ~~由于合规性问题，Anaconda 源目前已经无限期停止服务。~~
-
-    由于硬盘容量问题，Anaconda 源暂时停止服务，所有访问将会被 302 重定向至 TUNA 镜像站。
-
 ## 地址
 
 <https://mirrors.ustc.edu.cn/anaconda/>
@@ -18,41 +12,34 @@ Anaconda 仓库镜像
 
 Anaconda 安装包可以在 <https://mirrors.ustc.edu.cn/anaconda/archive/> 下载。
 
-Miniconda 安装包可以在 <https://mirrors.ustc.edu.cn/anaconda/miniconda/> 下载。
+Miniconda（Anaconda 的轻量级替代）安装包可以在 <https://mirrors.ustc.edu.cn/anaconda/miniconda/> 下载。
 
-添加 USTC 仓库镜像：
+向 `.condarc` 写入配置以使用镜像站，其中各个操作系统对应的文件：
 
-```shell
-conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
-conda config --set show_channel_urls yes
+- Linux & macOS: `$HOME/.condarc`
+- Windows: `%USERPROFILE%\.condarc`
+    - 由于 Windows 资源管理器的限制，可能需要先运行 `conda config --set show_channel_urls yes` 来生成这个文件。
+
+内容如下：
+
+```yaml
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+  - https://mirrors.ustc.edu.cn/anaconda/pkgs/r
+  - https://mirrors.ustc.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.ustc.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.ustc.edu.cn/anaconda/cloud
 ```
 
-Conda 附加库：
+!!! warning "custom_channels"
 
-- Conda Forge
+    目前 `custom_channels` 暂未同步，会重定向至 BFSU。
 
-    ```shell
-    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
-    ```
-
-- msys2
-
-    ```shell
-    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/
-    ```
-
-- bioconda
-
-    ```shell
-    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/
-    ```
-
-- menpo
-
-    ```shell
-    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/
-    ```
+之后运行 `conda clean -i` 清除缓存后，使用 `conda create -n myenv numpy` 测试配置是否正确。
 
 ## 相关链接
 
