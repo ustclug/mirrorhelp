@@ -2762,46 +2762,38 @@
 
 
 <h1 id="anaconda">Anaconda<a class="headerlink" href="#anaconda" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>~~由于合规性问题，Anaconda 源目前已经无限期停止服务。~~</p>
-<p>由于硬盘容量问题，Anaconda 源暂时停止服务，所有访问将会被 302 重定向至 TUNA 镜像站。</p>
-</div>
 <h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><a href="https://mirrors.ustc.edu.cn/anaconda/">https://mirrors.ustc.edu.cn/anaconda/</a></p>
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Anaconda 仓库镜像</p>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Anaconda 安装包可以在 <a href="https://mirrors.ustc.edu.cn/anaconda/archive/">https://mirrors.ustc.edu.cn/anaconda/archive/</a> 下载。</p>
-<p>Miniconda 安装包可以在 <a href="https://mirrors.ustc.edu.cn/anaconda/miniconda/">https://mirrors.ustc.edu.cn/anaconda/miniconda/</a> 下载。</p>
-<p>添加 USTC 仓库镜像：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>show_channel_urls<span class="w"> </span>yes
-</code></pre></div>
-<p>Conda 附加库：</p>
+<p>Miniconda（Anaconda 的轻量级替代）安装包可以在 <a href="https://mirrors.ustc.edu.cn/anaconda/miniconda/">https://mirrors.ustc.edu.cn/anaconda/miniconda/</a> 下载。</p>
+<p>向 <code>.condarc</code> 写入配置以使用镜像站，其中各个操作系统对应的文件：</p>
 <ul>
-<li>
-<p>Conda Forge</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
-</code></pre></div>
-</li>
-<li>
-<p>msys2</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/
-</code></pre></div>
-</li>
-<li>
-<p>bioconda</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/
-</code></pre></div>
-</li>
-<li>
-<p>menpo</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/
-</code></pre></div>
+<li>Linux &amp; macOS: <code>$HOME/.condarc</code></li>
+<li>Windows: <code>%USERPROFILE%\.condarc</code><ul>
+<li>由于 Windows 资源管理器的限制，可能需要先运行 <code>conda config --set show_channel_urls yes</code> 来生成这个文件。</li>
+</ul>
 </li>
 </ul>
+<p>内容如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">channels</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">defaults</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">show_channel_urls</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">default_channels</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/pkgs/main</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/pkgs/r</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/pkgs/msys2</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">custom_channels</span><span class="p">:</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">conda-forge</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/cloud</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">pytorch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/cloud</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">custom_channels</p>
+<p>目前 <code>custom_channels</code> 暂未同步，会重定向至 BFSU。</p>
+</div>
+<p>之后运行 <code>conda clean -i</code> 清除缓存后，使用 <code>conda create -n myenv numpy</code> 测试配置是否正确。</p>
 <h2 id="_4">相关链接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>官方主页</dt>
