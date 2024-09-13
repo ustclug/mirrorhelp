@@ -27,6 +27,7 @@ FreeBSD pkg 包管理器的官方源配置是 `/etc/pkg/FreeBSD.conf`，请先�
 ```yaml
 FreeBSD: {
   url: "http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+  mirror_type: "none",
 }
 ```
 
