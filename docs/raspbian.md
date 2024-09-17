@@ -25,9 +25,11 @@ armhf
 
     操作前请做好相应备份
 
-将 `/etc/apt/sources.list`
-文件中默认的源地址 `http://raspbian.raspberrypi.org/` 替换为
-`http://mirrors.ustc.edu.cn/raspbian/` 即可。
+!!! note
+
+    首先用 `uname -m` 确认系统架构, 如果为 `aarch64`, 可直接参考 [Debian](debian.md) 镜像使用帮助。
+
+将 `/etc/apt/sources.list` 文件中默认的源地址 `http://raspbian.raspberrypi.org/` 替换为 `http://mirrors.ustc.edu.cn/raspbian/` 即可。
 
 raspbian 2018-04-19 之后的镜像默认源已经更改，用如下命令替换：
 
@@ -49,29 +51,11 @@ raspbian 2018-04-19 之后的镜像默认源已经更改，用如下命令替换
     ```
 {% endfor %}
 
-Arm64 架构的 Raspberry Pi OS 仍处于 beta 状态，本镜像上游亦不含此架构。对于 arm64 的 Raspberry Pi OS，可以直接使用 arm64 Debian 的源：
-
-{% for release in debian_releases %}
-
-{% set debian_security = release.codename + "-security" %}
-{% if release.version < 11 %}
-{% set debian_security = release.codename + "/updates" %}
-{% endif %}
-=== "Raspbian {{ release.codename }}"
-
-    ```debsources title="/etc/apt/sources.list"
-    deb https://mirrors.ustc.edu.cn/debian/ {{ release.codename }} main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }} main contrib non-free
-    deb https://mirrors.ustc.edu.cn/debian/ {{ release.codename }}-updates main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian {{ release.codename }}-updates main contrib non-free
-    deb https://mirrors.ustc.edu.cn/debian-security {{ debian_security }} main contrib non-free
-    # deb-src http://mirrors.ustc.edu.cn/debian-security/ {{ debian_security }}-security main non-free contrib
-    ```
-{% endfor %}
-
 编辑此文件后，请使用 `sudo apt-get update` 命令，更新软件索引。
 
-同时也可能需要更改 archive.raspberrypi.org 源，请参考 [raspberrypi](raspberrypi.md)。
+!!! note
+
+    同时也可能需要更改 `/etc/apt/sources.list.d/raspi.list` 的 archive.raspberrypi.org 源，请参考 [raspberrypi](raspberrypi.md)。
 
 ## 相关链接
 
@@ -95,10 +79,15 @@ Arm64 架构的 Raspberry Pi OS 仍处于 beta 状态，本镜像上游亦不含
 
 - 树莓派链接
 
-    树莓派基金会主页
+    官方主页
 
     :   <https://www.raspberrypi.org/>
 
-    树莓派基金会论坛 Raspberry Pi OS 版块
+    文档
 
-    :   <https://www.raspberrypi.org/forums/viewforum.php?f=66>
+    :   <https://www.raspberrypi.org/documentation/>
+
+- 其他镜像帮助
+
+    - [Raspberry Pi OS 镜像使用帮助](raspberry-pi-os-images.md)
+    - [Raspberrypi 镜像使用帮助](raspberrypi.md)

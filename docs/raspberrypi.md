@@ -66,10 +66,17 @@ sudo sed \
 
 ## 相关链接
 
-官方主页
+- 树莓派链接
 
-:   <https://www.raspberrypi.org/>
+    官方主页
 
-文档
+    :   <https://www.raspberrypi.org/>
 
-:   <https://www.raspberrypi.org/documentation/>
+    文档
+
+    :   <https://www.raspberrypi.org/documentation/>
+
+- 其他镜像帮助
+
+    - [Raspberry Pi OS 镜像使用帮助](raspberry-pi-os-images.md)
+    - [Raspbian 镜像使用帮助](raspbian.md)
