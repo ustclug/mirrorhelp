@@ -1293,6 +1293,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      相关链接
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2761,6 +2770,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      相关链接
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2788,28 +2806,76 @@
 <h2 id="_3">系统架构<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>armhf</li>
-<li>arm64 (Beta)</li>
+<li>arm64</li>
 <li>x86</li>
 </ul>
 <h2 id="_4">收录版本<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>最新的稳定版（bullseye）</p>
+<ul>
+<li>bullseye</li>
+<li>bookworm</li>
+</ul>
 <h2 id="_5">使用说明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>目前本镜像包含如下内容：</p>
+<dl>
+<dt>imager</dt>
+<dd>
+<p>Raspberry Pi Imager 官方刻录器。</p>
+</dd>
+<dt>raspios_(arm64, armhf)</dt>
+<dd>
+<p>Raspberry Pi OS（含桌面）</p>
+</dd>
+<dt>raspios_full_(arm64, armhf)</dt>
+<dd>
+<p>Raspberry Pi OS（含桌面，并包含官方推荐的软件）</p>
+</dd>
+<dt>raspios_lite_(arm64, armhf)</dt>
+<dd>
+<p>Raspberry Pi OS（不含桌面）</p>
+</dd>
+<dt>rpd_x86</dt>
+<dd>
+<p>Raspberry Pi Desktop，用于 x86 架构的设备</p>
+</dd>
+<dt>Raspberry_Pi_Education_Manual.pdf</dt>
+<dd>
+<p>教学用树莓派帮助手册</p>
+</dd>
+</dl>
+<p>需要安装 Raspberry Pi OS 时，一般下载 images 目录中的最新的即可，比如 arm64 的树莓派下载 <a href="https://mirrors.ustc.edu.cn/raspberry-pi-os-images/raspios_lite_arm64/images/">https://mirrors.ustc.edu.cn/raspberry-pi-os-images/raspios_lite_arm64/images/</a> 中最新的 zip 压缩包即可，解压完 zip 压缩包后即可开始刻录。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>对于刚接触 Linux 的同学，使用 <code>imager</code> 也许会是个节省时间的好办法。</p>
+<p>关于使用 armhf (32 bit) 还是 arm64 (64 bit) 版本，可以参考 <a href="https://www.raspberrypi.com/news/raspberry-pi-os-64-bit/">Raspberry Pi OS (64-bit)</a>。tl;dr:</p>
 <ul>
-<li>imager: Raspberry Pi Imager 官方刻录器。</li>
-<li>raspios_arm64: Arm64 架构的 Raspberry Pi OS（Beta）</li>
-<li>raspios_armhf: Armhf 架构的 Raspberry Pi OS</li>
-<li>raspios_full_armhf: Armhf 架构的 Raspberry Pi
-    OS，并包含官方推荐的软件</li>
-<li>raspios_lite_arm64: Arm64 架构的 Raspberry Pi OS（Beta，不含桌面）</li>
-<li>raspios_lite_armhf: Armhf 架构的 Raspberry Pi OS（不含桌面）</li>
-<li>rpd_x86: Raspberry Pi Desktop，用于 x86 架构的设备</li>
-<li>Raspberry_Pi_Education_Manual.pdf: 教学用树莓派帮助手册</li>
+<li>无特殊兼容需求的情况下，推荐使用 arm64</li>
+<li>对于 4GB 及以上内存的设备，推荐使用 arm64</li>
+<li>对于古早设备 (Rpi 1, 2, Zero), 请使用 armhf</li>
 </ul>
-<p>需要安装 Raspberry Pi OS 时，一般下载 images 目录中的最新的即可，比如
-arm64 的树莓派下载
-<a href="https://mirrors.ustc.edu.cn/raspberry-pi-os-images/raspios_lite_arm64/images/">https://mirrors.ustc.edu.cn/raspberry-pi-os-images/raspios_lite_arm64/images/</a>
-中最新的 zip 压缩包即可，解压完 zip 压缩包后即可开始刻录。</p>
+</div>
+<h2 id="_6">相关链接<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>树莓派链接</p>
+<dl>
+<dt>官方主页</dt>
+<dd>
+<p><a href="https://www.raspberrypi.org/">https://www.raspberrypi.org/</a></p>
+</dd>
+<dt>文档</dt>
+<dd>
+<p><a href="https://www.raspberrypi.org/documentation/">https://www.raspberrypi.org/documentation/</a></p>
+</dd>
+</dl>
+</li>
+<li>
+<p>其他镜像帮助</p>
+<ul>
+<li><a href="raspbian.html">Raspbian 镜像使用帮助</a></li>
+<li><a href="raspberrypi.html">Raspberrypi 镜像使用帮助</a></li>
+</ul>
+</li>
+</ul>
 
 
 
