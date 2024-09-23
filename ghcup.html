@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="/static/img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.06209087.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
@@ -2789,22 +2789,22 @@ Stackage 源使用。</p>
 <p>参考如下步骤可安装完整的 Haskell 工具链。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>以下命令会安装并配置 GHCup 0.0.7 版本的元数据。可查看
+<p>以下命令会安装并配置 GHCup 0.0.8 版本的元数据。可查看
 <a href="https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/">https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/</a>
 目录的内容，并选择需要安装的 GHCup 版本的 yaml 文件替换以下命令中的
 URL。</p>
 </div>
 <p><strong>第一步（可选）</strong> ：使用科大源安装 GHCup 本体。如已经安装 GHCup，可跳到下一步。</p>
 <div class="highlight"><pre><span></span><code># Linux, FreeBSD, macOS 用户：在终端中运行如下命令
-curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell | BOOTSTRAP_HASKELL_YAML=https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml sh
+curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell | BOOTSTRAP_HASKELL_YAML=https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml sh
 
 # Windows 用户：以非管理员身份在 PowerShell 中运行如下命令
-$env:BOOTSTRAP_HASKELL_YAML = &#39;https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml&#39;
+$env:BOOTSTRAP_HASKELL_YAML = &#39;https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml&#39;
 Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;Invoke-Command -ScriptBlock ([ScriptBlock]::Create((Invoke-WebRequest https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -ArgumentList $true
 </code></pre></div>
 <p><strong>第二步</strong> ：配置 GHCup 使用科大源。编辑 <code>~/.ghcup/config.yaml</code> 增加如下配置：</p>
 <div class="highlight"><pre><span></span><code>url-source:
-  OwnSource: https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml
+  OwnSource: https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml
 </code></pre></div>
 <p><strong>第三步（可选）</strong> ：配置 Cabal 和 Stack 使用科大源，请参考文档 <a href="hackage.html">hackage</a> 和 <a href="stackage.html">stackage</a>。</p>
 <div class="admonition warning">
@@ -2817,8 +2817,8 @@ GHCup。</p>
 <p>使用预发布频道可以安装尚未正式发布的测试版本。要启用预发布源，将 <code>~/.ghcup/config.yaml</code> 文件中 <code>url-source</code> 一节修改如下：</p>
 <div class="highlight"><pre><span></span><code>url-source:
   OwnSource:
-    - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.7.yaml
-    - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-prereleases-0.0.7.yaml
+    - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml
+    - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-prereleases-0.0.8.yaml
 </code></pre></div>
 <h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <dl>
@@ -2920,7 +2920,7 @@ GHCup。</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes", "navigation.sections", "navigation.top"], "search": "assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes", "navigation.sections", "navigation.top"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="assets/javascripts/bundle.56dfad97.min.js"></script>
