@@ -15,7 +15,7 @@ Stackage 源使用。
 
 !!! note
 
-    以下命令会安装并配置 GHCup 0.0.7 版本的元数据。可查看
+    以下命令会安装并配置 GHCup 0.0.8 版本的元数据。可查看
     <https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/>
     目录的内容，并选择需要安装的 GHCup 版本的 yaml 文件替换以下命令中的
     URL。
@@ -49,7 +49,7 @@ Stackage 源使用。
     url-source:
       OwnSource:
         - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml
-        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-prereleases-0.0.7.yaml
+        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-prereleases-0.0.8.yaml
 
 ## 相关链接
 
