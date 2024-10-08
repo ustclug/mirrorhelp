@@ -10,7 +10,7 @@ FreeBSD 预编译软件包镜像
 
 ## 收录架构
 
-所有受官方支持的 Tier-1 架构，详细参见 <https://pkg.freebsd.org/>。
+所有受官方支持版本的 amd64, aarch64 和 i386 架构，详细参见 <https://pkg.freebsd.org/>。
 
 ## 收录版本
 
