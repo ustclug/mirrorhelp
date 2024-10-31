@@ -75,7 +75,7 @@ Registry Mirrors:
     https://docker.mirrors.ustc.edu.cn/
 ```
 
-### 如何搭建本地镜像缓存？ {#self-host}
+## 如何搭建本地镜像缓存？ {#self-host}
 
 由于镜像站目前暂不为校外提供容器镜像缓存服务，如果需要自行搭建本地镜像缓存，可以参考以下步骤：
 
