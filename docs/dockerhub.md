@@ -2,9 +2,7 @@
 
 ## 地址
 
-- Docker Hub 镜像缓存：*暂停服务*
-- Google Container Registry 镜像缓存：<https://gcr.mirrors.ustc.edu.cn>
-- Quay.io 镜像缓存：<https://quay.mirrors.ustc.edu.cn>
+所有镜像缓存已暂停服务
 
 ## 说明
 
@@ -12,41 +10,22 @@ Docker Hub、Google Container Registry 与 Quay.io 镜像缓存
 
 ## 使用说明
 
-!!! warning
+!!! failure "服务已关闭"
 
-    由于访问原始站点的网络带宽等条件的限制，导致 Google Container Registry (gcr.io) 与 Quay Container Registry (quay.io)
-    的镜像缓存处于基本不可用的状态，因此科大镜像站的各容器镜像服务仅限校内使用。
+    由于访问原始站点的网络带宽等条件的限制，我们已关闭镜像缓存服务。
 
-    对于从科大校外的访问：
+    本文档结尾提供了[搭建本地镜像缓存](#self-host)的方式，以供参考。
 
-    -   Google Container Registry 会返回 403；
-    -   Quay 会被 302 重定向至源站。
-
-    本文档结尾提供了搭建本地镜像缓存的方式，以供参考。
-
-- *2020-03-08* Docker Hub 镜像缓存的访问会被 302 重定向至其他国内
-    Docker Hub 镜像源。
-- *2020-08-16* Google Container Registry 的镜像缓存的访问会被 302
-    重定向至阿里云提供的公开镜像服务（包含了部分 gcr.io
-    上存在的容器镜像）；Quay Container Registry 的镜像缓存的访问会被 302
-    重定向至源站。
-- *2020-08-21* 考虑到 gcr
-    镜像重定向至阿里云提供的公开镜像服务可能存在的安全隐患（见
-    [mirrorhelp#158](https://github.com/ustclug/mirrorhelp/issues/158)），目前校外对
-    gcr 镜像的访问返回 403。
-- *2022-08-24* 由于获悉阿里云的 Docker Hub 镜像不再更新，目前校外对
-    Docker Hub 镜像的访问返回 403。用户需要修改配置，选择其他国内的
-    Docker Hub 镜像源。
-- *2024-06-06* ，暂时关闭 Docker Hub 镜像缓存服务，GCR 与 Quay 暂不受影响。
-
-!!! warning
-
-    2020 年 11 月后，Docker Hub 新增了 [访问速率限制](https://docs.docker.com/docker-hub/download-rate-limit/)，这可能导致在校内使用 Docker Hub 镜像缓存时出现间歇性的问题。
+- *2020-03-08* Docker Hub 镜像缓存的访问会被 302 重定向至其他国内 Docker Hub 镜像源。
+- *2020-08-16* Google Container Registry 的镜像缓存的访问会被 302 重定向至阿里云提供的公开镜像服务（包含了部分 gcr.io 上存在的容器镜像）；Quay Container Registry 的镜像缓存的访问会被 302 重定向至源站。
+- *2020-08-21* 考虑到 GCR 镜像重定向至阿里云提供的公开镜像服务可能存在的安全隐患（见 [mirrorhelp#158](https://github.com/ustclug/mirrorhelp/issues/158)），目前校外对 GCR 镜像的访问返回 403。
+- *2022-08-24* 由于获悉阿里云的 Docker Hub 镜像不再更新，目前校外对 Docker Hub 镜像的访问返回 403。用户需要修改配置，选择其他国内的 Docker Hub 镜像源。
+- *2024-06-06* 由于不可抗力因素，暂时关闭 Docker Hub 镜像缓存服务，GCR 与 Quay 暂不受影响。
+- *2024-08-12* 由于 GCR 和 Quay 长期没有校内用户，暂时关闭 GCR 与 Quay 镜像缓存服务。
 
 ### Linux
 
-对于使用 systemd 的系统（Ubuntu 16.04+、Debian 8+、Rocky Linux），
-在配置文件 `/etc/docker/daemon.json` 中加入：
+对于使用 systemd 的系统（Ubuntu 16.04+、Debian 8+、Rocky Linux），在配置文件 `/etc/docker/daemon.json` 中加入：
 
 ```json
 {
@@ -81,16 +60,11 @@ sudo systemctl restart docker
 
 === "新版本"
 
-    在系统右下角托盘 Docker 图标内右键菜单选择 `Settings`，
-    打开配置窗口后左侧导航菜单选择 `Docker Engine`。参考 Linux 中 "使用 systemd 系统" 的配置，
-    在 JSON 配置中添加 `"registry-mirrors"` 一项，之后点击 "Apply & Restart" 保存并重启 Docker 即可。
+    在系统右下角托盘 Docker 图标内右键菜单选择 `Settings`，打开配置窗口后左侧导航菜单选择 `Docker Engine`。参考 Linux 中 "使用 systemd 系统" 的配置，在 JSON 配置中添加 `"registry-mirrors"` 一项，之后点击 "Apply & Restart" 保存并重启 Docker 即可。
 
 === "旧版本"
 
-    在系统右下角托盘 Docker 图标内右键菜单选择 `Settings`
-    ，打开配置窗口后左侧导航菜单选择 `Daemon`。在 `Registry mirrors`
-    一栏中填写地址 `https://docker.mirrors.ustc.edu.cn/`，之后点击 Apply
-    保存后 Docker 就会重启并应用配置的镜像地址了。
+    在系统右下角托盘 Docker 图标内右键菜单选择 `Settings`，打开配置窗口后左侧导航菜单选择 `Daemon`。在 `Registry mirrors` 一栏中填写地址 `https://docker.mirrors.ustc.edu.cn/`，之后点击 Apply 保存后 Docker 就会重启并应用配置的镜像地址了。
 
 ### 检查 Docker Hub 是否生效
 
@@ -103,7 +77,7 @@ Registry Mirrors:
 
 ### 如何搭建本地镜像缓存？ {#self-host}
 
-由于镜像站目前暂不为校外提供容器镜像缓存服务，如果需要自行搭建本地镜像缓存，可以参考以下的方式：
+由于镜像站目前暂不为校外提供容器镜像缓存服务，如果需要自行搭建本地镜像缓存，可以参考以下步骤：
 
 创建 Docker network 与 Redis 容器：
 
