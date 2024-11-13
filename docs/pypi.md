@@ -27,7 +27,7 @@ pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/simple
 ## 同步方式
 
 - 软件包元数据使用 shadowmire 从 TUNA 同步
-- 软件包根据访问情况进行动态缓存，未命中的包重定向到 BFSU
+- 软件包根据访问情况进行动态缓存，未命中的包重定向到 TUNA
 
 ## 相关链接
 
