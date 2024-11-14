@@ -11,10 +11,7 @@ Stackage 源使用。
 
 !!! warning
 
-    当前的 GHCup 0.0.8 版本会在安装时也尝试安装 cabal，
-    因此建议在安装 GHCup 前先手动配置 cabal 使用镜像，
-    方法为参考文档 [hackage](https://mirrors.ustc.edu.cn/help/hackage.html#cabal)，
-    修改 `~/.cabal/config`。
+    当前的 GHCup 0.0.8 版本会在安装时也尝试安装 cabal，因此建议在安装 GHCup 前先手动配置 cabal 使用镜像，方法为参考文档 [hackage](https://mirrors.ustc.edu.cn/help/hackage.html#cabal) 中的说明，修改 `~/.cabal/config`。
 
 ## 使用方法
 
