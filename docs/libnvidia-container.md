@@ -6,7 +6,11 @@
 
 ## 说明
 
-以 Apache-2.0 协议开源的 NVIDIA Container Toolkit 的二进制软件包
+以 Apache-2.0 协议开源的 NVIDIA Container Toolkit 的二进制软件包，同步自 [NVIDIA/libnvidia-container](https://github.com/NVIDIA/libnvidia-container) 仓库的 `gh-pages` 分支。
+
+!!! tip
+
+    [nvidia-container-runtime](https://github.com/NVIDIA/nvidia-container-runtime) 和 [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) 均已停止维护，相关功能完全由 libnvidia-container 替代。
 
 ## 使用说明
 
@@ -20,7 +24,7 @@
     sed -i 's#nvidia.github.io#mirrors.ustc.edu.cn#g' /etc/apt/sources.list.d/nvidia-container-toolkit.list
     ```
 
-    对于 Yum / Dnf：
+    对于 Yum / DNF：
 
     ```shell
     sed -i 's#nvidia.github.io/libnvidia-container/stable/#mirrors.ustc.edu.cn/libnvidia-container/stable/#g;s#nvidia.github.io/libnvidia-container/experimental/#mirrors.ustc.edu.cn/libnvidia-container/experimental/#g' | /etc/yum.repos.d/nvidia-container-toolkit.repo
@@ -30,7 +34,7 @@
 
 以下说明修改自 [Installing the NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)。
 
-### Apt
+### APT
 
 ```shell
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
@@ -45,7 +49,7 @@ curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dear
 sudo apt update && sudo apt install nvidia-container-toolkit
 ```
 
-### Yum / Dnf
+### Yum / DNF
 
 ```shell
 curl -s -L https://mirrors.ustc.edu.cn/libnvidia-container/stable/rpm/nvidia-container-toolkit.repo | \
