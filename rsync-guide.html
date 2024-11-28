@@ -2829,25 +2829,25 @@
 <h2 id="_2">总述<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>中科大开源镜像站允许下游站点使用 <a href="https://www.samba.org/rsync/">rsync</a>
 协议同步站点上的内容。</p>
-<p>因可能消耗大量服务器资源，我们非常不推荐下游镜像站点或个人用户使用
-<code>HTTP</code> / <code>HTTPS</code> / <code>FTP</code> 协议从站点大规模同步数据。
-我们可能采取技术措施对使用非 <code>rsync</code>
+<p>因可能消耗大量服务器资源，我们不允许下游镜像站点或个人用户使用
+HTTP / HTTPS 协议从站点大规模同步数据。
+我们会采取技术措施对使用非 rsync
 协议进行大量内容同步的用户进行限流或封禁。</p>
 <h2 id="rsync">rsync 同步方式<a class="headerlink" href="#rsync" title="Permanent link">&para;</a></h2>
 <h3 id="_3">同步专用域名<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>如需使用 <code>rsync</code> 协议访问科大开源镜像站，请使用 <code>rsync</code> 专用的域名：<code>rsync.mirrors.ustc.edu.cn</code>。</p>
+<p>如需使用 rsync 协议访问科大开源镜像站，请使用 rsync 专用的域名：<code>rsync.mirrors.ustc.edu.cn</code>。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>使用非标准域名 <code>rsync</code> 访问站点的用户可能无法进行同步。</p>
+<p>使用非标准域名访问站点的用户可能无法通过 rsync 进行同步。</p>
 </div>
 <h3 id="_4">同步路径<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>由于 <code>rsync</code> 协议实现的限制，原有的使用 <code>/repo/</code> 前缀同步的方式难以进行负载均衡。因此从 2022 年 4 月 2 日后，同步将不再需要添加 <code>/repo/</code> 前缀。例如，<code>ubuntu</code> 仓库的实际路径即为 <code>rsync://rsync.mirrors.ustc.edu.cn/ubuntu</code>。原有的 <code>/repo/</code> 仍然保留，但是其中的部分仓库之后会迁移出去，我们建议用户尽快更换为新的路径。</p>
+<p>由于 rsync 协议实现的限制，原有的使用 <code>/repo/</code> 前缀同步的方式难以进行负载均衡。因此从 2022 年 4 月 2 日后，同步将不再需要添加 <code>/repo/</code> 前缀。例如，<code>ubuntu</code> 仓库的实际路径即为 <code>rsync://rsync.mirrors.ustc.edu.cn/ubuntu</code>。原有的 <code>/repo/</code> 仍然保留，但是其中的部分仓库之后会迁移出去，我们建议用户尽快更换为新的路径。</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>我们强烈推荐用户在实际进行 <code>rsync</code> 同步之前先使用 <code>rsync</code>
+<p>我们强烈推荐用户在实际进行 rsync 同步之前先使用 <code>rsync</code>
 工具列出目录内容以实际观察目录结构。例如，用户可以使用如下命令列出
 <code>ubuntu</code> 仓库根目录的具体内容：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>rsync<span class="w"> </span>rsync://rsync.mirrors.ustc.edu.cn/ubuntu/
@@ -2877,7 +2877,7 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>为避免占用服务器过多资源，我们对单 IP 地址的 <code>rsync</code> 连接数做出了限制，
+<p>为避免占用服务器过多资源，我们对单 IP 地址的 rsync 连接数做出了限制，
 在 2021 年 2 月 6 日后，限制从单 IP 2 个连接提升为 5 个连接，
 过多的连接将被拒绝访问。请合理安排同步方式以达到最大的同步效率。</p>
 </div>
