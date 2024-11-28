@@ -108,7 +108,7 @@ extra_css:
   - https://mirrors.ustc.edu.cn/static/help/roboto-mono/stylesheet.css
 
 nav:
-  - index.md
+  - 首页: index.md
   - rsync-guide.md
   - quickstart.md
   - contributor.md
