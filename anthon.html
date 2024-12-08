@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="/static/img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
     
     
       
@@ -580,10 +580,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      工具修改
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      手动修改（不推荐）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       相关链接
     </span>
@@ -2732,10 +2756,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      工具修改
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      手动修改（不推荐）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       相关链接
     </span>
@@ -2765,17 +2813,19 @@
 <h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><a href="https://mirrors.ustc.edu.cn/anthon">https://mirrors.ustc.edu.cn/anthon</a></p>
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>AOSC OS（安同 OS）软件源。
-AOSC OS 是一个由安同开源社区（<a href="https://aosc.io">https://aosc.io</a>）开发的半滚动 Linux 发行版，支持多种处理器架构。</p>
+<p>AOSC OS（安同 OS）软件源。AOSC OS 是一个由安同开源社区（<a href="https://aosc.io">https://aosc.io</a>）开发的半滚动 Linux 发行版，支持多种处理器架构。</p>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>AOSC OS 内置 <code>apt-gen-list</code> 工具来开关社区提供的可用镜像源。要启用 USTC 源，执行：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-gen-list<span class="w"> </span>add-mirror<span class="w"> </span>ustc
+<h3 id="_4">工具修改<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>请使用以下命令交互式开启/关闭镜像源，输入镜像源名称并使用空格启用/禁用镜像源（请注意：<code>oma mirror</code> 允许指定多个镜像源，请注意禁用不需要使用的镜像源）：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>oma<span class="w"> </span>mirror
 </code></pre></div>
-<p>要仅启用 USTC 源，执行：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>apt-gen-list<span class="w"> </span>set-mirror<span class="w"> </span>ustc
+<p>关于 <code>oma mirror</code> 的更多详细命令和用法，请参考 <a href="https://github.com/AOSC-Dev/oma?tab=readme-ov-file#command-reference">oma 的 GitHub 页面</a>。</p>
+<h3 id="_5">手动修改（不推荐）<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>安同 OS 推荐使用 <code>oma</code> 完成对软件源配置的修改，不推荐手动编辑配置文件。</p>
+<p>如确实有相关需求，请按下例编辑 <code>/etc/apt/sources.list</code> 的内容：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/anthon/debs</span><span class="w"> </span><span class="kp">stable</span><span class="w"> </span><span class="kp">main</span>
 </code></pre></div>
-<p>关于 <code>apt-gen-list</code> 的语义和详细用法，请执行 <code>apt-gen-list help</code> 查看帮助。</p>
-<h2 id="_4">相关链接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_6">相关链接<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>官方主页</dt>
 <dd>
@@ -2785,9 +2835,9 @@ AOSC OS 是一个由安同开源社区（<a href="https://aosc.io">https://aosc.
 <dd>
 <p><a href="https://wiki.aosc.io">https://wiki.aosc.io</a></p>
 </dd>
-<dt>镜像列表</dt>
+<dt>赞助方一览（含镜像源列表）</dt>
 <dd>
-<p><a href="https://aosc.io/repo">https://aosc.io/repo</a></p>
+<p><a href="https://aosc.io/sponsors">https://aosc.io/sponsors</a></p>
 </dd>
 </dl>
 
