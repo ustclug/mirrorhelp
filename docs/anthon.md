@@ -40,6 +40,6 @@ deb https://mirrors.ustc.edu.cn/anthon/debs stable main
 
 :   <https://wiki.aosc.io>
 
-镜像列表
+赞助方一览（含镜像源列表）
 
-:   <https://aosc.io/repo>
+:   <https://aosc.io/sponsors>
