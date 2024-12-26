@@ -49,14 +49,18 @@ Windows 用户：以非管理员身份在 PowerShell 中运行如下命令
     及以上）。如果你使用的 GHCup 版本比较旧，请参考上述步骤安装新版本
     GHCup。
 
-## 预发布版本
+## 非正式频道
 
-使用预发布频道可以安装尚未正式发布的测试版本。要启用预发布源，将 `~/.ghcup/config.yaml` 文件中 `url-source` 一节修改如下：
+Ghcup 提供预发布版本（ `prereleases` ）、交叉编译版本（ `cross` ）和基础安装版本（ `vanilla` ）作为额外频道。要启用这些频道，修改 `~/.ghcup/config.yaml` 中的 `url-source` 节，并依需要添加不同的频道对应的元数据。
 
     url-source:
       OwnSource:
         - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml
         - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-prereleases-0.0.8.yaml
+        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-cross-0.0.8.yaml
+        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-vanilla-0.0.8.yaml
+
+关于使用 Ghcup 安装交叉编译器的说明，请参考 Ghcup User Guide 的 [Cross Support](https://www.haskell.org/ghcup/guide/#cross-support) 章节。
 
 ## 相关链接
 
