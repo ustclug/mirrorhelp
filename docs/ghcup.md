@@ -26,16 +26,12 @@ Stackage 源使用。
 
 **第一步（可选）** ：使用科大源安装 GHCup 本体。如已经安装 GHCup，可跳到下一步。
 
-Linux, FreeBSD, macOS 用户
-: &#32;
+Linux, FreeBSD, macOS 用户：在终端中运行如下命令
     ```bash
-    # 在终端中运行如下命令
     curl --proto '=https' --tlsv1.2 -sSf https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell | BOOTSTRAP_HASKELL_YAML=https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml sh
     ```
-Windows 用户
-: &#32;
+Windows 用户：以非管理员身份在 PowerShell 中运行如下命令
     ```bash
-    # 以非管理员身份在 PowerShell 中运行如下命令
     $env:BOOTSTRAP_HASKELL_YAML = 'https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml'
     Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;Invoke-Command -ScriptBlock ([ScriptBlock]::Create((Invoke-WebRequest https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -ArgumentList $true
     ```
