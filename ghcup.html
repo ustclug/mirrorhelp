@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="/static/img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -1687,7 +1687,7 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      预发布版本
+      非正式频道
     </span>
   </a>
   
@@ -2746,7 +2746,7 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      预发布版本
+      非正式频道
     </span>
   </a>
   
@@ -2799,16 +2799,17 @@ Stackage 源使用。</p>
 URL。</p>
 </div>
 <p><strong>第一步（可选）</strong> ：使用科大源安装 GHCup 本体。如已经安装 GHCup，可跳到下一步。</p>
-<div class="highlight"><pre><span></span><code># Linux, FreeBSD, macOS 用户：在终端中运行如下命令
-curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell | BOOTSTRAP_HASKELL_YAML=https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml sh
-
-# Windows 用户：以非管理员身份在 PowerShell 中运行如下命令
-$env:BOOTSTRAP_HASKELL_YAML = &#39;https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml&#39;
-Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;Invoke-Command -ScriptBlock ([ScriptBlock]::Create((Invoke-WebRequest https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -ArgumentList $true
+<p>Linux, FreeBSD, macOS 用户：在终端中运行如下命令：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>--proto<span class="w"> </span><span class="s1">&#39;=https&#39;</span><span class="w"> </span>--tlsv1.2<span class="w"> </span>-sSf<span class="w"> </span>https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nv">BOOTSTRAP_HASKELL_YAML</span><span class="o">=</span>https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml<span class="w"> </span>sh
+</code></pre></div>
+<p>Windows 用户：以非管理员身份在 PowerShell 中运行如下命令：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">$env:BOOTSTRAP_HASKELL_YAML</span> <span class="p">=</span> <span class="s1">&#39;https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml&#39;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Set-ExecutionPolicy</span> <span class="n">Bypass</span> <span class="n">-Scope</span> <span class="k">Process</span> <span class="n">-Force</span><span class="p">;</span><span class="no">[System.Net.ServicePointManager]</span><span class="p">::</span><span class="n">SecurityProtocol</span> <span class="p">=</span> <span class="no">[System.Net.ServicePointManager]</span><span class="p">::</span><span class="n">SecurityProtocol</span> <span class="o">-bor</span> <span class="n">3072</span><span class="p">;</span><span class="nb">Invoke-Command</span> <span class="n">-ScriptBlock</span> <span class="p">(</span><span class="no">[ScriptBlock]</span><span class="p">::</span><span class="n">Create</span><span class="p">((</span><span class="nb">Invoke-WebRequest</span> <span class="n">https</span><span class="p">://</span><span class="n">mirrors</span><span class="p">.</span><span class="n">ustc</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="p">/</span><span class="n">ghcup</span><span class="p">/</span><span class="n">sh</span><span class="p">/</span><span class="n">bootstrap-haskell</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-UseBasicParsing</span><span class="p">)))</span> <span class="n">-ArgumentList</span> <span class="nv">$true</span>
 </code></pre></div>
 <p><strong>第二步</strong> ：配置 GHCup 使用科大源。编辑 <code>~/.ghcup/config.yaml</code> 增加如下配置：</p>
 <div class="highlight"><pre><span></span><code>url-source:
-  OwnSource: https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml
+  OwnSource:
+    - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml
 </code></pre></div>
 <p><strong>第三步（可选）</strong> ：配置 Cabal 和 Stack 使用科大源，请参考文档 <a href="hackage.html">hackage</a> 和 <a href="stackage.html">stackage</a>。</p>
 <div class="admonition warning">
@@ -2817,13 +2818,16 @@ Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager
 及以上）。如果你使用的 GHCup 版本比较旧，请参考上述步骤安装新版本
 GHCup。</p>
 </div>
-<h2 id="_4">预发布版本<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>使用预发布频道可以安装尚未正式发布的测试版本。要启用预发布源，将 <code>~/.ghcup/config.yaml</code> 文件中 <code>url-source</code> 一节修改如下：</p>
+<h2 id="_4">非正式频道<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Ghcup 提供预发布版本（<code>prereleases</code>）、交叉编译版本（<code>cross</code>）和基础安装版本（<code>vanilla</code>）作为额外频道。要启用这些频道，修改 <code>~/.ghcup/config.yaml</code> 中的 <code>url-source</code> 节，并依需要添加不同的频道对应的元数据。</p>
 <div class="highlight"><pre><span></span><code>url-source:
   OwnSource:
     - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml
     - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-prereleases-0.0.8.yaml
+    - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-cross-0.0.8.yaml
+    - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-vanilla-0.0.8.yaml
 </code></pre></div>
+<p>关于使用 GHCup 安装交叉编译器的说明，请参考 GHCup User Guide 的 <a href="https://www.haskell.org/ghcup/guide/#cross-support">Cross Support</a> 章节。</p>
 <h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>Haskell 主页</dt>
@@ -2927,7 +2931,7 @@ GHCup。</p>
     <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes", "navigation.sections", "navigation.top"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>
