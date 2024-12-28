@@ -2810,11 +2810,15 @@
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/pkgs/msys2</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">custom_channels</span><span class="p">:</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">conda-forge</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/cloud</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">pytorch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/cloud</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">bioconda</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/cloud</span>
 </code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">custom_channels</p>
-<p>目前 <code>custom_channels</code> 暂未同步，会重定向至 BFSU。</p>
+<div class="admonition info">
+<p class="admonition-title">Anaconda Cloud channels</p>
+<p>目前我们为以下第三方频道提供<strong>动态缓存</strong>。与 <a href="pypi.html">pypi</a> 类似，未命中的包（包括未同步的频道）会重定向到 TUNA。</p>
+<ul>
+<li>conda-forge</li>
+<li>bioconda</li>
+</ul>
 </div>
 <p>之后运行 <code>conda clean -i</code> 清除缓存后，使用 <code>conda create -n myenv numpy</code> 测试配置是否正确。</p>
 <h2 id="_4">相关链接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
