@@ -199,6 +199,7 @@ nav:
     - mysql-repo.md
     - nix-channels.md
     - libnvidia-container.md
+    - packaging-gitea.md
     - qtproject.md
     - raspberrypi.md
     - ros.md

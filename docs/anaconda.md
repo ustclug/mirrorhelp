@@ -32,12 +32,15 @@ default_channels:
   - https://mirrors.ustc.edu.cn/anaconda/pkgs/msys2
 custom_channels:
   conda-forge: https://mirrors.ustc.edu.cn/anaconda/cloud
-  pytorch: https://mirrors.ustc.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.ustc.edu.cn/anaconda/cloud
 ```
 
-!!! warning "custom_channels"
+!!! info "Anaconda Cloud channels"
 
-    目前 `custom_channels` 暂未同步，会重定向至 BFSU。
+    目前我们为以下第三方频道提供**动态缓存**。与 [pypi](./pypi.md) 类似，未命中的包（包括未同步的频道）会重定向到 TUNA。
+
+    - conda-forge
+    - bioconda
 
 之后运行 `conda clean -i` 清除缓存后，使用 `conda create -n myenv numpy` 测试配置是否正确。
 
