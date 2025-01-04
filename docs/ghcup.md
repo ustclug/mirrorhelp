@@ -11,7 +11,7 @@ Stackage 源使用。
 
 !!! warning
 
-    当前的 GHCup 0.0.8 版本会在安装时也尝试安装 cabal，因此建议在安装 GHCup 前先手动配置 cabal 使用镜像，方法为参考文档 [hackage](https://mirrors.ustc.edu.cn/help/hackage.html#cabal) 中的说明，修改 `~/.cabal/config`。
+    当前的 GHCup 版本会在安装时也尝试安装 cabal，因此建议在安装 GHCup 前先手动配置 cabal 使用镜像，方法为参考文档 [hackage](https://mirrors.ustc.edu.cn/help/hackage.html#cabal) 中的说明，修改 `~/.cabal/config`。
 
 ## 使用方法
 
@@ -19,7 +19,7 @@ Stackage 源使用。
 
 !!! note
 
-    以下命令会安装并配置 GHCup 0.0.8 版本的元数据。可查看
+    以下命令会安装并配置 GHCup 最新版本的元数据。可查看
     <https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/>
     目录的内容，并选择需要安装的 GHCup 版本的 yaml 文件替换以下命令中的
     URL。
@@ -29,13 +29,13 @@ Stackage 源使用。
 Linux, FreeBSD, macOS 用户：在终端中运行如下命令：
 
 ```bash
-curl --proto '=https' --tlsv1.2 -sSf https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell | BOOTSTRAP_HASKELL_YAML=https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml sh
+curl --proto '=https' --tlsv1.2 -sSf https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell | BOOTSTRAP_HASKELL_YAML=https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml sh
 ```
 
 Windows 用户：以非管理员身份在 PowerShell 中运行如下命令：
 
 ```powershell
-$env:BOOTSTRAP_HASKELL_YAML = 'https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml'
+$env:BOOTSTRAP_HASKELL_YAML = 'https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml'
 Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;Invoke-Command -ScriptBlock ([ScriptBlock]::Create((Invoke-WebRequest https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -ArgumentList $true
 ```
 
@@ -43,7 +43,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager
 
     url-source:
       OwnSource:
-        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml
+        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml
 
 **第三步（可选）** ：配置 Cabal 和 Stack 使用科大源，请参考文档 [hackage](hackage.md) 和 [stackage](stackage.md)。
 
@@ -59,10 +59,10 @@ Ghcup 提供预发布版本（`prereleases`）、交叉编译版本（`cross`）
 
     url-source:
       OwnSource:
-        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-0.0.8.yaml
-        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-prereleases-0.0.8.yaml
-        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-cross-0.0.8.yaml
-        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-vanilla-0.0.8.yaml
+        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml
+        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-prereleases-latest.yaml
+        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-cross-latest.yaml
+        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-vanilla-latest.yaml
 
 关于使用 GHCup 安装交叉编译器的说明，请参考 GHCup User Guide 的 [Cross Support](https://www.haskell.org/ghcup/guide/#cross-support) 章节。
 
