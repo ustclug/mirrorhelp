@@ -142,15 +142,5 @@ Pkg.add(PackageSpec(url="https://github.com/FluxML/Flux.jl.git"))
 [PyCall.jl](https://github.com/JuliaPy/PyCall.jl) 的文档。
 `Conda.jl` 的加速分为两部分：
 
-- `conda` 的安装：如果系统中没有找到 `conda`
-    的话，`Conda.jl` 会下载并安装一份 `miniconda`。
-    如果这一步下载非常缓慢的话，你可以提前从其他镜像站
-    （如 [BFSU 镜像站](https://mirrors.bfsu.edu.cn/help/anaconda/)）
-    下载并安装 `anaconda`，然后通过设置环境变量
-    `CONDA_JL_HOME=$HOME/anaconda3` 来指定 `Conda.jl`
-    所使用的 `conda`，这样就避免重复下载 miniconda.
-    （`$HOME/anaconda3` 是 anaconda3 的默认安装位置，
-    你可能需要根据具体情况进行调整。）
-- `conda add` 等操作的加速：类似的，这个只需要配置
-    anaconda 镜像源即可，即修改 `~/.condarc` 文件。
-    具体的配置可以查看镜像站中 anaconda 镜像的使用说明。
+- `conda` 的安装：如果系统中没有找到 `conda` 的话，`Conda.jl` 会下载并安装一份 `miniconda`。如果这一步下载非常缓慢的话，你可以提前下载并安装 [`anaconda`](./anaconda.md)，然后通过设置环境变量 `CONDA_JL_HOME=$HOME/anaconda3` 来指定 `Conda.jl` 所使用的 `conda`，这样就避免重复下载 miniconda（`$HOME/anaconda3` 是 anaconda3 的默认安装位置，你可能需要根据具体情况进行调整）。
+- `conda add` 等操作的加速：类似的，这个只需要配置 anaconda 镜像源即可，即修改 `~/.condarc` 文件。具体的配置可以查看[镜像站中 anaconda 镜像的使用说明](./anaconda.md)。
