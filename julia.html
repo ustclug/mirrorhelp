@@ -3025,18 +3025,8 @@ Releases</a> 下载。</p>
 <a href="https://github.com/JuliaPy/PyCall.jl">PyCall.jl</a> 的文档。
 <code>Conda.jl</code> 的加速分为两部分：</p>
 <ul>
-<li><code>conda</code> 的安装：如果系统中没有找到 <code>conda</code>
-    的话，<code>Conda.jl</code> 会下载并安装一份 <code>miniconda</code>。
-    如果这一步下载非常缓慢的话，你可以提前从其他镜像站
-    （如 <a href="https://mirrors.bfsu.edu.cn/help/anaconda/">BFSU 镜像站</a>）
-    下载并安装 <code>anaconda</code>，然后通过设置环境变量
-    <code>CONDA_JL_HOME=$HOME/anaconda3</code> 来指定 <code>Conda.jl</code>
-    所使用的 <code>conda</code>，这样就避免重复下载 miniconda.
-    （<code>$HOME/anaconda3</code> 是 anaconda3 的默认安装位置，
-    你可能需要根据具体情况进行调整。）</li>
-<li><code>conda add</code> 等操作的加速：类似的，这个只需要配置
-    anaconda 镜像源即可，即修改 <code>~/.condarc</code> 文件。
-    具体的配置可以查看镜像站中 anaconda 镜像的使用说明。</li>
+<li><code>conda</code> 的安装：如果系统中没有找到 <code>conda</code> 的话，<code>Conda.jl</code> 会下载并安装一份 <code>miniconda</code>。如果这一步下载非常缓慢的话，你可以提前下载并安装 <a href="anaconda.html"><code>anaconda</code></a>，然后通过设置环境变量 <code>CONDA_JL_HOME=$HOME/anaconda3</code> 来指定 <code>Conda.jl</code> 所使用的 <code>conda</code>，这样就避免重复下载 miniconda（<code>$HOME/anaconda3</code> 是 anaconda3 的默认安装位置，你可能需要根据具体情况进行调整）。</li>
+<li><code>conda add</code> 等操作的加速：类似的，这个只需要配置 anaconda 镜像源即可，即修改 <code>~/.condarc</code> 文件。具体的配置可以查看<a href="anaconda.html">镜像站中 anaconda 镜像的使用说明</a>。</li>
 </ul>
 
 
