@@ -26,7 +26,7 @@
     
     
       
-        <title>OpenWRT/LEDE - USTC Mirror Help</title>
+        <title>OpenWrt - USTC Mirror Help</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#openwrtlede" class="md-skip">
+        <a href="#openwrt" class="md-skip">
           跳转至
         </a>
       
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OpenWRT/LEDE
+              OpenWrt
             
           </span>
         </div>
@@ -1153,7 +1153,7 @@
           
   
   <span class="md-ellipsis">
-    OpenWRT/LEDE
+    OpenWrt
   </span>
   
 
@@ -1164,7 +1164,7 @@
         
   
   <span class="md-ellipsis">
-    OpenWRT/LEDE
+    OpenWrt
   </span>
   
 
@@ -2784,32 +2784,24 @@
   
 
 
-<h1 id="openwrtlede">OpenWRT/LEDE<a class="headerlink" href="#openwrtlede" title="Permanent link">&para;</a></h1>
+<h1 id="openwrt">OpenWrt<a class="headerlink" href="#openwrt" title="Permanent link">&para;</a></h1>
 <h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><a href="https://mirrors.ustc.edu.cn/openwrt/">https://mirrors.ustc.edu.cn/openwrt/</a></p>
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>OpenWRT/LEDE 下载站镜像。</p>
-<p>这是对 <a href="https://downloads.openwrt.org/">https://downloads.openwrt.org/</a> 的除了 snapshots
-与预发布版本（RC）以外的完整镜像，内容包括官方支持的平台的 ROM、SDK
-及工具链、软件仓库镜像等。</p>
+<p>OpenWrt 下载站镜像。</p>
+<p>这是对 <a href="https://downloads.openwrt.org/">https://downloads.openwrt.org/</a> 的除了 snapshots 与预发布版本（RC）以外的完整镜像，内容包括官方支持的平台的 ROM、SDK 及工具链、软件仓库镜像等。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>访问 snapshots 与 RC
-版本内容会重定向至反向代理，如果需要下载相关文件，务必使用
-HTTPS，否则连接可能会被中断。</p>
+<p>访问 snapshots 与 RC 版本内容会重定向至反向代理，如果需要下载相关文件，务必使用 HTTPS，否则连接可能会被中断。</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>访问 <a href="https://mirrors.ustc.edu.cn/lede/">https://mirrors.ustc.edu.cn/lede/</a> 会被自动重定向到
-<a href="https://mirrors.ustc.edu.cn/openwrt/">https://mirrors.ustc.edu.cn/openwrt/</a>。</p>
+<p>访问 <a href="https://mirrors.ustc.edu.cn/lede/">https://mirrors.ustc.edu.cn/lede/</a> 会被自动重定向到 <a href="https://mirrors.ustc.edu.cn/openwrt/">https://mirrors.ustc.edu.cn/openwrt/</a>。</p>
 </div>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>一般情况下，下载来自 <code>downloads.openwrt.org</code> 的文件时，将 URL
-中的这部分域名替换为 <code>mirrors.ustc.edu.cn/openwrt</code> 即可。</p>
-<p>如要使用本镜像作为 OpenWRT/LEDE 系统 opkg 软件仓库，SSH 登录路由器编辑
-<code>/etc/opkg/distfeeds.conf</code>
-文件，同样按照上面的方法替换域名即可。可以使用如下命令操作：</p>
-<div class="highlight"><pre><span></span><code>sed -i &#39;s/downloads.openwrt.org/mirrors.ustc.edu.cn\/openwrt/g&#39; /etc/opkg/distfeeds.conf
+<p>一般情况下，下载来自 <code>downloads.openwrt.org</code> 的文件时，将 URL 中的这部分域名替换为 <code>mirrors.ustc.edu.cn/openwrt</code> 即可。</p>
+<p>如要使用本镜像作为 OpenWrt 系统 opkg 软件仓库，SSH 登录路由器编辑 <code>/etc/opkg/distfeeds.conf</code> 文件，同样按照上面的方法替换域名即可。可以使用如下命令操作：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/downloads.openwrt.org/mirrors.ustc.edu.cn\/openwrt/g&#39;</span><span class="w"> </span>/etc/opkg/distfeeds.conf
 </code></pre></div>
 <p>之后运行 <code>opkg update</code> 更新软件索引，注意检查是否出现错误。</p>
 <div class="admonition tip">
