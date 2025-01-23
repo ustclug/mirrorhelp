@@ -41,8 +41,7 @@ envs:
 
 1. clone 后 `git submodule update --init --recursive`
 2. 安装对应 Python 依赖（requests, jinja2）
-3. 调整配置和代码的 `/srv/rsync-attrs` 到 `/srv/repo`
-4. 添加 crontab 定时运行，输出到 `/srv/repo/index.html`
+3. 添加 crontab 定时运行，输出到 `/srv/repo/index.html`
 
 如果需要状态页，参考 <https://git.lug.ustc.edu.cn/mirrors/mirrors-index/-/blob/master/status/genstatus.py>
 
@@ -52,11 +51,16 @@ envs:
 
 ## Rsyncd（Rsync 服务）
 
-对于机械硬盘阵列，TUNA 的坏人有过优化 patch: <https://github.com/tuna/rsync/blob/master/README-huai.md>，具体而言，需要在 SSD 上创建一个 ReiserFS 分区，然后每次同步完成之后将所有文件元数据同步到这个分区上，然后 patch 过的服务端会先读取 SSD 上的元数据。
+一般而言，对内部提供服务的镜像站只需要配置 HTTP 服务。
+如果需要允许其他镜像站作为下游同步，才需要配置 rsync 服务。
 
-我们在 <https://github.com/ustclug/rsync> 自行维护一个 fork，应用到较新的 rsync 版本上。
+??? tip "rsync-huai"
 
-但是作为 quickstart，这里只介绍 Debian rsync 的配置。服务依赖于创建 `/etc/rsyncd.conf`：
+    对于机械硬盘阵列，TUNA 的 @shankerwangmiao 有个优化 patch: <https://github.com/tuna/rsync/blob/master/README-huai.md>，具体而言，需要在 SSD 上创建一个 ReiserFS 分区，然后每次同步完成之后将所有文件元数据同步到这个分区上，然后 patch 过的服务端会先读取 SSD 上的元数据，从而降低机械硬盘压力。
+
+    我们曾在 <https://github.com/ustclug/rsync> 自行维护一个 fork，应用到较新的 rsync 版本上。
+
+作为 quickstart，这里只介绍 Debian rsync 的配置。服务依赖于创建 `/etc/rsyncd.conf`：
 
 ```console
 $ cat /lib/systemd/system/rsync.service
