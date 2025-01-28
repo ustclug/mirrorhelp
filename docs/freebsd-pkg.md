@@ -8,15 +8,11 @@
 
 FreeBSD 预编译软件包镜像
 
-## 收录架构
+## 收录架构与版本
 
-所有受官方支持版本的 amd64, aarch64 和 i386 架构，详细参见 <https://pkg.freebsd.org/>。
+所有受官方支持版本的 amd64 和 aarch64 架构，详细参见 <https://pkg.freebsd.org/>。
 
-## 收录版本
-
-自 FreeBSD 13 以后的版本，包括 quarterly 和滚动更新的 latest 仓库。
-
-FreeBSD 9 以前的版本不支持新的 pkg 包管理器（pkgng），请升级到新版。
+仓库包括 quarterly 和滚动更新的 latest 仓库。
 
 ## 使用方法
 
