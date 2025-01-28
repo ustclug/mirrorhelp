@@ -954,7 +954,7 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      收录架构
+      收录架构与版本
     </span>
   </a>
   
@@ -963,15 +963,6 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      收录版本
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
       使用方法
     </span>
   </a>
@@ -979,7 +970,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       相关链接
     </span>
@@ -2769,7 +2760,7 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      收录架构
+      收录架构与版本
     </span>
   </a>
   
@@ -2778,15 +2769,6 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      收录版本
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
       使用方法
     </span>
   </a>
@@ -2794,7 +2776,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       相关链接
     </span>
@@ -2825,12 +2807,10 @@
 <p><a href="https://mirrors.ustc.edu.cn/freebsd-pkg/">https://mirrors.ustc.edu.cn/freebsd-pkg/</a></p>
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>FreeBSD 预编译软件包镜像</p>
-<h2 id="_3">收录架构<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>所有受官方支持版本的 amd64, aarch64 和 i386 架构，详细参见 <a href="https://pkg.freebsd.org/">https://pkg.freebsd.org/</a>。</p>
-<h2 id="_4">收录版本<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>自 FreeBSD 13 以后的版本，包括 quarterly 和滚动更新的 latest 仓库。</p>
-<p>FreeBSD 9 以前的版本不支持新的 pkg 包管理器（pkgng），请升级到新版。</p>
-<h2 id="_5">使用方法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_3">收录架构与版本<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>所有受官方支持版本的 amd64 和 aarch64 架构，详细参见 <a href="https://pkg.freebsd.org/">https://pkg.freebsd.org/</a>。</p>
+<p>仓库包括 quarterly 和滚动更新的 latest 仓库。</p>
+<h2 id="_4">使用方法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>FreeBSD pkg 包管理器的官方源配置是 <code>/etc/pkg/FreeBSD.conf</code>，请先检查该文件内容。注意其中的 <code>url</code> 参数配置了官方仓库的地址，我们需要把它替换为镜像站的地址。</p>
 <p>该配置文件是 FreeBSD 基本系统的一部分，会随着 <code>freebsd-update</code> 更新，请不要直接修改，而是创建 <code>/usr/local/etc/pkg/repos/FreeBSD.conf</code> 覆盖配置，文件内容如下：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">FreeBSD</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
@@ -2844,7 +2824,7 @@
 <p class="admonition-title">Tip</p>
 <p>使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装 <code>security/ca_root_nss</code> 软件包。</p>
 </div>
-<h2 id="_6">相关链接<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>官方主页</dt>
 <dd>
