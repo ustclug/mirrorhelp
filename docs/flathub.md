@@ -23,6 +23,14 @@ Flathub 的 blob 数据（`objects/`）为动态缓存，根据用户访问情�
 sudo flatpak remote-modify flathub --url=https://mirrors.ustc.edu.cn/flathub
 ```
 
+## 调试方法
+
+如果怀疑网络问题，请添加 `OSTREE_DEBUG_HTTP=1` 环境变量后再次运行 `flatpak` 命令以获取 libcurl 的详细输出，例如：
+
+```shell
+OSTREE_DEBUG_HTTP=1 flatpak install com.github.tchx84.Flatseal
+```
+
 ## 相关链接
 
 Flathub
