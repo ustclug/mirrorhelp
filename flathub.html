@@ -2192,6 +2192,15 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
+      调试方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       相关链接
     </span>
   </a>
@@ -2765,6 +2774,15 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
+      调试方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       相关链接
     </span>
   </a>
@@ -2804,7 +2822,11 @@
 <p>在已有 <code>flathub</code> 远程源的基础上：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>flatpak<span class="w"> </span>remote-modify<span class="w"> </span>flathub<span class="w"> </span>--url<span class="o">=</span>https://mirrors.ustc.edu.cn/flathub
 </code></pre></div>
-<h2 id="_3">相关链接<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">调试方法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>如果怀疑网络问题，请添加 <code>OSTREE_DEBUG_HTTP=1</code> 环境变量后再次运行 <code>flatpak</code> 命令以获取 libcurl 的详细输出，例如：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">OSTREE_DEBUG_HTTP</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>flatpak<span class="w"> </span>install<span class="w"> </span>com.github.tchx84.Flatseal
+</code></pre></div>
+<h2 id="_4">相关链接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>Flathub</dt>
 <dd>
