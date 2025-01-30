@@ -185,6 +185,7 @@ nav:
     - dockerhub.md
     - eclipse.md
     - elpa.md
+    - flathub.md
     - github-release.md
     - brew.git.md
     - homebrew-bottles.md
