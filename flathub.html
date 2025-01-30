@@ -2815,7 +2815,7 @@
 </div>
 <h2 id="_1">同步细节<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>Flathub 的元数据（<code>config</code>, <code>summary.idx</code>, <code>summaries/</code>）每小时完整同步一次。</p>
-<p>Flathub 的 blob 数据（<code>objects/</code>）为动态缓存，根据用户访问情况，每小时更新一次。<strong>在请求未命中时，会 302 重定向到 Flathub 的源站点</strong>。本镜像不是 Flathub 的完整镜像，因此仍然需要用户到 Flathub 站点有基本的可连通性。</p>
+<p>Flathub 的 blob 数据（<code>objects/</code>）为动态缓存，根据用户访问情况，每小时更新一次。<strong>在请求未命中时，会 302 重定向到 SJTUG Flathub 智能缓存服务。如果 SJTUG 亦未命中，则其会重定向到 Flathub 源站点</strong>。本镜像不是 Flathub 的完整镜像，因此仍然需要用户到 Flathub 站点有基本的可连通性。</p>
 <p><strong>不支持增量更新。</strong></p>
 <p>软件 manifest 中标注为 <code>extra-data</code> 的文件不会经过镜像站或 Flathub 服务器，而是直接从标注的源站点下载。</p>
 <h2 id="_2">配置方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
