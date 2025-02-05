@@ -17,7 +17,7 @@
 
 ## Document format
 
-Please follow <https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.en-US.md>.
+Please follow <https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.en.md>.
 
 Also, currently we're using Markdownlint and Autocorrect to ensure the quality of the documents. [CI would automatically run check on the PRs](.github/workflows/build.yml), and **failed PRs would not be merged**.
 
