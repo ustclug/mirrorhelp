@@ -3092,9 +3092,9 @@ AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约 80G（注意磁盘格
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>WORKING_DIRECTORY
 </code></pre></div>
 <p>初始化仓库：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>repo<span class="w"> </span>init<span class="w"> </span>-u<span class="w"> </span>git://mirrors.ustc.edu.cn/aosp/platform/manifest
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">## 如果提示无法连接到 gerrit.googlesource.com，可以编辑 ~/bin/repo，把 REPO_URL 一行替换成下面的：</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">## REPO_URL = &#39;https://gerrit-googlesource.proxy.ustclug.org/git-repo&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 如果提示无法连接到 gerrit.googlesource.com，可以设置 REPO_URL 环境变量：</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">REPO_URL</span><span class="o">=</span>https://gerrit-googlesource.proxy.ustclug.org/git-repo
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>repo<span class="w"> </span>init<span class="w"> </span>-u<span class="w"> </span>git://mirrors.ustc.edu.cn/aosp/platform/manifest
 </code></pre></div>
 <p>如果需要某个特定的 Android 版本
 （<a href="https://source.android.com/source/build-numbers.html#source-code-tags-and-builds">Android 版本列表</a>
