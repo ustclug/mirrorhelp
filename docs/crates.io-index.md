@@ -18,6 +18,9 @@ replace-with = 'ustc'
 
 [source.ustc]
 registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
+
+[registries.ustc]
+index = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 ```
 
 !!! note
@@ -35,6 +38,9 @@ replace-with = 'ustc'
 
 [source.ustc]
 registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
+
+[registries.ustc]
+index = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 EOF
 ```
 
@@ -59,7 +65,12 @@ EOF
 
 !!! warning
 
-    `cargo search` 无法使用镜像。
+    `cargo search` 与 `cargo info` 命令需要添加 `--registry ustc` 参数，例如：
+
+    ```console
+    cargo search --registry ustc reqwest
+    cargo info --registry ustc reqwest
+    ```
 
 !!! warning
 
