@@ -25,6 +25,7 @@ sed -e 's|https://downloads.immortalwrt.org|https://mirrors.ustc.edu.cn/immortal
 !!! tip
 
     如果你使用的 ImmortalWrt 版本 >= 23.05.0，也可以使用如下命令设置镜像：
+
     ```shell
     uci set system.@imm_init[0].opkg_mirror='https://mirrors.ustc.edu.cn/immortalwrt'
     uci commit system
