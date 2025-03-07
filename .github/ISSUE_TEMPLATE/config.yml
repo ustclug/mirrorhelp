@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
   - name: USTCLUG Mirror Request
-    url: https://github.com/ustclug/mirrorrequest/issues/new
+    url: https://github.com/ustclug/mirrorrequest/issues/new/choose
     about: 新增镜像请求 / New mirror request
   - name: USTCLUG Discussions
-    url: https://github.com/ustclug/discussions/issues/new
+    url: https://github.com/ustclug/discussions/issues/new/choose
     about: 故障反馈、功能请求与其他讨论 / Bug report, feature request and discussion
