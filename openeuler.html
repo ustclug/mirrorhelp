@@ -3009,10 +3009,9 @@
 <p>操作前请做好相应备份。</p>
 </div>
 <p>使用以下命令替换默认配置</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s|http://repo.openeuler.org/|https://mirrors.ustc.edu.cn/openeuler/|g&#39;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">         </span>-e<span class="w"> </span><span class="s1">&#39;s|https://mirrors.openeuler.org/|https://mirrors.ustc.edu.cn/openeuler/|g&#39;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">         </span>-i.bak<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">         </span>/etc/yum.repos.d/openEuler.repo
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;s#https?://(repo|mirrors)\.openeuler\.org/#https://mirrors.ustc.edu.cn/openeuler/#g&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">         </span>-i.bak<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">         </span>/etc/yum.repos.d/openEuler.repo
 </code></pre></div>
 <p>以上命令替换了所有的仓库。替换之后请运行 <code>yum makecache</code> 更新缓存。</p>
 <h2 id="_6">相关链接<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
