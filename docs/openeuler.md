@@ -25,8 +25,7 @@ x86_64, aarch64
 使用以下命令替换默认配置
 
 ```shell
-sudo sed -e 's|http://repo.openeuler.org/|https://mirrors.ustc.edu.cn/openeuler/|g' \
-         -e 's|https://mirrors.openeuler.org/|https://mirrors.ustc.edu.cn/openeuler/|g' \
+sudo sed -E 's#https?://(repo|mirrors)\.openeuler\.org/#https://mirrors.ustc.edu.cn/openeuler/#g' \
          -i.bak \
          /etc/yum.repos.d/openEuler.repo
 ```
