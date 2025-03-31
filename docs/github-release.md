@@ -18,6 +18,7 @@
 - [adoptium/temurin17-binaries](https://github.com/adoptium/temurin17-binaries)
 - [adoptium/temurin21-binaries](https://github.com/adoptium/temurin21-binaries)
 - [coder/code-server](https://github.com/coder/code-server)
+- [deepmodeling/deepmd-kit](https://github.com/deepmodeling/deepmd-kit)
 - [git-for-windows/git](https://github.com/git-for-windows/git)
 - [Homebrew/homebrew-portable-ruby](https://github.com/Homebrew/homebrew-portable-ruby)
 - [Homebrew/glibc-bootstrap](https://github.com/Homebrew/glibc-bootstrap)
