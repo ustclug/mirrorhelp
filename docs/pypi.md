@@ -24,6 +24,18 @@ pip install -i https://mirrors.ustc.edu.cn/pypi/simple pip -U
 pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/simple
 ```
 
+### 其他包管理器
+
+#### Astral uv
+
+添加配置文件 `~/.config/uv/uv.toml` 或 `/etc/uv/uv.toml`，内容如下：
+
+```toml
+[[index]]
+url = "https://mirrors.ustc.edu.cn/pypi/simple"
+default = true
+```
+
 ## 同步方式
 
 - 软件包元数据使用 shadowmire 从 TUNA 同步
