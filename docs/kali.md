@@ -33,6 +33,16 @@ amd64, armel, armhf, i386
 
     如果出现以上错误，则需等待同步完成后再执行 `apt update`。
 
+!!! note
+
+    如果你在更新时遇到类似下面的错误：
+
+    ```
+    Missing key 827C8569F2518CC677FECA1AED65462EC8D5E4C5, which is needed to verify signature.
+    ```
+
+    请参考 <https://www.kali.org/blog/new-kali-archive-signing-key/> 更新软件源签名公钥。
+
 ## 相关链接
 
 Kali Linux 主页
