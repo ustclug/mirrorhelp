@@ -21,6 +21,9 @@ registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 
 [registries.ustc]
 index = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
+
+[registry]
+default = "ustc"
 ```
 
 !!! note
@@ -41,6 +44,9 @@ registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 
 [registries.ustc]
 index = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
+
+[registry]
+default = "ustc"
 EOF
 ```
 
@@ -62,15 +68,6 @@ EOF
 !!! note "cargo <= 1.38?"
 
     如果正在使用的 cargo 版本低于 1.38，则需要修改的文件为 `config` 文件，而不是 `config.toml` 文件。
-
-!!! warning
-
-    `cargo search` 与 `cargo info` 命令需要添加 `--registry ustc` 参数，例如：
-
-    ```console
-    cargo search --registry ustc reqwest
-    cargo info --registry ustc reqwest
-    ```
 
 !!! warning
 
