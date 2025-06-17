@@ -24,7 +24,7 @@ HTTP / HTTPS 协议从站点大规模同步数据。
 
 !!! warning
 
-    由于 rsync 协议实现的限制，原有的使用 `/repo/` 前缀同步的方式难以进行负载均衡。因此从 2022 年 4 月 2 日后，同步将不再需要添加 `/repo/` 前缀。例如，`ubuntu` 仓库的实际路径即为 `rsync://rsync.mirrors.ustc.edu.cn/ubuntu`。原有的 `/repo/` 仍然保留，但是其中的部分仓库之后会迁移出去，我们建议用户尽快更换为新的路径。
+    由于 rsync 协议实现的限制，原有的使用 `/repo/` 前缀同步的方式难以进行负载均衡。从 2022 年 4 月 2 日起，同步将不再需要添加 `/repo/` 前缀。从 2025 年 6 月 5 日起，原有的 `/repo/` 不再保留，请用户注意更换为新的路径。例如，`ubuntu` 仓库的实际路径即为 `rsync://rsync.mirrors.ustc.edu.cn/ubuntu`。
 
 !!! tip
 
