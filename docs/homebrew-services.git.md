@@ -13,7 +13,7 @@
 
 使用 USTC 镜像安装，或将已安装的仓库远程替换为 USTC 镜像：
 
-    brew tap --custom-remote --force-auto-update homebrew/services https://mirrors.ustc.edu.cn/homebrew-services.git
+    brew tap --custom-remote --force homebrew/services https://mirrors.ustc.edu.cn/homebrew-services.git
 
 !!! note
 
@@ -22,7 +22,7 @@
 
 重置为官方地址：
 
-    brew tap --custom-remote --force-auto-update homebrew/services https://github.com/Homebrew/homebrew-services
+    brew tap --custom-remote --force homebrew/services https://github.com/Homebrew/homebrew-services
 
 ## 相关镜像
 

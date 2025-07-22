@@ -18,7 +18,7 @@ Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件
 
 使用 USTC 镜像安装，或将已安装的仓库远程替换为 USTC 镜像：
 
-    brew tap --custom-remote --force-auto-update homebrew/cask https://mirrors.ustc.edu.cn/homebrew-cask.git
+    brew tap --custom-remote --force homebrew/cask https://mirrors.ustc.edu.cn/homebrew-cask.git
 
 !!! note
 
@@ -27,7 +27,7 @@ Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件
 
 重置为官方地址：
 
-    brew tap --custom-remote --force-auto-update homebrew/cask https://github.com/Homebrew/homebrew-cask
+    brew tap --custom-remote --force homebrew/cask https://github.com/Homebrew/homebrew-cask
 
 !!! note
 
