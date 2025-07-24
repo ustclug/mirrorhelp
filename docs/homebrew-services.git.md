@@ -15,11 +15,6 @@
 
     brew tap --custom-remote --force homebrew/services https://mirrors.ustc.edu.cn/homebrew-services.git
 
-!!! note
-
-    若出现 `Error: invalid option: --custom-remote` 错误，请先运行
-    `brew update` 将 `brew` 更新至 3.2.17 或以上版本。
-
 重置为官方地址：
 
     brew tap --custom-remote --force homebrew/services https://github.com/Homebrew/homebrew-services

@@ -20,11 +20,6 @@ Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件
 
     brew tap --custom-remote --force homebrew/cask https://mirrors.ustc.edu.cn/homebrew-cask.git
 
-!!! note
-
-    若出现 `Error: invalid option: --custom-remote` 错误，请先运行
-    `brew update` 将 `brew` 更新至 3.2.17 或以上版本。
-
 重置为官方地址：
 
     brew tap --custom-remote --force homebrew/cask https://github.com/Homebrew/homebrew-cask
