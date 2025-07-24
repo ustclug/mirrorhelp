@@ -53,7 +53,7 @@ Homebrew 核心软件仓库
 
         export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
         rm -rf "$(brew --repo homebrew/core)"
-        brew tap --custom-remote --force homebrew/core https://mirrors.ustc.edu.cn/homebrew-core.git
+        brew tap --custom-remote homebrew/core https://mirrors.ustc.edu.cn/homebrew-core.git
 
 ## 相关镜像
 
