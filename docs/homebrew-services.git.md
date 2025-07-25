@@ -13,16 +13,11 @@
 
 使用 USTC 镜像安装，或将已安装的仓库远程替换为 USTC 镜像：
 
-    brew tap --custom-remote --force homebrew/services https://mirrors.ustc.edu.cn/homebrew-services.git
-
-!!! note
-
-    若出现 `Error: invalid option: --custom-remote` 错误，请先运行
-    `brew update` 将 `brew` 更新至 3.2.17 或以上版本。
+    brew tap --custom-remote homebrew/services https://mirrors.ustc.edu.cn/homebrew-services.git
 
 重置为官方地址：
 
-    brew tap --custom-remote --force homebrew/services https://github.com/Homebrew/homebrew-services
+    brew tap --custom-remote homebrew/services https://github.com/Homebrew/homebrew-services
 
 ## 相关镜像
 

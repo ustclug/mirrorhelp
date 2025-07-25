@@ -40,8 +40,6 @@ Homebrew 核心软件仓库
 
 !!! note
 
-    若出现 `Error: invalid option: --custom-remote` 错误，请先运行
-    `brew update` 将 `brew` 更新至 3.2.17 或以上版本。
     重置回默认远程后，用户应该删除 shell 的 profile 设置中的环境变量
     `HOMEBREW_CORE_GIT_REMOTE` 以免运行 `brew update` 时远程再次被更换。
 
@@ -55,7 +53,7 @@ Homebrew 核心软件仓库
 
         export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
         rm -rf "$(brew --repo homebrew/core)"
-        brew tap --custom-remote --force homebrew/core https://mirrors.ustc.edu.cn/homebrew-core.git
+        brew tap --custom-remote homebrew/core https://mirrors.ustc.edu.cn/homebrew-core.git
 
 ## 相关镜像
 
