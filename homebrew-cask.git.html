@@ -3099,15 +3099,10 @@
 <code>homebrew-bottles</code> 进行相关配置。</p>
 </div>
 <p>使用 USTC 镜像安装，或将已安装的仓库远程替换为 USTC 镜像：</p>
-<div class="highlight"><pre><span></span><code>brew tap --custom-remote --force homebrew/cask https://mirrors.ustc.edu.cn/homebrew-cask.git
+<div class="highlight"><pre><span></span><code>brew tap --custom-remote homebrew/cask https://mirrors.ustc.edu.cn/homebrew-cask.git
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>若出现 <code>Error: invalid option: --custom-remote</code> 错误，请先运行
-<code>brew update</code> 将 <code>brew</code> 更新至 3.2.17 或以上版本。</p>
-</div>
 <p>重置为官方地址：</p>
-<div class="highlight"><pre><span></span><code>brew tap --custom-remote --force homebrew/cask https://github.com/Homebrew/homebrew-cask
+<div class="highlight"><pre><span></span><code>brew tap --custom-remote homebrew/cask https://github.com/Homebrew/homebrew-cask
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

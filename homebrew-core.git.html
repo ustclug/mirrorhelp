@@ -3120,9 +3120,7 @@ brew tap --custom-remote homebrew/core https://github.com/Homebrew/homebrew-core
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>若出现 <code>Error: invalid option: --custom-remote</code> 错误，请先运行
-<code>brew update</code> 将 <code>brew</code> 更新至 3.2.17 或以上版本。
-重置回默认远程后，用户应该删除 shell 的 profile 设置中的环境变量
+<p>重置回默认远程后，用户应该删除 shell 的 profile 设置中的环境变量
 <code>HOMEBREW_CORE_GIT_REMOTE</code> 以免运行 <code>brew update</code> 时远程再次被更换。</p>
 </div>
 <div class="admonition note">
@@ -3134,7 +3132,7 @@ Linuxbrew 用户请依本镜像说明重新设置镜像。注意迁移前请先�
 迁移过程中若出现任何问题，可使用如下命令重新安装 <code>homebrew-core</code>：</p>
 <div class="highlight"><pre><span></span><code>export HOMEBREW_CORE_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;
 rm -rf &quot;$(brew --repo homebrew/core)&quot;
-brew tap --custom-remote --force homebrew/core https://mirrors.ustc.edu.cn/homebrew-core.git
+brew tap --custom-remote homebrew/core https://mirrors.ustc.edu.cn/homebrew-core.git
 </code></pre></div>
 </div>
 <h2 id="_4">相关镜像<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
