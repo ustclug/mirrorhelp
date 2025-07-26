@@ -33,8 +33,7 @@ AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约 80G（注意磁盘格
 按照 [Google 官方教程](https://source.android.com/source/downloading.html)
 ([CN](https://source.android.google.cn/source/downloading))，
 将 `https://android.googlesource.com/platform/manifest` 替换为
-`git://mirrors.ustc.edu.cn/aosp/platform/manifest` 或
-`http://mirrors.ustc.edu.cn/aosp/platform/manifest`。
+`https://mirrors.ustc.edu.cn/aosp/platform/manifest`。
 
 具体做法摘录如下：首先下载 repo 工具。
 
@@ -59,7 +58,7 @@ cd WORKING_DIRECTORY
 ```shell
 # 如果提示无法连接到 gerrit.googlesource.com，可以设置 REPO_URL 环境变量：
 export REPO_URL=https://gerrit-googlesource.proxy.ustclug.org/git-repo
-repo init -u git://mirrors.ustc.edu.cn/aosp/platform/manifest
+repo init -u https://mirrors.ustc.edu.cn/aosp/platform/manifest
 ```
 
 如果需要某个特定的 Android 版本
@@ -68,7 +67,7 @@ repo init -u git://mirrors.ustc.edu.cn/aosp/platform/manifest
 [镜像站 tags 列表](http://mirrors.ustc.edu.cn/aosp/platform/manifest.git/refs/tags/)）：
 
 ```shell
-repo init -u git://mirrors.ustc.edu.cn/aosp/platform/manifest -b android-4.0.1_r1
+repo init -u https://mirrors.ustc.edu.cn/aosp/platform/manifest -b android-4.0.1_r1
 ```
 
 同步源码树（以后只需执行这条命令来同步）：
@@ -89,34 +88,10 @@ url = https://android.googlesource.com/platform/manifest
 修改成：
 
 ```shell
-url = git://mirrors.ustc.edu.cn/aosp/platform/manifest
-```
-
-即可。
-
-## 通过 HTTP(S) 协议同步 {#http_sync}
-
-以上说明中，默认使用了 git 协议的地址：`git://mirrors.ustc.edu.cn/aosp/platform/manifest`。
-
-如果由于某种原因不能通过 git 协议同步，请修改 `.repo/manifests.git/config`，将
-
-```shell
-url = git://mirrors.ustc.edu.cn/aosp/platform/manifest
-```
-
-修改成 (HTTP)：
-
-```shell
-url = http://mirrors.ustc.edu.cn/aosp/platform/manifest
-```
-
-或 (HTTPS)：
-
-```shell
 url = https://mirrors.ustc.edu.cn/aosp/platform/manifest
 ```
 
-通过 HTTP(S) 同步过程中可能提示 clone.bundle 404 错误，这是正常现象，可以忽略。
+即可。
 
 ## 使用时间段与并发设置建议
 
@@ -135,10 +110,10 @@ Brillo 项目的代码托管在 AOSP 项目中，Mirrors 镜像的是整个 AOSP
 参考 Brillo 官方文档
 <https://developers.google.com/brillo/docs/reference/downloads>
 进行下载，将其中源码 manifest 地址改为
-`git://mirrors.ustc.edu.cn/aosp/brillo/manifest`。即：
+`https://mirrors.ustc.edu.cn/aosp/brillo/manifest`。即：
 
 `repo init` 时，使用
-`repo init -u git://mirrors.ustc.edu.cn/aosp/brillo/manifest -b master`
+`repo init -u https://mirrors.ustc.edu.cn/aosp/brillo/manifest -b master`
 
 ## 相关链接
 

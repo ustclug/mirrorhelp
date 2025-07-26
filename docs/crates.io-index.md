@@ -50,10 +50,6 @@ EOF
 
     ```toml
     [source.ustc]
-    registry = "git://mirrors.ustc.edu.cn/crates.io-index"
-
-    # 或者如果无法使用 git 协议
-    [source.ustc]
     registry = "https://mirrors.ustc.edu.cn/crates.io-index/"
     ```
 
