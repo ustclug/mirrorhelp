@@ -3015,14 +3015,12 @@
 
 
 <h1 id="linux">Linux 内核源码<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
-<p>其 Git 仓库的链接为 <code>git://mirrors.ustc.edu.cn/linux.git</code> 与
-<code>https://mirrors.ustc.edu.cn/linux.git</code>。</p>
+<p>其 Git 仓库的链接为 <code>https://mirrors.ustc.edu.cn/linux.git</code>。</p>
 <h2 id="_1">断点续传<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>由于 <code>git clone</code> 不支持断点续传，所以可以使用支持断点续传的
-<code>git fetch</code>。一个简单的步骤如下所示，请按自己的需求酌情更改：</p>
+<p>由于 <code>git clone</code> 不支持断点续传，所以可以使用支持断点续传的 <code>git fetch</code>。一个简单的步骤如下所示，请按自己的需求酌情更改：</p>
 <div class="highlight"><pre><span></span><code>mkdir linux &amp;&amp; cd linux
 git init
-git fetch git://mirrors.ustc.edu.cn/linux.git
+git fetch https://mirrors.ustc.edu.cn/linux.git
 git checkout FETCH_HEAD
 </code></pre></div>
 

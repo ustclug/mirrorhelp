@@ -3124,11 +3124,7 @@
 <p class="admonition-title">cargo &lt;= 1.68?</p>
 <p>如果 cargo 版本低于 1.68，则必须设置为完整克隆仓库，<code>[source.ustc]</code> 里的 <code>registry</code> 需要修改为：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[source.ustc]</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">registry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;git://mirrors.ustc.edu.cn/crates.io-index&quot;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># 或者如果无法使用 git 协议</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">[source.ustc]</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">registry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://mirrors.ustc.edu.cn/crates.io-index/&quot;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">registry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://mirrors.ustc.edu.cn/crates.io-index/&quot;</span>
 </code></pre></div>
 <p>完整克隆仓库速度<strong>远慢于</strong>新版的稀疏索引，因此<strong>强烈建议升级 cargo 版本</strong>。详见<a href="#related-mirrors">相关镜像</a>。</p>
 </div>

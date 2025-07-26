@@ -663,15 +663,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#http_sync" class="md-nav__link">
-    <span class="md-ellipsis">
-      通过 HTTP(S) 协议同步
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       使用时间段与并发设置建议
@@ -3134,15 +3125,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#http_sync" class="md-nav__link">
-    <span class="md-ellipsis">
-      通过 HTTP(S) 协议同步
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       使用时间段与并发设置建议
@@ -3211,8 +3193,7 @@ AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约 80G（注意磁盘格
 <p>按照 <a href="https://source.android.com/source/downloading.html">Google 官方教程</a>
 (<a href="https://source.android.google.cn/source/downloading">CN</a>)，
 将 <code>https://android.googlesource.com/platform/manifest</code> 替换为
-<code>git://mirrors.ustc.edu.cn/aosp/platform/manifest</code> 或
-<code>http://mirrors.ustc.edu.cn/aosp/platform/manifest</code>。</p>
+<code>https://mirrors.ustc.edu.cn/aosp/platform/manifest</code>。</p>
 <p>具体做法摘录如下：首先下载 repo 工具。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>~/bin
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">PATH</span><span class="o">=</span>~/bin:<span class="nv">$PATH</span>
@@ -3228,13 +3209,13 @@ AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约 80G（注意磁盘格
 <p>初始化仓库：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 如果提示无法连接到 gerrit.googlesource.com，可以设置 REPO_URL 环境变量：</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">REPO_URL</span><span class="o">=</span>https://gerrit-googlesource.proxy.ustclug.org/git-repo
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>repo<span class="w"> </span>init<span class="w"> </span>-u<span class="w"> </span>git://mirrors.ustc.edu.cn/aosp/platform/manifest
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>repo<span class="w"> </span>init<span class="w"> </span>-u<span class="w"> </span>https://mirrors.ustc.edu.cn/aosp/platform/manifest
 </code></pre></div>
 <p>如果需要某个特定的 Android 版本
 （<a href="https://source.android.com/source/build-numbers.html#source-code-tags-and-builds">Android 版本列表</a>
 (<a href="https://source.android.google.cn/source/build-numbers?hl=zh-cn#source-code-tags-and-builds">CN</a>)，
 <a href="http://mirrors.ustc.edu.cn/aosp/platform/manifest.git/refs/tags/">镜像站 tags 列表</a>）：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>repo<span class="w"> </span>init<span class="w"> </span>-u<span class="w"> </span>git://mirrors.ustc.edu.cn/aosp/platform/manifest<span class="w"> </span>-b<span class="w"> </span>android-4.0.1_r1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>repo<span class="w"> </span>init<span class="w"> </span>-u<span class="w"> </span>https://mirrors.ustc.edu.cn/aosp/platform/manifest<span class="w"> </span>-b<span class="w"> </span>android-4.0.1_r1
 </code></pre></div>
 <p>同步源码树（以后只需执行这条命令来同步）：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>repo<span class="w"> </span>sync
@@ -3245,21 +3226,9 @@ AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约 80G（注意磁盘格
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>https://android.googlesource.com/platform/manifest
 </code></pre></div>
 <p>修改成：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>git://mirrors.ustc.edu.cn/aosp/platform/manifest
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>https://mirrors.ustc.edu.cn/aosp/platform/manifest
 </code></pre></div>
 <p>即可。</p>
-<h2 id="http_sync">通过 HTTP(S) 协议同步<a class="headerlink" href="#http_sync" title="Permanent link">&para;</a></h2>
-<p>以上说明中，默认使用了 git 协议的地址：<code>git://mirrors.ustc.edu.cn/aosp/platform/manifest</code>。</p>
-<p>如果由于某种原因不能通过 git 协议同步，请修改 <code>.repo/manifests.git/config</code>，将</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>git://mirrors.ustc.edu.cn/aosp/platform/manifest
-</code></pre></div>
-<p>修改成 (HTTP)：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>http://mirrors.ustc.edu.cn/aosp/platform/manifest
-</code></pre></div>
-<p>或 (HTTPS)：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>https://mirrors.ustc.edu.cn/aosp/platform/manifest
-</code></pre></div>
-<p>通过 HTTP(S) 同步过程中可能提示 clone.bundle 404 错误，这是正常现象，可以忽略。</p>
 <h2 id="_4">使用时间段与并发设置建议<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ol>
 <li>本镜像每天凌晨 04:30
@@ -3275,9 +3244,9 @@ AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约 80G（注意磁盘格
 <p>参考 Brillo 官方文档
 <a href="https://developers.google.com/brillo/docs/reference/downloads">https://developers.google.com/brillo/docs/reference/downloads</a>
 进行下载，将其中源码 manifest 地址改为
-<code>git://mirrors.ustc.edu.cn/aosp/brillo/manifest</code>。即：</p>
+<code>https://mirrors.ustc.edu.cn/aosp/brillo/manifest</code>。即：</p>
 <p><code>repo init</code> 时，使用
-<code>repo init -u git://mirrors.ustc.edu.cn/aosp/brillo/manifest -b master</code></p>
+<code>repo init -u https://mirrors.ustc.edu.cn/aosp/brillo/manifest -b master</code></p>
 <h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>Android 开源项目官网</dt>
