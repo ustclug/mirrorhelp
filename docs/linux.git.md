@@ -10,3 +10,12 @@
     git init
     git fetch https://mirrors.ustc.edu.cn/linux.git
     git checkout FETCH_HEAD
+
+## 部分克隆
+
+如果不需要完整的仓库历史，可以使用部分克隆来节省空间和时间。使用以下命令：
+
+```shell
+git clone --filter=tree:0 https://mirrors.ustc.edu.cn/linux.git
+cd linux
+```
