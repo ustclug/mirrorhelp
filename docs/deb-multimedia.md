@@ -48,8 +48,8 @@ Debian Old Stable, Stable, Testing, Unstable(sid)
 更改完 `sources.list` 文件后请导入 `deb-multimedia-keyring`：
 
 ```shell
-wget https://mirrors.ustc.edu.cn/deb-multimedia/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
-sudo apt-get install ./deb-multimedia-keyring_2016.8.1_all.deb
+wget https://mirrors.ustc.edu.cn/deb-multimedia/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2024.9.1_all.deb
+sudo apt-get install ./deb-multimedia-keyring_2024.9.1_all.deb
 ```
 
 然后运行 `sudo apt-get update` 更新索引以生效。
