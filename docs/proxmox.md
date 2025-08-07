@@ -80,9 +80,9 @@ PVE 8 之后默认安装 Ceph 仓库源文件 `/etc/apt/sources.list.d/ceph.list
 
     ```shell
     if [ -f /etc/apt/sources.list.d/ceph.list ]; then
-    CEPH_CODENAME=`ceph -v | grep ceph | awk '{print $(NF-1)}'`
-    source /etc/os-release
-    echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-$CEPH_CODENAME $VERSION_CODENAME no-subscription" > /etc/apt/sources.list.d/ceph.list
+      CEPH_CODENAME=`ceph -v | grep ceph | awk '{print $(NF-1)}'`
+      source /etc/os-release
+      echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-$CEPH_CODENAME $VERSION_CODENAME   no-subscription" > /etc/apt/sources.list.d/ceph.list
     fi
     ```
 
@@ -90,9 +90,9 @@ PVE 8 之后默认安装 Ceph 仓库源文件 `/etc/apt/sources.list.d/ceph.list
 
     ```shell
     if [ -f /etc/apt/sources.list.d/ceph.sources ]; then
-        CEPH_CODENAME=`ceph -v | grep ceph | awk '{print $(NF-1)}'`
-        source /etc/os-release
-        cat > /etc/apt/sources.list.d/ceph.sources <<EOF
+      CEPH_CODENAME=`ceph -v | grep ceph | awk '{print $(NF-1)}'`
+      source /etc/os-release
+      cat > /etc/apt/sources.list.d/ceph.sources <<EOF
     Types: deb
     URIs: https://mirrors.ustc.edu.cn/proxmox/debian/ceph-$CEPH_CODENAME
     Suites: $VERSION_CODENAME
