@@ -84,6 +84,9 @@ extra:
 
   # data for use in templates
   debian_releases:
+    - version: 13
+      codename: trixie
+      proxmox_version: 9
     - version: 12
       codename: bookworm
       proxmox_version: 8
