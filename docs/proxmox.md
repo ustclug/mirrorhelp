@@ -24,7 +24,7 @@ Proxmox 软件源
 
 ### Debian，Proxmox
 
-一般情况下，需要同时修改基础系统（Debian）的源文件 `/etc/apt/sources.list` 和 Proxmox 的源文件。
+一般情况下，需要同时修改基础系统（Debian）的源文件（`/etc/apt/sources.list` 或 `/etc/apt/sources.list.d/debian.sources`）和 Proxmox 的源文件。
 
 修改基础系统（Debian）的源文件，可以参考 [Debian 帮助](debian.md) 或使用如下命令：
 
@@ -74,7 +74,7 @@ Proxmox 软件源
 
 对于 Proxmox Backup Server 和 Proxmox Mail Gateway，请将以上命令中的 `pve` 分别替换为 `pbs` 和 `pmg`。
 
-PVE 8 之后默认安装 Ceph 仓库源文件 `/etc/apt/sources.list.d/ceph.list`，可以使用如下命令更换源：
+PVE 8 之后默认安装 Ceph 仓库源文件 `/etc/apt/sources.list.d/ceph.list` 或 `/etc/apt/sources.list.d/ceph.sources`，可以使用如下命令更换源：
 
 === "`sources.list` 格式"
 
