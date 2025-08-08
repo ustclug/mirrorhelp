@@ -46,7 +46,7 @@ Debian Old Old Stable, Old Stable, Stable, Testing, Unstable (sid)
     sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources
     ```
 
-    目前使用 DEB822 格式的 Debian 分发仅有容器镜像，且其安全更新源默认设置为 `http://deb.debian.org/debian-security`，因此以上命令会同时替换 Debian 官方源和安全更新源。
+    目前 Debian Bookworm 的容器镜像和 Debian Trixie 已经使用 DEB822 格式，且其安全更新源默认设置为 `http://deb.debian.org/debian-security`，因此以上命令会同时替换 Debian 官方源和安全更新源。
 
 当然也可以直接编辑 APT 源文件（需要使用 sudo）。以下是参考配置内容：
 
