@@ -3136,16 +3136,21 @@
 sudo sed -i &#39;s|archive.raspbian.org|mirrors.ustc.edu.cn/raspbian|g&#39; /etc/apt/sources.list
 </code></pre></div>
 <p>当然也可以直接编辑 <code>/etc/apt/sources.list</code> 文件（需要使用 sudo）。删除原文件所有内容，用以下内容取代：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Raspbian bookworm</label><label for="__tabbed_1_2">Raspbian bullseye</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Raspbian trixie</label><label for="__tabbed_1_2">Raspbian bookworm</label><label for="__tabbed_1_3">Raspbian bullseye</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/raspbian/raspbian/</span><span class="w"> </span><span class="kp">bookworm</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">rpi</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ bookworm main contrib non-free rpi</span>
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/raspbian/raspbian/</span><span class="w"> </span><span class="kp">trixie</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">rpi</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ trixie main contrib non-free rpi</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/raspbian/raspbian/</span><span class="w"> </span><span class="kp">bullseye</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">rpi</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ bullseye main contrib non-free rpi</span>
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/raspbian/raspbian/</span><span class="w"> </span><span class="kp">bookworm</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">rpi</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ bookworm main contrib non-free rpi</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/raspbian/raspbian/</span><span class="w"> </span><span class="kp">bullseye</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">rpi</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c"># deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ bullseye main contrib non-free rpi</span>
 </code></pre></div>
 </div>
 </div>
