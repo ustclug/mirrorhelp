@@ -82,7 +82,7 @@ PVE 8 之后默认安装 Ceph 仓库源文件 `/etc/apt/sources.list.d/ceph.list
     if [ -f /etc/apt/sources.list.d/ceph.list ]; then
       CEPH_CODENAME=`ceph -v | grep ceph | awk '{print $(NF-1)}'`
       source /etc/os-release
-      echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-$CEPH_CODENAME $VERSION_CODENAME   no-subscription" > /etc/apt/sources.list.d/ceph.list
+      echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-$CEPH_CODENAME $VERSION_CODENAME no-subscription" > /etc/apt/sources.list.d/ceph.list
     fi
     ```
 
@@ -102,7 +102,7 @@ PVE 8 之后默认安装 Ceph 仓库源文件 `/etc/apt/sources.list.d/ceph.list
     fi
     ```
 
-更改完 `sources.list` 或 DEB822 仓库描述文件文件后请运行 `apt update` 更新索引以生效。
+更改完 `sources.list` 或 DEB822 仓库描述文件后请运行 `apt update` 更新索引以生效。
 
 ### CT Templates
 
