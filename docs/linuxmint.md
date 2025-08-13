@@ -23,29 +23,19 @@ i386，amd64
 
     操作前请做好相应备份。
 
-编辑 `/etc/apt/sources.list.d/official-package-repositories.list`：
+Linux Mint 也采用 apt 作为包管理器，与 Ubuntu 和 Debian 类似，你需要编辑 `/etc/apt/sources.list` 和 `/etc/apt/sources.list.d/*` 中的路径。对于来自 Ubuntu 与 Debian 的部分源，可以参考 [Ubuntu 帮助](https://mirrors.ustc.edu.cn/help/ubuntu.html)与 [Debian 帮助](https://mirrors.ustc.edu.cn/help/debian.html)进行修改。
 
-- 对于基于 Ubuntu 的原版，以 Linuxmint 19 为例：
+需要修改 `/etc/apt/sources.list.d/official-package-repositories.list`（注意备份），把 `packages.linuxmint.com` 替换为镜像源：
 
-    ```debsources
-    deb https://mirrors.ustc.edu.cn/linuxmint/ tara main upstream import backport 
-    deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
-    deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-    deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-    deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
-    deb http://archive.canonical.com/ubuntu/ bionic partner
+{% for release in linuxmint_releases %}
+
+=== "{{ release.version }}"
+
+    ```debsources title="/etc/apt/sources.list.d/official-package-repositories.list"
+    deb http://mirrors.ustc.edu.cn/linuxmint {{ release.codename }} main upstream import backport
     ```
 
-- 对于基于 Debian 的 LMDE，以 LMDE 2 为例：
-
-    ```debsources
-    deb https://mirrors.ustc.edu.cn/linuxmint/ betsy main upstream import
-    deb https://mirrors.ustc.edu.cn/debian jessie main contrib non-free
-    deb https://mirrors.ustc.edu.cn/debian jessie-updates main contrib non-free
-    deb https://mirrors.ustc.edu.cn/debian jessie-backports main contrib non-free
-    deb https://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib
-    deb https://mirrors.ustc.edu.cn/deb-multimedia/ jessie main non-free
-    ```
+{% endfor %}
 
 然后运行 `sudo apt-get update` 更新索引以生效。
 

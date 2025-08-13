@@ -104,6 +104,19 @@ extra:
       codename: bionic
     - version: 16.04
       codename: xenial
+  linuxmint_releases:
+    - version: 22.1
+      codename: xia
+    - version: 22
+      codename: willma
+    - version: 21.3
+      codename: virginia
+    - version: 21.2
+      codename: victoria
+    - version: 21.1
+      codename: vera
+    - version: 21
+      codename: vanessa
 
 extra_css:
   - css/extra.css
