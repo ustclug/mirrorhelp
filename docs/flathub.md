@@ -15,6 +15,12 @@ Flathub 的 blob 数据（`objects/`）与增量更新数据（`deltas/`, `delta
 
 ## 配置方法
 
+如果之前从未使用过 Flathub，那么首先需要添加 Flathub 远程源：
+
+```shell
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+
 在已有 `flathub` 远程源的基础上：
 
 ```shell
