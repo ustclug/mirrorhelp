@@ -3079,15 +3079,18 @@
 <p>Flathub 的 blob 数据（<code>objects/</code>）与增量更新数据（<code>deltas/</code>, <code>delta-indexes/</code>）为动态缓存，根据用户访问情况，每小时更新一次。<strong>在请求未命中时，会 302 重定向到 Flathub 源站点</strong>。本镜像不是 Flathub 的完整镜像，因此仍然需要用户到 Flathub 站点有基本的可连通性。</p>
 <p>软件 manifest 中标注为 <code>extra-data</code> 的文件不会经过镜像站或 Flathub 服务器，而是直接从标注的源站点下载。</p>
 <h2 id="_2">配置方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>如果之前从未使用过 Flathub，那么首先需要添加 Flathub 远程源：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flatpak<span class="w"> </span>remote-add<span class="w"> </span>--if-not-exists<span class="w"> </span>flathub<span class="w"> </span>https://dl.flathub.org/repo/flathub.flatpakrepo
+</code></pre></div>
 <p>在已有 <code>flathub</code> 远程源的基础上：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>flatpak<span class="w"> </span>remote-modify<span class="w"> </span>flathub<span class="w"> </span>--url<span class="o">=</span>https://mirrors.ustc.edu.cn/flathub
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>flatpak<span class="w"> </span>remote-modify<span class="w"> </span>flathub<span class="w"> </span>--url<span class="o">=</span>https://mirrors.ustc.edu.cn/flathub
 </code></pre></div>
 <p>恢复默认值：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>flatpak<span class="w"> </span>remote-modify<span class="w"> </span>flathub<span class="w"> </span>--url<span class="o">=</span>https://dl.flathub.org/repo
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>flatpak<span class="w"> </span>remote-modify<span class="w"> </span>flathub<span class="w"> </span>--url<span class="o">=</span>https://dl.flathub.org/repo
 </code></pre></div>
 <h2 id="_3">调试方法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>如果怀疑网络问题，请添加 <code>OSTREE_DEBUG_HTTP=1</code> 环境变量后再次运行 <code>flatpak</code> 命令以获取 libcurl 的详细输出，例如：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">OSTREE_DEBUG_HTTP</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>flatpak<span class="w"> </span>install<span class="w"> </span>com.github.tchx84.Flatseal
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">OSTREE_DEBUG_HTTP</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>flatpak<span class="w"> </span>install<span class="w"> </span>com.github.tchx84.Flatseal
 </code></pre></div>
 <h2 id="_4">相关链接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <dl>
