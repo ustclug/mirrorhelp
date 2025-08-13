@@ -39,13 +39,13 @@ i386，amd64
 
 {% endfor %}
 
-替换基于 Ubuntu 的镜像源:
+替换基于 Ubuntu 的镜像源：
 
 ```shell
 sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list.d/official-package-repositories.list
 ```
 
-替换基于 Debian (LMDE) 的镜像源:
+替换基于 Debian (LMDE) 的镜像源：
 
 ```shell
 sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/official-package-repositories.list
