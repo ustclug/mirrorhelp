@@ -3121,34 +3121,82 @@
 <p class="admonition-title">Warning</p>
 <p>操作前请做好相应备份。</p>
 </div>
-<p>编辑 <code>/etc/apt/sources.list.d/official-package-repositories.list</code>：</p>
-<ul>
-<li>
-<p>对于基于 Ubuntu 的原版，以 Linuxmint 19 为例：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/linuxmint/</span><span class="w"> </span><span class="kp">tara</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">upstream</span><span class="w"> </span><span class="kp">import</span><span class="w"> </span><span class="kp">backport</span><span class="w"> </span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kp">deb</span><span class="w"> </span><span class="kp">https://mirrors.ustc.edu.cn/ubuntu/</span><span class="w"> </span><span class="kp">bionic</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu/</span><span class="w"> </span><span class="kp">bionic-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu/</span><span class="w"> </span><span class="kp">bionic-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu/</span><span class="w"> </span><span class="kp">bionic-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://archive.canonical.com/ubuntu/</span><span class="w"> </span><span class="kp">bionic</span><span class="w"> </span><span class="kp">partner</span>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Linux Mint 也与 Ubuntu 和 Debian 类似，都采用 apt 作为包管理器。<code>/etc/apt/sources.list.d/official-package-repositories.list</code> 中包含了来自 Ubuntu 或 Debian 的源，以及 Linux Mint 的源。对于来自 Ubuntu 与 Debian 的部分源，可以参考 <a href="ubuntu.html">Ubuntu 帮助</a>与 <a href="debian.html">Debian 帮助</a>进行修改。Ubuntu 与 Debian 的发行版代号应保持不变。比如系统原来是 <code>bookworm</code> (Debian 12)，不可更改为 <code>trixie</code> (Debian 13)。更改代号会破坏依赖。</p>
+</div>
+<p>需要修改 <code>/etc/apt/sources.list.d/official-package-repositories.list</code>（注意备份），把 <code>packages.linuxmint.com</code> 替换为镜像源。其中 Linux Mint 的部分如下：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:8"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">22.2</label><label for="__tabbed_1_2">22.1</label><label for="__tabbed_1_3">22</label><label for="__tabbed_1_4">21.3</label><label for="__tabbed_1_5">21.2</label><label for="__tabbed_1_6">21.1</label><label for="__tabbed_1_7">21</label><label for="__tabbed_1_8">LMDE 6.0</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/official-package-repositories.list</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/linuxmint</span><span class="w"> </span><span class="kp">zara</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">upstream</span><span class="w"> </span><span class="kp">import</span><span class="w"> </span><span class="kp">backport</span>
 </code></pre></div>
-</li>
-<li>
-<p>对于基于 Debian 的 LMDE，以 LMDE 2 为例：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/linuxmint/</span><span class="w"> </span><span class="kp">betsy</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">upstream</span><span class="w"> </span><span class="kp">import</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian</span><span class="w"> </span><span class="kp">jessie</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian</span><span class="w"> </span><span class="kp">jessie-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian</span><span class="w"> </span><span class="kp">jessie-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/debian-security/</span><span class="w"> </span><span class="kp">jessie/updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">contrib</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/deb-multimedia/</span><span class="w"> </span><span class="kp">jessie</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">non-free</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/official-package-repositories.list</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/linuxmint</span><span class="w"> </span><span class="kp">xia</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">upstream</span><span class="w"> </span><span class="kp">import</span><span class="w"> </span><span class="kp">backport</span>
 </code></pre></div>
-</li>
-</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/official-package-repositories.list</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/linuxmint</span><span class="w"> </span><span class="kp">willma</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">upstream</span><span class="w"> </span><span class="kp">import</span><span class="w"> </span><span class="kp">backport</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/official-package-repositories.list</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/linuxmint</span><span class="w"> </span><span class="kp">virginia</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">upstream</span><span class="w"> </span><span class="kp">import</span><span class="w"> </span><span class="kp">backport</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/official-package-repositories.list</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/linuxmint</span><span class="w"> </span><span class="kp">victoria</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">upstream</span><span class="w"> </span><span class="kp">import</span><span class="w"> </span><span class="kp">backport</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/official-package-repositories.list</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/linuxmint</span><span class="w"> </span><span class="kp">vera</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">upstream</span><span class="w"> </span><span class="kp">import</span><span class="w"> </span><span class="kp">backport</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/official-package-repositories.list</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/linuxmint</span><span class="w"> </span><span class="kp">vanessa</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">upstream</span><span class="w"> </span><span class="kp">import</span><span class="w"> </span><span class="kp">backport</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/official-package-repositories.list</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">http://mirrors.ustc.edu.cn/linuxmint</span><span class="w"> </span><span class="kp">faye</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">upstream</span><span class="w"> </span><span class="kp">import</span><span class="w"> </span><span class="kp">backport</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>替换基于 Ubuntu 的镜像源：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/official-package-repositories.list
+</code></pre></div>
+<p>替换基于 Debian (LMDE) 的镜像源：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/deb.debian.org/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/official-package-repositories.list
+</code></pre></div>
 <p>然后运行 <code>sudo apt-get update</code> 更新索引以生效。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>完成后请不要再使用 mintsources（自带的图形化软件源设置工具）进行任何操作，因为在操作后，无论是否有按"确定"，mintsources 均会覆盖 <code>/etc/apt/sources.list.d/official-package-repositories.list</code>。</p>
+<p>目前 Linux Mint 暂未使用 DEB822 格式进行分发。如果您需要自行更改为 DEB822 格式，请参考下面的格式进行手动修改。</p>
 </div>
+<!-- markdownlint-disable MD041 -->
+<details class="tip">
+<summary>什么是 DEB822 (.sources) 文件格式？</summary>
+<p>自新版本的 Debian 与 Ubuntu 起，例如：</p>
+<ul>
+<li>Debian 13</li>
+<li>Debian 12 的容器镜像</li>
+<li>Ubuntu 24.04</li>
+<li>Proxmox VE 9</li>
+</ul>
+<p>默认预装的系统中 APT 的系统源配置文件不再是传统的 <code>/etc/apt/sources.list</code>。传统格式（又被称为 One-Line-Style 格式）类似如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>deb http://mirrors.ustc.edu.cn/debian/ bookworm main contrib
+</code></pre></div>
+<p>新的 DEB822 格式自 APT 1.1（2015 年发布）起支持，后缀为 <code>.sources</code>，存储在 <code>/etc/apt/sources.list.d/</code> 目录下，格式类似如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/debian</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bookworm</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main contrib</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/debian-archive-keyring.gpg</span>
+</code></pre></div>
+<p>在切换软件源时，<strong>需要根据实际情况选择对应的格式进行修改</strong>。</p>
+<p>关于 DEB822 格式的设计考虑，可以参考<a href="https://repolib.readthedocs.io/en/latest/deb822-format.html">官方文档</a>（英文）。</p>
+</details>
 <h2 id="_6">相关链接<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>官方主页</dt>
