@@ -105,6 +105,8 @@ extra:
     - version: 16.04
       codename: xenial
   linuxmint_releases:
+    - version: 22.2
+      codename: zara
     - version: 22.1
       codename: xia
     - version: 22
@@ -117,6 +119,22 @@ extra:
       codename: vera
     - version: 21
       codename: vanessa
+    - version: 20.3
+      codename: una
+    - version: 20.2
+      codename: uma
+    - version: 20.1
+      codename: ulyssa
+    - version: 20
+      codename: ulyana
+    - version: LMDE 6.0
+      codename: faye
+    - version: LMDE 5.0
+      codename: elsie
+    - version: LMDE 4.0
+      codename: debbie
+    - version: LMDE 3.0
+      codename: cindy  
 
 extra_css:
   - css/extra.css
