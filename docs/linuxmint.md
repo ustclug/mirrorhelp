@@ -25,7 +25,7 @@ i386，amd64
 
 !!! tip
 
-    Linux Mint 也与 Ubuntu 和 Debian 类似，都采用 apt 作为包管理器。`/etc/apt/sources.list.d/official-package-repositories.list` 中包含了来自 Ubuntu 或 Debian 的源，以及 Linux Mint 的源。对于来自 Ubuntu 与 Debian 的部分源，可以参考 [Ubuntu 帮助](https://mirrors.ustc.edu.cn/help/ubuntu.html)与 [Debian 帮助](https://mirrors.ustc.edu.cn/help/debian.html)进行修改。Ubuntu 与 Debian 的发行版代号应保持不变。比如系统原来是 `bookworm` (Debian 12)，不可更改为 `trixie` (Debian 13)。更改代号会破坏依赖。
+    Linux Mint 也与 Ubuntu 和 Debian 类似，都采用 apt 作为包管理器。`/etc/apt/sources.list.d/official-package-repositories.list` 中包含了来自 Ubuntu 或 Debian 的源，以及 Linux Mint 的源。对于来自 Ubuntu 与 Debian 的部分源，可以参考 [Ubuntu 帮助](./ubuntu.md)与 [Debian 帮助](./debian.md)进行修改。Ubuntu 与 Debian 的发行版代号应保持不变。比如系统原来是 `bookworm` (Debian 12)，不可更改为 `trixie` (Debian 13)。更改代号会破坏依赖。
 
 需要修改 `/etc/apt/sources.list.d/official-package-repositories.list`（注意备份），把 `packages.linuxmint.com` 替换为镜像源。其中 Linux Mint 的部分如下：
 
