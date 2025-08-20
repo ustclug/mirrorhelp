@@ -1,5 +1,9 @@
 # CRAN
 
+## 地址
+
+<https://mirrors.ustc.edu.cn/CRAN/>
+
 ## 使用说明
 
 在第一次执行 `install.packages("xxx")` 时会弹出窗口让你选择镜像，此时选择 China (Hefei) 即可。
