@@ -199,6 +199,7 @@ nav:
     - rust-static.md
     - stackage.md
   - 软件镜像:
+    - adoptium.md
     - anaconda.md
     - ceph.md
     - CPAN.md
