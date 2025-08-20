@@ -23,9 +23,9 @@ chmod a+x ~/bin/repo
 
 ## 初始同步
 
-第一次同步数据量特别大，如果网络不稳定，中间失败就要从头再来了。所以我们提供了打包的 AOSP 镜像，为一个 tar 包，截至 2024 年 3 月约 80G（注意磁盘格式需要能够支持大文件）。这样就可以通过 HTTP(S) 的方式下载，支持断点续传。该 tar 包为定时从 [TUNA](https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/) 下载。
+第一次同步数据量特别大，如果网络不稳定，中间失败就要从头再来了。所以我们提供了打包的 AOSP 镜像，为一个 tar 包，截至 2025 年 8 月约 90G（注意磁盘格式需要能够支持大文件）。这样就可以通过 HTTP(S) 的方式下载，支持断点续传。该 tar 包为定时从 [TUNA](https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/) 下载。
 
-下载地址：<https://mirrors.ustc.edu.cn/aosp-monthly/>。**请注意对比 checksum。**
+下载地址：<https://mirrors.ustc.edu.cn/aosp-monthly/aosp-latest.tar>，**请注意对比 [checksum](https://mirrors.ustc.edu.cn/aosp-monthly/aosp-latest.tar.md5)。**
 
 解压、修改配置并同步：
 
