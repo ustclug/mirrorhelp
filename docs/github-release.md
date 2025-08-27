@@ -39,9 +39,9 @@
 
 ## 相关链接
 
-AdoptOpenJDK 官网
+Adoptium 官网
 
-:   <https://adoptopenjdk.net/>
+:   <https://adoptium.net/>
 
 Rufus 官网
 
