@@ -33,7 +33,7 @@ FreeBSD: {
 
 !!! tip
 
-    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但需要事先安装 `security/ca_root_nss` 软件包。
+    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但早于 13.2-RELEASE 的系统版本需要事先安装 `security/ca_root_nss` 软件包。
 
 ## 相关链接
 
