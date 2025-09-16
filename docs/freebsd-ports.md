@@ -19,7 +19,7 @@ ports.tar.gz 文件为 Ports Collection，可以下载后解压到 `/usr/ports/`
     git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 
 !!! tip
-    
+
 	FreeBSD 基本系统并未预置 git，需要自行安装 Port devel/git。
 
 !!! warning
