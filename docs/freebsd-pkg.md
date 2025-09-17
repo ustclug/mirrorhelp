@@ -12,28 +12,38 @@ FreeBSD 预编译软件包镜像
 
 所有受官方支持版本的 amd64 和 aarch64 架构，详细参见 <https://pkg.freebsd.org/>。
 
-仓库包括 quarterly 和滚动更新的 latest 仓库。
+仓库包括季度分支 quarterly 和滚动更新的 latest 仓库。
+
+!!! tip
+
+    并非所有版本和架构都同时拥有 quarterly 或 latest 仓库，如 CURRENT 仅有 latest。
 
 ## 使用方法
 
-FreeBSD pkg 包管理器的官方源配置是 `/etc/pkg/FreeBSD.conf`，请先检查该文件内容。注意其中的 `url` 参数配置了官方仓库的地址，我们需要把它替换为镜像站的地址。
+!!! warning
 
-该配置文件是 FreeBSD 基本系统的一部分，会随着 `freebsd-update` 更新，请不要直接修改，而是创建 `/usr/local/etc/pkg/repos/FreeBSD.conf` 覆盖配置，文件内容如下：
+    在操作前请做好相应备份。
+
+为了避免可能出现的向后兼容问题，基本系统中未预置真实的 pkg(8) 工具，需要在线安装。参见 [man pkg(7)](https://man.freebsd.org/cgi/man.cgi?query=pkg)。安装方法为直接输入命令 `pkg` 根据提示进行确认安装。为了避免因网络问题造成安装失败，建议先按以下方法换源后再安装 pkg。
+
+FreeBSD pkg 包管理器的官方源的配置路径为 `/etc/pkg/FreeBSD.conf`。不建议直接修改此文件：该配置文件是 FreeBSD 基本系统的一部分，会随着基本系统的更新而变化。
+
+应创建路径及文件 `/usr/local/etc/pkg/repos/USTC.conf` 来覆盖配置，文件内容如下：
 
 ```yaml
-FreeBSD: {
-  url: "http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
-  mirror_type: "none",
+ustc: { 
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly"
 }
+FreeBSD: { enabled: no }
 ```
 
-如果要使用滚动更新的 latest 仓库，把 `url` 配置最后的 `quarterly` 换成 `latest` 即可。
+若要使用滚动更新的 latest 仓库，将 `url` 这行配置末尾的 `quarterly` 换成 `latest` 即可。
 
 修改配置后，运行 `pkg update -f` 更新索引。
 
 !!! tip
 
-    使用 HTTPS 可以有效避免国内运营商的缓存劫持，但早于 13.2-RELEASE 的系统版本需要事先安装 `security/ca_root_nss` 软件包。
+    如未配置 [pkgbase](https://wiki.freebsd.org/pkgbase)，则 pkg 仅管理用户安装的第三方软件（Port），无法更新基本系统。基本系统与通过 pkg 安装的软件互不干涉。
 
 ## 相关链接
 
@@ -41,10 +51,22 @@ FreeBSD: {
 
 :   <https://www.freebsd.org>
 
+邮件列表
+
+:   <https://www.freebsd.org/community/mailinglists>
+
 论坛
 
 :   <https://forums.freebsd.org>
 
 文档
 
-:   <https://www.freebsd.org/doc>
+:   <https://docs.freebsd.org>
+
+Wiki
+
+:   <https://wiki.freebsd.org>
+
+官方 Discord
+
+:   <https://discord.com/invite/freebsd>
