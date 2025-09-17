@@ -69,4 +69,4 @@ Wiki
 
 官方 Discord
 
-: <https://discord.com/invite/freebsd>
+:   <https://discord.com/invite/freebsd>
