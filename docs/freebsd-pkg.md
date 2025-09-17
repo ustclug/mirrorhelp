@@ -63,7 +63,7 @@ FreeBSD: { enabled: no }
 
 :   <https://docs.freebsd.org>
 
-WiKi
+Wiki
 
 :   <https://wiki.freebsd.org>
 
