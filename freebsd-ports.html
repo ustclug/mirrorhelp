@@ -3070,16 +3070,20 @@
 
 <h1 id="freebsd-ports">FreeBSD ports<a class="headerlink" href="#freebsd-ports" title="Permanent link">&para;</a></h1>
 <h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><a href="http://mirrors.ustc.edu.cn/freebsd-ports/">http://mirrors.ustc.edu.cn/freebsd-ports/</a></p>
+<p><a href="https://mirrors.ustc.edu.cn/freebsd-ports/">https://mirrors.ustc.edu.cn/freebsd-ports/</a></p>
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>FreeBSD ports 软件源</p>
 <h2 id="_3">使用方法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>在 <code>/etc/make.conf</code> 中添加以下内容（如果文件不存在，则新建之）：</p>
-<div class="highlight"><pre><span></span><code>MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
+<div class="highlight"><pre><span></span><code>MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
 </code></pre></div>
 <p>ports.tar.gz 文件为 Ports Collection，可以下载后解压到 <code>/usr/ports/</code> 目录。也可参考 FreeBSD Handbook 中 <a href="https://docs.freebsd.org/en/books/handbook/ports/#ports-using-installation-methods">Installing the Ports Collection</a> 一节，使用 <code>git</code> 获取 ports tree：</p>
 <div class="highlight"><pre><span></span><code>git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 </code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>FreeBSD 基本系统并未预置 git，需要自行安装 Port devel/git。</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>这里使用了 <code>--filter=tree:0</code> 参数以进行 treeless
@@ -3089,18 +3093,18 @@ clone，减少下载量与服务端压力。关于不同的部分 clone
 <p>本帮助早期版本使用了 <code>--depth</code>，但请<strong>避免</strong>使用 <code>--depth</code> 参数，
 因为其后续更新会给服务器带来大量的计算压力。</p>
 <p>如果不需要后续更新 ports，推荐直接下载
-<a href="http://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz">http://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz</a> 文件并解压。</p>
+<a href="https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz">https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz</a> 文件并解压。</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>部分 ports 的源代码需要从
 <a href="http://distcache.freebsd.org/ports-distfiles/">http://distcache.freebsd.org/ports-distfiles/</a> 以外的 master site
-下载，本镜像不包含这些文件。</p>
+下载，本镜像未包含这些文件。</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>本镜像仅包含 ports tree 中 HEAD branch 引用到的文件。季度分支（如
-<code>2020Q4</code>）引用的文件有可能不包含在本镜像中。</p>
+<code>2024Q4</code>）引用的文件有可能未被包含于本镜像中。</p>
 </div>
 <h2 id="_4">相关链接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <dl>
@@ -3108,17 +3112,25 @@ clone，减少下载量与服务端压力。关于不同的部分 clone
 <dd>
 <p><a href="https://www.freebsd.org">https://www.freebsd.org</a></p>
 </dd>
+<dt>邮件列表</dt>
+<dd>
+<p><a href="https://www.freebsd.org/community/mailinglists">https://www.freebsd.org/community/mailinglists</a></p>
+</dd>
 <dt>论坛</dt>
 <dd>
 <p><a href="https://forums.freebsd.org">https://forums.freebsd.org</a></p>
 </dd>
 <dt>文档</dt>
 <dd>
-<p><a href="https://www.freebsd.org/doc">https://www.freebsd.org/doc</a></p>
+<p><a href="https://docs.freebsd.org">https://docs.freebsd.org</a></p>
 </dd>
-<dt>官方介绍</dt>
+<dt>Wiki</dt>
 <dd>
-<p><a href="https://www.freebsd.org/ports">https://www.freebsd.org/ports</a></p>
+<p><a href="https://wiki.freebsd.org">https://wiki.freebsd.org</a></p>
+</dd>
+<dt>官方 Discord</dt>
+<dd>
+<p><a href="https://discord.com/invite/freebsd">https://discord.com/invite/freebsd</a></p>
 </dd>
 </dl>
 

@@ -3093,20 +3093,29 @@
 <p>FreeBSD 预编译软件包镜像</p>
 <h2 id="_3">收录架构与版本<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>所有受官方支持版本的 amd64 和 aarch64 架构，详细参见 <a href="https://pkg.freebsd.org/">https://pkg.freebsd.org/</a>。</p>
-<p>仓库包括 quarterly 和滚动更新的 latest 仓库。</p>
+<p>仓库包括季度分支 quarterly 和滚动更新的 latest 仓库。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>并非所有版本和架构都同时拥有 quarterly 或 latest 仓库，如 CURRENT 仅有 latest。</p>
+</div>
 <h2 id="_4">使用方法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>FreeBSD pkg 包管理器的官方源配置是 <code>/etc/pkg/FreeBSD.conf</code>，请先检查该文件内容。注意其中的 <code>url</code> 参数配置了官方仓库的地址，我们需要把它替换为镜像站的地址。</p>
-<p>该配置文件是 FreeBSD 基本系统的一部分，会随着 <code>freebsd-update</code> 更新，请不要直接修改，而是创建 <code>/usr/local/etc/pkg/repos/FreeBSD.conf</code> 覆盖配置，文件内容如下：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">FreeBSD</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">  url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">  mirror_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p p-Indicator">}</span>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>在操作前请做好相应备份。</p>
+</div>
+<p>为了避免可能出现的向后兼容问题，基本系统中未预置真实的 pkg(8) 工具，需要在线安装。参见 <a href="https://man.freebsd.org/cgi/man.cgi?query=pkg">man pkg(7)</a>。安装方法为直接输入命令 <code>pkg</code> 根据提示进行确认安装。为了避免因网络问题造成安装失败，建议先按以下方法换源后再安装 pkg。</p>
+<p>FreeBSD pkg 包管理器的官方源的配置路径为 <code>/etc/pkg/FreeBSD.conf</code>。不建议直接修改此文件：该配置文件是 FreeBSD 基本系统的一部分，会随着基本系统的更新而变化。</p>
+<p>应创建路径及文件 <code>/usr/local/etc/pkg/repos/USTC.conf</code> 来覆盖配置，文件内容如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">ustc</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">  url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p p-Indicator">}</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">FreeBSD</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">no</span><span class="w"> </span><span class="p p-Indicator">}</span>
 </code></pre></div>
-<p>如果要使用滚动更新的 latest 仓库，把 <code>url</code> 配置最后的 <code>quarterly</code> 换成 <code>latest</code> 即可。</p>
+<p>若要使用滚动更新的 latest 仓库，将 <code>url</code> 这行配置末尾的 <code>quarterly</code> 换成 <code>latest</code> 即可。</p>
 <p>修改配置后，运行 <code>pkg update -f</code> 更新索引。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>使用 HTTPS 可以有效避免国内运营商的缓存劫持，但早于 13.2-RELEASE 的系统版本需要事先安装 <code>security/ca_root_nss</code> 软件包。</p>
+<p>如未配置 <a href="https://wiki.freebsd.org/pkgbase">pkgbase</a>，则 pkg 仅管理用户安装的第三方软件（Port），无法更新基本系统。基本系统与通过 pkg 安装的软件互不干涉。</p>
 </div>
 <h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <dl>
@@ -3114,13 +3123,25 @@
 <dd>
 <p><a href="https://www.freebsd.org">https://www.freebsd.org</a></p>
 </dd>
+<dt>邮件列表</dt>
+<dd>
+<p><a href="https://www.freebsd.org/community/mailinglists">https://www.freebsd.org/community/mailinglists</a></p>
+</dd>
 <dt>论坛</dt>
 <dd>
 <p><a href="https://forums.freebsd.org">https://forums.freebsd.org</a></p>
 </dd>
 <dt>文档</dt>
 <dd>
-<p><a href="https://www.freebsd.org/doc">https://www.freebsd.org/doc</a></p>
+<p><a href="https://docs.freebsd.org">https://docs.freebsd.org</a></p>
+</dd>
+<dt>Wiki</dt>
+<dd>
+<p><a href="https://wiki.freebsd.org">https://wiki.freebsd.org</a></p>
+</dd>
+<dt>官方 Discord</dt>
+<dd>
+<p><a href="https://discord.com/invite/freebsd">https://discord.com/invite/freebsd</a></p>
 </dd>
 </dl>
 
