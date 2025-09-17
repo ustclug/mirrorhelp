@@ -31,7 +31,7 @@ FreeBSD 支持的所有正式版本
 
 !!! warning
 
-    FreeBSD 的 STABLE 镜像是开发版本，并非一般发行版意义上的“稳定版”，仅代表此大版本内 ABI 稳定，FreeBSD 官方不建议将其应用于生产环境。参见 [FreeBSD Glossary STABLE](https://wiki.freebsd.org/Glossary#STABLE)。FreeBSD 传统意义上的稳定版是 RELEASE，FreeBSD 官方推荐将其用于生成环境。FreeBSD 的主线（main）开发版本称作 CURRENT。参见 [FreeBSD Release Engineering](https://docs.freebsd.org/en/articles/freebsd-releng/)。
+    FreeBSD 的 STABLE 镜像是开发版本，并非一般发行版意义上的“稳定版”，仅代表此大版本内 ABI 稳定，FreeBSD 官方不建议将其应用于生产环境。参见 [FreeBSD Glossary STABLE](https://wiki.freebsd.org/Glossary#STABLE)。FreeBSD 传统意义上的稳定版是 RELEASE，FreeBSD 官方推荐将其用于生产环境。FreeBSD 的主线（main）开发版本称作 CURRENT。参见 [FreeBSD Release Engineering](https://docs.freebsd.org/en/articles/freebsd-releng/)。
 
 !!! warning
 
