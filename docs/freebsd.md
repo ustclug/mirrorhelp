@@ -60,10 +60,10 @@ FreeBSD 支持的所有正式版本
 
 :   <https://docs.freebsd.org>
 
-WiKi
+Wiki
 
 :   <https://wiki.freebsd.org>
 
 官方 Discord
 
-: <https://discord.com/invite/freebsd>
+:   <https://discord.com/invite/freebsd>

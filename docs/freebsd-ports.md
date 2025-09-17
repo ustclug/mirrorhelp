@@ -29,7 +29,7 @@ ports.tar.gz 文件为 Ports Collection，可以下载后解压到 `/usr/ports/`
     方式及其注意事项，可参考
     [GitHub Blog 的有关文章](https://github.blog/2020-12-21-get-up-to-speed-with-partial-clone-and-shallow-clone/)。
 
-    本帮助早期版本使用了 `--depth`，但请 **避免** 使用 `--depth` 参数，
+    本帮助早期版本使用了 `--depth`，但请**避免**使用 `--depth` 参数，
     因为其后续更新会给服务器带来大量的计算压力。
 
     如果不需要后续更新 ports，推荐直接下载
@@ -64,10 +64,10 @@ ports.tar.gz 文件为 Ports Collection，可以下载后解压到 `/usr/ports/`
 
 :   <https://docs.freebsd.org>
 
-WiKi
+Wiki
 
 :   <https://wiki.freebsd.org>
 
 官方 Discord
 
-: <https://discord.com/invite/freebsd>
+:   <https://discord.com/invite/freebsd>

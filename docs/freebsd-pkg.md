@@ -30,9 +30,9 @@ FreeBSD pkg 包管理器的官方源的配置路径为 `/etc/pkg/FreeBSD.conf`�
 
 应创建路径及文件 `/usr/local/etc/pkg/repos/USTC.conf` 来覆盖配置，文件内容如下：
 
-```ini
-ustc: {
-  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+```yaml
+ustc: { 
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly"
 }
 FreeBSD: { enabled: no }
 ```
