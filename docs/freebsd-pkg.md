@@ -32,7 +32,7 @@ FreeBSD pkg 包管理器的官方源的配置路径为 `/etc/pkg/FreeBSD.conf`�
 
 ```ini
 ustc: {
-url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
 }
 FreeBSD: { enabled: no }
 ```
