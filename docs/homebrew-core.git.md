@@ -60,7 +60,6 @@ Homebrew 核心软件仓库
 - [brew.git](brew.git.md)
 - [homebrew-bottles](homebrew-bottles.md)
 - [homebrew-cask.git](homebrew-cask.git.md)
-- [homebrew-services.git](homebrew-services.git.md)
 
 ## 相关链接
 
