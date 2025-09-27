@@ -6,15 +6,30 @@
 
 ## 说明
 
-Anaconda 仓库镜像
+Anaconda 仓库镜像，**不包含商业使用需要授权的、由 Anaconda 公司维护的包（包括 Anaconda 安装器）**。目前镜像的部分有：
+
+- Miniconda 安装包
+- 由社区维护的 conda-forge 和 bioconda 频道的动态缓存
+
+!!! warning "注意"
+
+    从 2020 年起，在超过 200 人的组织中使用 **Anaconda 官方仓库**需要向 Anaconda 购买商业许可证。为保证已有兼容性，本镜像相关部分会全部重定向到 TUNA 镜像站。
+
+    以下帮助**仅介绍如何配置 Miniconda 使用 conda-forge 和 bioconda 频道**。如果需要使用官方仓库，请使用其他镜像站，可参考 <https://help.mirrors.cernet.edu.cn/anaconda/> 中的帮助。
 
 ## 使用说明
 
-Anaconda 安装包可以在 <https://mirrors.ustc.edu.cn/anaconda/archive/> 下载。
+Miniconda（Anaconda 的轻量级替代）安装包可以在 <https://mirrors.ustc.edu.cn/anaconda/miniconda/> 下载。由于混用官方仓库与 conda-forge 可能导致问题，请运行以下命令找到已有的 `.condarc` 文件并删除 `defaults` 频道：
 
-Miniconda（Anaconda 的轻量级替代）安装包可以在 <https://mirrors.ustc.edu.cn/anaconda/miniconda/> 下载。
+```console
+$ conda config --show-sources
+==> /root/miniconda3/.condarc <==
+channels:
+  - defaults
+$ rm /root/miniconda3/.condarc
+```
 
-向 `.condarc` 写入配置以使用镜像站，其中各个操作系统对应的文件：
+向用户的 `.condarc` 写入配置以使用镜像站，其中各个操作系统对应的文件：
 
 - Linux & macOS: `$HOME/.condarc`
 - Windows: `%USERPROFILE%\.condarc`
@@ -24,15 +39,11 @@ Miniconda（Anaconda 的轻量级替代）安装包可以在 <https://mirrors.us
 
 ```yaml
 channels:
-  - defaults
-show_channel_urls: true
-default_channels:
-  - https://mirrors.ustc.edu.cn/anaconda/pkgs/main
-  - https://mirrors.ustc.edu.cn/anaconda/pkgs/r
-  - https://mirrors.ustc.edu.cn/anaconda/pkgs/msys2
+  - nodefaults
 custom_channels:
   conda-forge: https://mirrors.ustc.edu.cn/anaconda/cloud
   bioconda: https://mirrors.ustc.edu.cn/anaconda/cloud
+show_channel_urls: true
 ```
 
 !!! info "Anaconda Cloud channels"
@@ -42,7 +53,7 @@ custom_channels:
     - conda-forge
     - bioconda
 
-之后运行 `conda clean -i` 清除缓存后，使用 `conda create -n myenv numpy` 测试配置是否正确。
+之后运行 `conda clean -i` 清除缓存后，使用 `conda create -n myenv numpy -c conda-forge` 测试配置是否正确。
 
 ## 相关链接
 
