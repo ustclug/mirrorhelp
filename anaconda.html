@@ -3047,11 +3047,25 @@
 <h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><a href="https://mirrors.ustc.edu.cn/anaconda/">https://mirrors.ustc.edu.cn/anaconda/</a></p>
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Anaconda 仓库镜像</p>
+<p>Anaconda 仓库镜像，<strong>不包含商业使用需要授权的、由 Anaconda 公司维护的包（包括 Anaconda 安装器）</strong>。目前镜像的部分有：</p>
+<ul>
+<li>Miniconda 安装包</li>
+<li>由社区维护的 conda-forge 和 bioconda 频道的动态缓存</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>从 2020 年起，在超过 200 人的组织中使用 <strong>Anaconda 官方仓库</strong>需要向 Anaconda 购买商业许可证。为保证已有兼容性，本镜像相关部分会全部重定向到 TUNA 镜像站。</p>
+<p>以下帮助<strong>仅介绍如何配置 Miniconda 使用 conda-forge 和 bioconda 频道</strong>。如果需要使用官方仓库，请使用其他镜像站，可参考 <a href="https://help.mirrors.cernet.edu.cn/anaconda/">https://help.mirrors.cernet.edu.cn/anaconda/</a> 中的帮助。</p>
+</div>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>Anaconda 安装包可以在 <a href="https://mirrors.ustc.edu.cn/anaconda/archive/">https://mirrors.ustc.edu.cn/anaconda/archive/</a> 下载。</p>
-<p>Miniconda（Anaconda 的轻量级替代）安装包可以在 <a href="https://mirrors.ustc.edu.cn/anaconda/miniconda/">https://mirrors.ustc.edu.cn/anaconda/miniconda/</a> 下载。</p>
-<p>向 <code>.condarc</code> 写入配置以使用镜像站，其中各个操作系统对应的文件：</p>
+<p>Miniconda（Anaconda 的轻量级替代）安装包可以在 <a href="https://mirrors.ustc.edu.cn/anaconda/miniconda/">https://mirrors.ustc.edu.cn/anaconda/miniconda/</a> 下载。由于混用官方仓库与 conda-forge 可能导致问题，请运行以下命令找到已有的 <code>.condarc</code> 文件并删除 <code>defaults</code> 频道：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>conda<span class="w"> </span>config<span class="w"> </span>--show-sources
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="go">==&gt; /root/miniconda3/.condarc &lt;==</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="go">channels:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="go">  - defaults</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gp">$ </span>rm<span class="w"> </span>/root/miniconda3/.condarc
+</code></pre></div>
+<p>向用户的 <code>.condarc</code> 写入配置以使用镜像站，其中各个操作系统对应的文件：</p>
 <ul>
 <li>Linux &amp; macOS: <code>$HOME/.condarc</code></li>
 <li>Windows: <code>%USERPROFILE%\.condarc</code><ul>
@@ -3060,16 +3074,12 @@
 </li>
 </ul>
 <p>内容如下：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">channels</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">defaults</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">show_channel_urls</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">default_channels</span><span class="p">:</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/pkgs/main</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/pkgs/r</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/pkgs/msys2</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">custom_channels</span><span class="p">:</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">conda-forge</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/cloud</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">bioconda</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/cloud</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">channels</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nodefaults</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">custom_channels</span><span class="p">:</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">conda-forge</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/cloud</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">bioconda</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/cloud</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">show_channel_urls</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Anaconda Cloud channels</p>
@@ -3079,7 +3089,7 @@
 <li>bioconda</li>
 </ul>
 </div>
-<p>之后运行 <code>conda clean -i</code> 清除缓存后，使用 <code>conda create -n myenv numpy</code> 测试配置是否正确。</p>
+<p>之后运行 <code>conda clean -i</code> 清除缓存后，使用 <code>conda create -n myenv numpy -c conda-forge</code> 测试配置是否正确。</p>
 <h2 id="_4">相关链接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>官方主页</dt>
