@@ -63,18 +63,30 @@ show_channel_urls: true
 
 ## Pixi
 
-Pixi 是一个高效跨平台的包管理器和环境管理工具，专为科研与数据科学工作流设计。[Github地址](https://github.com/prefix-dev/pixi)
+Pixi 是一个高效、跨平台的包管理与环境管理工具，构建于 Conda 生态之上，专为科研与数据科学工作流设计。[Github地址](https://github.com/prefix-dev/pixi)
 
-它由 Mamba 背后的团队打造，构建于 `Conda` 和 `conda-forge` 生态之上，深度集成 `uv`，致力于提供：
 
-* 可复现性：通过锁文件 `pixi.lock`，确保在任何设备上都能还原完全一致的运行环境；
-* 协作友好：一条命令自动安装依赖、执行任务，让团队协作更轻松；
-* 硬件兼容：原生支持 CUDA 等硬件加速，无需容器化；
-* 多语言支持：不仅支持 Python 包，还支持 C/C++、Rust 等多种生态；
-* 教学利器：帮助教师为不同系统的学生统一环境，只需一条命令即可部署。
+Pixi 也支持镜像配置，你可以参考 [此文档](https://pixi.sh/latest/reference/pixi_configuration/#mirrors) 将`LUG` 镜像源添加到你的配置文件里。
 
-除了 Anaconda 以外，Pixi 的 channel 还支持 conda-forge、nvidia、pytorch 等，也支持自定义 channel。
+配置 `config.toml` 如下:
 
-Pixi 也支持镜像配置，你可以参考 [此文档](https://pixi.sh/latest/reference/pixi_configuration/#mirrors) 将`tuna` 镜像源添加到你的配置文件里。
+```bash
+[mirrors]
+"https://conda.anaconda.org/conda-forge" = ["https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge"]
+"https://conda.anaconda.org/main" = ["https://mirrors.ustc.edu.cn/anaconda/pkgs/main"]
+"https://prefix.dev/conda-forge" = ["https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge"]
+```
 
-![Pixi logo](https://raw.githubusercontent.com/prefix-dev/pixi/refs/heads/main/docs/assets/pixi.webp)
+如果是项目级别的镜像配置，请配置在此目录：`your_project/.pixi/config.toml`；如果是全局配置，请配置在此目录：`$HOME/.pixi/config.toml`。更多自定义级别的配置，请参考[配置文档](https://pixi.sh/latest/reference/pixi_configuration/)
+
+如需验证镜像是否生效，可尝试使用`sudo tcpdump -i any port 443 | grep ustc` 来监听第三方包的下载:
+```
+# 在一个终端运行
+sudo tcpdump -i any host mirrors.ustc.edu.cn
+
+# 在另一个终端安装包
+pixi add numpy
+```
+如果看到数据包输出`IP mirrors.ustc.edu.cn.https`，说明正在从 USTC 镜像下载。
+
+注意：`pixi.lock` 文件中记录的可能仍是原始的 conda.anaconda.org 地址，但实际下载时 pixi 会根据镜像配置自动重定向到 USTC 镜像，这是正常现象。
