@@ -16,8 +16,7 @@ ALL
 
 请确保系统中已安装 `dev-vcs/git`。
 
-修改 `/etc/portage/repos.conf/gentoo.conf` 中的 `sync-type` 为 `git`，`sync-uri` 为
-`https://mirrors.ustc.edu.cn/gentoo.git`。
+修改 `/etc/portage/repos.conf/gentoo.conf` 中的 `sync-type` 为 `git`，`sync-uri` 为 `https://mirrors.ustc.edu.cn/gentoo.git`。
 
 以下是修改后的：
 
@@ -43,8 +42,7 @@ sync-openpgp-key-refresh-retry-delay-mult = 4
 sync-webrsync-verify-signature = yes
 ```
 
-- 第一次使用 `Git` 同步方式的用户（从 `Rsync` 方式同步换到 `Git`
-    方式同步）：
+- 第一次使用 `Git` 同步方式的用户（从 `Rsync` 方式同步换到 `Git` 方式同步）：
 
     按照上述教程更改完
     `/etc/portage/repos.conf/gentoo.conf`，需要：
@@ -71,6 +69,7 @@ sync-webrsync-verify-signature = yes
     # 重新同步
     emerge --sync
     emerge --sync
+    ```
 
 ## 相关镜像
 
