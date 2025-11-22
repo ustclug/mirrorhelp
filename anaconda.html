@@ -2602,6 +2602,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#miniconda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Miniconda
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miniforge-mamba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Miniforge (Mamba)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3556,6 +3584,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#miniconda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Miniconda
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miniforge-mamba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Miniforge (Mamba)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3604,6 +3660,7 @@
 <p>以下帮助<strong>仅介绍如何配置 Miniconda 使用 conda-forge 和 bioconda 频道</strong>。如果需要使用官方仓库，请使用其他镜像站，可参考 <a href="https://help.mirrors.cernet.edu.cn/anaconda/">https://help.mirrors.cernet.edu.cn/anaconda/</a> 中的帮助。</p>
 </div>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="miniconda">Miniconda<a class="headerlink" href="#miniconda" title="Permanent link">&para;</a></h3>
 <p>Miniconda（Anaconda 的轻量级替代）安装包可以在 <a href="https://mirrors.ustc.edu.cn/anaconda/miniconda/">https://mirrors.ustc.edu.cn/anaconda/miniconda/</a> 下载。由于混用官方仓库与 conda-forge 可能导致问题，请运行以下命令找到已有的 <code>.condarc</code> 文件并删除 <code>defaults</code> 频道：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>conda<span class="w"> </span>config<span class="w"> </span>--show-sources
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="go">==&gt; /root/miniconda3/.condarc &lt;==</span>
@@ -3636,6 +3693,19 @@
 </ul>
 </div>
 <p>之后运行 <code>conda clean -i</code> 清除缓存后，使用 <code>conda create -n myenv numpy -c conda-forge</code> 测试配置是否正确。</p>
+<h3 id="miniforge-mamba">Miniforge (Mamba)<a class="headerlink" href="#miniforge-mamba" title="Permanent link">&para;</a></h3>
+<p>Miniforge 是 conda-forge 官方维护的 Miniconda 替代品，默认使用 conda-forge 频道。安装包可以在 <a href="https://mirrors.ustc.edu.cn/github-release/conda-forge/miniforge/LatestRelease/">https://mirrors.ustc.edu.cn/github-release/conda-forge/miniforge/LatestRelease/</a> 下载。</p>
+<p>如果使用 Miniforge 提供的 <code>conda</code>，请参考上述 Miniconda 的配置方法。不过，Miniforge 通常会搭配 mamba 一起使用。mamba 是 conda 的一个高性能替代实现，用来解决 conda 速度慢的问题。</p>
+<p>如果使用 <code>mamba</code>，其支持 <code>mirrored_channels</code> 选项，配置可以简化。<code>.condarc</code> 内容如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">channels</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">mirrored_channels</span><span class="p">:</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">conda-forge</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge</span>
+</code></pre></div>
+<p>可以使用以下命令验证是否配置正确：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mamba<span class="w"> </span>config<span class="w"> </span>list<span class="w"> </span>--json<span class="w"> </span><span class="p">|</span><span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import sys, json; info = json.loads(sys.stdin.read()); print(info[&#39;mirrored_channels&#39;][&#39;conda-forge&#39;])&quot;</span>
+</code></pre></div>
 <h2 id="_4">相关链接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>官方主页</dt>
