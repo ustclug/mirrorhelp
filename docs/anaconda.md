@@ -19,6 +19,8 @@ Anaconda 仓库镜像，**不包含商业使用需要授权的、由 Anaconda �
 
 ## 使用说明
 
+### Miniconda
+
 Miniconda（Anaconda 的轻量级替代）安装包可以在 <https://mirrors.ustc.edu.cn/anaconda/miniconda/> 下载。由于混用官方仓库与 conda-forge 可能导致问题，请运行以下命令找到已有的 `.condarc` 文件并删除 `defaults` 频道：
 
 ```console
@@ -54,6 +56,28 @@ show_channel_urls: true
     - bioconda
 
 之后运行 `conda clean -i` 清除缓存后，使用 `conda create -n myenv numpy -c conda-forge` 测试配置是否正确。
+
+### Miniforge (Mamba)
+
+Miniforge 是 conda-forge 官方维护的 Miniconda 替代品，默认使用 conda-forge 频道。安装包可以在 <https://mirrors.ustc.edu.cn/github-release/conda-forge/miniforge/LatestRelease/> 下载。
+
+如果使用 Miniforge 提供的 `conda`，请参考上述 Miniconda 的配置方法。不过，Miniforge 通常会搭配 mamba 一起使用。mamba 是 conda 的一个高性能替代实现，用来解决 conda 速度慢的问题。
+
+如果使用 `mamba`，其支持 `mirrored_channels` 选项，配置可以简化。`.condarc` 内容如下：
+
+```yaml
+channels:
+  - conda-forge
+mirrored_channels:
+  conda-forge:
+    - https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge
+```
+
+可以使用以下命令验证是否配置正确：
+
+```sh
+mamba config list --json | python -c "import sys, json; info = json.loads(sys.stdin.read()); print(info['mirrored_channels']['conda-forge'])"
+```
 
 ## 相关链接
 
