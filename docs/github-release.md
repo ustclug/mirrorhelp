@@ -17,13 +17,17 @@
 - [adoptium/temurin11-binaries](https://github.com/adoptium/temurin11-binaries)
 - [adoptium/temurin17-binaries](https://github.com/adoptium/temurin17-binaries)
 - [adoptium/temurin21-binaries](https://github.com/adoptium/temurin21-binaries)
+- [astral-sh/uv](https://github.com/astral-sh/uv)
 - [coder/code-server](https://github.com/coder/code-server)
+- [conda-forge/miniforge](https://github.com/conda-forge/miniforge)
 - [deepmodeling/deepmd-kit](https://github.com/deepmodeling/deepmd-kit)
 - [git-for-windows/git](https://github.com/git-for-windows/git)
 - [Homebrew/homebrew-portable-ruby](https://github.com/Homebrew/homebrew-portable-ruby)
 - [Homebrew/glibc-bootstrap](https://github.com/Homebrew/glibc-bootstrap)
 - [pbatard/rufus](https://github.com/pbatard/rufus)
 - [typst/typst](https://github.com/typst/typst)
+- [ungoogled-software/ungoogled-chromium-windows](https://github.com/ungoogled-software/ungoogled-chromium-windows)
+- [dbeaver/dbeaver](https://github.com/dbeaver/dbeaver)
 
 镜像最新的两个版本：
 
