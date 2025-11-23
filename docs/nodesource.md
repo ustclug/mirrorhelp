@@ -2,7 +2,7 @@
 
 !!! warning
 
-    由于上游原因，nodesource 仓库的同步无限期停止。我们建议选择使用 nvm 或 n
+    由于上游原因，nodesource 仓库的同步无限期停止。我们建议选择使用 nvm、n 或 fnm
     来管理系统中的 Node.js 环境。详见 [Node](node.md)。
 
 ## 地址
