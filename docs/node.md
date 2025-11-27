@@ -22,7 +22,8 @@ Node.js 仓库镜像，包含了 <https://nodejs.org/dist/> 中的内容
 
 ## volta 更改 Node.js 镜像为科大源
 
-创建或编辑 ~/.volta/hooks.json (Linux/MacOS)，或 %LOCALAPPDATA%\Volta\hooks.json (Windows)，将内容替换如下
+创建或编辑 `~/.volta/hooks.json` （Linux/MacOS），或 `%LOCALAPPDATA%\Volta\hooks.json` （Windows），将内容替换如下即可。
+
 ```json
 {
     "node": {
