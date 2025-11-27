@@ -20,6 +20,23 @@ Node.js 仓库镜像，包含了 <https://nodejs.org/dist/> 中的内容
 
 设置环境变量 `FNM_NODE_DIST_MIRROR` 为 `https://mirrors.ustc.edu.cn/node/` 即可。
 
+## Volta 更改 Node.js 镜像为科大源
+
+创建或编辑 `~/.volta/hooks.json`（Linux/macOS），或 `%LOCALAPPDATA%\Volta\hooks.json`（Windows），将内容替换如下即可。
+
+```json
+{
+    "node": {
+        "index": {
+            "template": "https://mirrors.ustc.edu.cn/node/index.json"
+        },
+        "distro": {
+            "template": "https://mirrors.ustc.edu.cn/node/v{{version}}/{{filename}}"
+        }
+    }
+}
+```
+
 ## 相关链接
 
 Node.js 官网
@@ -37,3 +54,7 @@ n
 fnm
 
 :   <https://github.com/Schniz/fnm>
+
+Volta
+
+:   <https://github.com/volta-cli/volta>
