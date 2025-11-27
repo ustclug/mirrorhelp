@@ -54,3 +54,7 @@ n
 fnm
 
 :   <https://github.com/Schniz/fnm>
+
+volta
+
+:   <https://github.com/volta-cli/volta>
