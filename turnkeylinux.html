@@ -3676,7 +3676,7 @@
 <h3 id="appliance">下载 appliance<a class="headerlink" href="#appliance" title="Permanent link">&para;</a></h3>
 <p>可在 <a href="https://mirrors.ustc.edu.cn/turnkeylinux/images/">https://mirrors.ustc.edu.cn/turnkeylinux/images/</a> 浏览并下载需要的 appliance 文件。</p>
 <h3 id="appliance-apt">配置 appliance 中的 APT<a class="headerlink" href="#appliance-apt" title="Permanent link">&para;</a></h3>
-<p>在 appliance 中将 <code>/etc/apt/sources.list.d</code> 下所有文件中 <code>archive.turnkeylinux.org</code> 替换为 <code>mirrors.ustc.edu.cn/turnkeylinux</code>。</p>
+<p>在 appliance 中将 <code>/etc/apt/sources.list.d</code> 下所有文件中 <code>archive.turnkeylinux.org</code> 替换为 <code>mirrors.ustc.edu.cn/turnkeylinux/apt</code>。</p>
 <h3 id="proxmox-ve-turnkey-linux">配置 Proxmox VE 下载 TurnKey Linux 容器镜像<a class="headerlink" href="#proxmox-ve-turnkey-linux" title="Permanent link">&para;</a></h3>
 <p>首先，将 <code>/usr/share/perl5/PVE/APLInfo.pm</code> 文件中默认的源地址 <code>https://releases.turnkeylinux.org/pve</code> 替换为 <code>https://mirrors.ustc.edu.cn/turnkeylinux/metadata/pve</code>：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sed<span class="w"> </span>-i.bak<span class="w"> </span><span class="s1">&#39;s|https://releases.turnkeylinux.org|https://mirrors.ustc.edu.cn/turnkeylinux/metadata|g&#39;</span><span class="w"> </span>/usr/share/perl5/PVE/APLInfo.pm
