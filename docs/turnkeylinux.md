@@ -16,7 +16,7 @@ TurnKey Linux 提供了一系列预装和预配置的虚拟机镜像（"applianc
 
 ### 配置 appliance 中的 APT
 
-在 appliance 中将 `/etc/apt/sources.list.d` 下所有文件中 `archive.turnkeylinux.org` 替换为 `mirrors.ustc.edu.cn/turnkeylinux`。
+在 appliance 中将 `/etc/apt/sources.list.d` 下所有文件中 `archive.turnkeylinux.org` 替换为 `mirrors.ustc.edu.cn/turnkeylinux/apt`。
 
 ### 配置 Proxmox VE 下载 TurnKey Linux 容器镜像
 
