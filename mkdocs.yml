@@ -229,6 +229,6 @@ nav:
     - rosdistro.md
     - sagemath.md
     - tailscale.md
-    - winget-fonts.md
     - winget-source.md
+    - winget-fonts.md
     - xbmc.md
