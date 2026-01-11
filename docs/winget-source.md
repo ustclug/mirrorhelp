@@ -6,7 +6,7 @@
 
 ## 说明
 
-Windows Package Manager (aka. WinGet) 默认软件源
+用于应用程序的 WinGet（Windows 包管理器) 社区存储库
 
 ## 使用说明
 
@@ -40,6 +40,10 @@ Windows Package Manager (aka. WinGet) 默认软件源
 重置为官方地址：
 
     winget source reset winget
+
+## 相关镜像
+
+- [winget-fonts](winget-fonts.md)
 
 ## 相关链接
 
