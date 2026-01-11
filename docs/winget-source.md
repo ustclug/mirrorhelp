@@ -12,7 +12,7 @@ Windows Package Manager (aka. WinGet) 默认软件源
 
 !!! note
 
-    修改 WinGet 软件源需要管理员权限，请以管理员身份运行终端。
+    修改 WinGet 软件源需要管理员权限，请以管理员身份运行终端。对于已[启用 `sudo`](https://learn.microsoft.com/windows/advanced-settings/sudo/#how-to-enable-sudo-for-windows) 的 Windows 11 用户，也可以使用 `sudo` 进行提权。
 
 === "WinGet >= 1.8"
 
