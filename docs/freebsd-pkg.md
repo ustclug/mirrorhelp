@@ -41,7 +41,7 @@ FreeBSD: { enabled: no }
 
 修改配置后，运行 `pkg update -f` 更新索引。
 
-!!! important
+!!! warning
 
     自 FreeBSD 15 起，pkg 默认仓库名已由 `FreeBSD` 更名为 `FreeBSD-ports`。  
     若仍使用 `FreeBSD: { enabled: no }`，将**无法真正禁用官方源**。
