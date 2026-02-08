@@ -3775,6 +3775,11 @@
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://mirrors.ustc.edu.cn/pypi/simple&quot;</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
 </code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">设置 index 会改变 <code>uv.lock</code> 的内容</p>
+<p>详见 <a href="https://github.com/astral-sh/uv/issues/9056">https://github.com/astral-sh/uv/issues/9056</a> 与 <a href="https://github.com/astral-sh/uv/issues/6349">https://github.com/astral-sh/uv/issues/6349</a>。</p>
+<p>一个临时的绕过方法是，在需要将 <code>uv.lock</code> commit 到版本管理工具之前执行 <code>UV_INDEX=https://pypi.org/simple uv lock --refresh</code>，来还原 <code>uv.lock</code> 中的信息。</p>
+</div>
 <h2 id="_7">同步方式<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
 <li>软件包元数据使用 shadowmire 从 TUNA 同步</li>
