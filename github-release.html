@@ -2867,6 +2867,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-build-standalone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        python-build-standalone
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3608,6 +3625,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-build-standalone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        python-build-standalone
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3654,6 +3688,7 @@
 <li><a href="https://github.com/adoptium/temurin11-binaries">adoptium/temurin11-binaries</a></li>
 <li><a href="https://github.com/adoptium/temurin17-binaries">adoptium/temurin17-binaries</a></li>
 <li><a href="https://github.com/adoptium/temurin21-binaries">adoptium/temurin21-binaries</a></li>
+<li><a href="https://github.com/astral-sh/python-build-standalone">astral-sh/python-build-standalone</a></li>
 <li><a href="https://github.com/astral-sh/uv">astral-sh/uv</a></li>
 <li><a href="https://github.com/coder/code-server">coder/code-server</a></li>
 <li><a href="https://github.com/conda-forge/miniforge">conda-forge/miniforge</a></li>
@@ -3676,6 +3711,18 @@
 </ul>
 <h2 id="_4">使用说明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>一般情况下，直接前往此镜像地址，点击即可进行下载。</p>
+<h3 id="python-build-standalone">python-build-standalone<a class="headerlink" href="#python-build-standalone" title="Permanent link">&para;</a></h3>
+<p>可配置以下环境变量：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">UV_PYTHON_INSTALL_MIRROR</span><span class="o">=</span>https://mirrors.ustc.edu.cn/github-release/astral-sh/python-build-standalone/
+</code></pre></div>
+<p>需要注意的是，我们仅镜像了最新的一个 release，并且排除了符合以下正则的文件：</p>
+<ul>
+<li>debug.+full</li>
+<li>ppc64le</li>
+<li>s390x</li>
+<li>i686</li>
+</ul>
+<p>服务端不存在的文件会被重定向到 GitHub 官方仓库。</p>
 <h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>AdoptOpenJDK 官网</dt>
