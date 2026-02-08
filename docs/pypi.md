@@ -36,6 +36,10 @@ url = "https://mirrors.ustc.edu.cn/pypi/simple"
 default = true
 ```
 
+!!! info "python-build-standalone 镜像"
+
+    我们提供了 python-build-standalone 的镜像，详情请见 [github-release 帮助](./github-release.md#python-build-standalone)。
+
 !!! warning "设置 index 会改变 `uv.lock` 的内容"
 
     详见 <https://github.com/astral-sh/uv/issues/9056> 与 <https://github.com/astral-sh/uv/issues/6349>。
