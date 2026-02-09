@@ -8,7 +8,9 @@
 
 OpenWrt 下载站镜像。
 
-这是对 <https://downloads.openwrt.org/> 的除了 snapshots 与预发布版本（RC）以外的完整镜像，内容包括官方支持的平台的 ROM、SDK 及工具链、软件仓库镜像等。
+这是对 OpenWrt 的「默认镜像组合」的完整镜像，内容包括官方支持的平台的 ROM、SDK 及工具链、软件仓库镜像等。
+
+OpenWrt 当前仍在维护的大版本可参考 <https://openwrt.org/mirrors#space_requirements>。
 
 !!! tip
 
