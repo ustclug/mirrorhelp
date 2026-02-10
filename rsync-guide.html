@@ -3746,28 +3746,19 @@ HTTP / HTTPS 协议从站点大规模同步数据。
 请在首次使用前认真阅读提示信息并按提示进行操作。</p>
 </div>
 <div class="admonition warning">
+<p class="admonition-title">连接数限制</p>
+<p>为避免占用服务器过多资源，我们对 rsync 连接数做出了限制。
+目前的限制为：</p>
+<ul>
+<li>单 IP 5 个并发连接；</li>
+<li>全局 60 个并发链接。</li>
+</ul>
+<p>超出限制的连接将被拒绝访问，请合理安排同步方式以达到最大的同步效率。</p>
+</div>
+<div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>为避免占用服务器过多资源，我们对单 IP 地址的 rsync 连接数做出了限制，
-在 2021 年 2 月 6 日后，限制从单 IP 2 个连接提升为 5 个连接，
-过多的连接将被拒绝访问。请合理安排同步方式以达到最大的同步效率。</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>在 2020 年 8 月 25 日后，Rsync 总连接数限制从夜晚 60 个连接，白天 30
-个连接提升为全天 60 个连接。</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>编写脚本进行后台同步时，请注意在每次执行 rsync
-之间空出合理的时间间隔，请勿编写类似于 <code>while true; rsync ...; done</code>
-的脚本逻辑。</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>目前由于服务架构原因，Rsync 提供的文件内容相比于 HTTP(S)
-提供的内容存在少许延迟（最多不超过 1 天）。
-如果对获取最新的内容有高要求，建议使用其他镜像站或官方源作为上游。
-如果发现 Rsync 获取的内容存在无法正常使用等问题，请邮件联系我们。</p>
+<p>请使用 cron 等定时任务方式管理后台同步，且每个仓库的同步任务不宜超过每天一次（ubuntu 等热门仓库可接受的最高频率为每 6 小时一次）。</p>
+<p>请勿编写类似于 <code>while true; rsync ...; done</code> 的脚本，我们会随时封禁超出必要频率的 rsync 请求。</p>
 </div>
 <h2 id="_7">相关链接<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <dl>
