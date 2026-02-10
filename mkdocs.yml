@@ -186,7 +186,6 @@ nav:
     - ubuntu-cdimage.md
     - ubuntu-cloud-images.md
   - 语言镜像:
-    - clojars.md
     - ghcup.md
     - hackage.md
     - julia.md
@@ -205,7 +204,6 @@ nav:
     - CRAN.md
     - docker-ce.md
     - dockerhub.md
-    - eclipse.md
     - elpa.md
     - flathub.md
     - github-release.md

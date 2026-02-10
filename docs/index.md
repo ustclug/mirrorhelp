@@ -1,3 +1,7 @@
+---
+icon: material/home
+---
+
 # [中国科学技术大学开源软件镜像](/)使用帮助
 
 GitHub 仓库：[:octicons-mark-github-16: {{ config.repo_name }}]({{ config.repo_url }})。有关本帮助的问题，可在仓库中创建 issue 或提交 PR。
