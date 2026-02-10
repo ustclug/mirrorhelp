@@ -30,23 +30,58 @@ FreeBSD pkg 包管理器的官方源的配置路径为 `/etc/pkg/FreeBSD.conf`�
 
 应创建路径及文件 `/usr/local/etc/pkg/repos/USTC.conf` 来覆盖配置，文件内容如下：
 
-```yaml
-ustc: { 
-  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly"
-}
-FreeBSD: { enabled: no }
-```
+=== "FreeBSD 16"
 
-若要使用滚动更新的 latest 仓库，将 `url` 这行配置末尾的 `quarterly` 换成 `latest` 即可。
+    === "`latest` 分支"
+
+        ```yaml
+        ustc: { 
+            url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest"
+        }
+        FreeBSD-ports: { enabled: no }
+        ```
+
+=== "FreeBSD 15"
+
+    === "`quarterly` 分支"
+
+        ```yaml
+        ustc: { 
+            url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly"
+        }
+        FreeBSD-ports: { enabled: no }
+        ```
+
+    === "`latest` 分支"
+
+        ```yaml
+        ustc: { 
+            url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest"
+        }
+        FreeBSD-ports: { enabled: no }
+        ```
+
+=== "FreeBSD 14"
+
+    === "`quarterly` 分支"
+
+        ```yaml
+        ustc: { 
+            url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly"
+        }
+        FreeBSD: { enabled: no }
+        ```
+
+    === "`latest` 分支"
+
+        ```yaml
+        ustc: { 
+            url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest"
+        }
+        FreeBSD: { enabled: no }
+        ```
 
 修改配置后，运行 `pkg update -f` 更新索引。
-
-!!! warning
-
-    自 FreeBSD 15 起，pkg 默认仓库名已由 `FreeBSD` 更名为 `FreeBSD-ports`。  
-    若仍使用 `FreeBSD: { enabled: no }`，将**无法真正禁用官方源**。
-
-    需要使用 `FreeBSD-ports: { enabled: no }`，来真正禁用官方源。
 
 !!! tip
 
