@@ -17,6 +17,7 @@
 - [adoptium/temurin11-binaries](https://github.com/adoptium/temurin11-binaries)
 - [adoptium/temurin17-binaries](https://github.com/adoptium/temurin17-binaries)
 - [adoptium/temurin21-binaries](https://github.com/adoptium/temurin21-binaries)
+- [astral-sh/python-build-standalone](https://github.com/astral-sh/python-build-standalone)
 - [astral-sh/uv](https://github.com/astral-sh/uv)
 - [coder/code-server](https://github.com/coder/code-server)
 - [conda-forge/miniforge](https://github.com/conda-forge/miniforge)
@@ -40,6 +41,23 @@
 ## 使用说明
 
 一般情况下，直接前往此镜像地址，点击即可进行下载。
+
+### python-build-standalone
+
+可配置以下环境变量：
+
+```sh
+UV_PYTHON_INSTALL_MIRROR=https://mirrors.ustc.edu.cn/github-release/astral-sh/python-build-standalone/
+```
+
+需要注意的是，我们仅镜像了最新的一个 release，并且排除了符合以下正则的文件：
+
+- debug.+full
+- ppc64le
+- s390x
+- i686
+
+服务端不存在的文件会被重定向到 GitHub 官方仓库。
 
 ## 相关链接
 

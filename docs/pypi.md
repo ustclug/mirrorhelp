@@ -36,6 +36,16 @@ url = "https://mirrors.ustc.edu.cn/pypi/simple"
 default = true
 ```
 
+!!! info "python-build-standalone 镜像"
+
+    我们提供了 python-build-standalone 的镜像，详情请见 [github-release 帮助](./github-release.md#python-build-standalone)。
+
+!!! warning "设置 index 会改变 `uv.lock` 的内容"
+
+    详见 <https://github.com/astral-sh/uv/issues/9056> 与 <https://github.com/astral-sh/uv/issues/6349>。
+
+    一个临时的绕过方法是，在需要将 `uv.lock` commit 到版本管理工具之前执行 `UV_INDEX=https://pypi.org/simple uv lock --refresh`，来还原 `uv.lock` 中的信息。
+
 ## 同步方式
 
 - 软件包元数据使用 shadowmire 从 TUNA 同步
