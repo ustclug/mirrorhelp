@@ -108,9 +108,7 @@ FreeBSD 预编译软件包的**动态缓存**
     FreeBSD-kmods: { 
         enabled: no 
     }
-    ```
-
-        
+    ``` 
 
 修改配置后，运行 `pkg update -f` 更新索引。
 
