@@ -12,11 +12,21 @@ FreeBSD 预编译软件包的**动态缓存**
 
 所有受官方支持版本的 amd64 和 aarch64 架构，详细参见 <https://pkg.freebsd.org/>。
 
-仓库包括季度分支 quarterly 和滚动更新的 latest 仓库。
+仓库提供两种软件包分支：季度更新的 quarterly 与滚动更新的 latest。两者仅影响第三方软件包（ports）。
 
 !!! tip
 
-    并非所有版本和架构都同时拥有 quarterly 或 latest 仓库，如 CURRENT 仅有 latest。
+    软件包分支与 FreeBSD 基本系统版本无关。不同 RELEASE / STABLE / CURRENT 均可使用 quarterly 或 latest。
+
+    但并非所有版本和架构都同时提供两种分支，例如 CURRENT 通常仅提供 latest。
+
+    从 FreeBSD 15.0 起，若在安装系统时或事后手动启用了 pkgbase，则基本系统组件也会以软件包形式由 pkg 管理。此时，`/usr/local/etc/pkg/repos`目录下将会默认带有一个配置文件。
+
+    在这种情况下，请先检查 `/usr/local/etc/pkg/repos` 是否为空，并确认 `/usr/local/etc/pkg` 下不存在旧配置文件；如存在请先备份。
+
+    请勿将文件命名为其他 `.conf` 以外的名称，避免覆盖现有设置。
+    
+    完成确认后，再写入对应的镜像配置到 `/usr/local/etc/pkg/repos/ustc.conf`。
 
 ## 使用方法
 
@@ -24,62 +34,83 @@ FreeBSD 预编译软件包的**动态缓存**
 
     在操作前请做好相应备份。
 
-为了避免可能出现的向后兼容问题，基本系统中未预置真实的 pkg(8) 工具，需要在线安装。参见 [man pkg(7)](https://man.freebsd.org/cgi/man.cgi?query=pkg)。安装方法为直接输入命令 `pkg` 根据提示进行确认安装。为了避免因网络问题造成安装失败，建议先按以下方法换源后再安装 pkg。
+    此处只列出了 `quaterly` 季度分支，若有其他需求，请自行修改。
 
-FreeBSD pkg 包管理器的官方源的配置路径为 `/etc/pkg/FreeBSD.conf`。不建议直接修改此文件：该配置文件是 FreeBSD 基本系统的一部分，会随着基本系统的更新而变化。
+    为了避免可能出现的向后兼容问题，基本系统中未预置真实的 pkg(8) 工具，需要在线安装。参见 [man pkg(7)](https://man.freebsd.org/cgi/man.cgi?query=pkg)。安装方法为直接输入命令 `pkg` 根据提示进行确认安装。为了避免因网络问题造成安装失败，建议先按以下方法换源后再安装 pkg。
 
-应创建路径及文件 `/usr/local/etc/pkg/repos/USTC.conf` 来覆盖配置，文件内容如下：
+    FreeBSD pkg 包管理器的官方源的配置路径为 `/etc/pkg/FreeBSD.conf`。不建议直接修改此文件：该配置文件是 FreeBSD 基本系统的一部分，会随着基本系统的更新而变化。
+    应新创建路径及文件 `/usr/local/etc/pkg/repos/ustc.conf` 来覆盖配置，文件内容如下：
 
-=== "FreeBSD 16"
+=== "FreeBSD 15.X-RELEASE"
 
-    === "`latest` 分支"
+    ```yaml
+    ustc-ports: { 
+        url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+        mirror_type: "none",
+        signature_type: "fingerprints",
+        fingerprints: "/usr/share/keys/pkg",
+        enabled: yes
+    }
 
-        ```yaml
-        ustc: { 
-            url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest"
-        }
-        FreeBSD-ports: { enabled: no }
-        ```
+    ustc-ports-kmods: {
+        url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}",
+        mirror_type: "none",
+        signature_type: "fingerprints",
+        fingerprints: "/usr/share/keys/pkg",
+        enabled: yes
+    }
 
-=== "FreeBSD 15"
+    FreeBSD-ports: { 
+        enabled: no 
+    }
 
-    === "`quarterly` 分支"
+    FreeBSD-ports-kmods: { 
+        enabled: no 
+    }
 
-        ```yaml
-        ustc: { 
-            url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly"
-        }
-        FreeBSD-ports: { enabled: no }
-        ```
+    # 仅当启用 pkgbase 时才添加以下内容
+    #ustc-base: {
+    #   url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}",
+    #   mirror_type: "none",
+    #   signature_type: "fingerprints",
+    #   fingerprints: "/usr/share/keys/pkgbase-${VERSION_MAJOR}",
+    #   enabled: yes
+    #}
 
-    === "`latest` 分支"
+    #FreeBSD-base: {
+    #   enabled: no
+    #}
+    ```
 
-        ```yaml
-        ustc: { 
-            url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest"
-        }
-        FreeBSD-ports: { enabled: no }
-        ```
+=== "FreeBSD 14.X-RELEASE"
 
-=== "FreeBSD 14"
+    ```yaml
+    ustc: { 
+        url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+        mirror_type: "none",
+        signature_type: "fingerprints",
+        fingerprints: "/usr/share/keys/pkg",
+        enabled: yes
+    }
 
-    === "`quarterly` 分支"
+    ustc-kmods: {
+        url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}",
+        mirror_type: "none",
+        signature_type: "fingerprints",
+        fingerprints: "/usr/share/keys/pkg",
+        enabled: yes
+    }
 
-        ```yaml
-        ustc: { 
-            url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly"
-        }
-        FreeBSD: { enabled: no }
-        ```
+    FreeBSD: { 
+        enabled: no 
+    }
 
-    === "`latest` 分支"
+    FreeBSD-kmods: { 
+        enabled: no 
+    }
+    ```
 
-        ```yaml
-        ustc: { 
-            url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest"
-        }
-        FreeBSD: { enabled: no }
-        ```
+        
 
 修改配置后，运行 `pkg update -f` 更新索引。
 
