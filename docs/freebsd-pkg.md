@@ -20,7 +20,7 @@ FreeBSD 预编译软件包的**动态缓存**
 
     但并非所有版本和架构都同时提供两种分支，例如 CURRENT 通常仅提供 latest。
 
-    从 FreeBSD 15.0 起，若在安装系统时或事后手动启用了 pkgbase，则基本系统组件也会以软件包形式由 pkg 管理。此时，`/usr/local/etc/pkg/repos`目录下将会默认带有一个配置文件。
+    从 FreeBSD 15.0 起，若在安装系统时或事后手动启用了 pkgbase，则基本系统组件也会以软件包形式由 pkg 管理。此时，`/usr/local/etc/pkg/repos` 目录下将会默认带有一个配置文件。
 
     在这种情况下，请先检查 `/usr/local/etc/pkg/repos` 是否为空，并确认 `/usr/local/etc/pkg` 下不存在旧配置文件；如存在请先备份。
 
