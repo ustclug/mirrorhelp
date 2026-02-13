@@ -39,7 +39,7 @@ FreeBSD 预编译软件包的**动态缓存**
     为了避免可能出现的向后兼容问题，基本系统中未预置真实的 pkg(8) 工具，需要在线安装。参见 [man pkg(7)](https://man.freebsd.org/cgi/man.cgi?query=pkg)。安装方法为直接输入命令 `pkg` 根据提示进行确认安装。为了避免因网络问题造成安装失败，建议先按以下方法换源后再安装 pkg。
 
     FreeBSD pkg 包管理器的官方源的配置路径为 `/etc/pkg/FreeBSD.conf`。不建议直接修改此文件：该配置文件是 FreeBSD 基本系统的一部分，会随着基本系统的更新而变化。
-    应新创建路径及文件 `/usr/local/etc/pkg/repos/ustc.conf` 来覆盖配置，文件内容如下：
+    应新创建路径及文件 `/usr/local/etc/pkg/repos/USTC.conf` 来覆盖配置，文件内容如下：
 
 === "FreeBSD 15.X-RELEASE"
 
