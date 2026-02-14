@@ -3590,25 +3590,94 @@
 <p>FreeBSD 预编译软件包的<strong>动态缓存</strong></p>
 <h2 id="_3">收录架构与版本<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>所有受官方支持版本的 amd64 和 aarch64 架构，详细参见 <a href="https://pkg.freebsd.org/">https://pkg.freebsd.org/</a>。</p>
-<p>仓库包括季度分支 quarterly 和滚动更新的 latest 仓库。</p>
+<p>仓库提供两种软件包分支：季度更新的 quarterly 与滚动更新的 latest。两者仅影响第三方软件包（ports）。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>并非所有版本和架构都同时拥有 quarterly 或 latest 仓库，如 CURRENT 仅有 latest。</p>
+<p>软件包分支与 FreeBSD 基本系统版本无关。不同 RELEASE / STABLE / CURRENT 均可使用 quarterly 或 latest。</p>
+<p>但并非所有版本和架构都同时提供两种分支，例如 CURRENT 通常仅提供 latest。</p>
+<p>从 FreeBSD 15.0 起，若在安装系统时或事后手动启用了 pkgbase，则基本系统组件也会以软件包形式由 pkg 管理。此时，<code>/usr/local/etc/pkg/repos</code> 目录下将会默认带有一个配置文件。</p>
+<p>在这种情况下，请先检查 <code>/usr/local/etc/pkg/repos</code> 是否为空，并确认 <code>/usr/local/etc/pkg</code> 下不存在旧配置文件；如存在请先备份。</p>
+<p>请勿将文件命名为其他 <code>.conf</code> 以外的名称，避免覆盖现有设置。</p>
+<p>完成确认后，再写入对应的镜像配置到 <code>/usr/local/etc/pkg/repos/ustc.conf</code>。</p>
 </div>
 <h2 id="_4">使用方法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>在操作前请做好相应备份。</p>
-</div>
+<p>此处只列出了 <code>quaterly</code> 季度分支，若有其他需求，请自行修改。</p>
 <p>为了避免可能出现的向后兼容问题，基本系统中未预置真实的 pkg(8) 工具，需要在线安装。参见 <a href="https://man.freebsd.org/cgi/man.cgi?query=pkg">man pkg(7)</a>。安装方法为直接输入命令 <code>pkg</code> 根据提示进行确认安装。为了避免因网络问题造成安装失败，建议先按以下方法换源后再安装 pkg。</p>
-<p>FreeBSD pkg 包管理器的官方源的配置路径为 <code>/etc/pkg/FreeBSD.conf</code>。不建议直接修改此文件：该配置文件是 FreeBSD 基本系统的一部分，会随着基本系统的更新而变化。</p>
-<p>应创建路径及文件 <code>/usr/local/etc/pkg/repos/USTC.conf</code> 来覆盖配置，文件内容如下：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">ustc</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">  url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly&quot;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p p-Indicator">}</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">FreeBSD</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">no</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<p>FreeBSD pkg 包管理器的官方源的配置路径为 <code>/etc/pkg/FreeBSD.conf</code>。不建议直接修改此文件：该配置文件是 FreeBSD 基本系统的一部分，会随着基本系统的更新而变化。
+应新创建路径及文件 <code>/usr/local/etc/pkg/repos/USTC.conf</code> 来覆盖配置，文件内容如下：</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">FreeBSD 15.X-RELEASE</label><label for="__tabbed_1_2">FreeBSD 14.X-RELEASE</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">ustc-ports</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">    url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">    mirror_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">    signature_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fingerprints&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">    fingerprints</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/share/keys/pkg&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">    enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">yes</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p p-Indicator">}</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">ustc-ports-kmods</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nt">    url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nt">    mirror_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nt">    signature_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fingerprints&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nt">    fingerprints</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/share/keys/pkg&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nt">    enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">yes</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p p-Indicator">}</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nt">FreeBSD-ports</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="nt">    enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">no</span><span class="w"> </span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p p-Indicator">}</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nt">FreeBSD-ports-kmods</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nt">    enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">no</span><span class="w"> </span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="p p-Indicator">}</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c1"># 仅当启用 pkgbase 时才添加以下内容</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="c1">#ustc-base: {</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c1">#   url: &quot;https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}&quot;,</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="c1">#   mirror_type: &quot;none&quot;,</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="c1">#   signature_type: &quot;fingerprints&quot;,</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="c1">#   fingerprints: &quot;/usr/share/keys/pkgbase-${VERSION_MAJOR}&quot;,</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="c1">#   enabled: yes</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="c1">#}</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="c1">#FreeBSD-base: {</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="c1">#   enabled: no</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="c1">#}</span>
 </code></pre></div>
-<p>若要使用滚动更新的 latest 仓库，将 <code>url</code> 这行配置末尾的 <code>quarterly</code> 换成 <code>latest</code> 即可。</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">ustc</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">    url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">    mirror_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">    signature_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fingerprints&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nt">    fingerprints</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/share/keys/pkg&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">    enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">yes</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p p-Indicator">}</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nt">ustc-kmods</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nt">    url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nt">    mirror_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nt">    signature_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fingerprints&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nt">    fingerprints</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/share/keys/pkg&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nt">    enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">yes</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p p-Indicator">}</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="nt">FreeBSD</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="nt">    enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">no</span><span class="w"> </span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p p-Indicator">}</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="nt">FreeBSD-kmods</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="nt">    enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">no</span><span class="w"> </span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="p p-Indicator">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 <p>修改配置后，运行 <code>pkg update -f</code> 更新索引。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
