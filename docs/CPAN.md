@@ -1,5 +1,9 @@
 # CPAN
 
+## 地址
+
+<https://mirrors.ustc.edu.cn/CPAN/>
+
 ## 使用说明
 
 若你以前从未使用过 CPAN，请在命令行下运行 cpan
