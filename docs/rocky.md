@@ -14,7 +14,7 @@ x86_64, aarch64
 
 ## 收录版本
 
-8, 9
+8, 9, 10
 
 ## 使用说明
 
@@ -36,7 +36,7 @@ x86_64, aarch64
         /etc/yum.repos.d/Rocky-PowerTools.repo
     ```
 
-=== "Rocky Linux 9"
+=== "Rocky Linux 9/10"
 
     使用以下命令替换默认的配置：
 
