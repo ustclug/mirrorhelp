@@ -24,13 +24,25 @@ CentOS Stream 软件源
 
 替换以下文件：
 
-```ini title="/etc/yum.repos.d/centos.repo"
---8<-- "centos9stream/centos.repo"
-```
+=== "CentOS Stream 9"
 
-```ini title="/etc/yum.repos.d/centos-addons.repo"
---8<-- "centos9stream/centos-addons.repo"
-```
+    ```ini title="/etc/yum.repos.d/centos.repo"
+    --8<-- "centos9stream/centos.repo"
+    ```
+
+    ```ini title="/etc/yum.repos.d/centos-addons.repo"
+    --8<-- "centos9stream/centos-addons.repo"
+    ```
+
+=== "CentOS Stream 10"
+
+    ```ini title="/etc/yum.repos.d/centos.repo"
+    --8<-- "centos10stream/centos.repo"
+    ```
+
+    ```ini title="/etc/yum.repos.d/centos-addons.repo"
+    --8<-- "centos10stream/centos-addons.repo"
+    ```
 
 替换之后请运行 `yum makecache` 更新缓存。
 
