@@ -121,9 +121,9 @@ extra:
       codename: vera
     - version: 21
       codename: vanessa
-    - version: LMDE 6.0
+    - version: LMDE 6
       codename: faye
-    - version: LMDE 7.0
+    - version: LMDE 7
       codename: gigi
 
 extra_css:
