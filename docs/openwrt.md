@@ -32,7 +32,7 @@ OpenWrt 当前仍在维护的大版本可参考 <https://openwrt.org/mirrors#spa
 
 !!! tip
 
-    对于 OpenWrt 25.12 及以上版本，需使用 apk 配置；对于OpenWrt 24.10及以下版本，需使用 opkg 配置。
+    对于 OpenWrt 25.12 及以上版本，需使用 `apk` 配置；对于 OpenWrt 24.10 及以下版本，需使用 `opkg` 配置。
 
 === " `apk` 配置"
 
