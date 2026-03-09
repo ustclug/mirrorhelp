@@ -42,12 +42,12 @@
 
 一般情况下，直接前往此镜像地址，点击即可进行下载。
 
-### python-build-standalone
+### astral-sh/python-build-standalone
 
 可配置以下环境变量：
 
 ```sh
-UV_PYTHON_INSTALL_MIRROR=https://mirrors.ustc.edu.cn/github-release/astral-sh/python-build-standalone/
+export UV_PYTHON_INSTALL_MIRROR=https://mirrors.ustc.edu.cn/github-release/astral-sh/python-build-standalone/
 ```
 
 需要注意的是，我们仅镜像了最新的一个 release，并且排除了符合以下正则的文件：
@@ -58,6 +58,24 @@ UV_PYTHON_INSTALL_MIRROR=https://mirrors.ustc.edu.cn/github-release/astral-sh/py
 - i686
 
 服务端不存在的文件会被重定向到 GitHub 官方仓库。
+
+### astral-sh/uv
+
+可配置以下环境变量：
+
+```sh
+export UV_DOWNLOAD_URL=https://mirrors.ustc.edu.cn/github-release/astral-sh/uv/LatestRelease/
+```
+
+然后可以从镜像站获取安装脚本并执行：
+
+```sh
+curl -sL https://mirrors.ustc.edu.cn/github-release/astral-sh/uv/LatestRelease/uv-installer.sh | sh
+```
+
+或者使用 `uv self update` 来更新已经通过此方式安装好的 uv。
+
+由于我们仅镜像了最新的一个 release，该方法将安装最新版本的 uv。
 
 ## 相关链接
 
