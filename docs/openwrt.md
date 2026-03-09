@@ -42,7 +42,6 @@ OpenWrt 当前仍在维护的大版本可参考 <https://openwrt.org/mirrors#spa
 
     之后运行 `apk update` 更新软件索引，注意检查是否出现错误。
 
-
 === "`opkg` 配置"
 
     ```shell
