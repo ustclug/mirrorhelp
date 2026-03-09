@@ -34,7 +34,7 @@ OpenWrt 当前仍在维护的大版本可参考 <https://openwrt.org/mirrors#spa
 
     对于 OpenWrt 25.12 及以上版本，需使用 `apk` 配置；对于 OpenWrt 24.10 及以下版本，需使用 `opkg` 配置。
 
-=== " `apk` 配置"
+=== "`apk` 配置"
 
     ```shell
     sed -i 's/downloads.openwrt.org/mirrors.ustc.edu.cn\/openwrt/g' /etc/apk/repositories.d/distfeeds.list
@@ -43,7 +43,7 @@ OpenWrt 当前仍在维护的大版本可参考 <https://openwrt.org/mirrors#spa
     之后运行 `apk update` 更新软件索引，注意检查是否出现错误。
 
 
-=== " `opkg` 配置"
+=== "`opkg` 配置"
 
     ```shell
     sed -i 's/downloads.openwrt.org/mirrors.ustc.edu.cn\/openwrt/g' /etc/opkg/distfeeds.conf
