@@ -40,13 +40,16 @@ OpenWrt 当前仍在维护的大版本可参考 <https://openwrt.org/mirrors#spa
     sed -i 's/downloads.openwrt.org/mirrors.ustc.edu.cn\/openwrt/g' /etc/apk/repositories.d/distfeeds.list
     ```
 
+    之后运行 `apk update` 更新软件索引，注意检查是否出现错误。
+
+
 === " `opkg` 配置"
 
     ```shell
     sed -i 's/downloads.openwrt.org/mirrors.ustc.edu.cn\/openwrt/g' /etc/opkg/distfeeds.conf
     ```
-
-之后运行 `apk update` 或 `opkg update` 更新软件索引，注意检查是否出现错误。
+    
+    之后运行 `opkg update` 更新软件索引，注意检查是否出现错误。
 
 !!! tip
 
