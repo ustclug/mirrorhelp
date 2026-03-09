@@ -61,9 +61,9 @@ UV_PYTHON_INSTALL_MIRROR=https://mirrors.ustc.edu.cn/github-release/astral-sh/py
 
 ## 相关链接
 
-AdoptOpenJDK 官网
+Adoptium 官网
 
-:   <https://adoptopenjdk.net/>
+:   <https://adoptium.net/>
 
 Rufus 官网
 
