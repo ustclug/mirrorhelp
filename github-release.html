@@ -2813,10 +2813,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#python-build-standalone" class="md-nav__link">
+  <a href="#astral-shpython-build-standalone" class="md-nav__link">
     <span class="md-ellipsis">
       
-        python-build-standalone
+        astral-sh/python-build-standalone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#astral-shuv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        astral-sh/uv
       
     </span>
   </a>
@@ -3571,10 +3582,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#python-build-standalone" class="md-nav__link">
+  <a href="#astral-shpython-build-standalone" class="md-nav__link">
     <span class="md-ellipsis">
       
-        python-build-standalone
+        astral-sh/python-build-standalone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#astral-shuv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        astral-sh/uv
       
     </span>
   </a>
@@ -3653,9 +3675,9 @@
 </ul>
 <h2 id="_4">使用说明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>一般情况下，直接前往此镜像地址，点击即可进行下载。</p>
-<h3 id="python-build-standalone">python-build-standalone<a class="headerlink" href="#python-build-standalone" title="Permanent link">&para;</a></h3>
+<h3 id="astral-shpython-build-standalone">astral-sh/python-build-standalone<a class="headerlink" href="#astral-shpython-build-standalone" title="Permanent link">&para;</a></h3>
 <p>可配置以下环境变量：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">UV_PYTHON_INSTALL_MIRROR</span><span class="o">=</span>https://mirrors.ustc.edu.cn/github-release/astral-sh/python-build-standalone/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">UV_PYTHON_INSTALL_MIRROR</span><span class="o">=</span>https://mirrors.ustc.edu.cn/github-release/astral-sh/python-build-standalone/
 </code></pre></div>
 <p>需要注意的是，我们仅镜像了最新的一个 release，并且排除了符合以下正则的文件：</p>
 <ul>
@@ -3665,6 +3687,15 @@
 <li>i686</li>
 </ul>
 <p>服务端不存在的文件会被重定向到 GitHub 官方仓库。</p>
+<h3 id="astral-shuv">astral-sh/uv<a class="headerlink" href="#astral-shuv" title="Permanent link">&para;</a></h3>
+<p>可配置以下环境变量：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">UV_DOWNLOAD_URL</span><span class="o">=</span>https://mirrors.ustc.edu.cn/github-release/astral-sh/uv/LatestRelease/
+</code></pre></div>
+<p>然后可以从镜像站获取安装脚本并执行：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>curl<span class="w"> </span>-sL<span class="w"> </span>https://mirrors.ustc.edu.cn/github-release/astral-sh/uv/LatestRelease/uv-installer.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</code></pre></div>
+<p>或者使用 <code>uv self update</code> 来更新已经通过此方式安装好的 uv。</p>
+<p>由于我们仅镜像了最新的一个 release，该方法将安装最新版本的 uv。</p>
 <h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>AdoptOpenJDK 官网</dt>
