@@ -27,7 +27,7 @@ echo 'deb [signed-by=/usr/share/keyrings/influxdata-archive.gpg] https://mirrors
 使用以下命令导入 InfluxData 的 GPG 密钥，并更新配置：
 
 ```shell
-cat <<EOF | sudo tee /etc/yum.repos.d/influxdata.repo
+sudo tee /etc/yum.repos.d/influxdata.repo <<EOF
 [influxdata]
 name = InfluxData Repository - Stable
 baseurl = https://mirrors.ustc.edu.cn/influxdata/stable/\$basearch/main
@@ -37,7 +37,7 @@ gpgkey = https://repos.influxdata.com/influxdata-archive.key
 EOF
 ```
 
-`dnf update` 之后即可安装 `influxdb2` 与 `telegraf` 等软件包。
+在运行 `dnf update` 之后即可安装 `influxdb` 与 `telegraf` 等软件包。
 
 如果有其他配置需求，可参考「相关链接」中「官方下载指南」的说明，配置 GPG 密钥后，在配置项更新时将 `repos.influxdata.com` 替换为 `mirrors.ustc.edu.cn/influxdata` 即可。
 
