@@ -10,17 +10,21 @@
 
 ## 使用说明
 
-对于 Debian/Ubuntu 用户，使用以下命令导入 InfluxData 的 GPG 密钥，并更新配置：
+### Debian / Ubuntu
+
+使用以下命令导入 InfluxData 的 GPG 密钥，并更新配置：
 
 ```shell
-wget -q https://repos.influxdata.com/influxdata-archive.key
-gpg --show-keys --with-fingerprint --with-colons ./influxdata-archive.key 2>&1 | grep -q '^fpr:\+24C975CBA61A024EE1B631787C3D57159FC2F927:$' && cat influxdata-archive.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdata-archive.gpg > /dev/null
-echo 'deb [signed-by=/etc/apt/trusted.gpg.d/influxdata-archive.gpg] https://mirrors.ustc.edu.cn/influxdata/debian stable main' | sudo tee /etc/apt/sources.list.d/influxdata.list
+wget https://repos.influxdata.com/debian/packages/influxdata-archive-keyring_2026.01.09_all.deb
+sudo apt install ./influxdata-archive-keyring_2026.01.09_all.deb
+echo 'deb [signed-by=/usr/share/keyrings/influxdata-archive.gpg] https://mirrors.ustc.edu.cn/influxdata/debian stable main' | sudo tee /etc/apt/sources.list.d/influxdata.list
 ```
 
 在运行 `apt update` 之后即可安装 `influxdb` 与 `telegraf` 等软件包。
 
-对于 CentOS/RHEL 用户，使用以下命令导入 InfluxData 的 GPG 密钥，并更新配置：
+### CentOS / RHEL
+
+使用以下命令导入 InfluxData 的 GPG 密钥，并更新配置：
 
 ```shell
 cat <<EOF | sudo tee /etc/yum.repos.d/influxdata.repo
