@@ -1,6 +1,6 @@
 ---
-name: Mirror Help Issue
-about: 提交与帮助文档相关的 issue (Submit an issue about help documentation of USTC Mirrors)
+name: Suggest an edit or improvement
+about: 对 USTC Mirrors 帮助文档提出修订或改进建议 (Suggest an edit or improvement for USTC Mirrors documentation)
 ---
 
 <!-- 
