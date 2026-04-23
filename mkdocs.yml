@@ -94,6 +94,8 @@ extra:
       codename: bullseye
       proxmox_version: 7
   ubuntu_releases:
+    - version: 26.04
+      codename: resolute
     - version: 24.04
       codename: noble
     - version: 22.04
