@@ -3722,45 +3722,45 @@
 </li>
 </ul>
 <p>以下是参考配置内容，<strong>同时修改了软件源与安全更新源</strong>：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Ubuntu 24.04</label><label for="__tabbed_1_2">Ubuntu 22.04</label><label for="__tabbed_1_3">Ubuntu 20.04</label><label for="__tabbed_1_4">Ubuntu 18.04</label><label for="__tabbed_1_5">Ubuntu 16.04</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Ubuntu 26.04</label><label for="__tabbed_1_2">Ubuntu 24.04</label><label for="__tabbed_1_3">Ubuntu 22.04</label><label for="__tabbed_1_4">Ubuntu 20.04</label><label for="__tabbed_1_5">Ubuntu 18.04</label><label for="__tabbed_1_6">Ubuntu 16.04</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><code>sources.list</code> 格式</label><label for="__tabbed_2_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c"># 默认注释了源码仓库，如有需要可自行取消注释</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">noble</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ noble main restricted universe multiverse</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">resolute</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ resolute main restricted universe multiverse</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">noble-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ noble-security main restricted universe multiverse</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">resolute-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ resolute-security main restricted universe multiverse</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">noble-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ noble-updates main restricted universe multiverse</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">resolute-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ resolute-updates main restricted universe multiverse</span>
 <a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">noble-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ noble-backports main restricted universe multiverse</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">resolute-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ resolute-backports main restricted universe multiverse</span>
 <a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
 <a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="c"># 预发布软件源，不建议启用</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="c"># deb https://mirrors.ustc.edu.cn/ubuntu-ports/ noble-proposed main restricted universe multiverse</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ noble-proposed main restricted universe multiverse</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="c"># deb https://mirrors.ustc.edu.cn/ubuntu-ports/ resolute-proposed main restricted universe multiverse</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ resolute-proposed main restricted universe multiverse</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list.d/ubuntu.sources</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/ubuntu-ports</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">noble noble-updates noble-backports</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resolute resolute-updates resolute-backports</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main restricted universe multiverse</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/ubuntu-archive-keyring.gpg</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
 <a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/ubuntu-ports</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">noble-security</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resolute-security</span>
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main universe restricted multiverse</span>
 <a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/ubuntu-archive-keyring.gpg</span>
 </code></pre></div>
 <p>如果需要使用源码仓库，可以在 Types 中添加 <code>deb-src</code>。</p>
-<p>如果需要使用预发布软件源，可以在 Suites 中添加 <code>noble-proposed</code>。</p>
+<p>如果需要使用预发布软件源，可以在 Suites 中添加 <code>resolute-proposed</code>。</p>
 </div>
 </div>
 </div>
@@ -3770,38 +3770,38 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c"># 默认注释了源码仓库，如有需要可自行取消注释</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">jammy</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy main restricted universe multiverse</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">noble</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ noble main restricted universe multiverse</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">jammy-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy-security main restricted universe multiverse</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">noble-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ noble-security main restricted universe multiverse</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">jammy-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy-updates main restricted universe multiverse</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">noble-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ noble-updates main restricted universe multiverse</span>
 <a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">jammy-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy-backports main restricted universe multiverse</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">noble-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ noble-backports main restricted universe multiverse</span>
 <a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
 <a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="c"># 预发布软件源，不建议启用</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="c"># deb https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy-proposed main restricted universe multiverse</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy-proposed main restricted universe multiverse</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="c"># deb https://mirrors.ustc.edu.cn/ubuntu-ports/ noble-proposed main restricted universe multiverse</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ noble-proposed main restricted universe multiverse</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list.d/ubuntu.sources</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/ubuntu-ports</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jammy jammy-updates jammy-backports</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">noble noble-updates noble-backports</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main restricted universe multiverse</span>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/ubuntu-archive-keyring.gpg</span>
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
 <a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/ubuntu-ports</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jammy-security</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">noble-security</span>
 <a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main universe restricted multiverse</span>
 <a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/ubuntu-archive-keyring.gpg</span>
 </code></pre></div>
 <p>如果需要使用源码仓库，可以在 Types 中添加 <code>deb-src</code>。</p>
-<p>如果需要使用预发布软件源，可以在 Suites 中添加 <code>jammy-proposed</code>。</p>
+<p>如果需要使用预发布软件源，可以在 Suites 中添加 <code>noble-proposed</code>。</p>
 </div>
 </div>
 </div>
@@ -3811,38 +3811,38 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c"># 默认注释了源码仓库，如有需要可自行取消注释</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">focal</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal main restricted universe multiverse</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">jammy</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy main restricted universe multiverse</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">focal-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-security main restricted universe multiverse</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">jammy-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy-security main restricted universe multiverse</span>
 <a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">focal-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-updates main restricted universe multiverse</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">jammy-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy-updates main restricted universe multiverse</span>
 <a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">focal-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-backports main restricted universe multiverse</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">jammy-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy-backports main restricted universe multiverse</span>
 <a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
 <a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="c"># 预发布软件源，不建议启用</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="c"># deb https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-proposed main restricted universe multiverse</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-proposed main restricted universe multiverse</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="c"># deb https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy-proposed main restricted universe multiverse</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ jammy-proposed main restricted universe multiverse</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list.d/ubuntu.sources</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/ubuntu-ports</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">focal focal-updates focal-backports</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jammy jammy-updates jammy-backports</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main restricted universe multiverse</span>
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/ubuntu-archive-keyring.gpg</span>
 <a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
 <a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
 <a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/ubuntu-ports</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">focal-security</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jammy-security</span>
 <a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main universe restricted multiverse</span>
 <a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/ubuntu-archive-keyring.gpg</span>
 </code></pre></div>
 <p>如果需要使用源码仓库，可以在 Types 中添加 <code>deb-src</code>。</p>
-<p>如果需要使用预发布软件源，可以在 Suites 中添加 <code>focal-proposed</code>。</p>
+<p>如果需要使用预发布软件源，可以在 Suites 中添加 <code>jammy-proposed</code>。</p>
 </div>
 </div>
 </div>
@@ -3852,38 +3852,38 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c"># 默认注释了源码仓库，如有需要可自行取消注释</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">bionic</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ bionic main restricted universe multiverse</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">focal</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal main restricted universe multiverse</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">bionic-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ bionic-security main restricted universe multiverse</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">focal-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-security main restricted universe multiverse</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">bionic-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ bionic-updates main restricted universe multiverse</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">focal-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-updates main restricted universe multiverse</span>
 <a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">bionic-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ bionic-backports main restricted universe multiverse</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">focal-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-backports main restricted universe multiverse</span>
 <a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
 <a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="c"># 预发布软件源，不建议启用</span>
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="c"># deb https://mirrors.ustc.edu.cn/ubuntu-ports/ bionic-proposed main restricted universe multiverse</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ bionic-proposed main restricted universe multiverse</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="c"># deb https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-proposed main restricted universe multiverse</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-proposed main restricted universe multiverse</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list.d/ubuntu.sources</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/ubuntu-ports</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bionic bionic-updates bionic-backports</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">focal focal-updates focal-backports</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main restricted universe multiverse</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/ubuntu-archive-keyring.gpg</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
 <a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
 <a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/ubuntu-ports</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bionic-security</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">focal-security</span>
 <a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main universe restricted multiverse</span>
 <a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/ubuntu-archive-keyring.gpg</span>
 </code></pre></div>
 <p>如果需要使用源码仓库，可以在 Types 中添加 <code>deb-src</code>。</p>
-<p>如果需要使用预发布软件源，可以在 Suites 中添加 <code>bionic-proposed</code>。</p>
+<p>如果需要使用预发布软件源，可以在 Suites 中添加 <code>focal-proposed</code>。</p>
 </div>
 </div>
 </div>
@@ -3893,35 +3893,76 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c"># 默认注释了源码仓库，如有需要可自行取消注释</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">xenial</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial main restricted universe multiverse</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">bionic</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ bionic main restricted universe multiverse</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">xenial-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-security main restricted universe multiverse</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">bionic-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ bionic-security main restricted universe multiverse</span>
 <a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">xenial-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-updates main restricted universe multiverse</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">bionic-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ bionic-updates main restricted universe multiverse</span>
 <a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">xenial-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-backports main restricted universe multiverse</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">bionic-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ bionic-backports main restricted universe multiverse</span>
 <a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
 <a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="c"># 预发布软件源，不建议启用</span>
-<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="c"># deb https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-proposed main restricted universe multiverse</span>
-<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-proposed main restricted universe multiverse</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="c"># deb https://mirrors.ustc.edu.cn/ubuntu-ports/ bionic-proposed main restricted universe multiverse</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ bionic-proposed main restricted universe multiverse</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">/etc/apt/sources.list.d/ubuntu.sources</span><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/ubuntu-ports</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xenial xenial-updates xenial-backports</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bionic bionic-updates bionic-backports</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main restricted universe multiverse</span>
 <a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/ubuntu-archive-keyring.gpg</span>
 <a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
 <a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
 <a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/ubuntu-ports</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xenial-security</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bionic-security</span>
 <a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main universe restricted multiverse</span>
 <a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/ubuntu-archive-keyring.gpg</span>
+</code></pre></div>
+<p>如果需要使用源码仓库，可以在 Types 中添加 <code>deb-src</code>。</p>
+<p>如果需要使用预发布软件源，可以在 Suites 中添加 <code>bionic-proposed</code>。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1"><code>sources.list</code> 格式</label><label for="__tabbed_7_2">DEB822 格式</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c"># 默认注释了源码仓库，如有需要可自行取消注释</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">xenial</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial main restricted universe multiverse</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">xenial-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-security main restricted universe multiverse</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">xenial-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-updates main restricted universe multiverse</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/ubuntu-ports/</span><span class="w"> </span><span class="kp">xenial-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">restricted</span><span class="w"> </span><span class="kp">universe</span><span class="w"> </span><span class="kp">multiverse</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-backports main restricted universe multiverse</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="c"># 预发布软件源，不建议启用</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="c"># deb https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-proposed main restricted universe multiverse</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="c"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-proposed main restricted universe multiverse</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/ubuntu.sources</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/ubuntu-ports</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xenial xenial-updates xenial-backports</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main restricted universe multiverse</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/ubuntu-archive-keyring.gpg</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="nt">Types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deb</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="nt">URIs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/ubuntu-ports</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="nt">Suites</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xenial-security</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="nt">Components</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main universe restricted multiverse</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="nt">Signed-By</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/share/keyrings/ubuntu-archive-keyring.gpg</span>
 </code></pre></div>
 <p>如果需要使用源码仓库，可以在 Types 中添加 <code>deb-src</code>。</p>
 <p>如果需要使用预发布软件源，可以在 Suites 中添加 <code>xenial-proposed</code>。</p>
