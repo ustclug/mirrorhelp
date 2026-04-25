@@ -28,13 +28,17 @@ pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/simple
 
 #### Astral uv
 
-添加配置文件 `~/.config/uv/uv.toml` 或 `/etc/uv/uv.toml`，内容如下：
+**当前项目配置**：修改项目根目录下的 `uv.toml` 或 `pyproject.toml`：
 
 ```toml
-[[index]]
+[[index]] # pyproject.toml 使用 [[tool.uv.index]] 路径
 url = "https://mirrors.ustc.edu.cn/pypi/simple"
 default = true
 ```
+
+**全局配置**：修改全局配置文件 `~/.config/uv/uv.toml` (Linux/macOS) 或 `%APPDATA%\uv\uv.toml` (Windows)，内容同上。
+
+详情可参考 [uv 官方文档](https://docs.astral.sh/uv/concepts/configuration-files/)。
 
 !!! info "python-build-standalone 镜像"
 
