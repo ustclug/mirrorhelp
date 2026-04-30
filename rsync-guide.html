@@ -380,44 +380,55 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="rsync 同步方式">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        限制
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="限制">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#method-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        同步方式限制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequency-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        同步频率限制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连接数限制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        同步专用域名
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        同步路径
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        可同步内容
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         注意事项
@@ -433,7 +444,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         相关链接
@@ -3554,44 +3565,55 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="rsync 同步方式">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        限制
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="限制">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#method-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        同步方式限制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequency-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        同步频率限制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连接数限制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        同步专用域名
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        同步路径
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        可同步内容
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         注意事项
@@ -3607,7 +3629,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         相关链接
@@ -3640,54 +3662,45 @@
 <h1 id="_1">科大源同步方法与注意事项<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">总述<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>中科大开源镜像站允许下游站点使用 <a href="https://www.samba.org/rsync/">rsync</a>
-协议同步站点上的内容。</p>
+协议同步站点上绝大部分非反向代理或动态缓存的仓库中的文件内容。</p>
 <p>因可能消耗大量服务器资源，我们不允许下游镜像站点或个人用户使用
 HTTP / HTTPS 协议从站点大规模同步数据。
 我们会采取技术措施对使用非 rsync
 协议进行大量内容同步的用户进行限流或封禁。</p>
 <h2 id="rsync">rsync 同步方式<a class="headerlink" href="#rsync" title="Permanent link">&para;</a></h2>
-<h3 id="_3">同步专用域名<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>如需使用 rsync 协议访问科大开源镜像站，请使用 rsync 专用的域名：<code>rsync.mirrors.ustc.edu.cn</code>。</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>使用非标准域名访问站点的用户可能无法通过 rsync 进行同步。</p>
-</div>
-<h3 id="_4">同步路径<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>由于 rsync 协议实现的限制，原有的使用 <code>/repo/</code> 前缀同步的方式难以进行负载均衡。从 2022 年 4 月 2 日起，同步将不再需要添加 <code>/repo/</code> 前缀。从 2025 年 6 月 5 日起，原有的 <code>/repo/</code> 不再保留，请用户注意更换为新的路径。例如，<code>ubuntu</code> 仓库的实际路径即为 <code>rsync://rsync.mirrors.ustc.edu.cn/ubuntu</code>。</p>
-</div>
+<p>如需使用 rsync 协议访问科大开源镜像站，请使用 rsync 专用的域名 <code>rsync.mirrors.ustc.edu.cn</code>，例如：</p>
+<ul>
+<li>
+<p>获取完整的可同步仓库列表：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>rsync<span class="w"> </span>rsync://rsync.mirrors.ustc.edu.cn/
+</code></pre></div>
+</li>
+<li>
+<p>将 <code>ustclug</code> 仓库同步至本地：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rsync<span class="w"> </span>-avH<span class="w"> </span>rsync://rsync.mirrors.ustc.edu.cn/ustclug/<span class="w"> </span>/srv/repo/ustclug/
+</code></pre></div>
+<p>请<strong>务必</strong>使用 Rsync 的 <code>-a</code> 参数（或者至少 <code>-rlt</code> 参数组合），以便利用 Rsync 的增量同步功能，减少重复同步时产生的数据传输量。</p>
+</li>
+</ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>我们强烈推荐用户在实际进行 rsync 同步之前先使用 <code>rsync</code>
 工具列出目录内容以实际观察目录结构。例如，用户可以使用如下命令列出
 <code>ubuntu</code> 仓库根目录的具体内容：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>rsync<span class="w"> </span>rsync://rsync.mirrors.ustc.edu.cn/ubuntu/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>rsync<span class="w"> </span>rsync://rsync.mirrors.ustc.edu.cn/ubuntu/
 </code></pre></div>
 </div>
-<h3 id="_5">可同步内容<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>您可以使用 rsync 协议访问站点上绝大部分非反向代理或动态缓存的仓库中的文件内容。</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>如需获取完整的可同步仓库列表，请使用 rsync 列出根路径下的目录（模块）列表：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rsync<span class="w"> </span>rsync://rsync.mirrors.ustc.edu.cn/
-</code></pre></div>
-</div>
-<h3 id="_6">注意事项<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>如您需要从我站小规模进行初始同步或者增量同步文件，您无需告知我们即可开始同步，
-但建议在北京时间凌晨（凌晨一点到早上八点）的时间段内进行内容同步。</p>
-<p>如您需要进行大量初始同步，请预先通过电子邮件知会并告知我们您的同步计划。
-如果您的同步计划会对本站点运行产生较大影响，我们将联系您并提出修改同步计划的建议。
-我们保留使用技术手段或其它手段阻断恶意对本站使用 <code>rsync</code>
-进行访问的权利。</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>使用 <code>rsync</code> 访问站点的用户将在日志输出中看到我站的
-<a href="https://en.wikipedia.org/wiki/Motd_(Unix)">MOTD</a> 信息，
-请在首次使用前认真阅读提示信息并按提示进行操作。</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">连接数限制</p>
+<h2 id="limits">限制<a class="headerlink" href="#limits" title="Permanent link">&para;</a></h2>
+<h3 id="method-limit">同步方式限制<a class="headerlink" href="#method-limit" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Rsync 服务仅通过专用域名 <code>rsync.mirrors.ustc.edu.cn</code> 提供，我们不保证 Rsync 服务在其它域名上的可用性（例如主域名 <code>mirrors.ustc.edu.cn</code>）。</li>
+<li>请使用 <code>rsync -a</code> 参数（或者至少 <code>rsync -rlt</code> 参数）进行<strong>增量同步</strong>。</li>
+<li>请勿使用 <code>-c</code> / <code>--checksum</code> 参数。</li>
+</ul>
+<h3 id="frequency-limit">同步频率限制<a class="headerlink" href="#frequency-limit" title="Permanent link">&para;</a></h3>
+<p>请使用 cron 等定时任务方式管理后台同步，且每个仓库的同步任务不宜超过<strong>每天一次</strong>（ubuntu 等热门仓库可接受的最高频率为每 6 小时一次）。</p>
+<p>请勿编写类似于 <code>while true; rsync ...; done</code> 的脚本，我们会随时封禁超出必要频率的 rsync 请求。</p>
+<h3 id="connection-limit">连接数限制<a class="headerlink" href="#connection-limit" title="Permanent link">&para;</a></h3>
 <p>为避免占用服务器过多资源，我们对 rsync 连接数做出了限制。
 目前的限制为：</p>
 <ul>
@@ -3696,13 +3709,24 @@ HTTP / HTTPS 协议从站点大规模同步数据。
 </ul>
 <p>超出限制的连接将进入等待队列，按顺序依次获得 rsync 服务。
 若等待队列过长，超出队列容量的连接将会被拒绝，请合理安排同步方式以达到最大的同步效率。</p>
-</div>
+<h3 id="_3">注意事项<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>如您需要从我站小规模进行初始同步或者增量同步文件，您无需告知我们即可开始同步，
+但建议在北京时间凌晨（凌晨一点到早上八点）的时间段内进行内容同步。</p>
+<p>如您需要进行大量初始同步，请预先通过电子邮件知会并告知我们您的同步计划。
+如果您的同步计划会对本站点运行产生较大影响，我们将联系您并提出修改同步计划的建议。
+我们保留使用技术手段或其它手段阻断恶意对本站使用 <code>rsync</code>
+进行访问的权利。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>请使用 cron 等定时任务方式管理后台同步，且每个仓库的同步任务不宜超过每天一次（ubuntu 等热门仓库可接受的最高频率为每 6 小时一次）。</p>
-<p>请勿编写类似于 <code>while true; rsync ...; done</code> 的脚本，我们会随时封禁超出必要频率的 rsync 请求。</p>
+<p>由于 rsync 协议实现的限制，原有的使用 <code>/repo/</code> 前缀同步的方式难以进行负载均衡。从 2022 年 4 月 2 日起，同步将不再需要添加 <code>/repo/</code> 前缀。从 2025 年 6 月 5 日起，原有的 <code>/repo/</code> 不再保留，请用户注意更换为新的路径。例如，<code>ubuntu</code> 仓库的实际路径即为 <code>rsync://rsync.mirrors.ustc.edu.cn/ubuntu</code>。</p>
 </div>
-<h2 id="_7">相关链接<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>使用 <code>rsync</code> 访问站点的用户将在日志输出中看到我站的
+<a href="https://en.wikipedia.org/wiki/Motd_(Unix)">MOTD</a> 信息，
+请在首次使用前认真阅读提示信息并按提示进行操作。</p>
+</div>
+<h2 id="_4">相关链接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>rsync 中文维基百科介绍</dt>
 <dd>
