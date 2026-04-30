@@ -3,7 +3,7 @@
 ## 总述
 
 中科大开源镜像站允许下游站点使用 [rsync](https://www.samba.org/rsync/)
-协议同步站点上的内容。
+协议同步站点上绝大部分非反向代理或动态缓存的仓库中的文件内容。
 
 因可能消耗大量服务器资源，我们不允许下游镜像站点或个人用户使用
 HTTP / HTTPS 协议从站点大规模同步数据。
@@ -12,19 +12,21 @@ HTTP / HTTPS 协议从站点大规模同步数据。
 
 ## rsync 同步方式
 
-### 同步专用域名
+如需使用 rsync 协议访问科大开源镜像站，请使用 rsync 专用的域名 `rsync.mirrors.ustc.edu.cn`，例如：
 
-如需使用 rsync 协议访问科大开源镜像站，请使用 rsync 专用的域名：`rsync.mirrors.ustc.edu.cn`。
+- 获取完整的可同步仓库列表：
 
-!!! warning
+    ```shell
+    rsync rsync://rsync.mirrors.ustc.edu.cn/
+    ```
 
-    使用非标准域名访问站点的用户可能无法通过 rsync 进行同步。
+- 将 `ustclug` 仓库同步至本地：
 
-### 同步路径
+    ```shell
+    rsync -avH rsync://rsync.mirrors.ustc.edu.cn/ustclug/ /srv/repo/ustclug/
+    ```
 
-!!! warning
-
-    由于 rsync 协议实现的限制，原有的使用 `/repo/` 前缀同步的方式难以进行负载均衡。从 2022 年 4 月 2 日起，同步将不再需要添加 `/repo/` 前缀。从 2025 年 6 月 5 日起，原有的 `/repo/` 不再保留，请用户注意更换为新的路径。例如，`ubuntu` 仓库的实际路径即为 `rsync://rsync.mirrors.ustc.edu.cn/ubuntu`。
+    请**务必**使用 Rsync 的 `-a` 参数（或者至少 `-rlt` 参数组合），以便利用 Rsync 的增量同步功能，减少重复同步时产生的数据传输量。
 
 !!! tip
 
@@ -36,17 +38,30 @@ HTTP / HTTPS 协议从站点大规模同步数据。
     rsync rsync://rsync.mirrors.ustc.edu.cn/ubuntu/
     ```
 
-### 可同步内容
+## 限制 {#limits}
 
-您可以使用 rsync 协议访问站点上绝大部分非反向代理或动态缓存的仓库中的文件内容。
+### 同步方式限制 {#method-limit}
 
-!!! tip
+- Rsync 服务仅通过专用域名 `rsync.mirrors.ustc.edu.cn` 提供，我们不保证 Rsync 服务在其它域名上的可用性（例如主域名 `mirrors.ustc.edu.cn`）。
+- 请使用 `rsync -a` 参数（或者至少 `rsync -rlt` 参数）进行**增量同步**。
+- 请勿使用 `-c` / `--checksum` 参数。
 
-    如需获取完整的可同步仓库列表，请使用 rsync 列出根路径下的目录（模块）列表：
+### 同步频率限制 {#frequency-limit}
 
-    ```shell
-    rsync rsync://rsync.mirrors.ustc.edu.cn/
-    ```
+请使用 cron 等定时任务方式管理后台同步，且每个仓库的同步任务不宜超过**每天一次**（ubuntu 等热门仓库可接受的最高频率为每 6 小时一次）。
+
+请勿编写类似于 `while true; rsync ...; done` 的脚本，我们会随时封禁超出必要频率的 rsync 请求。
+
+### 连接数限制 {#connection-limit}
+
+为避免占用服务器过多资源，我们对 rsync 连接数做出了限制。
+目前的限制为：
+
+- 单 IP 5 个并发连接；
+- 每个后端服务器 30 至 60 个并发链接（不同的后端服务器承载能力不同）。
+
+超出限制的连接将进入等待队列，按顺序依次获得 rsync 服务。
+若等待队列过长，超出队列容量的连接将会被拒绝，请合理安排同步方式以达到最大的同步效率。
 
 ### 注意事项
 
@@ -58,28 +73,16 @@ HTTP / HTTPS 协议从站点大规模同步数据。
 我们保留使用技术手段或其它手段阻断恶意对本站使用 `rsync`
 进行访问的权利。
 
+!!! warning
+
+    由于 rsync 协议实现的限制，原有的使用 `/repo/` 前缀同步的方式难以进行负载均衡。从 2022 年 4 月 2 日起，同步将不再需要添加 `/repo/` 前缀。从 2025 年 6 月 5 日起，原有的 `/repo/` 不再保留，请用户注意更换为新的路径。例如，`ubuntu` 仓库的实际路径即为 `rsync://rsync.mirrors.ustc.edu.cn/ubuntu`。
+
+
 !!! tip
 
     使用 `rsync` 访问站点的用户将在日志输出中看到我站的
     [MOTD](https://en.wikipedia.org/wiki/Motd_(Unix)) 信息，
     请在首次使用前认真阅读提示信息并按提示进行操作。
-
-!!! warning "连接数限制"
-
-    为避免占用服务器过多资源，我们对 rsync 连接数做出了限制。
-    目前的限制为：
-
-    - 单 IP 5 个并发连接；
-    - 每个后端服务器 30 至 60 个并发链接（不同的后端服务器承载能力不同）。
-
-    超出限制的连接将进入等待队列，按顺序依次获得 rsync 服务。
-    若等待队列过长，超出队列容量的连接将会被拒绝，请合理安排同步方式以达到最大的同步效率。
-
-!!! warning
-
-    请使用 cron 等定时任务方式管理后台同步，且每个仓库的同步任务不宜超过每天一次（ubuntu 等热门仓库可接受的最高频率为每 6 小时一次）。
-
-    请勿编写类似于 `while true; rsync ...; done` 的脚本，我们会随时封禁超出必要频率的 rsync 请求。
 
 ## 相关链接
 
