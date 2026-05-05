@@ -3696,19 +3696,11 @@ HTTP / HTTPS 协议从站点大规模同步数据。
 协议进行大量内容同步的用户进行限流或封禁。</p>
 <h2 id="rsync">rsync 同步方式<a class="headerlink" href="#rsync" title="Permanent link">&para;</a></h2>
 <p>如需使用 rsync 协议访问科大开源镜像站，请使用 rsync 专用的域名 <code>rsync.mirrors.ustc.edu.cn</code>，例如：</p>
-<ul>
-<li>
-<p>获取完整的可同步仓库列表：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>rsync<span class="w"> </span>rsync://rsync.mirrors.ustc.edu.cn/
+<div class="highlight"><span class="filename">获取完整的可同步仓库列表</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>rsync<span class="w"> </span>rsync://rsync.mirrors.ustc.edu.cn/
 </code></pre></div>
-</li>
-<li>
-<p>将 <code>ustclug</code> 仓库同步至本地：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rsync<span class="w"> </span>-avH<span class="w"> </span>rsync://rsync.mirrors.ustc.edu.cn/ustclug/<span class="w"> </span>/srv/repo/ustclug/
+<div class="highlight"><span class="filename">将 ustclug 仓库同步至本地</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rsync<span class="w"> </span>-avH<span class="w"> </span>rsync://rsync.mirrors.ustc.edu.cn/ustclug/<span class="w"> </span>/srv/repo/ustclug/
 </code></pre></div>
 <p>请<strong>务必</strong>使用 Rsync 的 <code>-a</code> 参数（或者至少 <code>-rlt</code> 参数组合），以便利用 Rsync 的增量同步功能，减少重复同步时产生的数据传输量。</p>
-</li>
-</ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>我们强烈推荐用户在实际进行 rsync 同步之前先使用 <code>rsync</code>

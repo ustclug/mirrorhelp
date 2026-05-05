@@ -3603,6 +3603,10 @@
 <p>之后运行 <code>opkg update</code> 更新软件索引，注意检查是否出现错误。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
+<p>从 ImmortalWrt 25.12 开始，包管理器由 <code>opkg</code> 改为 <code>apk</code> (Alpine Package Keeper) ，默认软件源的配置文件路径由 <code>/etc/opkg/distfeeds.conf</code> 改为 <code>/etc/apk/repositories.d/distfeeds.list</code> 。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>如果你使用的 ImmortalWrt 版本 &gt;= 23.05.0，也可以使用如下命令设置镜像：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uci<span class="w"> </span><span class="nb">set</span><span class="w"> </span>system.@imm_init<span class="o">[</span><span class="m">0</span><span class="o">]</span>.opkg_mirror<span class="o">=</span><span class="s1">&#39;https://mirrors.ustc.edu.cn/immortalwrt&#39;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>uci<span class="w"> </span>commit<span class="w"> </span>system

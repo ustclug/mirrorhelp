@@ -3639,24 +3639,31 @@
 <p>Homebrew 源代码仓库</p>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>替换 USTC 镜像：</p>
-<div class="highlight"><pre><span></span><code>export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/brew.git&quot;
-brew update
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_BREW_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/brew.git&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>brew<span class="w"> </span>update
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>若用户设置了环境变量 <code>HOMEBREW_BREW_GIT_REMOTE</code>，则每次运行
 <code>brew update</code> 时将会自动设置远程。推荐用户将环境变量
 <code>HOMEBREW_BREW_GIT_REMOTE</code> 加入 shell 的 profile 设置中。</p>
-<div class="highlight"><pre><span></span><code># 对于 bash 用户
-echo &#39;export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/brew.git&quot;&#39; &gt;&gt; ~/.bash_profile
-
-# 对于 zsh 用户
-echo &#39;export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/brew.git&quot;&#39; &gt;&gt; ~/.zshrc
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Bash</label><label for="__tabbed_1_2">Zsh</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/brew.git&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
 </code></pre></div>
 </div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/brew.git&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
 <p>重置为官方地址：</p>
-<div class="highlight"><pre><span></span><code>unset HOMEBREW_BREW_GIT_REMOTE
-git -C &quot;$(brew --repo)&quot; remote set-url origin https://github.com/Homebrew/brew
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">unset</span><span class="w"> </span>HOMEBREW_BREW_GIT_REMOTE
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>brew<span class="w"> </span>--repo<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>https://github.com/Homebrew/brew
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>brew<span class="w"> </span>update
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3668,19 +3675,19 @@ git -C &quot;$(brew --repo)&quot; remote set-url origin https://github.com/Homeb
 </div>
 <h2 id="homebrew-linuxbrew">使用科大源安装 Homebrew / Linuxbrew<a class="headerlink" href="#homebrew-linuxbrew" title="Permanent link">&para;</a></h2>
 <p>首先在命令行运行如下几条命令设置环境变量：</p>
-<div class="highlight"><pre><span></span><code>export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/brew.git&quot;
-export HOMEBREW_CORE_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;
-export HOMEBREW_BOTTLE_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;
-export HOMEBREW_API_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_BREW_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/brew.git&quot;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_API_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;</span>
 </code></pre></div>
 <p>之后在命令行运行 Homebrew 安装脚本：</p>
-<div class="highlight"><pre><span></span><code>/bin/bash -c &quot;$(curl -fsSL https://github.com/Homebrew/install/raw/HEAD/install.sh)&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://github.com/Homebrew/install/raw/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>初次安装 Homebrew / Linuxbrew 时，如果无法下载安装脚本，
 可以使用我们每日同步的安装脚本文件。</p>
-<div class="highlight"><pre><span></span><code>/bin/bash -c &quot;$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://mirrors.ustc.edu.cn/misc/brew-install.sh<span class="k">)</span><span class="s2">&quot;</span>
 </code></pre></div>
 </div>
 <h2 id="_4">相关镜像<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
