@@ -20,10 +20,6 @@ OpenWrt 当前仍在维护的大版本可参考 <https://openwrt.org/mirrors#spa
 
     访问 snapshots 与 RC 版本内容会重定向至反向代理，如果需要下载相关文件，务必使用 HTTPS，否则连接可能会被中断。
 
-!!! tip
-
-    访问 <https://mirrors.ustc.edu.cn/lede/> 会被自动重定向到 <https://mirrors.ustc.edu.cn/openwrt/>。
-
 ## 使用说明
 
 一般情况下，下载来自 `downloads.openwrt.org` 的文件时，将 URL 中的这部分域名替换为 `mirrors.ustc.edu.cn/openwrt` 即可。

@@ -24,6 +24,10 @@ sed -e 's|https://downloads.immortalwrt.org|https://mirrors.ustc.edu.cn/immortal
 
 !!! tip
 
+    从 ImmortalWrt 25.12 开始，包管理器由 `opkg` 改为 `apk` (Alpine Package Keeper) ，默认软件源的配置文件路径由 `/etc/opkg/distfeeds.conf` 改为 `/etc/apk/repositories.d/distfeeds.list` 。
+
+!!! tip
+
     如果你使用的 ImmortalWrt 版本 >= 23.05.0，也可以使用如下命令设置镜像：
 
     ```shell

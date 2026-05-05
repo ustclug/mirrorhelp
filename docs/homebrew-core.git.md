@@ -18,8 +18,10 @@ Homebrew 核心软件仓库
 
 替换 USTC 镜像：
 
-    export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
-    brew update
+```shell
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+brew update
+```
 
 !!! note
 
@@ -27,16 +29,24 @@ Homebrew 核心软件仓库
     `brew update` 时将会自动设置远程。推荐用户将环境变量
     `HOMEBREW_CORE_GIT_REMOTE` 加入 shell 的 profile 设置中。
 
-        # 对于 bash 用户
-        echo 'export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"' >> ~/.bash_profile
+    === "Bash"
 
-        # 对于 zsh 用户
+        ```shell
+        echo 'export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"' >> ~/.bash_profile
+        ```
+
+    === "Zsh"
+
+        ```shell
         echo 'export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"' >> ~/.zshrc
+        ```
 
 重置为官方地址：
 
-    unset HOMEBREW_CORE_GIT_REMOTE
-    brew tap --custom-remote homebrew/core https://github.com/Homebrew/homebrew-core
+```shell
+unset HOMEBREW_CORE_GIT_REMOTE
+brew tap --custom-remote homebrew/core https://github.com/Homebrew/homebrew-core
+```
 
 !!! note
 
@@ -51,9 +61,11 @@ Homebrew 核心软件仓库
     `brew update` 将 `brew` 更新至 3.3.0 或以上版本。
     迁移过程中若出现任何问题，可使用如下命令重新安装 `homebrew-core`：
 
-        export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
-        rm -rf "$(brew --repo homebrew/core)"
-        brew tap --custom-remote homebrew/core https://mirrors.ustc.edu.cn/homebrew-core.git
+    ```shell
+    export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+    rm -rf "$(brew --repo homebrew/core)"
+    brew tap --custom-remote homebrew/core https://mirrors.ustc.edu.cn/homebrew-core.git
+    ```
 
 ## 相关镜像
 

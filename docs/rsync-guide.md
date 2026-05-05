@@ -14,19 +14,15 @@ HTTP / HTTPS 协议从站点大规模同步数据。
 
 如需使用 rsync 协议访问科大开源镜像站，请使用 rsync 专用的域名 `rsync.mirrors.ustc.edu.cn`，例如：
 
-- 获取完整的可同步仓库列表：
+```shell title="获取完整的可同步仓库列表"
+rsync rsync://rsync.mirrors.ustc.edu.cn/
+```
 
-    ```shell
-    rsync rsync://rsync.mirrors.ustc.edu.cn/
-    ```
+```shell title="将 ustclug 仓库同步至本地"
+rsync -avH rsync://rsync.mirrors.ustc.edu.cn/ustclug/ /srv/repo/ustclug/
+```
 
-- 将 `ustclug` 仓库同步至本地：
-
-    ```shell
-    rsync -avH rsync://rsync.mirrors.ustc.edu.cn/ustclug/ /srv/repo/ustclug/
-    ```
-
-    请**务必**使用 Rsync 的 `-a` 参数（或者至少 `-rlt` 参数组合），以便利用 Rsync 的增量同步功能，减少重复同步时产生的数据传输量。
+请**务必**使用 Rsync 的 `-a` 参数（或者至少 `-rlt` 参数组合），以便利用 Rsync 的增量同步功能，减少重复同步时产生的数据传输量。
 
 !!! tip
 

@@ -12,8 +12,10 @@ Homebrew 源代码仓库
 
 替换 USTC 镜像：
 
-    export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
-    brew update
+```shell
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+brew update
+```
 
 !!! note
 
@@ -21,16 +23,25 @@ Homebrew 源代码仓库
     `brew update` 时将会自动设置远程。推荐用户将环境变量
     `HOMEBREW_BREW_GIT_REMOTE` 加入 shell 的 profile 设置中。
 
-        # 对于 bash 用户
-        echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"' >> ~/.bash_profile
+    === "Bash"
 
-        # 对于 zsh 用户
+        ```shell
+        echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"' >> ~/.bash_profile
+        ```
+
+    === "Zsh"
+
+        ```shell
         echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"' >> ~/.zshrc
+        ```
 
 重置为官方地址：
 
-    unset HOMEBREW_BREW_GIT_REMOTE
-    git -C "$(brew --repo)" remote set-url origin https://github.com/Homebrew/brew
+```shell
+unset HOMEBREW_BREW_GIT_REMOTE
+git -C "$(brew --repo)" remote set-url origin https://github.com/Homebrew/brew
+brew update
+```
 
 !!! note
 
@@ -45,21 +56,27 @@ Homebrew 源代码仓库
 
 首先在命令行运行如下几条命令设置环境变量：
 
-    export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
-    export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
-    export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
-    export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
+```shell
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
+```
 
 之后在命令行运行 Homebrew 安装脚本：
 
-    /bin/bash -c "$(curl -fsSL https://github.com/Homebrew/install/raw/HEAD/install.sh)"
+```shell
+/bin/bash -c "$(curl -fsSL https://github.com/Homebrew/install/raw/HEAD/install.sh)"
+```
 
-!!! note
+!!! tip
 
     初次安装 Homebrew / Linuxbrew 时，如果无法下载安装脚本，
     可以使用我们每日同步的安装脚本文件。
 
-        /bin/bash -c "$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)"
+    ```shell
+    /bin/bash -c "$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)"
+    ```
 
 ## 相关镜像
 
