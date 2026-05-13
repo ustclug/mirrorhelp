@@ -50,7 +50,7 @@ rsync -avH rsync://rsync.mirrors.ustc.edu.cn/ustclug/ /srv/repo/ustclug/
 
 ### 连接数限制 {#connection-limit}
 
-为避免占用服务器过多资源，我们对 rsync 连接数做出了限制。
+为避免占用服务器过多资源，我们对 Rsync 连接数做出了限制。
 目前的限制为：
 
 - 单 IP 5 个并发连接；
@@ -58,6 +58,14 @@ rsync -avH rsync://rsync.mirrors.ustc.edu.cn/ustclug/ /srv/repo/ustclug/
 
 超出限制的连接将进入等待队列，按顺序依次获得 rsync 服务。
 若等待队列过长，超出队列容量的连接将会被拒绝，请合理安排同步方式以达到最大的同步效率。
+
+!!! tip
+
+    我们建议用户在较好的网络环境下从科大镜像站进行同步。
+    为了提升 Rsync 队列的效率，我们会限制单个 Rsync 连接的持续时间。
+    单个连接运行超过 24 小时的 Rsync 请求可能会被中断，以将机会留给其它用户的 Rsync 请求。
+
+    <!-- 2026-05-13: Initial setup; Actual setting is RuntimeMaxSec=48h -->
 
 ## 注意事项 {#notes}
 
