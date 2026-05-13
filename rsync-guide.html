@@ -3720,7 +3720,7 @@ HTTP / HTTPS 协议从站点大规模同步数据。
 <p>请使用 cron 等定时任务方式管理后台同步，且每个仓库的同步任务不宜超过<strong>每天一次</strong>（ubuntu 等热门仓库可接受的最高频率为每 6 小时一次）。</p>
 <p>请勿编写类似于 <code>while true; rsync ...; done</code> 的脚本，我们会随时封禁超出必要频率的 rsync 请求。</p>
 <h3 id="connection-limit">连接数限制<a class="headerlink" href="#connection-limit" title="Permanent link">&para;</a></h3>
-<p>为避免占用服务器过多资源，我们对 rsync 连接数做出了限制。
+<p>为避免占用服务器过多资源，我们对 Rsync 连接数做出了限制。
 目前的限制为：</p>
 <ul>
 <li>单 IP 5 个并发连接；</li>
@@ -3728,6 +3728,13 @@ HTTP / HTTPS 协议从站点大规模同步数据。
 </ul>
 <p>超出限制的连接将进入等待队列，按顺序依次获得 rsync 服务。
 若等待队列过长，超出队列容量的连接将会被拒绝，请合理安排同步方式以达到最大的同步效率。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>我们建议用户在较好的网络环境下从科大镜像站进行同步。
+为了提升 Rsync 队列的效率，我们会限制单个 Rsync 连接的持续时间。
+单个连接运行超过 24 小时的 Rsync 请求可能会被中断，以将机会留给其它用户的 Rsync 请求。</p>
+<!-- 2026-05-13: Initial setup; Actual setting is RuntimeMaxSec=48h -->
+</div>
 <h2 id="notes">注意事项<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <p>如您需要从我站小规模进行初始同步或者增量同步文件，您无需告知我们即可开始同步，
 但建议在北京时间凌晨（凌晨一点到早上八点）的时间段内进行内容同步。</p>
