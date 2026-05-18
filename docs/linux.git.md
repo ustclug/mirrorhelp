@@ -1,6 +1,8 @@
 # Linux 内核源码
 
-其 Git 仓库的链接为 `https://mirrors.ustc.edu.cn/linux.git`。
+## 地址
+
+<https://mirrors.ustc.edu.cn/linux.git>
 
 ## 断点续传
 
