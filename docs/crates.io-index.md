@@ -46,18 +46,7 @@ EOF
 
 !!! note "cargo <= 1.68?"
 
-    如果 cargo 版本低于 1.68，则必须设置为完整克隆仓库，`[source.ustc]` 里的 `registry` 需要修改为：
-
-    ```toml
-    [source.ustc]
-    registry = "https://mirrors.ustc.edu.cn/crates.io-index/"
-    ```
-
-    完整克隆仓库速度**远慢于**新版的稀疏索引，因此**强烈建议升级 cargo 版本**。详见[相关镜像](#related-mirrors)。
-
-!!! note "cargo <= 1.38?"
-
-    如果正在使用的 cargo 版本低于 1.38，则需要修改的文件为 `config` 文件，而不是 `config.toml` 文件。
+    自 2026 年 5 月 19 日起，我们不再提供完整克隆仓库的支持，请**升级 cargo 版本**。详见[相关镜像](#related-mirrors)。
 
 !!! warning
 
