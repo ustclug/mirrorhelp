@@ -3646,21 +3646,13 @@
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">cargo &lt;= 1.68?</p>
-<p>如果 cargo 版本低于 1.68，则必须设置为完整克隆仓库，<code>[source.ustc]</code> 里的 <code>registry</code> 需要修改为：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[source.ustc]</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">registry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://mirrors.ustc.edu.cn/crates.io-index/&quot;</span>
-</code></pre></div>
-<p>完整克隆仓库速度<strong>远慢于</strong>新版的稀疏索引，因此<strong>强烈建议升级 cargo 版本</strong>。详见<a href="#related-mirrors">相关镜像</a>。</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">cargo &lt;= 1.38?</p>
-<p>如果正在使用的 cargo 版本低于 1.38，则需要修改的文件为 <code>config</code> 文件，而不是 <code>config.toml</code> 文件。</p>
+<p>自 2026 年 5 月 19 日起，我们不再提供完整克隆仓库的支持，请<strong>升级 cargo 版本</strong>。详见<a href="#related-mirrors">相关镜像</a>。</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><code>cargo search</code> 与 <code>cargo info</code> 命令需要添加 <code>--registry ustc</code> 参数，例如：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">cargo search --registry ustc reqwest</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="go">cargo info --registry ustc reqwest</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">cargo search --registry ustc reqwest</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="go">cargo info --registry ustc reqwest</span>
 </code></pre></div>
 </div>
 <div class="admonition warning">
