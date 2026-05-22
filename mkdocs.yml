@@ -123,6 +123,10 @@ extra:
       codename: vanessa
     - version: LMDE 6.0
       codename: faye
+  alpine_releases:
+    - version: 3.23
+    - version: 3.22
+    - version: 3.21
 
 extra_css:
   - css/extra.css
