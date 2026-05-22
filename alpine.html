@@ -3624,13 +3624,29 @@
 <p>可以使用如下命令：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/apk/repositories
 </code></pre></div>
-<p>也可以直接编辑 <code>/etc/apk/repositories</code> 文件。以下是 v3.23 版本的参考配置：</p>
+<p>也可以直接编辑 <code>/etc/apk/repositories</code> 文件。以下是参考配置内容：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Alpine v3.23</label><label for="__tabbed_1_2">Alpine v3.22</label><label for="__tabbed_1_3">Alpine v3.21</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://mirrors.ustc.edu.cn/alpine/v3.23/main
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>https://mirrors.ustc.edu.cn/alpine/v3.23/community
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://mirrors.ustc.edu.cn/alpine/v3.22/main
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>https://mirrors.ustc.edu.cn/alpine/v3.22/community
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>https://mirrors.ustc.edu.cn/alpine/v3.21/main
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>https://mirrors.ustc.edu.cn/alpine/v3.21/community
+</code></pre></div>
+</div>
+</div>
+</div>
 <p>也可以使用 <code>latest-stable</code> 指向最新的稳定版本：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://mirrors.ustc.edu.cn/alpine/latest-stable/main
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>https://mirrors.ustc.edu.cn/alpine/latest-stable/community
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>https://mirrors.ustc.edu.cn/alpine/latest-stable/main
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>https://mirrors.ustc.edu.cn/alpine/latest-stable/community
 </code></pre></div>
 <p>更改完 <code>/etc/apk/repositories</code> 文件后请运行 <code>apk update</code> 更新索引以生效。</p>
 <div class="admonition tip">
