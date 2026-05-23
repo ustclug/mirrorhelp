@@ -10,7 +10,9 @@ Alpine Linux 软件源
 
 ## 收录架构与版本
 
-收录 Alpine 所有架构的仍然受到支持的版本。
+收录 Alpine 所有架构的仍然受到支持的版本。可在 <https://www.alpinelinux.org/releases/> 查看版本的支持情况。
+
+在镜像站上不存在的版本会被重定向回官方源。
 
 ## 使用说明
 
