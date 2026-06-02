@@ -3616,11 +3616,9 @@
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Homebrew cask 软件仓库，提供 macOS 应用和大型二进制文件</p>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Brew 4.0 版本后默认使用元数据 JSON API
-获取仓库信息，因此在大部分情况下都不再需要进行如下配置。可参考
-<code>homebrew-bottles</code> 进行相关配置。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>由于 Brew 4.0 版本后默认使用元数据 JSON API 获取仓库信息，自 2026 年 6 月开始，我们不再提供此镜像，以下配置不再有效。请参考 <a href="homebrew-bottles.html"><code>homebrew-bottles</code></a> 进行相关配置。</p>
 </div>
 <p>使用 USTC 镜像安装，或将已安装的仓库远程替换为 USTC 镜像：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>brew<span class="w"> </span>tap<span class="w"> </span>--custom-remote<span class="w"> </span>homebrew/cask<span class="w"> </span>https://mirrors.ustc.edu.cn/homebrew-cask.git
@@ -3638,7 +3636,6 @@
 <ul>
 <li><a href="brew.git.html">brew.git</a></li>
 <li><a href="homebrew-bottles.html">homebrew-bottles</a></li>
-<li><a href="homebrew-core.git.html">homebrew-core.git</a></li>
 </ul>
 <h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <dl>
