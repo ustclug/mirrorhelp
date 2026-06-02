@@ -53,8 +53,6 @@ export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 ## 相关镜像
 
 - [brew.git](brew.git.md)
-- [homebrew-core.git](homebrew-core.git.md)
-- [homebrew-cask.git](homebrew-cask.git.md)
 
 ## 相关链接
 

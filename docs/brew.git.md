@@ -58,7 +58,6 @@ brew update
 
 ```shell
 export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
-export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 ```
@@ -81,8 +80,6 @@ export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 ## 相关镜像
 
 - [homebrew-bottles](homebrew-bottles.md)
-- [homebrew-core.git](homebrew-core.git.md)
-- [homebrew-cask.git](homebrew-cask.git.md)
 
 ## 相关链接
 

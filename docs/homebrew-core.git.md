@@ -10,11 +10,9 @@ Homebrew 核心软件仓库
 
 ## 使用说明
 
-!!! note
+!!! warning
 
-    Brew 4.0 版本后默认使用元数据 JSON API
-    获取仓库信息，因此在大部分情况下都不再需要进行如下配置。可参考
-    `homebrew-bottles` 进行相关配置。
+    由于 Brew 4.0 版本后默认使用元数据 JSON API 获取仓库信息，自 2026 年 6 月开始，我们不再提供此镜像，以下配置不再有效。请参考 [`homebrew-bottles`](./homebrew-bottles.md) 进行相关配置。
 
 替换 USTC 镜像：
 
@@ -71,7 +69,6 @@ brew tap --custom-remote homebrew/core https://github.com/Homebrew/homebrew-core
 
 - [brew.git](brew.git.md)
 - [homebrew-bottles](homebrew-bottles.md)
-- [homebrew-cask.git](homebrew-cask.git.md)
 
 ## 相关链接
 
