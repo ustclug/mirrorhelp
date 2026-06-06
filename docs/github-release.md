@@ -42,7 +42,7 @@
 
 一般情况下，直接前往此镜像地址，点击即可进行下载。
 
-### astral-sh/python-build-standalone
+### astral-sh/python-build-standalone {#python-build-standalone}
 
 可配置以下环境变量：
 
