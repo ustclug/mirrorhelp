@@ -3603,7 +3603,7 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="s1">&#39;s|https://mirrors.vsean.net/openwrt|https://mirrors.ustc.edu.cn/immortalwrt|g&#39;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>-i.old<span class="w"> </span>/etc/apk/repositories.d/distfeeds.list
 </code></pre></div>
-<p>之后运行 <code>opkg update</code> 更新软件索引，注意检查是否出现错误。</p>
+<p>之后运行 <code>apk update</code> 更新软件索引，注意检查是否出现错误。</p>
 </div>
 <div class="tabbed-block">
 <p>SSH 登录路由器编辑 <code>/etc/opkg/distfeeds.conf</code> 文件，将源地址 <code>https://downloads.immortalwrt.org</code> 或 <code>https://mirrors.vsean.net/openwrt</code> 更改为 <code>https://mirrors.ustc.edu.cn/immortalwrt</code>。</p>
