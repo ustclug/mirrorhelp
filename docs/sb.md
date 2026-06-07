@@ -13,7 +13,7 @@ n.wtf 是对 Nginx 最新主线版本的第三方 Debian 包，支持诸如 TLS 
 安装必要的前置依赖，以及公钥：
 
 ```sh
-sudo apt install -y lsb-release ca-certificates apt-transport-https curl gnupg dpkg
+sudo apt install -y lsb-release ca-certificates curl gnupg dpkg
 
 curl -sSL https://n.wtf/public.key | sudo bash -c 'gpg --dearmor > /usr/share/keyrings/n.wtf.gpg'
 ```
