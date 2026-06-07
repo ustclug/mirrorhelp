@@ -233,6 +233,7 @@ nav:
     - ros2.md
     - rosdistro.md
     - sagemath.md
+    - sb.md
     - tailscale.md
     - winget-source.md
     - winget-fonts.md
