@@ -133,6 +133,11 @@ extra_css:
   - https://mirrors.ustc.edu.cn/static/help/roboto.css
   - https://mirrors.ustc.edu.cn/static/help/roboto-mono/stylesheet.css
 
+not_in_nav: |
+  julia.md
+  nodesource.md
+  npm.md
+
 nav:
   - 首页: /
   - 使用帮助: index.md
@@ -195,10 +200,7 @@ nav:
   - 语言镜像:
     - ghcup.md
     - hackage.md
-    - julia.md
     - node.md
-    - nodesource.md
-    - npm.md
     - pypi.md
     - rubygems.md
     - crates.io-index.md

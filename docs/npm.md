@@ -2,21 +2,13 @@
 
 中科大镜像站的 npm 镜像是 <https://registry.npmjs.org/> 的反代。
 
-## 使用说明
+!!! warning
 
-编辑 `~/.npmrc`，添加
-
-    registry=https://npmreg.proxy.ustclug.org/
-
-若不想将本源设置为默认源，只想使用本源安装某个软件包，可在安装包时采用以下用法：
-
-    npm --registry https://npmreg.proxy.ustclug.org/ install <packagename>
+    由于服务压力过高且存在更好的 NPM 镜像（如阿里云的 [npmmirror 镜像站](https://npmmirror.com/)），本反向代理服务已于 2026-06-12 停止服务，所有请求将被 302 至 npmmirror。
 
 ## 注意事项
 
-不支持 publish，若出现错误，请将 `~/.npmrc`
-中的用户名密码部分注释掉，并删除缓存 (`rm -rf ~/.npm`)
-重试。
+不支持 publish，若出现错误，请将 `~/.npmrc` 中的用户名密码部分注释掉，并删除缓存（`rm -rf ~/.npm`）重试。
 
 ## 相关链接
 
