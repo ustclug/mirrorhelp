@@ -2,7 +2,7 @@
 
 ## 地址
 
-<https://mirrors.ustc.edu.cn/termux>
+<https://mirrors.ustc.edu.cn/termux/>
 
 ## 说明
 
