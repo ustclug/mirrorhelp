@@ -30,7 +30,7 @@ Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 
 邮件列表
 
-:   <https://www.archlinux.org/mailman/listinfo/>
+:   <https://lists.archlinux.org/mailman3/lists/>
 
 论坛
 
