@@ -134,6 +134,8 @@ extra_css:
   - https://mirrors.ustc.edu.cn/static/help/roboto-mono/stylesheet.css
 
 not_in_nav: |
+  homebrew-cask.git.md
+  homebrew-core.git.md
   julia.md
   nodesource.md
   npm.md
@@ -218,8 +220,6 @@ nav:
     - github-release.md
     - brew.git.md
     - homebrew-bottles.md
-    - homebrew-core.git.md
-    - homebrew-cask.git.md
     - influxdata.md
     - kubernetes.md
     - linux.git.md
