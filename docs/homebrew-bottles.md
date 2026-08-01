@@ -15,6 +15,13 @@ Homebrew 预编译二进制软件包与软件包元数据文件
 
 ## 使用说明
 
+homebrew 目前接受两种配置：
+
+- 基于 legacy flat 结构的 `HOMEBREW_BOTTLE_DOMAIN`，在未来 homebrew 可能会停止支持此项配置。
+- 基于 OCI 结构的 `HOMEBREW_ARTIFACT_DOMAIN`，该配置目前测试中，如果遇到问题请反馈。
+
+### 使用 legacy flat 配置（`HOMEBREW_BOTTLE_DOMAIN`）
+
 请在运行 `brew` 前设置环境变量 `HOMEBREW_BOTTLE_DOMAIN`，值为
 `https://mirrors.ustc.edu.cn/homebrew-bottles`。
 
@@ -49,6 +56,33 @@ export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 
     Linuxbrew 核心仓库（`linuxbrew-core`）自 2021 年 10 月 25 日（`brew` 版本 3.3.0 起）被弃用，Linuxbrew 用户应迁移至 `homebrew-core`。
     Linuxbrew 用户请依本镜像说明重新设置镜像。
+
+### 使用 OCI 配置（`HOMEBREW_ARTIFACT_DOMAIN`）
+
+如果之前使用过 `HOMEBREW_BOTTLE_DOMAIN`，请先移除相关的配置。
+
+临时替换：
+
+```shell
+export HOMEBREW_ARTIFACT_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
+```
+
+永久替换：
+
+=== "Bash"
+
+    ```shell
+    echo 'export HOMEBREW_ARTIFACT_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"' >> ~/.bash_profile
+    echo 'export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"' >> ~/.bash_profile
+    ```
+
+=== "Zsh"
+
+    ```shell
+    echo 'export HOMEBREW_ARTIFACT_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"' >> ~/.zshrc
+    echo 'export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"' >> ~/.zshrc
+    ```
 
 ## 相关镜像
 

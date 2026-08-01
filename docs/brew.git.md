@@ -54,13 +54,23 @@ brew update
 
 ## 使用科大源安装 Homebrew / Linuxbrew
 
-首先在命令行运行如下几条命令设置环境变量：
+首先在命令行运行如下几条命令设置环境变量。有关 legacy flat 与 OCI 的区别，请参考 [homebrew-bottles](./homebrew-bottles.md)。
 
-```shell
-export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
-export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
-```
+=== "legacy flat"
+
+    ```shell
+    export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+    export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+    export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
+    ```
+
+=== "OCI"
+
+    ```shell
+    export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+    export HOMEBREW_ARTIFACT_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+    export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
+    ```
 
 之后在命令行运行 Homebrew 安装脚本：
 
