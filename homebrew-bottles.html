@@ -2800,6 +2800,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#legacy-flat-homebrew_bottle_domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用 legacy flat 配置（HOMEBREW_BOTTLE_DOMAIN）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oci-homebrew_artifact_domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用 OCI 配置（HOMEBREW_ARTIFACT_DOMAIN）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3468,6 +3496,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#legacy-flat-homebrew_bottle_domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用 legacy flat 配置（HOMEBREW_BOTTLE_DOMAIN）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oci-homebrew_artifact_domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用 OCI 配置（HOMEBREW_ARTIFACT_DOMAIN）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3523,6 +3579,12 @@
 <li>brew formula 与 cask 的 JSON 元数据文件</li>
 </ul>
 <h2 id="_4">使用说明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>homebrew 目前接受两种配置：</p>
+<ul>
+<li>基于 legacy flat 结构的 <code>HOMEBREW_BOTTLE_DOMAIN</code>，在未来 homebrew 可能会停止支持此项配置。</li>
+<li>基于 OCI 结构的 <code>HOMEBREW_ARTIFACT_DOMAIN</code>，该配置目前测试中，如果遇到问题请反馈。</li>
+</ul>
+<h3 id="legacy-flat-homebrew_bottle_domain">使用 legacy flat 配置（<code>HOMEBREW_BOTTLE_DOMAIN</code>）<a class="headerlink" href="#legacy-flat-homebrew_bottle_domain" title="Permanent link">&para;</a></h3>
 <p>请在运行 <code>brew</code> 前设置环境变量 <code>HOMEBREW_BOTTLE_DOMAIN</code>，值为
 <code>https://mirrors.ustc.edu.cn/homebrew-bottles</code>。</p>
 <p>此外，brew 4.0 及之后的版本使用新的元数据 JSON API
@@ -3551,6 +3613,27 @@
 <p class="admonition-title">Note</p>
 <p>Linuxbrew 核心仓库（<code>linuxbrew-core</code>）自 2021 年 10 月 25 日（<code>brew</code> 版本 3.3.0 起）被弃用，Linuxbrew 用户应迁移至 <code>homebrew-core</code>。
 Linuxbrew 用户请依本镜像说明重新设置镜像。</p>
+</div>
+<h3 id="oci-homebrew_artifact_domain">使用 OCI 配置（<code>HOMEBREW_ARTIFACT_DOMAIN</code>）<a class="headerlink" href="#oci-homebrew_artifact_domain" title="Permanent link">&para;</a></h3>
+<p>如果之前使用过 <code>HOMEBREW_BOTTLE_DOMAIN</code>，请先移除相关的配置。</p>
+<p>临时替换：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_ARTIFACT_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_API_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;</span>
+</code></pre></div>
+<p>永久替换：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Bash</label><label for="__tabbed_2_2">Zsh</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_ARTIFACT_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_API_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_ARTIFACT_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_API_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</code></pre></div>
+</div>
+</div>
 </div>
 <h2 id="_5">相关镜像<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
