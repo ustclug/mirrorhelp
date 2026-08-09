@@ -13,7 +13,7 @@ Anaconda 仓库镜像，**不包含商业使用需要授权的、由 Anaconda �
 
 !!! warning "注意"
 
-    从 2020 年起，在超过 200 人的组织中使用 **Anaconda 官方仓库**需要向 Anaconda 购买商业许可证。为保证已有兼容性，本镜像相关部分会全部重定向到 TUNA 镜像站。
+    从 2020 年起，在超过 200 人的组织中使用 **Anaconda 官方仓库**需要向 Anaconda 购买商业许可证。为保证已有兼容性，本镜像相关部分会全部重定向到南大 (NJU) 镜像站。
 
     以下帮助**仅介绍如何配置 Miniconda 使用 conda-forge 和 bioconda 频道**。如果需要使用官方仓库，请使用其他镜像站，可参考 <https://help.mirrors.cernet.edu.cn/anaconda/> 中的帮助。
 
@@ -50,7 +50,7 @@ show_channel_urls: true
 
 !!! info "Anaconda Cloud channels"
 
-    目前我们为以下第三方频道提供**动态缓存**。与 [pypi](./pypi.md) 类似，未命中的包（包括未同步的频道）会重定向到 TUNA。
+    目前我们为以下第三方频道提供**动态缓存**。与 [pypi](./pypi.md) 类似，未命中的包（包括未同步的频道）会重定向到 NJU。
 
     - conda-forge
     - bioconda
