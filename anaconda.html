@@ -2245,7 +2245,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3583,7 +3583,7 @@
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge</span>
 </code></pre></div>
 <p>可以使用以下命令验证是否配置正确：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mamba<span class="w"> </span>config<span class="w"> </span>list<span class="w"> </span>--json<span class="w"> </span><span class="p">|</span><span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import sys, json; info = json.loads(sys.stdin.read()); print(info[&#39;mirrored_channels&#39;][&#39;conda-forge&#39;])&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mamba<span class="w"> </span>config<span class="w"> </span>list<span class="w"> </span>--json<span class="w"> </span><span class="p">|</span><span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"import sys, json; info = json.loads(sys.stdin.read()); print(info['mirrored_channels']['conda-forge'])"</span>
 </code></pre></div>
 <h2 id="_4">相关链接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <dl>

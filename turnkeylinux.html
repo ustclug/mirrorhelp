@@ -2377,7 +2377,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3558,7 +3558,7 @@
 <p>在 appliance 中将 <code>/etc/apt/sources.list.d</code> 下所有文件中 <code>archive.turnkeylinux.org</code> 替换为 <code>mirrors.ustc.edu.cn/turnkeylinux/apt</code>。</p>
 <h3 id="proxmox-ve-turnkey-linux">配置 Proxmox VE 下载 TurnKey Linux 容器镜像<a class="headerlink" href="#proxmox-ve-turnkey-linux" title="Permanent link">&para;</a></h3>
 <p>首先，将 <code>/usr/share/perl5/PVE/APLInfo.pm</code> 文件中默认的源地址 <code>https://releases.turnkeylinux.org/pve</code> 替换为 <code>https://mirrors.ustc.edu.cn/turnkeylinux/metadata/pve</code>：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sed<span class="w"> </span>-i.bak<span class="w"> </span><span class="s1">&#39;s|https://releases.turnkeylinux.org|https://mirrors.ustc.edu.cn/turnkeylinux/metadata|g&#39;</span><span class="w"> </span>/usr/share/perl5/PVE/APLInfo.pm
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sed<span class="w"> </span>-i.bak<span class="w"> </span><span class="s1">'s|https://releases.turnkeylinux.org|https://mirrors.ustc.edu.cn/turnkeylinux/metadata|g'</span><span class="w"> </span>/usr/share/perl5/PVE/APLInfo.pm
 </code></pre></div>
 <p>然后执行 <code>systemctl restart pvedaemon</code> 重新加载配置。</p>
 <div class="admonition note">
@@ -3569,7 +3569,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/etc/systemd/system/pve-daily-update.service.d/
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>/etc/systemd/system/pve-daily-update.service.d/update-turnkey-releases.conf<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="s">[Service]</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="s">ExecStopPost=/bin/sed -i &#39;s|http://mirror.turnkeylinux.org|https://mirrors.ustc.edu.cn|&#39; /var/lib/pve-manager/apl-info/releases.turnkeylinux.org</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="s">ExecStopPost=/bin/sed -i 's|http://mirror.turnkeylinux.org|https://mirrors.ustc.edu.cn|' /var/lib/pve-manager/apl-info/releases.turnkeylinux.org</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s">EOF</span>
 </code></pre></div>
 <p>重新加载 systemd 服务并测试：</p>

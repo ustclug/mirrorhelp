@@ -2245,7 +2245,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3591,20 +3591,20 @@
 接口，因此还需要设置环境变量 <code>HOMEBREW_API_DOMAIN</code>，值为
 <code>https://mirrors.ustc.edu.cn/homebrew-bottles/api</code>。</p>
 <p>临时替换：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_API_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="s2">"https://mirrors.ustc.edu.cn/homebrew-bottles"</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_API_DOMAIN</span><span class="o">=</span><span class="s2">"https://mirrors.ustc.edu.cn/homebrew-bottles/api"</span>
 </code></pre></div>
 <p>永久替换：</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Bash</label><label for="__tabbed_1_2">Zsh</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_BOTTLE_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_API_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_BOTTLE_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_API_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
 </code></pre></div>
 </div>
 </div>
@@ -3617,20 +3617,20 @@ Linuxbrew 用户请依本镜像说明重新设置镜像。</p>
 <h3 id="oci-homebrew_artifact_domain">使用 OCI 配置（<code>HOMEBREW_ARTIFACT_DOMAIN</code>）<a class="headerlink" href="#oci-homebrew_artifact_domain" title="Permanent link">&para;</a></h3>
 <p>如果之前使用过 <code>HOMEBREW_BOTTLE_DOMAIN</code>，请先移除相关的配置。</p>
 <p>临时替换：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_ARTIFACT_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_API_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_ARTIFACT_DOMAIN</span><span class="o">=</span><span class="s2">"https://mirrors.ustc.edu.cn/homebrew-bottles"</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_API_DOMAIN</span><span class="o">=</span><span class="s2">"https://mirrors.ustc.edu.cn/homebrew-bottles/api"</span>
 </code></pre></div>
 <p>永久替换：</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Bash</label><label for="__tabbed_2_2">Zsh</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_ARTIFACT_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_API_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'export HOMEBREW_ARTIFACT_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_ARTIFACT_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_API_DOMAIN=&quot;https://mirrors.ustc.edu.cn/homebrew-bottles/api&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'export HOMEBREW_ARTIFACT_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
 </code></pre></div>
 </div>
 </div>

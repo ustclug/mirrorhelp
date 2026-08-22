@@ -2245,7 +2245,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3612,7 +3612,7 @@
 <h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
 <p>对于使用 systemd 的系统（Ubuntu 16.04+、Debian 8+、Rocky Linux），在配置文件 <code>/etc/docker/daemon.json</code> 中加入：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;registry-mirrors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;https://docker.mirrors.ustc.edu.cn/&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"registry-mirrors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://docker.mirrors.ustc.edu.cn/"</span><span class="p">]</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
 </code></pre></div>
 <p>重新启动 dockerd：</p>
@@ -3679,7 +3679,7 @@
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span>-v<span class="w"> </span>/srv/docker/dockerhub/config.yml:/etc/docker/registry/config.yml:ro<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">127</span>.0.0.1:5000:5000/tcp<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span>--log-driver<span class="o">=</span>journald<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span>--log-opt<span class="w"> </span><span class="nv">tag</span><span class="o">=</span><span class="s2">&quot;dockerd-dockerhub&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span>--log-opt<span class="w"> </span><span class="nv">tag</span><span class="o">=</span><span class="s2">"dockerd-dockerhub"</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span>registry:2
 </code></pre></div>
 <p><code>/srv/docker/dockerhub/config.yml</code> 的参考内容：</p>

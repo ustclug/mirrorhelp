@@ -2360,7 +2360,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3541,8 +3541,8 @@
 <ul>
 <li>
 <p>具体而言，需要将文件中 <code>metalink=</code> 开头的行注释掉，取消 <code>baseurl=</code> 开头的行的注释并将等号后面链接中的 <code>http://download1.rpmfusion.org</code> 替换为 <code>https://mirrors.ustc.edu.cn/rpmfusion</code>：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s|^metalink=|#metalink=|g&#39;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">         </span>-e<span class="w"> </span><span class="s1">&#39;s|^#baseurl=http://download1.rpmfusion.org|baseurl=https://mirrors.ustc.edu.cn/rpmfusion|g&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">'s|^metalink=|#metalink=|g'</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">         </span>-e<span class="w"> </span><span class="s1">'s|^#baseurl=http://download1.rpmfusion.org|baseurl=https://mirrors.ustc.edu.cn/rpmfusion|g'</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">         </span>-i.bak<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">         </span>/etc/yum.repos.d/rpmfusion*.repo
 </code></pre></div>

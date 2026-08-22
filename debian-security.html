@@ -2360,7 +2360,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3565,14 +3565,14 @@ s390x 等</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>sources.list</code> 格式</label><label for="__tabbed_1_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s|security.debian.org/\? |security.debian.org/debian-security |g&#39;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">            </span>-e<span class="w"> </span><span class="s1">&#39;s|security.debian.org|mirrors.ustc.edu.cn|g&#39;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">            </span>-e<span class="w"> </span><span class="s1">&#39;s|deb.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span>-e<span class="w"> </span><span class="s1">'s|security.debian.org/\? |security.debian.org/debian-security |g'</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">            </span>-e<span class="w"> </span><span class="s1">'s|security.debian.org|mirrors.ustc.edu.cn|g'</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">            </span>-e<span class="w"> </span><span class="s1">'s|deb.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g'</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">            </span>/etc/apt/sources.list
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/deb.debian.org/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/debian.sources
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/deb.debian.org/mirrors.ustc.edu.cn/g'</span><span class="w"> </span>/etc/apt/sources.list.d/debian.sources
 </code></pre></div>
 <p>目前使用 DEB822 格式的 Debian 分发仅有容器镜像，且其安全更新源默认设置为 <code>http://deb.debian.org/debian-security</code>，因此以上命令会同时替换 Debian 官方源和安全更新源。</p>
 </div>

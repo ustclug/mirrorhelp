@@ -29,7 +29,7 @@
     
     
       
-        <title>Rust Toolchain 反向代理 - USTC Mirror Help</title>
+        <title>Rust Toolchain 镜像 - USTC Mirror Help</title>
       
     
     
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rust Toolchain 反向代理
+              Rust Toolchain 镜像
             
           </span>
         </div>
@@ -2256,7 +2256,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -2274,7 +2274,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -2312,6 +2312,17 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        收录内容
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         使用说明
@@ -3397,6 +3408,17 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
+        收录内容
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         使用说明
       
     </span>
@@ -3424,10 +3446,13 @@
   
 
 
-<h1 id="rust-toolchain">Rust Toolchain 反向代理<a class="headerlink" href="#rust-toolchain" title="Permanent link">&para;</a></h1>
+<h1 id="rust-toolchain">Rust Toolchain 镜像<a class="headerlink" href="#rust-toolchain" title="Permanent link">&para;</a></h1>
 <h2 id="_1">说明<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Rust Toolchain 反向代理</p>
-<h2 id="_2">使用说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Rust Toolchain 镜像</p>
+<h2 id="_2">收录内容<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Tier-1 target 的 stable 和 nightly（nightly 保留一日）。</p>
+<p>未同步的 target 对应文件经过反向代理服务。</p>
+<h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>请配合 <a href="http://www.rustup.rs/">rustup</a> 来使用。</p>
 <p>rustup 安装方法可参考官方的
 <a href="https://github.com/rust-lang-nursery/rustup.rs#other-installation-methods">文档</a></p>
@@ -3439,8 +3464,8 @@ toolchain）：</p>
 <div class="highlight"><pre><span></span><code>export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 </code></pre></div>
 <p>Windows 下对应的设置环境变量的 PowerShell 命令为：</p>
-<div class="highlight"><pre><span></span><code>$env:RUSTUP_DIST_SERVER=&quot;https://mirrors.ustc.edu.cn/rust-static&quot;
-$env:RUSTUP_UPDATE_ROOT=&quot;https://mirrors.ustc.edu.cn/rust-static/rustup&quot;
+<div class="highlight"><pre><span></span><code>$env:RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
+$env:RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

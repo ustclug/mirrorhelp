@@ -2245,7 +2245,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3493,21 +3493,21 @@ Linux</a>
 <li>
 <p>验证签名一致性：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>gpg<span class="w"> </span>-n<span class="w"> </span>-q<span class="w"> </span>--import<span class="w"> </span>--import-options<span class="w"> </span>import-show<span class="w"> </span>/etc/apt/keyrings/packages.mozilla.org.asc<span class="w"> </span><span class="p">|</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span>awk<span class="w"> </span><span class="s1">&#39;/pub/{getline; gsub(/^ +| +$/,&quot;&quot;); if($0 == &quot;35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3&quot;) print &quot;\nThe key fingerprint matches (&quot;$0&quot;).\n&quot;; else print &quot;\nVerification failed: the fingerprint (&quot;$0&quot;) does not match the expected one.\n&quot;}&#39;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span>awk<span class="w"> </span><span class="s1">'/pub/{getline; gsub(/^ +| +$/,""); if($0 == "35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3") print "\nThe key fingerprint matches ("$0").\n"; else print "\nVerification failed: the fingerprint ("$0") does not match the expected one.\n"}'</span>
 </code></pre></div>
 </li>
 <li>
 <p>添加镜像仓库：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=amd64 signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://mirrors.ustc.edu.cn/mozilla/apt mozilla main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/apt/sources.list.d/mozilla.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"deb [arch=amd64 signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://mirrors.ustc.edu.cn/mozilla/apt mozilla main"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/apt/sources.list.d/mozilla.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
 </code></pre></div>
 </li>
 <li>
 <p>设置优先级，避免 Ubuntu 下 snap 版本被优先安装：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="s1">Package: *</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="s1">Pin: release a=mozilla</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="s1">Pin-Priority: 1000</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="s1">&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/preferences.d/mozilla
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="s1">'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/preferences.d/mozilla
 </code></pre></div>
 </li>
 <li>

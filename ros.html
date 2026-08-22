@@ -2245,7 +2245,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3534,13 +3534,13 @@
 <ol>
 <li>
 <p>导入 key:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gpg<span class="w"> </span>--keyserver<span class="w"> </span><span class="s1">&#39;hkp://keyserver.ubuntu.com:80&#39;</span><span class="w"> </span>--recv-key<span class="w"> </span>C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gpg<span class="w"> </span>--keyserver<span class="w"> </span><span class="s1">'hkp://keyserver.ubuntu.com:80'</span><span class="w"> </span>--recv-key<span class="w"> </span>C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>gpg<span class="w"> </span>--export<span class="w"> </span>C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/usr/share/keyrings/ros.gpg<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
 </code></pre></div>
 </li>
 <li>
 <p>将软件源添加至系统：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo &quot;deb [signed-by=/usr/share/keyrings/ros.gpg] https://mirrors.ustc.edu.cn/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'echo "deb [signed-by=/usr/share/keyrings/ros.gpg] https://mirrors.ustc.edu.cn/ros/ubuntu $(lsb_release -sc) main" &gt; /etc/apt/sources.list.d/ros-latest.list'</span>
 </code></pre></div>
 </li>
 <li>

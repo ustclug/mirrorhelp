@@ -2388,7 +2388,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3588,20 +3588,20 @@
 <div class="highlight"><pre><span></span><code>sudo zypper mr -da
 </code></pre></div>
 <p>添加科大镜像源，以 openSUSE Leap 为例：</p>
-<div class="highlight"><pre><span></span><code>sudo zypper ar -fcg &#39;https://mirrors.ustc.edu.cn/opensuse/distribution/leap/$releasever/repo/oss&#39; USTC:OSS
-sudo zypper ar -fcg &#39;https://mirrors.ustc.edu.cn/opensuse/distribution/leap/$releasever/repo/non-oss&#39; USTC:NON-OSS
-sudo zypper ar -fcg &#39;https://mirrors.ustc.edu.cn/opensuse/update/leap/$releasever/oss&#39; USTC:UPDATE-OSS
-sudo zypper ar -fcg &#39;https://mirrors.ustc.edu.cn/opensuse/update/leap/$releasever/non-oss&#39; USTC:UPDATE-NON-OSS
+<div class="highlight"><pre><span></span><code>sudo zypper ar -fcg 'https://mirrors.ustc.edu.cn/opensuse/distribution/leap/$releasever/repo/oss' USTC:OSS
+sudo zypper ar -fcg 'https://mirrors.ustc.edu.cn/opensuse/distribution/leap/$releasever/repo/non-oss' USTC:NON-OSS
+sudo zypper ar -fcg 'https://mirrors.ustc.edu.cn/opensuse/update/leap/$releasever/oss' USTC:UPDATE-OSS
+sudo zypper ar -fcg 'https://mirrors.ustc.edu.cn/opensuse/update/leap/$releasever/non-oss' USTC:UPDATE-NON-OSS
 </code></pre></div>
 <p>对于 15.3 或更高版本的 openSUSE Leap，还需添加 SLE 更新源和 Backports
 更新源：</p>
-<div class="highlight"><pre><span></span><code>sudo zypper ar -fcg &#39;https://mirrors.ustc.edu.cn/opensuse/update/leap/$releasever/sle&#39; USTC:UPDATE-SLE
-sudo zypper ar -fcg &#39;https://mirrors.ustc.edu.cn/opensuse/update/leap/$releasever/backports&#39; USTC:UPDATE-BACKPORTS
+<div class="highlight"><pre><span></span><code>sudo zypper ar -fcg 'https://mirrors.ustc.edu.cn/opensuse/update/leap/$releasever/sle' USTC:UPDATE-SLE
+sudo zypper ar -fcg 'https://mirrors.ustc.edu.cn/opensuse/update/leap/$releasever/backports' USTC:UPDATE-BACKPORTS
 </code></pre></div>
 <p>对于 openSUSE Tumbleweed，只需执行：</p>
-<div class="highlight"><pre><span></span><code>sudo zypper ar -fcg &#39;https://mirrors.ustc.edu.cn/opensuse/tumbleweed/repo/oss&#39; USTC:OSS
-sudo zypper ar -fcg &#39;https://mirrors.ustc.edu.cn/opensuse/tumbleweed/repo/non-oss&#39; USTC:NON-OSS
-sudo zypper ar -fcg &#39;https://mirrors.ustc.edu.cn/opensuse/update/tumbleweed&#39; USTC:UPDATE
+<div class="highlight"><pre><span></span><code>sudo zypper ar -fcg 'https://mirrors.ustc.edu.cn/opensuse/tumbleweed/repo/oss' USTC:OSS
+sudo zypper ar -fcg 'https://mirrors.ustc.edu.cn/opensuse/tumbleweed/repo/non-oss' USTC:NON-OSS
+sudo zypper ar -fcg 'https://mirrors.ustc.edu.cn/opensuse/update/tumbleweed' USTC:UPDATE
 </code></pre></div>
 <p>命令中最后一个参数为每一个源指定了一个
 alias（别称），可以根据个人喜好更改。</p>

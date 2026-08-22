@@ -2245,7 +2245,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3546,8 +3546,8 @@
 <code>http://mirrors.ustc.edu.cn/raspberrypi/</code> 即可。</p>
 <p>可以使用如下命令：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>-e<span class="w"> </span><span class="s1">&#39;s|http://archive.raspberrypi.org|http://mirrors.ustc.edu.cn/raspberrypi|g&#39;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>-e<span class="w"> </span><span class="s1">&#39;s|http://archive.raspberrypi.com|http://mirrors.ustc.edu.cn/raspberrypi|g&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>-e<span class="w"> </span><span class="s1">'s|http://archive.raspberrypi.org|http://mirrors.ustc.edu.cn/raspberrypi|g'</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>-e<span class="w"> </span><span class="s1">'s|http://archive.raspberrypi.com|http://mirrors.ustc.edu.cn/raspberrypi|g'</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span>-i.bak<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span>/etc/apt/sources.list.d/raspi.list
 </code></pre></div>

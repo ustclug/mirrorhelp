@@ -2399,7 +2399,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3642,11 +3642,11 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>sources.list</code> 格式</label><label for="__tabbed_1_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g&#39;</span><span class="w"> </span>/etc/apt/sources.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g'</span><span class="w"> </span>/etc/apt/sources.list
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/ubuntu.sources
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g'</span><span class="w"> </span>/etc/apt/sources.list.d/ubuntu.sources
 </code></pre></div>
 </div>
 </div>
@@ -3658,11 +3658,11 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><code>sources.list</code> 格式</label><label for="__tabbed_2_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/security.ubuntu.com/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/apt/sources.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/security.ubuntu.com/mirrors.ustc.edu.cn/g'</span><span class="w"> </span>/etc/apt/sources.list
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/security.ubuntu.com/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/ubuntu.sources
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/security.ubuntu.com/mirrors.ustc.edu.cn/g'</span><span class="w"> </span>/etc/apt/sources.list.d/ubuntu.sources
 </code></pre></div>
 </div>
 </div>
@@ -3674,11 +3674,11 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><code>sources.list</code> 格式</label><label for="__tabbed_3_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/http:/https:/g&#39;</span><span class="w"> </span>/etc/apt/sources.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/http:/https:/g'</span><span class="w"> </span>/etc/apt/sources.list
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/http:/https:/g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/ubuntu.sources
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/http:/https:/g'</span><span class="w"> </span>/etc/apt/sources.list.d/ubuntu.sources
 </code></pre></div>
 </div>
 </div>

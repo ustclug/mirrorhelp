@@ -2360,7 +2360,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3529,7 +3529,7 @@
 <code>msys2-x86_64-20141113.exe</code>），下载安装即可。</p>
 <h2 id="pacman">Pacman 的配置<a class="headerlink" href="#pacman" title="Permanent link">&para;</a></h2>
 <p>在 MSYS2 环境下直接运行命令替换镜像源：</p>
-<div class="highlight"><pre><span></span><code>sed -i &quot;s#mirror.msys2.org/#mirrors.ustc.edu.cn/msys2/#g&quot; /etc/pacman.d/mirrorlist*
+<div class="highlight"><pre><span></span><code>sed -i "s#mirror.msys2.org/#mirrors.ustc.edu.cn/msys2/#g" /etc/pacman.d/mirrorlist*
 </code></pre></div>
 <p>然后执行 <code>pacman -Sy</code> 刷新软件包数据即可。</p>
 <h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>

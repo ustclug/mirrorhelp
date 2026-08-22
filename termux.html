@@ -2349,7 +2349,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3512,7 +3512,7 @@ packages.termux.dev，我们推荐先更新 <code>termux-tools</code> 软件包�
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn/termux/apt/termux-main</span><span class="w"> </span><span class="kp">stable</span><span class="w"> </span><span class="kp">main</span>
 </code></pre></div>
 <p>或者，你也可以使用 <code>sed</code> 命令进行文本替换：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s@packages.termux.org@mirrors.ustc.edu.cn/termux@&#39;</span><span class="w"> </span><span class="nv">$PREFIX</span>/etc/apt/sources.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s@packages.termux.org@mirrors.ustc.edu.cn/termux@'</span><span class="w"> </span><span class="nv">$PREFIX</span>/etc/apt/sources.list
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pkg<span class="w"> </span>up
 </code></pre></div>
 <p>注：Termux 会自动将环境变量 <code>$PREFIX</code> 设定为 <code>/data/data/com.termux/files/usr</code>。</p>

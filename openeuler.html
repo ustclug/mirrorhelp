@@ -2360,7 +2360,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3527,7 +3527,7 @@
 <p>操作前请做好相应备份。</p>
 </div>
 <p>使用以下命令替换默认配置</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;s#https?://(repo|mirrors)\.openeuler\.org/#https://mirrors.ustc.edu.cn/openeuler/#g&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-E<span class="w"> </span><span class="s1">'s#https?://(repo|mirrors)\.openeuler\.org/#https://mirrors.ustc.edu.cn/openeuler/#g'</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">         </span>-i.bak<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">         </span>/etc/yum.repos.d/openEuler.repo
 </code></pre></div>

@@ -2349,7 +2349,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3511,10 +3511,10 @@ URL。</p>
 </div>
 <p><strong>第一步（可选）</strong> ：使用科大源安装 GHCup 本体。如已经安装 GHCup，可跳到下一步。</p>
 <p>Linux, FreeBSD, macOS 用户：在终端中运行如下命令：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>--proto<span class="w"> </span><span class="s1">&#39;=https&#39;</span><span class="w"> </span>--tlsv1.2<span class="w"> </span>-sSf<span class="w"> </span>https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nv">BOOTSTRAP_HASKELL_YAML</span><span class="o">=</span>https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml<span class="w"> </span>sh
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>--proto<span class="w"> </span><span class="s1">'=https'</span><span class="w"> </span>--tlsv1.2<span class="w"> </span>-sSf<span class="w"> </span>https://mirrors.ustc.edu.cn/ghcup/sh/bootstrap-haskell<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nv">BOOTSTRAP_HASKELL_YAML</span><span class="o">=</span>https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml<span class="w"> </span>sh
 </code></pre></div>
 <p>Windows 用户：以非管理员身份在 PowerShell 中运行如下命令：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">$env:BOOTSTRAP_HASKELL_YAML</span> <span class="p">=</span> <span class="s1">&#39;https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">$env:BOOTSTRAP_HASKELL_YAML</span> <span class="p">=</span> <span class="s1">'https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml'</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Set-ExecutionPolicy</span> <span class="n">Bypass</span> <span class="n">-Scope</span> <span class="k">Process</span> <span class="n">-Force</span><span class="p">;</span><span class="no">[System.Net.ServicePointManager]</span><span class="p">::</span><span class="n">SecurityProtocol</span> <span class="p">=</span> <span class="no">[System.Net.ServicePointManager]</span><span class="p">::</span><span class="n">SecurityProtocol</span> <span class="o">-bor</span> <span class="n">3072</span><span class="p">;</span><span class="nb">Invoke-Command</span> <span class="n">-ScriptBlock</span> <span class="p">(</span><span class="no">[ScriptBlock]</span><span class="p">::</span><span class="n">Create</span><span class="p">((</span><span class="nb">Invoke-WebRequest</span> <span class="n">https</span><span class="p">://</span><span class="n">mirrors</span><span class="p">.</span><span class="n">ustc</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="p">/</span><span class="n">ghcup</span><span class="p">/</span><span class="n">sh</span><span class="p">/</span><span class="n">bootstrap-haskell</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-UseBasicParsing</span><span class="p">)))</span> <span class="n">-ArgumentList</span> <span class="nv">$true</span>
 </code></pre></div>
 <p><strong>第二步</strong> ：配置 GHCup 使用科大源。编辑 <code>~/.ghcup/config.yaml</code> 增加如下配置：</p>

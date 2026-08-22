@@ -2245,7 +2245,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3431,13 +3431,13 @@
 <code>options(repos = c(USTC="https://mirrors.ustc.edu.cn/CRAN/"))</code>
 这个选项来开启 USTC 镜像。</p>
 <p>如果不希望每次打开 R 都必须选择镜像，可以修改 <code>$R_home/library/base/R/Rprofile</code> 文件的第 28 行（<code>$R_home</code> 可以在 R 中执行 <code>R.home()</code> 得到），将</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># options(repos = c(CRAN=&quot;@CRAN@&quot;))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># options(repos = c(CRAN="@CRAN@"))</span>
 </code></pre></div>
 <p>替换为</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">options</span><span class="p">(</span><span class="n">repos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">USTC</span><span class="o">=</span><span class="s">&quot;https://mirrors.ustc.edu.cn/CRAN/&quot;</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">options</span><span class="p">(</span><span class="n">repos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">USTC</span><span class="o">=</span><span class="s">"https://mirrors.ustc.edu.cn/CRAN/"</span><span class="p">))</span>
 </code></pre></div>
 <p>在 Linux 系统下，普通用户可能没有 <code>$R_home</code> 目录的修改权限，此时可以执行：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">echo &#39;options(repos=c(USTC=&quot;https://mirrors.ustc.edu.cn/CRAN/&quot;))&#39; &gt;&gt; ~/.Rprofile</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">echo 'options(repos=c(USTC="https://mirrors.ustc.edu.cn/CRAN/"))' &gt;&gt; ~/.Rprofile</span>
 </code></pre></div>
 <p>以设置当前登录用户的 R 镜像。</p>
 <h2 id="_2">相关链接<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>

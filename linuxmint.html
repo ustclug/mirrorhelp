@@ -2360,7 +2360,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3571,10 +3571,10 @@
 </div>
 </div>
 <p>替换基于 Ubuntu 的镜像源：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/official-package-repositories.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g'</span><span class="w"> </span>/etc/apt/sources.list.d/official-package-repositories.list
 </code></pre></div>
 <p>替换基于 Debian (LMDE) 的镜像源：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/deb.debian.org/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/official-package-repositories.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/deb.debian.org/mirrors.ustc.edu.cn/g'</span><span class="w"> </span>/etc/apt/sources.list.d/official-package-repositories.list
 </code></pre></div>
 <p>然后运行 <code>sudo apt-get update</code> 更新索引以生效。</p>
 <div class="admonition tip">

@@ -2241,7 +2241,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3491,7 +3491,7 @@ Releases</a> 下载。</p>
 <p>也可以利用 JuliaCN 社区维护的中文本地化工具包
 <a href="https://github.com/JuliaCN/JuliaZH.jl">JuliaZH</a> 来进行切换：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">using</span><span class="w"> </span><span class="n">JuliaZH</span><span class="w"> </span><span class="c"># 在 using 时会自动切换到国内的镜像站</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">JuliaZH</span><span class="o">.</span><span class="n">set_mirror</span><span class="p">(</span><span class="s">&quot;USTC&quot;</span><span class="p">)</span><span class="w"> </span><span class="c"># 也可以选择手动切换到 BFSU 镜像</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">JuliaZH</span><span class="o">.</span><span class="n">set_mirror</span><span class="p">(</span><span class="s">"USTC"</span><span class="p">)</span><span class="w"> </span><span class="c"># 也可以选择手动切换到 BFSU 镜像</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">JuliaZH</span><span class="o">.</span><span class="n">mirrors</span><span class="w"> </span><span class="c"># 查询记录的上游信息</span>
 </code></pre></div>
 <h3 id="_5">永久使用<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
@@ -3505,19 +3505,19 @@ Releases</a> 下载。</p>
 （默认为 <code>~/.julia/config/startup.jl</code>）文件定义了每次启动 Julia
 时都会执行的命令，编辑该文件，添加以下内容即可：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c"># ~/.julia/config/startup.jl</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">ENV</span><span class="p">[</span><span class="s">&quot;JULIA_PKG_SERVER&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://mirrors.ustc.edu.cn/julia&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">ENV</span><span class="p">[</span><span class="s">"JULIA_PKG_SERVER"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"https://mirrors.ustc.edu.cn/julia"</span>
 </code></pre></div>
 <p>也可以选择使用 <code>JuliaZH</code> 来一键修改/创建 <code>startup.jl</code> 文件：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="go">julia&gt; JuliaZH.generate_startup(&quot;default&quot;)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="go">julia&gt; JuliaZH.generate_startup("default")</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="go">┌ Info: 添加 PkgServer</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="go">│   服务器地址 = &quot;https://pkg.julialang.org&quot;</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="go">└   配置文件 = &quot;/root/.julia/config&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="go">│   服务器地址 = "https://pkg.julialang.org"</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="go">└   配置文件 = "/root/.julia/config"</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="go">julia&gt; JuliaZH.generate_startup(&quot;USTC&quot;)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="go">julia&gt; JuliaZH.generate_startup("USTC")</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="go">┌ Info: 更新 PkgServer</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="go">│   原服务器地址 = &quot;https://pkg.julialang.org&quot;</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="go">│   新服务器地址 = &quot;https://mirrors.USTC.edu.cn/julia&quot;</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="go">└   配置文件 = &quot;/root/.julia/config&quot;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="go">│   原服务器地址 = "https://pkg.julialang.org"</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="go">│   新服务器地址 = "https://mirrors.USTC.edu.cn/julia"</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="go">└   配置文件 = "/root/.julia/config"</span>
 </code></pre></div>
 <p>若要临时禁止，可以通过 <code>julia --startup-file=no</code> 来取消执行 <code>startup.jl</code> 文件。</p>
 <h2 id="_6">常见问题<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
@@ -3550,7 +3550,7 @@ Releases</a> 下载。</p>
 这常见于那些还未注册的包及其版本，例如：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">]</span><span class="n">add</span><span class="w"> </span><span class="n">Flux</span><span class="c">#master</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">]</span><span class="n">add</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">FluxML</span><span class="o">/</span><span class="n">Flux</span><span class="o">.</span><span class="n">jl</span><span class="o">.</span><span class="n">git</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">PackageSpec</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&quot;https://github.com/FluxML/Flux.jl.git&quot;</span><span class="p">))</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">PackageSpec</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">"https://github.com/FluxML/Flux.jl.git"</span><span class="p">))</span>
 </code></pre></div>
 <h3 id="condajl">加快 Conda.jl 相关操作的速度<a class="headerlink" href="#condajl" title="Permanent link">&para;</a></h3>
 <p>这里简单介绍一下其使用，具体的细节可以参考

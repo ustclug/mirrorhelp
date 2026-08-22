@@ -2377,7 +2377,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3589,12 +3589,12 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>sources.list</code> 格式</label><label for="__tabbed_1_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s|^deb http://ftp.debian.org|deb https://mirrors.ustc.edu.cn|g&#39;</span><span class="w"> </span>/etc/apt/sources.list
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s|^deb http://security.debian.org|deb https://mirrors.ustc.edu.cn/debian-security|g&#39;</span><span class="w"> </span>/etc/apt/sources.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s|^deb http://ftp.debian.org|deb https://mirrors.ustc.edu.cn|g'</span><span class="w"> </span>/etc/apt/sources.list
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s|^deb http://security.debian.org|deb https://mirrors.ustc.edu.cn/debian-security|g'</span><span class="w"> </span>/etc/apt/sources.list
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/deb.debian.org/mirrors.ustc.edu.cn/g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/debian.sources
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/deb.debian.org/mirrors.ustc.edu.cn/g'</span><span class="w"> </span>/etc/apt/sources.list.d/debian.sources
 </code></pre></div>
 <p>目前 Debian Bookworm 及以后的容器镜像和 Debian Trixie 已经使用 DEB822 格式，且其安全更新源默认设置为 <code>http://deb.debian.org/debian-security</code>，因此以上命令会同时替换 Debian 官方源和安全更新源。</p>
 </div>
@@ -3607,7 +3607,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><code>sources.list</code> 格式</label><label for="__tabbed_3_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/pve trixie pve-no-subscription&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/pve-no-subscription.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"deb https://mirrors.ustc.edu.cn/proxmox/debian/pve trixie pve-no-subscription"</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/pve-no-subscription.list
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -3627,7 +3627,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><code>sources.list</code> 格式</label><label for="__tabbed_4_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bookworm pve-no-subscription&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/pve-no-subscription.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bookworm pve-no-subscription"</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/pve-no-subscription.list
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -3647,7 +3647,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"><code>sources.list</code> 格式</label><label for="__tabbed_5_2">DEB822 格式</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/pve-no-subscription.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription"</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/pve-no-subscription.list
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -3671,15 +3671,15 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>/etc/apt/sources.list.d/ceph.list<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nv">CEPH_CODENAME</span><span class="o">=</span><span class="sb">`</span>ceph<span class="w"> </span>-v<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ceph<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $(NF-1)}&#39;</span><span class="sb">`</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nv">CEPH_CODENAME</span><span class="o">=</span><span class="sb">`</span>ceph<span class="w"> </span>-v<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ceph<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">'{print $(NF-1)}'</span><span class="sb">`</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nb">source</span><span class="w"> </span>/etc/os-release
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-</span><span class="nv">$CEPH_CODENAME</span><span class="s2"> </span><span class="nv">$VERSION_CODENAME</span><span class="s2"> no-subscription&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/ceph.list
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-</span><span class="nv">$CEPH_CODENAME</span><span class="s2"> </span><span class="nv">$VERSION_CODENAME</span><span class="s2"> no-subscription"</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/ceph.list
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">fi</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>/etc/apt/sources.list.d/ceph.sources<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nv">CEPH_CODENAME</span><span class="o">=</span><span class="sb">`</span>ceph<span class="w"> </span>-v<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ceph<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $(NF-1)}&#39;</span><span class="sb">`</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nv">CEPH_CODENAME</span><span class="o">=</span><span class="sb">`</span>ceph<span class="w"> </span>-v<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ceph<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">'{print $(NF-1)}'</span><span class="sb">`</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nb">source</span><span class="w"> </span>/etc/os-release
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span>cat<span class="w"> </span>&gt;<span class="w"> </span>/etc/apt/sources.list.d/ceph.sources<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="s">Types: deb</span>
@@ -3698,7 +3698,7 @@
 <p>另外，如果你需要使用 Proxmox 网页端或 <code>pveam</code> 命令下载 CT Templates，可以替换 CT Templates 的源为 <code>http://mirrors.ustc.edu.cn</code>。</p>
 <p>具体方法：将 <code>/usr/share/perl5/PVE/APLInfo.pm</code> 文件中默认的源地址 <code>http://download.proxmox.com</code> 替换为 <code>https://mirrors.ustc.edu.cn/proxmox</code> 即可。</p>
 <p>可以使用如下命令：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sed<span class="w"> </span>-i.bak<span class="w"> </span><span class="s1">&#39;s|http://download.proxmox.com|https://mirrors.ustc.edu.cn/proxmox|g&#39;</span><span class="w"> </span>/usr/share/perl5/PVE/APLInfo.pm
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sed<span class="w"> </span>-i.bak<span class="w"> </span><span class="s1">'s|http://download.proxmox.com|https://mirrors.ustc.edu.cn/proxmox|g'</span><span class="w"> </span>/usr/share/perl5/PVE/APLInfo.pm
 </code></pre></div>
 <p>针对 <code>/usr/share/perl5/PVE/APLInfo.pm</code> 文件的修改，执行 <code>systemctl restart pvedaemon</code> 后生效。</p>
 <div class="admonition note">

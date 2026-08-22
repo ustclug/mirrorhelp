@@ -2360,7 +2360,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3537,11 +3537,11 @@
 </div>
 <p>将 <code>/etc/apt/sources.list</code> 文件中默认的源地址 <code>http://raspbian.raspberrypi.org/</code> 替换为 <code>http://mirrors.ustc.edu.cn/raspbian/</code> 即可。</p>
 <p>raspbian 2018-04-19 之后的镜像默认源已经更改，用如下命令替换：</p>
-<div class="highlight"><pre><span></span><code>sudo sed -i &#39;s|raspbian.raspberrypi.org|mirrors.ustc.edu.cn/raspbian|g&#39; /etc/apt/sources.list
+<div class="highlight"><pre><span></span><code>sudo sed -i 's|raspbian.raspberrypi.org|mirrors.ustc.edu.cn/raspbian|g' /etc/apt/sources.list
 </code></pre></div>
 <p>旧版的系统可以用以下命令替换：</p>
-<div class="highlight"><pre><span></span><code>sudo sed -i &#39;s|mirrordirector.raspbian.org|mirrors.ustc.edu.cn/raspbian|g&#39; /etc/apt/sources.list
-sudo sed -i &#39;s|archive.raspbian.org|mirrors.ustc.edu.cn/raspbian|g&#39; /etc/apt/sources.list
+<div class="highlight"><pre><span></span><code>sudo sed -i 's|mirrordirector.raspbian.org|mirrors.ustc.edu.cn/raspbian|g' /etc/apt/sources.list
+sudo sed -i 's|archive.raspbian.org|mirrors.ustc.edu.cn/raspbian|g' /etc/apt/sources.list
 </code></pre></div>
 <p>当然也可以直接编辑 <code>/etc/apt/sources.list</code> 文件（需要使用 sudo）。删除原文件所有内容，用以下内容取代：</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Raspbian trixie</label><label for="__tabbed_1_2">Raspbian bookworm</label><label for="__tabbed_1_3">Raspbian bullseye</label></div>

@@ -2360,7 +2360,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3530,8 +3530,8 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>使用以下命令替换默认的配置：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s|^mirrorlist=|#mirrorlist=|g&#39;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="s1">&#39;s|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/rocky|g&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">'s|^mirrorlist=|#mirrorlist=|g'</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="s1">'s|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/rocky|g'</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>-i.bak<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span>/etc/yum.repos.d/Rocky-AppStream.repo<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span>/etc/yum.repos.d/Rocky-BaseOS.repo<span class="w"> </span><span class="se">\</span>
@@ -3541,8 +3541,8 @@
 </div>
 <div class="tabbed-block">
 <p>使用以下命令替换默认的配置：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s|^mirrorlist=|#mirrorlist=|g&#39;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="s1">&#39;s|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/rocky|g&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">'s|^mirrorlist=|#mirrorlist=|g'</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="s1">'s|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.ustc.edu.cn/rocky|g'</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span>-i.bak<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span>/etc/yum.repos.d/rocky-extras.repo<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span>/etc/yum.repos.d/rocky.repo

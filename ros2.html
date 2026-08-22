@@ -2245,7 +2245,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3539,7 +3539,7 @@
 </li>
 <li>
 <p>将软件源添加至系统：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://mirrors.ustc.edu.cn/ros2/ubuntu </span><span class="k">$(</span>lsb_release<span class="w"> </span>-sc<span class="k">)</span><span class="s2"> main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/ros2.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://mirrors.ustc.edu.cn/ros2/ubuntu </span><span class="k">$(</span>lsb_release<span class="w"> </span>-sc<span class="k">)</span><span class="s2"> main"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/ros2.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
 </code></pre></div>
 </li>
 <li>

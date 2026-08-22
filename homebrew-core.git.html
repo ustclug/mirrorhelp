@@ -2241,7 +2241,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3393,7 +3393,7 @@
 <p>由于 Brew 4.0 版本后默认使用元数据 JSON API 获取仓库信息，自 2026 年 6 月开始，我们不再提供此镜像，以下配置不再有效。请参考 <a href="homebrew-bottles.html"><code>homebrew-bottles</code></a> 进行相关配置。</p>
 </div>
 <p>替换 USTC 镜像：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">"https://mirrors.ustc.edu.cn/homebrew-core.git"</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>brew<span class="w"> </span>update
 </code></pre></div>
 <div class="admonition note">
@@ -3404,11 +3404,11 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Bash</label><label for="__tabbed_1_2">Zsh</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_CORE_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HOMEBREW_CORE_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
 </code></pre></div>
 </div>
 </div>
@@ -3430,8 +3430,8 @@
 Linuxbrew 用户请依本镜像说明重新设置镜像。注意迁移前请先运行
 <code>brew update</code> 将 <code>brew</code> 更新至 3.3.0 或以上版本。
 迁移过程中若出现任何问题，可使用如下命令重新安装 <code>homebrew-core</code>：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>brew<span class="w"> </span>--repo<span class="w"> </span>homebrew/core<span class="k">)</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">"https://mirrors.ustc.edu.cn/homebrew-core.git"</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>brew<span class="w"> </span>--repo<span class="w"> </span>homebrew/core<span class="k">)</span><span class="s2">"</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>brew<span class="w"> </span>tap<span class="w"> </span>--custom-remote<span class="w"> </span>homebrew/core<span class="w"> </span>https://mirrors.ustc.edu.cn/homebrew-core.git
 </code></pre></div>
 </div>

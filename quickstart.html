@@ -2336,7 +2336,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3477,7 +3477,7 @@
 <p>假设镜像配置在 <code>/home/mirror/repos</code>，同步日志在 <code>/home/mirror/logs</code>，对应修改 <code>daemon.toml</code> 中 <code>repo_logs_dir</code> 和 <code>repo_config_dir</code>。同时范例中的 docker-ce 同步配置就位于 <code>/home/mirror/repos/docker-ce.yaml</code>，内容如下：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker-ce</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># every 1 hour</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">cron</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">cron</span><span class="p">:</span><span class="w"> </span><span class="s">"0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*"</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">storageDir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/srv/repo/docker-ce</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ustcmirror/rsync:latest</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">logRotCycle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
@@ -3486,7 +3486,7 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">RSYNC_PATH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker-ce/</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">RSYNC_EXCLUDE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--exclude=.~tmp~/</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">RSYNC_EXTRA</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--size-only</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">RSYNC_MAXDELETE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;50000&quot;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">RSYNC_MAXDELETE</span><span class="p">:</span><span class="w"> </span><span class="s">"50000"</span>
 </code></pre></div>
 <p>如果需要快速获取仓库大小：</p>
 <ul>

@@ -2245,7 +2245,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3523,17 +3523,17 @@
 </ul>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>在 Emacs 配置文件中（任何用到 <code>package</code> 特性的代码之前）添加如下内容：</p>
-<div class="highlight"><pre><span></span><code>(setq package-archives &#39;((&quot;gnu&quot; . &quot;https://mirrors.ustc.edu.cn/elpa/gnu/&quot;)
-                         (&quot;melpa&quot; . &quot;https://mirrors.ustc.edu.cn/elpa/melpa/&quot;)
-                         (&quot;nongnu&quot; . &quot;https://mirrors.ustc.edu.cn/elpa/nongnu/&quot;)))
+<div class="highlight"><pre><span></span><code>(setq package-archives '(("gnu" . "https://mirrors.ustc.edu.cn/elpa/gnu/")
+                         ("melpa" . "https://mirrors.ustc.edu.cn/elpa/melpa/")
+                         ("nongnu" . "https://mirrors.ustc.edu.cn/elpa/nongnu/")))
 </code></pre></div>
 <p>或使用 Customize 功能修改 <code>Package Archives</code> 选项为上述内容。</p>
 <h2 id="spacemacs">Spacemacs 使用说明<a class="headerlink" href="#spacemacs" title="Permanent link">&para;</a></h2>
 <p>添加下面的代码到 <code>.spacemacs</code> 的 <code>dotspacemacs/user-init</code> 中：</p>
 <div class="highlight"><pre><span></span><code>(setq configuration-layer--elpa-archives
-      &#39;((&quot;melpa-cn&quot; . &quot;https://mirrors.ustc.edu.cn/elpa/melpa/&quot;)
-        (&quot;nongnu-cn&quot;   . &quot;https://mirrors.ustc.edu.cn/elpa/nongnu/&quot;)
-        (&quot;gnu-cn&quot;   . &quot;https://mirrors.ustc.edu.cn/elpa/gnu/&quot;)))
+      '(("melpa-cn" . "https://mirrors.ustc.edu.cn/elpa/melpa/")
+        ("nongnu-cn"   . "https://mirrors.ustc.edu.cn/elpa/nongnu/")
+        ("gnu-cn"   . "https://mirrors.ustc.edu.cn/elpa/gnu/")))
 </code></pre></div>
 <p>develop 分支应使用 <code>configuration-layer-elpa-archives</code> 代替上面代码中的
 <code>configuration-layer--elpa-archives</code>（<code>--</code> 换成 <code>-</code>）。</p>

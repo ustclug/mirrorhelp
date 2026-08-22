@@ -2245,7 +2245,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3483,7 +3483,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>curl<span class="w"> </span>-sL<span class="w"> </span>-o<span class="w"> </span>/etc/apt/trusted.gpg.d/morph027-gitea.asc<span class="w"> </span>https://packaging.gitlab.io/gitea/gpg.key
 </code></pre></div>
 <p>添加镜像源：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb https://mirrors.ustc.edu.cn/packaging-gitea gitea main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/morph027-gitea.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"deb https://mirrors.ustc.edu.cn/packaging-gitea gitea main"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/morph027-gitea.list
 </code></pre></div>
 <p>安装：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update

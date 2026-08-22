@@ -2245,7 +2245,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3575,15 +3575,15 @@ nix-channel --update
 管理系统，请根据具体情况编辑对应的文件，以下仅供参考。</p>
 </div>
 <p>对于 nix-darwin，在 <code>~/.nixpkgs/darwin-configuration.nix</code> 中添加：</p>
-<div class="highlight"><pre><span></span><code>nix.settings.substituters = [ &quot;https://mirrors.ustc.edu.cn/nix-channels/store&quot; ];
+<div class="highlight"><pre><span></span><code>nix.settings.substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
 </code></pre></div>
 <p>对于 NixOS 21.11 及之前的版本，在 <code>/etc/nixos/configuration.nix</code>
 中添加：</p>
-<div class="highlight"><pre><span></span><code>nix.binaryCaches = [ &quot;https://mirrors.ustc.edu.cn/nix-channels/store&quot; ];
+<div class="highlight"><pre><span></span><code>nix.binaryCaches = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
 </code></pre></div>
 <p>对于 NixOS 22.05 及之后的版本，在 <code>/etc/nixos/configuration.nix</code>
 中添加：</p>
-<div class="highlight"><pre><span></span><code>nix.settings.substituters = [ &quot;https://mirrors.ustc.edu.cn/nix-channels/store&quot; ];
+<div class="highlight"><pre><span></span><code>nix.settings.substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3594,7 +3594,7 @@ nix-channel --update
 <p class="admonition-title">Note</p>
 <p>由于目前的动态缓存设计不会关联 <code>narinfo</code> 与 <code>nar.xz</code>
 文件，下载新文件时可能会出现类似如下的错误：</p>
-<div class="highlight"><pre><span></span><code>error: file &#39;nar/1q9n0kjn2m11z49j1bcif6d2i63h4lz964w6apkxb4mkam6phni3.nar.xz&#39; does not exist in binary cache &#39;https://mirrors.ustc.edu.cn/nix-channels/store&#39;
+<div class="highlight"><pre><span></span><code>error: file 'nar/1q9n0kjn2m11z49j1bcif6d2i63h4lz964w6apkxb4mkam6phni3.nar.xz' does not exist in binary cache 'https://mirrors.ustc.edu.cn/nix-channels/store'
 </code></pre></div>
 <p>忽略即可，Nix 会自动回退。也可以在以上配置中按顺序添加其他的 binary
 cache 站点作为备选。</p>

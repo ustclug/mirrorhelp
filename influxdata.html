@@ -2245,7 +2245,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3534,7 +3534,7 @@
 <p>使用以下命令导入 InfluxData 的 GPG 密钥，并更新配置：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wget<span class="w"> </span>https://repos.influxdata.com/debian/packages/influxdata-archive-keyring_2026.01.09_all.deb
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./influxdata-archive-keyring_2026.01.09_all.deb
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;deb [signed-by=/usr/share/keyrings/influxdata-archive.gpg] https://mirrors.ustc.edu.cn/influxdata/debian stable main&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/influxdata.list
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'deb [signed-by=/usr/share/keyrings/influxdata-archive.gpg] https://mirrors.ustc.edu.cn/influxdata/debian stable main'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/influxdata.list
 </code></pre></div>
 <p>在运行 <code>apt update</code> 之后即可安装 <code>influxdb</code> 与 <code>telegraf</code> 等软件包。</p>
 <h3 id="centos-rhel">CentOS / RHEL<a class="headerlink" href="#centos-rhel" title="Permanent link">&para;</a></h3>

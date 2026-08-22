@@ -2349,7 +2349,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3520,18 +3520,18 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">ustc-ports</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">    url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">    mirror_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">    signature_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fingerprints&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">    fingerprints</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/share/keys/pkg&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">    url</span><span class="p">:</span><span class="w"> </span><span class="s">"https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly"</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">    mirror_type</span><span class="p">:</span><span class="w"> </span><span class="s">"none"</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">    signature_type</span><span class="p">:</span><span class="w"> </span><span class="s">"fingerprints"</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">    fingerprints</span><span class="p">:</span><span class="w"> </span><span class="s">"/usr/share/keys/pkg"</span><span class="p p-Indicator">,</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">    enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">yes</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p p-Indicator">}</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">ustc-ports-kmods</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nt">    url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nt">    mirror_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nt">    signature_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fingerprints&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nt">    fingerprints</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/share/keys/pkg&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nt">    url</span><span class="p">:</span><span class="w"> </span><span class="s">"https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}"</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nt">    mirror_type</span><span class="p">:</span><span class="w"> </span><span class="s">"none"</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nt">    signature_type</span><span class="p">:</span><span class="w"> </span><span class="s">"fingerprints"</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nt">    fingerprints</span><span class="p">:</span><span class="w"> </span><span class="s">"/usr/share/keys/pkg"</span><span class="p p-Indicator">,</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nt">    enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">yes</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p p-Indicator">}</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
@@ -3545,10 +3545,10 @@
 <a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
 <a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c1"># 仅当启用 pkgbase 时才添加以下内容</span>
 <a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="c1">#ustc-base: {</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c1">#   url: &quot;https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}&quot;,</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="c1">#   mirror_type: &quot;none&quot;,</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="c1">#   signature_type: &quot;fingerprints&quot;,</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="c1">#   fingerprints: &quot;/usr/share/keys/pkgbase-${VERSION_MAJOR}&quot;,</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c1">#   url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}",</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="c1">#   mirror_type: "none",</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="c1">#   signature_type: "fingerprints",</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="c1">#   fingerprints: "/usr/share/keys/pkgbase-${VERSION_MAJOR}",</span>
 <a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="c1">#   enabled: yes</span>
 <a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="c1">#}</span>
 <a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
@@ -3559,18 +3559,18 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">ustc</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">    url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">    mirror_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">    signature_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fingerprints&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nt">    fingerprints</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/share/keys/pkg&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">    url</span><span class="p">:</span><span class="w"> </span><span class="s">"https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly"</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">    mirror_type</span><span class="p">:</span><span class="w"> </span><span class="s">"none"</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">    signature_type</span><span class="p">:</span><span class="w"> </span><span class="s">"fingerprints"</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nt">    fingerprints</span><span class="p">:</span><span class="w"> </span><span class="s">"/usr/share/keys/pkg"</span><span class="p p-Indicator">,</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">    enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">yes</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p p-Indicator">}</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nt">ustc-kmods</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nt">    url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nt">    mirror_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nt">    signature_type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fingerprints&quot;</span><span class="p p-Indicator">,</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nt">    fingerprints</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/share/keys/pkg&quot;</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nt">    url</span><span class="p">:</span><span class="w"> </span><span class="s">"https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}"</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nt">    mirror_type</span><span class="p">:</span><span class="w"> </span><span class="s">"none"</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nt">    signature_type</span><span class="p">:</span><span class="w"> </span><span class="s">"fingerprints"</span><span class="p p-Indicator">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nt">    fingerprints</span><span class="p">:</span><span class="w"> </span><span class="s">"/usr/share/keys/pkg"</span><span class="p p-Indicator">,</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nt">    enabled</span><span class="p">:</span><span class="w"> </span><span class="nv">yes</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p p-Indicator">}</span>
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>

@@ -2245,7 +2245,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3434,7 +3434,7 @@
 </ul>
 <h2 id="_2">使用说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>参考 <a href="https://tailscale.com/kb/1031/install-linux">Tailscale 的安装教程</a>，在安装完成后替换软件源：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s,pkgs.tailscale.com/stable,mirrors.ustc.edu.cn/tailscale,g&#39;</span><span class="w"> </span>/etc/apt/sources.list.d/tailscale.list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s,pkgs.tailscale.com/stable,mirrors.ustc.edu.cn/tailscale,g'</span><span class="w"> </span>/etc/apt/sources.list.d/tailscale.list
 </code></pre></div>
 <p>然后执行 <code>sudo apt update</code> 刷新软件包缓存。</p>
 

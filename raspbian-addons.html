@@ -2338,7 +2338,7 @@
   <span class="md-ellipsis">
     
   
-    Rust Toolchain 反向代理
+    Rust Toolchain 镜像
   
 
     
@@ -3479,7 +3479,7 @@
 <div class="highlight"><pre><span></span><code>curl -fsSL https://apt.raspbian-addons.org/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/raspbian-addons-archive-keyring.gpg
 </code></pre></div>
 <p>添加该仓库：</p>
-<div class="highlight"><pre><span></span><code>echo &quot;deb [signed-by=/usr/share/keyrings/raspbian-addons-archive-keyring.gpg] https://mirrors.ustc.edu.cn/raspbian-addons/debian precise main&quot; | sudo tee /etc/apt/sources.list.d/rpirepo.list
+<div class="highlight"><pre><span></span><code>echo "deb [signed-by=/usr/share/keyrings/raspbian-addons-archive-keyring.gpg] https://mirrors.ustc.edu.cn/raspbian-addons/debian precise main" | sudo tee /etc/apt/sources.list.d/rpirepo.list
 </code></pre></div>
 <p>更新软件包缓存：</p>
 <div class="highlight"><pre><span></span><code>sudo apt update
