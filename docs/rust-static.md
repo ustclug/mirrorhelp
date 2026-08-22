@@ -1,8 +1,14 @@
-# Rust Toolchain 反向代理
+# Rust Toolchain 镜像
 
 ## 说明
 
-Rust Toolchain 反向代理
+Rust Toolchain 镜像
+
+## 收录内容
+
+Tier-1 target 的 stable 和 nightly（nightly 保留一日）。
+
+未同步的 target 对应文件经过反向代理服务。
 
 ## 使用说明
 
