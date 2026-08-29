@@ -6,8 +6,7 @@
 
 ## 说明
 
-GHCup 类似 Rustup，可以用于安装 Haskell 工具链。建议搭配 Hackage 和
-Stackage 源使用。
+GHCup 类似 Rustup，可以用于安装 Haskell 工具链。建议搭配 [Hackage](./hackage.md) 和 [Stackage](./stackage.md) 源使用。
 
 !!! warning
 
@@ -19,10 +18,7 @@ Stackage 源使用。
 
 !!! note
 
-    以下命令会安装并配置 GHCup 最新版本的元数据。可查看
-    <https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/>
-    目录的内容，并选择需要安装的 GHCup 版本的 yaml 文件替换以下命令中的
-    URL。
+    以下命令会安装并配置 GHCup 最新版本的元数据。可查看 <https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/> 目录的内容，并选择需要安装的 GHCup 版本的 yaml 文件替换以下命令中的 URL。
 
 **第一步（可选）** ：使用科大源安装 GHCup 本体。如已经安装 GHCup，可跳到下一步。
 
@@ -41,28 +37,52 @@ Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager
 
 **第二步** ：配置 GHCup 使用科大源。编辑 `~/.ghcup/config.yaml` 增加如下配置：
 
-    url-source:
-      OwnSource:
-        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml
+```yaml
+mirrors:
+  "raw.githubusercontent.com":
+    authority:
+      host: "mirrors.ustc.edu.cn"
+    pathPrefix: "ghcup"
+  "github.com":
+    authority:
+      host: "mirrors.ustc.edu.cn"
+    pathPrefix: "ghcup/github.com"
+  "downloads.haskell.org":
+    authority:
+      host: "mirrors.ustc.edu.cn"
+    pathPrefix: "ghcup/downloads.haskell.org"
+```
+
+该配置使用 GHCup 的镜像功能，将官方元数据和其中引用的下载地址映射到科大源。与直接指定替代元数据文件相比，这种方式能够保留上游元数据的签名。
+
+如果使用较旧版本的 GHCup，或需要兼容旧版配置，也可以继续使用下面的`url-source` 配置。该配置使用镜像站生成的 legacy metadata，不适用于需要验证上游 metadata 签名的场景：
+
+```yaml title="仅用于旧配置"
+url-source:
+  OwnSource:
+    - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml
+```
 
 **第三步（可选）** ：配置 Cabal 和 Stack 使用科大源，请参考文档 [hackage](hackage.md) 和 [stackage](stackage.md)。
 
 !!! warning
 
-    科大 GHCup 源仅支持较新的 GHCup 版本（元数据格式版本仅支持 0.0.6
-    及以上）。如果你使用的 GHCup 版本比较旧，请参考上述步骤安装新版本
-    GHCup。
+    科大 GHCup 源仅支持较新的 GHCup 版本（元数据格式版本仅支持 0.0.6 及以上）。如果你使用的 GHCup 版本比较旧，请参考上述步骤安装新版本 GHCup。
 
 ## 非正式频道
 
-Ghcup 提供预发布版本（`prereleases`）、交叉编译版本（`cross`）和基础安装版本（`vanilla`）作为额外频道。要启用这些频道，修改 `~/.ghcup/config.yaml` 中的 `url-source` 节，并依需要添加不同的频道对应的元数据。
+GHCup 提供预发布版本（`prereleases`）和交叉编译版本（`cross`）作为额外频道。可依需要运行以下命令启用；上述镜像配置也会应用于这些频道：
 
-    url-source:
-      OwnSource:
-        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml
-        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-prereleases-latest.yaml
-        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-cross-latest.yaml
-        - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-vanilla-latest.yaml
+```bash
+ghcup config add-release-channel prereleases
+ghcup config add-release-channel cross
+```
+
+如果只希望使用未经 GHCup 修改的上游二进制发行版，可切换到 `vanilla` 频道：
+
+```bash
+ghcup config set url-source vanilla
+```
 
 关于使用 GHCup 安装交叉编译器的说明，请参考 GHCup User Guide 的 [Cross Support](https://www.haskell.org/ghcup/guide/#cross-support) 章节。
 
