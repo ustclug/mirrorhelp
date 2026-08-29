@@ -3494,8 +3494,7 @@
 <h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><a href="https://mirrors.ustc.edu.cn/ghcup/">https://mirrors.ustc.edu.cn/ghcup/</a></p>
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>GHCup 类似 Rustup，可以用于安装 Haskell 工具链。建议搭配 Hackage 和
-Stackage 源使用。</p>
+<p>GHCup 类似 Rustup，可以用于安装 Haskell 工具链。建议搭配 <a href="hackage.html">Hackage</a> 和 <a href="stackage.html">Stackage</a> 源使用。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>当前的 GHCup 版本会在安装时也尝试安装 cabal，因此建议在安装 GHCup 前先手动配置 cabal 使用镜像，方法为参考文档 <a href="https://mirrors.ustc.edu.cn/help/hackage.html#cabal">hackage</a> 中的说明，修改 <code>~/.cabal/config</code>。</p>
@@ -3504,10 +3503,7 @@ Stackage 源使用。</p>
 <p>参考如下步骤可安装完整的 Haskell 工具链。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>以下命令会安装并配置 GHCup 最新版本的元数据。可查看
-<a href="https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/">https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/</a>
-目录的内容，并选择需要安装的 GHCup 版本的 yaml 文件替换以下命令中的
-URL。</p>
+<p>以下命令会安装并配置 GHCup 最新版本的元数据。可查看 <a href="https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/">https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/</a> 目录的内容，并选择需要安装的 GHCup 版本的 yaml 文件替换以下命令中的 URL。</p>
 </div>
 <p><strong>第一步（可选）</strong> ：使用科大源安装 GHCup 本体。如已经安装 GHCup，可跳到下一步。</p>
 <p>Linux, FreeBSD, macOS 用户：在终端中运行如下命令：</p>
@@ -3518,25 +3514,38 @@ URL。</p>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Set-ExecutionPolicy</span> <span class="n">Bypass</span> <span class="n">-Scope</span> <span class="k">Process</span> <span class="n">-Force</span><span class="p">;</span><span class="no">[System.Net.ServicePointManager]</span><span class="p">::</span><span class="n">SecurityProtocol</span> <span class="p">=</span> <span class="no">[System.Net.ServicePointManager]</span><span class="p">::</span><span class="n">SecurityProtocol</span> <span class="o">-bor</span> <span class="n">3072</span><span class="p">;</span><span class="nb">Invoke-Command</span> <span class="n">-ScriptBlock</span> <span class="p">(</span><span class="no">[ScriptBlock]</span><span class="p">::</span><span class="n">Create</span><span class="p">((</span><span class="nb">Invoke-WebRequest</span> <span class="n">https</span><span class="p">://</span><span class="n">mirrors</span><span class="p">.</span><span class="n">ustc</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="p">/</span><span class="n">ghcup</span><span class="p">/</span><span class="n">sh</span><span class="p">/</span><span class="n">bootstrap-haskell</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-UseBasicParsing</span><span class="p">)))</span> <span class="n">-ArgumentList</span> <span class="nv">$true</span>
 </code></pre></div>
 <p><strong>第二步</strong> ：配置 GHCup 使用科大源。编辑 <code>~/.ghcup/config.yaml</code> 增加如下配置：</p>
-<div class="highlight"><pre><span></span><code>url-source:
-  OwnSource:
-    - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">mirrors</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="s">"raw.githubusercontent.com"</span><span class="p p-Indicator">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">authority</span><span class="p">:</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">"mirrors.ustc.edu.cn"</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">pathPrefix</span><span class="p">:</span><span class="w"> </span><span class="s">"ghcup"</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="s">"github.com"</span><span class="p p-Indicator">:</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nt">authority</span><span class="p">:</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">"mirrors.ustc.edu.cn"</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nt">pathPrefix</span><span class="p">:</span><span class="w"> </span><span class="s">"ghcup/github.com"</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="s">"downloads.haskell.org"</span><span class="p p-Indicator">:</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="nt">authority</span><span class="p">:</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">"mirrors.ustc.edu.cn"</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="nt">pathPrefix</span><span class="p">:</span><span class="w"> </span><span class="s">"ghcup/downloads.haskell.org"</span>
+</code></pre></div>
+<p>该配置使用 GHCup 的镜像功能，将官方元数据和其中引用的下载地址映射到科大源。与直接指定替代元数据文件相比，这种方式能够保留上游元数据的签名。</p>
+<p>如果使用较旧版本的 GHCup，或需要兼容旧版配置，也可以继续使用下面的<code>url-source</code> 配置。该配置使用镜像站生成的 legacy metadata，不适用于需要验证上游 metadata 签名的场景：</p>
+<div class="highlight"><span class="filename">仅用于旧配置</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">url-source</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">OwnSource</span><span class="p">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml</span>
 </code></pre></div>
 <p><strong>第三步（可选）</strong> ：配置 Cabal 和 Stack 使用科大源，请参考文档 <a href="hackage.html">hackage</a> 和 <a href="stackage.html">stackage</a>。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>科大 GHCup 源仅支持较新的 GHCup 版本（元数据格式版本仅支持 0.0.6
-及以上）。如果你使用的 GHCup 版本比较旧，请参考上述步骤安装新版本
-GHCup。</p>
+<p>科大 GHCup 源仅支持较新的 GHCup 版本（元数据格式版本仅支持 0.0.6 及以上）。如果你使用的 GHCup 版本比较旧，请参考上述步骤安装新版本 GHCup。</p>
 </div>
 <h2 id="_4">非正式频道<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>Ghcup 提供预发布版本（<code>prereleases</code>）、交叉编译版本（<code>cross</code>）和基础安装版本（<code>vanilla</code>）作为额外频道。要启用这些频道，修改 <code>~/.ghcup/config.yaml</code> 中的 <code>url-source</code> 节，并依需要添加不同的频道对应的元数据。</p>
-<div class="highlight"><pre><span></span><code>url-source:
-  OwnSource:
-    - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-latest.yaml
-    - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-prereleases-latest.yaml
-    - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-cross-latest.yaml
-    - https://mirrors.ustc.edu.cn/ghcup/ghcup-metadata/ghcup-vanilla-latest.yaml
+<p>GHCup 提供预发布版本（<code>prereleases</code>）和交叉编译版本（<code>cross</code>）作为额外频道。可依需要运行以下命令启用；上述镜像配置也会应用于这些频道：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ghcup<span class="w"> </span>config<span class="w"> </span>add-release-channel<span class="w"> </span>prereleases
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ghcup<span class="w"> </span>config<span class="w"> </span>add-release-channel<span class="w"> </span>cross
+</code></pre></div>
+<p>如果只希望使用未经 GHCup 修改的上游二进制发行版，可切换到 <code>vanilla</code> 频道：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ghcup<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>url-source<span class="w"> </span>vanilla
 </code></pre></div>
 <p>关于使用 GHCup 安装交叉编译器的说明，请参考 GHCup User Guide 的 <a href="https://www.haskell.org/ghcup/guide/#cross-support">Cross Support</a> 章节。</p>
 <h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
