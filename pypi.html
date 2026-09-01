@@ -3606,32 +3606,37 @@
 <h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><a href="https://mirrors.ustc.edu.cn/pypi/">https://mirrors.ustc.edu.cn/pypi/</a></p>
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>PyPI（pip）软件源</p>
+<p>PyPI 软件源</p>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="_4">临时使用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>pip install -i https://mirrors.ustc.edu.cn/pypi/simple package
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple<span class="w"> </span>&lt;package&gt;
 </code></pre></div>
 <h3 id="_5">设为默认<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>升级 <code>pip</code> 到最新的版本 <code>(&gt;=10.0.0)</code> 后进行配置：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 使用本镜像站来升级 pip</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple<span class="w"> </span>pip<span class="w"> </span>-U
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 使用本镜像站来升级 pip</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple<span class="w"> </span>pip<span class="w"> </span>-U
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple
 </code></pre></div>
 <h3 id="_6">其他包管理器<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <h4 id="astral-uv">Astral uv<a class="headerlink" href="#astral-uv" title="Permanent link">&para;</a></h4>
+<p><strong>临时使用</strong>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>uv<span class="w"> </span>add<span class="w"> </span>--default-index<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple<span class="w"> </span>&lt;package&gt;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># 或者</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--default-index<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple<span class="w"> </span>&lt;package&gt;
+</code></pre></div>
 <p><strong>当前项目配置</strong>：修改项目根目录下的 <code>uv.toml</code> 或 <code>pyproject.toml</code>：</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">uv.toml</label><label for="__tabbed_1_2">pyproject.toml</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">[[index]]</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"https://mirrors.ustc.edu.cn/pypi/simple"</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">[[index]]</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"https://mirrors.ustc.edu.cn/pypi/simple"</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[[tool.uv.index]]</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"https://mirrors.ustc.edu.cn/pypi/simple"</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">[[tool.uv.index]]</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"https://mirrors.ustc.edu.cn/pypi/simple"</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
 </code></pre></div>
 </div>
 </div>
@@ -3661,6 +3666,10 @@
 <dt>shadowmire</dt>
 <dd>
 <p><a href="https://github.com/taoky/shadowmire/">https://github.com/taoky/shadowmire/</a></p>
+</dd>
+<dt>uv</dt>
+<dd>
+<p><a href="https://docs.astral.sh/uv/">https://docs.astral.sh/uv/</a></p>
 </dd>
 </dl>
 
