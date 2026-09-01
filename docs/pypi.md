@@ -10,25 +10,21 @@ PyPI 软件源
 
 ## 使用说明
 
-### 临时使用
+### Python `pip`
+
+**临时使用**：
 
 ```shell
 pip install -i https://mirrors.ustc.edu.cn/pypi/simple <package>
 ```
 
-### 设为默认
-
-升级 `pip` 到最新的版本 `(>=10.0.0)` 后进行配置：
+**设为默认**：
 
 ```shell
-# 使用本镜像站来升级 pip
-pip install -i https://mirrors.ustc.edu.cn/pypi/simple pip -U
 pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/simple
 ```
 
-### 其他包管理器
-
-#### Astral uv
+### Astral uv
 
 **临时使用**：
 
@@ -38,7 +34,7 @@ uv add --default-index https://mirrors.ustc.edu.cn/pypi/simple <package>
 uv pip install --default-index https://mirrors.ustc.edu.cn/pypi/simple <package>
 ```
 
-**当前项目配置**：修改项目根目录下的 `uv.toml` 或 `pyproject.toml`：
+**项目配置**：修改项目根目录下的 `uv.toml` 或 `pyproject.toml`：
 
 === "uv.toml"
 
