@@ -206,6 +206,7 @@ nav:
   - 语言镜像:
     - ghcup.md
     - hackage.md
+    - mooncakes.md
     - node.md
     - pypi.md
     - rubygems.md
