@@ -2250,38 +2250,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#python-pip" class="md-nav__link">
     <span class="md-ellipsis">
       
-        临时使用
+        Python pip
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        设为默认
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        其他包管理器
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="其他包管理器">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#astral-uv" class="md-nav__link">
@@ -2298,14 +2275,9 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         同步方式
@@ -2316,7 +2288,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         相关链接
@@ -2349,7 +2321,7 @@
   <span class="md-ellipsis">
     
   
-    Rubygems
+    RubyGems
   
 
     
@@ -3506,38 +3478,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#python-pip" class="md-nav__link">
     <span class="md-ellipsis">
       
-        临时使用
+        Python pip
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        设为默认
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        其他包管理器
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="其他包管理器">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#astral-uv" class="md-nav__link">
@@ -3554,14 +3503,9 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         同步方式
@@ -3572,7 +3516,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         相关链接
@@ -3608,23 +3552,20 @@
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>PyPI 软件源</p>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="_4">临时使用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="python-pip">Python <code>pip</code><a class="headerlink" href="#python-pip" title="Permanent link">&para;</a></h3>
+<p><strong>临时使用</strong>：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple<span class="w"> </span>&lt;package&gt;
 </code></pre></div>
-<h3 id="_5">设为默认<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>升级 <code>pip</code> 到最新的版本 <code>(&gt;=10.0.0)</code> 后进行配置：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 使用本镜像站来升级 pip</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple<span class="w"> </span>pip<span class="w"> </span>-U
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple
+<p><strong>设为默认</strong>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple
 </code></pre></div>
-<h3 id="_6">其他包管理器<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<h4 id="astral-uv">Astral uv<a class="headerlink" href="#astral-uv" title="Permanent link">&para;</a></h4>
+<h3 id="astral-uv">Astral uv<a class="headerlink" href="#astral-uv" title="Permanent link">&para;</a></h3>
 <p><strong>临时使用</strong>：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>uv<span class="w"> </span>add<span class="w"> </span>--default-index<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple<span class="w"> </span>&lt;package&gt;
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># 或者</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--default-index<span class="w"> </span>https://mirrors.ustc.edu.cn/pypi/simple<span class="w"> </span>&lt;package&gt;
 </code></pre></div>
-<p><strong>当前项目配置</strong>：修改项目根目录下的 <code>uv.toml</code> 或 <code>pyproject.toml</code>：</p>
+<p><strong>项目配置</strong>：修改项目根目录下的 <code>uv.toml</code> 或 <code>pyproject.toml</code>：</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">uv.toml</label><label for="__tabbed_1_2">pyproject.toml</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3652,12 +3593,12 @@
 <p>详见 <a href="https://github.com/astral-sh/uv/issues/9056">https://github.com/astral-sh/uv/issues/9056</a> 与 <a href="https://github.com/astral-sh/uv/issues/6349">https://github.com/astral-sh/uv/issues/6349</a>。</p>
 <p>一个临时的绕过方法是，在需要将 <code>uv.lock</code> commit 到版本管理工具之前执行 <code>UV_INDEX=https://pypi.org/simple uv lock --refresh</code>，来还原 <code>uv.lock</code> 中的信息。</p>
 </div>
-<h2 id="_7">同步方式<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_4">同步方式<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>软件包元数据使用 shadowmire 从 TUNA 同步</li>
 <li>软件包根据访问情况进行动态缓存，未命中的包重定向到 TUNA</li>
 </ul>
-<h2 id="_8">相关链接<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h2 id="_5">相关链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <dl>
 <dt>pip</dt>
 <dd>

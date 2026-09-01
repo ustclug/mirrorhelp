@@ -29,7 +29,7 @@
     
     
       
-        <title>Rubygems - USTC Mirror Help</title>
+        <title>RubyGems - USTC Mirror Help</title>
       
     
     
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rubygems
+              RubyGems
             
           </span>
         </div>
@@ -2200,7 +2200,7 @@
   <span class="md-ellipsis">
     
   
-    Rubygems
+    RubyGems
   
 
     
@@ -2218,7 +2218,7 @@
   <span class="md-ellipsis">
     
   
-    Rubygems
+    RubyGems
   
 
     
@@ -2281,7 +2281,7 @@
   <a href="#rubygems_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        修改 Rubygems 默认源
+        修改 RubyGems 默认源
       
     </span>
   </a>
@@ -3470,7 +3470,7 @@
   <a href="#rubygems_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        修改 Rubygems 默认源
+        修改 RubyGems 默认源
       
     </span>
   </a>
@@ -3524,21 +3524,20 @@
   
 
 
-<h1 id="rubygems">Rubygems<a class="headerlink" href="#rubygems" title="Permanent link">&para;</a></h1>
+<h1 id="rubygems">RubyGems<a class="headerlink" href="#rubygems" title="Permanent link">&para;</a></h1>
 <h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><a href="https://mirrors.ustc.edu.cn/rubygems/">https://mirrors.ustc.edu.cn/rubygems/</a></p>
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Rubygems 仓库镜像，目前为缓存。</p>
+<p>RubyGems 仓库镜像，目前为缓存。</p>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="rubygems_1">修改 Rubygems 默认源<a class="headerlink" href="#rubygems_1" title="Permanent link">&para;</a></h3>
+<h3 id="rubygems_1">修改 RubyGems 默认源<a class="headerlink" href="#rubygems_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gem<span class="w"> </span>sources<span class="w"> </span><span class="c1"># 列出默认源</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>gem<span class="w"> </span>sources<span class="w"> </span>--remove<span class="w"> </span>https://rubygems.org/<span class="w"> </span><span class="c1"># 移除默认源</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>gem<span class="w"> </span>sources<span class="w"> </span>-a<span class="w"> </span>https://mirrors.ustc.edu.cn/rubygems/<span class="w"> </span><span class="c1"># 添加科大源</span>
 </code></pre></div>
 <h3 id="gemfile-bundle">针对使用 Gemfile 和 Bundle 的项目<a class="headerlink" href="#gemfile-bundle" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="http://bundler.io/v1.5/bundle_config.html#gem-source-mirrors-1">Gem Source Mirrors @ Bundle
-Docs</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bundle<span class="w"> </span>config<span class="w"> </span>mirror.https://rubygems.org<span class="w"> </span>https://mirrors.ustc.edu.cn/rubygems/
+<p>参考 <a href="https://guides.rubygems.org/command-reference/bundle-config/">Mirrors Of Gem Sources</a>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bundle<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--global<span class="w"> </span>mirror.https://rubygems.org<span class="w"> </span>https://mirrors.ustc.edu.cn/rubygems/
 </code></pre></div>
 <h2 id="_4">相关链接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <dl>
