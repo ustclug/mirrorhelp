@@ -15,9 +15,9 @@ mooncakes.io（MoonBit 包管理器）的软件源。
 
 ```json
 {
-  "registry": "https://mirrors.ustc.edu.cn/mooncakes",
+  "download": "https://mirrors.ustc.edu.cn/mooncakes",
   "index": "https://mirrors.ustc.edu.cn/mooncakes.git",
-  "symbols": "https://mirrors.ustc.edu.cn/mooncakes/symbols.zip"
+  "api": "https://mooncakes.io"
 }
 ```
 
