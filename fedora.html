@@ -3560,99 +3560,33 @@
 <p class="admonition-title">Warning</p>
 <p>操作前请做好相应备份。</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Fedora &gt;= 39</label><label for="__tabbed_1_2">Fedora &lt;= 38</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Fedora &gt;= 44</label><label for="__tabbed_1_2">Fedora 39–43</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>用以下命令替换 <code>/etc/yum.repos.d</code> 下的文件：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">'s|^metalink=|#metalink=|g'</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">         </span>-e<span class="w"> </span><span class="s1">'s|^#baseurl=http://download.example/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g'</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">         </span>-i.bak<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">         </span>/etc/yum.repos.d/fedora.repo<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">         </span>/etc/yum.repos.d/fedora-updates.repo
+<p>建议通过 DNF5 覆写仓库配置：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>config-manager<span class="w"> </span>setopt<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>fedora.baseurl<span class="o">=</span><span class="s1">'https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/'</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>fedora.metalink<span class="o">=</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span>updates.baseurl<span class="o">=</span><span class="s1">'https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/$basearch/'</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span>updates.metalink<span class="o">=</span>
 </code></pre></div>
-<p>或者直接复制以下文件：</p>
-<div class="highlight"><span class="filename">/etc/yum.repos.d/fedora.repo</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">[fedora]</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="na">name</span><span class="o">=</span><span class="s">Fedora $releasever - $basearch</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="na">failovermethod</span><span class="o">=</span><span class="s">priority</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;arch=$basearch</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="na">metadata_expire</span><span class="o">=</span><span class="s">7d</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="na">type</span><span class="o">=</span><span class="s">rpm</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">False</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="k">[fedora-debuginfo]</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="na">name</span><span class="o">=</span><span class="s">Fedora $releasever - $basearch - Debug</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="na">failovermethod</span><span class="o">=</span><span class="s">priority</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/debug/tree/</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1">#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&amp;arch=$basearch</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="na">enabled</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="na">metadata_expire</span><span class="o">=</span><span class="s">7d</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="na">type</span><span class="o">=</span><span class="s">rpm</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">False</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="k">[fedora-source]</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="na">name</span><span class="o">=</span><span class="s">Fedora $releasever - Source</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="na">failovermethod</span><span class="o">=</span><span class="s">priority</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/source/tree/</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="c1">#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&amp;arch=$basearch</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="na">enabled</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="na">metadata_expire</span><span class="o">=</span><span class="s">7d</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="na">type</span><span class="o">=</span><span class="s">rpm</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch</span>
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">False</span>
+<p>该命令会在 <code>/etc/dnf/repos.override.d/99-config_manager.repo</code> 中写入覆写配置。</p>
+<p>或者先创建覆写目录：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/etc/dnf/repos.override.d
 </code></pre></div>
-<div class="highlight"><span class="filename">/etc/yum.repos.d/fedora-updates.repo</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[updates]</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">name</span><span class="o">=</span><span class="s">Fedora $releasever - $basearch - Updates</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="na">failovermethod</span><span class="o">=</span><span class="s">priority</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/$basearch/</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&amp;arch=$basearch</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="na">type</span><span class="o">=</span><span class="s">rpm</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="na">metadata_expire</span><span class="o">=</span><span class="s">6h</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">False</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="k">[updates-debuginfo]</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="na">name</span><span class="o">=</span><span class="s">Fedora $releasever - $basearch - Updates - Debug</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="na">failovermethod</span><span class="o">=</span><span class="s">priority</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/$basearch/debug/</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1">#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f$releasever&amp;arch=$basearch</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="na">enabled</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="na">type</span><span class="o">=</span><span class="s">rpm</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="na">metadata_expire</span><span class="o">=</span><span class="s">6h</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">False</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="k">[updates-source]</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="na">name</span><span class="o">=</span><span class="s">Fedora $releasever - Updates Source</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="na">failovermethod</span><span class="o">=</span><span class="s">priority</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/source/tree/</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="c1">#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&amp;arch=$basearch</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="na">enabled</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="na">type</span><span class="o">=</span><span class="s">rpm</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="na">metadata_expire</span><span class="o">=</span><span class="s">6h</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch</span>
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">False</span>
+<p>然后将以下内容保存为 <code>/etc/dnf/repos.override.d/99-ustc.repo</code>：</p>
+<div class="highlight"><span class="filename">/etc/dnf/repos.override.d/99-ustc.repo</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[fedora]</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="na">metalink</span><span class="o">=</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">[updates]</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/$basearch/</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="na">metalink</span><span class="o">=</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Fedora 39 起 modular 仓库已经不复存在（详见 <a href="https://fedoraproject.org/wiki/Changes/RetireModularity">https://fedoraproject.org/wiki/Changes/RetireModularity</a>）。
-因此 Fedora 39 及以上的版本不需要修改 <code>fedora-modular.repo</code> 和 <code>fedora-updates-modular.repo</code>。</p>
+<p>Fedora 45 的<a href="https://fedoraproject.org/wiki/Changes/RelocateRpmRepoConfigsToUsr">仓库配置迁移</a>将系统提供的 <code>.repo</code> 文件从 <code>/etc/yum.repos.d</code> 移至 <code>/usr/share/dnf5/repos.d</code>。
+上述覆写方式适用于这两种布局，并保留系统提供的 GPG 密钥路径等配置。</p>
 </div>
 </div>
 <div class="tabbed-block">
@@ -3661,9 +3595,7 @@
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">         </span>-e<span class="w"> </span><span class="s1">'s|^#baseurl=http://download.example/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g'</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">         </span>-i.bak<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">         </span>/etc/yum.repos.d/fedora.repo<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">         </span>/etc/yum.repos.d/fedora-modular.repo<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">         </span>/etc/yum.repos.d/fedora-updates.repo<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">         </span>/etc/yum.repos.d/fedora-updates-modular.repo
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">         </span>/etc/yum.repos.d/fedora-updates.repo
 </code></pre></div>
 <p>或者直接复制以下文件：</p>
 <div class="highlight"><span class="filename">/etc/yum.repos.d/fedora.repo</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">[fedora]</span>
@@ -3743,84 +3675,6 @@
 <a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="na">metadata_expire</span><span class="o">=</span><span class="s">6h</span>
 <a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch</span>
 <a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">False</span>
-</code></pre></div>
-<div class="highlight"><span class="filename">/etc/yum.repos.d/fedora-modular.repo</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">[fedora-modular]</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="na">name</span><span class="o">=</span><span class="s">Fedora Modular $releasever - $basearch</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="na">failovermethod</span><span class="o">=</span><span class="s">priority</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Modular/$basearch/os/</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1">#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-modular-$releasever&amp;arch=$basearch</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1">#metadata_expire=7d</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="na">type</span><span class="o">=</span><span class="s">rpm</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">False</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="k">[fedora-modular-debuginfo]</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="na">name</span><span class="o">=</span><span class="s">Fedora Modular $releasever - $basearch - Debug</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="na">failovermethod</span><span class="o">=</span><span class="s">priority</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Modular/$basearch/debug/tree/</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="c1">#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-modular-debug-$releasever&amp;arch=$basearch</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="na">enabled</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="na">metadata_expire</span><span class="o">=</span><span class="s">7d</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="na">type</span><span class="o">=</span><span class="s">rpm</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch</span>
-<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">False</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>
-<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="k">[fedora-modular-source]</span>
-<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="na">name</span><span class="o">=</span><span class="s">Fedora Modular $releasever - Source</span>
-<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="na">failovermethod</span><span class="o">=</span><span class="s">priority</span>
-<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Modular/source/tree/</span>
-<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="c1">#metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-modular-source-$releasever&amp;arch=$basearch</span>
-<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="na">enabled</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="na">metadata_expire</span><span class="o">=</span><span class="s">7d</span>
-<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="na">type</span><span class="o">=</span><span class="s">rpm</span>
-<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch</span>
-<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a><span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">False</span>
-</code></pre></div>
-<div class="highlight"><span class="filename">/etc/yum.repos.d/fedora-updates-modular.repo</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">[updates-modular]</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="na">name</span><span class="o">=</span><span class="s">Fedora Modular $releasever - $basearch - Updates</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="na">failovermethod</span><span class="o">=</span><span class="s">priority</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Modular/$basearch/</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1">#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-modular-f$releasever&amp;arch=$basearch</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="na">type</span><span class="o">=</span><span class="s">rpm</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="na">metadata_expire</span><span class="o">=</span><span class="s">6h</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">False</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="k">[updates-modular-debuginfo]</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="na">name</span><span class="o">=</span><span class="s">Fedora Modular $releasever - $basearch - Updates - Debug</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="na">failovermethod</span><span class="o">=</span><span class="s">priority</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Modular/$basearch/debug/</span>
-<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="c1">#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-modular-debug-f$releasever&amp;arch=$basearch</span>
-<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="na">enabled</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="na">type</span><span class="o">=</span><span class="s">rpm</span>
-<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="na">metadata_expire</span><span class="o">=</span><span class="s">6h</span>
-<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch</span>
-<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">False</span>
-<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>
-<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="k">[updates-modular-source]</span>
-<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="na">name</span><span class="o">=</span><span class="s">Fedora Modular $releasever - Updates Source</span>
-<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="na">failovermethod</span><span class="o">=</span><span class="s">priority</span>
-<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="na">baseurl</span><span class="o">=</span><span class="s">https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Modular/SRPMS/</span>
-<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="c1">#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-modular-source-f$releasever&amp;arch=$basearch</span>
-<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="na">enabled</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="na">type</span><span class="o">=</span><span class="s">rpm</span>
-<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="na">metadata_expire</span><span class="o">=</span><span class="s">6h</span>
-<a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a><span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch</span>
-<a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">False</span>
 </code></pre></div>
 </div>
 </div>
