@@ -26,7 +26,38 @@ x86_64
 
     操作前请做好相应备份。
 
-=== "Fedora >= 39"
+=== "Fedora >= 44"
+
+    建议通过 DNF5 覆写仓库配置：
+
+    ```shell
+    sudo dnf config-manager setopt \
+        fedora.baseurl='https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/' \
+        fedora.metalink= \
+        updates.baseurl='https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/$basearch/' \
+        updates.metalink=
+    ```
+
+    该命令会在 `/etc/dnf/repos.override.d/99-config_manager.repo` 中写入覆写配置。
+
+    或者先创建覆写目录：
+
+    ```shell
+    sudo mkdir -p /etc/dnf/repos.override.d
+    ```
+
+    然后将以下内容保存为 `/etc/dnf/repos.override.d/99-ustc.repo`：
+
+    ```ini title="/etc/dnf/repos.override.d/99-ustc.repo"
+    --8<-- "fedora-override.repo"
+    ```
+
+    !!! note
+
+        Fedora 45 的[仓库配置迁移](https://fedoraproject.org/wiki/Changes/RelocateRpmRepoConfigsToUsr)将系统提供的 `.repo` 文件从 `/etc/yum.repos.d` 移至 `/usr/share/dnf5/repos.d`。
+        上述覆写方式适用于这两种布局，并保留系统提供的 GPG 密钥路径等配置。
+
+=== "Fedora 39–43"
 
     用以下命令替换 `/etc/yum.repos.d` 下的文件：
 
@@ -46,43 +77,6 @@ x86_64
 
     ```ini title="/etc/yum.repos.d/fedora-updates.repo"
     --8<-- "fedora-updates.repo"
-    ```
-
-    !!! note
-
-        Fedora 39 起 modular 仓库已经不复存在（详见 <https://fedoraproject.org/wiki/Changes/RetireModularity>）。
-        因此 Fedora 39 及以上的版本不需要修改 `fedora-modular.repo` 和 `fedora-updates-modular.repo`。
-
-=== "Fedora <= 38"
-
-    用以下命令替换 `/etc/yum.repos.d` 下的文件：
-
-    ```shell
-    sudo sed -e 's|^metalink=|#metalink=|g' \
-             -e 's|^#baseurl=http://download.example/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g' \
-             -i.bak \
-             /etc/yum.repos.d/fedora.repo \
-             /etc/yum.repos.d/fedora-modular.repo \
-             /etc/yum.repos.d/fedora-updates.repo \
-             /etc/yum.repos.d/fedora-updates-modular.repo
-    ```
-
-    或者直接复制以下文件：
-
-    ```ini title="/etc/yum.repos.d/fedora.repo"
-    --8<-- "fedora.repo"
-    ```
-
-    ```ini title="/etc/yum.repos.d/fedora-updates.repo"
-    --8<-- "fedora-updates.repo"
-    ```
-
-    ```ini title="/etc/yum.repos.d/fedora-modular.repo"
-    --8<-- "fedora-modular.repo"
-    ```
-
-    ```ini title="/etc/yum.repos.d/fedora-updates-modular.repo"
-    --8<-- "fedora-updates-modular.repo"
     ```
 
 最后运行 `sudo dnf makecache` 生成缓存。

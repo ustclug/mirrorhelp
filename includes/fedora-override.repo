@@ -1,0 +1,7 @@
+[fedora]
+baseurl=https://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/
+metalink=
+
+[updates]
+baseurl=https://mirrors.ustc.edu.cn/fedora/updates/$releasever/Everything/$basearch/
+metalink=
