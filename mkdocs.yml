@@ -149,6 +149,7 @@ nav:
   - 首页: /
   - 使用帮助: index.md
   - rsync-guide.md
+  - mirror-cache.md
   - quickstart.md
   - contributor.md
 
