@@ -12,13 +12,13 @@
         <meta name="author" content="LUG @ USTC">
       
       
-        <link rel="canonical" href="https://mirrors.ustc.edu.cn/help/ubuntu-releases.html">
+        <link rel="canonical" href="https://mirrors.ustc.edu.cn/help/mirror-cache.html">
       
       
-        <link rel="prev" href="ubuntu-old-releases.html">
+        <link rel="prev" href="rsync-guide.html">
       
       
-        <link rel="next" href="ubuntu-cdimage.html">
+        <link rel="next" href="quickstart.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Ubuntu Releases - USTC Mirror Help</title>
+        <title>使用 Nginx 搭建内网镜像缓存 - USTC Mirror Help</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ubuntu-releases" class="md-skip">
+        <a href="#nginx" class="md-skip">
           跳转至
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ubuntu Releases
+              使用 Nginx 搭建内网镜像缓存
             
           </span>
         </div>
@@ -352,10 +352,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="mirror-cache.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用 Nginx 搭建内网镜像缓存
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="mirror-cache.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -371,6 +398,148 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        缓存原则
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        公共准备
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="公共准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        环境
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安装 Nginx
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rocky-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rocky Linux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rocky Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置缓存
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置客户端
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证缓存命中
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        维护与排查
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        相关链接
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -433,10 +602,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -551,11 +718,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
@@ -576,7 +743,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1935,37 +2102,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ubuntu Releases
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="ubuntu-releases.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="ubuntu-releases.html" class="md-nav__link">
         
   
   
@@ -1981,81 +2121,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        地址
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        说明
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        收录架构
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        收录版本
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        使用说明
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3476,7 +3541,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        地址
+        缓存原则
       
     </span>
   </a>
@@ -3487,40 +3552,107 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        说明
+        公共准备
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="公共准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        收录架构
+        环境
       
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安装 Nginx
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#rocky-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rocky Linux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rocky Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        收录版本
+        配置缓存
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        使用说明
+        配置客户端
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证缓存命中
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        维护与排查
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        相关链接
       
     </span>
   </a>
@@ -3547,20 +3679,247 @@
   
 
 
-<h1 id="ubuntu-releases">Ubuntu Releases<a class="headerlink" href="#ubuntu-releases" title="Permanent link">&para;</a></h1>
-<h2 id="_1">地址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><a href="https://mirrors.ustc.edu.cn/ubuntu-releases/">https://mirrors.ustc.edu.cn/ubuntu-releases/</a></p>
-<h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Ubuntu 镜像</p>
-<h2 id="_3">收录架构<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>AMD64 (x86_64), Intel x86</p>
-<p>其他架构请参考 <a href="ubuntu-cdimage.html">ubuntu-cdimage</a></p>
-<h2 id="_4">收录版本<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>所有 Ubuntu 当前支持的版本，包括开发版，具体版本见 <a href="https://wiki.ubuntu.com/Releases">https://wiki.ubuntu.com/Releases</a>。</p>
-<p>对于 Ubuntu 不再支持的版本，请参考 <a href="ubuntu-old-releases.html">ubuntu-old-releases</a></p>
-<h2 id="_5">使用说明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>Ubuntu 当前支持的版本的 ISO 镜像，下载请直接前往 <a href="https://mirrors.ustc.edu.cn/ubuntu-releases/">https://mirrors.ustc.edu.cn/ubuntu-releases/</a>。</p>
-<p>另外 <a href="https://mirrors.ustc.edu.cn/ubuntu-releases/ubuntu-core/">https://mirrors.ustc.edu.cn/ubuntu-releases/ubuntu-core/</a> 中包含了 Ubuntu Core 16 的 ISO，支持 AMD64, Intel x86, Raspberry Pi 2/3, DragonBoard 410c 等。</p>
+<h1 id="nginx">使用 Nginx 搭建内网镜像缓存<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h1>
+<p>如果内网中有多台机器，可以使用一台 Nginx 服务器缓存软件源，让相同文件的后续请求从内网获取，减少外网流量。客户端将软件源地址指向缓存服务器；缓存未命中时，服务器从上游获取文件，后续请求则可以复用已经下载的内容。</p>
+<p>本文采用按需缓存，不预先同步整个仓库。如果需要完整镜像或离线使用，请参考 <a href="rsync-guide.html">rsync 同步帮助</a>。<strong>请勿通过遍历下载的方式预热整个仓库。</strong></p>
+<h2 id="_1">缓存原则<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>不同软件源的目录结构和更新方式不同，缓存规则需要分别配置：</p>
+<ul>
+<li>入口索引通常会在原 URL 上更新，应不缓存或采用适合该仓库的短缓存策略，避免客户端长时间看不到更新。</li>
+<li>路径包含内容哈希的文件适合长期缓存，即使入口索引更新，相同文件也可以继续复用。</li>
+<li>软件包是否可以长期缓存，取决于上游是否可能在同一 URL 上替换内容，不能只根据文件扩展名判断。</li>
+<li>合并同一文件的并发回源请求，可以减少多台机器同时更新时的重复下载。</li>
+<li>缓存服务器只向需要使用它的内网开放，并保留客户端原有的签名、哈希校验等机制。</li>
+</ul>
+<p>本文目前提供 Rocky Linux 软件源缓存的配置实例。Ubuntu、PyPI 等软件源的索引和下载路径不同，需要各自的缓存规则与客户端设置，不能直接套用 Rocky 的配置。</p>
+<h2 id="_2">公共准备<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">环境<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>缓存服务器可以使用 Ubuntu、Debian 或 Rocky Linux 等 Linux 发行版。缓存服务器的发行版不需要与客户端相同，例如可以在 Debian 上缓存 Rocky Linux 软件源。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>示例值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>缓存服务器内网地址</td>
+<td><code>192.168.10.2</code></td>
+</tr>
+<tr>
+<td>允许访问的客户端网段</td>
+<td><code>192.168.10.0/24</code></td>
+</tr>
+</tbody>
+</table>
+<p>请按实际情况修改地址和网段。缓存服务器需要能够访问上游镜像，并有足够的磁盘空间；缓存容量限制由 Nginx 后台清理维护，磁盘还需为临时下载等预留空间。</p>
+<p>以下管理命令以 root 身份执行。示例在可信内网中提供 HTTP 服务，上游连接使用 HTTPS 并验证证书。</p>
+<h3 id="nginx_1">安装 Nginx<a class="headerlink" href="#nginx_1" title="Permanent link">&para;</a></h3>
+<p>在缓存服务器上，按发行版选择安装命令：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Ubuntu / Debian</label><label for="__tabbed_1_2">Rocky Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>apt<span class="w"> </span>update
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>apt<span class="w"> </span>install<span class="w"> </span>nginx<span class="w"> </span>ca-certificates
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>dnf<span class="w"> </span>install<span class="w"> </span>nginx<span class="w"> </span>ca-certificates
+</code></pre></div>
+<p>如果启用了 SELinux，允许 Nginx 连接上游：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>setsebool<span class="w"> </span>-P<span class="w"> </span>httpd_can_network_connect<span class="w"> </span>on
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>使用发行版自带的软件包时，以下默认值有所不同：</p>
+<table>
+<thead>
+<tr>
+<th>缓存服务器系统</th>
+<th>Nginx 运行用户及组</th>
+<th>CA 证书路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ubuntu / Debian</td>
+<td><code>www-data:www-data</code></td>
+<td><code>/etc/ssl/certs/ca-certificates.crt</code></td>
+</tr>
+<tr>
+<td>Rocky Linux</td>
+<td><code>nginx:nginx</code></td>
+<td><code>/etc/pki/tls/certs/ca-bundle.crt</code></td>
+</tr>
+</tbody>
+</table>
+<p>后面的配置默认使用 Rocky Linux 的证书路径。在 Ubuntu、Debian 上使用时，请将 <code>proxy_ssl_trusted_certificate</code> 改为表中对应的路径。如果修改过 Nginx 运行用户，请以 <code>/etc/nginx/nginx.conf</code> 中的 <code>user</code> 配置为准。</p>
+<p>不熟悉 Nginx 配置结构时，可以先阅读 <a href="https://201.ustclug.org/ops/network-service/nginx/">Linux 201：Nginx 服务器</a>，其中介绍了配置文件、虚拟主机、反向代理和缓存的基本用法。</p>
+<h2 id="rocky-linux">Rocky Linux<a class="headerlink" href="#rocky-linux" title="Permanent link">&para;</a></h2>
+<p>本节适用于 Rocky Linux 8、9、10 客户端。</p>
+<p>Rocky Linux 默认安装的 DNF 定时任务会在后台刷新元数据。检查仓库并不意味着每次都下载全部元数据，但当仓库入口 <code>repomd.xml</code> 变化时，DNF 可能重新下载内容没有变化的元数据文件。共享缓存可以减少这些重复下载，也可以缓存多台机器安装的相同 RPM 包。</p>
+<h3 id="_4">配置缓存<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>本例使用 <code>https://mirrors.ustc.edu.cn/rocky/</code> 作为上游，在 <code>/var/cache/nginx/rocky</code> 保存最多约 50 GiB 缓存，可根据实际情况调整。先创建缓存目录；启用 SELinux 时还需恢复新目录的默认标签：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Ubuntu / Debian</label><label for="__tabbed_2_2">Rocky Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>install<span class="w"> </span>-d<span class="w"> </span>-o<span class="w"> </span>www-data<span class="w"> </span>-g<span class="w"> </span>www-data<span class="w"> </span>-m<span class="w"> </span><span class="m">0750</span><span class="w"> </span>/var/cache/nginx/rocky
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>install<span class="w"> </span>-d<span class="w"> </span>-o<span class="w"> </span>nginx<span class="w"> </span>-g<span class="w"> </span>nginx<span class="w"> </span>-m<span class="w"> </span><span class="m">0750</span><span class="w"> </span>/var/cache/nginx/rocky
+</code></pre></div>
+<p>启用 SELinux 时执行：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>restorecon<span class="w"> </span>-RFv<span class="w"> </span>/var/cache/nginx/rocky
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>新建 <code>/etc/nginx/conf.d/rocky-cache.conf</code>，写入以下内容。上述发行版软件包提供的 <code>nginx.conf</code> 会在 <code>http</code> 块中包含此目录，以下配置不需要再包一层 <code>http { ... }</code>。</p>
+<p>请将示例中的 <code>192.168.10.2</code> 和 <code>192.168.10.0/24</code> 改为实际地址和网段。在 Ubuntu、Debian 上，还需将 <code>proxy_ssl_trusted_certificate</code> 的路径改为 <code>/etc/ssl/certs/ca-certificates.crt</code>。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># 配置缓存路径与大小</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">proxy_cache_path</span><span class="w"> </span><span class="s">/var/cache/nginx/rocky</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="s">levels=1:2</span><span class="w"> </span><span class="s">keys_zone=rocky_cache:32m</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="s">max_size=50g</span><span class="w"> </span><span class="s">inactive=30d</span><span class="w"> </span><span class="s">use_temp_path=off</span><span class="p">;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1"># 配置日志格式</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="k">log_format</span><span class="w"> </span><span class="s">rocky_cache</span><span class="w"> </span><span class="s">'</span><span class="nv">$remote_addr</span><span class="w"> </span><span class="s">[</span><span class="nv">$time_local]</span><span class="w"> </span><span class="s">"</span><span class="nv">$request"</span><span class="w"> </span><span class="s">'</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">                       </span><span class="s">'</span><span class="nv">$status</span><span class="w"> </span><span class="nv">$body_bytes_sent</span><span class="w"> </span><span class="s">cache=</span><span class="nv">$upstream_cache_status</span><span class="w"> </span><span class="s">'</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">                       </span><span class="s">'upstream=</span><span class="nv">$upstream_addr</span><span class="w"> </span><span class="s">upstream_bytes=</span><span class="nv">$upstream_bytes_received'</span><span class="p">;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="k">server</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="c1"># 监听 IP 地址与端口</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="n">192.168.10.2</span><span class="p">:</span><span class="mi">80</span><span class="p">;</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="mi">192</span><span class="s">.168.10.2</span><span class="p">;</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="c1"># 允许/禁止访问的 IP 范围</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="kn">allow</span><span class="w"> </span><span class="mi">192</span><span class="s">.168.10.0/24</span><span class="p">;</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="kn">deny</span><span class="w"> </span><span class="s">all</span><span class="p">;</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">    </span><span class="c1"># 日志路径</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">    </span><span class="kn">access_log</span><span class="w"> </span><span class="s">/var/log/nginx/rocky-cache.access.log</span><span class="w"> </span><span class="s">rocky_cache</span><span class="p">;</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">    </span><span class="kn">error_log</span><span class="w"> </span><span class="s">/var/log/nginx/rocky-cache.error.log</span><span class="p">;</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">    </span><span class="c1"># 发送给上游（镜像站）的 HTTP 头信息</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">    </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Host</span><span class="w"> </span><span class="s">mirrors.ustc.edu.cn</span><span class="p">;</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">    </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Connection</span><span class="w"> </span><span class="s">""</span><span class="p">;</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">    </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Accept-Encoding</span><span class="w"> </span><span class="s">""</span><span class="p">;</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">    </span><span class="kn">proxy_http_version</span><span class="w"> </span><span class="mi">1</span><span class="s">.1</span><span class="p">;</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">    </span><span class="c1"># 验证镜像站 TLS 证书</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="w">    </span><span class="kn">proxy_ssl_server_name</span><span class="w"> </span><span class="no">on</span><span class="p">;</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">    </span><span class="kn">proxy_ssl_name</span><span class="w"> </span><span class="s">mirrors.ustc.edu.cn</span><span class="p">;</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">    </span><span class="kn">proxy_ssl_verify</span><span class="w"> </span><span class="no">on</span><span class="p">;</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="w">    </span><span class="kn">proxy_ssl_trusted_certificate</span><span class="w"> </span><span class="s">/etc/pki/tls/certs/ca-bundle.crt</span><span class="p">;</span>
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="w">    </span><span class="kn">proxy_ssl_verify_depth</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>
+<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="w">    </span><span class="c1"># 反代相关配置</span>
+<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a><span class="w">    </span><span class="kn">proxy_connect_timeout</span><span class="w"> </span><span class="s">10s</span><span class="p">;</span>
+<a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a><span class="w">    </span><span class="kn">proxy_read_timeout</span><span class="w"> </span><span class="s">300s</span><span class="p">;</span>
+<a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a><span class="w">    </span><span class="kn">proxy_buffering</span><span class="w"> </span><span class="no">on</span><span class="p">;</span>
+<a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a><span class="w">    </span><span class="kn">proxy_cache_key</span><span class="w"> </span><span class="s">"</span><span class="nv">$proxy_host$request_uri"</span><span class="p">;</span>
+<a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a><span class="w">    </span><span class="kn">proxy_cache_lock</span><span class="w"> </span><span class="no">on</span><span class="p">;</span>
+<a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a><span class="w">    </span><span class="kn">proxy_cache_lock_timeout</span><span class="w"> </span><span class="s">300s</span><span class="p">;</span>
+<a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a><span class="w">    </span><span class="kn">proxy_cache_lock_age</span><span class="w"> </span><span class="s">300s</span><span class="p">;</span>
+<a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a><span class="w">    </span><span class="kn">proxy_cache_revalidate</span><span class="w"> </span><span class="no">on</span><span class="p">;</span>
+<a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a>
+<a id="__codelineno-6-47" name="__codelineno-6-47" href="#__codelineno-6-47"></a><span class="w">    </span><span class="c1"># 供调试的 HTTP 头配置</span>
+<a id="__codelineno-6-48" name="__codelineno-6-48" href="#__codelineno-6-48"></a><span class="w">    </span><span class="kn">add_header</span><span class="w"> </span><span class="s">X-Cache-Status</span><span class="w"> </span><span class="nv">$upstream_cache_status</span><span class="w"> </span><span class="s">always</span><span class="p">;</span>
+<a id="__codelineno-6-49" name="__codelineno-6-49" href="#__codelineno-6-49"></a>
+<a id="__codelineno-6-50" name="__codelineno-6-50" href="#__codelineno-6-50"></a><span class="w">    </span><span class="c1"># 文件名包含 hash 的元数据可以长期缓存</span>
+<a id="__codelineno-6-51" name="__codelineno-6-51" href="#__codelineno-6-51"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">"^/rocky/.*/repodata/[0-9a-f]</span><span class="p">{</span><span class="kn">64}-[^/]+$"</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-52" name="__codelineno-6-52" href="#__codelineno-6-52"></a><span class="w">        </span><span class="kn">limit_except</span><span class="w"> </span><span class="s">GET</span><span class="w"> </span><span class="s">HEAD</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kn">deny</span><span class="w"> </span><span class="s">all</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-53" name="__codelineno-6-53" href="#__codelineno-6-53"></a><span class="w">        </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn</span><span class="p">;</span>
+<a id="__codelineno-6-54" name="__codelineno-6-54" href="#__codelineno-6-54"></a><span class="w">        </span><span class="kn">proxy_cache</span><span class="w"> </span><span class="s">rocky_cache</span><span class="p">;</span>
+<a id="__codelineno-6-55" name="__codelineno-6-55" href="#__codelineno-6-55"></a><span class="w">        </span><span class="kn">proxy_ignore_headers</span><span class="w"> </span><span class="s">X-Accel-Expires</span><span class="w"> </span><span class="s">Expires</span><span class="w"> </span><span class="s">Cache-Control</span><span class="p">;</span>
+<a id="__codelineno-6-56" name="__codelineno-6-56" href="#__codelineno-6-56"></a><span class="w">        </span><span class="kn">proxy_cache_valid</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="s">30d</span><span class="p">;</span>
+<a id="__codelineno-6-57" name="__codelineno-6-57" href="#__codelineno-6-57"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-58" name="__codelineno-6-58" href="#__codelineno-6-58"></a>
+<a id="__codelineno-6-59" name="__codelineno-6-59" href="#__codelineno-6-59"></a><span class="w">    </span><span class="c1"># RPM 按需缓存</span>
+<a id="__codelineno-6-60" name="__codelineno-6-60" href="#__codelineno-6-60"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">^/rocky/.*/Packages/.*\.rpm$</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-61" name="__codelineno-6-61" href="#__codelineno-6-61"></a><span class="w">        </span><span class="kn">limit_except</span><span class="w"> </span><span class="s">GET</span><span class="w"> </span><span class="s">HEAD</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kn">deny</span><span class="w"> </span><span class="s">all</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-62" name="__codelineno-6-62" href="#__codelineno-6-62"></a><span class="w">        </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn</span><span class="p">;</span>
+<a id="__codelineno-6-63" name="__codelineno-6-63" href="#__codelineno-6-63"></a><span class="w">        </span><span class="kn">proxy_cache</span><span class="w"> </span><span class="s">rocky_cache</span><span class="p">;</span>
+<a id="__codelineno-6-64" name="__codelineno-6-64" href="#__codelineno-6-64"></a><span class="w">        </span><span class="kn">proxy_cache_valid</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="s">1d</span><span class="p">;</span>
+<a id="__codelineno-6-65" name="__codelineno-6-65" href="#__codelineno-6-65"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-66" name="__codelineno-6-66" href="#__codelineno-6-66"></a>
+<a id="__codelineno-6-67" name="__codelineno-6-67" href="#__codelineno-6-67"></a><span class="w">    </span><span class="c1"># repomd.xml、签名和其他未匹配的文件缓存 5 分钟</span>
+<a id="__codelineno-6-68" name="__codelineno-6-68" href="#__codelineno-6-68"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/rocky/</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-69" name="__codelineno-6-69" href="#__codelineno-6-69"></a><span class="w">        </span><span class="kn">limit_except</span><span class="w"> </span><span class="s">GET</span><span class="w"> </span><span class="s">HEAD</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kn">deny</span><span class="w"> </span><span class="s">all</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-70" name="__codelineno-6-70" href="#__codelineno-6-70"></a><span class="w">        </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">https://mirrors.ustc.edu.cn</span><span class="p">;</span>
+<a id="__codelineno-6-71" name="__codelineno-6-71" href="#__codelineno-6-71"></a><span class="w">        </span><span class="kn">proxy_cache</span><span class="w"> </span><span class="s">rocky_cache</span><span class="p">;</span>
+<a id="__codelineno-6-72" name="__codelineno-6-72" href="#__codelineno-6-72"></a><span class="w">        </span><span class="kn">proxy_ignore_headers</span><span class="w"> </span><span class="s">X-Accel-Expires</span><span class="w"> </span><span class="s">Expires</span><span class="w"> </span><span class="s">Cache-Control</span><span class="p">;</span>
+<a id="__codelineno-6-73" name="__codelineno-6-73" href="#__codelineno-6-73"></a><span class="w">        </span><span class="kn">proxy_cache_valid</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="mi">5m</span><span class="p">;</span>
+<a id="__codelineno-6-74" name="__codelineno-6-74" href="#__codelineno-6-74"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-75" name="__codelineno-6-75" href="#__codelineno-6-75"></a>
+<a id="__codelineno-6-76" name="__codelineno-6-76" href="#__codelineno-6-76"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-77" name="__codelineno-6-77" href="#__codelineno-6-77"></a><span class="w">        </span><span class="kn">return</span><span class="w"> </span><span class="mi">404</span><span class="p">;</span>
+<a id="__codelineno-6-78" name="__codelineno-6-78" href="#__codelineno-6-78"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-79" name="__codelineno-6-79" href="#__codelineno-6-79"></a><span class="p">}</span>
+</code></pre></div>
+<p>配置中有几处需要注意：</p>
+<ul>
+<li><code>keys_zone=rocky_cache:32m</code> 为缓存键和元信息分配共享内存，文件内容保存在磁盘上，容量由 <code>max_size=50g</code> 控制。<code>levels=1:2</code> 将缓存文件分散到多层目录，避免单个目录内文件过多。</li>
+<li>上游 HTTP 请求的 <code>Host</code> 与 TLS 握手的 SNI 都指向 <code>mirrors.ustc.edu.cn</code>，而不是客户端访问的内网地址。如果更换上游，需要同时修改 <code>proxy_pass</code>、<code>proxy_set_header Host</code> 和 <code>proxy_ssl_name</code>。</li>
+</ul>
+<p>缓存策略如下：</p>
+<ul>
+<li><strong>带哈希的元数据</strong>：缓存成功的 <code>200</code> 响应 30 天；相同 URL 对应相同内容，因此在此位置忽略上游的缓存有效期响应头。没有访问的条目也可能被清理。</li>
+<li><strong>RPM 包</strong>：没有上游缓存控制时，缓存成功的 <code>200</code> 响应 1 天；上游的缓存控制响应头优先。</li>
+<li><strong><code>repomd.xml</code> 在内的其他文件</strong>：缓存成功的 <code>200</code> 响应 5 分钟，忽略上游的缓存有效期响应头，避免客户端长时间看到旧索引。</li>
+<li><strong>并发请求</strong>：同一缓存键首次被多个客户端请求时，其他请求等待正在进行的下载，最长等待 300 秒。下载过慢、锁超时或缓存被清理时，仍可能产生重复回源。</li>
+</ul>
+<p>缓存没有启用过期内容回退，也没有配置错误响应的缓存时间。不要为整个 <code>/rocky/</code> 路径统一设置长缓存，否则可能出现索引陈旧、索引引用的文件已被上游移除等问题。</p>
+<p>检查配置并启动服务：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nginx<span class="w"> </span>-t
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>nginx
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>systemctl<span class="w"> </span>reload<span class="w"> </span>nginx
+</code></pre></div>
+<p>只有 <code>nginx -t</code> 成功后才执行后续命令。如果服务器已有 Nginx 站点，请先检查监听地址和虚拟主机配置是否冲突。</p>
+<p>如果启用了 firewalld，先用 <code>firewall-cmd --get-active-zones</code> 确认内网接口所在区域。以下以 <code>public</code> 区域为例，仅允许示例内网访问 TCP 80 端口：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>firewall-cmd<span class="w"> </span>--permanent<span class="w"> </span>--zone<span class="o">=</span>public<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span>--add-rich-rule<span class="o">=</span><span class="s1">'rule family="ipv4" source address="192.168.10.0/24" port port="80" protocol="tcp" accept'</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>firewall-cmd<span class="w"> </span>--reload
+</code></pre></div>
+<h3 id="_5">配置客户端<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>先备份客户端 <code>/etc/yum.repos.d/</code> 中的仓库配置文件，再参考 <a href="rocky.html">Rocky Linux 使用帮助</a> 将软件源改为科大源。然后将配置中的 <code>https://mirrors.ustc.edu.cn/rocky</code> 替换为 <code>http://192.168.10.2/rocky</code>，保留后面的路径和变量。</p>
+<p>修改后刷新客户端缓存：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>dnf<span class="w"> </span>clean<span class="w"> </span>metadata
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>dnf<span class="w"> </span>makecache
+</code></pre></div>
+<h3 id="_6">验证缓存命中<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>从内网客户端连续执行两次以下命令，请求仓库入口文件并查看响应头。请按实际客户端版本和架构修改路径：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>curl<span class="w"> </span>-fsS<span class="w"> </span>-D<span class="w"> </span>-<span class="w"> </span>http://192.168.10.2/rocky/9/BaseOS/x86_64/os/repodata/repomd.xml<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span>-o<span class="w"> </span>/tmp/rocky-repomd.xml
+</code></pre></div>
+<p>通常第一次响应包含 <code>X-Cache-Status: MISS</code>，第二次包含 <code>X-Cache-Status: HIT</code>。如果文件已经缓存，第一次也可能是 <code>HIT</code>。也可以在另一台内网机器上请求同一 URL，确认能够共享缓存。</p>
+<p>如需进一步验证较大的元数据文件，从保存的 <code>/tmp/rocky-repomd.xml</code> 中找到 <code>type="primary"</code> 对应的 <code>location href</code>，得到当前有效的 <code>repodata/&lt;哈希&gt;-primary.xml.gz</code> 路径。将它接在仓库根路径后，同样连续请求两次：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>curl<span class="w"> </span>-fsS<span class="w"> </span>-D<span class="w"> </span>-<span class="w"> </span>-o<span class="w"> </span>/dev/null<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="s1">'http://192.168.10.2/rocky/9/BaseOS/x86_64/os/repodata/&lt;哈希&gt;-primary.xml.gz'</span>
+</code></pre></div>
+<p>请将 <code>&lt;哈希&gt;</code> 替换为实际值；旧教程或日志中的文件可能已被上游删除。</p>
+<p>查看缓存服务器日志：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/nginx/rocky-cache.access.log
+</code></pre></div>
+<p><code>cache=HIT</code> 表示命中缓存，<code>MISS</code> 表示没有命中，<code>REVALIDATED</code> 表示过期缓存经上游确认仍有效。判断节省的外网流量应看回源情况，而不是客户端请求数：客户端仍可能重复下载，但数据可以来自内网缓存。</p>
+<h3 id="_7">维护与排查<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>使用 <code>du -sh /var/cache/nginx/rocky</code> 和 <code>df -h /var/cache/nginx</code> 查看磁盘使用情况。<code>inactive=30d</code> 表示 30 天未被访问的条目可被清理，不表示所有内容都保持新鲜 30 天。</li>
+<li>同一个文件的请求路径需要一致才能共享缓存。<code>/rocky/9/</code> 和 <code>/rocky/9.8/</code> 会形成不同的缓存键，建议客户端保留默认 <code>$releasever</code>，不要混用手工固定的小版本路径。</li>
+<li>如果响应为 <code>403</code>，检查客户端地址是否在允许网段内。如果响应为 <code>502</code>，检查错误日志、服务器 DNS、上游连接、证书及 SELinux 设置。上游域名在此配置加载时解析，上游地址变化后可能需要重新加载 Nginx。</li>
+<li>如果元数据出现 <code>404</code> 或校验错误，先检查上游是否正在同步。上游更新后，缓存中的旧索引可能仍指向已删除的文件。可以等待 5 分钟，让入口文件的缓存过期，再在客户端执行 <code>dnf clean metadata</code> 和 <code>dnf makecache</code>；如果仍然失败，检查上游对应文件是否可以正常下载。</li>
+</ul>
+<p>需要恢复时，将客户端的仓库配置改回备份中的地址或参考 <a href="rocky.html">Rocky Linux 使用帮助</a>，再执行一次 <code>dnf clean metadata</code> 和 <code>dnf makecache</code>。</p>
+<h2 id="_8">相关链接<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="rocky.html">Rocky Linux 使用帮助</a></li>
+<li><a href="https://201.ustclug.org/ops/network-service/nginx/">Linux 201：Nginx 服务器</a></li>
+<li><a href="https://nginx.org/en/docs/http/ngx_http_proxy_module.html">Nginx HTTP 代理与缓存模块</a></li>
+<li><a href="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/deploying_web_servers_and_reverse_proxies/setting-up-and-configuring-nginx_deploying-web-servers-and-reverse-proxies">RHEL：配置 Nginx 反向代理及 SELinux</a></li>
+<li><a href="https://github.com/rpm-software-management/dnf/issues/2242">DNF：makecache 缓存判断问题</a></li>
+</ul>
 
 
 
