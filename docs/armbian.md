@@ -6,7 +6,7 @@
 
 ## 说明
 
-Armbian 软件仓库和发行版镜像，自 2020 年 11 月 17 日起提供。
+Armbian 软件仓库和发行版镜像，自 [2020 年 11 月 17 日起提供](https://github.com/ustclug/mirrorrequest/issues/207#issuecomment-728913652)。
 
 ## 相关链接
 
