@@ -221,6 +221,7 @@ nav:
     - ceph.md
     - CPAN.md
     - CRAN.md
+    - debuginfod.md
     - docker-ce.md
     - dockerhub.md
     - elpa.md
