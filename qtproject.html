@@ -3186,6 +3186,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用 Qit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用 Qit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        图形界面使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        命令行使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用官方安装器
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3541,6 +3597,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用 Qit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用 Qit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        图形界面使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        命令行使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用官方安装器
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3569,24 +3681,104 @@
 <h2 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Qt 应用开发框架目前支持的版本。已经不再被官方维护的版本未同步。</p>
 <h2 id="_3">安装<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">校外使用官方安装器的限制</p>
+<p>根据 <a href="https://servers.ustclug.org/2026/10/qt-adjustments/">Qt 镜像仓库调整通知</a>，本站将取消对 Qt 官方安装器 User-Agent 的特殊放行规则。校外使用官方安装器访问本站时可能受到拦截，仅设置 <code>--mirror</code> 无法解决此问题。可以使用下文介绍的 Qit，或参考 <a href="https://github.com/tuna/issues/issues/1936#issuecomment-2737251530">TUNA issue 中的 mitmproxy 方案</a>。</p>
+<p><strong>校内访问没有 User-Agent 限制，可以继续使用官方安装器。</strong></p>
+</div>
+<h3 id="qit">使用 Qit<a class="headerlink" href="#qit" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/taoky/qit">Qit</a> 是使用 GTK 编写的第三方 Qt 安装器，无需登录 Qt 账号，并使用明确的 User-Agent 标识下载请求。</p>
+<p>从 <a href="https://mirrors.ustc.edu.cn/github-release/taoky/qit/LatestRelease/">Qit 最新版本镜像目录</a> 下载适合操作系统和 CPU 架构的安装包。文件名中的版本号以目录中实际提供的为准；<code>x86_64</code> 对应常见的 Intel / AMD 64 位电脑，<code>aarch64</code> 对应 ARM64。</p>
+<table>
+<thead>
+<tr>
+<th>操作系统</th>
+<th>文件名格式</th>
+<th>启动方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td><code>Qit-&lt;版本&gt;-windows-&lt;架构&gt;.zip</code></td>
+<td>解压后运行其中的 <code>qit.exe</code></td>
+</tr>
+<tr>
+<td>Linux</td>
+<td><code>Qit-&lt;版本&gt;-linux-&lt;架构&gt;.AppImage</code></td>
+<td>添加可执行权限后运行</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td><code>Qit-&lt;版本&gt;-darwin-&lt;架构&gt;.dmg</code></td>
+<td>打开磁盘映像，直接运行其中的 Qit；Apple Silicon 选择 <code>aarch64</code></td>
+</tr>
+</tbody>
+</table>
+<p>Linux 启动示例（请替换为实际下载的文件名）：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="go">chmod +x Qit-0.1.2-linux-x86_64.AppImage</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="go">./Qit-0.1.2-linux-x86_64.AppImage</span>
+</code></pre></div>
+<h4 id="_4">图形界面使用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<ol>
+<li>在「设置」中选择镜像站。</li>
+<li>进入「安装 Qt」，选择目标、Qt 版本、开发套件及需要的组件，并确认安装目录。</li>
+<li>点击「下一步」，检查组件列表、下载大小和许可证后开始安装。</li>
+<li>安装完成后，可在「已安装」中查看安装记录、获取环境配置说明或卸载。</li>
+</ol>
+<h4 id="_5">命令行使用<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>Qit 安装包中也包含 <code>qit-cli</code>。Windows 下在解压后的目录中运行 <code>.\qit-cli.exe</code>；macOS 下在终端进入挂载后的磁盘映像目录，运行 <code>./Qit.app/Contents/MacOS/qit-cli</code>。</p>
+<p>Linux 可直接通过 AppImage 的 <code>--cli</code> 参数启动命令行工具（文件名按实际版本和架构调整）：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>Qit-0.1.2-linux-x86_64.AppImage
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>./Qit-0.1.2-linux-x86_64.AppImage<span class="w"> </span>--cli<span class="w"> </span>--help
+</code></pre></div>
+<p>如果在容器等没有可用 FUSE 的环境中运行，提示无法挂载 AppImage，可在 <code>--cli</code> 前添加 <code>--appimage-extract-and-run</code>，由 AppImage 自动解包并运行：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./Qit-0.1.2-linux-x86_64.AppImage<span class="w"> </span>--appimage-extract-and-run<span class="w"> </span>--cli<span class="w"> </span>--help
+</code></pre></div>
+<p>下文的其他命令也需要同样添加此参数。</p>
+<p>以下以 Linux x86_64 的桌面 Qt 为例。默认使用教育网联合镜像站。如果需要指定本镜像站，需添加 <code>--mirror https://mirrors.ustc.edu.cn/qtproject/</code> 参数。</p>
+<p>先查询可用的版本仓库：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>qit-cli<span class="w"> </span>repositories
+</code></pre></div>
+<p><code>repositories</code> 默认查询当前主机平台的 <code>desktop</code> 仓库，也可通过 <code>--host</code> 和 <code>--target</code> 指定平台和目标。根据输出的仓库路径查询组件，例如：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>qit-cli<span class="w"> </span>packages<span class="w"> </span>--repo<span class="w"> </span>online/qtsdkrepository/linux_x64/desktop/qt6_681/
+</code></pre></div>
+<p>这里的 Qt 6.8.1 仓库路径和下文的组件 ID 仅作示例，请以当前镜像的查询结果为准，其他操作系统和架构也需要使用对应的仓库与组件。选择组件后，先用 <code>plan</code> 查看包含依赖的安装计划及许可证：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>qit-cli<span class="w"> </span>plan<span class="w"> </span>--repo<span class="w"> </span>online/qtsdkrepository/linux_x64/desktop/qt6_681/<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span>qt.qt6.681.linux_gcc_64
+</code></pre></div>
+<p>确认接受相关许可证后执行安装。以下命令将安装到 <code>$HOME/Qit/qt-6.8.1</code>；Windows 用户请将 <code>--root</code> 的值改为所需路径，例如 <code>C:\Qit</code>。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>qit-cli<span class="w"> </span>install<span class="w"> </span>--repo<span class="w"> </span>online/qtsdkrepository/linux_x64/desktop/qt6_681/<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span>--root<span class="w"> </span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/Qit"</span><span class="w"> </span>--name<span class="w"> </span>qt-6.8.1<span class="w"> </span>--accept-licenses<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span>qt.qt6.681.linux_gcc_64
+</code></pre></div>
+<p>可以在命令末尾指定多个组件 ID，也可以重复 <code>--repo</code> 参数加载多个仓库。向已有的 Qit 安装添加组件时，在 <code>install</code> 命令中加上 <code>--add-components</code>，使用相同的 <code>--root</code> 和 <code>--name</code>，并指定要添加的组件 ID。</p>
+<p>查看已安装记录：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>qit-cli<span class="w"> </span>list
+</code></pre></div>
+<p>需要卸载时，使用 <code>list</code> 输出中的安装 ID（将 <code>INSTALLATION_ID</code> 替换为实际值）：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>qit-cli<span class="w"> </span>uninstall<span class="w"> </span>INSTALLATION_ID<span class="w"> </span>--yes
+</code></pre></div>
+<p>命令结果以 JSON 输出到标准输出，进度和错误输出到标准错误；添加全局参数 <code>--json</code> 可使进度信息也以 JSON 输出。更多参数可通过 <code>qit-cli &lt;子命令&gt; --help</code> 查看。</p>
+<h3 id="_6">使用官方安装器<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>首先，从 <a href="https://mirrors.ustc.edu.cn/qtproject/official_releases/online_installers/">https://mirrors.ustc.edu.cn/qtproject/official_releases/online_installers/</a> 下载在线安装器。然后可以使用以下两种方式之一在安装器中配置使用科大源下载 Qt：</p>
 <ol>
 <li>
 <p>（<strong>推荐</strong>）目前安装器支持 <code>--mirror</code> 命令行参数。在命令行中执行安装器，添加 <code>--mirror https://mirrors.ustc.edu.cn/qtproject</code> 参数即可。</p>
 <p>Windows 下执行当前目录的安装器的命令为：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="go">.\qt-unified-windows-x86-online.exe --mirror https://mirrors.ustc.edu.cn/qtproject</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="go">.\qt-unified-windows-x86-online.exe --mirror https://mirrors.ustc.edu.cn/qtproject</span>
 </code></pre></div>
 <p>Linux (amd64)：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="go">chmod +x qt-unified-linux-x64-online.run</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="go">./qt-unified-linux-x64-online.run --mirror https://mirrors.ustc.edu.cn/qtproject</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="go">chmod +x qt-unified-linux-x64-online.run</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="go">./qt-unified-linux-x64-online.run --mirror https://mirrors.ustc.edu.cn/qtproject</span>
 </code></pre></div>
 <p>Linux (aarch64)：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">chmod +x qt-unified-linux-arm64-online.run</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="go">./qt-unified-linux-arm64-online.run --mirror https://mirrors.ustc.edu.cn/qtproject</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="go">chmod +x qt-unified-linux-arm64-online.run</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="go">./qt-unified-linux-arm64-online.run --mirror https://mirrors.ustc.edu.cn/qtproject</span>
 </code></pre></div>
 <p>macOS 需要点击 dmg 挂载后，使用终端打开挂载后的 dmg 目录：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp"># </span>文件名需要根据实际情况调整
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="go">open qt-unified-macOS-x64-4.7.0-online.app --args --mirror https://mirrors.ustc.edu.cn/qtproject</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gp"># </span>文件名需要根据实际情况调整
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="go">open qt-unified-macOS-x64-4.7.0-online.app --args --mirror https://mirrors.ustc.edu.cn/qtproject</span>
 </code></pre></div>
 </li>
 <li>
