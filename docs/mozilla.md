@@ -1,4 +1,4 @@
-# Mozilla Firefox
+# Mozilla
 
 ## 地址
 
@@ -6,17 +6,17 @@
 
 ## 说明
 
-Firefox Deb 包镜像
+Firefox 与 Thunderbird Deb 包镜像
 
 ## 收录版本
 
-AMD64 与 ARM64 架构下的最新稳定版、beta、nightly、开发者版本与语言包。
+- Firefox：AMD64 与 ARM64 架构下的最新稳定版、beta、nightly、开发者版本与语言包。
+- Thunderbird：AMD64 架构下的稳定版、ESR、beta、nightly 与语言包。
 
 ## 使用说明
 
 以下内容参考了 [Install Firefox on
-Linux](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions)
-的说明并稍作修改：
+Linux](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions) 与 [Install Thunderbird on Linux](https://support.mozilla.org/en-US/kb/installing-thunderbird-linux) 的说明并稍作修改，适用于 Debian、Ubuntu 及其衍生发行版：
 
 1. 创建 keyrings 目录：
 
@@ -37,10 +37,18 @@ Linux](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-fire
       awk '/pub/{getline; gsub(/^ +| +$/,""); if($0 == "35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3") print "\nThe key fingerprint matches ("$0").\n"; else print "\nVerification failed: the fingerprint ("$0") does not match the expected one.\n"}'
     ```
 
-4. 添加镜像仓库：
+4. 根据需要添加镜像仓库。Firefox 使用 `mozilla`，Thunderbird 使用 `thunderbird-deb`；如需同时安装，可执行两条命令。
+
+    Firefox：
 
     ```shell
     echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://mirrors.ustc.edu.cn/mozilla/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
+    ```
+
+    Thunderbird：
+
+    ```shell
+    echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://mirrors.ustc.edu.cn/mozilla/apt thunderbird-deb main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
     ```
 
 5. 设置优先级，避免 Ubuntu 下 snap 版本被优先安装：
@@ -50,11 +58,30 @@ Linux](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-fire
     Package: *
     Pin: release a=mozilla
     Pin-Priority: 1000
+
+    Package: *
+    Pin: release a=thunderbird-deb
+    Pin-Priority: 1000
     ' | sudo tee /etc/apt/preferences.d/mozilla
     ```
 
-6. 更新并安装：
+6. 更新包索引，再按需安装 Firefox 或 Thunderbird：
 
     ```shell
-    sudo apt-get update && sudo apt-get install firefox
+    sudo apt-get update
+    sudo apt-get install firefox
     ```
+
+    ```shell
+    sudo apt-get install thunderbird
+    ```
+
+    Thunderbird 的其他版本可将包名替换为 `thunderbird-esr`、`thunderbird-beta` 或 `thunderbird-nightly`。
+
+    如需简体中文语言包：
+
+    ```shell
+    sudo apt-get install thunderbird-l10n-zh-cn
+    ```
+
+    其他版本的语言包使用对应前缀，如 `thunderbird-esr-l10n-zh-cn`。
