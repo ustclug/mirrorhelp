@@ -14,8 +14,6 @@ AOSP 代码使用 `repo` 工具管理，因此进行下面的步骤前**必须**
 mkdir ~/bin
 PATH=~/bin:$PATH
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-## 如果上述 URL 不可访问，可以用下面的：
-## curl -sSL 'https://gerrit-googlesource.proxy.ustclug.org/git-repo/+/main/repo?format=TEXT' | base64 -d > ~/bin/repo
 chmod a+x ~/bin/repo
 ```
 
@@ -50,8 +48,6 @@ cd WORKING_DIRECTORY
 根据你所需要的 Android 版本（[Android 版本列表](https://source.android.com/source/build-numbers.html#source-code-tags-and-builds) ([CN](https://source.android.google.cn/source/build-numbers?hl=zh-cn#source-code-tags-and-builds))，[镜像站 tags 列表](http://mirrors.ustc.edu.cn/aosp/platform/manifest.git/refs/tags/)）初始化仓库，以 `android-4.0.1_r1` 为例：
 
 ```shell
-# 如果提示无法连接到 gerrit.googlesource.com，可以设置 REPO_URL 环境变量：
-export REPO_URL=https://gerrit-googlesource.proxy.ustclug.org/git-repo
 repo init --partial-clone -u https://mirrors.ustc.edu.cn/aosp/platform/manifest -b android-4.0.1_r1
 ```
 
