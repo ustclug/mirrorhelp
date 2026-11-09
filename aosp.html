@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="/static/img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -3682,9 +3682,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>~/bin
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">PATH</span><span class="o">=</span>~/bin:<span class="nv">$PATH</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>curl<span class="w"> </span>https://storage.googleapis.com/git-repo-downloads/repo<span class="w"> </span>&gt;<span class="w"> </span>~/bin/repo
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">## 如果上述 URL 不可访问，可以用下面的：</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">## curl -sSL 'https://gerrit-googlesource.proxy.ustclug.org/git-repo/+/main/repo?format=TEXT' | base64 -d &gt; ~/bin/repo</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>chmod<span class="w"> </span>a+x<span class="w"> </span>~/bin/repo
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>chmod<span class="w"> </span>a+x<span class="w"> </span>~/bin/repo
 </code></pre></div>
 <p>以下介绍假设你已经在 <code>~/bin</code> 目录下安装了 <code>repo</code> 工具，并且将 <code>~/bin</code> 添加到了 <code>$PATH</code> 环境变量中。</p>
 <h2 id="_2">初始同步<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
@@ -3703,9 +3701,7 @@
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>WORKING_DIRECTORY
 </code></pre></div>
 <p>根据你所需要的 Android 版本（<a href="https://source.android.com/source/build-numbers.html#source-code-tags-and-builds">Android 版本列表</a> (<a href="https://source.android.google.cn/source/build-numbers?hl=zh-cn#source-code-tags-and-builds">CN</a>)，<a href="http://mirrors.ustc.edu.cn/aosp/platform/manifest.git/refs/tags/">镜像站 tags 列表</a>）初始化仓库，以 <code>android-4.0.1_r1</code> 为例：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># 如果提示无法连接到 gerrit.googlesource.com，可以设置 REPO_URL 环境变量：</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">REPO_URL</span><span class="o">=</span>https://gerrit-googlesource.proxy.ustclug.org/git-repo
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>repo<span class="w"> </span>init<span class="w"> </span>--partial-clone<span class="w"> </span>-u<span class="w"> </span>https://mirrors.ustc.edu.cn/aosp/platform/manifest<span class="w"> </span>-b<span class="w"> </span>android-4.0.1_r1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>repo<span class="w"> </span>init<span class="w"> </span>--partial-clone<span class="w"> </span>-u<span class="w"> </span>https://mirrors.ustc.edu.cn/aosp/platform/manifest<span class="w"> </span>-b<span class="w"> </span>android-4.0.1_r1
 </code></pre></div>
 <p>同步源码树（以后只需执行这条命令来同步）：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>repo<span class="w"> </span>sync<span class="w"> </span>-c
@@ -3845,7 +3841,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes", "navigation.sections", "navigation.top"], "search": "assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>
