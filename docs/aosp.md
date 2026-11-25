@@ -31,7 +31,7 @@ chmod a+x ~/bin/repo
 tar xf aosp-latest.tar
 cd AOSP
 git -C ./.repo/manifests.git/ remote set-url origin https://mirrors.ustc.edu.cn/aosp/platform/manifest.git
-repo sync
+repo sync --no-clone-bundle
 ```
 
 ## 初始同步特定分支
@@ -48,7 +48,7 @@ cd WORKING_DIRECTORY
 根据你所需要的 Android 版本（[Android 版本列表](https://source.android.com/source/build-numbers.html#source-code-tags-and-builds) ([CN](https://source.android.google.cn/source/build-numbers?hl=zh-cn#source-code-tags-and-builds))，[镜像站 tags 列表](http://mirrors.ustc.edu.cn/aosp/platform/manifest.git/refs/tags/)）初始化仓库，以 `android-4.0.1_r1` 为例：
 
 ```shell
-repo init --partial-clone -u https://mirrors.ustc.edu.cn/aosp/platform/manifest -b android-4.0.1_r1
+repo init --no-clone-bundle --partial-clone -u https://mirrors.ustc.edu.cn/aosp/platform/manifest -b android-4.0.1_r1
 ```
 
 同步源码树（以后只需执行这条命令来同步）：
@@ -66,7 +66,7 @@ repo sync -c
 使用以下命令初始化：
 
 ```shell
-repo init -u https://mirrors.ustc.edu.cn/aosp/mirror/manifest --mirror
+repo init --no-clone-bundle -u https://mirrors.ustc.edu.cn/aosp/mirror/manifest --mirror
 ```
 
 使用以下命令同步：
