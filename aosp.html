@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="/static/img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -3692,7 +3692,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>tar<span class="w"> </span>xf<span class="w"> </span>aosp-latest.tar
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>AOSP
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git<span class="w"> </span>-C<span class="w"> </span>./.repo/manifests.git/<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>https://mirrors.ustc.edu.cn/aosp/platform/manifest.git
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>repo<span class="w"> </span>sync
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>repo<span class="w"> </span>sync<span class="w"> </span>--no-clone-bundle
 </code></pre></div>
 <h2 id="_3">初始同步特定分支<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>以下内容参考 <a href="https://source.android.com/source/downloading.html">Google 官方教程</a>(<a href="https://source.android.google.cn/source/downloading">CN</a>)。</p>
@@ -3701,7 +3701,7 @@
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>WORKING_DIRECTORY
 </code></pre></div>
 <p>根据你所需要的 Android 版本（<a href="https://source.android.com/source/build-numbers.html#source-code-tags-and-builds">Android 版本列表</a> (<a href="https://source.android.google.cn/source/build-numbers?hl=zh-cn#source-code-tags-and-builds">CN</a>)，<a href="http://mirrors.ustc.edu.cn/aosp/platform/manifest.git/refs/tags/">镜像站 tags 列表</a>）初始化仓库，以 <code>android-4.0.1_r1</code> 为例：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>repo<span class="w"> </span>init<span class="w"> </span>--partial-clone<span class="w"> </span>-u<span class="w"> </span>https://mirrors.ustc.edu.cn/aosp/platform/manifest<span class="w"> </span>-b<span class="w"> </span>android-4.0.1_r1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>repo<span class="w"> </span>init<span class="w"> </span>--no-clone-bundle<span class="w"> </span>--partial-clone<span class="w"> </span>-u<span class="w"> </span>https://mirrors.ustc.edu.cn/aosp/platform/manifest<span class="w"> </span>-b<span class="w"> </span>android-4.0.1_r1
 </code></pre></div>
 <p>同步源码树（以后只需执行这条命令来同步）：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>repo<span class="w"> </span>sync<span class="w"> </span>-c
@@ -3712,7 +3712,7 @@
 </div>
 <h2 id="_4">以科大源为上游设置镜像站<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>使用以下命令初始化：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>repo<span class="w"> </span>init<span class="w"> </span>-u<span class="w"> </span>https://mirrors.ustc.edu.cn/aosp/mirror/manifest<span class="w"> </span>--mirror
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>repo<span class="w"> </span>init<span class="w"> </span>--no-clone-bundle<span class="w"> </span>-u<span class="w"> </span>https://mirrors.ustc.edu.cn/aosp/mirror/manifest<span class="w"> </span>--mirror
 </code></pre></div>
 <p>使用以下命令同步：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>repo<span class="w"> </span>sync
