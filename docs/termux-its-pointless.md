@@ -2,7 +2,7 @@
 
 ## 地址
 
-<https://mirrors.ustc.edu.cn/termux-its-pointless>
+<https://mirrors.ustc.edu.cn/termux-its-pointless/>
 
 ## 说明
 
